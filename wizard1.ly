@@ -16,14 +16,14 @@
 
 #(ly:set-option 'point-and-click #f)
 
-%MyRed = \Red
-%MyBlack = \Black
-%myred = \once \override NoteHead.color = #red
-%myblack = \revert NoteHead.color
-MyRed = \revert NoteHead.color
-MyBlack = \revert NoteHead.color
-myred = \revert NoteHead.color
+MyRed = \Red
+MyBlack = \Black
+myred = \once \override NoteHead.color = #red
 myblack = \revert NoteHead.color
+%MyRed = \revert NoteHead.color
+%MyBlack = \revert NoteHead.color
+%myred = \revert NoteHead.color
+%myblack = \revert NoteHead.color
 
 \header {
   title = "The Wonderful Wizard of Oz (1)"
@@ -174,7 +174,7 @@ mezzo = \relative c' { \autoBeamOff
   e4 des8 |
   g4 fis8 |
   f4 fis8 |
-  f4 fis8 |
+  e4 fis8 |
   f4 fis8 |
   g4 g8 |
   a4. ~ |
@@ -185,7 +185,7 @@ mezzo = \relative c' { \autoBeamOff
   a8 f e |
   aes4 des,8 |
   f4 r8 |
-  ces'8 c aes |
+  ces'8 des aes |
   bes fis g |
   f8 r4 |
   \myred ees4. |
@@ -237,7 +237,7 @@ alto = \relative c' { \autoBeamOff
   d4 f8 |
   e f e |
   ees4 d8 |
-  fes ges aes |
+  fes ges g |
   g4 d8 |
   c4. ~ |
   c8 r \MyRed ees |
@@ -304,8 +304,8 @@ tenor = \relative c { \autoBeamOff
   \MyRed ees4. |
   aes4 ees8 |
   c4 des8 |
-  ees8 \MyBlack e4 ~ |
-  e8 r ees8 |
+  ees8 \MyBlack ges4 ~ |
+  ges8 r ees8 |
   aes aes d, |
   f e ees |
   ees4. ~ |
@@ -314,8 +314,8 @@ tenor = \relative c { \autoBeamOff
   bes4 b8 |
   c8 d des |
   c4 c8 |
-  des c fes |
-  ees4 aes,8 |
+  d c fes |
+  ees4 g,8 |
   a4. ~ |
   a8 r c8 |
   des d c |
@@ -343,7 +343,7 @@ tenor = \relative c { \autoBeamOff
   bes8 r4 |
   \myred ees,4. |
   a4 aes8 | 
-  g4 \myred cis8 |
+  g4 \myred des'8 |
   aes8 e4 ~ |
   e8 r a |
   aes8 aes aes |
@@ -381,8 +381,8 @@ bass = \relative c { \autoBeamOff
   \MyRed ees4. |
   aes4 ees8 |
   c4 des8 |
-  ees8 \MyBlack f,4 ~ |
-  f8 r ees'8 |
+  ees8 \MyBlack fes,4 ~ |
+  fes8 r ees'8 |
   bes fes' ges, |
   ees' a, d |
   c4. ~ |
@@ -391,8 +391,8 @@ bass = \relative c { \autoBeamOff
   e4 g,8 |
   des' c f |
   g4 aes8 |
-  ges fes ges, |
-  f4 bes8 |
+  ges fes aes, |
+  f4 aes8 |
   d4. ~ |
   d8 r f |
   bes, e aes, |
@@ -404,7 +404,7 @@ bass = \relative c { \autoBeamOff
   ees4 e8 |
   f4 e8 |
   ees4 e8 |
-  d4 ees8 |
+  des4 ees8 |
   b4 cis8 |
   a4 d8 |
   fis,4. ~ |
@@ -422,8 +422,8 @@ bass = \relative c { \autoBeamOff
   \MyBlack b4 cis8 |
   a4 d8 |
   \myred ees ges,4 ~ |
-  ges8 r f' |
-  bes,8 \myred c cis |
+  ges8 r f |
+  bes8 \myred c cis |
   d dis e8 |
   \myred aes4. ~ |
   \myred aes8 r8 \MyRed ees8 |

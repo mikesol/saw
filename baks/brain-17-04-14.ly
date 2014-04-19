@@ -100,25 +100,10 @@ soprano = {
   \relative c' {    
     ees8 \myred g16 aes bes g ees f |
     g16 ees8 f16 \times 4/5 { g16 ees g16 f ees16 } \times 4/5 { ees ees ees ees8 } \times 2/3 { r8 ees r } |
-    r2 f'2 ~ | %r16 f'8. ~ f4 ~ |
-    \times 2/3 { f8 [ f ees ] } \times 2/3 { d [ c bes ] } aes [ g ] bes [ a ] |
-
-    %r16 g [ f ees d c bes aes ] g [ ees' d c bes aes g ees ] |
+    r2 r16 f'8. ~ f4 |
+    r16 g [ f ees d c bes aes ] g [ ees' d c bes aes g ees ] |
     \times 2/3 { f8 [ aes c ] } ees16 [ f, aes c ] g'8 [ f16 ees d c bes aes ] |
-    %bes16 [ bes' a g f ees d c ] d [ g f ees d c b a ] |
-
-    bes16 [ ees d c bes aes g f ]    g aes bes g ees f g ees
-  }
-  \tripletFeel 8 \relative c' {
-    d8 c d c d c d ees |
-    d4 g8 aes bes8 g ees d |
-    ees4-. r4 r2 |
-    r4. g8 f ees bes'4 | 
-  }
-  \relative c'' {
-    ges4 fes \times 2/3 { g8 aes bes } \times 2/3 { g ees f }
-    g16 ees8 f16 g ees c d ees c8. \times 2/3 { ees8 bes bes } |
-    \times 2/3 { bes bes bes }
+    bes16 [ bes' a g f ees d c ] d [ g f ees d c b a ] |
   }
 }
 
@@ -166,29 +151,13 @@ mezzo = {
     \myred d'16^\markup \italic "(not swung)"   c bes aes g   f ees ees ees    ees ees \myred g f^"!" |
     g^"|" g ees f \times 4/5 { g ees8 f16 g } \times 4/6 { ees c d ees c8 } \times 4/5 { ees16 bes bes bes bes } |
     bes8 ees16 bes    bes bes bes bes  ~ \times 2/3 { bes8 ees bes } \times 2/3 { r8 ees r } |
-    ees'16 c8. ~
+    r16 ees' c8 ~
   }
-  \tripletFeel 8 \relative c'' {
-    \myred c4 ~ c8^\markup \italic "(swung)" bes c d |
+  \relative c'' \tripletFeel 8 {
+    c4 ~ c8^\markup \italic "(swung)" bes c d |
     bes2. c4 |
-    aes4 aes aes bes |
-    g2.^\markup \italic "mit swing" g8 g |
-    f8 ees f ees f ees f g |
-    ees2 ~ ees8 ees g bes |
-    c4-. r4 r8 g f ees |
-    bes'2. g8 aes |
-  }
-  \tripletFeel 8 \relative c'' {
-    ces aes ~ \times 2/3 { aes g f } d8 des'8 ~
-  }
-  \relative c'' {
-    des8 ces16 des32 ces |
-  }
-  \tripletFeel 8 \relative c'' {
-    bes8 g ~ \times 2/3 { g f ees } d d' \times 2/3 { c g bes } |
-    aes g ~ \times 2/3 { g f ees } d c' ~ \times 2/3 { c bes aes } |
-    \times 2/3 { g ees g } \times 2/3 { bes ees ces } d c g ges |
-    f4 
+    aes aes aes bes |
+    g2. g8 g |
   }
 }
 
@@ -239,30 +208,15 @@ alto = {
   \relative c'' {
     \times 2/3 { \myred d c bes } \times 2/3 {  aes \myred d, c } \times 2/3 { bes aes g }
   }
-  \tripletFeel 8 \relative c'' { \myred g aes | 
+  \tripletFeel 8 { \relative c'' \myred g aes | 
     bes8 g ees f g ees4 f8 |
     g ees c d \times 2/3 { ees4 g8 } \times 2/3 { r8 ees r } |
   }
   \relative c' {
-    r8 ees16 g \times 2/3 { bes4 ees,8 } \times 2/3 { r8 bes4 ~ } bes8 a  |
-    %r8 ees16 g \times 2/3 { bes4 ees,8 } \times 2/3 { r8 a8 aes } ges8 bes |
-    %f8 d^"oh" aes'16 g^"tell" f f^"u" \times 4/5 { ees16^"y" g^"I" f ees d^"u" } ees8^"y" d16 bes |
-    %c8 ges' f c bes d f f |
-    %\times 2/3 { d4 f16 d } \times 4/6 { c4 d16 aes } bes16 [ ees d c ] bes8 ees |
-  }
-  \tripletFeel 8 \relative c'' {
-    \myred bes8 g ees f g ees4 f8 |
-    g ees c d ees c4 ees8 |
-    bes bes bes bes bes4 ees, |
-    c'2 ~ c8 b c d |
-    bes8 g' ees f g ees4 f8 |
-    g ees c d ees c4 ees8 |
-    bes bes bes bes bes g'8 f ees |
-    d4. c8 ~ c f8 ~ f4 |
-  }
-  \relative c'' {
-    g,16 aes bes g   ees f g ees   f g ees c \times 2/3 { d8 ees c } |
-    \times 2/3 { ees8 bes bes } \times 2/3 { bes bes bes }
+    r8 ees16 g \times 2/3 { bes4 ees,8 } \times 2/3 { r8 a8 aes } ges8 bes |
+    f8 d^"oh" aes'16 g^"tell" f f^"u" \times 4/5 { ees16^"y" g^"I" f ees d^"u" } ees8^"y" d16 bes |
+    c8 ges' f c bes d f f |
+    \times 2/3 { d4 f16 d } \times 4/6 { c4 d16 aes } bes16 [ ees d c ] bes8 ees |
   }
 }
 
@@ -309,21 +263,11 @@ tenor = {
     bes g ees f g4 \times 2/3 { bes8 r4 } |
   }
   \relative c'' {
-    r4 g4 r16 ges8. ~ \times 4/6 { ges16 f [ ees ] d [ c bes ] } |
-    aes8 [ ees ] g [ bes ] d16 [ ees, g bes ] ees [ d c bes ] |
-    aes8 [ g' ] f [ ees ] c [ bes ] aes' [ d, ~ ] |
-    \times 2/3 { d [ ees f ] } \times 2/3 { d [ bes c ] } \times 2/3 { d4 bes4 c, } |
+    r4 r16 g8. \times 2/3 { r8 ges4 ~ } \times 4/6 { ges16 f [ ees ] d [ c bes ] } |
+    aes [ ees' d c ]    bes [ aes g f ]    \times 4/5 { ees [ g b ees, g ] }  \times 4/5 { ees [ ees' ces aes fes ] }
+    ees8 f g aes bes4 c8 d |
+    f,4 aes g ~ g16 ees'8. |
   }
-  \tripletFeel 8 \relative c' {
-    aes2 ~ aes8 g aes bes |
-    g2. aes4 |
-    a4-. r4 r4. g8 |
-    f ees c'8 aes f g aes f |
-  }
-  \relative c' {
-    c16 g8 f16 ees g bes aes g bes8. \times 2/3 { aes8 g bes } |
-    \times 4/5 { d16 c bes d8 } bes ees
-   }
 }
 
 tenorWords = \lyricmode {
@@ -372,23 +316,9 @@ bass = {
   \relative c {
     r8. aes16^\markup \italic "(not swung)" ~ aes4 a4 f |
     bes4 g c g8 ges |
-    %f16 [ ees' d c bes aes g f ] f' [ ees d c ] bes [ aes g f ]
-    f4 f f16 [ ees' d c ] bes [ aes g f ]
-    \times 4/5 { g8 [ aes bes c d ] } ees4 aes,8 bes |
-    \times 2/3 { c8 aes f } \times 2/3 { g aes f } g4 d'8 g, |
-    c4. d8 ees8 c g ges |
-    f4-. r4 r2 |
-   }
-   \tripletFeel 8 \relative c {
-    r8 g f ees bes'4. c8 |
-    %d4 g,8 ges8 f4 fis |
-    %\times 4/5 { g8 ees' g,16 } \times 4/5 { aes bes g ees f } g ees8. ~ \times 2/3 { ees8 f g } |
-    %aes4 bes f d' |
-    %\times 2/3 { bes8 g ees } \times 2/3 { f g ees ~ } \times 2/3 { ees f g } \times 2/3 { ees' c d }
-    %\times 4/5 { des8 c e g, c } \times 4/5 { ges' fes g bes, g } |
-    %\times 2/3 { aes8 bes f } \times 2/3 { ees' g, bes } aes16 g' f ees d c bes aes |
-    %g ees' d c bes aes g f g ees8. ~ ees4 |
-   }
+    f16 [ ees' d c bes aes g f ] f' [ ees d c ] \times 4/5 { bes [ aes g f g ] }
+    aes8 bes c d ees4 aes, |
+  }
 }
 
 bassWords = \lyricmode {
