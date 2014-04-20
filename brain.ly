@@ -65,8 +65,8 @@ scorePrefatoryMatter = {
 
 midiPrefatoryMatter = {
   \prefatoryMatter
-  %r2.
-  \partial 4
+  r2.
+  %\partial 4
 }
 
 marks = {
@@ -99,18 +99,18 @@ soprano = {
   }
   \relative c' {    
     ees8 \myred g16 aes bes g ees f |
-    g16 ees8 f16 \times 4/5 { g16 ees g16 f ees16 } \times 4/5 { ees ees ees ees8 } \times 2/3 { r8 ees r } |
-    r2 f'2 ~ | %r16 f'8. ~ f4 ~ |
-    \times 2/3 { f8 [ f ees ] } \times 2/3 { d [ c bes ] } aes [ g ] bes [ a ] |
+    g16 ees8 f16 \times 4/5 { g16 ees g16 f ees16 } \times 4/5 { ees ees ees ges8 ~ }  ges bes ~ |
+    bes4 r r2 | %f'2 ~ | %r16 f'8. ~ f4 ~ |
+    \times 2/3 { r8 f' [ ees ] } \times 2/3 { d [ c ] bes } aes g bes a |
 
     %r16 g [ f ees d c bes aes ] g [ ees' d c bes aes g ees ] |
-    \times 2/3 { f8 [ aes c ] } ees16 [ f, aes c ] g'8 [ f16 ees d c bes aes ] |
+    \times 2/3 { f8 [ ( aes c ] } ees16 [ f, aes c ] g'8 [ f16 ees ) ] d [ c ] bes aes |
     %bes16 [ bes' a g f ees d c ] d [ g f ees d c b a ] |
 
     bes16 [ ees d c bes aes g f ]    g aes bes g ees f g ees
   }
   \tripletFeel 8 \relative c' {
-    d8 c d c d c d ees |
+    d8^\markup \italic "(mehr geswungen)" c d c d c d ees |
     d4 g8 aes bes8 g ees d |
     ees4-. r4 r2 |
     r4. g8 f ees bes'4 | 
@@ -142,6 +142,13 @@ sopranoWords = \lyricmode {
   For a -- ny
   If I on -- ly had a brain
   Oh
+  could tell you why
+  could tell you 
+  o -- cean's near the shore
+  I would wile a -- way the ho -- urs
+  thiknk of things I ne -- ver thunk be -- fore
+  I'd un -- ra -- vel a -- ny sit
+  And think some more
 }
 
 mezzo = {
@@ -165,11 +172,11 @@ mezzo = {
   \relative c' {
     \myred d'16^\markup \italic "(not swung)"   c bes aes g   f ees ees ees    ees ees \myred g f^"!" |
     g^"|" g ees f \times 4/5 { g ees8 f16 g } \times 4/6 { ees c d ees c8 } \times 4/5 { ees16 bes bes bes bes } |
-    bes8 ees16 bes    bes bes bes bes  ~ \times 2/3 { bes8 ees bes } \times 2/3 { r8 ees r } |
-    ees'16 c8. ~
+    bes8 ees16 bes    bes bes bes bes  ~ \times 2/3 { bes8 ees4 ~ } \myred ees |
+    c'2 ~
   }
   \tripletFeel 8 \relative c'' {
-    \myred c4 ~ c8^\markup \italic "(swung)" bes c d |
+    \myred c8^\markup \italic "(swung)" bes c d |
     bes2. c4 |
     aes4 aes aes bes |
     g2.^\markup \italic "mit swing" g8 g |
@@ -214,8 +221,12 @@ mezzoWords = \lyricmode {
   For a -- ny in -- di -- vi -- d'le
   In trou -- ble or in pain
   In trou -- ble or in pain
-  In trou
   Oh
+  I could tell you why
+  The o -- cean's near the shore
+  I could think of things I ne -- ver thunk be -- fore
+  And then I'd sit and think some more.
+  
 }
 
 alto = {
@@ -241,10 +252,10 @@ alto = {
   }
   \tripletFeel 8 \relative c'' { \myred g aes | 
     bes8 g ees f g ees4 f8 |
-    g ees c d \times 2/3 { ees4 g8 } \times 2/3 { r8 ees r } |
+    g ees c d \times 2/3 { ees4 des f ~ } |
   }
   \relative c' {
-    r8 ees16 g \times 2/3 { bes4 ees,8 } \times 2/3 { r8 bes4 ~ } bes8 a  |
+    f8 ees16 [ ( g ] \times 2/3 { bes4 ees,8 ) } \times 2/3 { r8 ees4 ~ } ees4  |
     %r8 ees16 g \times 2/3 { bes4 ees,8 } \times 2/3 { r8 a8 aes } ges8 bes |
     %f8 d^"oh" aes'16 g^"tell" f f^"u" \times 4/5 { ees16^"y" g^"I" f ees d^"u" } ees8^"y" d16 bes |
     %c8 ges' f c bes d f f |
@@ -284,7 +295,15 @@ altoWords = \lyricmode {
   no -- ther Lin -- coln If
   I'd un -- ra -- vel a -- ny rid -- dle
   For a -- ny in -- di -- vi -- d'le
-  Oh
+  Oh, Oh I
+  wile a -- way the ho -- urs
+  Con -- fer -- rin' with the flow -- ers
+  Con -- sul -- tin' with the rain
+  Oh I could tell you
+  ra -- vel a -- ny rid -- dle
+  For a -- ny in -- di -- vi -- d'le
+  In trou -- ble or in pain and think some
+
 }
 
 tenor = {
@@ -306,13 +325,13 @@ tenor = {
     ees8 d c4 \times 2/3 { r8 \myred c'8 bes } aes16 g f ees |
     f4 d \myred d'8 c bes aes |
     g ees c d ees c \myred g' aes |
-    bes g ees f g4 \times 2/3 { bes8 r4 } |
+    bes g ees f \times 2/3 { g4 a b ~ } |
   }
-  \relative c'' {
-    r4 g4 r16 ges8. ~ \times 4/6 { ges16 f [ ees ] d [ c bes ] } |
-    aes8 [ ees ] g [ bes ] d16 [ ees, g bes ] ees [ d c bes ] |
-    aes8 [ g' ] f [ ees ] c [ bes ] aes' [ d, ~ ] |
-    \times 2/3 { d [ ees f ] } \times 2/3 { d [ bes c ] } \times 2/3 { d4 bes4 c, } |
+  \relative c' {
+    b16 c8. r16 g'8. \times 2/3 { r8 ges4 ~ } \times 4/6 { ges16 f [ ees ] d [ c ] bes } |
+    aes8 ees g bes d16 ees, g bes ees [ d ] c [ bes ] |
+    aes8 [ g' ] f [ ees ] c [ bes ] aes' d, ~ |
+    \times 2/3 { d ees f } \times 2/3 { d bes c } \times 2/3 { d4 bes4 c, } |
   }
   \tripletFeel 8 \relative c' {
     aes2 ~ aes8 g aes bes |
@@ -344,8 +363,13 @@ tenorWords = \lyricmode {
   With the thoughts I'd be think -- in'
   I could be a -- no -- ther Lin -- coln
   a -- ny in -- di -- vi -- d'le
-  I'd un -- ra -- vel a -- ny rid
-  Oh
+  I'd un -- ra -- vel a -- ny rid -- dle
+  Oh I Oh I could tell you why
+  could tell you why could tell you why
+  The o -- cean's near the
+  I'd un -- ra -- vel a -- ny rid -- dle
+  Oh I could tell you why the o
+  and think some not be just a noth -- in'
 }
 
 bass = {
@@ -367,14 +391,14 @@ bass = {
     aes c |
     f, bes |
     ees2 aes,4 bes |
-    g ees ees' \times 2/3 { r8 ees r } |
+    g ees ees'4 ces8 g8 ~ |
+    g8 aes8 ~ aes4 a4. f8 ~ |
+    \times 2/3 { f8 bes4 ~ } \times 2/3 { bes8 g4 } c g8 [ ges ] |
   }
-  \relative c {
-    r8. aes16^\markup \italic "(not swung)" ~ aes4 a4 f |
-    bes4 g c g8 ges |
+  \relative c, {
     %f16 [ ees' d c bes aes g f ] f' [ ees d c ] bes [ aes g f ]
-    f4 f f16 [ ees' d c ] bes [ aes g f ]
-    \times 4/5 { g8 [ aes bes c d ] } ees4 aes,8 bes |
+    f2 ~ ( f16 [ ees'^\markup \italic "(not swung)" d c ) ] bes [ aes ] g f |
+    \times 4/5 { g8 [ aes ] bes c d } ees4 aes,8 bes |
     \times 2/3 { c8 aes f } \times 2/3 { g aes f } g4 d'8 g, |
     c4. d8 ees8 c g ges |
     f4-. r4 r2 |
@@ -399,9 +423,13 @@ bassWords = \lyricmode {
   I'd un -- ra -- vel
   In trou -- ble pain
   With thoughts I'd be a brain
-  un -- ra -- vel a -- ny
-  Oh
-
+  I'd un -- ra -- vel a -- ny
+  Oh I, I could tell you why
+  The o -- cean's near the
+  o -- cean's near the shore
+  I would wile a -- way the ho -- urs
+  I'd ne -- ver thunk be -- fore
+  And then I'd sit and think some more would
 }
 \score {
   \new ChoirStaff <<
