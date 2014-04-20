@@ -26,8 +26,8 @@ myblack = \revert NoteHead.color
 %myblack = \revert NoteHead.color
 
 \header {
-  title = "The Wonderful Wizard of Oz (1)"
-  subtitle = \markup { for William Schuman, Bill Evans and Hugo Wolf \super 1}
+  title = "The Wonderful Wizard of Oz" %(1)"
+  subtitle = \markup { for Bill Evans, William Schuman, and Hugo Wolf %{\super 1%}}
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -44,10 +44,16 @@ marks = {
   s4.*8 |
 }
 
-soprano = \relative c' { \autoBeamOff
+prefactoryMatter = {
   \key aes \major
+  #(set-accidental-style 'modern-cautionary)
+}
+
+soprano = \relative c' { \autoBeamOff
+  \prefactoryMatter
   \MyRed
-  ees4. \footnote #'(0 . 0) \markup { Bitonal harmony resulting from tertian extensions used in directional, voice led counterpoint. } NoteHead |
+  ees4.
+     %\footnote #'(0 . 0) \markup { Bitonal harmony resulting from tertian extensions used in directional, voice led counterpoint. } NoteHead |
   aes4 ees8 |
   c4 des8 |
   ees8 aes4 ~ |
@@ -146,13 +152,13 @@ sopranoWords = \lyricmode {
 }
 
 mezzo = \relative c' { \autoBeamOff
-  \key aes \major
+  \prefactoryMatter
   \MyRed
   ees4. |
   aes4 ees8 |
   c4 des8 |
-  ees8 \MyBlack d4 ~ |
-  d8 r ees8 |
+  ees8 \MyBlack e4 ~ |
+  e8 r ees8 |
   des des a |
   aes a g |
   g4. ~ |
@@ -223,12 +229,12 @@ mezzoWords = \lyricmode {
 }
 
 alto = \relative c' { \autoBeamOff
-  \key aes \major
+  \prefactoryMatter
   \MyRed ees4. |
   aes4 ees8 |
   c4 des8 |
-  ees8 \MyBlack b4 ~ |
-  b8 r ees8 |
+  ees8 \MyBlack d4 ~ |
+  d8 r ees8 |
   c8 ces f, |
   g ges f |
   f4. ~ |
@@ -299,7 +305,7 @@ altoWords = \lyricmode {
 }
 
 tenor = \relative c { \autoBeamOff
-  \key aes \major
+  \prefactoryMatter
   \clef "treble_8"
   \MyRed ees4. |
   aes4 ees8 |
@@ -376,13 +382,13 @@ tenorWords = \lyricmode {
 }
 
 bass = \relative c { \autoBeamOff
-  \key aes \major
+  \prefactoryMatter
   \clef bass
   \MyRed ees4. |
   aes4 ees8 |
   c4 des8 |
-  ees8 \MyBlack fes,4 ~ |
-  fes8 r ees'8 |
+  ees8 \MyBlack ces4 ~ |
+  ces8 r ees8 |
   bes fes' ges, |
   ees' a, d |
   c4. ~ |
@@ -392,7 +398,7 @@ bass = \relative c { \autoBeamOff
   des' c f |
   g4 aes8 |
   ges fes aes, |
-  f4 aes8 |
+  f'4 a,8 |
   d4. ~ |
   d8 r f |
   bes, e aes, |
