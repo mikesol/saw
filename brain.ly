@@ -1,13 +1,4 @@
-%%% RECURRENT "SOME" !!!
-
-%{
-  Mirku says...
-  1) Use slurs AND beams instead of just beams.
-  2) Beam according to measure
-  3) LOOK INTO 7/8
-  % 2.17.12 works
-%}
-
+%<ees d' f a f'> d bes c d bes
 %#(set-global-staff-size 14.14)
 #(set-global-staff-size 15.87)
 
@@ -55,7 +46,6 @@ myred = \once \override NoteHead #'color = #red
 prefatoryMatter = {
   \key ees \major
   \autoBeamOff
-  \tempo "Swung" 4=52
 }
 
 scorePrefatoryMatter = {
@@ -70,6 +60,12 @@ midiPrefatoryMatter = {
 }
 
 marks = {
+  \tempo "Adagio" 4=52
+  s4 |
+  s1*31 |
+  %\unfoldChange #52 #60 #8
+  %\tempo "più mosso" 4=60
+  s1
   %\repeat unfold 65 \unfoldSwing 52
 }
 
@@ -100,7 +96,9 @@ soprano = {
   \relative c' {    
     ees8 \myred g16 aes bes g ees f |
     g16 ees8 f16 \times 4/5 { g16 ees g16 f ees16 } \times 4/5 { ees ees ees ges8 ~ }  ges bes ~ |
-    bes4 r r2 | %f'2 ~ | %r16 f'8. ~ f4 ~ |
+    %bes4 r r2 |
+    bes2 \times 2/3 { r8 a4 ~ } \times 2/3 { a8 g f  } |
+    %f'2 ~ | %r16 f'8. ~ f4 ~ |
     \times 2/3 { r8 f' [ ees ] } \times 2/3 { d [ c ] bes } aes g bes a |
 
     %r16 g [ f ees d c bes aes ] g [ ees' d c bes aes g ees ] |
@@ -116,9 +114,35 @@ soprano = {
     r4. g8 f ees bes'4 | 
   }
   \relative c'' {
-    ges4 fes \times 2/3 { g8 aes bes } \times 2/3 { g ees f }
+    ges4^\markup \italic "nicht swingful" fes \times 2/3 { g8 aes bes } \times 2/3 { g ees f }
     g16 ees8 f16 g ees c d ees c8. \times 2/3 { ees8 bes bes } |
-    \times 2/3 { bes bes bes }
+    c'8 [ d16 ] bes16   ees, g aes f    d f8.   \times 2/3 { d8 ees c } |
+    \times 2/3 { bes c d } bes d ~ d ees4 c8 |
+    \times 2/3 { c4 ( bes' ) d, } c \times 2/3 { ees4 c8 ~ } |
+    \times 2/3 { c d4 } \times 2/3 { bes g'8 ~ } \times 2/3 { g8 d4 } f4 ~ |
+    \times 4/5 { f16 g ees f g } ees16 f g32 aes bes aes g16 f ees8 ~ \times 2/3 { ees bes c } |
+    \times 2/3 { bes'4 g f ~ } f-. ees-. |
+  }
+  \relative c'' {
+    c2 ~ c8 bes c d |
+    bes2. c4 |
+    aes aes aes bes |
+    g2. g8 g |
+    f ees f ees f ees f g |
+    ees2 ~ ees8 ees g bes |
+  }
+  \tripletFeel 8 \relative c'' {
+    c4-. r4 r4. g8 |
+    f8 f bes aes g f ees d |
+    c c c c c4 g'8 aes |
+    bes g ees f g ees4 f8 |
+    g ees c d ees c ees4 |
+    c'2 ~ c8 bes c d |
+    bes2. c4 |
+    aes aes aes bes |
+    g2. g8 g |
+    f8 ees f ees f ees f g |
+    ees2.
   }
 }
 
@@ -142,13 +166,32 @@ sopranoWords = \lyricmode {
   For a -- ny
   If I on -- ly had a brain
   Oh
+  I tell you
   could tell you why
   could tell you 
   o -- cean's near the shore
   I would wile a -- way the ho -- urs
-  thiknk of things I ne -- ver thunk be -- fore
+  think of things I ne -- ver thunk be -- fore
   I'd un -- ra -- vel a -- ny sit
   And think some more
+  I would
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin'
+  My heart all
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin
+  My heart all full of pain.
+  I would dance and be mer -- ry,
+  be just a no -- thin'
+  My head all full of stuf -- fin
+  My heart all full of pain
+  Oh I could tell you why
+  The o -- cean's near the shore
+  I could think of things I ne -- ver thunk be -- fore
+  And then I'd sit and be a -- no -- ther Lin -- coln
+  If I on -- ly had a brain
+  I'd un -- ra -- vel a -- ny rid -- dle
+  For a -- ny in -- di -- vi -- dle
 }
 
 mezzo = {
@@ -189,13 +232,42 @@ mezzo = {
     ces aes ~ \times 2/3 { aes g f } d8 des'8 ~
   }
   \relative c'' {
-    des8 ces16 des32 ces |
+    des8 ces16 [ des32 ces ] |
   }
   \tripletFeel 8 \relative c'' {
-    bes8 g ~ \times 2/3 { g f ees } d d' \times 2/3 { c g bes } |
+    bes8 g ~ \times 2/3 { g f ees } d d' bes8 [ g ] |
     aes g ~ \times 2/3 { g f ees } d c' ~ \times 2/3 { c bes aes } |
-    \times 2/3 { g ees g } \times 2/3 { bes ees ces } d c g ges |
-    f4 
+    \times 2/3 { g [ ( ees g ] } \times 2/3 { bes [ ees ces ] } d [ c ] ) g ges |
+    f4 f'8 ees d c ~ \times 2/3 { c bes aes } |
+    g8 g \times 2/3 { g' [ d ] f } ees16 [ b d ] c g8 ges |
+    f ees' ~ \times 2/3 { ees d c } bes aes g f |
+    \times 2/3 { bes8 d,4 ~ } d4 bes4-. r4 | %bes-. |
+  }
+  \relative c' {
+    r2. bes4 |
+    g'2 ~ g8 f g aes |
+    f2. g4 |
+    ees ees ees f |
+    c8 c d c d c d c |
+    d ees c2. |
+  }
+  \tripletFeel 8 \relative c'' {
+    g4-. c8 bes aes g f ees |
+    bes'2. \myred g8 aes |
+    bes g ees f g ees4 f8 |
+    g ees c d ees c4 ees8 |
+    bes bes bes bes bes2 ~ |
+    bes2. ees8 d |
+    c4 c'8 bes aes g f ees |
+    d d d' c bes aes g f |
+    ees ees ees ees ees2 ~ |
+    ees2. ees8 d |
+  }
+  \relative c' {
+    c4 c'8 bes aes g f ees |
+    d d d' c bes aes g f |
+    ees ees ees ees ees2 |
+    a1
   }
 }
 
@@ -227,6 +299,32 @@ mezzoWords = \lyricmode {
   I could think of things I ne -- ver thunk be -- fore
   And then I'd sit and think some more.
   
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin'
+  My heart all full of pain
+  all full of pain.
+  I would dance and be mer -- ry,
+  Life would be a ding -- a -- der -- ry,
+  If I on -- ly had a brain.
+  on -- ly had a brain brain.
+  %Oh
+  Oh I could tell you why
+  The o -- cean's near the
+  I could think of things I ne -- ver thunk be -- fore
+  sit I'd be think and think some more.
+  I could wile a -- way the ho -- urs
+  Con -- fer -- rin' with the flow -- ers
+  Con -- sul -- tin' with the rain
+
+  And my head I'd be scratch -- in'
+  While my thoughts were bu -- sy hat -- chin'
+  If I on -- ly had a brain
+
+  With the thoughts I'd be think -- in'
+  I could be a -- no -- ther Lin -- coln
+  If I on -- ly had a brain
+  brain
+
 }
 
 alto = {
@@ -241,7 +339,7 @@ alto = {
     bes aes g aes bes c d c |
     bes aes g f ees ees ees ees |
     ees4 \myred g8 aes bes g \myred g'8 aes |
-    g^"!" g ees f g ees4 f8 |
+    ees^"!" g ees f g ees4 f8 |
     g ees c d ees c4 ees8 |
     \myred bes8 c d bes \myred d8 ees f d %\myred g aes bes g |
     bes c d bes \myred ees8 d c4 |
@@ -255,7 +353,8 @@ alto = {
     g ees c d \times 2/3 { ees4 des f ~ } |
   }
   \relative c' {
-    f8 ees16 [ ( g ] \times 2/3 { bes4 ees,8 ) } \times 2/3 { r8 ees4 ~ } ees4  |
+    f8 ees8 ~ ees4 \times 2/3 { r8 ees4 } bes |
+    %f8 ees16 [ ( g ] bes4 ) \times 2/3 { r8 a4 ~ } \times 2/3 { a8 g f  } |
     %r8 ees16 g \times 2/3 { bes4 ees,8 } \times 2/3 { r8 a8 aes } ges8 bes |
     %f8 d^"oh" aes'16 g^"tell" f f^"u" \times 4/5 { ees16^"y" g^"I" f ees d^"u" } ees8^"y" d16 bes |
     %c8 ges' f c bes d f f |
@@ -273,7 +372,34 @@ alto = {
   }
   \relative c'' {
     g,16 aes bes g   ees f g ees   f g ees c \times 2/3 { d8 ees c } |
-    \times 2/3 { ees8 bes bes } \times 2/3 { bes bes bes }
+    \times 2/3 { ees8 bes bes } bes bes'8 ~ \times 2/3 { \times 2/3 { bes16 aes g } f8 ( [ g ] } \times 4/5 { aes [ bes f16 ~ ] } |
+    \times 4/5 { f [ aes8 g ) ] } \times 2/3 { ees4 g8 ~ } \times 2/3 { g ees4 } aes4 |
+    \times 4/7 { bes4 g'8 f ees d c } bes8. g16 ~ \times 4/5 { g g aes bes g } |
+    \times 4/5 { ees f g ees f } \times 4/5 { g ees c d ees } c16 ees bes bes   \times 2/3 { bes8 bes bes }  |
+    g'16 ees8 g16 ~    g bes,8 bes16   bes bes' bes8 ~ bes8 f' |
+    \times 2/3 { ees8 [ bes8 ] g' } \times 2/3 { ees bes' g } d'4-. r4 %|g-. |
+    r4 aes, ees'2 ~ |
+    ees8 d ees f d2 ~ |
+    d4 ees4 c c |
+    c d bes2 |
+    r4 bes8 bes aes g aes g |
+    g aes g bes g2 |
+    a4-. r4 r4 c |
+    aes aes aes bes
+  }
+  \tripletFeel 8 \relative c' {
+    g4 g8 f ees g bes aes |
+    g bes4 aes8 g bes d c |
+    bes d4 bes8 ees ees ees ees |
+    ees4 f aes,2 ~ |
+    aes8 bes aes g bes2 ~ |
+    bes4 aes4 c c |
+    c bes d bes
+    g bes d bes |
+    ees8 d ees8 d c bes aes g |
+    f f f' ees d c bes aes |
+    bes g ees f g ees ~ ees4 |
+    f'1 |
   }
 }
 
@@ -295,7 +421,7 @@ altoWords = \lyricmode {
   no -- ther Lin -- coln If
   I'd un -- ra -- vel a -- ny rid -- dle
   For a -- ny in -- di -- vi -- d'le
-  Oh, Oh I
+  Oh, Oh I could
   wile a -- way the ho -- urs
   Con -- fer -- rin' with the flow -- ers
   Con -- sul -- tin' with the rain
@@ -303,7 +429,34 @@ altoWords = \lyricmode {
   ra -- vel a -- ny rid -- dle
   For a -- ny in -- di -- vi -- d'le
   In trou -- ble or in pain and think some
-
+  more I would
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin'
+  My heart all full
+  all full of pain.
+  I would dance and be 
+  I would dance and be mer -- ry
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin'
+  My heart all full of pain
+  Dance and be mer -- ry
+  Life would be
+  If I on -- ly had a brain
+  %Oh
+  Oh I could tell you why
+  The o -- cean's near the shore
+  I could think of things I ne -- ver thunk be -- fore
+  sit
+  The o -- cean's near the shore
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin
+  My heart all full of pain
+  Oh I could tell you why
+  The o -- cean's near the
+  If I on -- ly had a
+  With the I'd be thin -- kin
+  I could be a -- no -- ther Lin -- coln
+  If I 
 }
 
 tenor = {
@@ -328,7 +481,7 @@ tenor = {
     bes g ees f \times 2/3 { g4 a b ~ } |
   }
   \relative c' {
-    b16 c8. r16 g'8. \times 2/3 { r8 ges4 ~ } \times 4/6 { ges16 f [ ees ] d [ c ] bes } |
+    b16 c8. g'4 \times 2/3 { r8 ges4 ~ } \times 4/6 { ges16 f [ ees ] d [ c ] bes } |
     aes8 ees g bes d16 ees, g bes ees [ d ] c [ bes ] |
     aes8 [ g' ] f [ ees ] c [ bes ] aes' d, ~ |
     \times 2/3 { d ees f } \times 2/3 { d bes c } \times 2/3 { d4 bes4 c, } |
@@ -340,8 +493,36 @@ tenor = {
     f ees c'8 aes f g aes f |
   }
   \relative c' {
-    c16 g8 f16 ees g bes aes g bes8. \times 2/3 { aes8 g bes } |
-    \times 4/5 { d16 c bes d8 } bes ees
+     c8. f,16 ees g bes aes g bes8. \times 2/3 { aes8 g bes } |
+     \times 4/5 { d16 c bes d8 } bes ees \times 2/3 { bes4 bes g }
+     bes8 c g4 aes8 f \times 2/3 { d'4 bes8 ~ } |
+     \times 2/3 { bes8 ees [ ( bes ] } \times 2/3 { g ) ees4 ~ } \times 2/3 { ees8 f g ~ } \times 2/3 { g ees4 } |
+     g8 ees c'4 g bes |
+     \times 2/3 { c8 d bes }   g8 aes8   \times 2/3 { bes g8 aes }  \times 4/7  { c8 aes16 f g aes f } |
+     d16 f bes, bes'    \times 4/7 { aes16 g f ees8 f8 } \times 4/5 { bes,8 d' g, ~ \times 2/3  { g16 ees f } g8 } |
+     r16 d g8 d16 aes'8 d,16 ~ d g8.-. r4 |
+     R1 |
+     r4 ees c'2 ~ |
+     c8 bes c d bes2 ~ |
+     bes4 c aes aes |
+     aes r f8 g f ees |
+     f ees f ees f g ees4 |
+   }
+   \tripletFeel 8 \relative c {
+     ees-. r4 r2 |
+     d8 d d' c bes aes g f |
+     ees ees ees ees ees2 ~ |
+     ees4 g8 f ees g bes aes |
+     g bes4 aes8 g bes d c |
+     bes d4 bes8 ees8 ees ees ees |
+     ees4 ees,8 d c4 c'8 bes |
+     aes g f ees d d d' c |
+     bes aes g f ees ees ees ees |
+     ees1 |
+     g2 f'8 ees d c |
+     bes bes aes g f ees d c |
+     c'2 ~ c8 bes c d |
+     bes1 |
    }
 }
 
@@ -369,7 +550,30 @@ tenorWords = \lyricmode {
   The o -- cean's near the
   I'd un -- ra -- vel a -- ny rid -- dle
   Oh I could tell you why the o
-  and think some not be just a noth -- in'
+  and think some not be just a no -- thin'
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin
+  My heart all full of pain
+  My heart
+  My heart
+  My heart
+  My heart all full of pain
+  would dance and be
+  would not be just a no -- thin'
+  My
+  I would not be just a no -- thin'
+  My head all full of stuf -- fin
+  My heart all full of pain
+  Oh I could tell you why
+  Oh I could tell you why 
+  The o -- cean's near
+  I could think of things I ne -- ver thunk be -- fore
+  sit
+  be a -- no -- ther Lin -- coln
+  If I on -- ly had a brain
+  I could wile a -- way the ho -- urs
+  Con -- fer -- rin' with the flow -- ers
+  Con -- sul -- tin' with the rain
 }
 
 bass = {
@@ -392,7 +596,7 @@ bass = {
     f, bes |
     ees2 aes,4 bes |
     g ees ees'4 ces8 g8 ~ |
-    g8 aes8 ~ aes4 a4. f8 ~ |
+    g8 aes8 ~ aes4 f4. f8 ~ |
     \times 2/3 { f8 bes4 ~ } \times 2/3 { bes8 g4 } c g8 [ ges ] |
   }
   \relative c, {
@@ -412,6 +616,26 @@ bass = {
     %\times 4/5 { des8 c e g, c } \times 4/5 { ges' fes g bes, g } |
     %\times 2/3 { aes8 bes f } \times 2/3 { ees' g, bes } aes16 g' f ees d c bes aes |
     %g ees' d c bes aes g f g ees8. ~ ees4 |
+    g4 aes bes aes |
+    g4 ees ees' bes |
+    aes f bes aes |
+    d bes f'16 [ ees ] d [ c ] bes4 |
+    aes2 f |
+    bes4 g c g |
+    f2 bes |
+    ees4 bes ees r |
+    aes,2 f |
+    bes4 g c aes |
+    f2 bes |
+    ees2. aes,4 |
+    d2 g, |
+    c4 d ees c |
+    f, r4 r2 |
+    r4 d' bes ees, |
+    c'2 ~ c8 bes c d |
+    bes2. c4 |
+    aes aes aes bes |
+    g2. g8 g |
    }
 }
 
@@ -430,7 +654,20 @@ bassWords = \lyricmode {
   I would wile a -- way the ho -- urs
   I'd ne -- ver thunk be -- fore
   And then I'd sit and think some more would
+  not be just a no -- thin' my head
+  full of stuf -- fin'
+  heart all full of pain
+  I would dance be mer -- ry
+  If I had a brain
+  I could tell you why the o near shore.
+  Oh I could thunk be -- fore I'd sit
+  And think
+  Oh I could tell you why
+  The o -- cean's near the shore
+  I could think of things I ne -- ver thunk be -- fore
+  And then I'd sit and think some more  
 }
+
 \score {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
