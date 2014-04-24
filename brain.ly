@@ -17,6 +17,10 @@
 
 #(set-global-staff-size 15.87)
 
+railroad =  {
+  \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
+  \breathe
+}
 myred = \once \override NoteHead #'color = #red
 
 \paper {
@@ -62,11 +66,11 @@ midiPrefatoryMatter = {
 marks = {
   \tempo "Adagio" 4=52
   s4 |
-  s1*31 |
+  %s1*31 |
   %\unfoldChange #52 #60 #8
   %\tempo "più mosso" 4=60
-  s1
-  %\repeat unfold 65 \unfoldSwing 52
+  %s1
+  s1*52 \bar "|."
 }
 
 soprano = {
@@ -142,7 +146,12 @@ soprano = {
     aes aes aes bes |
     g2. g8 g |
     f8 ees f ees f ees f g |
-    ees2.
+  }
+  \relative c' {
+    ees2 ~ ees8 ees g bes |
+    c4-. bes8 aes g f ees d |
+    g4 g8 aes bes g ees d |
+    a'1^\fermata |
   }
 }
 
@@ -192,6 +201,12 @@ sopranoWords = \lyricmode {
   If I on -- ly had a brain
   I'd un -- ra -- vel a -- ny rid -- dle
   For a -- ny in -- di -- vi -- dle
+  Oh I could tell you why
+  The o -- cean's near the shore
+  I could think of things I ne -- ver thunk be -- fore
+  And then I'd sit
+  ding -- a -- der -- ry, If I
+  o I would wile a -- way the brain
 }
 
 mezzo = {
@@ -267,7 +282,9 @@ mezzo = {
     c4 c'8 bes aes g f ees |
     d d d' c bes aes g f |
     ees ees ees ees ees2 |
-    a1
+    \railroad
+    \railroad
+    f'8 d bes c d bes ~ bes4^\fermata |
   }
 }
 
@@ -320,11 +337,10 @@ mezzoWords = \lyricmode {
   While my thoughts were bu -- sy hat -- chin'
   If I on -- ly had a brain
 
-  With the thoughts I'd be think -- in'
-  I could be a -- no -- ther Lin -- coln
-  If I on -- ly had a brain
-  brain
-
+  I would dance and be mer -- ry
+  Life would be a ding -- a -- der -- ry,
+  If I on -- ly had a brain,
+  wile a -- way the ho -- urs.
 }
 
 alto = {
@@ -396,10 +412,13 @@ alto = {
     bes4 aes4 c c |
     c bes d bes
     g bes d bes |
+  }
+  \relative c' {
     ees8 d ees8 d c bes aes g |
     f f f' ees d c bes aes |
-    bes g ees f g ees ~ ees4 |
-    f'1 |
+    bes g ees f g ees4 f8 |
+    \railroad
+    f'1^\fermata |
   }
 }
 
@@ -454,9 +473,10 @@ altoWords = \lyricmode {
   Oh I could tell you why
   The o -- cean's near the
   If I on -- ly had a
-  With the I'd be thin -- kin
-  I could be a -- no -- ther Lin -- coln
-  If I 
+  I would and be mer -- ry
+  Life would be a ding -- a -- der -- ry,
+  If I wile a -- way the ho -- urs a
+  brain
 }
 
 tenor = {
@@ -519,10 +539,13 @@ tenor = {
      aes g f ees d d d' c |
      bes aes g f ees ees ees ees |
      ees1 |
+  }
+  \relative c' {
      g2 f'8 ees d c |
      bes bes aes g f ees d c |
      c'2 ~ c8 bes c d |
-     bes1 |
+    \railroad
+     bes1^\fermata |
    }
 }
 
@@ -574,6 +597,14 @@ tenorWords = \lyricmode {
   I could wile a -- way the ho -- urs
   Con -- fer -- rin' with the flow -- ers
   Con -- sul -- tin' with the rain
+  With the thoughts I'd be think -- in'
+  I could be a -- no -- ther Lin -- coln
+  If I on -- ly had a brain
+  dance mer -- ry
+  Life would be a ding -- a -- der -- ry,
+  If
+  Oh I could tell you
+  brain
 }
 
 bass = {
@@ -606,8 +637,8 @@ bass = {
     \times 2/3 { c8 aes f } \times 2/3 { g aes f } g4 d'8 g, |
     c4. d8 ees8 c g ges |
     f4-. r4 r2 |
-   }
-   \tripletFeel 8 \relative c {
+  }
+  \tripletFeel 8 \relative c {
     r8 g f ees bes'4. c8 |
     %d4 g,8 ges8 f4 fis |
     %\times 4/5 { g8 ees' g,16 } \times 4/5 { aes bes g ees f } g ees8. ~ \times 2/3 { ees8 f g } |
@@ -631,11 +662,22 @@ bass = {
     d2 g, |
     c4 d ees c |
     f, r4 r2 |
-    r4 d' bes ees, |
-    c'2 ~ c8 bes c d |
+    r4 d' bes g |
+    c2 ~ c8 bes c d |
     bes2. c4 |
     aes aes aes bes |
     g2. g8 g |
+    aes2 f |
+    bes g |
+    c f,4 bes |
+    ees1 |
+  }
+  \relative c {
+    aes2. f8 g |
+    aes aes bes c d ees f g |
+    aes4 f bes bes, |
+    \railroad
+    ees1^\fermata |
    }
 }
 
@@ -664,8 +706,11 @@ bassWords = \lyricmode {
   And think
   Oh I could tell you why
   The o -- cean's near the shore
-  I could think of things I ne -- ver thunk be -- fore
-  And then I'd sit and think some more  
+  I would dance and me -- ry
+  I had a brain
+  dance
+  Life would be a ding -- a -- der -- ry,
+  If I on -- ly had a brain.
 }
 
 \score {
