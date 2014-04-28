@@ -160,7 +160,7 @@ mezzo = \relative c' { \autoBeamOff
   ees8 \MyBlack e4 ~ |
   e8 r ees8 |
   des des a |
-  aes a g |
+  aes bes g |
   g4. ~ |
   g8 r \MyRed aes |
   aes4 aes8 |
@@ -310,8 +310,8 @@ tenor = \relative c { \autoBeamOff
   \MyRed ees4. |
   aes4 ees8 |
   c4 des8 |
-  ees8 \MyBlack ges4 ~ |
-  ges8 r ees8 |
+  ees8 \MyBlack a4 ~ |
+  a8 r ees8 |
   aes aes d, |
   f e ees |
   ees4. ~ |
@@ -321,7 +321,7 @@ tenor = \relative c { \autoBeamOff
   c8 d des |
   c4 c8 |
   d c fes |
-  ees4 g,8 |
+  ees4 f,8 |
   a4. ~ |
   a8 r c8 |
   des d c |
@@ -387,8 +387,8 @@ bass = \relative c { \autoBeamOff
   \MyRed ees4. |
   aes4 ees8 |
   c4 des8 |
-  ees8 \MyBlack ces4 ~ |
-  ces8 r ees8 |
+  ees8 \MyBlack b4 ~ |
+  b8 r ees8 |
   bes fes' ges, |
   ees' a, d |
   c4. ~ |
