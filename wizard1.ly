@@ -44,13 +44,13 @@ marks = {
   s4.*8 |
 }
 
-prefactoryMatter = {
+prefatoryMatter = {
   \key aes \major
   #(set-accidental-style 'modern-cautionary)
 }
 
 soprano = \relative c' { \autoBeamOff
-  \prefactoryMatter
+  \prefatoryMatter
   \MyRed
   ees4.
      %\footnote #'(0 . 0) \markup { Bitonal harmony resulting from tertian extensions used in directional, voice led counterpoint. } NoteHead |
@@ -152,7 +152,7 @@ sopranoWords = \lyricmode {
 }
 
 mezzo = \relative c' { \autoBeamOff
-  \prefactoryMatter
+  \prefatoryMatter
   \MyRed
   ees4. |
   aes4 ees8 |
@@ -229,7 +229,7 @@ mezzoWords = \lyricmode {
 }
 
 alto = \relative c' { \autoBeamOff
-  \prefactoryMatter
+  \prefatoryMatter
   \MyRed ees4. |
   aes4 ees8 |
   c4 des8 |
@@ -305,7 +305,7 @@ altoWords = \lyricmode {
 }
 
 tenor = \relative c { \autoBeamOff
-  \prefactoryMatter
+  \prefatoryMatter
   \clef "treble_8"
   \MyRed ees4. |
   aes4 ees8 |
@@ -382,7 +382,7 @@ tenorWords = \lyricmode {
 }
 
 bass = \relative c { \autoBeamOff
-  \prefactoryMatter
+  \prefatoryMatter
   \clef bass
   \MyRed ees4. |
   aes4 ees8 |

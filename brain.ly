@@ -648,7 +648,7 @@ bass = {
     f4-. r4 r2 |
   }
   \tripletFeel 8 \relative c {
-    r8 \myred g^\<^\swung f ees bes'4. c8 |
+    r8 \myred g^\<^\swung f ees bes'2 | %bes'4. c8 |
     %d4 g,8 ges8 f4 fis |
     %\times 4/5 { g8 ees' g,16 } \times 4/5 { aes bes g ees f } g ees8. ~ \times 2/3 { ees8 f g } |
     %aes4 bes f d' |
@@ -704,7 +704,7 @@ bassWords = \lyricmode {
   o -- cean's near the shore
   I would wile a -- way the ho -- urs
   I'd ne -- ver thunk be -- fore
-  And then I'd sit and think some more would
+  And then I'd sit and think some more %would
   not be just a no -- thin' my head
   full of stuf -- fin'
   heart all full of pain
@@ -733,7 +733,7 @@ bassWords = \lyricmode {
 	\scorePrefatoryMatter
         \marks
       } >> }
-      \lyricsto "soprano" \new Lyrics {
+      \new Lyrics \lyricsto "soprano" {
         \sopranoWords
       }
     >>
@@ -743,7 +743,7 @@ bassWords = \lyricmode {
 	\scorePrefatoryMatter
         \mezzo
       }
-      \lyricsto "mezzo" \new Lyrics {
+      \new Lyrics \lyricsto "mezzo" {
         \mezzoWords
       }
     >>
@@ -753,7 +753,7 @@ bassWords = \lyricmode {
 	\scorePrefatoryMatter
         \alto
       }
-      \lyricsto "alto" \new Lyrics {
+      \new Lyrics \lyricsto "alto" {
         \altoWords
       }
     >>
@@ -763,7 +763,7 @@ bassWords = \lyricmode {
 	\scorePrefatoryMatter
         \tenor
       }
-      \lyricsto "tenor" \new Lyrics {
+      \new Lyrics \lyricsto "tenor" {
         \tenorWords
       }
     >>
@@ -773,7 +773,7 @@ bassWords = \lyricmode {
 	\scorePrefatoryMatter
         \bass
       }
-      \lyricsto "bass" \new Lyrics {
+      \new Lyrics \lyricsto "bass" {
         \bassWords
       }
     >>
@@ -821,7 +821,7 @@ bassWords = \lyricmode {
 	\midiPrefatoryMatter
         \marks
       } >> }
-      \lyricsto "soprano" \new Lyrics {
+      \new Lyrics \lyricsto "soprano" {
         \sopranoWords
       }
     >>
@@ -831,7 +831,7 @@ bassWords = \lyricmode {
 	\midiPrefatoryMatter
         \mezzo
       }
-      \lyricsto "mezzo" \new Lyrics {
+      \new Lyrics \lyricsto "mezzo" {
         \mezzoWords
       }
     >>
@@ -841,7 +841,7 @@ bassWords = \lyricmode {
 	\midiPrefatoryMatter
         \alto
       }
-      \lyricsto "alto" \new Lyrics {
+      \new Lyrics \lyricsto "alto" {
         \altoWords
       }
     >>
@@ -851,7 +851,7 @@ bassWords = \lyricmode {
 	\midiPrefatoryMatter
         \tenor
       }
-      \lyricsto "tenor" \new Lyrics {
+      \new Lyrics \lyricsto "tenor" {
         \tenorWords
       }
     >>
@@ -861,7 +861,7 @@ bassWords = \lyricmode {
 	\midiPrefatoryMatter
         \bass
       }
-      \lyricsto "bass" \new Lyrics {
+      \new Lyrics \lyricsto "bass" {
         \bassWords
       }
     >>
