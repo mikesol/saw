@@ -102,7 +102,7 @@ soprano = {
   \relative c'' {
     \times 2/3 { \myred g^\notswung aes bes } \times 2/3 { g8 ees f } \times 2/3 { g8 ees4 ~ }
     \times 2/3 { ees8 f g } \times 2/3 { ees8 c d } \times 2/3 { ees c4 ~ } c8 ees |
-    bes4 bes    \times 2/3 { \myred d'8 c bes } \times 2/3 {  aes g f }
+    bes4 bes  ~  \times 4/7 { bes8 \myred d'8 c bes aes g f }
   }
   \relative c' \tripletFeel 8 {
     ees8^\swung ees ees ees
@@ -408,7 +408,7 @@ alto = {
     d4 ees4 c c |
     c d bes2 |
     r4 bes8 bes aes g aes g |
-    g aes g bes g2 |
+    aes g aes bes g2 |
     a4-. r4 r4 \myred c^\cresc |
     aes aes aes bes
   }
