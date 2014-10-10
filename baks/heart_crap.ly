@@ -78,155 +78,114 @@ myred = \once \override NoteHead #'color = #red
 prefatoryMatter = {
   \key b \minor
   \autoBeamOff
-  \time 2/4
 }
 
 scorePrefatoryMatter = {
   \prefatoryMatter
+  %\partial 4
 }
 
 midiPrefatoryMatter = {
   \prefatoryMatter
+  %r2.
+  %\partial 4
 }
 
 marks = {
   \tempo "Largo" 4=48
-  s2 |
+  s1 |
 }
 
 soprano = \relative c'' {
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  b4 e,8 c' ~ |
-  c2 |
-  b4 a8 b |
-  a g4. |
-  s2*15 |
-  g2 |
-  b8 g e cis' |
-  a fis d b |
-  b'4 a4 ~ |
-  a8 g fis e |
+  R1 |
+  r2. b4 ~ |
+  b4. c8 ~ c4 b4 ~ |
+  b a8 b ~ b r8 e4 ~ |
+  e2. d4 ~ |
+  d4 c ~ c b ~ |
+  b cis2. ~ |
+  cis2 b2 |
+  s1 \break s1*3 \break s1*3 \break s1*3 \break s1*3 \break |
 }
 
 sopranoWords = \lyricmode {
+  me had
 }
 
-mezzo = \relative c' {
-  R2 |
-  R2 |
-  fis4 e ~ |
-  e8 d cis b |
-  R2 |
-  r8 fis' dis b |
-  R2 |
-  R2 |
-  R2 |
-  g'8 fis4. |
-  s2*20 |
+mezzo = \relative c'' {
+  r4. g8 e4. r8 |
+  fis4 e8 fis e d4. |
+  r8 g4 r8 a8 fis4. |
+  r2 a8 g4. ~ |
+  g2 ~ g8 fis4. ~ |
+  fis2 ~ fis8 e4. ~ |
+  e8 r r4 r2 |
+  r4 g4 ~ g8 fis4. |
+  r2.. g8 ~ |
+  g2 fis |
+  s1*16 |
 }
 
 mezzoWords = \lyricmode {
+  sum And
+  Just chip If That heart
 }
 
 alto = \relative c' {
-  R2 |
-  R2 |
-  \Red
-  r4. fis8 ~ |
-  fis2 ~ |
-  fis8 g4. |
-  a2 ~ |
-  a4 r |
-  r4 fis4 |
-  d2 ~ |
-  d4 e ~ |
-  e2 |
-  fis4 d ~ |
-  d2 |
-  e2 |
-  fis ~ |
-  fis4 d ~ |
-  d4. b8 ~ |
-  b8 cis4. ~ |
-  cis4 d4 ~ |
-  d2 |
-  b |
-  d4 a |
-  a8 a a a ~ |
-  a d4. ~ |
-  d4 cis ~ |
-  cis b ~ |
-  b4. b'8 ~ |
-  b2 |
+  r8 d4 r8 r8 cis4. ~ |
+  cis8 r4. r4 cis8 b ~ |
+  b8 r8 e4 ~ e dis ~ |
+  dis2 ~ dis8 r fis e |
+  d cis4. ~ cis8 r8 r4 |
+  r2. d8 cis ~ |
+  cis4 e ~ e8 d4. ~ |
+  d8 r8 r4 r4 cis8 d ~ |
+  d4 cis8 b ~ b cis d e ~ |
+  e4 d8 cis8 ~ cis d cis b |
+  s1*16 |
 }
 
 altoWords = \lyricmode {
+  em his
+  shoots on
 }
 
 tenor = \relative c' {
   \clef "treble_8"
-  r8 d b g' |
-  e cis ais fis |
-  r8 fis4. |
-  ais4 b ~ |
-  b2 |
-  R2 |
-  r8 b4. |
-  dis4. e8 ~ |
-  e8 cis b a ~ |
-  a4 r8 d  |
-  c b a g |
-  r e'4 cis8 |
-  b ais g fis |
-  r d'8 cis b |
-  ais g fis4 |
-  r8 b cis r8 |
-  r8 d cis4 |
-  r4 d8 e ~ |
-  e8 e4 cis8 ~ |
-  cis d e fis ~ |
-  fis d b g' |
-  e cis a fis |
-  fis' fis, e' fis |
-  e4 cis8 b |   
-  s2*6 |
+  r4 b2 ais4 ~ |
+  ais2. r4 |
+  R1 |
+  R1 |
+  r2. e'8 d |
+  c b a g ~ g4. r8 |
+  b ais g fis ~ fis4 cis'8 b |
+  ais2 r8 b4. ~ |
+  b2. ais4 |
+  s1*16 |
 }
 
 tenorWords = \lyricmode {
+  me tal
 }
 
 bass = \relative c {
   \clef "bass"
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  r4. e8 |
-  d2 |
-  eis |
-  fis |
-  g |
-  a |
-  R2 |
-  e4 a, |
-  d2 |
-  s2*6 |
+  r2.. fis8 |
+  r8 fis4. r2 | 
+  r2.. b8 |
+  r8 b4. r2 |
+  r4 b8 a ~ a2 |
+  R1 |
+  R1 |
+  r8 g fis e d2 |
+  eis2 fis |
+  ais2. r4 |
+  s1*16 |
 }
 
 bassWords = \lyricmode {
+  When
+  I'd
 }
 
 \score {
