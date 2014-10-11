@@ -37,6 +37,7 @@ If I only had a heart
 
 #(set-global-staff-size 15.87)
 
+%{
 \paper {
   #(define fonts
     (set-global-fonts
@@ -44,6 +45,7 @@ If I only had a heart
     #:factor (/ staff-height pt 20)
   ))
 }
+%}
 
 railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
@@ -98,17 +100,31 @@ soprano = \relative c'' {
   R2 |
   R2 |
   R2 |
-  R2 |
-  b4 e,8 c' ~ |
+  r8 b4. ~ |
+  b4. c8 ~ |
   c2 |
   b4 a8 b |
   a g4. |
-  s2*15 |
-  g2 |
+  r4. e'8 ~ |
+  e4 d ~ |
+  d c ~ |
+  c b ~ |
+  b cis ~ |
+  cis2 ~ |
+  cis ~ |
+  cis |
+  R2 |
+  r4 fis ~ |
+  fis2 ~ |
+  fis ~ |
+  fis4 e ~ |
+  e d ~ |
+  d cis ~ |
+  cis2 |
   b8 g e cis' |
   a fis d b |
-  b'4 a4 ~ |
-  a8 g fis e |
+  b'4 a8 g |
+  fis e dis cis |
 }
 
 sopranoWords = \lyricmode {
@@ -118,14 +134,30 @@ mezzo = \relative c' {
   R2 |
   R2 |
   fis4 e ~ |
-  e8 d cis b |
-  R2 |
+  e8 d cis b ~ |
+  b8 r4. |
   r8 fis' dis b |
   R2 |
   R2 |
+  r8 a'4. ~ |
+  a2 ~ |
+  a ~ |
+  a |
   R2 |
-  g'8 fis4. |
-  s2*20 |
+  g2 |
+  a2 ~ |
+  a4 b4 ~ |
+  b a8 g |
+  fis a4 g8 ~ |
+  g b4. ~ |
+  b4 a ~ |
+  a2 |
+  g |
+  b4 a ~ |
+  a2 ~ |
+  a4 g ~ 
+  g fis ~ |
+  fis e |
 }
 
 mezzoWords = \lyricmode {
@@ -139,15 +171,15 @@ alto = \relative c' {
   fis2 ~ |
   fis8 g4. |
   a2 ~ |
-  a4 r |
-  r4 fis4 |
+  a2 ~ |
+  a4 fis4 |
   d2 ~ |
   d4 e ~ |
   e2 |
   fis4 d ~ |
-  d2 |
+  d4 e4 ~ |
   e2 |
-  fis ~ |
+  fis2 ~ |
   fis4 d ~ |
   d4. b8 ~ |
   b8 cis4. ~ |
@@ -159,8 +191,15 @@ alto = \relative c' {
   a d4. ~ |
   d4 cis ~ |
   cis b ~ |
-  b4. b'8 ~ |
-  b2 |
+  b4. b'8 |
+  a8 g fis e ~ |
+  e2 ~ |
+  e4 d4 |
+  cis cis' |
+  b a ~ |
+  a g ~ |
+  g fis8 e |
+  d 
 }
 
 altoWords = \lyricmode {
@@ -174,14 +213,14 @@ tenor = \relative c' {
   ais4 b ~ |
   b2 |
   R2 |
-  r8 b4. |
-  dis4. e8 ~ |
-  e8 cis b a ~ |
-  a4 r8 d  |
-  c b a g |
-  r e'4 cis8 |
-  b ais g fis |
-  r d'8 cis b |
+  r8 b4. ~ |
+  b8 dis4 e8 ~ |
+  e4. r8 |
+  g8 fis4. ~ |
+  fis8 r4. |
+  r8 e4. |
+  fis2 |
+  r8 d8 cis b |
   ais g fis4 |
   r8 b cis r8 |
   r8 d cis4 |
@@ -191,14 +230,19 @@ tenor = \relative c' {
   fis d b g' |
   e cis a fis |
   fis' fis, e' fis |
-  e4 cis8 b |   
-  s2*6 |
+  e4 cis8 b ~ |
+  b2 ~ |
+  b8 d, a'4 |
+  b c ~ |
+  c2 ~ |
+  c4 b8 a |
+  g4
 }
 
 tenorWords = \lyricmode {
 }
 
-bass = \relative c {
+bass = \relative c' {
   \clef "bass"
   R2 |
   R2 |
@@ -208,11 +252,11 @@ bass = \relative c {
   R2 |
   R2 |
   R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
+  r8 cis b a ~ |
+  a4 r8 d  |
+  c b a g |
+  r4. cis8 |
+  b ais g fis |
   R2 |
   r4. e8 |
   d2 |
@@ -220,10 +264,18 @@ bass = \relative c {
   fis |
   g |
   a |
-  R2 |
+  r4 b, |
   e4 a, |
   d2 |
-  s2*6 |
+  g, |
+  a |
+  fis4 fis' |
+  g e |
+  dis2 |
+  b |
+  fis'4 e8 d |
+  cis4. b8 |
+  a cis fis4 |
 }
 
 bassWords = \lyricmode {
