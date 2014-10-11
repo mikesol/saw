@@ -377,7 +377,8 @@ altoSecond = \relative c'' {
   b2 |
   d4. a8 ~ |
   a a a a |
-  a4. d8 |
+  a4. d8 ~ |
+  d2 |
   cis4 b ~ |
   b b'4 |
 }
