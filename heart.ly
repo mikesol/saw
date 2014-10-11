@@ -46,6 +46,16 @@ If I only had a heart
   ))
 }
 %}
+%{
+\paper {
+  #(define fonts
+    (set-global-fonts
+    #:music "haydn"
+    #:brace "gonville"
+    #:factor (/ staff-height pt 20)
+  ))
+}
+%}
 
 railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
@@ -69,7 +79,7 @@ myred = \once \override NoteHead #'color = #red
 
 \header {
   title = "If I Only Had a Heart"
-  subtitle = "for Henry Purcell and J.S. Bach"
+  subtitle = "for Henry Purcell, J.S. Bach, Michel Legrand, Guillaume Dufay and G.F. Händel"
   %title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
@@ -96,7 +106,7 @@ marks = {
   s2 |
 }
 
-soprano = \relative c'' {
+sopranoFirst = \relative c'' {
   R2 |
   R2 |
   R2 |
@@ -125,18 +135,21 @@ soprano = \relative c'' {
   a fis d b |
   b'4 a8 g |
   fis e dis cis |
+  b4 fis' ~ |
+  fis g |
+  s2*15 |
 }
 
-sopranoWords = \lyricmode {
+sopranoWordsFirst = \lyricmode {
 }
 
-mezzo = \relative c' {
+mezzoFirst = \relative c' {
   R2 |
   R2 |
   fis4 e ~ |
   e8 d cis b ~ |
-  b8 r4. |
-  r8 fis' dis b |
+  b4 e |
+  r8 fis dis b |
   R2 |
   R2 |
   r8 a'4. ~ |
@@ -156,14 +169,30 @@ mezzo = \relative c' {
   b4 a ~ |
   a2 ~ |
   a4 g ~ 
-  g fis ~ |
+  g a |
   fis e |
+  r fis |
+  g a ~ |
+  a b ~ |
+  b2 |
+  d
+  cis ~ |
+  cis ~ |
+  cis8 b a g |
+  fis2 ~ |
+  fis4 eis |
+  cis2 |
+  R2 | R2 | R2 |
+  fis8 d b g' ~ |
+  g cis,4. ~ |
+  cis4 e8 fis |
+  e dis c b ~ | % to e minor  
 }
 
-mezzoWords = \lyricmode {
+mezzoWordsFirst = \lyricmode {
 }
 
-alto = \relative c' {
+altoFirst = \relative c' {
   R2 |
   R2 |
   \Red
@@ -180,32 +209,42 @@ alto = \relative c' {
   d4 e4 ~ |
   e2 |
   fis2 ~ |
-  fis4 d ~ |
+  fis4. d8 ~ |
   d4. b8 ~ |
   b8 cis4. ~ |
   cis4 d4 ~ |
   d2 |
   b |
   d4 a |
-  a8 a a a ~ |
-  a d4. ~ |
+  a8 a a a |
+  r8 d4. ~ |
   d4 cis ~ |
   cis b ~ |
   b4. b'8 |
   a8 g fis e ~ |
   e2 ~ |
-  e4 d4 |
-  cis cis' |
+  e4. d8 |
+  cis8 cis cis'4 |
   b a ~ |
   a g ~ |
   g fis8 e |
-  d 
+  d4 d |
+  d d |
+  d r4 |
+  fis2 |
+  g ~ |
+  g8 gisis4. ~ |
+  gisis8 fis4. |
+  d2 |
+  e
+  fis ~ |
+  fis
 }
 
-altoWords = \lyricmode {
+altoWordsFirst = \lyricmode {
 }
 
-tenor = \relative c' {
+tenorFirst = \relative c' {
   \clef "treble_8"
   r8 d b g' |
   e cis ais fis |
@@ -236,13 +275,24 @@ tenor = \relative c' {
   b c ~ |
   c2 ~ |
   c4 b8 a |
-  g4
+  g4 r4 |
+  eis'8 fis gis4 ~ |
+  gis fis
+  s2*5 |
+  cis8 a fis d' |
+  b g e d |
+  cis' cis, b cis' |
+  b a gis fis ~ |
+  fis4 r |
+  r ais8 fis |
+  r fis4. |
+  s2 |
 }
 
-tenorWords = \lyricmode {
+tenorWordsFirst = \lyricmode {
 }
 
-bass = \relative c' {
+bassFirst = \relative c' {
   \clef "bass"
   R2 |
   R2 |
@@ -271,15 +321,99 @@ bass = \relative c' {
   a |
   fis4 fis' |
   g e |
-  dis2 |
-  b |
-  fis'4 e8 d |
-  cis4. b8 |
-  a cis fis4 |
+  dis2 ~ |
+  dis4 b ~ |
+  b e |
+  gis, cis ~ |
+  cis fis |
+  a,2 |
+  ais2 |
+  b4 bis |
+  cis2 ~ |
+  cis |
+  fis,4 d'4 ~ |
+  d cis ~ |
+  cis2 ~ |
+  cis4 fis, |
+  b2  |
+  s2*3 |
 }
 
-bassWords = \lyricmode {
+bassWordsFirst = \lyricmode {
 }
+
+sopranoSecond = \relative c'' {
+  d8 b g e' |
+  c8 a fis d |
+  d'4 c8 d |
+  c b a g |
+  s2 |
+}
+
+sopranoWordsSecond = \lyricmode {
+}
+
+mezzoSecond = \relative c' {
+  s2 | s s s |
+  r4 b8 g' ~ |
+  g4 fis4 |
+  r4 e8 fis |
+  e4 cis8 d |
+}
+
+mezzoWordsSecond = \lyricmode {
+}
+
+altoSecond = \relative c'' {
+  g2 |
+  a |
+  fis |
+  d4 e |
+  fis8 d4. |
+  e2 |
+  fis2 ~ |
+  fis8 d4 b8 |
+  cis4 d8 b ~ |
+  b2 |
+  d4. a8 ~ |
+  a a a a |
+  a4. d8 |
+  cis4 b ~ |
+  b b'4 |
+}
+
+altoWordsSecond = \lyricmode {
+}
+
+tenorSecond = \relative c' {
+  \clef "treble_8"
+  s2 | s2 | s2 | s2 |
+  s2 | s2 | s2 | s2 |
+  s2 | s2 | s2 | s2 |
+  cis2 |
+  b8 gis eis cis |
+  cis'4 b8 cis |
+  b a gis fis |
+}
+
+tenorWordsSecond = \lyricmode {
+}
+
+bassSecond = \relative c' {
+  \clef "bass"
+  s2 | s2 | s2 | s2 |
+  s2 | s2 | s2 | s2 |
+  a8 fis d4 |
+  g8 e cis a |
+  a'4 g4 ~ |
+  g8 fis e d |
+  eis4 fis |
+}
+
+bassWordsSecond = \lyricmode {
+}
+
+
 
 \score {
   \new ChoirStaff <<
@@ -287,53 +421,53 @@ bassWords = \lyricmode {
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\scorePrefatoryMatter
-        \soprano
+        \sopranoSecond
       } {
 	\scorePrefatoryMatter
         \marks
       } >> }
       \new Lyrics \lyricsto "soprano" {
-        \sopranoWords
+        \sopranoWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\scorePrefatoryMatter
-        \mezzo
+        \mezzoSecond
       }
       \new Lyrics \lyricsto "mezzo" {
-        \mezzoWords
+        \mezzoWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Mike" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\scorePrefatoryMatter
-        \alto
+        \altoSecond
       }
       \new Lyrics \lyricsto "alto" {
-        \altoWords
+        \altoWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\scorePrefatoryMatter
-        \tenor
+        \tenorSecond
       }
       \new Lyrics \lyricsto "tenor" {
-        \tenorWords
+        \tenorWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Eudes" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
 	\scorePrefatoryMatter
-        \bass
+        \bassSecond
       }
       \new Lyrics \lyricsto "bass" {
-        \bassWords
+        \bassWordsSecond
       }
     >>
   >>
@@ -375,53 +509,53 @@ bassWords = \lyricmode {
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\midiPrefatoryMatter
-        \soprano
+        \sopranoSecond
       } {
 	\midiPrefatoryMatter
         \marks
       } >> }
       \new Lyrics \lyricsto "soprano" {
-        \sopranoWords
+        \sopranoWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\midiPrefatoryMatter
-        \mezzo
+        \mezzoSecond
       }
       \new Lyrics \lyricsto "mezzo" {
-        \mezzoWords
+        \mezzoWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Mike" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\midiPrefatoryMatter
-        \alto
+        \altoSecond
       }
       \new Lyrics \lyricsto "alto" {
-        \altoWords
+        \altoWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\midiPrefatoryMatter
-        \tenor
+        \tenorSecond
       }
       \new Lyrics \lyricsto "tenor" {
-        \tenorWords
+        \tenorWordsSecond
       }
     >>
     \new Staff \with { instrumentName = #"Eudes" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
 	\midiPrefatoryMatter
-        \bass
+        \bassSecond
       }
       \new Lyrics \lyricsto "bass" {
-        \bassWords
+        \bassWordsSecond
       }
     >>
   >>
