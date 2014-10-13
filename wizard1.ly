@@ -321,7 +321,12 @@ tenor = \relative c { \autoBeamOff
   c8 d des |
   c4 c8 |
   d c fes |
-  ees4 f,8 |
+  %ees4 e,?8 |
+  %fis4 ( gis8 |
+  %a8 ) r c8 |
+  %gis4. ( |
+  %a8 ) r c8 |
+  ees4 gis,8 |
   a4. ~ |
   a8 r c8 |
   des d c |
@@ -472,7 +477,7 @@ bassWords = \lyricmode {
       } {
         \dynamicsGlobal
       }>> }
-      \lyricsto "soprano" \new Lyrics {
+      \new Lyrics \lyricsto "soprano" {
         \sopranoWords
       }
     >>
@@ -483,7 +488,7 @@ bassWords = \lyricmode {
       } {
         \dynamicsGlobal
       } >> }
-      \lyricsto "mezzo" \new Lyrics {
+      \new Lyrics \lyricsto "mezzo" {
         \mezzoWords
       }
     >>
@@ -494,7 +499,7 @@ bassWords = \lyricmode {
       } {
         \dynamicsGlobal
       } >> }
-      \lyricsto "alto" \new Lyrics {
+      \new Lyrics \lyricsto "alto" {
         \altoWords
       }
     >>
@@ -505,7 +510,7 @@ bassWords = \lyricmode {
       } {
         \dynamicsGlobal
       } >> }
-      \lyricsto "tenor" \new Lyrics {
+      \new Lyrics \lyricsto "tenor" {
         \tenorWords
       }
     >>
@@ -516,7 +521,7 @@ bassWords = \lyricmode {
       } {
         \dynamicsGlobal
       } >> }
-      \lyricsto "bass" \new Lyrics {
+      \new Lyrics \lyricsto "bass" {
         \bassWords
       }
     >>
@@ -610,7 +615,7 @@ bassWords = \lyricmode {
       } {
         \marks
       } >> }
-      \lyricsto "soprano" \new Lyrics {
+      \new Lyrics \lyricsto "soprano" {
         \sopranoWords
       }
     >>
@@ -619,7 +624,7 @@ bassWords = \lyricmode {
       \new Voice = "mezzo" { \numericTimeSignature
         \mezzo
       }
-      \lyricsto "mezzo" \new Lyrics {
+      \new Lyrics \lyricsto "mezzo" {
         \mezzoWords
       }
     >>
@@ -628,7 +633,7 @@ bassWords = \lyricmode {
       \new Voice = "alto" { \numericTimeSignature
         \alto
       }
-      \lyricsto "alto" \new Lyrics {
+      \new Lyrics \lyricsto "alto" {
         \altoWords
       }
     >>
@@ -637,7 +642,7 @@ bassWords = \lyricmode {
       \new Voice = "tenor" { \numericTimeSignature
         \tenor
       }
-      \lyricsto "tenor" \new Lyrics {
+      \new Lyrics \lyricsto "tenor" {
         \tenorWords
       }
     >>
@@ -646,7 +651,7 @@ bassWords = \lyricmode {
       \new Voice = "bass" { \numericTimeSignature
         \bass
       }
-      \lyricsto "bass" \new Lyrics {
+      \new Lyrics \lyricsto "bass" {
         \bassWords
       }
     >>
