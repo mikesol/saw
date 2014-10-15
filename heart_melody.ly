@@ -32,6 +32,7 @@ If I only had a heart
 % 
 \version "2.19.0"
 \include "defs-devel.ly"
+\include "note_list.ly"
 
 #(ly:set-option 'point-and-click #f)
 

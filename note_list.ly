@@ -45,4 +45,4 @@ noteifyMusic =
    (noteify m s))
 
 %\displayMusic
-\noteifyMusic #"SOPRANO" \new Staff << { \relative c' { { c d ~ d e } \relative c' { c d } d } } { s1 } >>
+%\noteifyMusic #"SOPRANO" \new Staff << { \relative c' { { c d ~ d e } \relative c' { c d } d } } { s1 } >>
