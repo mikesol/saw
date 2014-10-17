@@ -540,3 +540,33 @@ buddyEngraver =
                   match-list)))))
 
 \include "bendtest.ly"
+
+#(define (parenthesize-callback callback)
+   (define (parenthesize-stencil grob)
+     (let* ((fn (ly:grob-default-font grob))
+            (pclose (ly:font-get-glyph fn "accidentals.rightparen"))
+            (popen (ly:font-get-glyph fn "accidentals.leftparen"))
+            (subject (callback grob))            
+            ;; get position of stem
+            (stem-pos '(0 . 0))
+            ;; remember old size
+            (subject-dim-x (ly:stencil-extent subject X))
+            (subject-dim-y (ly:stencil-extent subject Y)))
+
+       ;; add parens
+       (set! subject
+             (ly:stencil-combine-at-edge 
+              (ly:stencil-combine-at-edge subject X RIGHT pclose 0)
+              X LEFT popen 0))
+
+       ;; adjust stem position
+       (set! (ly:grob-property grob 'stem-attachment)
+             (cons (- (car stem-pos) 0.43) (cdr stem-pos)))
+
+       ;; adjust size
+       (ly:make-stencil
+        (ly:stencil-expr subject)
+        (interval-widen subject-dim-x 0.5)
+        subject-dim-y)))
+   
+   parenthesize-stencil)
