@@ -164,21 +164,32 @@ sopranoFirst = \relative c' {
   r4 g ~ |
   g fis8 e ~ |
   e8 d4. |
-  s2 |
-  s2 |
-  s2 |
-  fis2 ~ |
-  fis4 cis'8 b |
-  eis,2 ~ |
-  eis8 fis gis a |
-  cis b a4 ~ |
-  a4 gis ~ |
-  gis fis |
-  e8 dis c' b |
-  a g e4 ~ |
-  e b'8 ais ~ |
-  ais dis,4. ~ |
-  dis8 e fis g |
+  R2 |
+  r8 d e fis |
+  gis4 a |
+%%%%%%%%%%%%%%%%%%%%%%%
+  %fis2 ~ |
+  %fis4 cis'8 b |
+  %eis,2 ~ |
+  %eis8 fis gis a |
+  %cis b a4 ~ |
+  %a4 gis ~ |
+  %gis fis |
+  %e8 dis c' b |
+  %a g e4 ~ |
+  %e b'8 ais ~ |
+  %ais dis,4. ~ |
+  %dis8 e fis g |
+%%%%%%%%%%%%%%%%%%%%%%%
+  gis2 ~ |
+  gis8 a ~ \times 2/3 { a cis b } |
+  eis,4 \times 2/3 { r8 a' gis } |
+  fis e d4 ~ |
+  d cis |
+  r8 cis, d eis |
+  b'4 a |
+  gis4 bis4 |
+  b2 |
 }
 
 sopranoWordsFirst = \lyricmode {
@@ -203,6 +214,12 @@ sopranoWordsFirst = \lyricmode {
   spar* Jeal* I had
   cause I'm to low
   rows Just fore men
+
+  be Where when a man's a
+  love shoots cause I
+  [shoots] [cause] [I]
+  [hear] [a] [love]
+  [hear] [a] [sweet] [boy] [on] [love] [a] [rows]
 }
 
 mezzoFirst = \relative c'' {
@@ -235,20 +252,23 @@ mezzoFirst = \relative c'' {
   fis8 r4. |
   %r4.
   R2 |
-  r8
-  \php
-   gis4.^\< |
-  \php
-  g2^\> |
+  %r8
+  %\php
+  % gis4.^\< |
+  %\php
+  %g2^\> |
   %r4 ais ~ |
   %ais c, |
   %r4 cis,4
   %d c |
-  R2\! |
-  r4 c, |
-  ais' fis8 [ ( a ~ ] |
-  a8 ) cis4. ~ |
-  cis4 r |
+  %R2\! |
+  %r4 c, |
+  %ais' fis8 [ ( a ~ ] |
+  %a8 ) cis4. ~ |
+  %cis4 r |
+  R2*5 |
+  r8 fis4. ~ |
+  fis8 r4. |
   r4 a8 g |
   dis4 e |
   a2 |
@@ -267,13 +287,24 @@ mezzoFirst = \relative c'' {
   %c c |
   \times 2/3 { ais4 g'8 } \times 2/3 { fis g, e' ~ }
   e16 d d, a' \times 2/3 { cis8 b a }
-  dis8 e4. ~ |
+  ais8 b8 r e ~ |
   e8 r4. |
   r4 d8 cis |
   b a g4 |
   ais2 ~ |
   ais4 b4 |
   fis2 |
+  R2 | R2 |
+  r8 b, cis d |
+  eis2 ~ |
+  eis8 fis4. |
+  \times 2/3 { r8 e'8 d } gis,4 |
+  r8 fis gis a |
+  cis b a4 ~ |
+  a gis ~ |
+  gis4 eis |
+  dis8 eis fis a ~ |
+  a4 g |
 }
 
 mezzoWordsFirst = \lyricmode {
@@ -287,9 +318,10 @@ mezzoWordsFirst = \lyricmode {
   how men lock me a
   He had that be fore When
   [with] [a] [love]
-  [I'm] [pre]
+  %[I'm] [pre]
   %[with] [me]
-  [and] [met] [with] [me]
+  %[and] [met] [with] [me]
+  [me]
   [I'd] [be]
   [a] [sy*] [boy]
   [his]
@@ -301,11 +333,17 @@ mezzoWordsFirst = \lyricmode {
   [spar*]
   [spar*] [spar*] [Jeal] [I] [had]
   [spar*] [Jeal] [I] [had] [cause] [I'm]
-  [to] [low] 
+  [to] [low] [cause] 
   %[cause]
   %[When] [a] [man's] [an] [emp] [ty]
   [met] [lock] [cause] [I'm] [to] [low]
   [fore] [heart]
+
+  a boy And I
+  [love]
+  [shoots] [cause] [I]
+  hear a sweet boy on love
+  a rows
 }
 
 
@@ -337,12 +375,12 @@ altoFirst = \relative c' {
   d2 ~ |
   d8 cis4. ~ |
   cis4 b4 ~ |
-  b4. \php
-      b'8^\< ~ |
+  b4. %\php
+      b'8 ~ |
   b2 |
-  \php
-  a2^\> ~ 
-  a8 g4.\! ~ |
+  %\php
+  a2 ~ 
+  a8 g4. ~ |
   g4 fis4 ~ |
   fis4. e8 ~ |
   e2 |
@@ -367,7 +405,20 @@ altoFirst = \relative c' {
   e4. fis8 ~ |
   fis2 |
   d ~ |
-  d8
+  d8 e4. ~ |
+  e4 fis ~ |
+  fis4. d8 ~ |
+  d2 |
+  b ~ |
+  b8 cis4. ~ |
+  cis4 d4 ~ |
+  d4. b8 ~ |
+  b2 |
+  d2 ~ |
+  d8 a8 a a |
+  a a d4 ~ |
+  d4. cis8 ~ |
+  cis2 |
 }
 
 altoWordsFirst = \lyricmode {
@@ -431,15 +482,17 @@ tenorFirst = \relative c' {
   eis4 e ~ |
   e2 |
   R2 |
-  r4. \php
-      fis8^\< ~ |
-  fis2  |
-  R2\! |
+  %r4. \php
+  %    fis8^\< ~ |
+  %fis2  |
+  %R2\! |
+  R2*3 |
   ais,2 |
   a4 e' |
   d ais |
   %ais8 a4. |
-  fis'2 |
+  %fis'2 |
+  cis2 |
   %\transpose c g \removeWithTag #'bass \lickMe |
   %R2*2 |
   r8 e,4. | % ~ |
@@ -464,8 +517,18 @@ tenorFirst = \relative c' {
   g fis e4
   d'2 |
   cis |
-  d4 b8 g' |
+  ais4 b8 g' |
   e cis ais fis |
+  a2 ~ | 
+  a4 gis |
+  cis8 a gis cis, |
+  e4 dis |
+  d b' ~ |
+  b4 ais8 a |
+  gis8 cis,8 dis eis |
+  b'4 ais |
+  cis2 ~ |
+  cis4 ais |
 }
 
 tenorWordsFirst = \lyricmode {
@@ -484,7 +547,7 @@ tenorWordsFirst = \lyricmode {
   a \footnote "" #'(0 . 0) "* Pronounced \"sea\"." sy* could
   voice low where %I be
   [with] [a]
-  [I'm]
+  %[I'm]
   [with] [me]
   [and] [met] [with] [me]
   [friends]
@@ -497,6 +560,12 @@ tenorWordsFirst = \lyricmode {
   [cause] [to] [low]
   [met] [lock] [cause] [I'm] [to] [low]
   [fore] [heart]
+  me chip that lock a rows
+  torn
+  a co ding a
+  boy Where art met me
+  [a] [sweet] [boy]
+  [hear] [a] [sweet] [boy] [on] [love]
 }
 
 bassFirst = \relative c' {
@@ -544,10 +613,20 @@ bassFirst = \relative c' {
   e,4 a |
   e'8 d fis,4 |
   g b |
-  cis g |
-  fis e ~ |
-  e8 b'4. ~ |
+  cis e, |
+  fis ais |
+  b2 ~ |
   b4. r8 |
+  R2 |
+  gis4 eis' |
+  fis,2 ~ |
+  fis ~ |
+  fis ~ |
+  fis2 ~ |
+  fis8 r4. |
+  r8 gis4 cis8 ~ |
+  cis8 fis, gis a |
+  e'4 dis |
 }
 
 bassWordsFirst = \lyricmode {
