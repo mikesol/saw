@@ -183,13 +183,16 @@ sopranoFirst = \relative c' {
 %%%%%%%%%%%%%%%%%%%%%%%
   gis2 ~ |
   gis8 a ~ \times 2/3 { a cis b } |
-  eis,4 \times 2/3 { r8 a' gis } |
-  fis e d4 ~ |
+  eis,4 \times 2/3 { r8 gis' fis } |
+  e4 d ~ |
   d cis |
-  r8 cis, d eis |
-  b'4 a |
-  gis4 bis4 |
+  r8 a, b cis |
+  gis'4 fis |
+  d'4 c4 |
   b2 |
+  s2 |
+  \times 2/3 { r8 fis' a } \times 2/3 { g ais, b } |
+  fis'4 e | 
 }
 
 sopranoWordsFirst = \lyricmode {
@@ -218,7 +221,8 @@ sopranoWordsFirst = \lyricmode {
   be Where when a man's a
   love shoots cause I
   [shoots] [cause] [I]
-  [hear] [a] [love]
+  [hear] %[a]
+  [love]
   [hear] [a] [sweet] [boy] [on] [love] [a] [rows]
 }
 
@@ -285,7 +289,7 @@ mezzoFirst = \relative c'' {
   ais2 ~ |
   %ais4 b |
   %c c |
-  \times 2/3 { ais4 g'8 } \times 2/3 { fis g, e' ~ }
+  \times 2/3 { ais4 g'8 } \times 2/3 { fis fis, e' ~ }
   e16 d d, a' \times 2/3 { cis8 b a }
   ais8 b8 r e ~ |
   e8 r4. |
@@ -301,9 +305,9 @@ mezzoFirst = \relative c'' {
   \times 2/3 { r8 e'8 d } gis,4 |
   r8 fis gis a |
   cis b a4 ~ |
-  a gis ~ |
-  gis4 eis |
-  dis8 eis fis a ~ |
+  a gis |
+  eis4 e |
+  dis8 e fis8 a ~ |
   a4 g |
 }
 
@@ -416,8 +420,8 @@ altoFirst = \relative c' {
   b2 |
   d2 ~ |
   d8 a8 a a |
-  a a d4 ~ |
-  d4. cis8 ~ |
+  a a cisis4 ( |
+  d4. ) cis8 ~ |
   cis2 |
 }
 
@@ -523,11 +527,11 @@ tenorFirst = \relative c' {
   a4 gis |
   cis8 a gis cis, |
   e4 dis |
-  d b' ~ |
+  d? b' ~ |
   b4 ais8 a |
   gis8 cis,8 dis eis |
-  b'4 ais |
-  cis2 ~ |
+  b'4 eis, |
+  cis'2 ~ |
   cis4 ais |
 }
 
@@ -624,9 +628,10 @@ bassFirst = \relative c' {
   fis ~ |
   fis2 ~ |
   fis8 r4. |
-  r8 gis4 cis8 ~ |
+  r4 gis8 cis ~ |
   cis8 fis, gis a |
   e'4 dis |
+  fis8 e4. |
 }
 
 bassWordsFirst = \lyricmode {
@@ -644,6 +649,9 @@ bassWordsFirst = \lyricmode {
   [Jeal*] [I]
   \repeat unfold 14 "()"
   [heart]
+  a boy when
+  a boy
+  [hear] [a] [sweet] [love] [a]
 }
 
 \score {
