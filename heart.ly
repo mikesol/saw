@@ -35,19 +35,18 @@ If I only had a heart
 \version "2.19.0"
 \include "defs-devel.ly"
 
-#(ly:set-option 'point-and-click #f)
+#(ly:set-option 'point-and-click #t)
 
 #(set-global-staff-size 15.87)
 
-%{
 \paper {
   #(define fonts
     (set-global-fonts
-    #:music "profondo"
+    #:music "cadence"
     #:factor (/ staff-height pt 20)
   ))
 }
-%}
+
 %{
 \paper {
   #(define fonts
@@ -202,11 +201,11 @@ sopranoFirst = \relative c' {
   f e8 \footnote #"" #'(0 . 0) "Pronounced \"beetle\"." d |
   r8 cis4. ( ~ |
   cis8 b8 ) r4 |
-  gis4 ( a ) |
-  g4. ( a8 ) |
+  gis4 a |
+  g4. a8 |
   g2 |
-  fis4 ( eis ~ |
-  eis8 ) r e'4 ~ |
+  fis4 eis ~ |
+  eis8 r e'4 ~ |
   e d8 c ~ |
   c8 b4. ~ |
   b4 a8 g |
@@ -235,14 +234,24 @@ sopranoFirst = \relative c' {
   dis2 |
   R2 |
   R2 |
-  r8 d8 fis a, |
+  %{
+    r8 d8 fis a, |
+    d2 |
+    cis ~ |
+    cis4 e ~ |
+    e2 |
+    b4 c |
+    cis2 ~ |
+    cis4 dis |
+  %}
+  r8 d fis a, |
   d2 |
-  cis ~ |
-  cis4 e ~ |
-  e2 |
-  b4 c |
-  cis2 ~ |
-  cis4 dis |
+  cis2 |
+  d4 a' ~ |
+  a4. g8 ~ |
+  g4 fis ~ |
+  fis e ~ |
+  e dis |
   e2 ~ |
   e ~ |
   e4 d |
@@ -284,7 +293,7 @@ sopranoFirst = \relative c' {
   b'2 ~ |
   b2 ~ |
   b4 r |
-  b2 |
+  b2 ~ | b2 |
 }
 
 sopranoWordsFirst = \lyricmode {
@@ -323,6 +332,7 @@ sopranoWordsFirst = \lyricmode {
   [a] [part] [with] [hu*]
   I be tle* boy
   [shoots] [the] [ar] [rows]
+  [shoots] [ar] [rows]
   Where I'd be young
   [on] [ly]
   be -- cause love
@@ -426,10 +436,10 @@ mezzoFirst = \relative c'' {
   g? fis |
   fis2 ~ |
   fis4 r |
-  eis4 ( fis ) |
-  e ( dis ) |
-  fis4 ( e ) |
-  dis ( cis ) |
+  eis4 fis |
+  e dis |
+  fis4 e |
+  dis cis |
   dis e |
   dis2 ~ |
   dis8 fis4. ( ~ |
@@ -462,11 +472,17 @@ mezzoFirst = \relative c'' {
   fis4 d |
   r8 e a c, |
   eis2 |
-  fis2 |
-  g2 |
-  fis2 |
-  e4 g |
-  ais a |
+  fis2 ~ |
+  %{
+    g2 |
+    fis2 |
+    e4 g |
+    ais a |
+  %}
+  fis8 g d' e, |
+  b'4. cis8 ~ |
+  cis e,8 g fis |
+  ais4 a |
   c b ~ |
   b fis ~ |
   fis g |
@@ -509,7 +525,7 @@ mezzoFirst = \relative c'' {
   g2 ~ |
   g ~ |
   g4 r |
-  fis'2^\fermata |
+  fis'2 ~ | fis |
 }
 
 mezzoWordsFirst = \lyricmode {
@@ -557,7 +573,8 @@ mezzoWordsFirst = \lyricmode {
   [a] [part] [with] [hu]
   [I] [be] [tle*] [boy]
   [shoots] [the] [ar] [rows]
-  [Where] [I'd] [be] [young]
+  [shoots] [the] [ar] [rows]
+  [Where] [I'd] [If] [young]
   [be] [cause]
   chip that lock
   should I be when that heart's with me
@@ -775,7 +792,7 @@ altoFirst = \relative c' {
   e2 |
   d8 d d d |
   d r4.
-  R2 \bar "|."
+  R2 | R2 \bar "|."
 }
 
 altoWordsFirst = \lyricmode {
@@ -933,12 +950,12 @@ tenorFirst = \relative c' {
   c4 bes |
   b2 |
   gis |
-  r8 cis gis' a,
-  d2 |
-  c4. b8 |
-  a2 |
-  ais |
-  b4 c |
+  r8 cis gis' a, |
+  cis4 b |
+  e8 d c b8 |
+  a8 g d' d, |
+  ais'8 b cis ais |
+  cis4 c |
   b2 |
   c |
   bes |
@@ -980,7 +997,7 @@ tenorFirst = \relative c' {
   fis4 d |
   cis ais ~ |
   ais r |
-  b'2^\fermata |  
+  b'2 ~ | b2 |
 }
 
 tenorWordsFirst = \lyricmode {
@@ -1018,6 +1035,32 @@ tenorWordsFirst = \lyricmode {
   boy Where art met me
   [a] [sweet] [boy]
   [hear] [a] [sweet] [boy] [on] [love]
+  [love] [a]
+  [boy] [be] [man]
+  [could] [beat] [man] [rows] [part]
+  [art] [I]
+  [could] [beat] [a] [real] [man]
+  [a] [real]
+  [I] [be] [tle*]
+  [boy] [boy]
+  [shoots] [the] [ar] [rows]
+  [shoots] [the] [ar] [rows]
+  [If] [young] [be] [cause]
+  [love]
+  Pic me
+  a rows
+  a beat
+  heart his sen ding
+  me
+  be a sweet man
+  stay a bove me
+  a rows in
+  young boy had
+  art with me
+  his emp ty
+  He ter* could
+  be fore me
+  man's a beat a be a young a
 }
 
 bassFirst = \relative c' {
@@ -1130,8 +1173,8 @@ bassFirst = \relative c' {
   b8 fis' d' d, |
   g fis e d |
   c b a g |
-  fis4 cis' |
-  d4 b |
+  fis4 ais8 cis |
+  d8 fis b b, |
   R2 |
   R2 |
   R2 |
@@ -1173,7 +1216,7 @@ bassFirst = \relative c' {
   e,2 ~ |
   e ~ |
   e4 r |
-  b'2^\fermata |
+  b'2 ~ | b |
 }
 
 bassWordsFirst = \lyricmode {
@@ -1199,6 +1242,19 @@ bassWordsFirst = \lyricmode {
   [could] [beat] [a] [man]
   [rows] [part] [with] [hu]
   [I] [be] [boy]
+  [shoots] [the] [ar] [rows]
+  Where I'd [If]
+  [young] [on] [ly]
+  [be] [cause] [love]
+  torn
+  men
+  rows
+  That heart
+  I
+  should sum*
+  feel me
+  could I
+  a voice
 }
 
 \score {
