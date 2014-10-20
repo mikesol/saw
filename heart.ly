@@ -350,7 +350,8 @@ sopranoWordsFirst = \lyricmode {
   beat torn man should
   spar* Jeal* I had
   be on the boy
-  sy* a bove When I Where art
+  sy* a bove When I Where
+  [friends]
   [I] [heart]
 }
 
@@ -613,7 +614,8 @@ mezzoWordsFirst = \lyricmode {
   [beat] [beat] [torn] [man] [shoud]
   sweet with his men art thou
   [be] [boy]
-  voice me How art could be with
+  voice me How art could be
+  [friends]
   [I] [heart]
 }
 
@@ -1096,7 +1098,8 @@ tenorWordsFirst = \lyricmode {
   [beat] [torn] [man] [should] [could]
   [spar*] [Jeal*] [I] [had] [be] [on] [the] [boy]
   with a real
-  [When] [I] [Where] [art]
+  [When] [I] [Where]
+  [friends]
   per ly* %pearly
   with a
   [heart]
@@ -1232,11 +1235,11 @@ bassFirst = \relative c' {
   aes |
   g |
   a |
-  e'4 d |
+  e'4 ( d ) |
   cis g |
   fis2 |
   ais |
-  b4 ais |
+  b4 ( ais ) |
   ees' aes, |
   d2 |
   des |
@@ -1299,6 +1302,13 @@ bassWordsFirst = \lyricmode {
   voice low How I could beat love man
   If a boy had men tion with
   [mo] [tion]
+  [love] [man] [could] [just] [beat] [torn]
+  [beat] [torn] [man] [should]
+  [could]
+  [spar*] [Jeal] [I] [had]
+  [on] [boy]
+  his low friends
+  [I] [heart]
 }
 
 \score {
