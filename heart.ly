@@ -340,6 +340,18 @@ sopranoWordsFirst = \lyricmode {
   zip -- per should be
   Just spar* an e ter*
   to gen tle a beat boy with art
+  I'd hear me men
+  [a] [beat] [a] [how] [sweet] 
+  [Just] [to]
+  That I'd be with mans spar* rows
+  [mo] [tion] 
+  love a per ty*
+  young man's chip -- per [be] [tle*]
+  beat torn man should
+  spar* Jeal* I had
+  be on the boy
+  sy* a bove When I Where art
+  [I] [heart]
 }
 
 mezzoFirst = \relative c'' {
@@ -489,8 +501,8 @@ mezzoFirst = \relative c'' {
   e d |
   e2 ~ |
   e8 d cis4 |
-  d2 ~ |
-  d4 cis |
+  d2 ( ~ |
+  d4 cis ) |
   b2 |
   R2 |
   b ~ |
@@ -502,16 +514,16 @@ mezzoFirst = \relative c'' {
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%s2*21 |
   d4 a |
   cis4 fis8 e |
-  d2 |
-  e4 a ~ |
+  d2 ( |
+  e4 ) a ~ |
   a b ~ |
   b cis ~ |
   cis d ~ |
   d dis |
   e f, ~ |
   f2 |
-  e ~ |
-  e4 dis4 |
+  e ( ~ |
+  e4 dis4 ) |
   r g ~ |
   g fis ~ |
   fis e ~ |
@@ -589,6 +601,20 @@ mezzoWordsFirst = \lyricmode {
   If a sweet
   man's voice should
   be
+
+  that part could I [beat]
+  man I'd be young
+  [sweet]
+  [young] [be] [ten*] a part
+  be cause When a ty ture* %teacher
+  I tle* could [mo] [tion]  %idle
+  [love] shoots that hear
+  [be] [tle*]
+  [beat] [beat] [torn] [man] [shoud]
+  sweet with his men art thou
+  [be] [boy]
+  voice me How art could be with
+  [I] [heart]
 }
 
 
@@ -962,23 +988,23 @@ tenorFirst = \relative c' {
   aes |
   g4 bes |
   a2 |
-  b2 |
-  ais |
+  b2 ( |
+  ais ) |
   b |
   R2 |
   g |
   gis |
-  g ~ |
+  g? ~ |
   g |
   c |
   fis, ~ |
   fis |
   g2 |
-  cis4 b |
+  cis4 ( b ) |
   ais b |
   ais2 |
   g |
-  fis'4 e |
+  fis'4 ( e ) |
   g fis |
   c4 e |
   bes2 |
@@ -1061,6 +1087,19 @@ tenorWordsFirst = \lyricmode {
   He ter* could
   be fore me
   man's a beat a be a young a
+  that a man's his friends
+  [voice] [low] [How] [I] [could]
+  chip art had a
+  young be ten* [a] [part]
+  [be] [cause] [ty] [ture*] [man's] [spar*] [rows] [mo] [tion]
+  [love] a man could Just be
+  [beat] [torn] [man] [should] [could]
+  [spar*] [Jeal*] [I] [had] [be] [on] [the] [boy]
+  with a real
+  [When] [I] [Where] [art]
+  per ly* %pearly
+  with a
+  [heart]
 }
 
 bassFirst = \relative c' {
@@ -1181,9 +1220,9 @@ bassFirst = \relative c' {
   R2 |
   R2 |
   R2 |
-  cis2 |
-  f, |
-  b2 |
+  cis2 ( |
+  eis, ) |
+  b'2 |
   R2 |
   e,2 ~ |
   e |
@@ -1255,6 +1294,11 @@ bassWordsFirst = \lyricmode {
   feel me
   could I
   a voice
+  gen tle
+  should Pic -- ture
+  voice low How I could beat love man
+  If a boy had men tion with
+  [mo] [tion]
 }
 
 \score {

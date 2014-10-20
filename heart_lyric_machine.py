@@ -1,3 +1,5 @@
+import random
+
 A_0 = -3
 B_0 = -1
 C = 0
@@ -209,6 +211,7 @@ def get_choices_from_goods(n, do_mod = False) :
 
 def format_choice_list(l) :
   out = [get_choices_from_goods(n, True) for n in l]
+  [random.shuffle(x) for x in out]
   for x in out :
     print "*******"
     for y in x :
@@ -233,4 +236,4 @@ friends B
 #format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
 #format_choice_list([E,D,CIS,B])
 #format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
-format_choice_list([A,B,C,D])
+format_choice_list([FIS,D])
