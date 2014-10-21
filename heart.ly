@@ -1,6 +1,9 @@
 #(set-global-staff-size 15.87)
+
 solo = \markup \italic "solo"
+endsolo = \markup \italic "(end solo)"
 lickMe = \relative c { \times 16/23 { b8 fis16 ais fis' e c8 f,16 g d'8 cis16 e, f' d8 e16 gis, g g' ais, \tag #'bass { e ~ } \tag #'tenor { b' ~ } } } 
+
 %{
 When a man's an empty kettle
 He should be on his mettle
@@ -35,7 +38,7 @@ If I only had a heart
 \version "2.19.0"
 \include "defs-devel.ly"
 
-#(ly:set-option 'point-and-click #t)
+#(ly:set-option 'point-and-click #f)
 
 #(set-global-staff-size 15.87)
 
@@ -78,6 +81,8 @@ php = \once \override Hairpin.stencil = #(parenthesize-callback ly:hairpin::prin
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
   max-systems-per-page = #2
+  %oddHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
+  %evenHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
 }
 
 \header {
@@ -105,7 +110,7 @@ midiPrefatoryMatter = {
 }
 
 marks = {
-  \tempo "Largo" 4=48
+  \tempo "Largo" 4=52
   s2 |
 }
 
@@ -126,14 +131,14 @@ sopranoFirst = \relative c' {
   R2 |
   R2 |
   R2 |
-  r4 a ~ |
+  r4 a^\mf ~ |
   a8 g fis e ~ |
   e4 b'8 a |
   g fis e d |
   a'4 cis |
-  b ais |
-  a4 b,^\solo ~ |
-  b fis'8 e |
+  b^\< ais |
+  a?4^\> b,^\solo ~ |
+  b\! fis'8 e |
   ais,2 ~ |
   \footnote "" #'(0 . 0) "* Pronounced \"beetle\"." 
   ais8 b cis d |
@@ -145,11 +150,11 @@ sopranoFirst = \relative c' {
   b fis'8 e |
   ais,2 ~ |
   ais8 \footnote "" #'(0 . 0) "* Pronounced \"sea\"."  b cis d |
-  \footnote "" #'(0 . 0) "* Pronounced \"purty\"." fis e d4 ~ |
+  \footnote "" #'(0 . 0) "* Pronounced \"purty\"." fis^\cresc e d4 ~ |
   d cis |
   \footnote "" #'(0 . 0) "* Pronounced \"own\"." d2 ~ |
   d4 r |
-  r4 b'4 ~ |
+  r4 b'4^\f ~ |
   b a8 g |
   fis2 |
   gisis8 fisis bis ais |
@@ -161,12 +166,12 @@ sopranoFirst = \relative c' {
   b \footnote "" #'(0 . 0) "* Pronounced \"gel\"."   a8 g |
   fis2 |
   R2 |
-  r4 g ~ |
+  r4 g^\> ~ |
   g fis8 e ~ |
-  e8 d4. |
-  R2 |
-  r8 d e fis |
-  gis4 a |
+  e8 d4.^\mp |
+  R2^\endsolo |
+  r8 d^\< e fis |
+  eis fis gis a |
 %%%%%%%%%%%%%%%%%%%%%%%
   %fis2 ~ |
   %fis4 cis'8 b |
@@ -181,7 +186,7 @@ sopranoFirst = \relative c' {
   %ais dis,4. ~ |
   %dis8 e fis g |
 %%%%%%%%%%%%%%%%%%%%%%%
-  gis2 ~ |
+  gis2^\mf ~ |
   gis8 a ~ \times 2/3 { a cis b } |
   eis,4 \times 2/3 { r8 gis' fis } |
   e4 d ~ |
@@ -193,15 +198,15 @@ sopranoFirst = \relative c' {
   a g4. |
   r8 d'8 c8 gis |
   b8 a e g |
-  gis a \footnote #"" #'(0 . 0) #"Pronounced \"with you\"." b4 ~ |
+  gis^\cresc a \footnote #"" #'(0 . 0) #"Pronounced \"with you\"." b4 ~ |
   b a |
   b8 c d4 ~ |
   d dis ~ |
-  dis8 r8 f4 ~ |
+  dis8 r8 f4^\f ~ |
   f e8 \footnote #"" #'(0 . 0) "Pronounced \"beetle\"." d |
   r8 cis4. ( ~ |
   cis8 b8 ) r4 |
-  gis4 a |
+  gis4^\mf a |
   g4. a8 |
   g2 |
   fis4 eis ~ |
@@ -209,9 +214,9 @@ sopranoFirst = \relative c' {
   e d8 c ~ |
   c8 b4. ~ |
   b4 a8 g |
-  r4 c |
+  r4 c^\> |
   b2 |
-  a2 |
+  a2^\mp |
   R2 |
   R2 |
   R2 |
@@ -232,8 +237,8 @@ sopranoFirst = \relative c' {
   b cis ~ |
   cis b |
   dis2 |
-  R2 |
-  R2 |
+  e2 ~ |
+  e4 r |
   %{
     r8 d8 fis a, |
     d2 |
@@ -244,7 +249,7 @@ sopranoFirst = \relative c' {
     cis2 ~ |
     cis4 dis |
   %}
-  r8 d fis a, |
+  r8 d^\cresc fis a, |
   d2 |
   cis2 |
   d4 a' ~ |
@@ -252,7 +257,7 @@ sopranoFirst = \relative c' {
   g4 fis ~ |
   fis e ~ |
   e dis |
-  e2 ~ |
+  e2^\ff^\dim ~ |
   e ~ |
   e4 d |
   c b |
@@ -260,7 +265,7 @@ sopranoFirst = \relative c' {
   fis2 |
   g ~ |
   g |
-  fis2 |
+  fis2^\mp |
   R2 |
   a2 ~ |
   a4 g |
@@ -319,7 +324,9 @@ sopranoWordsFirst = \lyricmode {
   cause I'm to low
   rows Just fore men
 
-  be Where when a man's a
+  be Where when
+  I hear a sweet
+  a
   love shoots cause I
   [shoots] [cause] [I]
   [hear] %[a]
@@ -332,7 +339,7 @@ sopranoWordsFirst = \lyricmode {
   [a] [part] [with] [hu*]
   I be tle* boy
   [shoots] [the] [ar] [rows]
-  [shoots] [ar] [rows]
+  [in] [young] [boy]
   Where I'd be young
   [on] [ly]
   be -- cause love
@@ -340,6 +347,7 @@ sopranoWordsFirst = \lyricmode {
   zip -- per should be
   Just spar* an e ter*
   to gen tle a beat boy with art
+  rows
   I'd hear me men
   [a] [beat] [a] [how] [sweet] 
   [Just] [to]
@@ -376,15 +384,14 @@ mezzoFirst = \relative c'' {
   R2 |
   R2 |
   R2 |
-  e'2 |
+  e'2^\mf |
   d8 cis d e ~ |
   e fis4. ~ |
   fis2 |
-  gis4 g |
-  fis2 ~ |
-  fis8 r4. |
+  gis4^\< g |
+  fis2^\> ~ |
+  fis8\! r4. |
   %r4.
-  R2 |
   %r8
   %\php
   % gis4.^\< |
@@ -399,16 +406,22 @@ mezzoFirst = \relative c'' {
   %ais' fis8 [ ( a ~ ] |
   %a8 ) cis4. ~ |
   %cis4 r |
-  R2*5 |
-  r8 fis4. ~ |
-  fis8 r4. |
-  r4 a8 g |
+  %R2*6 |
+  r4. fis8 ~ |
+  fis2 ~ |
+  fis2 |
+  R2 |
+  r4 e^\< |
+  d cis |
+  d2^\> |
+  R2\! |
+  r4 a'8 g |
   dis4 e |
-  a2 |
+  a2^\cresc |
   gis |
   g?4 fis ~ |
   fis8 e4 ais8 ~ |
-  ais4 cis, |
+  ais4 cis,^\f |
   c4 cis ~ |
   cis4 d |
   %ais'8 gis cis b |
@@ -418,38 +431,38 @@ mezzoFirst = \relative c'' {
   ais2 ~ |
   %ais4 b |
   %c c |
-  \times 2/3 { ais4 g'8 } \times 2/3 { fis fis, e' ~ }
-  e16 d d, a' \times 2/3 { cis8 b a }
-  ais8 b8 r e ~ |
-  e8 r4. |
-  r4 d8 cis |
+  \times 2/3 { ais4 fis8 } \times 2/3 { e' d, cis' ~ }
+  cis16 b, a' g \times 2/3 { fis8 a b, }
+  ais'8 b8 g4 ~ |
+  g4 r4 |
+  r8 e' d cis |
   b a g4 |
-  ais2 ~ |
+  ais2^\> ~ |
   ais4 b4 |
-  fis2 |
+  fis2^\mp |
   R2 | R2 |
-  r8 b, cis d |
-  eis2 ~ |
+  b,4^\< eis ~ |
+  eis2^\mf ~ |
   eis8 fis4. |
   \times 2/3 { r8 e'8 d } gis,4 |
   r8 fis gis a |
   cis b a4 ~ |
   a gis |
   eis4 e |
-  r8 dis8 e fis8 |
+  r8 dis8 eis fis8 |
   a4 g8 r8 |
   r4 dis8 f |
   e2 ~ |
   e8 c b a |
-  ais f' e b |
+  ais^\cresc f' e b |
   d c4. |
   dis4 b'4 |
   bes4. a8 ~ |
-  a8 r gis4 |
+  a8 r gis4^\f |
   g? fis |
   fis2 ~ |
   fis4 r |
-  eis4 fis |
+  eis4^\mf fis |
   e dis |
   fis4 e |
   dis cis |
@@ -457,9 +470,9 @@ mezzoFirst = \relative c'' {
   dis2 ~ |
   dis8 fis4. ( ~ |
   fis4 e ) |
-  g2 |
+  g2^\> |
   fis ~ |
-  fis4. g8 |
+  fis4.^\mp g8 |
   e cis4. |
   fis8 d e fis |
   e d cis b |
@@ -482,7 +495,7 @@ mezzoFirst = \relative c'' {
   r8 gis e d |
   r fis g a |
   r a g fis ~ |
-  fis4 d |
+  fis4^\cresc d |
   r8 e a c, |
   eis2 |
   fis2 ~ |
@@ -496,7 +509,7 @@ mezzoFirst = \relative c'' {
   b'4. cis8 ~ |
   cis e,8 g fis |
   ais4 a |
-  c b ~ |
+  c^\ff^\dim b ~ |
   b fis ~ |
   fis g |
   e d |
@@ -504,7 +517,7 @@ mezzoFirst = \relative c'' {
   e8 d cis4 |
   d2 ( ~ |
   d4 cis ) |
-  b2 |
+  b2^\mp |
   R2 |
   b ~ |
   b4 cis ~ |
@@ -552,10 +565,17 @@ mezzoWordsFirst = \lyricmode {
   how men lock me a
   He had that be fore When
   [with] [a] [love]
+
+  [I'm]
+  [and] [met] [with] [me]
+
+
   %[I'm] [pre]
   %[with] [me]
   %[and] [met] [with] [me]
-  [me]
+  
+  %[me]
+  
   [I'd] [be]
   [a] [sy*] [boy]
   [his]
@@ -570,10 +590,10 @@ mezzoWordsFirst = \lyricmode {
   [to] [low] [cause] 
   %[cause]
   %[When] [a] [man's] [an] [emp] [ty]
-  [met] [lock] [cause] [I'm] [to] [low]
+  [part] [met] [lock] [cause] [I'm] [to] [low]
   [fore] [heart]
 
-  a boy And I
+  friends I
   [love]
   [shoots] [cause] [I]
   hear a sweet boy on love
@@ -586,7 +606,7 @@ mezzoWordsFirst = \lyricmode {
   [a] [part] [with] [hu]
   [I] [be] [tle*] [boy]
   [shoots] [the] [ar] [rows]
-  [shoots] [the] [ar] [rows]
+  [in] [man's] [young] [boy]
   [Where] [I'd] [If] [young]
   [be] [cause]
   chip that lock
@@ -636,35 +656,35 @@ altoFirst = \relative c' {
   d4. e8 ~ |
   e2 |
   fis2 ~ |
-  fis8 d4. ~ |
+  fis8 d4.^\cresc ~ |
   d4 b ~ |
   b4. cis8 ~ |
   cis2 |
-  d2 ~ |
+  d2^\mf ~ |
   d8 b4. ~ |
   b4 d ~ |
   d4. a8 |
   a a a a |
-  d2 ~ |
-  d8 cis4. ~ |
-  cis4 b4 ~ |
+  d2^\< ~ |
+  d8^\> cis4. ~ |
+  cis4\! b4 ~ |
   b4. %\php
       b'8 ~ |
   b2 |
   %\php
   a2 ~ 
   a8 g4. ~ |
-  g4 fis4 ~ |
+  g4 fis4^\< ~ |
   fis4. e8 ~ |
-  e2 |
-  d ~ |
+  e2^\> |
+  d\! ~ |
   d8 cis4. ~ |
   cis4 cis' ~ |
-  cis4. b8 ~ |
+  cis4.^\cresc b8 ~ |
   b2 |
   a ~ |
   a8 g4. ~ |
-  g4 fis4 ~ |
+  g4 fis4^\f ~ |
   fis4. e8 ~ |
   e2 |
   d8 d d d |
@@ -675,14 +695,14 @@ altoFirst = \relative c' {
   fis ~ |
   fis8 d4. ~ |
   d4 e ~ |
-  e4. fis8 ~ |
+  e4. fis8^\> ~ |
   fis2 |
   d ~ |
-  d8 e4. ~ |
+  d8 e4.^\mp ~ |
   e4 fis ~ |
-  fis4. d8 ~ |
+  fis4.^\< d8 ~ |
   d2 |
-  b ~ |
+  b^\mf ~ |
   b8 cis4. ~ |
   cis4 d4 ~ |
   d4. b8 ~ |
@@ -694,15 +714,15 @@ altoFirst = \relative c' {
   cis2 |
   b ~ |
   b8 b'4. ~ |
-  b4 a ~ |
+  b4^\cresc a ~ |
   a4. g8 ~ |
   g2 |
   fis ~ |
-  fis8 e4. ~ |
+  fis8 e4.^\f ~ |
   e4 d ~ |
   d4. cis8 ~ |
   cis8. cis16 ~ cis4 |
-  cis'2 ~ |
+  cis'2^\mf ~ |
   cis8 b4. ~ |
   b4 a ~ |
   a4. g8 ~ |
@@ -710,9 +730,9 @@ altoFirst = \relative c' {
   fis2 ~ |
   fis8 e4. ~ |
   e4 d8 d |
-  d d d d8 ~ |
+  d^\> d d d8 ~ |
   d8. d16 ~ d4 |
-  b'2 ~ |
+  b'2^\! ~ |
   b8 ais4. ~ |
   ais4 b ~ |
   b4. cis8 ~ |
@@ -735,7 +755,7 @@ altoFirst = \relative c' {
   fis ~ |
   fis8 d4. ~ |
   d4 e ~ |
-  e4. fis8 ~ |
+  e4.^\cresc fis8 ~ |
   fis2 |
   a2 ~ |
   a8 b4. ~ |
@@ -743,7 +763,7 @@ altoFirst = \relative c' {
   e4. a8 ~ |
   a2 |
   fis2 ~ |
-  fis8 g4. ~ |
+  fis8^\ff^\dim g4. ~ |
   g4 a ~ |
   a4. fis8 ~ |
   fis2 |
@@ -751,7 +771,7 @@ altoFirst = \relative c' {
   d8 e4. ~ |
   e4 fis ~ |
   fis4. d8 ~ |
-  d2 |
+  d2^\mp |
   %{
     e ~ |
     e8 fis4. ~ |
@@ -872,40 +892,40 @@ tenorFirst = \relative c' {
   b8 ais g fis ~ |
   fis2 |
   R2 |
-  r8 b cis d |
+  r8 b^\cresc cis d |
   r8 d cis b |
   r cis d e |
   \footnote "" #'(0 . 0) "* Pronounced \"heater\"." r e d cis |
-  fis4 e8 d |
+  fis4^\mf e8 d |
   bes d4. |
   r4 bes8 b ~ |
   b c4. ~ |
   c8 g' fis e |
-  eis4 e ~ |
-  e2 |
-  R2 |
+  eis4^\< e ~ |
+  e2^\> |
+  R2\! |
   %r4. \php
   %    fis8^\< ~ |
   %fis2  |
   %R2\! |
   R2*3 |
   ais,2 |
-  a4 e' |
-  d ais |
+  b4 c^\< |
+  b gis |
   %ais8 a4. |
   %fis'2 |
-  cis2 |
+  ais4^\> ( a ) |
   %\transpose c g \removeWithTag #'bass \lickMe |
   %R2*2 |
-  r8 e,4. | % ~ |
+  r8\! e4. | % ~ |
   %e r |
   R2 | R2 |
   r16 %fis,16
-    b'8. ~ b4 |
+    b'8.^\cresc ~ b4 |
   fis4. e8 |
   b'4 c ~ |
   c8 b8 cis4 |
-  e2 ~ |
+  e2^\f ~ |
   e4 a, |
   gis a |
   fis8 bis ais ais |
@@ -915,15 +935,15 @@ tenorFirst = \relative c' {
   d4 ees |
   c8 ( d4 ) cis8 ~ |
   cis g4 ais8 ~ |
-  ais8 b4 a8 |
-  g fis e4
-  d'2 |
+  ais8 a b8 a8 |
+  g fis b4
+  d2^\> |
   cis |
-  ais4 b8 g' |
+  ais4^\mp b8 g' |
   e cis ais fis |
-  a2 ~ | 
+  a2^\< ~ | 
   a4 gis |
-  cis8 a gis cis, |
+  cis8^\mf a gis cis, |
   e4 dis |
   d? b' ~ |
   b4 ais8 a |
@@ -935,15 +955,15 @@ tenorFirst = \relative c' {
   ais4 a |
   gis fis ~ |
   fis4. e8 ~ |
-  e cis'4. |
+  e^\cresc cis'4. |
   ais4 fis8 b |
   r8 fis' eis ais, |
   d cis4 c8 |
-  d8 b4. |
+  d8 b4.^\f |
   c4 bes4 |
   b4. a8 ~ |
   a4 r |
-  e'4 dis |
+  e'4^\mf dis |
   ais a |
   b4. c8 |
   b4 c ~ |
@@ -951,9 +971,9 @@ tenorFirst = \relative c' {
   a ~ |
   a8 c4. ~ |
   c4 bes ( |
-  ais2 ) |
+  ais2^\> ) |
   c2 |
-  d8 d b4 ~ |
+  d8^\mp d b4 ~ |
   b4 ais8 fis ~ |
   fis2 ~ |
   fis8 ais4 b8 ~ |
@@ -976,7 +996,7 @@ tenorFirst = \relative c' {
   a,4 ais |
   b4 bes |
   c4 bes |
-  b2 |
+  b2^\cresc |
   gis |
   r8 cis gis' a, |
   cis4 b |
@@ -984,7 +1004,7 @@ tenorFirst = \relative c' {
   a8 g d' d, |
   ais'8 b cis ais |
   cis4 c |
-  b2 |
+  b2^\ff^\dim |
   c |
   bes |
   aes |
@@ -992,7 +1012,7 @@ tenorFirst = \relative c' {
   a2 |
   b2 ( |
   ais ) |
-  b |
+  b^\mp |
   R2 |
   g |
   gis |
@@ -1055,7 +1075,7 @@ tenorWordsFirst = \lyricmode {
   [Jeal*]
   [Jeal*] [I] [had]
   [cause] [to] [low]
-  [met] [lock] [cause] [I'm] [to] [low]
+  [part] [met] [lock] [cause] [I'm] [to] [low]
   [fore] [heart]
   me chip that lock a rows
   torn
@@ -1072,7 +1092,7 @@ tenorWordsFirst = \lyricmode {
   [I] [be] [tle*]
   [boy] [boy]
   [shoots] [the] [ar] [rows]
-  [shoots] [the] [ar] [rows]
+  [in] [man's] [young] [boy]
   [If] [young] [be] [cause]
   [love]
   Pic me
@@ -1109,54 +1129,54 @@ bassFirst = \relative c' {
   \clef "bass"
   R2*14 |
   r8 g^\mp fis e |
-  d2 |
+  d2^\cresc |
   eis |
   fis |
   ais |
-  a?4. r8 |
+  a?4.^\mf r8 |
   r4 gis, |
   e' a, |
   d aes |
   g2 |
-  cis4 fis, |
-  b4. fis8 |
-  b4 cis |
-  d g, |
-  e' d |
-  cis g |
-  fis e' |
-  d aes |
-  e' cis8 [ fis, ] |
+  cis4^\< fis, |
+  b4.^\> g8 |
+  fis8\! ais b fis |
+  r8 cis'4 g8 |
+  fis4 f |
+  e g8 a |
+  fis4 e' |
+  d aes^\< |
+  g ais8 fis ||
   %\removeWithTag #'tenor \lickMe |
   %r16 %e,16
     %g8. ~ g4 |
-  b4. fis8 |
-  b4 c |
-  cis g |
+  b4.^\> fis8 |
+  b4\! c8 fis, |
+  cis'4 g |
   f' bes, |
-  e f, |
-  e fis |
+  e^\cresc fis,8 f |
+  \times 2/3 { e4 ais fis } |
   g a |
-  e d |
-  g2 ~ |
-  g8 e'4 f,8 |
+  e ees8 d |
+  fis8 g4.^\f ~ |
+  g8 e'4 fis,8 |
   ais4 b |
   dis8 gis, cis fis, ~ |
   fis g4 cis8 |
   fis,4 e' |
   ais, b |
   fis' f |
-  e8 g,4 e'8 |
-  e,4 a |
-  e'8 d fis,4 |
-  g b |
-  cis e, |
+  e8 g,4 ais8 |
+  e8 gis a fis |
+  cis'8 b4 eis,8 |
+  fis4 d' |
+  \times 2/3 { cis^\> d, e } |
   fis ais |
-  b2 ~ |
+  b2^\mp ~ |
   b4. r8 |
   R2 |
-  gis4 eis' |
-  fis,2 ~ |
+  gis4^\< cis |
+  fis,2^\mf ~ |
   fis ~ |
   fis ~ |
   fis2 ~ |
@@ -1168,15 +1188,15 @@ bassFirst = \relative c' {
   d2 |
   c'4 a, ~ |
   a8 b c4 |
-  d2 |
+  d2^\cresc |
   dis |
   e |
   f |
-  c |
+  c^\f |
   aes |
   g ~ |
   g4 r |
-  fis'2 |
+  fis'2^\mf |
   b, |
   e ~ |
   e4 bes |
@@ -1184,9 +1204,9 @@ bassFirst = \relative c' {
   b2 ~ |
   b8 r8 b'4 |
   a c,  |
-  fis,2 |
+  fis,2^\> |
   b |
-  e ~ |
+  e^\mp ~ |
   e ~ |
   e ~ |
   e |
@@ -1211,21 +1231,21 @@ bassFirst = \relative c' {
   d4 aes |
   g2 |
   R2 |
-  r4 fis |
+  r4 fis^\cresc |
   b8 fis' d' d, |
   g fis e d |
   c b a g |
   fis4 ais8 cis |
-  d8 fis b b, |
+  d8 fis b b,^\ff |
   R2 |
   R2 |
   R2 |
   R2 |
   R2 |
   R2 |
-  cis2 ( |
+  cis2^\> ( |
   eis, ) |
-  b'2 |
+  b'2^\mp |
   R2 |
   e,2 ~ |
   e |
@@ -1266,15 +1286,16 @@ bassWordsFirst = \lyricmode {
   I \footnote "" #'(0 . 0) "* Pronounced \"gel\"."  Jeal* a part
   a \footnote "" #'(0 . 0) "* Pronounced \"aware\"."  Where* the heart a voice
   [with] [a] [love]
-  \repeat unfold 12 "()"
-  [and] [met] [with] [me]
-  \repeat unfold 11 "()"
-  [per] [ty*] [heart] [his] [on*]
+  \repeat unfold 15 "()"
+  [and] [met] [with] "()" [me]
+  \repeat unfold 14 "()"
+  [per] [ty*] [heart] "()" [his] [on*]
+  [beat]
   \repeat unfold 4 "()"
   [on] [ly] [had] [a] [heart]
   \repeat unfold 5 "()"
   [Jeal*] [I]
-  \repeat unfold 14 "()"
+  \repeat unfold 17 "()"
   [heart]
   a boy when
   a boy
