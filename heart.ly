@@ -1243,7 +1243,7 @@ bassFirst = \relative c' {
   e'4 dis |
   fis8 e dis4 |
   d2 |
-  c'4 a, ~ |
+  c4 a ~ |
   a8 b c4 |
   d2^\cresc |
   dis |
