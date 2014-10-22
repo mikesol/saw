@@ -110,8 +110,59 @@ midiPrefatoryMatter = {
 }
 
 marks = {
-  \tempo "Largo" 4=52
-  s2 |
+  \tempo "Largo" 4=50
+  s2*15 |
+  \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup \italic "più mosso"
+  \unfoldChange #50 #52 #16
+  \tempo "" 4=52
+  s2*5
+  \mark \markup \italic "più mosso"
+  \unfoldChange #52 #55 #8
+  \tempo "" 4=55
+  s2*13
+  \mark \markup \italic "più mosso"
+  \unfoldChange #55 #58 #8
+  \tempo "" 4=58
+  s2*12
+  \mark \markup \italic "meno mosso"
+  \unfoldChange #58 #55 #8
+  \tempo "" 4=55
+  s2*16
+  \mark \markup \italic "meno mosso"
+  \unfoldChange #55 #52 #16
+  \tempo "" 4=52
+  s2*2
+  \mark \markup \italic "più mosso"
+  \unfoldChange #52 #58 #8
+  \tempo "" 4=58
+  s2*8
+  \mark \markup \italic "meno mosso"
+  \unfoldChange #58 #55 #8
+  \tempo "" 4=55
+  s2*31
+  \mark \markup \italic "più mosso"
+  \unfoldChange #55 #58 #16
+  \tempo "" 4=58
+  \mark \markup \italic "meno mosso"
+  \unfoldChange #58 #55 #16
+  \tempo "" 4=55
+  \mark \markup \italic "più mosso"
+  \unfoldChange #55 #58 #32
+  \tempo "" 4=58
+  s2*4
+  \mark \markup \italic "meno mosso"
+  \unfoldChange #58 #55 #16
+  \tempo "" 4=55
+  s2*8
+  \mark \markup \italic "meno mosso"
+  \unfoldChange #55 #46 #16
+  \tempo "" 4=46
+  s2*2 |
+  \tempo "Grave" 4=42
+  s2*4 |
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 36 4 0 1)
+  s2 \bar "|."
 }
 
 sopranoFirst = \relative c' {
@@ -287,18 +338,19 @@ sopranoFirst = \relative c' {
   cis4 r |
   R2 |
   R2 |
-  b2 ~ |
-  b4 gis |
-  g2 |
-  fis ~ |
-  fis4 eis |
-  e2 ~ |
-  e4 d4 ~ |
+  a2 |
+  ais ~ |
+  ais2 |
+  g4 fis |
+  e2 |
+  dis4 d |
+  e4 d ~ |
   d4. r8 |
   b'2 ~ |
   b2 ~ |
-  b4 r |
-  b2 ~ | b2 |
+  b2 |
+  R2 |
+  b2^\fermata |
 }
 
 sopranoWordsFirst = \lyricmode {
@@ -358,8 +410,8 @@ sopranoWordsFirst = \lyricmode {
   beat torn man should
   spar* Jeal* I had
   be on the boy
-  sy* a bove When I Where
-  [friends]
+  zip a voice
+  If I be art Pic [love]
   [I] [heart]
 }
 
@@ -385,7 +437,7 @@ mezzoFirst = \relative c'' {
   R2 |
   R2 |
   e'2^\mf |
-  d8 cis d e ~ |
+  d8 cis d cis |
   e fis4. ~ |
   fis2 |
   gis4^\< g |
@@ -449,15 +501,15 @@ mezzoFirst = \relative c'' {
   cis b a4 ~ |
   a gis |
   eis4 e |
-  r8 dis8 eis fis8 |
-  a4 g8 r8 |
-  r4 dis8 f |
-  e2 ~ |
+  r8 dis8 fis a8 ~ |
+  a4 g8 d8 |
+  fis8 dis8 eis fis |
+  eis8 e4. ~ |
   e8 c b a |
   ais^\cresc f' e b |
   d c4. |
   dis4 b'4 |
-  bes4. a8 ~ |
+  a8 bes4 a8 ~ |
   a8 r gis4^\f |
   g? fis |
   fis2 ~ |
@@ -540,18 +592,19 @@ mezzoFirst = \relative c'' {
   e4 dis4 ) |
   r g ~ |
   g fis ~ |
-  fis e ~ |
-  e dis ~ |
-  dis cis |
-  c2 ~ |
-  c ~ |
-  c |
-  cis? ~ |
+  fis eis ~ |
+  eis e |
+  d2 ~ |
+  d8 cis4. |
+  b4 ais4 ~ |
+  ais2 |
+  cis ~ |
   cis4. r8 |
   g2 ~ |
   g ~ |
-  g4 r |
-  fis'2 ~ | fis |
+  g |
+  R2 |
+  fis'2^\fermata |
 }
 
 mezzoWordsFirst = \lyricmode {
@@ -563,7 +616,7 @@ mezzoWordsFirst = \lyricmode {
   voice I'd be Just
   and with a
   how men lock me a
-  He had that be fore When
+  He had that [friends] [sweet] fore When
   [with] [a] [love]
 
   [I'm]
@@ -600,10 +653,13 @@ mezzoWordsFirst = \lyricmode {
   a rows
   [on]
   [hear] [a] [sweet]
-  [boy] [a]
-  art I be [man] [He] [rows] [a]
+  [boy]  [a] [real]
+ 
+  [could] [be] [a] [real] [man]
+  %[man] [He] [rows] [a]
+  [could] [beat] [a] [real]
   [could] [beat] [a] [real] [man]
-  [a] [part] [with] [hu]
+  [a] [part] [man] [with] [hu]
   [I] [be] [tle*] [boy]
   [shoots] [the] [ar] [rows]
   [in] [man's] [young] [boy]
@@ -634,8 +690,8 @@ mezzoWordsFirst = \lyricmode {
   [beat] [beat] [torn] [man] [shoud]
   sweet with his men art thou
   [be] [boy]
-  voice me How art could be
-  [friends]
+  chip when I Ro Just lock me a
+  [love]
   [I] [heart]
 }
 
@@ -806,7 +862,7 @@ altoFirst = \relative c' {
     e ~ |
     e8 d8 d d |
     d d r4 |
-    R2 \bar "|."
+    R2 |"
   %}
   fis2 ~ |
   fis8 d4. ~ |
@@ -840,7 +896,7 @@ altoFirst = \relative c' {
   e2 |
   d8 d d d |
   d r4.
-  R2 | R2 \bar "|."
+  R2 | R2 |
 }
 
 altoWordsFirst = \lyricmode {
@@ -898,7 +954,7 @@ tenorFirst = \relative c' {
   \footnote "" #'(0 . 0) "* Pronounced \"heater\"." r e d cis |
   fis4^\mf e8 d |
   bes d4. |
-  r4 bes8 b ~ |
+  g,4. a8 |
   b c4. ~ |
   c8 g' fis e |
   eis4^\< e ~ |
@@ -911,7 +967,7 @@ tenorFirst = \relative c' {
   R2*3 |
   ais,2 |
   b4 c^\< |
-  b gis |
+  b g |
   %ais8 a4. |
   %fis'2 |
   ais4^\> ( a ) |
@@ -951,10 +1007,10 @@ tenorFirst = \relative c' {
   b'4 eis, |
   cis'2 |
   c?4 ais |
-  g4. ais8 ~ |
+  g4. a8 |
   ais4 a |
-  gis fis ~ |
-  fis4. e8 ~ |
+  gis g8 fis |
+  eis8 fis4 e8 ~ |
   e^\cresc cis'4. |
   ais4 fis8 b |
   r8 fis' eis ais, |
@@ -1032,20 +1088,21 @@ tenorFirst = \relative c' {
   bes2 |
   b |
   bes? |
-  b2 ~ |
+  b2 ( ~ |
   b4 ais ~ |
-  ais2 |
-  a? ~ 
-  a ~ |
-  a4 gis |
-  dis eis |
-  ais2 ~ |
+  ais2 ) |
+  gis |
+  fis4 e ~ |
+  e2 |
+  g2 ~ |
+  g | 
   ais2 ~ |
   ais4. r8 |
-  fis4 d |
-  cis ais ~ |
-  ais r |
-  b'2 ~ | b2 |
+  fis4 d | |
+  cis b |
+  ais2 |
+  R2 |
+  b'2^\fermata |
 }
 
 tenorWordsFirst = \lyricmode {
@@ -1061,7 +1118,7 @@ tenorWordsFirst = \lyricmode {
   He ter* could 
   hear
   How Just a heart
-  a \footnote "" #'(0 . 0) "* Pronounced \"sea\"." sy* could
+  young [sweet] [voice] [should]
   voice low where %I be
   [with] [a]
   %[I'm]
@@ -1084,8 +1141,10 @@ tenorWordsFirst = \lyricmode {
   [a] [sweet] [boy]
   [hear] [a] [sweet] [boy] [on] [love]
   [love] [a]
-  [boy] [be] [man]
-  [could] [beat] [man] [rows] [part]
+  [boy] [a] [real] [man]
+  [could] [art] [I] [could] [be]
+  [man]
+  [rows] [part]
   [art] [I]
   [could] [beat] [a] [real] [man]
   [a] [real]
@@ -1117,11 +1176,9 @@ tenorWordsFirst = \lyricmode {
   [love] a man could Just be
   [beat] [torn] [man] [should] [could]
   [spar*] [Jeal*] [I] [had] [be] [on] [the] [boy]
-  with a real
-  [When] [I] [Where]
-  [friends]
-  per ly* %pearly
-  with a
+  I'm a rows How to
+  [love]
+  per ly* boy with a
   [heart]
 }
 
@@ -1266,19 +1323,20 @@ bassFirst = \relative c' {
   c ~ |
   c |
   cis? ~ |
-  cis ~ |
-  cis ~ |
   cis |
   fis, ~ |
-  fis ~ |
-  fis ~ |
   fis |
+  g ~ |
+  g |
+  c ~ |
+  c |
   b2 ~ |
   b4. r8 |
   e,2 ~ |
   e ~ |
-  e4 r |
-  b'2 ~ | b |
+  e |
+  R2 |
+  b'2^\fermata |
 }
 
 bassWordsFirst = \lyricmode {
@@ -1328,7 +1386,7 @@ bassWordsFirst = \lyricmode {
   [could]
   [spar*] [Jeal] [I] [had]
   [on] [boy]
-  his low friends
+  his low voice could [love]
   [I] [heart]
 }
 
@@ -1418,6 +1476,61 @@ bassWordsFirst = \lyricmode {
     }
   }
 }
+
+%{
+\score {
+  \new PianoStaff <<
+    \new Staff  {
+      \new Voice = "soprano" { << { \numericTimeSignature
+	\scorePrefatoryMatter
+        \sopranoFirst
+      } \\ { \mezzoFirst } \\ { \altoFirst } {
+	\scorePrefatoryMatter
+        \marks
+      } >> }
+    }
+    \new Staff  {
+      \new Voice = "soprano" { << { \numericTimeSignature
+	\scorePrefatoryMatter
+        \tenorFirst
+      } \\ \\ { \bassFirst } {
+	\scorePrefatoryMatter
+        \marks
+      } >> }
+    }
+  >>
+  \layout {
+    \context {
+      \Voice
+      \override TextScript #'layer = #6
+      \override NoteHead #'layer = #7
+      \override Glissando #'breakable = ##t
+      \override TupletNumber #'breakable = ##t
+      \override TupletBracket #'breakable = ##t
+      \remove "Forbid_line_break_engraver"
+    }
+    \context {
+      \Staff
+      %\consists "Metronome_mark_engraver"
+      \override TimeSignature #'style = #'numbered
+      \override StaffSymbol #'layer = #4
+      \override TimeSignature #'layer = #3
+      \override TimeSignature #'whiteout = ##t
+    }
+    \context {
+      \Lyrics
+      %\override LyricText #'whiteout = ##t
+      \override LyricText #'layer = #6
+    }
+    \context {
+      \Score
+      %\remove "Metronome_mark_engraver"
+      \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
+    }
+  }
+}
+%}
+
 %%% MIDI
 
 \score {
