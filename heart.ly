@@ -1,5 +1,11 @@
 #(set-global-staff-size 15.87)
-%{
+\paper {
+  #(define fonts
+    (set-global-fonts
+    #:music "cadence"
+    #:factor (/ staff-height pt 20)
+  ))
+}
 \header {
   title = "If I Only Had a Heart"
   subtitle = "for Gene Peurling, Guillaume Dufay and Mark Kibble"
@@ -23,7 +29,6 @@
 
 
 
-%}
 %{
   ais a in tenor
   change for "and met..." in ten/alto
@@ -84,25 +89,6 @@ If I only had a heart
 #(ly:set-option 'point-and-click #f)
 
 #(set-global-staff-size 15.87)
-%{
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "cadence"
-    #:factor (/ staff-height pt 20)
-  ))
-}
-%}
-%{
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "haydn"
-    #:brace "gonville"
-    #:factor (/ staff-height pt 20)
-  ))
-}
-%}
 
 railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
