@@ -1,18 +1,40 @@
 \version "2.17.0"
 \include "defs-devel.ly"
+%{
 \paper {
-  footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
-  footnote-padding = 5\mm
-  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
-  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
   ragged-right = ##f
   left-margin = 0.75\in
   right-margin = 0.75\in
   top-margin = 0.5\in
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
-  %max-systems-per-page = #2
+  max-systems-per-page = #2
 }
+\header {
+  title = "The Wonderful Wizard of Oz" %(1)"
+  subtitle = \markup { for Bill Evans, William Schuman, and Hugo Wolf }
+  composer = "Harold Arlen"
+  poet = "E.Y. Harburg"
+  arranger = "arr. Mike Solomon"
+}
+
+%}
+\paper {
+  footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
+  footnote-padding = 5\mm
+  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
+  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
+}
+
+%{
+\paper {
+  #(define fonts
+    (set-global-fonts
+    #:music "cadence"
+    #:factor (/ staff-height pt 20)
+  ))
+}
+%}
 
 #(ly:set-option 'point-and-click #f)
 
@@ -24,14 +46,6 @@ myblack = \revert NoteHead.color
 %MyBlack = \revert NoteHead.color
 %myred = \revert NoteHead.color
 %myblack = \revert NoteHead.color
-
-\header {
-  title = "The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Bill Evans, William Schuman, and Hugo Wolf %{\super 1%}}
-  composer = "Harold Arlen"
-  poet = "E.Y. Harburg"
-  arranger = "arr. Mike Solomon"
-}
 
 marks = {
   \time 3/8

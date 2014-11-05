@@ -1,5 +1,30 @@
 #(set-global-staff-size 15.87)
 %{
+\header {
+  title = "If I Only Had a Heart"
+  subtitle = "for Gene Peurling, Guillaume Dufay and Mark Kibble"
+  %title = "Somewhere Over the Rainbow"
+  composer = "Harold Arlen"
+  poet = "E.Y. Harburg"
+  arranger = "arr. Mike Solomon"
+  %arranger = "arr. (anon)"
+}
+\paper {
+  ragged-right = ##f
+  left-margin = 0.75\in
+  right-margin = 0.75\in
+  top-margin = 0.5\in
+  bottom-margin = 0.6\in
+  ragged-last-bottom = ##f
+  max-systems-per-page = #2
+  %oddHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
+  %evenHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
+}
+
+
+
+%}
+%{
   ais a in tenor
   change for "and met..." in ten/alto
   spare jel I had
@@ -59,7 +84,7 @@ If I only had a heart
 #(ly:set-option 'point-and-click #f)
 
 #(set-global-staff-size 15.87)
-
+%{
 \paper {
   #(define fonts
     (set-global-fonts
@@ -67,7 +92,7 @@ If I only had a heart
     #:factor (/ staff-height pt 20)
   ))
 }
-
+%}
 %{
 \paper {
   #(define fonts
@@ -93,24 +118,6 @@ php = \once \override Hairpin.stencil = #(parenthesize-callback ly:hairpin::prin
   top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
   bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
   ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  max-systems-per-page = #2
-  %oddHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
-  %evenHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
-}
-
-\header {
-  title = "If I Only Had a Heart"
-  subtitle = "for Gene Peurling, Guillaume Dufay and Mark Kibble"
-  %title = "Somewhere Over the Rainbow"
-  composer = "Harold Arlen"
-  poet = "E.Y. Harburg"
-  arranger = "arr. Mike Solomon"
-  %arranger = "arr. (anon)"
 }
 
 prefatoryMatter = {
@@ -435,7 +442,7 @@ sopranoWordsFirst = \lyricmode {
   young
   spar* Jeal* I had
   [boy] be on
-  [young] [boy] [a] [torn] [man] [should]
+  [young] [boy] [his] [torn] [man] [should]
   [should] 
   zip [me] a [boy] voice
   If I be Pic [love]
@@ -545,8 +552,8 @@ mezzoFirst = \relative c'' {
   e dis |
   fis4 e |
   dis cis |
-  \times 2/3 { b'4 e b } |
-  c4 b8 a ~
+  \times 2/3 { b'4 e g } |
+  c,4 b8 a ~
   a8^\> fis4. ~ |
   fis2 |
   e2^\< |
@@ -604,11 +611,11 @@ mezzoFirst = \relative c'' {
   dis2 |
   fis2 ~ |
   fis4 dis ~ |
-  dis4 bes |
+  dis4 ais |
   gis'2 ~ |
   gis4 fis4 ~ |
   fis2 |
-  r4 g |
+  fis4 g |
   fis e |
   d2 ~ |
   d ~ |
@@ -616,8 +623,8 @@ mezzoFirst = \relative c'' {
   cis2 |
   cis ~ |
   cis |
-  r4 g' ~ |
-  g fis ~ |
+  r4 a' ~ |
+  a g |
   fis e ~ |
   e2 |
   d2 ~ |
@@ -718,11 +725,12 @@ mezzoWordsFirst = \lyricmode {
   [love] [shoots] [that] [hear]
   [boy] [hear]
   [a] [young] [torn]
+  [should]
   [spar*] [Jeal] [I] [had]
   [on]
   [men]
 
-  chip when I Just lock me a
+  chip [should] [zip] I Just lock me a
   [love]
   [I] [heart]
 }
@@ -1047,7 +1055,7 @@ tenorFirst = \relative c' {
   b4 fis8 b |
   r8 fis' eis ais, |
   d cis4 b8 |
-  d8 b4.^\f |
+  d4 b^\f |
   c4 bes4 |
   b4. a8 ~ |
   a4 r |
@@ -1062,7 +1070,7 @@ tenorFirst = \relative c' {
   c8^\> d4. |
   c4 bes |
   b?^\< g |
-  ais2 |
+  ais8 b cis d |
   cis8^\mf d b4 |
   e8 cis4. |
   e8 d cis b ~ |
@@ -1082,11 +1090,11 @@ tenorFirst = \relative c' {
   r8 d cis b |
   r cis d e |
   r e d cis |
-  r d e fis ~ |
+  r dis e fis ~ |
   fis8 a,4 ais8 |
   b4 bes |
   c4 bes |
-  b2^\cresc |
+  b?2^\cresc |
   gis4 a |
   b8 cis gis' a, |
   cis4 b |
@@ -1106,7 +1114,7 @@ tenorFirst = \relative c' {
   R2 |
   g ~ |
   g4 gis ~ |
-  gis4 g |
+  gis8 g4. |
   a2 ~ |
   a4 gis ~ |
   gis4 a ~ |
@@ -1190,7 +1198,8 @@ tenorWordsFirst = \lyricmode {
   %%%%%%%%[where]
   [I'd] [be]
   [young] [on] [ly]
-  [be] [cause] [man]
+  [be] [cause]
+  a young boy met
   [love]
   Pic me
   that lock
@@ -1285,8 +1294,8 @@ bassFirst = \relative c' {
   r4 gis8 cis ~ |
   cis8 fis, gis a |
   b4 dis |
-  fis4 dis4 |
-  d?4. c8 |
+  fis4 e4 |
+  d4. c8 |
   gis4 a ~ |
   a8 b c4 |
   d2^\cresc ~ |
@@ -1412,7 +1421,9 @@ bassWordsFirst = \lyricmode {
   [love]
   a rows
   boy I'm torn chip in Where I'd be
-  How should a man's stay with boy Just
+  %How should a man's stay with boy Just
+
+  How when should a man's stay boy Just
   fore low That the boy A part man sings
   That heart
   I

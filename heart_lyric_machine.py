@@ -236,4 +236,4 @@ friends B
 #format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
 #format_choice_list([E,D,CIS,B])
 #format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
-format_choice_list([CIS,B,A,G,A])
+format_choice_list([G,A,B])

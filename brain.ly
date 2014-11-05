@@ -1,7 +1,26 @@
 %<ees d' f a f'> d bes c d bes
 %#(set-global-staff-size 14.14)
 #(set-global-staff-size 15.87)
-
+%{
+\paper {
+  ragged-right = ##f
+  left-margin = 0.75\in
+  right-margin = 0.75\in
+  top-margin = 0.5\in
+  bottom-margin = 0.6\in
+  ragged-last-bottom = ##f
+  max-systems-per-page = #2
+}
+\header{
+  title = "If I Only Had a Brain"
+  subtitle = "for me"
+  %title = "Somewhere Over the Rainbow"
+  composer = "Harold Arlen"
+  poet = "E.Y. Harburg"
+  arranger = "arr. Mike Solomon"
+  %arranger = "arr. (anon)"
+}
+%}
 %%%%%% ending with E major
 %%%%%% then D major
 %%%%%% then B major (if happy)
@@ -14,7 +33,10 @@
 swung = \markup \italic "swung"
 notswung = \markup \italic "not swung"
 
-#(load "swing.scm")
+%#(load "swing.scm")
+
+tripletFeel = #(define-music-function (parser location n m) (number? ly:music?)
+m)
 
 #(ly:set-option 'point-and-click #f)
 
@@ -31,24 +53,17 @@ myred = \once \override NoteHead #'color = #red
   footnote-padding = 5\mm
   top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
   bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  max-systems-per-page = #2
 }
 
-\header {
-  title = "If I Only Had a Brain"
-  subtitle = "for me"
-  %title = "Somewhere Over the Rainbow"
-  composer = "Harold Arlen"
-  poet = "E.Y. Harburg"
-  arranger = "arr. Mike Solomon"
-  %arranger = "arr. (anon)"
+%{
+\paper {
+  #(define fonts
+    (set-global-fonts
+    #:music "cadence"
+    #:factor (/ staff-height pt 20)
+  ))
 }
+%}
 
 prefatoryMatter = {
   \key ees \major
