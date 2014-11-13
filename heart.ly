@@ -8,7 +8,7 @@
 }
 \header {
   title = "If I Only Had a Heart"
-  subtitle = "for Gene Peurling, Guillaume Dufay and Mark Kibble"
+  subtitle = "for Guillaume Dufay"
   %title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
@@ -145,13 +145,14 @@ marks = {
   \tempo "" 4=52
   s2*2
   \mark \markup \italic "più mosso"
-  \unfoldChange #52 #58 #8
-  \tempo "" 4=58
+  \unfoldChange #52 #58 #7
+  s8
+  \tempo "Adagio" 4=50
   s2*8
-  \mark \markup \italic "meno mosso"
-  \unfoldChange #58 #55 #8
+  \mark \markup \italic "più mosso"
+  \unfoldChange #50 #55 #24
   \tempo "" 4=55
-  s2*31
+  s2*27
   \mark \markup \italic "più mosso"
   \unfoldChange #55 #58 #16
   \tempo "" 4=58
@@ -268,33 +269,40 @@ sopranoFirst = \relative c' {
   f e8 \footnote #"" #'(0 . 0) "Pronounced \"beetle\"." d |
   r8 cis4. ( ~ |
   cis8 b8 ) r4 |
-  gis4^\mf a |
-  g4. a8 |
-  g4. fis8 ~ |
-  fis4 eis |
 %sopranoBalise
-  e4 b'8 e ~ |
-  e4 d8 c ~ |
-  c8^\> b4. ~ |
-  b4 a |
-  g4^\< b |
-  cis2 |
+fis2^\> | R2\! | R2 | R2 |
+r8 g^\mp a b |
+d c g' fis |
+c b fis' e |
+d8 c b a |
+g4^\< b |
+cis2 |
+  %%%%%gis4^\mf a |
+  %%%%%g4. a8 |
+  %%%%%g4. fis8 ~ |
+  %%%%%fis4 eis |
+  %%%%%e4 b'8 e ~ |
+  %%%%%e4 d8 c ~ |
+  %%%%%c8^\> b4. ~ |
+  %%%%%b4 a |
+  %%%%%g4^\< b |
+  %%%%%cis2 |
   d2^\mf ~ |
   d8 e4. |
   fis2 ~ |
-  fis4 b,8 a |
-  gis2 |
-  dis |
-  fis |
+  fis4 b,8 a ~ |
+  a gis4. ~ |
+  gis4 fis ~ |
+  fis4. gis8 |
   e8 d cis b |
   a2 |
   R2 |
-  R2 |
-  a'8 g fis e ~ |
+  r4 a'4 ~ |
+  a8 g fis e ~ |
   e4 fis |
   g8 fis e d ~ |
-  d4 g |
-  fis b ~ |
+  d4 fis8 [ g ] |
+  fis4 b ~ |
   b ais ~ |
   ais b ~ |
   b cis ~ |
@@ -402,12 +410,20 @@ sopranoWordsFirst = \lyricmode {
   a part with hu*
   [a] [part] [with] [hu*]
   I be tle* boy
-  [shoots] [the] [ar] [rows]
-  [in] [young] [boy]
-  Where [I'd]
-  Where I'd be young
-  [on] [ly]
-  be -- cause love
+  [shoots]
+  %%%%%[shoots] [the] [ar] [rows]
+  %%%%%[in] [young] [boy]
+  %%%%%Where [I'd]
+  %%%%%Where I'd be young
+  %%%%%[on] [ly]
+  %%%%%be -- cause
+  spar* man's young
+  heart could chip low
+  be with me Where
+  heart be with hu*
+  man
+  be cause
+  love
   How I'd
   stay sweet
   [low] [ny] [a] 
@@ -534,24 +550,36 @@ mezzoFirst = \relative c'' {
   g? fis |
   fis2 ~ |
   fis4 r |
-  eis4^\mf fis |
-  e dis |
-  fis4 e |
-  dis cis |
-  \times 2/3 { b'4 e g } |
-  c,4 b8 a ~
-  a8^\> fis4. ~ |
-  fis2 |
-  e2^\< |
-  g |
+%mezzoBalise
+e2^\> | R2\! | R2 | %r4 e'4^\mp ~ |
+%e2 ~ |
+%e4 d ~ |
+%d4. c8 |
+R2*3 |
+%r4. c'8^\mp
+%b a g fis |
+%e4^\< fis ~ |
+R2*2 |
+r4 fis^\mp^\< ~ |
+fis8 g4. |
+  %%%%%%%eis4^\mf fis |
+  %%%%%%%e dis |
+  %%%%%%%fis4 e |
+  %%%%%%%dis cis |
+  %%%%%%%\times 2/3 { b'4 e g } |
+  %%%%%%%c,4 b8 a ~
+  %%%%%%%a8^\> fis4. ~ |
+  %%%%%%%fis2 |
+  %%%%%%%e2^\< |
+  %%%%%%%g |
   fis4.^\mf g8 ~ |
   g2 |
   fis2 |
   a8 g fis e |
-  fis2 ~ |
-  fis |
-  gis ~ |
-  gis4 e |
+  fis4 e ~ |
+  e8 dis4. ~ |
+  dis4 fis ~ |
+  fis e |
   e2 |
   g8 fis e d ~ |
   d2 |
@@ -559,12 +587,12 @@ mezzoFirst = \relative c'' {
   cis2 |
   e8 d cis b ~ |
   b4 cis ~ |
-  cis4 r |
-  r g' ~ |
-  g fis4 ~ |
-  fis4 ais ( |
-  gis ) a |
-  r8 gis e d |
+  cis r |
+  a'4 g |
+  fis a |
+  g ais |
+  gis4. a8 ~ |
+  a8 gis e d |
   r fis g a |
   r a g fis ~ |
   fis4^\cresc d |
@@ -670,7 +698,8 @@ mezzoWordsFirst = \lyricmode {
   [shoots] [cause] [I]
   hear a sweet boy on love
   a rows
-  [on] [love]
+  [on]
+  [love]
   [hear]
   [a] [sweet]
   [boy]  [a] [real]
@@ -682,21 +711,33 @@ mezzoWordsFirst = \lyricmode {
   [hu]
   [a] [part] [with] [man] [with] [hu]
   [I] [be] [tle*] [boy]
-  [shoots] [the] [ar] [rows]
-  [in] [man's] [young] [boy]
-  [Where] [I'd] [be] [Where] [I'd] [be] [young]
-  [be] [cause] [love]
+  [shoots]
+  %%%%%%[shoots] [the] [ar] [rows]
+  %%%%%%[in] [man's] [young] [boy]
+  %%%%%%[Where] [I'd] [be] [Where] [I'd] [be] [young]
+  %%%%%%[be] [cause]
+  %Where I could
+  %[Where] [heart] [be] [with] [hu]
+  %I should be
+  [be] [cause]
+
+  [love]
   chip 
   [I]
   sweet man per ty low
-  [a]
-  [bove]
+  [man's] [a] [bove]
+  [boy]
   [sings]
   voice I'd be Just
   [zip] [should] [be]
   [spar*] [an] [e] [ter]
   his
-  [a] [beat] [boy] [with]
+  %[a] [beat] [boy] [with]
+  [young] [boy] [had]
+  [art] [with] [me]
+  [his] [emp] %[ty]
+  %[He] [ter*] [could]
+  %[be] [fore]
   a Where I'd
   If a sweet
   man's voice should
@@ -805,13 +846,13 @@ altoFirst = \relative c' {
   e4 d ~ |
   d4. cis8 ~ |
   cis8. cis16 ~ cis4 |
-  cis'2^\mf ~ |
+  cis'2^\mp ~ |
   cis8 b4. ~ |
   b4 a ~ |
   a4. g8 ~ |
   g2 |
   fis2 ~ |
-  fis8^\> e4. ~ |
+  fis8 e4. ~ |
   e4 d8 d |
   d^\< d d d8 ~ |
   d8. d16 ~ d4 |
@@ -1045,18 +1086,27 @@ tenorFirst = \relative c' {
   c4 bes4 |
   b4. a8 ~ |
   a4 r |
-  e'4^\mf dis |
-  ais4 a |
-  b4 c |
-  b4 c ~ |
-
 %tenorBalise
-  \times 2/3 { c4 b a ~ } |
-  a4 b8 c ~ |
-  c8^\> d4. |
-  c4 bes |
-  b?^\< g |
-  ais8 b cis d |
+r8 a^\mp b cis |
+e dis a' gis |
+dis cisis gis' fis |
+d cis fis e |
+d c b a |
+b4 a |
+gis2 |
+a4 b ~ |
+b4.^\< g8 |
+ais8 b cis d |
+  %%%%%%%e'4^\mf dis |
+  %%%%%%%ais4 a |
+  %%%%%%%b4 c |
+  %%%%%%%b4 c ~ |
+  %%%%%%%\times 2/3 { c4 b a ~ } |
+  %%%%%%%a4 b8 c ~ |
+  %%%%%%%c8^\> d4. |
+  %%%%%%%c4 bes |
+  %%%%%%%b?^\< g |
+  %%%%%%%ais8 b cis d |
   cis8^\mf d b4 |
   e8 cis4. |
   e8 d cis b ~ |
@@ -1178,13 +1228,25 @@ tenorWordsFirst = \lyricmode {
   [a] [real]
   [I] [be] [tle*]
   [boy] [boy]
-  [shoots] [the] [ar] [rows]
-  [in] [man's] [young]
-  [boy] [I'd] [be]
-  %%%%%%%%[where]
-  [I'd] [be]
-  [young] [on] [ly]
-  [be] [cause]
+  %%%%%[shoots] [the] [ar] [rows]
+  %%%%%[in] [man's] [young]
+  %%%%%[boy] [I'd] [be]
+  %%%%%[I'd] [be]
+  %%%%%[young] [on] [ly]
+  %%%%%[be] [cause]
+  %%%%%a young boy met
+
+  feel young be
+  Where art sweet a
+  art ture* a rows
+  be de* per ty
+  Just be cause I'm
+
+  sen ding
+  [voice]
+  When stay man
+
+
   a young boy met
   [love]
   Pic me
@@ -1292,17 +1354,25 @@ bassFirst = \relative c' {
   c8 aes4. |
   g2 ~ |
   g4 r |
-  fis'2^\mf |
-  b, |
-  e ~ |
-  e4 bes |
 %bassBalise
-  a4. d8 |
-  d2 ~ |
-  d8 r8 gis4^\> |
-  a c,  |
-  cis2^\<  |
-  fis,2 |
+fis'2 |
+b, ~ |
+b4 r |
+R2*3 |
+r8 cis^\mp d e |
+fis4 f |
+e8^\< g fis e |
+d cis ais fis |
+  %%%%%%%fis'2^\mf |
+  %%%%%%%b, |
+  %%%%%%%e ~ |
+  %%%%%%%e4 bes |
+  %%%%%%%a4. d8 |
+  %%%%%%%d2 ~ |
+  %%%%%%%d8 r8 gis4^\> |
+  %%%%%%%a c,  |
+  %%%%%%%cis2^\<  |
+  %%%%%%%fis,2 |
   b4^\mf b' ~ |
   b4 ais8 fis |
   cis'8 b a g |
@@ -1324,8 +1394,8 @@ bassFirst = \relative c' {
   g |
   a |
   b, |
-  c |
-  d4 aes |
+  c4. d8  |
+  e fis aes,4 |
   g2 |
   R2 |
   r4 fis^\cresc |
@@ -1400,11 +1470,16 @@ bassWordsFirst = \lyricmode {
   [a] [man]
   [rows] [a] [part] [with] [a] [part]
   [I] [be] [boy]
-  [shoots] [the] [ar] [rows]
-  Where I'd [If]
-  [young] [on] [ly]
-  [be] [cause] [love]
-  [love]
+  [shoots] [the]
+  %%%%%[shoots] [the] [ar] [rows]
+  %%%%%Where I'd [If]
+  %%%%%[young] [on] [ly]
+  %%%%%%[be] [cause] [love]
+  lock men Where
+  Jeal* I
+  fore rows in That
+  I'd be a low
+  [love] [love]
   a rows
   boy I'm torn chip in Where I'd be
   %How should a man's stay with boy Just
@@ -1415,7 +1490,7 @@ bassWordsFirst = \lyricmode {
   I
   should sum*
   feel me
-  could I
+  could [if] [a] [sweet]
   a voice
   gen tle
   should Pic -- ture
