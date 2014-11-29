@@ -460,9 +460,9 @@ unMonoShift = {
   (set-object-property! symbol 'backend-doc description)
   symbol)
 
-#(define-grob-property 'buddies list? "List of grobs")
-#(define-grob-property 'my-name symbol? "List of grobs")
-#(define-grob-property 'searching list? "List of grobs")
+%%%%#(define-grob-property 'buddies list? "List of grobs")
+%%%%#(define-grob-property 'my-name symbol? "List of grobs")
+%%%%#(define-grob-property 'searching list? "List of grobs")
 
 %%%%%%%%%%%%%%%%%
 %% HAIRY STUFF %%
@@ -479,6 +479,7 @@ unMonoShift = {
       (make-connected-path-stencil `((0.33 ,(/ 3.1416 6.0) 0.66 1. 1. 1.)) thick half-x half-y #f #f)
       (cons (interval-center (if (< half-x 0) (cons x2 x1) (cons x1 x2))) (interval-center (if (< half-y 0) (cons y2 y1) (cons y1 y2))))))))
 
+%{
 #(define (royal-hack sym)
   (lambda (grob) ;(format #t "SYM ~a ~a\n" sym (ly:grob-property grob 'buddies))
     (if (null? (ly:grob-property grob 'buddies))
@@ -538,7 +539,7 @@ buddyEngraver =
                     (ly:grob-set-property! grob2 'buddies (cons (cons (car x) grob1) (ly:grob-property grob2 'buddies)))
                     (ly:grob-set-property! grob1 'buddies (cons (cons (cdr x) grob2) (ly:grob-property grob1 'buddies)))))
                   match-list)))))
-
+%}
 \include "bendtest.ly"
 
 #(define (parenthesize-callback callback)
@@ -552,17 +553,17 @@ buddyEngraver =
             ;; remember old size
             (subject-dim-x (ly:stencil-extent subject X))
             (subject-dim-y (ly:stencil-extent subject Y)))
-
+;(format #t "WORKS\n")
        ;; add parens
        (set! subject
              (ly:stencil-combine-at-edge 
               (ly:stencil-combine-at-edge subject X RIGHT pclose 0)
               X LEFT popen 0))
-
+;(format #t "uggghhh\n")
        ;; adjust stem position
        (set! (ly:grob-property grob 'stem-attachment)
              (cons (- (car stem-pos) 0.43) (cdr stem-pos)))
-
+;(format #t "brrrr ~a ~a ~a\n" (ly:stencil-expr subject) subject-dim-x subject-dim-y)
        ;; adjust size
        (ly:make-stencil
         (ly:stencil-expr subject)

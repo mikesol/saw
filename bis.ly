@@ -1,13 +1,19 @@
 \version "2.19.0"
 \include "defs-devel.ly"
 
+marD = \markup \null
+elsD = \markup \null
+mikD = \markup \null
+rynZ = \markup \null
+desD = \markup \null
+
 #(set-global-staff-size 15.87)
 autoBeamInstruction = \autoBeamOn
 
 solo = \markup \italic "solo"
 psolo = \markup \italic "(solo)"
 skat = \markup \italic "sit skat"
-shoot = \markup \italic "SHYT"
+shoot = \markup \italic "SYT"
 
 \header {
   title = "The Wonerful Wizard of Oz"
@@ -191,31 +197,31 @@ soprano = \relative c'' {
   \times 2/3 { fis r2 d2 r4 } |
   \times 2/3 { r4 b2 r2 cis4 ~ } |
   \times 2/3 { cis r2 } d4^\< b8 fis' |
-  d'^\f d4 d8 b d r d ~ |
+  r8\! d'4^\f d8 b d r d ~ |
   d d b d r d4 b8 |
   d b \times 2/3 { c8 d c } b f e d |
   fis d e d ~ d b'-. r b-. |
   R1*3 |
-  R1^\markup \italic "Des Drisig?"
+  R1^\desD
   r2 gis'8^\espressivo r4. |
   r4 g8^\espressivo r r4. fis8 ~ |
   fis8 fis4 r8 r8 e4 r8 |
   r8 d4 r8 r8 cis^\> ~ cis4 ~ |
   cis1 |
   R1\! |
-  r8 fis2..^\mf |
-  e1 |
+  r8 fis2..^\mf ( |
+  e1 ) |
   r2 d |
   r cis ~ |
   cis r |
   ais2 r |
-  r2 ais' ~ |
+  r2 ais'^\markup "♥" ~ |
   ais1 ~ |
   ais ~ |
   ais ~ |
   ais ~ |
   ais2. r4 |
-  r4 b2. ~ |
+  r4 b2.^\markup "♥♥" ~ |
   b1 |
   r8 cis,4. b4 a |
   cis4. b8 ~ b2 |
@@ -227,42 +233,42 @@ soprano = \relative c'' {
   fis e |
   r8 d4. fis4 a |
   cis d b cis |
-  r8 e,4. gis4 bis |
-  e fis d cis |
-  r8 fis,4. a4 cis |
-  fis2 cis |
-  d f |
-  e1 |
-  d |
-  dis1 |
+  r8 e,4. bis'4 g |
+  e' fis d cis |
+  r8 fis4. d8 b4 r8 |
+  e4 cis8 a ~ a r d4 |
+  b8 gis4 r8 cis4 a8 fis ~ |
+  fis4 b4 gis8 e4. |
+  cis'1^\>  ( |
+  dis1^\mf |
   e2 d |
-  cis2 ( a4 ) r4 |
-  d,8 r4 |
+  cis2 a4 ) r4 |
+  d,8^\mp r4 |
   dis8 r4 |
   e8 r4 |
   g8 r g |
   fis8 fis fis |
   f4 f8 |
-  e4 d |
+  e4^\< d |
   cis e |
   gis2 |
   e |
   dis |
   cis |
-  fis4 e |
+  fis4^\f ( e |
   gis a |
   fis g |
-  e4 dis |
+  e4 ) dis |
   d8 dis e |
   f fis g |
-  gis a ais |
-  b c cis |
+  gis ( a ) ais |
+  b ( c cis ) |
   d cis c |
   b bes a |
   gis4 r8 |
   e4. |
   a4 a8 g4 g8 fis4 fis8 f4 f8 |
-  e4 e, f'' fis1.\startTrillSpan ~ |
+  e4 \clef bass e, \clef treble f'' fis1.\startTrillSpan ~ |
   fis8\stopTrillSpan r8 e, |
   cis4 d8 |
   e4 a8 ~ |
@@ -270,16 +276,29 @@ soprano = \relative c'' {
   cis4-. r8 |
   b4-. r8 |
   R4. |
-  r4 g'8 ~ |
+  r4 g'8^\ff ~ |
   g4. ~ |
   g4^\fermata r8 |
-  
-
 }
 
 trumpets = \lyricmode { \repeat unfold 5 ba }
 lastTrumpet = \lyricmode { \repeat unfold 4 ba da \repeat unfold 2 ba }
 buildUp = \lyricmode { \repeat unfold 3 { ba ba da } ba }
+was = \lyricmode {
+  wa
+  wa
+  wa da
+  wa
+  wa
+  wa
+  wa
+
+  wa
+  wa
+  wa
+
+  a
+}
 
 sopranoWords = \lyricmode {
   \trumpets
@@ -302,12 +321,30 @@ sopranoWords = \lyricmode {
   I could wile a -- way the ho -- urs
   Con -- fer -- rin' with the flow -- ers
   now
-  Hey cha, the Wi -- zard
+  cha, the Wi -- zard
   Wi -- zard of Oz
   %You know that he is a Won -- der -- ful wiz
   Know he is a Won -- der -- ful wiz
   be -- cause the Wi -- zard he was
   hey hey
+  \was
+  a
+  \trumpets
+  \trumpets
+  \trumpets \repeat unfold 4 ba
+  \lastTrumpet
+  ba ba ba
+  ba ba ba ba
+  \repeat unfold 5 { ba da ba }
+  a
+  \repeat unfold 4 nä
+  the Wi -- zard of Oz is one be -- cause
+  be -- cause be -- cause be -- cause
+  be -- cause of the won -- der -- ful things he does
+  won -- der -- ful things that he does
+  We're off to see the Wi -- zard he's the
+  Won -- der -- ful Wiz
+  \repeat unfold 11 nä
 }
 
 mezzo = \relative c'' {
@@ -354,7 +391,7 @@ mezzo = \relative c'' {
   d ~ |
   d ~ |
   d ~ |
-  d^\markup \italic "Mik Drisig?" ~ |
+  d^\mikD ~ |
   d ~ |
   d ~ |
   d ~ |
@@ -380,7 +417,7 @@ mezzo = \relative c'' {
 %  g' fis e d cis
 %  fis e d cis   b cis d e fis g a |
 %  b, cis d g bes a
-  r8 b4 b8 a8 b r ais ~ |
+  d8 b4 b8 a8 b r ais ~ |
   ais ais g ais r eis \times 2/3 { fis a b } |
   d b \times 2/3 { c8 d c } b f e d |
   fis d e d ~ d gis-. r g-. |
@@ -391,66 +428,66 @@ mezzo = \relative c'' {
   r8 b4 r8 r8 ais8^\> ~ ais4 ~ |
   ais1 |
   R1\! |
-  r8 b2..^\mf |
-  gis1 |
+  r8 b2..^\mf ( |
+  gis1 ) |
   r2 g |
   r ais ~ |
   ais r |
   fis2 r |
-  gis1 |
+  gis1 ( |
   g |
   b |
   cis |
   d^\< |
   e |
   fis |
-  g |
+  g ) |
   r8\! a,4.^\f gis4 fis |
   a4. gis8 ~ gis2 |
   r8 gis4. fis4 eis |
-  gis4. fis8 ~ fis4 eis |
+  gis4. fis8 ( ~ fis4 eis ) |
   r8 fis4. e4 dis |
   fis2 f |
   e e |
   d cis |
   r8 b4. d4 fis |
   a ais a fis |
-  r8 cis4. e4 a |
+  r8 cis4. a'4 e |
   ais c b ais |
-  r8 d,4. fis4 a |
-  c2 b^\shoot |
-  a b |
-  gis2 g |
-  fis1 |
-  b2 c |
+  r8 d4. b8 gis4 r8 |
+  cis4 ais8 g ~ g r b4^\shoot |
+  fis8 d4 r8 b'4 fis8 e ~ |
+  e4 gis4 e8 cis4. |
+  fis1^\> ( |
+  b2^\mf c ) |
   gis8 gis gis gis ~ gis fis4. |
-  eis2 fis4 e |
+  eis2 ( fis4 ) e |
   fis8 fis fis |
   fis fis gis |
   a4 e8 |
   cis4 e8 |
   d8 d cis |
   b4 d8 |
-  cis4 b |
+  cis4^\< b |
   a4 a |
   a4 a |
   a' a |
   gis4 gis |
   fis4 fis |
-  b4 a |
+  b4^\f ( a |
   d c |
   b a |
-  g a |
+  g ) a |
   b8 b b |
   b b b |
   b4 gis8 |
-  e dis e |
+  e ( dis e ) |
   b'8 ais fis |
   gis g ees |
   e4 r8 |
   d4. |
   e4 e8 e4 e8 c4 c8 c4 c8 |
-  d4 e, b'' cis1. ~ |
+  d4 \clef bass e, \clef treble b'' cis1. ~ |
   cis8 r8 e, |
   cis4 d8 |
   e4 a8 ~ |
@@ -458,7 +495,7 @@ mezzo = \relative c'' {
   fis4-. r8 |
   f4-. r8 |
   R4. |
-  r8 ais4 ~ |
+  r4 ais8^\ff ~ |
   ais4. ~ |
   ais4^\fermata r8 |
 }
@@ -486,11 +523,29 @@ mezzoWords = \lyricmode {
   ba
   ooo
   \repeat unfold 70 { \skip 1 }
-  cha, the Wi -- zard
+  Hey cha, the Wi -- zard
   Wi -- zard of Oz
   You know that he is a Won -- der -- ful wiz
   be -- cause the Wi -- zard he was
   hey hey
+  \was
+  \trumpets
+  \trumpets
+  \trumpets \repeat unfold 4 ba
+  \lastTrumpet
+  ba ba ba
+  ba ba ba ba
+  \repeat unfold 5 { ba da ba }
+  a
+  ev -- er a wiz there was.
+  If ev -- er, oh ev -- er a wiz there was,
+  The Wi -- zard of Oz is one be -- cause
+  be -- cause be -- cause be -- cause be -- cause be -- cause
+  be -- cause of the won -- der -- ful things he does.
+  won -- der -- ful things that he does
+  We're off to see the Wi -- zard he's the
+  Won -- der -- ful Wiz
+  \repeat unfold 11 nä
 }
 
 
@@ -522,11 +577,11 @@ alto = \relative c' {
   d bis |
   cis dis8 ) dis e f |
   r8 fis4.^\f f4 e |
-  fis2 f |
+  fis4. f8 ~ f2 |
   r8 e4. e4 cis |
-  eis2 e |
+  eis4. e8 ~ e2 |
   r8 d4. d4 cis |
-  dis2 d |
+  dis2 d2 |
   cis cis |
   cis ais |
   r8 a4. b4 dis |
@@ -535,7 +590,7 @@ alto = \relative c' {
   fis d' r fis, cis' fis, b a ~ |
   a g4 d8 fis d \times 2/3 { g a g } |
   fis d cis b bes a e' cis |
-  d e fis g a b e, d |
+  d e fis g a fis e d |
   b' b r cis, \times 2/3 { d e g } b b |
   r cis, \times 2/3 { e g a } bes bes, \times 2/3 { g' a g } |
   fis d \times 2/3 { g a g } fis8 fis \times 2/3 { d g a }
@@ -544,7 +599,7 @@ alto = \relative c' {
   a b \times 2/3 { cis e g } \times 4/7 { a a a e g a g  } |
   fis16 d cis b  bes a g r    r b cis e     fis g g eis |
   \times 4/5 { fis16 d cis b    a g fis a     \times 2/3 { b d e } f f   \times 2/3 { e f e } d b a b e cis } |
-  r2 d^\mf |
+  d4 r d2^\mf |
   r e |
   r fis |
   r d |
@@ -555,8 +610,8 @@ alto = \relative c' {
   cis2 r4 d ~ |
   \times 2/3 { d r2 b2 r4 } |
   \times 2/3 { r4 g2 r2 a4 ~ } |
-  \times 2/3 { a r2 } b4 g8 b |
-  r8 a'4^\f a8 fis8 a r gis ~ |
+  \times 2/3 { a r2 } b4^\< g8 b |
+  r8\! a'4^\f a8 fis8 a r gis ~ |
   gis gis eis gis r eis \times 2/3 { fis a g } |
   fis d \times 2/3 { e8 fis e } d a g fis |
   a b cis d ~ d fis-. r e-. |
@@ -567,32 +622,32 @@ alto = \relative c' {
   r8 gis4 r8 r8 fis8^\> ~ fis4 ~ |
   fis1 |
   R1\! |
-  r8 dis2..^\mf |
-  b1 |
+  r8 dis2..^\mf ( |
+  b1 ) |
   r2 e |
-  r^\markup \italic "Ryn Zwisig?" fis ~ |
+  r^\rynZ fis ~ |
   fis r |
   d2 r |
-  e1 ~ |
+  e1 ~ ( |
   e |
   fis |
   a |
   gis^\< |
   ais |
   cis |
-  dis |
+  dis ) |
   r8\! fis,4.^\f f4 e |
   fis4. f8 ~ f2 |
   r8 eis4.^\markup \eyeglasses e4 cis |
-  eis4. e8 ~ e4 dis |
+  eis4. e8 ~ ( e4 dis ) |
   r8 d4. d4 cis |
   dis2 d |
   cis cis |
   cis ais |
   r8 a4. b4 dis |
   fis gis fis d |
-  r8 b4. cis4 fis |
-  g a gis e |
+  r8 b4. fis'4 cis |
+  g' a gis e |
   a4 e cis d |
   e a2 e4 |
   fis8 e d cis ~ cis d b a ~ |
@@ -601,32 +656,32 @@ alto = \relative c' {
   gis8 gis gis fis ~ fis fis4. |
   b8 b b b ~ b a4. |
   gis2 ( fis4 ) r4 |
-  a,8 r4 |
+  a,8^\mp r4 |
   a8 r4 |
   a8 r4 |
   ais8 r8 ais8 |
   b8 b b |
   gis4 gis8 |
-  fis2 |
+  fis2^\< |
   e ~ |
   e |
   cis' |
   a2 ~ |
   a |
-  c |
+  c^\f ( |
   fis4 e |
   dis e |
-  d fis ~ |
+  d ) fis |
   fis8 g gis |
   a ais b |
-  eis, fis eis |
-  gis a ais |
+  eis, ( fis ) eis |
+  gis ( a ais ) |
   fis g dis |
   d dis c |
   e4 r8 |
   b4. |
   cis4 cis8 a4 a8 a4 a8 a4 a8 |
-  gis4 e gis' e1. ~ |
+  gis4 \clef bass e \clef treble gis' e1. ~ |
   e8 r e |
   cis4 d8 |
   e4 a8 ~ |
@@ -634,7 +689,7 @@ alto = \relative c' {
   d?4-. r8 |
   d4-. r8 |
   R4. |
-  r4 fis8 ~ |
+  r4 fis8^\ff ~ |
   fis4. ~ |
   fis4^\fermata r8 |
 }
@@ -660,7 +715,7 @@ altoWords = \lyricmode {
   \trumpets \repeat unfold 4 ba
   \lastTrumpet
   ba
-  \repeat unfold 134 { \skip 1 }
+  \repeat unfold 135 { \skip 1 }
   I could wile a -- way the ho -- urs
   Con -- fer -- rin' with the flow -- ers
   now
@@ -669,6 +724,24 @@ altoWords = \lyricmode {
   You know that he is a Won -- der -- ful wiz
   be -- cause the Wi -- zard he was
   hey hey
+  \was
+  \trumpets
+  \trumpets
+  \trumpets \repeat unfold 4 ba
+  \lastTrumpet
+  ba ba ba
+  ba ba ba
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he is a whiz of a wiz,
+  If ev -- er a wiz there was.
+  \repeat unfold 4 nä
+  The Wi -- zard of Oz is one be -- cause be -- cause
+  be -- cause of the won -- der -- ful things he does.
+  won -- der -- ful things that he does
+  We're off to see the Wi -- zard he's the
+  Won -- der -- ful Wiz
+  \repeat unfold 11 nä
 }
 
 tenor = \relative c' {
@@ -716,7 +789,7 @@ tenor = \relative c' {
   c |
   b ~ |
   b |
-  ais |
+  a |
   b ~ |
   b |
   d2 b |
@@ -728,7 +801,7 @@ tenor = \relative c' {
   a |
   b |
   bes |
-  a^\markup \italic "Els Drisig?" |
+  a^\elsD |
   b |
   g |
   bes |
@@ -751,28 +824,28 @@ tenor = \relative c' {
   \times 4/6 { g, g' g, fis' fis, e' } |
   \times 4/6 { ais, e' b d c cis } | 
   b4. \glissando cis'4. \glissando a,4 |
-  d1^\> |
+  d1^\> ( |
   cis\mf |
   d |
   e |
   f^\< |
   g |
   ais |
-  a |
-  r8 d,4.^\f d4 cis |
+  a ) |
+  r8\! d,4.^\f d4 cis |
   d4. d8 ~ d2 |
   r8 cis4. cis4 b |
-  cis4. cis8 ~ cis4 bis |
+  cis4. cis8 ~ ( cis4 bis ) |
   r8 b4. ais4 a |
   b2 b |
   a a |
   ais g |
   r8 fis4. a4 c |
   d4 fis d ais |
-  r8 g4. b4 dis |
+  r8 g4. dis'4 b |
   cis dis f g |
-  r8 a,4. b4 d |
-  ais2 g4. r8 |
+  r8 b4. a8 d,4 r8 |
+  g4 e8 cis ~ cis r fis8. r16 |
   R1*6 |
   R4.*6 |
   R2*10 |
@@ -813,6 +886,18 @@ tenorWords = \lyricmode {
   You know that he is a Won -- der -- ful wiz
   be -- cause the Wi -- zard he was
   hey hey
+  wa wa
+  wa da wa wa wa
+  \repeat unfold 54 \skip 1
+  \trumpets
+  \trumpets
+  \trumpets \repeat unfold 4 ba
+  \lastTrumpet
+  ba ba ba
+  ba ba ba ba
+  \repeat unfold 2 { ba da ba }
+  ba
+  Heg?
 }
 
 bass = \relative c {
@@ -905,7 +990,7 @@ bass = \relative c {
   a b c cis |
   d cis d aes |
   g d' fis, eis |
-  cis' gis^\markup \italic "Mar Drisig?"  a g |
+  cis' gis^\marD a g |
   fis a cis c |
   b cis d e |
   fis g a b |
@@ -918,33 +1003,33 @@ bass = \relative c {
   a cis e eis |
   fis d cis c |
   b d fis f |
-  e f, e d' |
-  cis g e' d |
-  cis g fis ais |
-  b cis d b |
-  e e, e' dis |
-  d b e, d' |
-  cis a b cis |
+  e f, e aes |
+  g d' cis b |
+  ais g fis ais |
+  b d fis f |
+  e g, fis ais |
+  b f e gis |
+  a b cis a |
   d cis d a |
   dis cisis dis a |
   e' dis e eis |
   fis2. r4 |
-  b,8 r4 |
+  b,8^\mp r4 |
   bis8 r4 |
   cis8 r4 |
   fis,8 r4 |
   b8 r4 |
   e,8 r4 |
-  a2 ~ |
+  a2^\< ~ |
   a4 gis |
   fis2 ~ |
   fis |
   b2 ~ |
   b4 cis |
-  d2 ~ |
-  d |
-  aes ~ |
-  aes |
+  d2^\f ~ |
+  d ~ |
+  d4 aes ~ |
+  aes2 |
   g4. ~ |
   g4 r8 |
 
@@ -979,7 +1064,7 @@ bass = \relative c {
   e4-. r8 |
   e,4-. r8 |
   R4. |
-  r4 aes8 ~ |
+  r4 aes8^\ff ~ |
   aes4. ~ |
   aes4^\fermata r8 |
 }
@@ -997,9 +1082,24 @@ bassWords = \lyricmode {
   \repeat unfold 4 { ba da ba }
   ba da ba da ba 
   \repeat unfold 61 "&"
+  \repeat unfold 7 nä
+  be -- cause
+  cause
+  be -- cause
+  be -- cause
+  won -- der -- ful things that he does
+  We're off to see the Wi -- zard he's the
+  Won -- der -- ful Wiz
+  \repeat unfold 11 nä
 }
 
-\markup \fill-line { \italic "een... zwi... een...zwi...dri...dri+een..."}
+\markup \italic \fill-line { \center-column {
+"Sitsit FRIZNGÅRDFÅRS-FRIZNGÅRDFÅRS BegrBerg gav sit tak?"
+"Wyn sit begr bäst by dön, sit begr fakbyd mak sit begr töst?"
+"Og nyt sit Ryn by sit töst makn?"
+"Tak?"
+"een... zwi... een...zwi...dri...dri+een..."
+}}
 
 \score {
   \new ChoirStaff <<
