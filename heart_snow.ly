@@ -109,36 +109,53 @@ marks = {
 }
 
 talea = \relative c' {
-  r8 fis8 cis' b, |
-  fis d' r fis, |
-  fis' b, fis' b |
+  fis8 cis' b, fis' |
+  d' r4 fis,8 |
+  cis' b, fis' b |
   d, e r fis |
-  cis' b, fis d' |
-  r fis cis' b, |
+  cis' b, fis' d' |
+  r fis, cis' b, |
   fis' b a, d |
   e r8 fis cis' |
-  b, fis d' r |
+  b, fis' d' r |
   fis, cis' b, fis' |
   b a, d b |
   e r fis cis' |
   b, fis' d' r |
-  fis cis' b, fis' |
+  fis, cis' b, fis' |
   b a, d b |
   a' e r8 fis |
-  cis' b, fis d' |
+  cis' b, fis' d' |
   r8 fis, cis' e, |
   b fis' b a, |
   d b a' e |
   r8 fis cis' b, |
-  fis d' r fis, |
+  fis' d' r fis, |
   cis' e, b' b, |
   fis' b a, d |
   b a' e r |
-  fis cis' b fis' |
+  fis cis' b, fis' |
   d' r fis, cis' |
   e, b' d, b |
   fis' b a, d |
   b a' e r |
+  fis8 cis' b, fis' |
+  d' r a fis |
+  cis' e, b' d, |
+  b fis' b a, |
+  d b a' e |
+  r fis cis' b, |
+  fis' d' r a |
+  fis cis' e, b' |
+  d, b fis' b |
+  e, a, d b |
+  a' e r fis |
+  cis' b, fis' d' |
+  r
+}
+
+taleaWords = \lyricmode {
+in shoots sen Jeal had rows be a Just on a And hear ti sen should heart per de stay in friends part ter How low co sy should heart Jeal could the der A and ly with thou should could stay should vo gis de a If sy I'm be beat re And I'd could with rows ou low shoots That bal rows bal sweet heart friends ten I If de stay If o If it I tal sy I'd beat and had a and ty mo be on Jeal on gen that be stay on a should young the ou a gar I
 }
 
 mezzoFirst = \relative c' {
@@ -172,6 +189,13 @@ mezzoFirst = \relative c' {
 }
 
 mezzoWordsFirst = \lyricmode {
+When a man's an em -- pty ket -- tle
+He should be on his met -- tle
+And yet I'm torn a -- part
+Just be -- cause I'm pre -- su -- min'
+That I could be a hu -- man
+If I on -- ly had a heart
+
 }
 
 \score {
@@ -179,12 +203,12 @@ mezzoWordsFirst = \lyricmode {
     \new Staff \with { instrumentName = #"Cantus Firmus" %shortInstrumentName = #"E."
 
 } <<
-      \new Voice = "mezzo" \with{\remove "Note_heads_engraver" \consists "Completion_heads_engraver"} { \numericTimeSignature
+      \new Voice = "soprano" \with{\remove "Note_heads_engraver" \consists "Completion_heads_engraver"} { \numericTimeSignature
 	\scorePrefatoryMatter
         << { \marks } { \talea } >>
       }
-      \new Lyrics \lyricsto "mezzo" {
-        \mezzoWordsFirst
+      \new Lyrics \lyricsto "soprano" {
+        \taleaWords
       }
     >>
     \new Staff \with { instrumentName = #"Cantus Firmus" %shortInstrumentName = #"E."
@@ -232,21 +256,6 @@ mezzoWordsFirst = \lyricmode {
       \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
     }
   }
+\midi{}
 }
-%%% MIDI
 
-\score {
-  \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
-} <<
-      \new Voice = "mezzo" { \numericTimeSignature
-	\midiPrefatoryMatter
-        << { \marks } { \mezzoFirst } >>
-      }
-      \new Lyrics \lyricsto "mezzo" {
-        \mezzoWordsFirst
-      }
-    >>
-  >>
-  \midi {}
-}

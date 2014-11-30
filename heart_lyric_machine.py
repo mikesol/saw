@@ -233,7 +233,8 @@ I'd D
 shoot CIS
 friends B
 '''
-#format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
-#format_choice_list([E,D,CIS,B])
-#format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
-format_choice_list([FIS,EIS,E])
+if __name__ == '__main__' :
+  #format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
+  #format_choice_list([E,D,CIS,B])
+  #format_choice_list([B,FIS,E,AIS,B,CIS,D,FIS,E,D,CIS,B])
+  format_choice_list([FIS,EIS,E])

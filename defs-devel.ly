@@ -42,8 +42,8 @@ noStem = { \once \override Stem #'stencil = ##f \once \override Flag #'stencil =
 Red = \override NoteHead #'color = #red
 Blue = \override NoteHead #'color = #blue
 Black = \revert NoteHead #'color
-%red = \once \override NoteHead #'color = #red
-%blue = \once \override NoteHead #'color = #blue
+rred = \once \override NoteHead #'color = #red
+bblue = \once \override NoteHead #'color = #blue
 
 bendInto = \once \override BendAfter #'stencil = #bend-into::print 
 ziggliss = \once \override Glissando #'style = #'zigzag
