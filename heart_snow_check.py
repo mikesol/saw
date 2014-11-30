@@ -9,4 +9,4 @@ def N(x, t) :
   return out
 
 if __name__ == "__main__" :
-  print N(10,False), 42*4 + 1
+  print N(17,False), 87*4 + 3

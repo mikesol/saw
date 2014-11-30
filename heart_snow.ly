@@ -109,27 +109,38 @@ marks = {
 }
 
 talea = \relative c' {
-  fis8 cis' b, fis' |
-  d' r4 fis,8 |
+  r8 fis cis' b, |
+  fis' d' r
+    %!
+    fis, |
   cis' b, fis' b |
-  d, e r fis |
-  cis' b, fis' d' |
-  r fis, cis' b, |
+  d, e r
+    %&
+    fis |
+  cis' b, a' d |
+  r
+    %!
+    fis, cis' b, |
   fis' b a, d |
-  e r8 fis cis' |
+  e r
+    %&
+    fis cis' |
+  e, a d r |
+    %!
+    fis, cis' b, fis' |
+  b a, d b |
+  e r
+    %&
+    fis cis' |
   b, fis' d' r |
   fis, cis' b, fis' |
   b a, d b |
-  e r fis cis' |
-  b, fis' d' r |
-  fis, cis' b, fis' |
-  b a, d b |
-  a' e r8 fis |
+  a' e r fis |
   cis' b, fis' d' |
-  r8 fis, cis' e, |
+  r fis, cis' e, |
   b fis' b a, |
   d b a' e |
-  r8 fis cis' b, |
+  r fis cis' b, |
   fis' d' r fis, |
   cis' e, b' b, |
   fis' b a, d |
@@ -139,7 +150,7 @@ talea = \relative c' {
   e, b' d, b |
   fis' b a, d |
   b a' e r |
-  fis8 cis' b, fis' |
+  fis cis' b, fis' |
   d' r a fis |
   cis' e, b' d, |
   b fis' b a, |
@@ -151,7 +162,52 @@ talea = \relative c' {
   e, a, d b |
   a' e r fis |
   cis' b, fis' d' |
-  r
+  r a fis cis' |
+  e, b' d, a' |
+  b, fis' b e, |
+  a, d b a' |
+  e r fis cis' |
+  b, fis' d' r |
+  e, a fis cis' |
+  e, b' d, a' |
+  b, fis' b e, |
+  a, d b a' |
+  e r fis cis' |
+  b, fis' d' r |
+  e, a fis cis' |
+  a e b' d, |
+  a' b, fis' b |
+  e, a, d b |
+  a' e r fis |
+  cis' b, fis' d' |
+  r  e, a fis |
+  cis' a e b' |
+  fis d a' b, |
+  fis' b e, a, |
+  d b a' e |
+  r fis cis' b, |
+  fis' d' r e, |
+  a fis cis' a |
+  e b' fis d  |
+  a' b, fis' b  |
+  e, a a, d |
+  b a' e r |
+  fis  cis' b, fis' |
+  d' r e, a |
+  fis cis' a e |
+  b' fis d a' |
+  b, fis' b e, |
+  a fis a, d |
+  b a' e r |
+  fis  cis' b, fis' |
+  d' r e, a |
+  fis cis' a e |
+  b' fis d a' |
+  e b fis' b |
+  e, a fis a, |
+  d b a' e |
+  r fis cis' b, |
+  fis' d'  r 
 }
 
 taleaWords = \lyricmode {
