@@ -152,7 +152,7 @@ arco = \markup \null
 	\scorePrefatoryMatter
         %%%%%%% UGHHHH
         \clef "treble_8"
-        \keepWithTag #'lyrix { \keepWithTag #'tenorTag { \removeWithTag #'viola \tenorFirst \tenorTenorKludge } }
+        \keepWithTag #'lyrix { \keepWithTag #'tenorTag { \removeWithTag #'viola \tenorFirst } }
       }
       \new Lyrics \lyricsto "tenor" {
         \tenorWordsFirst
