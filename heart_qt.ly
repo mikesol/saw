@@ -103,7 +103,7 @@ cS = #(make-span-event 'SlurEvent STOP)
 pizz = \markup \italic "pizz."
 arco = \markup \italic "arco"
 
-\include "heart.ily"
+\include "heart_qt.ily"
 
 \score {
   <<

@@ -17,7 +17,7 @@ shoot = \markup \italic "SYT"
 
 \header {
   title = "If I Only Had the Nerve"
-  subtitle = "for the Real Group"
+  subtitle = "for spirit fingers"
   %title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
