@@ -17,7 +17,7 @@ shoot = \markup \italic "SYT"
 
 \header {
   title = "If I Only Had the Nerve"
-  subtitle = "for spirit fingers"
+  subtitle = "for Satchmo"
   %title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
@@ -82,12 +82,12 @@ midiPrefatoryMatter = {
 }
 
 theme = \relative c {
-  cis8 |
+  cis8-\tag #'first \mf |
   d4 bes8 g4 f8 d'4 d8 ~ d4 bes8 ~ |
   bes2. ~ bes4. r4 fis'8 |
   g4 ees8 c4 aes8 g'4 g8 ~ g4 ees8 ~ |
   ees2. r4. ees4 e8 |
-  f4 \tag #'second { \rred } a8 f4 e8 ees4 g8 ees4 cis8 |
+  f4-\tag #'second \< \tag #'second { \rred } a8 f4 e8 ees4 g8 ees4 cis8 |
   d4 f8 d4 des8 c4 ees8 c4 cis8 |
   d4 bes8 g4 f8 d'4 d8 ~ d4 bes8 ~ |
   \tag #'first { bes4. }
@@ -95,7 +95,7 @@ theme = \relative c {
 }
 
 marks = {
-  \tempo "Lindy höp?" 4.=96
+  \tempo "Dixie" 4.=96
 }
 
 soprano = {
@@ -104,16 +104,18 @@ soprano = {
   \transpose c c' \removeWithTag #'first \theme
   \relative c' {
     r8 bes c d f g |
-    bes4 bes8 ~ bes4 bes8 g4 bes8 ~ bes4 r8 |
-    bes4 c16 bes g4 bes8 ~ bes4. ~ bes4 gis8 |
-    a4 c8 a4 f8 g4. a4 f8 ~ |
+    bes4\f bes8 ~ bes4 bes8 g4 bes8 ~ bes4 r8 |
+    bes4 ( c16 bes ) g4 bes8 ~ bes4. ~ bes4 gis8 |
+    a4 c8 a4 \rred f8 g4. a4 f8 ~ |
     f4 e8 ees4 d8 ~ d d e fis a b |
-    c4 c8 ~ c4 c8 a4 c8 ~ c4 r8 |
-    c4 d16 c a4 c8 ~ c4. ~ c4 ais8 |
-    b4 d8 b4 bes8 a4 c8 a4 aes8 |
+    c4 c8 ~ c4 c8 \rred a4 c8 ~ c4 r8 |
+    c4 ( d16 c ) a4 c8 ~ c4. ~ c4 ais8 |
+    b4\> d8 b4 bes8 a4 c8 a4 aes8 |
     g4 b8 g4 ges8 f4 a8 f4 e8 |
-    ees4 g8 ees4 c8 a4 ges'8 ~ ges4 f8 ~ |
-    f2.
+    ees4\mf g8 ees4 c8 a4 ges'8 ~ ges4 r8 |
+    r4 ees8 d4 \rred bes'8 \rred bes4 r8 r4. |
+    r4 a8 r4 g8 r2. |
+    r2. r4. r4 bes8 |
   }
 }
 
@@ -127,25 +129,55 @@ sopranoWords = \lyricmode {
   da da
   dan a da da sis -- sy da da
   da With da da da da out the
-  vim and verve da just da be
-  
+  vim and verve da But da I
+  da da da da da
+  could da da da da
+  change da da da
+  da da da my da ha -- bits
+  da Ne -- ver da da da da da
+  more be da scared of
+  da da da da
+  ra da da da da da da da
+  da da da da da da da da
+  da bits da da da da  
+  I on -- ly had
+  da a
+}
+
+globalGC = {
+  \repeat unfold 3 { s2\< s4\! }
+  \tag #'hiGC { s2\< s4\! s1.\< }
+  \tag #'loGC { s2.\< s1. }
+  s1.
+  s1.\f
 }
 
 mezzo = \relative c' {
   r8 |
   R1.*6 |
-  r4. \Red d4 ees8 f4 d8 ~ \Black d4. |
+  r4. \Red d4\mf ees8 f4 d8 ~ \Black d4. |
   r4. \Red bes4 c8 d4 bes8 \Black r4. |
-  bes'4 bes8 \Red bes4 c8 \Black bes4 bes8 ~ bes4 bes8 ~ |
+  bes'4\mp bes8 \Red bes4 c8 \Black bes4 bes8 ~ bes4 bes8 ~ |
   bes8 r4 r4. r2. |
   bes4 \rred bes8 bes4 bes8 bes4 bes8 ~ bes4 bes8 ~ |
   bes8 r4 r4. r2. |
-  bes4 bes4 r \rred bes4 bes4 r |
-  bes4 \rred bes4 r bes4 bes4 r |
-  bes4 bes8 bes4 bes8 bes4 bes8 ~ bes4 a8 ~ |
-  a4. ~ a4 aes8 ~ aes2. |
-  g4 g8 ~ g4. ~ g4. ~ g4 r8 |
-  g4. ~ g4 g8 ~ g4. ~ g4 e8 |
+  << { bes4 bes4 r \rred bes4 bes4 r |
+       bes4 \rred bes4 r bes4 bes4 r |
+       bes4 bes8 bes4 bes8 \rred bes4 bes8 ~ bes4 \rred a8 ~ |
+       a4. ~ a4 aes8 ~ aes2. |
+       \rred g4 g8 ~ g4. ~ g4. ~ g4 r8 |
+     } \removeWithTag #'loGC \globalGC >>
+  \rred g4. ~ g4 g8 ~ g4. ~ g4 e8 |
+  f4 a8 f4 d8 f4 e8 \Red ees4 d8 ~ |
+  \Black d4 des8 \Red c4 bes8 ~ \Black bes bes c d f g |
+  \Red a4 a8 ~ \Black a4. \rred a4 a8 ~ a4 r8 |
+  a4. ~ a4 a8 ~ a4. ~ a4 fis8 |
+  g4 r8 r4. r2. |
+  f4\mf r8 r4. r2. |
+  c4 \rred ees8 c4 g8 a4. ~ a4 r8 |
+  r4. r4 cis'8 d4 r8 r4 c8 |
+  \rred bes4 r8 \rred d,4 \rred ees8 r2. |
+  r4 c'8 bes4 r8 r2. |
 }
 
 mezzoWords = \lyricmode {
@@ -157,23 +189,45 @@ mezzoWords = \lyricmode {
   sis -- sy
   da With
   da da
-  vim and verve da just da be
+  vim and verve da But da I da
+  could da
+  change da da 
+  da da da my da da ha -- bits
+  da Ne -- ver da da da da da
+  more be scared of
+  da da da
+  ra
+  da
+  da bits da da da
+  ly had da
+  nerve I'm a
 }
 
 
 alto = \relative c'' {
   r8 |
   R1.*8 |
-  g4 g8 g4 g8 ges4 ges8 ~ ges4 f8 ~ |
-  f8 r4 r4. \rred d4. r |
+  g4\mp g8 g4 g8 ges4 ges8 ~ ges4 f8 ~ |
+  f8 r4 r4. \rred d4.-- r |
   g4 g8 \rred g4 g8 fis4 fis8 ~ fis4 g8 ~ |
   g8 r4 r4. r2. |
-  g4 g4 r g4 \rred g4 r |
-  g4 g4 r g4 g4 r |
-  g4 g8 g4 g8 ges4 ges8 ~ ges4 f8 ~ |
-  f1. |
-  ees4 ees8 ~ ees4. ~ ees4. ~ ees4 r8 |
+  << { g4 g4 r g4 \rred g4 r |
+       g4 g4 r g4 g4 r |
+       g4 g8 g4 g8 ges4 ges8 ~ ges4 f8 ~ |
+       f1. |
+       ees4 ees8 ~ ees4. ~ ees4. ~ ees4 r8 |
+     } \removeWithTag #'loGC \globalGC >>
   e4. ~ e4 e8 ~ e4. ~ e4 r8 |
+  ees4. ~ ees4 r8 c4. ~ c4 r8 |
+  bes2. ~ bes4. g |
+  g'4 g8 ~ g4. g4 \rred g8 ~ g4 r8 |
+  fis4. ~ fis4 fis8 ~ fis4. ~ fis4 r8 |
+  \rred f4 r8 r4. r2. |
+  d4\mf r8 r4. r2. |
+  bes2. f4. ~ f4 r8 |
+  r4 \rred c'8 \rred bes4 r8 r4 \rred bes8 a4 r8 |
+  r4. bes4 r8 cis4 d8 r4 dis8 |
+  r2. r4 e8 r4. |
 }
 
 altoWords = \lyricmode {
@@ -184,7 +238,19 @@ altoWords = \lyricmode {
   sis -- sy
   da With
   da da
-  vim and verve da just da be
+  vim and verve da But da I
+  could da
+  da da
+  da da
+  da da
+  more be scared of
+  da da
+  ra
+  da
+  da da
+  I on
+  the da
+  I'm da da
 }
 
 tenor = {
@@ -193,16 +259,27 @@ tenor = {
   r4. r2.
   \relative c' {
     \clef "treble_8"
-    ees4 ees8 ees4 ees8 ees4 ees8 ~ ees4 d8 ~ |
+    ees4\mp ees8 ees4 ees8 ees4 ees8 ~ ees4 d8 ~ |
     d8 r4 r4. r2. |
     ees4 ees8 ees4 ees8 d4 d8 ~ d4 d8 ~ |
     d8 r4 r4. r2. |
-    bes4 bes r c c r |
-    d d r ees ees8 f4 f8 |
-    f4 f8 f4 f8 ees4 ees8 ~ ees4 d8 ~ |
-    d1. |
-    c4 c8 ~ c4. ~ c4. ~ c4 r8 |
+    << { bes4 bes r c c r |
+         d d r ees ees8 \Red f4 f8 |
+         f4 f8 f4 \Black f8 ees4 ees8 ~ ees4 d8 ~ |
+         d1. |
+         c4 c8 ~ c4. ~ c4. ~ c4 r8 |
+       } \removeWithTag #'hiGC \globalGC >>
     c4. ~ c4 c8 ~ c4. ~ c4 r8 |
+    c4. ~ c4 gis8 a4 c8 a4 f8 |
+    g4 a8 ~ a4 f8 ~ f4 e8 ees4 d8 |
+    ees'4 ees8 ~ ees4. ees4 ees8 ~ ees4 r8 |
+    d4. ~ d4 d8 ~ d4. ~ d4 r8 |
+    d4 r8 r4. r2. |
+    b4\mf r8 r4. r2. |
+    g2. ees2. |
+    \rred d4 r8 r4. r4 gis8 a4 r8 |
+    r4. fis4 r8 r2. |
+    r4. r4 fis8 g4 r8 r4. |
   }
 }
 
@@ -215,14 +292,26 @@ tenorWords = \lyricmode {
   dan a
   sis -- sy
   da With da da out the
-  vim and verve da just da be
+  vim and verve da But da I
+  could da
+  da da
+  da my da da ha -- bits
+  da da ver da da da
+  more be scared of
+  da da
+  ra
+  da
+  da da
+  If
+  the da
+  I'm
 }
 
 bass = \relative c {
   \clef "bass"
   r8 |
   R1.*7 |
-  r4. \Red bes4 c8 d4 bes8 \Black r4. |
+  r4. \Red bes4\mf c8 d4 bes8 \Black r4. |
   c4. r f, r |
   bes4 bes8 a4. g ges |
   f r bes r |
@@ -230,10 +319,19 @@ bass = \relative c {
   d4. des c b |
   bes a aes g |
   c r f, r |
-  bes1. |
-  ees4 ees8 ~ ees4. ~ ees4. ~ ees4 r8 |
-  e4. ~ e4 e,8 ~ e4 e'8 ~ e4 e8 |
-  
+  bes1.\< |
+  ees4\f ees8 ~ ees4. ~ ees4. ~ ees4 r8 |
+  e4. ~ e4 e,8 ~ e4 e'8 ~ e4 ges8 |
+  f4. f, g a |
+  bes c d bes |
+  a2. ~ a4 ees'8 ~ ees4. |
+  d2. ~ d4 a8 ~ a4 aes8 |
+  g4 r8 r4. r2. |
+  g'4\mf r8 r4. r2. |
+  c,2. f,4. c'4 cis8 |
+  \rred d4 r8 r4. r2. |
+  g,4 r8 r4. r4. \rred f4 r8 |
+  e4 r8 r4. r4. c'4 r8 |
 }
 
 bassWords = \lyricmode {
@@ -247,6 +345,16 @@ bassWords = \lyricmode {
   da da da da
   da da
   da
+  could da
+  da da da da
+  da da da ha
+  da Ne da da
+  more of
+  da da da
+  ra
+  da da da da da
+  If
+  nerve fraid
 }
 
 \score {
@@ -313,6 +421,7 @@ bassWords = \lyricmode {
       \override Glissando #'breakable = ##t
       \override TupletNumber #'breakable = ##t
       \override TupletBracket #'breakable = ##t
+      \override DynamicLineSpanner.direction = #UP
       \remove "Forbid_line_break_engraver"
     }
     \context {

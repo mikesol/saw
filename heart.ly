@@ -172,6 +172,7 @@ arco = \markup \null
   \layout {
     \context {
       \Voice
+      \override Script #'direction = #UP
       \override TextScript #'layer = #6
       \override NoteHead #'layer = #7
       \override Glissando #'breakable = ##t
