@@ -110,7 +110,7 @@ Oz of zard Wi ful der Won The zard Wi the see to off We're does he that things f
 >>
 
 
-\markup "Normal 4 start 2"
+\markup "Normal 4 start 2 [WINNER xmass]"
 
 <<
 \new Staff \new Voice = "melody" \with { \consists "Completion_heads_engraver" \remove "Note_heads_engraver" }
