@@ -96,6 +96,12 @@ theme = \relative c {
 
 marks = {
   \tempo "Dixie" 4.=96
+  s8 |
+  \repeat unfold 25 { s1. }
+  \time 4/4
+  s1 | s1 |
+  \time 12/8
+  s1. |
 }
 
 soprano = {
@@ -113,16 +119,10 @@ soprano = {
     b4\> d8 b4 bes8 a4 c8 a4 aes8 |
     g4 b8 g4 ges8 f4 a8 f4 e8 |
     ees4\mf g8 ees4 c8 a4 ges'8 ~ ges4 r8 |
-    r4 ees8 d4 \rred bes'8 \rred bes4 r8 r4. |
-    r4. r4 a8 r2. |
-    r4. r4 des,8 c4 r8  r4 bes'8 |
-    r4 \rred bes8 a4 r8 r4 des8 r4 c8 | 
-    r4. r4 a8 r4 \rred g8 r4 fis'8 |
-    r4. g,4 r8 \rred f'4 r8 r4 g,8 |
-    r4 b,8 r4. \rred bes'4 r8 a4 r8 |
-    \rred g'4 r8 r4 gis,8 a4 \rred bes8 c4 cis8 |
-    d4 bes8 g4 f8 d'4 d8 ~ d4 bes8 ~ |
-    bes4
+    r2.. c8 |
+    d2\trill r2 |
+    b8 b b a b a b a b b a b b a cis
+    d d d d d d d d d d d d d a d a d a d 
   }
 }
 
@@ -147,14 +147,6 @@ sopranoWords = \lyricmode {
   ra da da da da da da da
   da da da da da da da da
   da bits da da da da  
-  I on -- ly had
-  a
-  da no de
-  ing da a dy
-  da on a
-  da don't de
-  da But could
-  show ess be a li -- on
 }
 
 globalGC = {
@@ -188,15 +180,11 @@ mezzo = \relative c' {
   g4 r8 r4. r2. |
   f4\mf r8 r4. r2. |
   c4 \rred ees8 c4 g8 a4. ~ a4 r8 |
-  r4. r4 cis'8 d4 r8 r4 c8 |
-  \rred bes4 ees,8 \rred d4 \rred ees8 r2. |
-  r4 c'8 bes4 r8 r4 e,8 r4. |
-  r4 fis8 g4 r8 r4 \rred bes8 r4 ges8 |
-  g4 r8 r4 ees8 r4 d8 r4 cis'8 |
-  r4 g,8 r4. c'4 r8 r4 d,8 |
-  ees4 e8 f4 r8 g4 ees8 \rred g4 r8 |
-  a4 \rred f8 g4 \rred d8 fis4 g8 \rred a4 fis8 |
-  \rred a4
+  r2 r8 fis'8 a fis ~ |
+  fis2 r |
+  g8 g g fis g fis g fis g g fis g |
+  g fis g fis fis fis e fis e fis e fis e fis e fis
+  fis fis fis fis fis fis
 }
 
 mezzoWords = \lyricmode {
@@ -218,14 +206,6 @@ mezzoWords = \lyricmode {
   ra
   da
   da bits da da da
-  ly had da
-  nerve da I'm a
-  there's da da
-  ing da a dy
-  da da on a
-  I don't de
-  da da serve But I could
-  show my prow -- ess be a li -- on
 }
 
 
@@ -250,15 +230,11 @@ alto = \relative c'' {
   \rred f4 r8 r4. r2. |
   d4\mf r8 r4. r2. |
   bes2. f4. ~ f4 r8 |
-  r4 \rred c'8 \rred bes4 r8 r4 \rred bes8 a4 r8 |
-  r4. bes4 r8 cis4 d8 r4 dis8 |
-  r4 \rred d8 e4 a,8 \rred bes4 r8 r4 \rred c8 |
-  \rred d4 r8 des4 \rred c8 r4 g'8 r4 ees8 |
-  f4 ces8 \rred bes4 r8 r4 aes8 r4 g'8 |
-  \rred f4 r8 des4 r8 bes'4 r4 r8 b,8 |
-  r4 c8 r4. r4 c8 cis4 r8 |
-  ees4 d8 \rred ees4 b8 \rred c4 cis8 d4 ees8 |
-  fis4
+  r4. c'8 d2 ~ |
+  d2 r |
+  d8 d d d d d d d d d d d |
+  d d a a a a a a a a a a |
+  a a a a d d d d d d
 }
 
 altoWords = \lyricmode {
@@ -279,15 +255,6 @@ altoWords = \lyricmode {
   ra
   da
   da da
-  I on
-  the da
-  I'm da da da
-  there's da da no de -- ny
-  da I'm a dy
-  da da li on a
-  fate da don't de
-  da da could
-  show my prow -- ess be a li -- on
 }
 
 tenor = {
@@ -313,16 +280,12 @@ tenor = {
     d4. ~ d4 d8 ~ d4. ~ d4 r8 |
     d4 r8 r4. r2. |
     b4\mf r8 r4. r2. |
-    g2. ees2. |
-    \rred d4 r8 r4. r4 gis8 a4 r8 |
-    r4. fis4 r8 r2. |
-    r4. r4 fis8 g4 r8 r4. |
-    a4 r8 r4. r4 e'8 \rred g,4 \rred a8 |
-    d4 a8 g4 r8 r4. b4 \rred bes8 |
-    ees4 r8 r4. ges4 d8 des4 r8 |
-    a4 aes8 r4 a8 r4 \rred a8 r4 aes8 |
-    c4 r8 cis4 fis,8 g4 ces8 gis4 \rred a8 |
-    bes4
+    g1. |
+    r8 fis a2. ~ |
+    a2 r2 |
+    g8 g g g g g g g g g g g |
+    g g a d, d d a d a d a d a d a d
+
   }
 }
 
@@ -344,16 +307,7 @@ tenorWords = \lyricmode {
   da da
   ra
   da
-  da da
-  If
-  the da
-  I'm
-  da no
-  ny a dan -- dy
-  da da li da a
-  fate don't da da
-  da da da I da
-  show my prow -- ess be a li -- on
+  da
 }
 
 bass = \relative c {
@@ -377,16 +331,9 @@ bass = \relative c {
   d2. ~ d4 a8 ~ a4 aes8 |
   g4 r8 r4. r2. |
   g'4\mf r8 r4. r2. |
-  c,2. f,4. c'4 cis8 |
-  \rred d4 r8 r4. r2. |
-  g,4 r8 r4. r4. \rred f4 r8 |
-  e4 r8 r4. r4. c'4 r8 |
-  f4 r8 r4. \rred d4 r8 a4 r8 |
-  r4 ges'8 f4 r8 fis,4 r8 cis'4 r8 |
-  r4 \rred f8 r4 a,8 r4. r4 \rred f'8 |
-  r4. r4 fis8 r4. r4 ees8 |
-  d4 aes'8 a,4 ais8 dis4 e8 fis,4 d'8 |
-  g,4 
+  c,2. f,4. ees'4. |
+  d1 ~ |
+  d2 d8 r4. |
 }
 
 bassWords = \lyricmode {
@@ -407,15 +354,9 @@ bassWords = \lyricmode {
   more of
   da da da
   ra
-  da da da da da
+  da
+  da da da
   If
-  nerve fraid
-  da da
-  ny just dan
-  da li da da
-  I da de
-  da da
-  show my prow -- ess be a li -- on
 }
 
 \score {
