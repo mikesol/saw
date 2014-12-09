@@ -64,7 +64,7 @@ prefatoryMatter = {
 
 soprano = \relative c' { \autoBeamOff
   \prefatoryMatter
-  d4 ( |
+  d4\mf ( |
   b'4 a b c |
   d g e c |
   b d a d |
@@ -74,8 +74,8 @@ soprano = \relative c' { \autoBeamOff
   a b |
   a2. e4 |
   r2 d' ~ |
-  d a ~ |
-  a d ~ |
+  d a |
+  b d ~ |
   d a ~ |
   a1 ~ |
   a2 cis ~ |
@@ -85,7 +85,7 @@ soprano = \relative c' { \autoBeamOff
   cis |
   a2 b |
   a1 |
-  b |
+  g |
   a2 fis ~ |
   fis4 b2 a4 |
   g2 b |
@@ -117,13 +117,13 @@ sopranoWords = \lyricmode {
   We're off see
   the Wi -- zard
   Won
-  Wi -- zard
+  Wi -- zard of
   Wi -- zard
 }
 
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
-  d4 ( |
+  d4\mf ( |
   b'4 a b a |
   b e c a |
   g2 fis |
@@ -133,15 +133,15 @@ mezzo = \relative c' { \autoBeamOff
   c4 d g2 ~ |
   g d4 e |
   \Black fis e d e |
-  d2 e |
-  fis1 |
-  e2 \Red g |
+  e2 \Blue fis4 g |
+  a g fis e |
+  \Black e2 \Red g |
   g4 fis fis fis |
   e2 e4 a |
   a a a2 |
-  \Black a1 |
+  \Black a2 \Blue g4 a |
   gis1 ~ |
-  gis |
+  \Black gis |
   \Red fis4 g2 d4 |
   \Black g2 fis |
   g1 |
@@ -179,7 +179,7 @@ mezzoWords = \lyricmode {
 
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
-  d4 ( |
+  d4\mf ( |
   g1 ~ |
   g1 ~ |
   g  |
@@ -190,11 +190,11 @@ alto = \relative c' { \autoBeamOff
   e2 b4 c |
   \Red d c b c |
   \Black b4 b2. |
-  d2 b ~ |
-  b e |
-  e4 d d d |
-  d2. d4 |
-  fis2 e |
+  d2 \Blue b4 c |
+  d c b a |
+  e'4 d cis b |
+  d2 fis4 g ~ |
+  g4 g fis4 e |
   \Red fis4 d2. ~ |
   d4 r d e |
   e e e e |
@@ -205,8 +205,8 @@ alto = \relative c' { \autoBeamOff
   \Black b1 |
   d |
   e4 d ( c ) b |
-  \Red e2 e4 ( \Black fis4 ) |
-  g4 ( fis e d |
+  \Red e2 e4 \Black fis4 ( |
+  g4 fis e d |
   d e f2 |
   e2 ) \Red g4 a |
   \Black fis4 fis fis fis |
@@ -234,7 +234,7 @@ altoWords = \lyricmode {
   Wi -- zard
   The Won -- der -- ful Wiz -- ard
   of Oz
-  We hear
+  We %{hear
   is a whiz of a wiz,
   ev -- er wiz there was.
   If ev -- er, oh ev -- er a wiz was,
@@ -242,49 +242,51 @@ altoWords = \lyricmode {
   cause
   be -- cause be -- cause be -- cause
   be -- cause of the won -- der -- ful things does.
-  the thigns he does.
+  the things he does.
   won -- der -- ful
   We're off to see the
   Wi -- zard the
   der -- ful wi -- zard of
-  Ah
+  Ah %}
 }
 
 tenor = \relative c' {
   \autoBeamOff
   \clef "treble_8"
-  d4 |
+  \key g \major
+  d4\mf ( |
   fis e fis e |
-  fis e fis e |
+  fis4 d fis e4 |
   fis2 e |
-  d4 c b a |
+  d4 c b a ) |
   b2 a |
-  g1 ~ |
-  g |
+  g2 g |
+  g2 g |
   c2 g4 fis |
-  a2. b4 |
+  a2 a4 b4 |
   \Red a4 g2.~ |
   g4 r g g ~ |
-  g g \Black ais2 |
-  b1 |
-  g |
-  d'2 cis ~ |
-  cis b |
-  d b ~ |
+  g g \Black \slurDown fis ( cis' ) |
+  \slurNeutral
+  b2 e4 d |
+  g,4 fis d'2 ~ |
+  d2 cis ~ |
+  cis2. b4 |
+  d2 b ~ |
   b bes |
-  b1 |
+  b2 b |
   \rred b2 a |
   \Red c4 b a2 |
   \Black g1 |
   \Red g2 g4 g ~ |
   g g \Black g2 |
   a1 |
-  c2. e4 |
+  c2 c4 e4 ( |
   d1 ~ |
-  d |
+  d ) |
   g,2 e' ~ |
-  e1 |
-  d |
+  e2 e4 e |
+  d1 |
   b |
   c |
   a |
@@ -302,16 +304,36 @@ tenor = \relative c' {
 }
 
 tenorWords = \lyricmode {
+  Ah
+  We're off to see the
+  Wi -- zard The Won -- der
+  Wi -- zard of Oz
+  We hear he is
+  %{ a of a wiz,
+  ver wiz there was
+  If oh
+  a wiz
+  was,
+  The
+  zard of Oz
+  is
+  cause be -- cause
+  be -- cause
+  be -- cause
+  be -- cause
+  be -- cause
+  won -- der -- ful
+  %}
 }
 
 bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
   r4 |
-  r2 d4 c |
+  r2 d4\mf ( c |
   b2 c |
   d d, |
-  g1 |
+  g1 ) |
   g,2 fis' |
   e e, |
   a1 |
@@ -324,9 +346,9 @@ bass = \relative c' { \autoBeamOff
   bes |
   a2 ais |
   b1 |
-  e |
-  e, |
-  a ~ |
+  r4 \Blue e fis gis |
+  fis e d b |
+  e4 \Black a,2. ~ |
   a2 d |
   g,1 |
   c |
@@ -356,6 +378,13 @@ bass = \relative c' { \autoBeamOff
 }
 
 bassWords = \lyricmode {
+  Ah
+  We're off
+  to see
+  the
+  zard The
+  Wi -- zard
+  Wi -- zard
 }
 
 %%% SCORE
@@ -429,6 +458,8 @@ bassWords = \lyricmode {
       \override Glissando #'breakable = ##t
       \override TupletNumber #'breakable = ##t
       \override TupletBracket #'breakable = ##t
+      \override DynamicLineSpanner #'direction = #UP
+      %\override Slur #'direction = #UP
       \remove "Forbid_line_break_engraver"
     }
     \context {
