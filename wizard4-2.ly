@@ -44,7 +44,7 @@ agogic = #(make-articulation "downbow")
 
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Ahti Sonninen }
+  subtitle = \markup { for Hazebrouck } 
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -61,173 +61,151 @@ marks = {
 }
 
 prefatoryMatter = {
-  \key g \major
+  \key d \major
   #(set-accidental-style 'modern-cautionary)
 }
 
 soprano = \relative c' { \autoBeamOff
   \prefatoryMatter
-  d4\mf ( |
-  b'4 a b c |
-  d g e c |
-  b d a d |
-  b g2. ) |
-  R1 |
-  r2 g |
-  a4 b2 a4 ~ |
-  a2 g4 fis |
-  r2 d' ~ |
-  d a |
-  b d ~ |
-  d2 e2 ||
-  cis4 b a2 ~ |
-  a2 cis ~ |
-  cis2 \Blue e2 |
-  fis4 e d cis |
-  \Black b1 |
-  cis |
-  a2 b |
-  a1 |
-  g ~ |
-  g2 fis ~ |
-  fis4 b2 a4 |
-  g2 b4 a |
-  c1 |
-  a2. c4 |
-  b a g fis |
-  f g a b |
-  d1 
-  c
-  b ~ |
-  b2 e |
-  d4 c b a |
-  g fis2 a4 |
-  b1 ~ |
-  b |
-  d2 c ~ |
-  c \Red a4 b-\agogic |
-  b b a-\agogic b |
-  a g2.-\agogic ~ |
-  g2-\agogic \Black b4 c |
-  d g e c |
-  b d a d |
-  b g2. ~ |
-  g1 |
+  a4 |
+  fis' e fis g |
+  a d b g |
+  fis a e a |
+  fis d2. |
+  r2 a'4 d ~ |
+  d a fis2 |
+  g4 a d2 ~ |
+  d2 a4 b |
+  a g fis g |
+  e d2. ~ |
+  d4 r4 d d ~ |
+  d d d'2 |
+  d4 cis cis cis |
+  b2 b4 e |
+  e e e2 |
+  cis4 a2. ~ |
+  a4 r a b |
+  b b b b |
+  cis d2 a4 |
+  fis2 a4 g |
+  g fis e2 |
+  g4 fis2 e4 |
+  d2 d4 d ~ |
+  d d d'2 |
+  d4 cis2 cis4 |
+  b2 b4 e ~ |
+  e1 ~ |
+  e2. r4 |
+  r2 d4 e |
+  e e e e |
+  e e2 cis4 |
+  a2. g'4 |
+  fis e d cis |
+  b a2. |
+  a2. d4 ~ |
+  d a fis2 |
+  g4 a d2 ~ |
+  d4 r e fis |
+  fis fis e fis |
+  e d2. ~ |
+  d2 fis,4 g |
+  a d b g |
+  fis a e a |
+  fis d2. ~ |
+  d1 |
 }
 
 sopranoWords = \lyricmode {
-  %Ah
-  %We're off see
-  %the Wi -- zard
-  %Won
-  %Wi -- zard of
-  %Wi -- zard
 }
 
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
-  d4\mf ( |
-  b'4 a b a ~ |
-  a b c a ~ |
-  a2 g4 fis4 |
-  g1 ~ |
-  g2 ) \Red d4 g-\agogic ~ |
-  g d b2-\agogic |
-  c4 d-\agogic g2 ~ |
-  g-\agogic d4 e\agogic |
-  \Black fis e d e-\agogic ~ |
-  e2 \Blue fis4 g |
-  a g fis e |
-  \Black e2 \Red g-\agogic |
-  g4 fis-\agogic fis fis |
-  e2-\agogic e4 a-\agogic |
-  a a a2-\agogic |
-  \Black a2 \Blue gis4 a |
-  gis1 ~ |
-  \Black gis |
-  \Red fis4 g2-\agogic d4 |
-  \Black g2 fis |
-  g1 |
-  e4 d2 c4 |
-  e2 dis |
-  fis4 e \Red g2-\agogic |
-  g4 fis2-\agogic fis4 |
-  \Black g4 fis2 \Red a4-\agogic ~ |
-  a2 ~ a2-\agogic ~ |
-  a4 ~ a2-\agogic r4 |
-  \Black b1 |
-  \Red a4 a a-\agogic a |
-  a a2-\agogic fis4 |
-  d2.-\agogic c'4-\agogic |
-  b a g-\agogic fis |
-  e d2.-\agogic |
-  d2.-\agogic g4-\agogic ~ |
-  g d4 b2-\agogic |
-  c4 d-\agogic g2 ~
-  g2-\agogic \Black g2 ~ |
-  g4 g fis g |
-  e2. d4 |
-  b'4 a b a ~ |
-  a b c a ~ |
-  a2 g4 fis |
-  g1 ~ |
-  g1 |
+  a4 |
+  fis' e fis e |
+  fis2 e ~ |
+  e cis |
+  d1 |
+  r2 fis4 b ~ |
+  b fis d2 |
+  e4 e a2 ~ |
+  a2 fis4 a |
+  e e e e |
+  cis bes2. |
+  r2 b4 b ~ |
+  b b ais'2 |
+  a4 a e e |
+  d2 g4 ais |
+  b b a2 |
+  a4 fis2. ~ |
+  fis4 r4 fis gis |
+  g fis gis g |
+  g a2 fis4 |
+  d2 fis4 e |
+  e d b2 |
+  e4 e2 cis4 |
+  cis2 cis4 cis4 ~ |
+  cis4 b4 ais'2 |
+  gis4 gis2 gis4 |
+  g2 g4 ais ~ |
+  ais1 |
+  b2. r4 |
+  r2 a4 b |
+  a b a aes |
+  bes b2 bes4 |
+  fis2. bes4 |
+  b bes a gis |
+  g fis2. |
+  e ais4 ~ |
+  ais fis d2 |
+  e4 fis a2 ~ |
+  a bes4
+  
 }
 
 mezzoWords = \lyricmode {
-  %Ah
-  %We're off to see the Wi -- zard
-  %The Won -- der ful Wi -- zard of Oz
 }
 
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
-  d4\mf ( |
-  g1 |
-  fis4 g4 a g ~ |
-  g2 c,  |
-  fis4 e d c ) |
-  d2 b ~ |
-  b1 |
-  a2 fis'4 e ~ |
-  e2. c4 |
-  \Red d c b-\agogic c |
-  \Black b4 b2. |
-  d2 \Blue b4 cis |
-  d cis b ais ~ |
-  ais b e d |
-  cis d fis4 g ~ |
-  g4 g fis4 e |
-  \Red fis4 d2.-\agogic ~ |
-  d4 r d e-\agogic |
-  e e e-\agogic e |
-  \Black d2 cis4 b |
-  fis' e \Red d4 c-\agogic |
-  \Black d2. e4 |
-  \Red c4 b2-\agogic a4 |
-  \Black b1 |
-  d |
-  e4 d ( c ) b |
-  \Red e2-\agogic e4 \Black fis4 ( |
-  g4 fis e d |
-  d e f2 |
-  e2 ) \Red g4 a-\agogic |
-  \Black g4 fis2. |
-  g2 e |
-  d4 e fis g |
-  e1 ( |
-  d4 ) d c a |
-  d ( e fis g ) |
-  f g a b ~ |
-  b2 a4 ( g ) |
-  fis2 e |
-  d4 d c d ~ |
-  d2 d |
-  fis4 ( g2. |
-  fis4 g a g ~ | 
-  g2 c, |
-  fis4 e d c |
-  b1 ) |
+  a4 |
+  d1 ~ |
+  d4 e d2 ~ |
+  d b |
+  cis4 b a g |
+  a2 e'4 a ~ |
+  a e b2 |
+  cis4 d fis2 ~ |
+  fis dis4 fis |
+  d d cis cis |
+  cis aes2. |
+  r2 a4 a ~ |
+  a g g'2 |
+  fis4 fis d d |
+  cis2 e4 fis |
+  g g fis2 |
+  fis4 dis2. ~ |
+  dis4 r d e |
+  e e e e |
+  e fis2 d4 |
+  c2 e4 d |
+  d b b2 |
+  d4 cis2 bes4 |
+  b2 ais4 ais ~ |
+  ais a fis'2 |
+  fis4 fis2 fis4 |
+  ees2 e4 fis ~ |
+  fis1 ~ |
+  fis2. r4 |
+  r2 fis4 g |
+  fis g fis f |
+  g4 g2 g4 |
+  dis2. e4 |
+  g g fis fis |
+  e d2. |
+  cis2. fis4 ~ |
+  fis e cis2 |
+  d4 e e2 ~ |
+  e g4 
 }
 
 altoWords = \lyricmode {
@@ -257,53 +235,65 @@ altoWords = \lyricmode {
 tenor = \relative c' {
   \autoBeamOff
   \clef "treble_8"
-  \key g \major
-  d4\mf ( |
-  fis e fis e |
-  d2 e2 |
-  fis2 e |
-  d4 c b a ) |
-  b2 a |
-  g1 ~ |
-  g  |
-  d'4 c b4 a ~ |
-  a2 a4 b4 |
-  \Red a4 g2.-\agogic ~ |
-  g4-\agogic r g g-\agogic ~ |
-  g g \Black fis2 |
-  e'4 d4 cis b |
-  g4 fis d'2 ~ |
-  d2 cis ~ |
-  cis4 b2. ~ |
-  b1 ~ |
-  b2 bes |
-  b1 |
-  \rred b2-\agogic a |
-  \Red c4 b a2-\agogic |
-  \Black g1 |
-  \Red g2-\agogic g4 g-\agogic ~ |
-  g g \Black g2 |
-  a1 |
-  c2 c4 e4 ( |
-  d1 ~ |
-  d ) |
-  g,2 e' ~ |
-  e2 e4 d ~ |
-  d1 |
-  b |
-  c |
-  a |
-  b4 c d e |
-  d e f g |
-  f2 e ~ |
-  e1 ~ |
-  e1 |
-  c4 b c2 |
-  b4 e fis e |
-  d2 e2 |
-  fis2 e |
-  d4 c b a |
-  g1 |
+  \prefatoryMatter
+  a4 |
+  cis b cis b |
+  cis d4 b2 ~ |
+  b g |
+  a4 g fis e |
+  fis2 cis'4 fis ~ |
+  fis d a2 |
+  b4 ais cis2 ~ |
+  cis2 c4 dis4 |
+  b bes a b |
+  g e2. |
+  fis2 fis4 fis ~ |
+  fis e cis'2 |
+  e4 d ais g |
+  fis2 d'4 cis4 |
+  d d cis2 |
+  d4 b2. ~ |
+  b4 r4 b d |
+  d d d d |
+  bes4 cis2 b4 |
+  a2 c4 b |
+  b a g2 |
+  bes4 a2 bes4 |
+  fis2 fis4 fis ~ |
+  fis fis cis'2 |
+  e4 d2 d4 |
+  << { cis2 cis4 cis ~ |
+       cis1 ~ |
+        cis2. r4 |
+        r2 b4 cis |
+        c cis d cis |
+        cis cis2 e4 |
+        c2. cis4 |
+        cis c b d |
+        cis bes2. |
+        b2. e4 ~ |
+        e cis bes2 |
+        b4 cis bes2 ~ |
+        bes cis4 
+      }
+    \new Staff \with { alignAboveContext = #"tenorstaff" } \relative c' {
+      R1 |
+      r2 fis4 g |
+      a fis d e |
+      fis d fis e |
+      fis d b cis |
+      d b2 d4 |
+      a a a a |
+      a1 |
+      r2 d ~ |
+      d4 cis2. |
+      b2 b'4 a
+      g fis e d |
+      cis cis cis' b |
+      a g fis e |
+      d d d d | 
+      d1 |
+    } >>
 }
 
 tenorWords = \lyricmode {
@@ -333,51 +323,42 @@ bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
   r4 |
-  r2 d4\mf ( c |
-  b d c e |
-  d2 d, |
-  g1 ) |
-  g,2 fis' |
-  e2. d4 |
-  c2 a |
-  d1 |
-  g,1 |
-  c2. d4 |
-  g2. g,4 |
-  fis2 ais |
+  r2 a4 g |
+  fis2 g |
+  a a, |
+  d1 ~ |
+  d |
+  g |
+  fis |
+  b, |
+  e |
+  a, |
+  d |
+  cis2 fis, |
   b1 ~ |
-  b4 bes2. |
+  b2 e |
+  a, ais |
+  b2 cis4 dis |
+  e1 ~ |
+  e4 d cis b |
+  a2 e' |
+  d a |
+  g2. fis4 |
+  e fis g e |
   a2 ais |
   b1 |
-  r4 \Blue e fis gis |
-  fis e d b |
-  e4 \Black a,2. ~ |
-  a2 d |
-  g,1 |
-  c |
+  e |
+  a, |
+  d |
+  aes |
+  g |
+  bes |
+  fis |
   b |
   e |
   a, |
   d |
-  g, ~ |
-  g |
-  c |
-  d |
-  g,2 fis' |
-  e1 |
-  a, |
-  d |
-  g, ~ |
-  g |
-  c |
-  a |
-  d |
-  d, |
-  g2 d''4 c |
-  b4 d c e |
-  d2 d, |
-  g1 ~ |
-  g1 |
+  
 }
 
 bassWords = \lyricmode {
@@ -430,7 +411,7 @@ bassWords = \lyricmode {
         \altoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
+    \new Staff = "tenorstaff" \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { << { \numericTimeSignature
         \tenor
