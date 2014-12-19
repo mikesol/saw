@@ -75,9 +75,7 @@ nothing = {}
 marks = {
   \time 2/2
   \tempo "Adagio" 2=38
-  \partial 4
-  s4 |
-  \repeat unfold 45 { s1 | } \bar "|."
+  \repeat unfold 49 { s1 | } \bar "|."
 }
 
 prefatoryMatter = {
@@ -85,8 +83,18 @@ prefatoryMatter = {
   #(set-accidental-style 'modern-cautionary)
 }
 
+glock = \relative c'' {
+  \prefatoryMatter
+  \repeat unfold 20 { r4 a r e r fis r d | }
+  r4 a' r e R1 |
+  \relative c'' \repeat unfold 3 { r4 a r e r fis r d | }
+  R1\fermataMarkup |
+}
+
 soprano = \relative c' { \autoBeamOff
   \prefatoryMatter
+  R1*3 |
+  r2. 
   a4\p\< ( |
   fis' e fis g |
   a\mf d b g |
@@ -132,7 +140,7 @@ soprano = \relative c' { \autoBeamOff
   a d b g |
   fis a e a |
   fis d2.\> ~ |
-  d1\p ) |
+  d1\p\fermata ) |
 }
 
 sopranoWords = \lyricmode {
@@ -153,6 +161,8 @@ sopranoWords = \lyricmode {
 
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
+  R1*3 |
+  r2. 
   a4\p\< ( |
   fis' e fis e |
   fis4\mf a g e ~ |
@@ -198,7 +208,7 @@ mezzo = \relative c' { \autoBeamOff
   fis4 a g e ~ |
   e2 d4 cis |
   d1\> ~ |
-  d\p ) | 
+  d\p\fermata ) | 
   
 }
 
@@ -220,6 +230,8 @@ mezzoWords = \lyricmode {
 
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
+  R1*3 |
+  r2. 
   a4\p\< ( |
   d1 ~ |
   d4\mf fis e d ~ |
@@ -265,7 +277,7 @@ alto = \relative c' { \autoBeamOff
   d4 fis4 e d ~ |
   d2 b |
   cis4\> b a g |
-  fis1\p ) |
+  fis1\p\fermata ) |
 }
 
 altoWords = \lyricmode {
@@ -291,6 +303,8 @@ tenor = \relative c' {
   \autoBeamOff
   \clef "treble_8"
   \prefatoryMatter
+  R1*3 |
+  r2. 
   a4\p\< ( |
   cis b cis b |
   cis\mf d2 b4 ~ |
@@ -336,7 +350,7 @@ tenor = \relative c' {
   cis d2 b4 ~ |
   b2 g |
   a4\> g fis e |
-  d1\p ) |
+  d1\p\fermata ) |
 }
 
 tenorWords = \lyricmode {
@@ -360,7 +374,8 @@ tenorWords = \lyricmode {
 bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
-  r4 |
+  R1*3 |
+  R1 |
   r2 a4\mp\< ( g |
   fis2\mf g |
   a a, ) |
@@ -405,7 +420,7 @@ bass = \relative c' { \autoBeamOff
   fis2 g |
   a a, |
   d1\> ~ |
-  d\p )|
+  d\p\fermata )|
 }
 
 bassWords = \lyricmode {
@@ -419,7 +434,7 @@ bassWords = \lyricmode {
   a wiz there was The Wiz -- ard
   Wiz of Oz is one be -- cause
   be -- cause cause be -- cause
-  be -- cause of won
+  be -- cause
   things he does
   Won -- der -- ful
   We're off
@@ -433,6 +448,16 @@ bassWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
+    \new Staff \with { instrumentName = #"Glockenspiel" %shortInstrumentName = #"M."
+} <<
+      \new Voice = "glock" { << { \numericTimeSignature
+        \glock
+      } {
+        \nothing
+      } {
+        \nothing
+      }>> }
+    >>
     \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
@@ -575,6 +600,16 @@ bassWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
+    \new Staff \with { instrumentName = #"Glockenspiel" %shortInstrumentName = #"M."
+} <<
+      \new Voice = "glock" { << { \numericTimeSignature
+        \glock
+      } {
+        \nothing
+      } {
+        \nothing
+      }>> }
+    >>
     \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature

@@ -91,6 +91,7 @@ lyricsBW = \lyricmode {
 Oz of zard Wi ful der Won The zard Wi the see to off We're does he that things ful der Won does he things ful der won the of cause Be cause be cause be cause be cause be cause Be cause be one is Oz of ard Wiz The was there Wiz a er ev oh er ev If was there Wiz a er ev If Wiz a of whiz a is he hear We Oz of zard Wi ful der Won The zard Wi the see to off We're
 }
 
+%{
 \markup "Normal"
 
 <<
@@ -109,25 +110,30 @@ Oz of zard Wi ful der Won The zard Wi the see to off We're does he that things f
 \new Staff { #(skip-of-length ozT) }
 >>
 
+%}
 
-\markup "Normal 4 start 2 [WINNER xmass]"
+\markup "Normal 4 start 2"
 
 <<
+\new Staff { \key d \major #(skip-of-length ozT) }
 \new Staff \new Voice = "melody" \with { \consists "Completion_heads_engraver" \remove "Note_heads_engraver" }
-{ \key g \major \time 4/4 r4 \ozT }
+{ \key d \major \clef "treble_8" \time 4/4 r4 \transpose a e \ozT }
 \new Lyrics \lyricsto "melody" \lyricsFW
-\new Staff { #(skip-of-length ozT) }
+\new Staff { \key d \major \clef bass #(skip-of-length ozT) }
 >>
+
+\pageBreak 
 
 \markup "Normal 4 start 3"
 
 <<
+\new Staff { \key d \major #(skip-of-length ozT) }
 \new Staff \new Voice = "melody" \with { \consists "Completion_heads_engraver" \remove "Note_heads_engraver" }
-{ \key g \major  \time 4/4 r2 \ozT }
+{ \key d \major \clef "treble_8" \time 4/4 r2 \transpose a e \ozT }
 \new Lyrics \lyricsto "melody" \lyricsFW
-\new Staff { #(skip-of-length ozT) }
+\new Staff { \key d \major \clef bass #(skip-of-length ozT) }
 >>
-
+%{
 \markup "Normal 4 start 4"
 
 <<
@@ -213,3 +219,4 @@ Oz of zard Wi ful der Won The zard Wi the see to off We're does he that things f
 \new Staff { #(skip-of-length oz) }
 >>
 
+%}
