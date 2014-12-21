@@ -191,8 +191,8 @@ mezzo = \relative c' { \autoBeamOff
   a2\mp fis'4 d |
   e2 fis |
   g4 fis g g |
-  fis2 d4 r |
-  e4 ( fis ) e4 cis |
+  fis2 d4 e ~ ( |
+  e4 fis ) e4 cis |
   d4 ( cis ) d ( e ) |
   fis4 d e2 |
   e2. r4 |
