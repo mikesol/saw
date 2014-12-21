@@ -19,7 +19,7 @@
       g fis e d |
       cis cis cis' b |
       a g fis e |
-      d d d d | 
+      d d d d |
       d1 |
     }
   We're off to see the Wi -- zard.
@@ -32,7 +32,7 @@
   be -- cause of the won -- der -- ful things he does.
   Won -- der -- ful things that he does.
   We're off to see the Wi -- zard.
-  The Won -- der -- ful Wi -- zard of Oz.  
+  The Won -- der -- ful Wi -- zard of Oz.
 
 %}
 \paper {
@@ -64,7 +64,7 @@ agogic = #(make-articulation "downbow")
 
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Hazebrouck } 
+  subtitle = \markup { for Hazebrouck }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -81,7 +81,7 @@ marks = {
   \mark \markup \italic "rallentando"
   \unfoldChange #72 #64 #48 |
   \tempo Lento 2=32
-  \repeat unfold 2 { s1 } \bar "|."
+  \repeat unfold 3 { s1 } \bar "|."
 }
 
 prefatoryMatter = {
@@ -101,7 +101,7 @@ glock = \relative c'' {
 
 soprano = \relative c' { \autoBeamOff
   \prefatoryMatter
-  %R1*3 | r2. 
+  %R1*3 | r2.
   a4\p\< ( |
   fis' e fis g |
   a\mf d b g |
@@ -135,18 +135,19 @@ soprano = \relative c' { \autoBeamOff
   fis2 a |
   b4 a b cis |
   d2 a4. r8 |
-  fis4 e fis g |
+  fis4 g fis g |
   a d b g |
   fis a e a |
   fis ( d4 ~ d4 ) r |
   a' r b4 a |
-  a ( e ) g2 |
+  a e g2 |
   g4 g a g |
   g e fis a, |
   fis'4 e fis g |
   a d b g |
   fis a e a |
-  fis4 ( d2. ) |
+  fis4 ( d ~ d ) r4 |
+  e1 |
 }
 
 sopranoWords = \lyricmode {
@@ -167,15 +168,17 @@ sopranoWords = \lyricmode {
   Off to see the Wi -- zard
   Cause he is the won -- der -- ful
   The Wi -- zard, wiz of Oz.
-  If ev -- er there was
+  If %ev -- er there was
+    The Won -- der -- ful Wiz
   Wi -- zard Oz is one be -- cause
   Be -- cause he is the won -- der -- ful
   The Wi -- zard, wiz of Oz.
+  Oz.
 }
 
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
-  %R1*3 | r2. 
+  %R1*3 | r2.
   a4\p\< ( |
   d2. e4 |
   fis4\mf a g e ~ |
@@ -197,30 +200,31 @@ mezzo = \relative c' { \autoBeamOff
   fis a g e |
   d2 cis2 |
   b2. r4 |
-  d2 des4 g |
+  d2 des4 b |
   e4 ( fis ) d ( e ) |
   fis2 e |
-  g fis |
-  e4 d ( cis ) gis' |
+  a,2. r4 |
+  e'4 d ( cis ) gis' |
   fis2 gis2 |
   fis2 e ~ |
-  e4 g fis e |
+  e4 g fis d |
   d2 fis4 e |
-  d2 fis4 ( e ) |
-  g4 fis g e |
-  fis2 fis4. r8 |
-  d2. e4 |
-  fis a g e |
-  d2 cis4 e |
+  d4 cis fis4 e |
+  fis2 g4 e |
+  a4 ( g ) fis4. r8 |
+  d4 e d dis |
+  fis a fis e |
+  cis4 fis cis4 e |
   d ( b4 ~ b ) r |
-  fis'2 fis4 e |
-  e ( d4 ) d4 ( dis ) |
+  fis'4 r fis4 e |
+  e d4 d4 dis |
   c4 c fis e |
   dis cis d a |
   d2 cis4 e |
   e fis ~ fis e |
   d fis cis fis |
-  d ( a2. ) |
+  d ( a ~ a ) r4 |
+  cis1 |
 }
 
 mezzoWords = \lyricmode {
@@ -236,23 +240,27 @@ mezzoWords = \lyricmode {
   Wiz is a
   whiz
   If ev -- er
-  was the
+  was
   Wi -- zard a whiz
   Be -- cause be
   The Won -- der
-  We're off to see the
-  Off to see the Wi -- zard
-  Cause the won -- der -- ful
-  The Wiz, wiz of Oz.
-  If ev -- er there was
+  We're off to see
+  We're off to
+  Off see the Wi -- zard
+  Cause he is the won -- der -- ful
+  The Wiz -- ard, wiz of Oz.
+  If
+    %ev -- er there was
+    The Won -- der -- ful Wiz -- ard
   Wi -- zard Oz is one be -- cause
-  Be -- cause he is the won -- der -- ful
+  Be -- cause  is the won -- der
   The Wi -- zard, wiz of Oz.
+  Oz.
 }
 
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
-  %R1*3 | r2. 
+  %R1*3 | r2.
   \clef "treble_8"
   a4\p\< ( |
   cis4 b cis b |
@@ -278,27 +286,28 @@ alto = \relative c' { \autoBeamOff
   b2 bes4 a |
   gis2 fis |
   cis'4 b a g |
-  b2 a |
+  fis2. r4 |
   gis1 |
-  b |
+  b2 d |
   cis1 ~ |
-  cis |
-  d2 e4 d |
-  b2 a |
-  d1 |
+  cis2 r4 bes |
+  a2 cis4 b |
+  gis4 g c bes |
+  d4 cis d b |
   cis2 b4. r8 |
-  cis2 d4 cis |
-  b fis' e b |
-  b2 b |
-  b4 ( fis4 ~ fis ) r |
-  e'2 d4 d |
-  d ( cis ) c ( b ) |
-  c4 aes cis cis |
+  gis4 cis b4 cis |
+  b fis' dis b |
+  a4 b gis bes |
+  a4 ( fis4 ~ fis ) r |
+  e'4 r d4 d |
+  d cis c b |
+  c4 aes des des |
   c b b fis |
   gis g a b |
   cis a d b |
   a4 b g cis |
-  b ( fis2. ) |
+  b ( g4 ~ g ) r4 |
+  a1 |
 }
 
 altoWords = \lyricmode {
@@ -314,63 +323,67 @@ altoWords = \lyricmode {
   The Wiz is a
   whiz If
   ev -- er wiz there
-  was the
-  Wiz, whiz cause
-  We're off to see the
-  Off Wi -- zard
-  Cause is the won -- der -- ful
-  The Wiz, wiz Oz.
-  If ev -- er there was
+  was
+  Wiz, whiz be -- cause
+  cause
+  We're off to see
+  We're off to
+  Off to see the Wi -- zard
+  Cause he is the won -- der -- ful
+  The Wiz -- ard, wiz of Oz.
+  If %ev -- er there was
+    The Won -- der -- ful Wi -- zard
   Wi -- zard Oz is one be -- cause
   Be -- cause he is the won -- der -- ful
   The Wiz -- ard, wiz of Oz.
+  Oz.
 }
 
 tenor = \relative c' {
   \autoBeamOff
   \clef "treble_8"
   \prefatoryMatter
-  %R1*3 | r2. 
+  %R1*3 | r2.
   r4 |
   R1 | R1 | R1 |
-  r2 a4\mp\< d ~ |
-  d a\> fis2 |
-  g4\< a d2 ~ |
-  d2\> a4\< b |
-  a g fis\> g |
-  e d2.\mp ~ |
-  d4 r4 d\< d ~ |
-  d d d'2\mf |
+  r2 a4 d ~ |
+  d a fis2 |
+  g4 a d2 ~ |
+  d2 a4 b |
+  a g fis g |
+  e d2. ~ |
+  d4 r4 d d ~ |
+  d d d'2 |
   d4 cis cis cis |
-  b2\> b4\< e |
-  e e e2\> |
+  b2 b4 e |
+  e e e2 |
   cis4 a2. ~ |
-  a4\mp r a\< b |
+  a4 r a b |
   b b b b |
-  cis d2\mf\> a4 |
-  fis2 a4 g\mp |
-  g fis e2\> |
+  cis d2 a4 |
+  fis2 a4 g |
+  g fis e2 |
   g4 fis2 e4 |
-  d2\p d4 d\< ~ |
+  d2 d4 d ~ |
   d d d'2 |
   d4 cis2 cis4 |
-  b2 b4 e\f ~ |
+  b2 b4 e ~ |
   e1 ~ |
   e2. r4 |
   r2 d4 e |
-  e\> e e e\< |
-  e e2\f cis4 |
-  a2.\> g'4\mf |
-  fis e d\< cis |
-  b a2.\f\> |
-  a2.\p\< d4\mf ~ |
+  e e e e |
+  e e2 cis4 |
+  a2. g'4 |
+  fis e d cis |
+  b a2. |
+  a2. d4 ~ |
   d a fis2 |
-  g4 a d2\< ~ |
-  d4 r\! e\f fis |
+  g4 a d2 ~ |
+  d4 r e fis |
   fis fis e fis |
   e d2. ~ |
-  d2\! r2 |
-  R1*4 |
+  d2 r2 |
+  R1*5 |
 }
 
 tenorWords = \lyricmode {
@@ -384,7 +397,7 @@ tenorWords = \lyricmode {
   be -- cause of the won -- der -- ful things he does.
   Won -- der -- ful things that he does.
   We're off to see the Wi -- zard.
-  The Won -- der -- ful Wi -- zard of Oz.  
+  The Won -- der -- ful Wi -- zard of Oz.
   Ah
 }
 
@@ -425,18 +438,19 @@ bass = \relative c' { \autoBeamOff
   e4 a, d2 |
   g,2 a |
   ais2 b4 a8 [ g ] |
-  fis2. g'4 |
-  fis2 g |
-  a2 a, |
+  fis2 e'4 b |
+  g2 b4 e |
+  bes4 g a2 |
   b2 a4 g |
-  fis2 d'4 c' |
+  fis4 r d'4 c' |
   ais b gis a |
   f bes, e b' |
   ais gis g dis |
   b2 a4 g |
   fis2 g |
   a2 a |
-  d1 |
+  d2. r4 |
+  fis1 |
 }
 
 bassWords = \lyricmode {
@@ -444,7 +458,7 @@ bassWords = \lyricmode {
   We're off to see the
   Off the Wi -- zard
   We is We hear Wiz of a
-  whiz of a wiz If ev -- er a 
+  whiz of a wiz If ev -- er a
   Wiz is one be cause be -- cause is the won -- der
   Wiz wiz Oz.
   Wiz whiz ev -- er was.
@@ -452,14 +466,15 @@ bassWords = \lyricmode {
   whiz be -- cause be -- cause be -- cause The Won -- der
   We're off
   see the won
-  Off see Wi -- zard be -- cause the
-  won -- der
-  Wiz, wiz
+  Off see Wi -- zard be -- cause is the
+  won ful The Wi -- zard, wiz
   Oz. Wiz of Oz
-  ev -- er o ev -- er a
+  %ev -- er o ev -- er a
+    The Won -- der -- ful Wi -- zard
   Wi -- zard Oz is one be -- cause
   Be -- cause is the won -- der
   Wiz, wiz Oz.
+  Oz.
 }
 
 %%% SCORE
