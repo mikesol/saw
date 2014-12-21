@@ -47,6 +47,7 @@
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
   %max-systems-per-page = #2
+  indent = 1.9\in
 }
 
 #(ly:set-option 'point-and-click #f)
@@ -73,7 +74,6 @@ agogic = #(make-articulation "downbow")
 nothing = {}
 
 marks = {
-  \time 2/2
   \tempo "Adagio" 2=38
   s4
   \repeat unfold 36 { s1 | }
@@ -81,7 +81,8 @@ marks = {
   \mark \markup \italic "rallentando"
   \unfoldChange #72 #64 #48 |
   \tempo Lento 2=32
-  \repeat unfold 3 { s1 } \bar "|."
+  \repeat unfold 2 { s1 } 
+  s2.
 }
 
 prefatoryMatter = {
@@ -101,12 +102,13 @@ glock = \relative c'' {
 
 soprano = \relative c' { \autoBeamOff
   \prefatoryMatter
+  \time 2/2
   %R1*3 | r2.
-  a4\p\< ( |
+  a4\p\< |
   fis' e fis g |
   a\mf d b g |
   fis a e a |
-  fis\> d2 ) r4\! |
+  fis\> ( d2 ) r4\! |
   fis2\mp a4 g |
   fis2 a |
   b4 a b cis |
@@ -125,17 +127,17 @@ soprano = \relative c' { \autoBeamOff
   fis4 ( d ~ d ) r4 |
   b'4 fis g d' |
   cis2 b |
-  a4 e fis e |
+  a4 g fis e |
   d2. r4 |
   b' fis gis e' |
-  d2 cis |
-  a4 b cis b |
-  a2 r |
+  d2 cis4 ( b ) |
+  a2 b |
+  g2 a |
   fis2 a4 g |
   fis2 a |
   b4 a b cis |
   d2 a4. r8 |
-  fis4 g fis g |
+  fis4 fis fis g |
   a d b g |
   fis a e a |
   fis ( d4 ~ d4 ) r |
@@ -147,11 +149,12 @@ soprano = \relative c' { \autoBeamOff
   a d b g |
   fis a e a |
   fis4 ( d ~ d ) r4 |
-  e1 |
+  e2. \bar "|."
 }
 
 sopranoWords = \lyricmode {
-  Ah
+  Be -- cause he is the won -- der -- ful
+  The Wi -- zard, wiz of Oz.
   We're off to see the
   Off to see the Wi -- zard
   We hear he is a
@@ -163,7 +166,7 @@ sopranoWords = \lyricmode {
   Wi -- zard is a whiz
   If ev -- er wiz there was.
   Wi -- zard is a whiz
-  Be -- cause be -- cause be -- cause
+  Be -- cause be -- cause oh
   We're off to see the
   Off to see the Wi -- zard
   Cause he is the won -- der -- ful
@@ -179,17 +182,18 @@ sopranoWords = \lyricmode {
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
   %R1*3 | r2.
-  a4\p\< ( |
+  \time 2/2
+  a4\p\< |
   d2. e4 |
-  fis4\mf a g e ~ |
-  e2 d4 cis ~ |
-  cis\> b a g4\! ) |
-  a2\mp fis'4 e |
-  d2 fis |
-  g4 fis g e |
-  fis2 fis4 r |
-  fis2 e4 cis |
-  d2 cis |
+  fis4\mf a g e |
+  e2 d4 cis |
+  cis\> b a g4\! |
+  a2\mp fis'4 d |
+  e2 fis |
+  g4 fis g g |
+  fis2 d4 r |
+  e4 ( fis ) e4 cis |
+  d4 ( cis ) d ( e ) |
   fis4 d e2 |
   e2. r4 |
   e2 e4 e |
@@ -200,14 +204,14 @@ mezzo = \relative c' { \autoBeamOff
   fis a g e |
   d2 cis2 |
   b2. r4 |
-  d2 des4 b |
+  d2 e4 fis |
   e4 ( fis ) d ( e ) |
-  fis2 e |
+  fis4 e4 e2 |
   a,2. r4 |
   e'4 d ( cis ) gis' |
-  fis2 gis2 |
-  fis2 e ~ |
-  e4 g fis d |
+  fis2 gis4 ( fis ~  |
+  fis4 ) e2 ees4 ~ |
+  ees4 d2 cis4 |
   d2 fis4 e |
   d4 cis fis4 e |
   fis2 g4 e |
@@ -224,11 +228,13 @@ mezzo = \relative c' { \autoBeamOff
   e fis ~ fis e |
   d fis cis fis |
   d ( a ~ a ) r4 |
-  cis1 |
+  cis2. \bar "|."
 }
 
 mezzoWords = \lyricmode {
-  Ah
+  Be -- cause the won -- der -- ful
+  The Wiz, wiz of Oz.
+  The Wi -- zard.
   We're off to see the
   Off to see the Wi -- zard
   We hear he is a
@@ -239,11 +245,11 @@ mezzoWords = \lyricmode {
   The Wiz, Wiz Oz.
   Wiz is a
   whiz
-  If ev -- er
+  If ev -- er wiz
   was
   Wi -- zard a whiz
-  Be -- cause be
-  The Won -- der
+  Be -- cause be -- cause
+  oh
   We're off to see
   We're off to
   Off see the Wi -- zard
@@ -261,15 +267,16 @@ mezzoWords = \lyricmode {
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
   %R1*3 | r2.
+  \time 2/2
   \clef "treble_8"
-  a4\p\< ( |
+  a4\p\< |
   cis4 b cis b |
   d fis e d |
   d2 b |
-  a4\> g fis e4 ) |
-  fis2\mp cis'4 b |
-  b2  e2 |
-  e2 d4 cis |
+  a4\> g fis e4 |
+  fis2\mp cis'4 a |
+  b4 cis e c |
+  b cis d e |
   cis4 ( b ) a4. r8 |
   a2 gis4 e |
   gis4 ( a ) fis ( gis ) |
@@ -279,8 +286,8 @@ alto = \relative c' { \autoBeamOff
   c ( a ) b2 |
   bes4 b cis cis |
   b4 g4 cis4. r8 |
-  a1 |
-  e'4 fis e b |
+  gis4 gis a d |
+  e4 fis e b |
   b2 b |
   a2. c4 |
   b2 bes4 a |
@@ -288,17 +295,17 @@ alto = \relative c' { \autoBeamOff
   cis'4 b a g |
   fis2. r4 |
   gis1 |
-  b2 d |
+  b4 ( a ) d2 |
   cis1 ~ |
-  cis2 r4 bes |
+  cis4 b2 bes4 |
   a2 cis4 b |
   gis4 g c bes |
   d4 cis d b |
   cis2 b4. r8 |
-  gis4 cis b4 cis |
+  gis4 cis bis4 cis |
   b fis' dis b |
-  a4 b gis bes |
-  a4 ( fis4 ~ fis ) r |
+  a4 b aes bes |
+  b4 ( fis4 ~ fis ) r |
   e'4 r d4 d |
   d cis c b |
   c4 aes des des |
@@ -307,25 +314,28 @@ alto = \relative c' { \autoBeamOff
   cis a d b |
   a4 b g cis |
   b ( g4 ~ g ) r4 |
-  a1 |
+  a2. \bar "|."
 }
 
 altoWords = \lyricmode {
-  Ah
-  We're off to see the
-  Off see the Wi -- zard
+  Be -- cause he is the won -- der -- ful
+  The Wiz, wiz Oz.
+  The Wi -- zard.
+  We're off to the Wi -- zard
+  We're
+  Off to see the Wi -- zard
   We hear he is a
   Wiz a wiz
   If ev -- er there was
   Wi -- zard Oz is one be -- cause
-  Cause won -- der -- ful
+  Cause he is the won -- der -- ful
   The Wiz, Wiz Oz.
   The Wiz is a
   whiz If
   ev -- er wiz there
   was
   Wiz, whiz be -- cause
-  cause
+  cause oh
   We're off to see
   We're off to
   Off to see the Wi -- zard
@@ -341,6 +351,7 @@ altoWords = \lyricmode {
 
 tenor = \relative c' {
   \autoBeamOff
+  \time 2/2
   \clef "treble_8"
   \prefatoryMatter
   %R1*3 | r2.
@@ -383,7 +394,63 @@ tenor = \relative c' {
   fis fis e fis |
   e d2. ~ |
   d2 r2 |
-  R1*5 |
+  R1*4 | r2. \bar "|." 
+}
+
+tenorExperimental = {
+  \autoBeamOff
+  \time 2/2
+  \clef "treble_8"
+  \prefatoryMatter
+  %R1*3 | r2.
+  \time 3/4 
+  r4 |
+  R2. R2. R2. R2. |
+\transpose a e \relative c' {  r2
+  d4
+  g2 d4
+  b2 c4
+  d4 g2 ~ g4 r d4
+  e4 d c
+  b c a
+  g2. ~ g4 r4 g4
+  g2 g4
+  g'2 g4
+  fis4 fis fis
+  e2 e4
+  a4 a a
+  a2 fis4
+  d2. ~ d4 r4 d
+  e e e
+  e e fis
+  g2 d4
+  b2 d4
+  c4 c b
+  a2 c4
+  b2 a4
+  g2 g4
+  g2 g4
+  g'2 g4
+  fis2 fis4
+  e2 e4
+  a2. ~ a2. ~ a2 r4 r2 g4
+  a4 a a
+  a a a
+  a2 fis4
+  d2 r4
+  c'4 b a
+  g fis e
+  d2 r4
+  d2.
+  g2 d4
+  b2 c4
+  d4 g2 ~ g4 r a4
+  b b b
+  a b a
+  g2. ~
+  g2 r4
+  R2.*6 | r2 \bar "|."
+}
 }
 
 tenorWords = \lyricmode {
@@ -404,44 +471,45 @@ tenorWords = \lyricmode {
 bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
+  \time 2/2
   %R1*3 | R1 |
   r4
-  r2 a4\mp\< ( g |
+  r2 a4\mp\< g |
   fis2\mf g |
   a a, |
-  d1\> ) |
-  d2\! d4 d4 |
-  d2 d4 ( a ) |
-  g2 a |
+  d1\> |
+  d2\! d4 b4 |
+  e4 a,4 d2 |
+  g,2 a |
   d2. cis4 |
   b1 |
   e2 a,4 fis |
   b2 e4 e, |
   a2 cis4 e |
   a2. g4 |
-  fis2 e4 b |
+  fis2 e4 cis |
   a2. ais4 |
   b4 cis d cis |
   b2 a4 g |
   fis2 g |
   a2 a |
-  d1 |
-  g, |
+  d2. r4 |
+  g,1 |
   gis1 |
   a2 ais |
   b4 b cis d |
   e1 |
   gis4 fis e d |
-  a'2 e4 ( d ) |
-  cis b a g |
+  a'2 e4 ( cis ) |
+  a2. g4 |
   fis2 b |
   e4 a, d2 |
   g,2 a |
   ais2 b4 a8 [ g ] |
-  fis2 e'4 b |
+  fis2 ais4 b |
   g2 b4 e |
   bes4 g a2 |
-  b2 a4 g |
+  a2 a4 g |
   fis4 r d'4 c' |
   ais b gis a |
   f bes, e b' |
@@ -450,12 +518,14 @@ bass = \relative c' { \autoBeamOff
   fis2 g |
   a2 a |
   d2. r4 |
-  fis1 |
+  fis2.  \bar "|."
 }
 
 bassWords = \lyricmode {
-  Ah
-  We're off to see the
+  is the Won -- der
+  Wiz wiz Oz.
+  We're off to
+  see Wi -- zard,
   Off the Wi -- zard
   We is We hear Wiz of a
   whiz of a wiz If ev -- er a
@@ -463,7 +533,8 @@ bassWords = \lyricmode {
   Wiz wiz Oz.
   Wiz whiz ev -- er was.
   Wi -- zard of Oz
-  whiz be -- cause be -- cause be -- cause The Won -- der
+  whiz be -- cause be -- cause be -- cause
+  oh
   We're off
   see the won
   Off see Wi -- zard be -- cause is the
@@ -520,7 +591,7 @@ bassWords = \lyricmode {
     \new Staff = "tenorstaff" \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { << { \numericTimeSignature
-        \tenor
+        \tenorExperimental
       } {
         \nothing
       } >> }
@@ -554,6 +625,8 @@ bassWords = \lyricmode {
     }
     \context {
       \Staff
+      \consists "Timing_translator"
+      \consists "Default_bar_line_engraver"
       \consists "Metronome_mark_engraver"
       \override TimeSignature #'style = #'numbered
       \override StaffSymbol #'layer = #4
@@ -567,7 +640,11 @@ bassWords = \lyricmode {
     }
     \context {
       \Score
+      \override InstrumentName.self-alignment-X = #RIGHT
+      \override InstrumentName.padding = #1.0
       \remove "Metronome_mark_engraver"
+      \remove "Timing_translator"
+      \remove "Default_bar_line_engraver"
       \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
     }
   }
