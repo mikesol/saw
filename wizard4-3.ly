@@ -210,8 +210,8 @@ mezzo = \relative c' { \autoBeamOff
   a,2. r4 |
   e'4 d ( cis ) gis' |
   fis2 gis4 ( fis ~  |
-  fis4 ) e2 ees4 ~ |
-  ees4 d2 cis4 |
+  fis4 ) e2 dis4 ~ |
+  dis4 d2 cis4 |
   d2 fis4 e |
   d4 cis fis4 e |
   fis2 g4 e |
@@ -500,8 +500,8 @@ bass = \relative c' { \autoBeamOff
   b4 b cis d |
   e1 |
   gis4 fis e d |
-  a'2 e4 ( cis ) |
-  a2. g4 |
+  a'2 e4 ( fis ) |
+  a,2. g4 |
   fis2 b |
   e4 a, d2 |
   g,2 a |
