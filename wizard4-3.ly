@@ -47,7 +47,7 @@
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
   %max-systems-per-page = #2
-  indent = 1.9\in
+  %indent = 1.9\in
 }
 
 #(ly:set-option 'point-and-click #f)
@@ -124,8 +124,8 @@ soprano = \relative c' { \autoBeamOff
   fis4 e fis g |
   a d b g |
   fis a e a |
-  fis4 ( d ~ d ) r4 |
-  b'4 fis g d' |
+  fis8 e fis g a fis d' c
+  b4 fis g d' |
   cis2 b |
   a4 g fis e |
   d2. r4 |
@@ -163,6 +163,7 @@ sopranoWords = \lyricmode {
   Wi -- zard Oz is one be -- cause
   Cause he is the won -- der -- ful
   The Wi -- zard, wiz of Oz.
+  The Won -- der -- ful, o ev -- er
   Wi -- zard is a whiz
   If ev -- er wiz there was.
   Wi -- zard is a whiz
@@ -203,12 +204,12 @@ mezzo = \relative c' { \autoBeamOff
   d4 d d e |
   fis a g e |
   d2 cis2 |
-  b2. r4 |
-  d2 e4 fis |
-  e4 ( fis ) d ( e ) |
-  fis4 e4 e2 |
-  a,2. r4 |
-  e'4 d ( cis ) gis' |
+  b8 cis d e fis d fis g |
+  fis8 e d cis g' fis e d |
+  a'8 g fis e d fis cis e |
+  g fis e d cis e b d |
+  fis e d cis c d e fis |
+  e4 d ( cis ) gis' |
   fis2 gis4 ( fis ~  |
   fis4 ) e2 dis4 ~ |
   dis4 d2 cis4 |
@@ -243,10 +244,11 @@ mezzoWords = \lyricmode {
   Wi -- zard Oz is one be -- cause
   Cause he is the won -- der -- ful
   The Wiz, Wiz Oz.
-  Wiz is a
-  whiz
-  If ev -- er wiz
-  was
+  The Won -- der -- ful, o ev -- er
+  Off to see the Wi -- zard, ev -- er
+  Won -- der -- ful a whiz be -- cause be -- cause 
+    of things he does the Wi -- zard
+  Won -- der -- ful the Wi -- zard, whiz of
   Wi -- zard a whiz
   Be -- cause be -- cause
   oh
@@ -254,10 +256,10 @@ mezzoWords = \lyricmode {
   We're off to
   Off see the Wi -- zard
   Cause he is the won -- der -- ful
-  The Wiz -- ard, wiz of Oz.
+  The Wi -- zard, wiz of Oz.
   If
     %ev -- er there was
-    The Won -- der -- ful Wiz -- ard
+    The Won -- der -- ful Wi -- zard
   Wi -- zard Oz is one be -- cause
   Be -- cause  is the won -- der
   The Wi -- zard, wiz of Oz.
@@ -289,9 +291,9 @@ alto = \relative c' { \autoBeamOff
   gis4 gis a d |
   e4 fis e b |
   b2 b |
-  a2. c4 |
-  b2 bes4 a |
-  gis2 fis |
+  a8 b c bes cis c b ees |
+  d4 b a b |
+  e4 d8 g, fis a gis fis |
   cis'4 b a g |
   fis2. r4 |
   gis1 |
@@ -330,8 +332,9 @@ altoWords = \lyricmode {
   Wi -- zard Oz is one be -- cause
   Cause he is the won -- der -- ful
   The Wiz, Wiz Oz.
-  The Wiz is a
-  whiz If
+  The Won -- der -- ful, o ev -- er
+  Wi -- zard is a
+  whiz ful a whiz be -- cause If 
   ev -- er wiz there
   was
   Wiz, whiz be -- cause
@@ -340,12 +343,12 @@ altoWords = \lyricmode {
   We're off to
   Off to see the Wi -- zard
   Cause he is the won -- der -- ful
-  The Wiz -- ard, wiz of Oz.
+  The Wi -- zard, wiz of Oz.
   If %ev -- er there was
     The Won -- der -- ful Wi -- zard
   Wi -- zard Oz is one be -- cause
   Be -- cause he is the won -- der -- ful
-  The Wiz -- ard, wiz of Oz.
+  The Wi -- zard, wiz of Oz.
   Oz.
 }
 
@@ -493,9 +496,9 @@ bass = \relative c' { \autoBeamOff
   b2 a4 g |
   fis2 g |
   a2 a |
-  d2. r4 |
-  g,1 |
-  gis1 |
+  d4 a8 g a bes e a, |
+  g4 a b g |
+  gis4 a b gis |
   a2 ais |
   b4 b cis d |
   e1 |
@@ -531,7 +534,9 @@ bassWords = \lyricmode {
   whiz of a wiz If ev -- er a
   Wiz is one be cause be -- cause is the won -- der
   Wiz wiz Oz.
-  Wiz whiz ev -- er was.
+  Won -- der -- ful o ev -- er
+  Wiz -- ard is a
+  Wi -- zard is If ev -- er was.
   Wi -- zard of Oz
   whiz be -- cause be -- cause be -- cause
   oh
