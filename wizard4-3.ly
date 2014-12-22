@@ -74,13 +74,31 @@ agogic = #(make-articulation "downbow")
 nothing = {}
 
 marks = {
-  \tempo "Adagio" 2=38
+  \tempo "Adagio" 4=76
   s4
-  \repeat unfold 36 { s1 | }
+  %\repeat unfold 36 { s1 | }
+  \repeat unfold 18 { s1 | }
+  s2..
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \unfoldChange #72 #68 #1
+  \mark \markup \italic "rallentando"
+  \unfoldChange #68 #72 #1
+  \unfoldChange #72 #70 #7 |
+
+  \repeat unfold 7 { s1 | }
+  
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup \italic "rallentando"
+  \unfoldChange #70 #64 #8 |
+
+  \tempo "più messo" 4=72
+  \unfoldChange #64 #70 #16 |
+  \repeat unfold 6 { s1 | }
+
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup \italic "rallentando"
   \unfoldChange #72 #64 #48 |
-  \tempo Lento 2=32
+  \tempo Lento 4=64
   \repeat unfold 2 { s1 } 
   s2.
 }
@@ -102,7 +120,7 @@ glock = \relative c'' {
 
 soprano = \relative c' { \autoBeamOff
   \prefatoryMatter
-  \time 2/2
+  \time 4/4
   %R1*3 | r2.
   a4\p\< |
   fis' e fis g |
@@ -180,10 +198,15 @@ sopranoWords = \lyricmode {
   Oz.
 }
 
+%mezzo% gis4 d e b'
+%alto% b a gis fis d' cis b a
+
+%bass% cis b a g
+
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
   %R1*3 | r2.
-  \time 2/2
+  \time 4/4
   a4\p\< |
   d2. e4 |
   fis4\mf a g e |
@@ -206,18 +229,18 @@ mezzo = \relative c' { \autoBeamOff
   d2 cis2 |
   b8 cis d e fis d fis g |
   fis8 e d cis g' fis e d |
-  a'8 g fis e d fis cis e |
-  g fis e d cis e b d |
-  fis e d cis c d e fis |
-  e4 d ( cis ) gis' |
-  fis2 gis4 ( fis ~  |
-  fis4 ) e2 dis4 ~ |
+  gis4 d e b' |
+  g8 fis e d cis e ais, cis |
+  fis e d cis d b fis' a ~ |
+  a8 gis4 fis e4 gis8 ~ |
+  gis8 fis4 a ( gis ) fis8 ~ ( |
+  fis4 e2 ) dis4 ~ |
   dis4 d2 cis4 |
   d2 fis4 e |
   d4 cis fis4 e |
   fis2 g4 e |
   a4 ( g ) fis4. r8 |
-  d4 e d dis |
+  d4 e dis e |
   fis a fis e |
   cis4 fis cis4 e |
   d ( b4 ~ b ) r |
@@ -246,10 +269,10 @@ mezzoWords = \lyricmode {
   The Wiz, Wiz Oz.
   The Won -- der -- ful, o ev -- er
   Off to see the Wi -- zard, ev -- er
-  Won -- der -- ful a whiz be -- cause be -- cause 
-    of things he does the Wi -- zard
+  Wi -- zard is a
+  Off to see the Wi -- zard, ev -- er
   Won -- der -- ful the Wi -- zard, whiz of
-  Wi -- zard a whiz
+  Wi -- zard is a whiz
   Be -- cause be -- cause
   oh
   We're off to see
@@ -269,7 +292,7 @@ mezzoWords = \lyricmode {
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
   %R1*3 | r2.
-  \time 2/2
+  \time 4/4
   \clef "treble_8"
   a4\p\< |
   cis4 b cis b |
@@ -292,20 +315,20 @@ alto = \relative c' { \autoBeamOff
   e4 fis e b |
   b2 b |
   a8 b c bes cis c b ees |
-  d4 b a b |
-  e4 d8 g, fis a gis fis |
-  cis'4 b a g |
-  fis2. r4 |
-  gis1 |
-  b4 ( a ) d2 |
-  cis1 ~ |
-  cis4 b2 bes4 |
+  d4 b d b |
+  b8 a gis fis d' cis b a |
+  e'8 d cis b ais g fis e |
+  ais2 ( b4 ) r |
+  gis4 a b cis |
+  b4 ( a ) b2 |
+  cis8 b a g b a g fis ~ |
+  fis b4 bes a bes8 |
   a2 cis4 b |
   gis4 g c bes |
   d4 cis d b |
   cis2 b4. r8 |
-  gis4 cis bis4 cis |
-  b fis' dis b |
+  gis4 cis a d |
+  cis fis dis b |
   a4 b aes bes |
   b4 ( fis4 ~ fis ) r |
   e'4 r d4 d |
@@ -334,11 +357,12 @@ altoWords = \lyricmode {
   The Wiz, Wiz Oz.
   The Won -- der -- ful, o ev -- er
   Wi -- zard is a
-  whiz ful a whiz be -- cause If 
-  ev -- er wiz there
+  Off to see the Wi -- zard, ev -- er
+  Off to see the Wi -- zard, ev -- er
   was
-  Wiz, whiz be -- cause
-  cause oh
+  Wi -- zard is a whiz be
+  Off to see the Wi -- zard, ev -- er
+  cause be -- cause oh
   We're off to see
   We're off to
   Off to see the Wi -- zard
@@ -354,7 +378,7 @@ altoWords = \lyricmode {
 
 tenor = \relative c' {
   \autoBeamOff
-  \time 2/2
+  \time 4/4
   \clef "treble_8"
   \prefatoryMatter
   %R1*3 | r2.
@@ -402,7 +426,7 @@ tenor = \relative c' {
 
 tenorExperimental = {
   \autoBeamOff
-  \time 2/2
+  \time 4/4
   \clef "treble_8"
   \prefatoryMatter
   %R1*3 | r2.
@@ -474,7 +498,7 @@ tenorWords = \lyricmode {
 bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
-  \time 2/2
+  \time 4/4
   %R1*3 | R1 |
   r4
   r2 a4\mp\< g |
@@ -500,16 +524,16 @@ bass = \relative c' { \autoBeamOff
   g4 a b g |
   gis4 a b gis |
   a2 ais |
-  b4 b cis d |
+  b4 b fis' d |
   e1 |
-  gis4 fis e d |
-  a'2 e4 ( fis ) |
+  b4 cis d e |
+  a2 e4 ( fis ) |
   a,2. g4 |
   fis2 b |
   e4 a, d2 |
   g,2 a |
   ais2 b4 a8 [ g ] |
-  fis2 ais4 b |
+  fis2 c'4 b |
   g2 b4 e |
   bes4 g a2 |
   a2 a4 g |
