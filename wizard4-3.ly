@@ -65,7 +65,7 @@ agogic = #(make-articulation "downbow")
 
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Hazebrouck }
+  subtitle = \markup { for Mark Kibble }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -79,19 +79,20 @@ marks = {
   %\repeat unfold 36 { s1 | }
   \repeat unfold 18 { s1 | }
   s2..
-  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \unfoldChange #72 #68 #1
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup \italic "rallentando"
   \unfoldChange #68 #72 #1
   \unfoldChange #72 #70 #7 |
 
+  \tempo "Maestoso" 4=70
   \repeat unfold 7 { s1 | }
   
   \once \override Score.RehearsalMark.self-alignment-X = #LEFT
   \mark \markup \italic "rallentando"
   \unfoldChange #70 #64 #8 |
 
-  \tempo "più messo" 4=72
+  \tempo "Adagio" 4=72
   \unfoldChange #64 #70 #16 |
   \repeat unfold 6 { s1 | }
 
@@ -129,37 +130,37 @@ soprano = \relative c' { \autoBeamOff
   fis\> ( d2 ) r4\! |
   fis2\mp a4 g |
   fis2 a |
-  b4 a b cis |
-  d2 a4. r8 |
+  b4\< a b cis |
+  d2\mf a4. r8 |
   cis4 b2 a4 |
   b2 a |
-  a4 fis gis4. a8 |
-  a2. r4 |
-  a2 b4 a |
-  a ( fis )  g2 |
-  g4 g a g |
-  g e fis4. r8 |
-  fis4 e fis g |
-  a d b g |
-  fis a e a |
-  fis8 e fis g a fis d' c
-  b4 fis g d' |
+  a4 fis gis4.\> a8 |
+  a2. r4\! |
+  a2\mp\< b4 a |
+  a\> ( fis )  g2 |
+  g4\< g a g |
+  g\> e fis4.\! r8 |
+  fis4\< e fis g |
+  a\mf d b g |
+  fis\> a e a |
+  fis8-_\< e fis g a fis d' c
+  b4\mf fis g d' |
   cis2 b |
   a4 g fis e |
   d2. r4 |
   b' fis gis e' |
   d2 cis4 ( b ) |
-  a2 b |
+  a2\> b |
   g2 a |
-  fis2 a4 g |
+  fis2\mp a4 g |
   fis2 a |
-  b4 a b cis |
-  d2 a4. r8 |
-  fis4 fis fis g |
-  a d b g |
+  b4\< a b cis |
+  d2\mf\> a4. r8\! |
+  fis4\< fis fis g |
+  a\mf d b g |
   fis a e a |
-  fis ( d4 ~ d4 ) r |
-  a' r b4 a |
+  fis\> ( d4 ~ d4 ) r\! |
+  a'\mp r b4 a |
   a e g2 |
   g4 g a g |
   g e fis a, |
@@ -214,39 +215,39 @@ mezzo = \relative c' { \autoBeamOff
   cis\> b a g4\! |
   a2\mp fis'4 d |
   e2 fis |
-  g4 fis g g |
-  fis2 d4 e ~ ( |
+  g4\< fis g g |
+  fis2\mf d4 e ~ ( |
   e4 fis ) e4 cis |
   d4 ( cis ) d ( e ) |
-  fis4 d e2 |
-  e2. r4 |
-  e2 e4 e |
-  fis4 ( b, ) d2 |
-  e4 e e e |
-  d bes d4. r8 |
-  d4 d d e |
-  fis a g e |
-  d2 cis2 |
-  b8 cis d e fis d fis g |
-  fis8 e d cis g' fis e d |
+  fis4 d e2\> |
+  e2. r4\! |
+  e2\mp\< e4 e |
+  fis4\> ( b, ) d2 |
+  e4\< e e e |
+  d\> bes d4. r8\! |
+  d4\< d d e |
+  fis\mf a g e |
+  d2\> cis2 |
+  b8-_\< cis d e fis d fis g |
+  fis8\mf e d cis g' fis e d |
   gis4 d e b' |
   g8 fis e d cis e ais, cis |
   fis e d cis d b fis' a ~ |
   a8 gis4 fis e4 gis8 ~ |
-  gis8 fis4 a ( gis ) fis8 ~ ( |
+  gis8 fis4 a ( gis ) fis8\> ~ ( |
   fis4 e2 ) dis4 ~ |
   dis4 d2 cis4 |
-  d2 fis4 e |
+  d2\mp fis4 e |
   d4 cis fis4 e |
-  fis2 g4 e |
-  a4 ( g ) fis4. r8 |
-  d4 e dis e |
-  fis a fis e |
+  fis2\< g4 e |
+  a4\mf\> ( g ) fis4. r8\! |
+  d4\< e dis e |
+  fis\mf a fis e |
   cis4 fis cis4 e |
-  d ( b4 ~ b ) r |
-  fis'4 r fis4 e |
+  d\> ( b4 ~ b\! ) r |
+  fis'4\mp r fis4 e |
   e d4 d4 dis |
-  c4 c fis e |
+  e4 c fis e |
   dis cis d a |
   d2 cis4 e |
   e fis ~ fis e |
@@ -301,39 +302,39 @@ alto = \relative c' { \autoBeamOff
   a4\> g fis e4 |
   fis2\mp cis'4 a |
   b4 cis e c |
-  b cis d e |
-  cis4 ( b ) a4. r8 |
+  b4\< cis d e |
+  cis4\mf ( b ) a4. r8 |
   a2 gis4 e |
   gis4 ( a ) fis ( gis ) |
-  cis2 b2 |
-  b4 ( a ~ a ) r |
-  cis2 cis4 cis |
-  c ( a ) b2 |
-  bes4 b cis cis |
-  b4 g4 cis4. r8 |
-  gis4 gis a d |
-  e4 fis e b |
-  b2 b |
-  a8 b c bes cis c b ees |
-  d4 b d b |
+  cis2 b2\> |
+  b4 ( a ~ a\! ) r |
+  cis2\mp\< cis4 cis |
+  c\> ( a ) b2 |
+  bes4\< b cis cis |
+  b4\> g4 cis4. r8\! |
+  gis4\< gis a d |
+  e4\mf fis e b |
+  b2\> b |
+  a8-_\< b c bes cis c b ees |
+  d4\mf b d b |
   b8 a gis fis d' cis b a |
   e'8 d cis b ais g fis e |
   ais2 ( b4 ) r |
   gis4 a b cis |
   b4 ( a ) b2 |
-  cis8 b a g b a g fis ~ |
+  cis8\> b a g b a g fis ~ |
   fis b4 bes a bes8 |
-  a2 cis4 b |
+  a2\mp cis4 b |
   gis4 g c bes |
-  d4 cis d b |
-  cis2 b4. r8 |
-  gis4 cis a d |
-  cis fis dis b |
+  d4\< cis d b |
+  cis2\mf\> b4.\! r8 |
+  gis4\< cis a d |
+  cis\mf fis dis b |
   a4 b aes bes |
-  b4 ( fis4 ~ fis ) r |
-  e'4 r d4 d |
+  b4\> ( fis4 ~ fis ) r\! |
+  e'4\mp r d4 d |
   d cis c b |
-  c4 aes des des |
+  a4 aes des des |
   c b b fis |
   gis g a b |
   cis a d b |
@@ -376,6 +377,8 @@ altoWords = \lyricmode {
   Oz.
 }
 
+mydb = \downbow
+
 tenor = \relative c' {
   \autoBeamOff
   \time 4/4
@@ -384,49 +387,49 @@ tenor = \relative c' {
   %R1*3 | r2.
   r4 |
   R1 | R1 | R1 |
-  r2 a4 d ~ |
-  d a fis2 |
-  g4 a d2 ~ |
-  d2 a4 b |
-  a g fis g |
-  e d2. ~ |
-  d4 r4 d d ~ |
-  d d d'2 |
-  d4 cis cis cis |
-  b2 b4 e |
-  e e e2 |
-  cis4 a2. ~ |
-  a4 r a b |
-  b b b b |
-  cis d2 a4 |
-  fis2 a4 g |
-  g fis e2 |
-  g4 fis2 e4 |
-  d2 d4 d ~ |
-  d d d'2 |
-  d4 cis2 cis4 |
-  b2 b4 e ~ |
-  e1 ~ |
-  e2. r4 |
-  r2 d4 e |
-  e e e e |
-  e e2 cis4 |
-  a2. g'4 |
-  fis e d cis |
-  b a2. |
-  a2. d4 ~ |
-  d a fis2 |
-  g4 a d2 ~ |
-  d4 r e fis |
-  fis fis e fis |
-  e d2. ~ |
-  d2 r2 |
+  r2 a4 d\mydb ~ |
+  d a fis2\mydb |
+  g4 a\mydb d2 ~ |
+  d2\mydb a4 b\mydb |
+  a g fis\mydb g |
+  e d2.\mydb ~ |
+  d4\mydb r4 d d\mydb ~ |
+  d d d'2\mydb |
+  d4 cis\mydb cis cis |
+  b2\mydb b4 e\mydb |
+  e e e2\mydb |
+  cis4 a2.\mydb ~ |
+  a4\mydb r a b\mydb |
+  b b b\mydb b |
+  cis d2\mydb a4 |
+  fis2\mydb a4 g\mydb |
+  g fis e2\mydb |
+  g4 fis2\mydb e4 |
+  d2\mydb d4 d\mydb ~ |
+  d d d'2\mydb |
+  d4 cis2\mydb cis4 |
+  b2\mydb b4 e\mydb ~ |
+  e2 ~ e\mydb ~ |
+  e4 ~ e2.\mydb ~ |
+  e4\mydb r d4 e\mydb |
+  e e e\mydb e |
+  e e2\mydb cis4 |
+  a2.\mydb g'4\mydb |
+  fis e d\mydb cis |
+  b a2.\mydb |
+  a2.\mydb d4\mydb ~ |
+  d a fis2\mydb |
+  g4 a\mydb d2 ~ |
+  d4\mydb r e fis\mydb |
+  fis fis e\mydb fis |
+  e d2.\mydb ~ |
+  d2\mydb r2 |
   R1*4 | r2. \bar "|." 
 }
 
 tenorExperimental = {
   \autoBeamOff
-  \time 4/4
+  %\time 4/4
   \clef "treble_8"
   \prefatoryMatter
   %R1*3 | r2.
@@ -434,7 +437,7 @@ tenorExperimental = {
   r4 |
   R2. R2. R2. R2. |
 \transpose a e \relative c' {  r2
-  d4
+  d4\mp
   g2 d4
   b2 c4
   d4 g2 ~ g4 r d4
@@ -460,7 +463,7 @@ tenorExperimental = {
   g'2 g4
   fis2 fis4
   e2 e4
-  a2. ~ a2. ~ a2 r4 r2 g4
+  a2. ~ a2. ~ a2. ~ a4 r g4
   a4 a a
   a a a
   a2 fis4
@@ -505,35 +508,35 @@ bass = \relative c' { \autoBeamOff
   fis2\mf g |
   a a, |
   d1\> |
-  d2\! d4 b4 |
+  d2\mp d4 b4 |
   e4 a,4 d2 |
-  g,2 a |
-  d2. cis4 |
+  g,2\< a |
+  d2.\mf cis4 |
   b1 |
   e2 a,4 fis |
-  b2 e4 e, |
+  b2 e4\> e, |
   a2 cis4 e |
-  a2. g4 |
-  fis2 e4 cis |
+  a2.\> g4 |
+  fis2\mp e4 cis |
   a2. ais4 |
-  b4 cis d cis |
-  b2 a4 g |
+  b4\< cis d\> cis |
+  b2\mp a4 g |
   fis2 g |
   a2 a |
-  d4 a8 g a bes e a, |
-  g4 a b g |
+  d4\< a8 g a bes e a, |
+  g4\mf a b g |
   gis4 a b gis |
   a2 ais |
-  b4 b fis' d |
+  b4 b fis'8 e d b |
   e1 |
   b4 cis d e |
-  a2 e4 ( fis ) |
+  a2\> e4 ( fis ) |
   a,2. g4 |
-  fis2 b |
+  fis2\mp b |
   e4 a, d2 |
   g,2 a |
-  ais2 b4 a8 [ g ] |
-  fis2 c'4 b |
+  ais2\< b4\> a8 [ g ] |
+  fis2\! c'4 b |
   g2 b4 e |
   bes4 g a2 |
   a2 a4 g |
@@ -561,7 +564,7 @@ bassWords = \lyricmode {
   Won -- der -- ful o ev -- er
   Wiz -- ard is a
   Wi -- zard is If ev -- er was.
-  Wi -- zard of Oz
+  The Wi -- zard is a Oz
   whiz be -- cause be -- cause be -- cause
   oh
   We're off
@@ -620,7 +623,7 @@ bassWords = \lyricmode {
     \new Staff = "tenorstaff" \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { << { \numericTimeSignature
-        \tenorExperimental
+        \tenor
       } {
         \nothing
       } >> }
@@ -648,6 +651,7 @@ bassWords = \lyricmode {
       \override Glissando #'breakable = ##t
       \override TupletNumber #'breakable = ##t
       \override TupletBracket #'breakable = ##t
+      \override Script #'direction = #UP
       \override DynamicLineSpanner #'direction = #UP
       %\override Slur #'direction = #UP
       \remove "Forbid_line_break_engraver"
