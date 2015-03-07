@@ -45,7 +45,7 @@ prefatoryMatterSlowPart = {
 sopranoSlowPart = \relative c'' { \autoBeamOff
   \prefatoryMatterSlowPart
   R4.*4 |
-  ges2\mp\< ees |
+  ges2\mp\< \times 2/3 { ges4 f ees } |
   bes'1\> |
   aes4\!\espressivo r4 fes2 |
   ees2..\> r8\! |
@@ -58,7 +58,7 @@ sopranoSlowPart = \relative c'' { \autoBeamOff
 }
 
 sopranoSlowPartWords = \lyricmode {
-  was the
+  was ev -- ver the
   Wiz
   one
   cause cause cause der
@@ -97,10 +97,10 @@ altoSlowPart = \relative c' { \autoBeamOff
   R4.*4 |
   ees2\mp\< ces |
   f1\> |
-  aes4\!\espressivo r des,2 |
-  bes'2\> r\! |
-  des,1\p\< ~ |
-  des\> |
+  fes4\!\espressivo r des2 |
+  bes2\> ( aes4. ) r8\! |
+  d1\p\< ~ |
+  d\> |
   R\! |
   ees\mp |
   r2 \times 2/3 { bes4 des2 ~ } |
@@ -125,7 +125,7 @@ tenorSlowPart = \relative c' {
   des [ ces ] bes |
   aes2\mp\< aes |
   des1\> |
-  fes4\!\espressivo r bes,2 |
+  ces4\!\espressivo r bes2 |
   ges2..\> r8\! |
   ces1\< ~ |
   ces\> |
