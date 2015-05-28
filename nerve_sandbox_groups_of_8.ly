@@ -116,6 +116,7 @@ soprano = \transpose c c {
     b8\> d8 b8 bes8 a8 c8 a8 aes8 |
     g8 b8 g8 ges8 f8 a8 f8 e8 |
     ees8\mf g8 ees8 c8 a8 ges'8 ~ ges8 r8 |
+    s1*39 |
   }
 }
 
@@ -123,7 +124,7 @@ sopranoWords = \lyricmode {
 }
 
 test = {
-  REPLACEME
+  r8 r8 r8 r8 r8 r8 r8 d''8 ees''8 f''8 d''8 bes'8 c''8 d''8 bes'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 d''8 bes'8 g'8 a'8 bes'8 g'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 f'8 f'8 f'8 f'8 f'8 ~ f'8 r8 r8 r8 r8 r8 r8 r8 r8 f'8 ~ f'8 ~ f'8 ~ f'8 ~ f'8 ~ f'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 a'8 g'8 r8 g''8 f''8 ees''8 d''8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 bes'8 a'8 r8 a''8 g''8 f''8 ees''8 r8 r8 r8 r8 r8 r8 r8 r8 d''8 c''8 bes'8 bes'8 bes'8 bes'8 bes'8 ~ bes'8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 ~ bes'8 ~ bes'8 ~ bes'8 ~ bes'8 ~ bes'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 d''8 ees''8 f''8 d''8 bes'8 c''8 d''8 bes'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 d''8 bes'8 g'8 a'8 bes'8 g'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 f'8 f'8 f'8 f'8 f'8 ~ f'8 r8 r8 r8 r8 r8 r8 r8 r8 f'8 ~ f'8 ~ f'8 ~ f'8 ~ f'8 ~ f'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 a'8 g'8 r8 g''8 f''8 ees''8 d''8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 bes'8 a'8 r8 a''8 g''8 f''8 ees''8 r8 r8 r8 r8 r8 r8 r8 r8 d''8 c''8 bes'8 bes'8 bes'8 bes'8 bes'8 ~ bes'8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 ~ bes'8 ~ bes'8 ~ bes'8 ~ bes'8 ~ bes'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 ~ bes'8 g''8 ~ g''8 ~ g''8 ~ g''8 r8 fis''8 r8 r8 r8 r8 r8 r8 r8 r8 g''8 a''8 f''8 ~ f''8 ~ f''8 ~ f''8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 g''8 ~ g''8 ees''8 ~ ees''8 ees''8 ~ ees''8 ees''8 ~ ees''8 r8 r8 r8 r8 r8 r8 r8 r8 f''8 ~ f''8 d''8 ~ d''8 ~ d''8 ~ d''8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 d''8 d''8 c''8 bes'8 c''8 bes'8 c''8 bes'8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 d''8 bes'8 ~ bes'8 ~ bes'8 ~ bes'8 r8 c''8 r8 r8 r8 r8 r8 r8 r8 r8 d''8 f''8 g''8 r8 r8 r8 r8 d''8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 bes'8 f''8 ~ f''8 ~ f''8 ~ f''8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 d''8 ees''8 f''8 d''8 bes'8 c''8 d''8 bes'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 d''8 bes'8 g'8 a'8 bes'8 g'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 f'8 f'8 f'8 f'8 f'8 ~ f'8 r8 r8 r8 r8 r8 r8 r8 r8 f'8 ~ f'8 ~ f'8 ~ f'8 ~ f'8 ~ f'8 r8 r8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 a'8 g'8 r8 g''8 f''8 ees''8 d''8 r8 r8 r8 r8 r8 r8 r8 r8 c''8 bes'8 a'8 r8 a''8 g''8 f''8 ees''8 r8 r8 r8 r8 r8 r8 r8 r8 d''8 c''8 bes'8 bes'8 bes'8 bes'8 bes'8 ~ bes'8 r8 r8 r8 r8 r8 r8 r8 r8 bes'8 ~ bes'8 r8 r8 r8 r8 r8 r8 r8 r8
 }
 
 

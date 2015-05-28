@@ -1,11 +1,19 @@
-START = 4
-NSKIP = (12,)
+'''
+START = 3
+NSKIP = (4,)
+SMODULO = (0,)
+NPLAY = (4,)
+PMODULO = (0,)
+'''
+START = 7
+NSKIP = (8,)
 SMODULO = (0,)
 NPLAY = (8,)
 PMODULO = (0,)
-
 #########################################
 import sys
+import os
+import subprocess
 SR = 'r'
 
 MELODY = """
@@ -28,12 +36,17 @@ f' ~ f' ~ f' ~ f' ~ f' ~ f' ~ f' ~ f' r r bes' a' g' r g''
 f'' ees'' d'' c'' bes' a' r a'' g'' f'' ees'' d'' c'' bes' bes' bes'
 bes' bes' ~ bes' ~ bes' ~ bes'  
 """
-
+def gulp(f) :
+  infi = file(f,'r')
+  out = infi.read()
+  infi.close()
+  return out
+        
 class Note(object) :
   def __init__(self, note, tie) :
     self.note = note
     self.tie = tie
-  def toLily(tie) :
+  def toLily(self, tie) :
     out = self.note
     out+= '8'
     if tie & self.tie :
@@ -84,5 +97,18 @@ while ctr < len(NOTES) :
   skipCounter += 1
   FIRST_TIME = False
 
-print [str(note) for note in OUT]
+REPLACEME = [OUT[x].toLily(False if x == len(OUT) - 1 else (False if OUT[x+1].note == SR else True)) for x in range(len(OUT))]
 
+NERVE_TEST = gulp('nerve_melody_test.ly')
+NERVE_TEST = NERVE_TEST.replace('REPLACEME', ' '.join(REPLACEME))
+
+if os.path.exists(sys.argv[1]) :
+  print "Cowardly refusing to overwrite file"
+  sys.exit(1)
+
+OUTFI = file(sys.argv[1], 'w')
+OUTFI.write(NERVE_TEST)
+OUTFI.close()
+
+print (len(OUT) / 2) * 60./96.
+subprocess.call('lilypond '+sys.argv[1], shell=True)
