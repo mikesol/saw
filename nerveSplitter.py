@@ -4,12 +4,24 @@ NSKIP = (4,)
 SMODULO = (0,)
 NPLAY = (4,)
 PMODULO = (0,)
-'''
 START = 7
 NSKIP = (8,)
 SMODULO = (0,)
 NPLAY = (8,)
 PMODULO = (0,)
+START = 9#7#1#3
+NSKIP = (2,)
+SMODULO = (0,)
+NPLAY = (2,)
+PMODULO = (0,)
+'''
+START = 7 + (8*15)#9#7#1#3
+NSKIP = (48,)
+SMODULO = (0,)
+NPLAY = (48,)
+PMODULO = (0,)
+
+TP = 'g'
 #########################################
 import sys
 import os
@@ -100,7 +112,7 @@ while ctr < len(NOTES) :
 REPLACEME = [OUT[x].toLily(False if x == len(OUT) - 1 else (False if OUT[x+1].note == SR else True)) for x in range(len(OUT))]
 
 NERVE_TEST = gulp('nerve_melody_test.ly')
-NERVE_TEST = NERVE_TEST.replace('REPLACEME', ' '.join(REPLACEME))
+NERVE_TEST = NERVE_TEST.replace('REPLACEME', '\\transpose g {0} {{ '.format(TP)+(' '.join(REPLACEME))+" }")
 
 if os.path.exists(sys.argv[1]) :
   print "Cowardly refusing to overwrite file"
