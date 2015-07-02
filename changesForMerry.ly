@@ -151,7 +151,7 @@ mellyr = \lyricmode {
   Oh what a bore
   When you've a wi -- zard that is hard to ig -- nore
   I took his ra -- di -- a -- teur out
-  He did -- n't know it waas a -- bout to ex -- plode
+  He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
   %Betch -- ya mam -- ma told ya
 }
