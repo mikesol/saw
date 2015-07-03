@@ -2,7 +2,7 @@
 \include "defs-devel.ly"
 
 unfolds = {
-  \repeat unfold 256 { \unfoldSwing #200 }
+  \repeat unfold 512 { \unfoldSwing #200 }
 }
 
 melody = \relative c' {
@@ -41,7 +41,19 @@ melody = \relative c' {
   g bes f' ees d c bes g |
   aes c ees bes' r aes4 bes8 |
   g g, \times 2/3 { aes c ees } g aes, f' ees ~ |
-  ees4 r2. | %bes r c bes aes g f |
+  ees8 bes'8 r bes r bes r bes8 ~ | %bes r c bes aes g f |
+  
+  bes4. r8 g4 r8 ees |
+  \times 2/3 { g8 aes a } bes g ees c bes g |
+  g' f4 r8 r aes, \times 2/3 { c ees f } |
+  bes bes, aes' bes g ees bes aes |
+  
+  g ees'4 b8 d c aes ees |
+  b'8 c4 bes8 \times 2/3 { aes c ees } bes' aes |
+  g bes g e c d e c |
+  f4 r c'4. bes8 |
+  aes8 g f d r gis, \times 2/3 { a cis e } |
+  b' a4 b8 gis e d b |
 
   %aes fes ces des d f e d |
   %ees
@@ -89,6 +101,12 @@ up = \relative c' {
   <c ees g> <g bes des e> |
   <aes c ees g> <aes bes d f> |
   <g bes c ees>1
+  R1*8 |
+  <bes c ees g>2 <cis e g bes> |
+  <ees g a d> <d fis gis c> |
+  <ees g a cis> <g bes des e> |
+  <aes c ees g> <a b dis fis> |
+  <g bes d f> <cis e g bes> |
 }
 
 upHotHotHot = \relative c' {
@@ -127,7 +145,40 @@ down = \relative c, {
   g bes |
   aes c |
   f, bes |
-  ees,4 r2. | % bes'4 c8 bes aes g f |
+  ees,1 | % bes'4 c8 bes aes g f |
+  ees4 r4 r2 |
+  R1 |
+  r4 g f aes |
+  g b bes e, |
+  a aes f aes |
+  g d fis f |
+  b fis f a |
+  aes fes r2 |
+  ees2 g |
+  f aes |
+  g bes |
+  aes b |
+  bes a |
+  d aes |
+  g cis |
+  f, b |
+  e,4 gis b cis |
+  d cis b gis |
+  a cis e fis |
+  g fis e cis |
+  d fis, a b |
+  c b a fis |
+  g b d e |
+  f e d b |
+  c2 e, |
+  f a |
+  g bes |
+  a aes |
+  g c |
+  a ges |
+  f a |
+  bes8 bes4 c8 bes aes g f |
+  ees4
 }
 
 downHotHotHot = \relative c' {
@@ -168,8 +219,8 @@ hotlyr = \lyricmode {
 
 \score {
 <<
-  \new Staff \with {midiInstrument=#"alto sax" } \new Voice = "mel" << { \melody \melodyHotHotHot } { \unfolds } >>
-  \new Lyrics \lyricsto #"mel" { \mellyr \hotlyr }
+  \new Staff \with {midiInstrument=#"alto sax" } \new Voice = "mel" << { \melody } { \unfolds } >>
+  \new Lyrics \lyricsto #"mel" { \mellyr }
   \new PianoStaff <<
     \new Staff \up
     \new Staff \down
