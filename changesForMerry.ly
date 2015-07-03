@@ -107,6 +107,17 @@ up = \relative c' {
   <ees g a cis> <g bes des e> |
   <aes c ees g> <a b dis fis> |
   <g bes d f> <cis e g bes> |
+  <cis e fis a> <gis b d f> |
+  <b d f aes> <gis b d f> |
+  <b d e g> <a c d fis> |
+  <a c ees g>2 r |
+  R1 |
+  <a c d f>2 r |
+  R1 |
+  <g bes d f>2 r |
+  R1 |
+  <ges aes c ees>2 r |
+  R1 |
 }
 
 upHotHotHot = \relative c' {
@@ -160,25 +171,25 @@ down = \relative c, {
   aes b |
   bes a |
   d aes |
-  g cis |
-  f, b |
-  e,4 gis b cis |
-  d cis b gis |
-  a cis e fis |
-  g fis e cis |
-  d fis, a b |
-  c b a fis |
-  g b d e |
-  f e d b |
-  c2 e, |
-  f a |
-  g bes |
-  a aes |
-  g c |
-  a ges |
-  f a |
-  bes8 bes4 c8 bes aes g f |
-  ees4
+  g b |
+  c ges |
+  f4 a c d |
+  ees d c a |
+  bes d f g |
+  aes g f d |
+  ees g, bes c |
+  des c bes g |
+  aes c ees f |
+  ees f ees c |
+  des2 f, |
+  fis g |
+  aes a |
+  bes f |
+  ees a |
+  aes c |
+  des c |
+  bes d |
+  ees
 }
 
 downHotHotHot = \relative c' {
