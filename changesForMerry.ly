@@ -52,7 +52,11 @@ Mythologization
 \include "defs-devel.ly"
 
 unfolds = {
-  \repeat unfold 704 { \unfoldSwing #200 }
+  \repeat unfold 73 { \repeat unfold 4 { \unfoldSwing #200 } }
+  \repeat unfold 2 { \repeat unfold 3 { \unfoldSwing #200 } }
+  \repeat unfold 34 { \repeat unfold 4 { \unfoldSwing #200 } }
+  \mark "unswung"
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 100 2 0 0)
 }
 
 melody = \relative c' {
@@ -147,38 +151,39 @@ melody = \relative c' {
   aes'8 aes ges f ees f b, c |
   aes4. aes8 ~ aes ees'8 d c |
   R1*31 |
-  r4 b8 c e ees4 c8 |
-  bes'8 f g d e c r4 |
-  r8 gis \times 2/3 { a cis e } a gis4 bes8 ~ |
-  bes g \times 2/3 { ges f e } b'4 ees,8 g |
-  e e e4 r8 b c e |
-  ees aes, f' des r g, \times 2/3 { aes c ees } |
-  f e4 r8 r g4 e8 |
-  f bes, d g e ees d a' ~ |
-  a g e ees d r4 c8 |
-  \times 2/3 { des f aes } c aes bes f g d8 ~ |
-  d bes d f g8 f4 ees8 |
-  a8 fis cis fis \times 2/3 { d2 cis4 } |
-  bes'8 bes bes bes r4 c,8 e |
-  g g g r r a, \times 2/3 { b8 d e } |
-  g f b g f c d f |
-  g d c g a f'4 e8 |
-  g8 d \times 2/3 { e8 e e } r8 bes c ees |
-  ges f bes e, ~ e gis, \times 2/3 { a cis e } |
-  fis8 e a e r2 |
-  bes'8 ees,16 ees ees8 ees c'4 aes8 aes |
-  \times 2/3 { g4 fis f4 } \times 2/3 { des aes f } |
-  g8 g r4 r8 b b b |
-  cis e a gis8 ~ gis fis fis r |
-
-
-  r8 bes8 ~ \times 2/3 { bes ees, g } ges f c ees |
-  g g g r8 r8 bes4 g8 |
-  f bes, c g' f d d c |
-  r4 g'8 g \times 2/3 { g d e } c b |
-  \times 2/3 { bes ees f } bes4 ~ bes8 bes8 ~ \times 2/3 { bes g ees } |
-  d c ees aes r8 c ~ \times 2/3 { c8 aes8 f } |
-  g8 e c f ees d
+  r2 r8 bes'4 bes8 ~ |
+  bes4 ~ \times 2/3 { bes4 ees,8 } e16 fis16 ais cis \times 2/3 { a4 dis,8 } | %1
+  \times 2/3 { e4 fis8 } \times 2/3 { r4 cis8 } d16 e fis a c8 c | %2
+  c8. f,16    g bes g d    cis c g a   b c d dis | %3
+  e8. g,16 a b cis e \times 2/3 { fis8 f8 e } \times 2/3 { r4 bes'8 } | % 4
+  \times 8/9 { bes4 a16 c  bes f des c   a b d f   g8 g } | %5
+  g8. b16    f e d b   g a b d   e8 r16 b | %6
+  \times 2/3 { fis'8 gis a } e16 d c a \times 2/3  { b8 c dis } \times 2/3 { e8 r8 fis } | % 7
+  g16 gis e16 d    gis, b cis e   fis g d b   g a b dis | %8
+  e16 r8. \times 2/3 { a4 fis8 } e16 d bes r \times 2/3 { r8 bes'8 g8 } | % 9
+  f16 d c bes \times 2/3 { g8 r f } \times 4/5 { g16 bes d g8 g g r16 } | % 10
+  r gis16 a fis16    e d b a     bes c d e    \times 2/3 { f8 fis8 g } | % 11
+  \times 2/3 { r8 c,8 d } \times 2/3 { f g a, } \times 2/3 { bes c d } \times 2/3 { f g a, } | % 12
+  bes16 c d f    \times 2/3 { b8 a e8 } f16 fis g e   c b bes d | % 13
+  e8 r16 gis,16    a b cis e   \times 8/9 { a8 gis   e16 f e b a } | % 14
+  d16 r cis16 g  \times 2/3 { a8 b cis } \times 2/3 { fis fis fis } \times 2/3 { r8 gis4 } | % 15
+  fis16 c b dis   e b bes d   ees8. fis16    gis, ais b d | % 16
+  \times 2/3 { dis8 cis r }   r16 g aes bes   c ees f aes   des4 ~ | % 17
+  des4 ces8. r16 \times 4/7 { ees,8 e g b d4 c8 } | % 18
+  bes16 g f ees    bes c ees f   a2 ~ | % 19
+  a8 bes4. ~ bes4. aes8 ~ | % 20
+  \times 8/9 { aes8. g16   aes16 c f, ees   c d dis e   f8 r16 c16 d f } | % 21
+  fis16 r g8 g g   aes16 c g f   b, c d dis | % 22
+  e8 r16 b   cis dis e fis     \times 4/5 { gis16 gis, a b   c cis d dis e r } | % 23
+  r a, bes e    aes8. ges16   des16 c aes f   e fis gis b | % 25
+  \times 8/9 { d8. c16 bes16 g f ees   e fis gis ais   c8 r16 f,16   a c } | % 26
+  ees16 d bes aes   g aes bes ees   e8 r   r16 bes c e | % 26
+  fis16 d bes c   e16 r bes'8   bes8.    d16  \times 4/5 { bes g e d c } | % 27
+  \times 4/5 { a16 g a b d }   fis8 r16 c   bes'8 bes    \times 4/5 { bes  c16 d bes } | % 28
+  f16 d c bes   g bes c ees    \times 2/3 { bes'8 r c } d16 bes g d | % 29
+  c ees f g   bes8 r   a16 bes c16 d    bes a aes r | % 30
+  r8 c16 d ~ d bes a c16 \times 2/3 { d8 bes bes } r16 c8 d16 ~ | % 31
+  d bes g f d c e g ~ g fis a ees ~ \times 4/5 { ees fis a ees ees } |
 }
 
 
@@ -235,11 +240,11 @@ up = \relative c' {
   <c ees g bes> <e aes bes d> |
   <ees f aes c> <aes c d g> |
   <g bes c ees> <ees g bes c> |
-  <c ees aes> e |
-  g f |
-  b bes |
+  <c ees aes> <g bes des e> |
+  <aes c es g> <a c d f> |
+  <des f g b> <b d e gis> |
   %%%
-  <e, gis ais d>1 |
+  <e gis ais d>1 |
   <dis g a cis> |
   <aes' c d g>2 <fis a b dis> |
   <g b d e> <e g a cis> |
@@ -272,8 +277,8 @@ up = \relative c' {
   <ees f a c> <aes c d g> |
   <g bes c ees> <ees g bes c> |
   <c ees g> <g bes des e> |
-  <aes c ees g> <aes bes d f> |
-  <g bes c ees>1
+  <aes c ees g> <f aes bes d> |
+  <g bes des e> <e g bes c> |
 }
 
 melTwoFullClean = \relative c {
@@ -439,15 +444,7 @@ down = \relative c, {
   c g' fis bes, |
   a aes e' g, |
   f' g, ges ees' |
-  d c bes g |
-  ees4 g bes2 |
-  aes8 bes4 g8 ~ g f4 f8 |
-  ees ees ees4 g8 bes4 aes8 ~ |
-  aes2 r4 bes |
-  ees,4. g8 bes4 ees |
-  c8 d4 ees8 ~ ees aes,4 aes8 |
-  g g g4 aes f |
-  ees4 r4 r2 |
+  d c bes aes |
 }
 
 mellyr = \lyricmode {
@@ -522,28 +519,51 @@ al -- so fun -- da -- men -- ta -- li -- sm
   (Sun -- day)
   Cra -- zy how I'm meet -- ing him on Tues -- day, which rhymes with
 
-To be ho -- nest,
-It had -- n’t crossed my mind yet
-But now that you say it
-I’m be -- gin -- ning to doubt the ef -- fi -- cien -- cy
-Of the tech -- nique that we use to ra -- ri -- fy cof -- fee
-I re -- mem -- ber when we used to en -- joy sim -- ple fla -- vors
-And did -- n’t feel ob -- li -- ga -- ted to add drops of va -- nil -- la
-Or har -- vest roas -- ted beans from cat ex -- cre -- ment
-And now look at us
-We can’t e -- ven sit in a ca -- fé un -- less we’re sure that they can
-serve us a shot of ca -- ra -- mel
-or make a lit -- tle foam heart on top of our cap -- pu -- ci -- no
-I’ve had it up to HERE with your
-mi -- ni -- fied Ja -- va -- script func -- tions
-and your null poin -- ter N S Ob -- jects
-  Who are you fool -- ing with the fake tat -- too
-  Close your pier -- cings
-  Ditch the horn rimmed glas -- ses
-  And please on -- ly wear head -- phones if you are real -- ly lis -- ten -- ing
-  to mu -- sic
-  Just kid -- ding
-  I am not a ha -- ter
+  Oh joy
+  What ju -- bi -- la -- tion we are show -- ing
+  What pau -- ci -- ty of doubt and glee
+    that pe -- ne -- trates our mar -- row
+    with an un -- du -- la -- ting pulse
+    that in -- cu -- bates our hope -- ful -- ness.
+  What great cor -- nu -- co -- pi -- a of plea -- sance
+    that es -- capes my veins
+    and co -- vers me with
+    e -- per -- ves -- cent life
+  It pe -- ne -- trates ev -- ry hole that I've made in you
+  And bur -- rows un -- re -- mit -- ting like a mag -- got through my wea -- ther bea -- ten skin
+  What in -- tran -- si -- gence
+  What a ter -- ri -- fy -- ing thing's
+  Un -- brid -- led re -- lent -- less mirth
+  I ca -- te -- go -- ri -- cally en -- dorse this gay pre -- di -- ca -- ment
+  This o -- ther light
+  This ab -- sence of a self
+  This hor -- ri -- ble in -- tru -- sion
+  This pan -- de -- mo -- ni -- um that burns my face
+  Ex -- traor -- di -- na -- ry  can -- dor strok -- ing my trem -- bling thighs
+  Feel -- ing hap -- pi -- ly quiz -- zi -- cal
+  Love en -- er -- gi -- zing sen -- ti -- men -- tal moods and
+    tap -- ping on my fore -- arm
+  Un -- like the kil -- ling of a dol -- phin
+  This dream is eu -- pho -- ric
+  Smear -- ing all the co -- lors of my crushed eye -- ball
+  A gen -- u -- ine re sha -- ping of my lungs
+  And of my feet
+  Cheer -- ful -- ness si -- phon -- ing the nec -- tar of my spine
+  Such ge -- ne -- ro -- si -- ty
+  Such o -- ver -- whel -- ming o -- pu -- lence
+  Ra -- di -- ate, shine, and flic -- ker like a bur -- ning wad of flesh
+  Mur -- der me with e -- van -- ge -- li -- zing verve
+  Ren -- der me im -- po -- tent with ti -- til -- la -- ting lust
+  Fon -- dle me rough -- ly like a buck
+  Won -- der and cu -- ri -- os -- i -- ty
+  Pour -- ing out of my mouth
+  What sin -- gu -- lar mi -- ra -- cle
+  Ra -- vag -- ing my se -- de -- ta -- ry lips
+  De -- flo -- wer -- ing my
+  An -- scil -- la -- ry hairs
+  Ut -- ter -- ly in -- cre -- du -- lous
+  Fes -- tive if not ex -- u -- ber -- ant
+  Win -- some is how I'd ca -- te -- go -- rize this mer -- ry ex -- ci -- ted state
 }
 
 \score {
