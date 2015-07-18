@@ -106,7 +106,7 @@ melody = \relative c' {
   b'8 c4 bes8 \times 2/3 { aes c ees } bes' aes |
   g bes g e c d e c |
 
-    %pickup
+    %pickupz
       f4 r c'4. bes8 |
 
   aes8 g f d ~ d4 r4 |
@@ -155,9 +155,9 @@ melody = \relative c' {
   bes4 ~ \times 2/3 { bes4 ees,8 } e16 fis16 ais cis \times 2/3 { a4 dis,8 } | %1
   \times 2/3 { e4 fis8 } \times 2/3 { r4 cis8 } d16 e fis a c8 c | %2
   c8. f,16    g bes g d    cis c g a   b c d dis | %3
-  e8. g,16 a b cis e \times 2/3 { fis8 f8 e } \times 2/3 { r4 bes'8 } | % 4
+  e8. a,16 \times 2/3 { bes8 d f } \times 2/3 { fis8 f8 e } \times 2/3 { r4 bes'8 } | % 4
   \times 8/9 { bes4 a16 c  bes f des c   a b d f   g8 g } | %5
-  g8. b16    f e d b   g a b d   e8 r16 b | %6
+  g8. b16    f e d b   \times 2/3 { g8 a cis }   e8 r16 b | %6
   \times 2/3 { fis'8 gis a } e16 d c a \times 2/3  { b8 c dis } \times 2/3 { e8 r8 fis } | % 7
   g16 gis e16 d    gis, b cis e   fis g d b   g a b dis | %8
   e16 r8. \times 2/3 { a4 fis8 } e16 d bes r \times 2/3 { r8 bes'8 g8 } | % 9
@@ -174,9 +174,11 @@ melody = \relative c' {
   a8 bes4. ~ bes4. aes8 ~ | % 20
   \times 8/9 { aes8. g16   aes16 c f, ees   c d dis e   f8 r16 c16 d f } | % 21
   fis16 r g8 g g   aes16 c g f   b, c d dis | % 22
-  e8 r16 b   cis dis e fis     \times 4/5 { gis16 gis, a b   c cis d dis e r } | % 23
+  %%%%e8 r16 b   cis dis e fis     \times 4/5 { gis16 gis, a b   c cis d dis e r } | % 23
+  e8 r16 b   cis dis e fis     gis16 gis, a b   cis dis e r | % 23
   r a, bes e    aes8. ges16   des16 c aes f   e fis gis b | % 25
-  \times 8/9 { d8. c16 bes16 g f ees   e fis gis ais   c8 r16 f,16   a c } | % 26
+  %%%%\times 8/9 { d8. c16 bes16 g f ees   e fis gis ais   c8 r16 f,16   a c } | % 26
+  d8. c16    bes16 g f ees   e gis ais c   r16 f,16 a c   | % 26
   ees16 d bes aes   g aes bes ees   e8 r   r16 bes c e | % 26
   fis16 d bes c   e16 r bes'8   bes8.    d16  \times 4/5 { bes g e d c } | % 27
   \times 4/5 { a16 g a b d }   fis8 r16 c   bes'8 bes    \times 4/5 { bes  c16 d bes } | % 28
@@ -460,7 +462,7 @@ mellyr = \lyricmode {
   A fe -- lo -- ny was re -- por -- ted af -- ter he left
   And ev -- ry -- one doubt -- ed er -- ro -- ne -- ous -- ly
   The vi -- ru -- lent fac that he a -- lone would tra -- vel to re -- mar -- ka -- ble
-  In -- cin -- di -- a -- ry spa -- ces for -- cing malls to close and un -- cles be -- ckon -- ing child -- ren to the door
+  in -- cin -- di -- a -- ry spa -- ces for -- cing malls to close and un -- cles be -- ckon -- ing child -- ren to the door.
   Have -- n't we heard it be -- fore
   Oh what a bore
   When you've a wi -- zard that is hard to ig -- nore
@@ -522,48 +524,47 @@ al -- so fun -- da -- men -- ta -- li -- sm
   Oh joy
   What ju -- bi -- la -- tion we are show -- ing
   What pau -- ci -- ty of doubt and glee
-    that pe -- ne -- trates our mar -- row
-    with an un -- du -- la -- ting pulse
-    that in -- cu -- bates our hope -- ful -- ness.
+    that's flow -- ing in our mar -- row
+    with a ter -- ri -- fy -- ing rage
+    that mag -- ni -- fies hap -- pi -- ness
   What great cor -- nu -- co -- pi -- a of plea -- sance
     that es -- capes my veins
     and co -- vers me with
-    e -- per -- ves -- cent life
+    ef -- ful -- gent light
   It pe -- ne -- trates ev -- ry hole that I've made in you
   And bur -- rows un -- re -- mit -- ting like a mag -- got through my wea -- ther bea -- ten skin
-  What in -- tran -- si -- gence
-  What a ter -- ri -- fy -- ing thing's
+  What fe -- li -- ci -- ty
+  What ex -- hi -- la -- ra -- ting cheer
   Un -- brid -- led re -- lent -- less mirth
   I ca -- te -- go -- ri -- cally en -- dorse this gay pre -- di -- ca -- ment
-  This o -- ther light
+  This o -- ther way
   This ab -- sence of a self
   This hor -- ri -- ble in -- tru -- sion
   This pan -- de -- mo -- ni -- um that burns my face
   Ex -- traor -- di -- na -- ry  can -- dor strok -- ing my trem -- bling thighs
-  Feel -- ing hap -- pi -- ly quiz -- zi -- cal
+  Feel -- ing play -- ful -- ly quiz -- zi -- cal
   Love en -- er -- gi -- zing sen -- ti -- men -- tal moods and
     tap -- ping on my fore -- arm
   Un -- like the kil -- ling of a dol -- phin
   This dream is eu -- pho -- ric
-  Smear -- ing all the co -- lors of my crushed eye -- ball
+  Smear -- ing all the co -- lors of my bright spi -- rit
   A gen -- u -- ine re sha -- ping of my lungs
   And of my feet
-  Cheer -- ful -- ness si -- phon -- ing the nec -- tar of my spine
+  Ec -- sta -- sy si -- phon -- ing the nec -- tar of my spine
   Such ge -- ne -- ro -- si -- ty
-  Such o -- ver -- whel -- ming o -- pu -- lence
+  Such o -- ver -- whel -- ming hope
   Ra -- di -- ate, shine, and flic -- ker like a bur -- ning wad of flesh
-  Mur -- der me with e -- van -- ge -- li -- zing verve
+  Mur -- der me with in -- tran -- si -- gent verve
   Ren -- der me im -- po -- tent with ti -- til -- la -- ting lust
   Fon -- dle me rough -- ly like a buck
   Won -- der and cu -- ri -- os -- i -- ty
   Pour -- ing out of my mouth
   What sin -- gu -- lar mi -- ra -- cle
   Ra -- vag -- ing my se -- de -- ta -- ry lips
-  De -- flo -- wer -- ing my
-  An -- scil -- la -- ry hairs
+  De -- flo -- wer -- ing my an -- scil -- la -- ry hairs
   Ut -- ter -- ly in -- cre -- du -- lous
   Fes -- tive if not ex -- u -- ber -- ant
-  Win -- some is how I'd ca -- te -- go -- rize this mer -- ry ex -- ci -- ted state
+  Win -- some is how I'd ca -- te -- go -- rize this mer -- ry e -- ner -- gized state
 }
 
 \score {
