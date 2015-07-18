@@ -508,14 +508,18 @@ soprano = { %\autoBeamOff
     g ees aes g ~ g des' c bes |
   }
   \relative c'' {
-    \times 2/3 { g4 ees bes' } \times 2/3 { g ees' bes } |
-    \times 2/3 { c4 aes ees' } \times 2/3 { c g' ees } |
-    \times 2/3 { d4 bes c } \times 2/3 { g bes g } |
-    \times 2/3 { f4 aes c } \times 2/3 { ees d c } |
-    \times 2/3 { bes g d' } \times 2/3 { bes f' d } |
-    \times 2/3 { c aes ees' } \times 2/3 { c g' ees } |
-    \times 2/3 { d bes g } \times 2/3 { aes f bes } |
-    \times 2/3 { f g f } \times 2/3 { bes g f } |
+    bes1\startTrillSpan |
+    bes |
+    bes |
+    bes |
+    bes |
+    bes |
+    bes |
+    bes |
+  }
+  \relative c'' {
+    r8\stopTrillSpan d r b r f' r e |
+    r c r aes r g'4 d8 |
   }
 }
 
@@ -781,14 +785,14 @@ alto = {
     ees4. bes8 \times 2/3 { g aes bes } g ees |
   }
   \relative c' {
-    r8 ees4 c8 bes ees f ees |
-    ges f4 ees8 ~ ees bes'4 g8 ~ |
-    g8 ees c g bes ees4 c8 |
-    aes c'8 r bes r aes r g ~ |
-    g g ees c bes bes'4 g8 |
-    f aes r g r f r f |
-    \times 2/3 { g gis a } bes g f d c bes |
-    ees c ges' f ees c bes c |
+    r8 ees d c bes \Red c bes aes |
+    g \Black f' ees d c \Red ees d c |
+    bes \Black g' f ees d \Red bes aes g |
+    f \Black ees' d c bes \Red c bes aes |
+    g \Black g' f ees <\tweak color #red bes d > \rred aes \rred g <\tweak color #red f d'> |
+    c' bes <\tweak color #red f aes> \rred ees \rred d <\tweak color #red c f'> ees' <\tweak color #red bes d> |
+    \rred aes <g \tweak color #red  ees'> <\tweak color #red f d'> <\tweak color #red aes c> <\tweak color #red g bes> <\tweak color #red f aes'> <\tweak color #red ees g'> <\tweak color #red d' f>
+    <\tweak color #red c ees> <\tweak color #red bes g'> <\tweak color #red aes f'> <\tweak color #red c ees> <\tweak color #red bes d> <\tweak color #red aes f'> <\tweak color #red g ees'> <\tweak color #red f d'>
   }
 }
 
@@ -879,14 +883,14 @@ tenor = \relative c {
     g d' r bes r f r d |
   }
   \relative c' {
-    g4 r8 ees r4 aes4 |
-    r8 f8 r4 bes4 r8 aes8 |
-    r4 g4 r8 c8 r4 |
-    aes4 r8 d r4 r8 c8 |
-    r4 bes r8 g r4 |
-    aes4 r8 f8 r4 c4 |
-    r8 bes' r4 g4 r8 f |
-    r4 ees r8 g r4 |
+    r2 r8 c bes aes |
+    g r8 r4 r8 ees d c |
+    bes r8 r4 r8 bes aes g |
+    f r8 r4 r8 c bes aes |
+    g r r4 bes8 aes g f |
+    r4 f8 ees d c r bes' |
+    aes g f aes g f ees d' |
+    c bes aes c bes aes g f |
   }
 }
 
@@ -1084,7 +1088,15 @@ bass = {
   }
   \transpose c c, \removeWithTag #'short \theme
   \relative c { aes g f | }
-  \relative c {
+  \relative c, {
+    ees4 f g ees |
+    f aes g f |
+    g ees bes' g |
+    f c' bes aes |
+    g d' fis, c' |
+    f, g aes c |
+    bes c aes bes |
+    g ees g bes |
   }
 }
 
