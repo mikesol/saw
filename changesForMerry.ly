@@ -135,8 +135,9 @@ melody = \relative c' {
   g ais, \times 2/3 { b d f } a8 g4 ais,8 |
   c b ees g f d c bes |
   ees f g e f aes c d |
+  %%%%%%%%%
   ees8 r ees r ees r r4 |
-  ees8 f4 ges8 ~ ges f8^\mordent ees c |
+  ees8 f ( ees ) ges8 ~ ges f8^\mordent ees c |
   ees ees c g bes ees f, g |
   aes f c' bes r c bes aes |
   g ees4 g8 bes ees4 c8 |
@@ -144,10 +145,10 @@ melody = \relative c' {
   g ees aes a bes ees, g f ~ |
   f ees^\mordent d ees e f ges g  |
   aes aes ges f ees f b, c |
-  \time 6/8
+  %\time 6/8
   aes4. aes4. |
   c4. c4. |
-  \time 4/4
+  %\time 4/4
   aes'8 aes ges f ees f b, c |
   aes4. aes8 ~ aes ees'8 d c |
   R1*31 |
@@ -492,16 +493,17 @@ I -- ni -- tia -- li -- za -- tion
 Au -- then -- ti -- fi -- ca -- tion
 Mis -- re -- pre -- sen -- ta -- tion
 I -- den -- ti -- fi -- ca -- tion
-Dis -- or -- ga -- ni -- sa -- tion
+Com -- mer -- cia -- li -- za -- tion
 Trans -- mo -- gri -- fi -- ca -- tion
 Pha -- ryn -- gea -- li -- za -- tion
 Me -- di -- ca -- men -- ta -- tion
 De -- ser -- ti -- fi -- ca -- tion
+
 not pro -- cras -- ti -- na -- tion
 Re -- har -- mo -- ni -- sa -- tion
 Dis -- qua -- li -- fi -- ca -- tion
 Ex -- pe -- ri -- men -- ta -- tion
-Com -- mer -- cia -- li -- za -- tion
+Dis -- or -- ga -- ni -- sa -- tion
 Syl -- la -- bi -- fi -- ca -- tion
 De -- hu -- ma -- ni -- za -- tion
 

@@ -193,6 +193,25 @@ bes8 r bes r bes r bes8 ~ | %bes r c bes aes g f |
 
   aes g ees c ~ c aes \times 2/3 { c ees f } |
     bes aes4 f8   d ais 
+    \times 2/3 { b d f } |
+  a8 g4 ais,8 \times 2/3 { b d f } a8 g ~ |
+  g ais, \times 2/3 { b d f } a8 g4 ais,8 |
+  \times 2/3 { b d f } a8 g8 ~ g8 ais,8 \times 2/3 { b d f } |
+  a8 g4 ais,8 \times 2/3 { b d f } a8 g ~ |
+  g ais, \times 2/3 { b d f } a8 g4 ais,8 |
+  \times 2/3 { b d f } a8 g8 ~ g8 ais,8 \times 2/3 { b d f } |
+  a8 g4 ais,8 \times 2/3 { b d f } a8 g ~ |
+  g ais, \times 2/3 { b d f } a8 g4 ais,8 |
+  \times 2/3 { b d f } a8 g8 ~ g8 ais,8 \times 2/3 { b d f } |
+  a8 g4 r8 r2 |
+  r2 r8 ais,8 \times 2/3 { b d f } |
+  a8 g4 b,8 \times 2/3 { cis e fis } b8 a ~ |
+  a ais, \times 2/3 { b d f } a8 g4 \times 4/5 { ais,8 b32 ~ |
+  b8.. \times 2/3 { d8 f a ~ a4 g8 ~ } g16 } ais,8 \times 2/3 { b d r } |
+  f8 \times 2/3 { r8 a8-- g-- }  ais,8-. \times 2/3 { b-. d-. f-. } a8-. g-. |
+  r8 g \times 2/3 { g g g } g8 g4 ais,8 |
+  c b ees g f d c bes |
+  ees f g e f aes c d |
 }
 
 jazzTwoAlt = \relative c' {
@@ -212,34 +231,29 @@ des8 r des r des r des8 ~ |
   f8 ees d c ~ c4 r4 |
       r8 g \times 2/3 { a c e } g fis4 a8 ~ |
 
-  a fis e d ~ \times 2/3 { d4 a' fis } |
-    \times 2/3 { e d4. g,8 } \times 2/3 { a c ees } g f |
+  a fis e d ~ \times 2/3 { d4 bes' g } |
+    \times 2/3 { fis d4. g,8 } \times 2/3 { a c ees } g f |
 
   ees d c aes ~ aes f \times 2/3 { aes c ees } |
-    g f4 d8   c f, 
-}
-
-jazzThree = \relative c' {
-
-    bes aes4 f8   d ais \times 2/3 { b d f } |
-  a8 g4 ais,8 \times 2/3 { b d f } a8 g ~ |
-  g ais, \times 2/3 { b d f } a8 g4 ais,8 |
-  \times 2/3 { b d f } a8 g8 ~ g8 ais,8 \times 2/3 { b d f } |
-  a8 g4 ais,8 \times 2/3 { b d f } a8 g ~ |
-  g ais, \times 2/3 { b d f } a8 g4 ais,8 |
-  \times 2/3 { b d f } a8 g8 ~ g8 ais,8 \times 2/3 { b d f } |
-  a8 g4 ais,8 \times 2/3 { b d f } a8 g ~ |
-  g ais, \times 2/3 { b d f } a8 g4 ais,8 |
-  \times 2/3 { b d f } a8 g8 ~ g8 ais,8 \times 2/3 { b d f } |
-  a8 g4 r8 r2 |
-  r2 r8 ais,8 \times 2/3 { b d f } |
-  a8 g4 b,8 \times 2/3 { cis e fis } b8 a ~ |
-  a ais, \times 2/3 { b d f } a8 g4 ais,8 |
-  \times 2/3 { b d f } a8 g8 ~ g8 ais,8 \times 2/3 { b d f } |
-  a8 g4 ais,8 \times 2/3 { b d f } a8 g ~ |
-  g ais, \times 2/3 { b d f } a8 g4 ais,8 |
-  c b ees g f d c bes |
-  ees f g e f aes c d |
+    g f4 d8   c fis, \times 2/3 { g b d } |
+  f8 e4 fis,8 \times 2/3 { g b d } fis e ~ |
+  e fis, \times 2/3 { g b d } f8 e4 fis,8 |
+  \times 2/3 { g b d } fis e8 ~ e8 fis,8 \times 2/3 { g b d } |
+  f8 e4 fis,8 \times 2/3 { g b d } fis e ~ |
+  e fis, \times 2/3 { g b d } f8 e4 fis,8 |
+  \times 2/3 { g b d } fis e8 ~ e8 fis,8 \times 2/3 { g b d } |
+  f8 e4 fis,8 \times 2/3 { g b d } fis e ~ |
+  e fis, \times 2/3 { g b d } f8 e4 fis,8 |
+  \times 2/3 { g b d } fis e8 ~ e8 fis,8 \times 2/3 { g b d } |
+  f8 e4 r8 r2 |
+  r2 r8 fis,8 \times 2/3 { g b d } |
+  f8 e4 g,8 \times 2/3 { a cis dis } gis8 fis ~ |
+  fis r8 r4 r4. \times 4/5 { fis,8 g32 ~ |
+  g8.. \times 2/3 { b8 d fis ~ fis4 e8 ~ } e16 } fis,8 \times 2/3 { g b d } |
+  f8 r e8-- fis,8-. \times 2/3 { g-. b-. d-. } fis-. e-. |
+  r g, \times 2/3 { g g g } g8 g4 r8 |
+  r4 c8 bes aes f ees d |
+  c d ees fis d d ees d |
 }
 
 jazzTwoWords = \lyricmode {
@@ -264,21 +278,22 @@ I -- ni -- tia -- li -- za -- tion
 Au -- then -- ti -- fi -- ca -- tion
 Mis -- re -- pre -- sen -- ta -- tion
 I -- den -- ti -- fi -- ca -- tion
-Dis -- or -- ga -- ni -- sa -- tion
+Com -- mer -- cia -- li -- za -- tion
 Trans -- mo -- gri -- fi -- ca -- tion
 Pha -- ryn -- gea -- li -- za -- tion
 Me -- di -- ca -- men -- ta -- tion
 De -- ser -- ti -- fi -- ca -- tion
 not pro -- cras -- ti -- na -- tion
 Re -- har -- mo -- ni -- sa -- tion
-Dis -- qua -- li -- fi -- ca -- tion
+\tag #'disqualification { Dis -- qua -- li -- fi -- ca -- tion }
 Ex -- pe -- ri -- men -- ta -- tion
-Com -- mer -- cia -- li -- za -- tion
+%%%%
+Dis -- or -- ga -- ni -- sa -- tion
 Syl -- la -- bi -- fi -- ca -- tion
 De -- hu -- ma -- ni -- za -- tion
 
 
-while ad -- ding che -- mi -- lu -- mi -- nes -- cence
+\tag #'disqualification { while ad -- ding } che -- mi -- lu -- mi -- nes -- cence
 al -- so fun -- da -- men -- ta -- li -- sm
 }
 
@@ -313,14 +328,32 @@ soprano = { %\autoBeamOff
     r8 a8 a a aes r8 r4 |
     r8 c c c b r r4 |
     r8 b \times 2/3 { b b b } bes bes aes aes |
-    g r \times 2/3 { bes bes bes } a a a aes ~ |
+    g r \times 2/3 { g g g } bes bes bes aes ~ |
     aes r \times 2/3 { aes aes aes } c c c c |
-    bes bes bes bes a a a aes ~ |
-    aes aes aes aes c c c c |
-    bes bes bes bes d d d d |
-    c c c ces r ces4 ces8 |
-    bes bes \times 2/3 { bes bes bes } aes bes aes g ~ |
-    g r r4 r2 |
+    bes bes bes bes d d d c ~ |
+    c c c c ces ces ces ces |
+    bes bes bes bes beses beses beses beses |
+    aes aes g f r f4 f8 |
+    g g \times 2/3 { g g g } aes d, f g ~ |
+    g 
+  }
+  \jazzTwo
+  \relative c'' {
+    ees8 r ees r ees r r4 |
+    ees8 f ( ees ) ges8 ~ ges f8^\mordent ees c |
+    ees ees c g bes ees f, g |
+    aes f c' bes r c bes aes |
+    g ees4 c8 bes' g4 c8 |
+    r aes4 ees'8 ~ ees c bes aes |
+    bes ees, c' b bes ees, d f ~ |
+    f ees^\mordent d ees e f ges g  |
+    aes aes ges f ees f b, c |
+    %\time 6/8
+    aes4. aes4. |
+    R2. |
+    %\time 4/4
+    aes'8 aes ges f ees f b, c |
+    aes4. aes8 ~ aes ees'8 d c |
   }
 }
 
@@ -329,6 +362,8 @@ sopranoWords = \lyricmode {
   \antiphonal
   door
   \jazzOneChaser
+  \jazzTwoWords
+  \hothothot
 }
 
 mezzo = {
@@ -352,14 +387,56 @@ mezzo = {
     r8 fis fis fis f r8 r4 |
     r8 aes aes aes g r r4 |
     r8 aes \times 2/3 { aes aes aes } g g f d |
-    ees r8 \times 2/3 { g g g } ges ges ges f ~ |
-    f r \times 2/3 { f f f } aes aes bes aes |
+    ees r8 \times 2/3 { ees ees ees } ges ges ges f ~ |
+    f r \times 2/3 { f f f } aes aes aes aes |
     g g g g ges ges ges f ~ |
     f f f f aes aes aes aes |
-    g g g g bes bes bes bes |
-    aes aes aes aes r aes4 aes8 |
-    g g \times 2/3 { g g g } f g f ees ~ |
-    ees
+    g g g g ges ges ges ges |
+    f f ees c r ees4 ees8 |
+    ees ees \times 2/3 { ees ees ees } d bes d ees ~ |
+    ees r8 r4 r2 |
+    R1*8 |
+    ees2 g |
+    a fis |
+    b e |
+    g fis |
+    f8 e r ees d des r4 |
+    r8 c b bes r2 |
+    r8 a aes g r2 |
+    r4 r8 fis f e r4 |
+    r2. r8 ees |
+    d des r4 r2 |
+    r2 r8 c b bes |
+    R1 |
+    r2 r8 a aes g |
+    R1 |
+    r2. r8 ges |
+    f e r4 r2 |
+    R1 |
+    r4. f8 fis g r4 |
+    R1 |
+    R1 |
+    r8 gis a bes r2 |
+    R1 |
+    r2 d8 bes aes g |
+    bes bes ees ces bes f' g f |
+  }
+  \relative c'' {
+    bes8 r c r bes r r4 |
+    c8 des4 c8 ~ c c bes aes |
+    g g ees ees g g d ees |
+    c c aes' ees r aes g f |
+    ees8 c4 g8 g' ees4 aes8 |
+    r f4 c'8 ~ c aes g f |
+    g g aes g g ees d d ~ |
+    d c^\mordent b des c ees d des |
+    c c ees des c des g, g |
+    \time 6/8
+    f4. f4. |
+    c'4. c4. |
+    \time 4/4
+    r2 c8 c ges' f |
+    ees f b, c aes4. aes8 |
   }
 }
 
@@ -367,20 +444,64 @@ mezzoWords = \lyricmode {
   \badbadboy
   \antiphonal
   door
+  \jazzOneChaser
+  \hothothot
 }
 
 alto = {
   \prefatoryMatter
   R1*7
   \jazzOne
-  \jazzTwo
+  \relative c' {
+    r8 r4 r2 |
+    R1*8 |
+    c2 e |
+    ees d |
+    f g |
+    c dis |
+    d8 des r c b bes r4 |
+    r8 a aes g r2 |
+    r8 ges f e r2 |
+    r4 r8 ees d des r4 |
+    r2. r8 c |
+    b bes r4 r2 |
+    r2 r8 a aes g |
+    \clef "treble_8"  
+    R1 |
+    r2 r8 ges f e |
+    R1 |
+    r2. r8 ees8 |
+    d des r4 r2 |
+    R1 |
+    r4. d8 ees e r4 |
+    R1 |
+    R1 |
+    r8 f fis g r2 |
+    R1 |
+    r2. f8 f8 |
+    g g bes aes g bes bes aes |
+    \clef treble |
+    g'8 r aes r g r r4 |
+    ges8 aes ( ges ) beses8 ~ beses aes8 ges f |
+    ees ees \clef "treble_8" g, bes g g aes g |
+    f f f aes r aes bes c |
+    c g4 g8 ees g4 aes8 |
+    r8 c4 aes8 ~ aes8 c8 d ees |
+    d c ees ees ees c c bes ~ |
+    bes a aes bes a c b bes |
+    aes aes bes g aes aes ees ees |
+    ees4. ees |
+    ges ges |
+    r2. aes8 aes |
+    ges f ees f b c aes4 |
+  }
 }
 
 altoWords = \lyricmode {
   \jazzOneWords
   \jazzWordsStaggerOne
   \jazzOneChaser
-  \jazzTwoWords
+  \hothothot
 }
 
 tenor = \relative c {
@@ -391,7 +512,7 @@ tenor = \relative c {
   \transpose c c, \jazzOneAlt
   \relative c' {
     r8 b b c r c \times 2/3 { c c c } |
-    cis r8 r4 r2 |
+    c r8 r4 r2 |
     r8 d d cis r cis4 d8 ~ |
     % undecided tie
     d d r4 r2 |
@@ -401,13 +522,22 @@ tenor = \relative c {
   }
   \removeWithTag #'long \theme
   \jazzTwoAlt
+  \removeWithTag #'long \theme
+  \relative c {
+    r8 f4 g aes8 bes |
+    c ees r4 r2 |
+    R2. R2.
+    r4 ees,8 ees ges f ees f |
+    b8 c aes4 ~ aes8 aes4 ees'8 |
+  }
+  \removeWithTag #'long { \removeWithTag #'short \theme }
 }
 
 tenorWords = \lyricmode {
   \jazzOneWords
   \antiphonal
   \themeWords
-  \jazzTwoWords
+  \removeWithTag #'disqualification \jazzTwoWords
 }
 
 melTwoFullClean = \relative c {
@@ -472,9 +602,9 @@ bass = {
     g bes |
     aes ces |
     bes d |
-    c ges |
-    f a |
-    bes aes |
+    c4 g aes ges |
+    f a c a |
+    bes g f aes |
     g4 b d e |
     f e d b |
       c e g a |
@@ -483,8 +613,44 @@ bass = {
     ees d c a |
       bes d f e |
       ees ces bes d |
-
-  %{
+  ees2 g, |
+  aes a |
+  bes b |
+  c ges |
+  f a |
+  bes e, |
+  ees4 g f aes |
+  g bes aes f |
+  ees8 r r4 r4 ees8 r |
+  aes4 r8 aes ~ aes4 r4 |
+  g4 r8 g ~ g4 r4 |
+  aes4 r8 f ~ f4 r |
+  g4 r8 g ~ g4 r4 |
+  aes4 r8 f ~ f4 r |
+  bes4 r bes r
+  ees8 ees8 r ees, f4 g |
+  aes2. r4 |
+  R2. |
+  R2. |
+  R1 |
+  aes8 aes aes aes c ees d c |
+  bes8 r bes r bes4 r |
+  bes8 bes4 bes8 ~ bes bes bes bes |
+  bes bes bes4 bes8 bes4 bes8 ~ |
+  bes8 bes4 c8 bes aes4 r8 |
+  r g4 g8 ees8 r4 aes8 |
+  r4. a8 r f4 f8 |
+  bes8 bes aes bes g ees c bes |
+  R1 |
+  r8 ees r ees' \times 2/3 { ees, g bes } ees g, |
+  aes f c' bes ~ bes c bes aes |
+  r8 g4 ees8 aes ees a bes ~ |
+  bes ees, \times 2/3 { g aes bes } c8 bes aes f |
+  \times 2/3 { g4 ees' g, } \times 2/3 { aes ees' aes, } |
+  \times 2/3 { a ees' a, } \times 2/3 { bes ees c } |
+  bes8 ees, g bes a aes g ges |
+  f e r4 r2 |
+  
     << \new Staff \with {alignAboveContext="realBass" } \new Voice = "tempBassVoice" { \clef bass \maybeStemDown \melTwoFullClean \maybeStemNeutral }
       \new Lyrics \with { alignAboveContext="realBass" }  \lyricsto "tempBassVoice" { \lyricmode {
     ha ha
@@ -549,7 +715,6 @@ bass = {
     a aes e' g, |
     f' g, ges ees' |
     d c bes aes |
-  %}
   }
 }
 
