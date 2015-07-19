@@ -401,6 +401,12 @@ subF = \markup { \center-align \concat {
 
 subFdynamic = #(make-dynamic-script subF)
 
+submF = \markup { \center-align \concat {
+\normal-text { \bold { \italic sub } }
+\dynamic mf } }
+
+submFdynamic = #(make-dynamic-script submF)
+
 subP = \markup { \center-align
 \normal-text { \italic { \italic sub } }
 \dynamic p }
