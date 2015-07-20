@@ -145,7 +145,7 @@ In the mer -- ry old land of \tag #'oz { Oz }
 jazzOneWords = \lyricmode {
   Oz
   He was a be -- lie -- ver
-  Hi -- de -- ous -- ly ab -- rupt
+  Hi -- de -- ous -- ly ro -- bust
   Would -- n't help with your re -- gres -- sion
   Ne -- fa -- ri -- ous ar -- tist,
   Ma -- le -- vo -- lent tramp,
@@ -312,27 +312,27 @@ fuckingCrazy = \relative c'' {
 }
 iHateMyLife = \relative c' {
   g4^\f g8 ~ |
-  g4 ~ \times 2/3 { g4 ees8 } c16 ees16 g cis \times 2/3 { fis4 a8 } | %1
-  \times 2/3 { c4 d8 } \times 2/3 { r4 a8 } fis16 g a c ees8 ees | %2
-  ees8. a,16    bes d bes g    a aes ees d   dis e f fis | %3
+  g4 ~ \times 2/3 { g4 ees8 } c16 ees16 g cis \times 2/3 { fis4 a,8 } | %1
+  \times 2/3 { c4 d8 } \times 2/3 { r4 a8 } fis16 g a c e8 e | %2
+  e8. a,16    bes d bes g    a aes ees d   dis e f fis | %3
   g8. ees16 \times 2/3 { des8 g a } \times 2/3 { bes8 a8 aes } \times 2/3 { r4 c8 } | % 4
   \times 8/9 { c4 f,16 a  g a aes ees   c d f gis   a8 a } | %5
   a8. gis16    a g f d   \times 2/3 { ees8 f a }   c8 r16 g | %6
   \times 2/3 { a8 b cis } c16 b bes fis \times 2/3  { f8 ees c } \times 2/3 { cis8 r8 a' } | % 7
-  g16 gis e16 d    gis, b cis e   fis g d b   g a b dis | %8
-  e16 r8. \times 2/3 { a4 fis8 } e16 d bes r \times 2/3 { r8 bes'8 g8 } | % 9
-  f16 d c bes \times 2/3 { g8 r f } \times 4/5 { g16 bes d g8 g g r16 } | % 10
-  r gis16 a fis16    e d b a     bes c d e    \times 2/3 { f8 fis8 g } | % 11
-  \times 2/3 { r8 c,8 d } \times 2/3 { f g a, } \times 2/3 { bes c d } \times 2/3 { f g a, } | % 12
-  bes16 c d f    \times 2/3 { b8 a e8 } f16 fis g e   c b bes d | % 13
-  e8 r16 gis,16    a b cis e   \times 8/9 { a8 gis   e16 f e b a } | % 14
-  d16 r cis16 g  \times 2/3 { a8 b cis } \times 2/3 { fis fis fis } \times 2/3 { r8 gis4 } | % 15
-  fis16 c b dis   e b bes d   ees8. fis16    gis, ais b d | % 16
-  \times 2/3 { dis8 cis r }   r16 g aes bes   c ees f aes   des4 ~ | % 17
-  des4 ces8. r16 \times 4/7 { ees,8 e g b d4 c8 } | % 18
-  bes16 g f ees    bes c ees f   a2 ~ | % 19
-  a8 bes4. ~ bes4. aes8 ~ | % 20
-  \times 8/9 { aes8. g16   aes16 c f, ees   c d dis e   f8 r16 c16 d f } | % 21
+  b16 c a16 f    e ees g bes   a aes g fis   f e g a | %8
+  fis16 r8. \times 2/3 { cis'4 b8 } g16 fis f r \times 2/3 { r8 d'8 b8 } | % 9
+  bes16 a aes g \times 2/3 { e8 r ees } \times 4/5 { d16 g a b8 b b r16 } | % 10
+  r ais16 b c16    b bes g fis     gis a bes b    \times 2/3 { c8 d8 e } | % 11
+  \times 2/3 { r8 a,8 c } \times 2/3 { d e fis, } \times 2/3 { gis a c } \times 2/3 { d e f, } | % 12
+  g16 aes bes d    \times 2/3 { dis8 c b8 } a16 ais b fis   gis g fis b | % 13
+  d8 r16 e,16    fis gis b cis   \times 8/9 { fis8 c   gis16 a gis fis f } | % 14
+  e16 r b'16 e,  \times 2/3 { fis8 a b } \times 2/3 { c c c } \times 2/3 { r8 cis4 } | % 15
+  a16 fis d g   gis g fis f   c8. d16    e fis g b | % 16
+  \times 2/3 { c8 bes r }   r16 e, f fis   ais c d f,   bes4 ~ | % 17
+  bes4 aes8. r16 \times 4/7 { c,8 cis e g b4 bes8 } | % 18
+  fis16 f aes g    d e fis gis   c2 ~ | % 19
+  c8 d4. ~ d4. c8 ~ | % 20
+  \times 8/9 { c8. g16   aes16 c f, ees   c d dis e   f8 r16 c16 d f } | % 21
   fis16 r g8 g g   aes16 c g f   b, c d dis | % 22
   %%%%e8 r16 b   cis dis e fis     \times 4/5 { gis16 gis, a b   c cis d dis e r } | % 23
   e8 r16 b   cis dis e fis     gis16 gis, a b   cis dis e r | % 23
@@ -1078,9 +1078,8 @@ tenor = \relative c {
     aes^\< a |
     des b8
   }
-  \clef "bass"
-  \removeWithTag #'alto { \iHateMyLife }
   \clef "treble_8"
+  \removeWithTag #'alto { \iHateMyLife }
   \keepWithTag #'short \theme
   \relative c' { 
     r8 r4 r2 |
