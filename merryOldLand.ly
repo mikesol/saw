@@ -50,7 +50,21 @@ marks = {
   \set Score.tempoWholesPerMinute = #(ly:make-moment 200 4 0 0)
   s1*32 |
   \mark "reswung"
-  \repeat unfold 24 { \repeat unfold 4 { \unfoldSwing #200 } }
+  \repeat unfold 15 { \repeat unfold 4 { \unfoldSwing #200 } }
+  \repeat unfold 2 { \unfoldSwing #200 }
+  \mark "unswung"
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 200 4 0 0)
+  s2
+  \mark "reswung"
+  \repeat unfold 2 { \repeat unfold 4 { \unfoldSwing #200 } }
+  \mark "unswung"
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 200 4 0 0)
+  s1*2
+  \mark "reswung"
+  \repeat unfold 1 { \repeat unfold 4 { \unfoldSwing #200 } }
+  \mark "unswung"
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 200 4 0 0)
+  s1*2 \bar "|."
 }
 
 prefatoryMatter = {
@@ -75,9 +89,10 @@ jazzOne = \relative c' {
   g8 bes %} r8 r4 r2 | r4 g'8 ges f ees c g |
   aes %{ c d c f %} r8 r4 r8 d c g |
   aes %{ r8 r4 | r8 %} %{ ees f ees g %} r8 r4 r8 aes' g  ges8 |
-  f %{ r8 r4 | r8 b \times 2/3 { g ges f } d %} r8 r4 r8 c bes ges |
+  f %{ r8 r4 | r8 b \times 2/3 { g ges f } d %} r8 r4 \clef "treble_8" r8 c bes fis |
   g r \times 2/3 { ees g bes } d ees, des' c ~ |
   c r \times 2/3 { f, aes c } g' c, f ees |
+  \clef "treble"
   g bes g ees d bes des c ~ |
   c g' f ees c aes g f |
   g bes f' ees d c bes g |
@@ -112,6 +127,13 @@ theme = \relative c {
   \tag #'none { }
 }
 
+endlick = \lyricmode {
+  Ha ha ha ho ho ho
+  and a coup -- le of tra la las
+  ba da ba da ba
+  that's how we laugh the day a -- way in the mer -- ry old land of Oz.
+}
+
 themeWords = \lyricmode {
 Ha ha ha
 Ho ho ho
@@ -122,8 +144,8 @@ In the mer -- ry old land of \tag #'oz { Oz }
 
 jazzOneWords = \lyricmode {
   Oz
-  Oh what a de -- cei -- ver,
-  Hi -- de -- ous -- ly un -- kind,
+  He was a be -- lie -- ver
+  Hi -- de -- ous -- ly ab -- rupt
   Would -- n't help with your re -- gres -- sion
   Ne -- fa -- ri -- ous ar -- tist,
   Ma -- le -- vo -- lent tramp,
@@ -131,7 +153,7 @@ jazzOneWords = \lyricmode {
   A shrewd en -- chan -- ter
   Un -- can -- ny, wic -- ked gent
   Vile im -- pos -- ter
-  No more than a gut -- ter -- snipe
+  No more than a cut -- ting Tom
 }
 jazzWordsStaggerOne = \lyricmode {
   A fe -- lo -- ny was re -- por -- ted af
@@ -142,10 +164,10 @@ jazzWordsStaggerOne = \lyricmode {
       %-- ru -- lent fac that he a --
   lone would tra -- vel to re -- mar
      %-- ka -- ble in -- cin --
-  di -- a -- ry spa
-     %--ces lu -- ring fi
-  re men from safe
-      %--ty be -- ckon -- ing child --
+  di -- a -- ry cor
+     %--ners sha -- ving mas
+  to -- dons and un
+      %--cles be -- ckon -- ing child --
   ren to the door.
 }
 jazzOneChaser = \lyricmode {
@@ -164,14 +186,14 @@ badbadboy = \lyricmode {
   Down
   Deft
   Doub -- ting
-  gut -- ter -- snipe
+  cut -- ting Tom
 }
 antiphonal = \lyricmode {
   ter -- he -- left and ev -- 'ry -- one doub
   lain -- ous fact that he a
   ka -- ble in -- cin
-  ces lu -- ring fi
-  ty be -- con -- ing chil -- dren to the
+  ners sha -- ving mas
+  cles be -- con -- ing chil -- dren to the
 }
 jazzTwo = \relative c'' {
   bes8->^\f r bes-> r bes-> r bes8-> ~ |
@@ -268,6 +290,35 @@ fuckingCrazy = \relative c'' {
   \times 8/9 { bes4 a16 c  bes f des c   a b d f   g8 g } | %5
   g8. b16    f e d b   \times 2/3 { g8 a cis }   e8 r16 b | %6
   \times 2/3 { fis'8 gis a } e16 d c a \times 2/3  { b8 c dis } \times 2/3 { e8 r8 fis } | % 7
+  g16 gis e16 d    gis, b cis e   fis g d b   g a b dis | %8
+  e16 r8. \times 2/3 { a4 fis8 } e16 d bes r \times 2/3 { r8 bes'8 g8 } | % 9
+  f16 d c bes \times 2/3 { g8 r f } \times 4/5 { g16 bes d g8 g g r16 } | % 10
+  r gis16 a fis16    e d b a     bes c d e    \times 2/3 { f8 fis8 g } | % 11
+  \times 2/3 { r8 c,8 d } \times 2/3 { f g a, } \times 2/3 { bes c d } \times 2/3 { f g a, } | % 12
+  bes16 c d f    \times 2/3 { b8 a e8 } f16 fis g e   c b bes d | % 13
+  e8 r16 gis,16    a b cis e   \times 8/9 { a8 gis   e16 f e b a } | % 14
+  d16 r cis16 g  \times 2/3 { a8 b cis } \times 2/3 { fis fis fis } \times 2/3 { r8 gis4 } | % 15
+  fis16 c b dis   e b bes d   ees8. fis16    gis, ais b d | % 16
+  \times 2/3 { dis8 cis r }   r16 g aes bes   c ees f aes   des4 ~ | % 17
+  des4 ces8. r16 \times 4/7 { ees,8 e g b d4 c8 } | % 18
+  bes16 g f ees    bes c ees f   a2 ~ | % 19
+  a8 bes4. ~ bes4. aes8 ~ | % 20
+  \times 8/9 { aes8. g16   aes16 c f, ees   c d dis e   f8 r16 c16 d f } | % 21
+  fis16 r g8 g g   aes16 c g f   b, c d dis | % 22
+  %%%%e8 r16 b   cis dis e fis     \times 4/5 { gis16 gis, a b   c cis d dis e r } | % 23
+  e8 r16 b   cis dis e fis     gis16 gis, a b   cis dis e r | % 23
+  r a, bes e    aes8. ges16   des16 c aes f   e fis gis b | % 25
+  %%%%\times 8/9 { d8. c16 bes16 g f ees   e fis gis ais   c8 r16 f,16   a c } | % 26
+}
+iHateMyLife = \relative c' {
+  g4^\f g8 ~ |
+  g4 ~ \times 2/3 { g4 ees8 } c16 ees16 g cis \times 2/3 { fis4 a8 } | %1
+  \times 2/3 { c4 d8 } \times 2/3 { r4 a8 } fis16 g a c ees8 ees | %2
+  ees8. a,16    bes d bes g    a aes ees d   dis e f fis | %3
+  g8. ees16 \times 2/3 { des8 g a } \times 2/3 { bes8 a8 aes } \times 2/3 { r4 c8 } | % 4
+  \times 8/9 { c4 f,16 a  g a aes ees   c d f gis   a8 a } | %5
+  a8. gis16    a g f d   \times 2/3 { ees8 f a }   c8 r16 g | %6
+  \times 2/3 { a8 b cis } c16 b bes fis \times 2/3  { f8 ees c } \times 2/3 { cis8 r8 a' } | % 7
   g16 gis e16 d    gis, b cis e   fis g d b   g a b dis | %8
   e16 r8. \times 2/3 { a4 fis8 } e16 d bes r \times 2/3 { r8 bes'8 g8 } | % 9
   f16 d c bes \times 2/3 { g8 r f } \times 4/5 { g16 bes d g8 g g r16 } | % 10
@@ -552,13 +603,14 @@ soprano = { %\autoBeamOff
     g r4 r2 |
     r4 ees'4^\< ~ ees2 |
   }
+  %% CPTSOP
   \relative c'' {
     ees4.^\f bes8 \times 2/3 { g aes bes } g ees |
-    bes' aes4 f8 aes c bes aes |
-    g bes f' ees d c bes g |
-    aes c g' f r ees r d |
-    r8 ees4 bes8 \times 2/3 { g aes bes } g ees |
-    bes' aes8 f g aes bes c aes |
+    bes' aes g ees c f4 f8 |
+    ees ees ees4 g8 bes4 aes8 ~ |
+    aes2 r8 ees' r d |
+    c8 bes aes f g ees4 g8 |
+    f8 f bes aes c bes ees c |
     g bes \times 2/3 { des c b } bes g f bes |
     g ees aes g ~ g des' c bes |
   }
@@ -570,11 +622,16 @@ soprano = { %\autoBeamOff
     bes |
     bes |
     bes |
-    bes |
+    bes4\stopTrillSpan r4 \times 2/3 { c4 c8 } bes4 |
   }
   \relative c'' {
-    r8\stopTrillSpan d r b r f' r e |
-    r c r aes r g'4 d8 |
+    r8\stopTrillSpan d r bes r f' r e |
+    r c r a r g'4 b,8 |
+    \times 2/3 { d4 c g } \times 2/3 { b f a }
+    ees8 g bes d c e r4 |
+    r8 fis, r ees bes' r cis a |
+    c b e, bes' aes g a ges |
+    \times 2/3 { f4 gis'8 ~ } gis4 ~ gis4... r32 |
   }
 }
 
@@ -594,13 +651,13 @@ sopranoWords = \lyricmode {
   So strong I can't con -- tain it now
   \no
   He was sco -- ur -- ing through the at -- tic
-  in or -- der to un -- veil
-  an ab -- so -- lute -- ly un -- be -- lieve -- a -- ble wond -- rous find
-  He could al -- so be called fa -- na -- tic
-  re -- vo -- lu -- tion -- a -- ry
-  find he's one of a kind, the wiz of
-  Oz the wi -- zard, wi -- zard of Oz __ _ _ _ _ _ _ _ 
-  Ha ha ha ho ho ho
+  sing -- ing tunes and a cou -- ple of tra la las
+  know -- ing
+  ev -- 'ry thing he wished for came true
+  he had to leave it all be -- hind
+  he's one of a kind, the wiz of
+  Oz the wi -- zard, wi -- zard of Oz __ _ _ _ _ _ _ _ mer -- ry old
+  \endlick
 }
 
 mezzo = {
@@ -614,7 +671,7 @@ mezzo = {
     r4. gis8-^-. r2 |
     r4 c,4-^-. r2 |
     r8 d4-^-. r8 r4 e4-^-. |
-    r4. e8^\mf^\< r ees4 cis8^\f ~ |
+    r4. fis8^\mf^\< r ees4 cis8^\f ~ |
     cis1-\bendAfter #-3
     << { 
       r8 e e dis r dis \times 2/3 { dis dis dis } |
@@ -643,17 +700,20 @@ mezzo = {
     R1 |
     r8 a aes g r2 |
     R1 |
-    r2. r8 ees |
+    f8-> f-> r4 r4 r8 ees |
     d cis r4 r2 |
+    d'8-> d-> r4 r2 |
+    R1 |
+    c8-> c->
+       \clef "treble_8"
+       r4 r8 a, gis g |
+    R1 |
+    \clef "treble"
+    cis'8-> cis-> r4 r2 |
     R1 |
     R1 |
     \clef "treble_8"
-    r2 r8 a gis g |
-    R1 |
-    R1 |
-    R1 |
-    R1 |
-    r4. ees8 d des r4 |
+    r4. ees,,8 d des r4 |
     R1 |
     R1 |
     R1 |
@@ -732,17 +792,26 @@ mezzo = {
   }
   \relative c' {
     r8 fis8^\f r g r bes r c |
-    r aes r ees' d c bes g |
+    aes8 bes4 g8 ~ g c bes g |
     ees'4. bes8 \times 2/3 { g aes bes } g ees |
-    bes' aes8 f g aes c bes aes |
+    d' c8 f, g aes c bes aes |
     \times 2/3 { g4 ees bes' } \times 2/3 { g d' bes } |
     aes8 g f g aes bes c d |
     ees4. bes8 \times 2/3 { g aes bes } g ees |
-    bes' a c bes aes g f bes |
+    aes' g f ees d c bes d |
   }
   \transpose c c'' \keepWithTag #'none \theme
   \relative c'' {
     ees1^\trill |
+  }
+  \relative c'' {
+    r8 bes r fis r c' r b |
+    r g r fis r bes4 fis8 |
+    \times 2/3 { b4 gis d } \times 2/3 { fis d fis }
+    c8 e fis gis g a r4
+    r8 d, r ces ges' r8 aes g |
+    ges g cis, f e c fis d |
+    \times 2/3 { des4 c'8 ~ } c4 ~ c4... r32 |
   }
 }
 
@@ -757,9 +826,13 @@ mezzoWords = \lyricmode {
   %and spon -- gy % mike
   and lun -- gi % marie
   %and pun -- gy % mike
+  tot -- ter
   and jun -- ji % marie
+  tad -- dle
   %and dun -- gey % mike
+  dot -- ter
   and fun -- gi % marie
+  dad -- dle
   %it's fun -- "ghi" % mike
   you're stu -- pid % marie
   %I'm lea -- ving % mike
@@ -774,13 +847,16 @@ mezzoWords = \lyricmode {
   Think some -- thing's bur -- ning in my heart
   So strong I can't con -- tain it now
   \no
-  Un -- like a cat he went scu -- ba di -- ving
+  He's bel -- low -- ing
+  Ho ho ho
+  while di -- ving
   He's a fan of the life ac -- qu -- atic
   He would take me on a jour -- ney throgh en -- chan -- ted
   wa -- ters but it was -- n't fun cause
   He's un -- for -- tu -- nate -- ly er -- ra -- tic
   Like Mike So -- lo -- mon, oh
   \keepWithTag #'oz \themeWords
+  \endlick
 }
 
 %% He was sco -- ur -- ing through the at -- tic
@@ -803,19 +879,20 @@ alto = {
     c2^\p^\< e |
     ees^\> d |
     f^\< g |
-    c^\> dis |
+    c^\f^\> dis |
     d8 des^\mf r4 r2 |
     r8 c b bes r2 |
     R1 |
     r4 r8 ges f e r4 |
+    d8-> d-> r4 r2 |
     R1 |
+    bes'8-> bes-> r4 r8 c, b bes |
     R1 |
-    r2 r8 c b bes |
+    a'8-> a-> r4 r2 |
     R1 |
-    R1 |
-    R1 |
+    a8-> a-> r4
     \clef "treble_8"
-    r2. r8 ges8 |
+      r4 r8 ges,8 |
     f e r4 r2 |
     R1 |
     R1 |
@@ -839,7 +916,7 @@ alto = {
   \relative c' {
     R1\! R1*8
     \clef "treble"
-    c1^\p ( ~ c  d^\< ~ d c^\> ~ c ) |
+    c1^\p ( ~ c  d^\< ~ d c^\> c ) |
     R1\! R1*2 |
     d8^\mf d r4 r2 |
     R1*2 |
@@ -861,25 +938,34 @@ alto = {
   \removeWithTag #'tenor \slightlyLessCrazy
   \relative c'' {
     g8 bes8 r bes r g f ees |
-    f c4 aes'8 g e f d |
+    f c4 ees8 g e f d |
     \clef "treble_8"
-    des c bes g bes ees g, ees |
-    ees'4. bes8 \times 2/3 { g aes bes } g ees |
-    bes' aes f ees f ees4 des8 |
-    c8 aes \times 2/3 { c ees f } bes aes4 bes8 |
-    g ees d bes bes' g8 ~ g4  |
-    ees'4. bes8 \times 2/3 { g aes bes } g ees |
+    c d ees g, bes ees g, bes |
+    ees4. bes8 \times 2/3 { g aes bes } g ees |
+    ees' d c bes f' ees4 des8 |
+    c8 d4 ees8 ~ ees aes,4 aes8 |
+    g g bes4 \times 2/3 { c4 d bes } |
+    ees4. bes8 \times 2/3 { g aes bes } g ees |
   }
-  \relative c' {
-    %r8 ees d c bes r8 r4 |
-    bes8 ees d c bes r8 r4 |
+  \relative c'' {
+    bes8 ees, d c bes r8 r4 |
     r8 f' ees d c r r4 |
     r8 g' f ees d r r4 |
     r8 ees8 d c bes r8 r4 |
     r8 g' f ees d r8 r d |
     c bes aes r r f' ees d |
     c ees d c bes aes' g f |
-    ees g f ees d f ees d |
+    ees g f ees d d d d %f ees d |
+  }
+  \relative c'' {
+    \clef treble
+    r8 g r e r aes r fis |
+    r d r cis r e4 ees8 |
+    \times 2/3 { e4 fis c } \times 2/3 { e bes e }
+    c8 cis d e f fis r4
+    r8 c r8 aes fes' r8 ees e |
+    ees e b d ees a, cis bes |
+    \times 2/3 { g4 a'8 ~ } a4 ~ a4... r32 |
   }
 }
 
@@ -893,8 +979,12 @@ altoWords = \lyricmode {
   and spon -- gy % mike
   %and lun -- gi % marie
   and pun -- gy % mike
+  tot -- ter
   %and jun -- ji % marie
+  tad -- dle
   and dun -- gey % mike
+  dot -- ter
+  dad -- dle
   %and fun -- gi % marie
   it's fun -- "ghi" % mike
   %you're stu -- pid % marie
@@ -913,9 +1003,10 @@ altoWords = \lyricmode {
   Yup yup the wi -- zard fain -- ted
   Be -- cause of all the smoke e -- mer -- ging from his cham -- bers
   He was pan -- ting like an asth -- ma -- tic
-  It was fright -- ning
-  He burst out fas -- ter than light -- ning
-  I feel my mus -- cles tight -- ning
+  He was spen -- ding the
+  day a -- way in the mer -- ri -- est place I know
+     %burst out fas -- ter than light -- ning
+     %I feel my mus -- cles tight -- ning
   He is ma -- king me quite ec -- sta -- tic
   o -- ver -- come
   I'm o -- ver -- dosed
@@ -927,8 +1018,8 @@ altoWords = \lyricmode {
   I'm o -- ver -- ruled
   I'm o -- ver -- hauled
   I'm o -- ver -- blown
-  I'm o -- ver
-
+  no no no
+  \endlick
 }
 
 tenor = \relative c {
@@ -987,19 +1078,22 @@ tenor = \relative c {
     aes^\< a |
     des b8
   }
-  \removeWithTag #'alto { \transpose c c, \fuckingCrazy }
+  \clef "bass"
+  \removeWithTag #'alto { \iHateMyLife }
+  \clef "treble_8"
   \keepWithTag #'short \theme
   \relative c' { 
     r8 r4 r2 |
   }
+  %% CPTTEN
   \relative c' {
     bes8 r c4 bes g |
     ees'4. bes8 \times 2/3 { g aes bes } g ees |
-    bes' aes8 g f c' bes aes g |
-    f' ees d c bes aes g' d |
-    f8 ees4 bes8 des c bes g |
-    ees'4. bes8 \times 2/3 { g aes bes } g ees |
-    bes'8 aes f c' r bes r aes |
+    c' bes8 aes f d' c bes f |
+    f' ees d c bes aes r c |
+    r ees, r g bes4 ees |
+    ees4. bes8 \times 2/3 { g aes bes } g ees |
+    g'8 f d c r bes r aes |
     g d' r bes r f r d |
   }
   \relative c' {
@@ -1010,7 +1104,16 @@ tenor = \relative c {
     g r r4 bes8 aes g f |
     r4 f8 ees d c r bes' |
     aes g f aes g f ees d' |
-    c bes aes c bes aes g f |
+    c bes aes c \times 2/3 { bes4 aes8 } \times 2/3 { g4 f8 } |
+  }
+  \relative c' {
+    r8 c r cis r d r des |
+    r bes r b r gis4 cis8 |
+    \times 2/3 { c4 cis aes } \times 2/3 { cis g c }
+    bes8 a b bes ees cis r4
+    r8 bes r8 f c' r8 a c |
+    bes c f, aes b e, d aes' |
+    \times 2/3 { g4 d'8 ~ } d4 ~ d4... r32 |
   }
 }
 
@@ -1029,11 +1132,11 @@ tenorWords = \lyricmode {
   So strong I can't con -- tain it
   \yes
   \themeWords
-  A mea -- nie
+  ? A mea -- nie
   His de -- ri -- sion was sys -- te -- ma -- tic
   he was un -- der -- mi -- ning
-  ef -- forts towards a peace -- ful
-  re -- so -- lu -- tion, so gal -- vi -- ni -- zing
+  ef -- forts towards a peace -- ful state
+  how we work the
   His o -- pin -- ions are pro -- ble -- ma -- tic
   not un -- like a pun -- dit lo -- qua -- cious
   I'm un -- der -- whelmed
@@ -1046,6 +1149,7 @@ tenorWords = \lyricmode {
   I'm un -- der -- way
   I'm un -- der -- fed
   I'm un -- der -- val -- ued
+  \endlick
 }
 
 melTwoFullClean = \relative c {
@@ -1225,8 +1329,17 @@ bass = {
     f'^\< g, ges ees' |
     d c bes aes |
   }
-  << { \transpose c c, \keepWithTag #'long \theme } { s1^\f } >>
-  \relative c { aes4 g f | }
+  %% CPTBAS
+  \relative c, {
+    ees4^\f g bes4 g8 ges |
+    f4 g aes f |
+    g ees bes' g |
+    f aes g f |
+    ees'4. bes8 \times 2/3 { g aes bes } g ees |
+    f' ees8 c g aes bes c aes |
+    bes8 bes g4 aes f |
+    ees aes g f |
+  }
   \relative c, {
     ees4 f g ees |
     f aes g f |
@@ -1234,8 +1347,17 @@ bass = {
     f c' bes aes |
     g d' fis, c' |
     f, g aes c |
-    bes c aes bes |
-    g ees g bes |
+    bes c f, aes8 aes |
+    g8 g g4 aes f |
+  }
+  \relative c {
+    r8 ees r fis r f r g |
+    r ees r d r c4 d8 |
+    \times 2/3 { fis4 e bes } \times 2/3 { a c b }
+    g'8 f ees c cis b r4 |
+    r8 f' r8 des ces r8 bes f' |
+    des d g, fis a f e c' |
+    \times 2/3 { b4 ees8 ~ } ees4 ~ ees4... ees,32 |
   }
 }
 
@@ -1285,9 +1407,14 @@ bassWords = \lyricmode {
   That's how we laugh the day way
   In the mer -- ry old land of Oz
   \repeat unfold 128 ○
-  \keepWithTag #'oz \themeWords
+  Ha ha ha \repeat unfold 14 ○
+  He could al -- so be called fa -- na -- tic
+  re -- vo -- lu -- tio -- na -- ry in the old land of Oz
   dog -- ma -- tic
-  \repeat unfold 64 ○
+  \repeat unfold 27 ○
+  in the mer -- ry old land of
+  \endlick
+  Oz
 }
 
 %%% SCORE
