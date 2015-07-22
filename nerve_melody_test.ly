@@ -179,6 +179,7 @@ test = {
       }
     >>
   >>
+  \midi{}
   \layout {
     \context {
       \Voice

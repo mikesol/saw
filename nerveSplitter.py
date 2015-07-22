@@ -4,22 +4,40 @@ NSKIP = (4,)
 SMODULO = (0,)
 NPLAY = (4,)
 PMODULO = (0,)
+SHIFT = 0
 START = 7
 NSKIP = (8,)
 SMODULO = (0,)
 NPLAY = (8,)
 PMODULO = (0,)
+SHIFT = 0
 START = 9#7#1#3
 NSKIP = (2,)
 SMODULO = (0,)
 NPLAY = (2,)
 PMODULO = (0,)
+SHIFT = 0
+'''
 '''
 START = 7 + (8*15)#9#7#1#3
 NSKIP = (48,)
 SMODULO = (0,)
 NPLAY = (48,)
 PMODULO = (0,)
+SHIFT = 0
+START = 3
+NSKIP = (8,)
+SMODULO = (0,)
+NPLAY = (8,)
+PMODULO = (0,)
+SHIFT = 78
+'''
+START = 3
+NSKIP = (4,)
+SMODULO = (0,)
+NPLAY = (16,)
+PMODULO = (0,)
+SHIFT = 0
 
 TP = 'g'
 #########################################
@@ -44,9 +62,17 @@ d'' ~ d'' ~ d'' ~ d'' r r d'' d'' c'' bes' c'' bes' c'' bes' c'' d''
 bes' ~ bes' ~ bes' ~ bes' r c'' d'' f'' g'' r r r r d'' c'' bes'
 f'' ~ f'' ~ f'' ~ f'' r r d'' ees'' f'' d'' bes' c'' d'' bes' r c''
 d'' bes' g' a' bes' g' r bes' f' f' f' f'
-f' ~ f' ~ f' ~ f' ~ f' ~ f' ~ f' ~ f' r r bes' a' g' r g''
-f'' ees'' d'' c'' bes' a' r a'' g'' f'' ees'' d'' c'' bes' bes' bes'
-bes' bes' ~ bes' ~ bes' ~ bes'  
+f' ~ f' ~ f' ~ f' ~ f' ~ f' ~ f' ~ f' r r bes' a'
+g' r g'' f'' ees'' d'' c'' bes'
+a' r a'' g'' f'' ees'' d'' c''
+bes' r bes'' a'' g'' f'' ees'' d'' 
+c'' c'' c''' bes'' a'' g'' fis'' g''
+bes'' ~ bes'' ~ bes'' ~ bes'' ~ bes'' ~
+bes'' ~ bes'' ~ bes'' ~ bes'' ~ bes'' ~
+bes'' r bes' bes' d'' d'' d'' d''
+bes' r r d'' bes' r r d''
+bes' r r d'' bes' 
+
 """
 def gulp(f) :
   infi = file(f,'r')
@@ -67,7 +93,7 @@ class Note(object) :
   def __str__(self) :
     return self.note + (' ~ ' if self.tie else '')
 
-melsplit = filter(lambda y : y != '', sum([x.split(' ') for x in MELODY.split('\n')], []))
+melsplit = filter(lambda y : y != '', sum([x.split(' ') for x in MELODY.split('\n')], []))[SHIFT:]
 NOTES = []
 ctr = 0
 

@@ -309,10 +309,19 @@ fuckingCrazy = \relative c'' {
   e8 r16 b   cis dis e fis     gis16 gis, a b   cis dis e r | % 23
   r a, bes e    aes8. ges16   des16 c aes f   e fis gis b | % 25
   %%%%\times 8/9 { d8. c16 bes16 g f ees   e fis gis ais   c8 r16 f,16   a c } | % 26
+  d8. c16    bes16 g f ees   e gis ais c   r16 f,16 a c   | % 26
+  ees16 d bes aes   g aes bes ees   e8 r   r16 bes c e | % 26
+  fis16 d bes c   e16 r bes'8   bes8.    d16  \times 4/5 { bes g e d c } | % 27
+  \times 4/5 { a16 g a b d }   fis8 r16 c   bes'8 bes    \times 4/5 { bes  c16 d bes } | % 28
+  f16 d c bes   g bes c ees    \times 2/3 { bes'8 r c } d16 bes g d | % 29
+  c ees f g   bes8 r   a16 bes c16 d    bes a aes r | % 30
+  r8 c16 d ~ d bes a c16 \times 2/3 { d8 bes bes } r16 c8 d16 ~ | % 31
+  %d bes g f d c e g ~ g fis a ees ~ \times 4/5 { ees fis a \tag #'alto { ees g ~ } \tag #'tenor { bes bes ~ }  } |
+  \times 2/3 { d4 c8 } \times 2/3 { b4 c8 } \times 2/3 { bes8 a aes8 } \times 2/3 { g4 f8 }
 }
 iHateMyLife = \relative c' {
   g4^\f g8 ~ |
-  g4 ~ \times 2/3 { g4 ees8 } c16 ees16 g cis \times 2/3 { fis4 a,8 } | %1
+  g4 ~ \times 2/3 { g4 b8 } c16 ees16 g a \times 2/3 { fis4 a,8 } | %1
   \times 2/3 { c4 d8 } \times 2/3 { r4 a8 } fis16 g a c e8 e | %2
   e8. a,16    bes d bes g    a aes ees d   dis e f fis | %3
   g8. ees16 \times 2/3 { des8 g a } \times 2/3 { bes8 a8 aes } \times 2/3 { r4 c8 } | % 4
@@ -321,33 +330,34 @@ iHateMyLife = \relative c' {
   \times 2/3 { a8 b cis } c16 b bes fis \times 2/3  { f8 ees c } \times 2/3 { cis8 r8 a' } | % 7
   b16 c a16 f    e ees g bes   a aes g fis   f e g a | %8
   fis16 r8. \times 2/3 { cis'4 b8 } g16 fis f r \times 2/3 { r8 d'8 b8 } | % 9
-  bes16 a aes g \times 2/3 { e8 r ees } \times 4/5 { d16 g a b8 b b r16 } | % 10
+  bes16 a aes g \times 2/3 { e8 r ees } \times 4/5 { d16 g a cis8 cis cis r16 } | % 10
   r ais16 b c16    b bes g fis     gis a bes b    \times 2/3 { c8 d8 e } | % 11
   \times 2/3 { r8 a,8 c } \times 2/3 { d e fis, } \times 2/3 { gis a c } \times 2/3 { d e f, } | % 12
   g16 aes bes d    \times 2/3 { dis8 c b8 } a16 ais b fis   gis g fis b | % 13
   d8 r16 e,16    fis gis b cis   \times 8/9 { fis8 c   gis16 a gis fis f } | % 14
-  e16 r b'16 e,  \times 2/3 { fis8 a b } \times 2/3 { c c c } \times 2/3 { r8 cis4 } | % 15
+  e16 r b'16 e,  \times 2/3 { fis8 a bes } \times 2/3 { cis cis cis } \times 2/3 { r8 c4 } | % 15
   a16 fis d g   gis g fis f   c8. d16    e fis g b | % 16
   \times 2/3 { c8 bes r }   r16 e, f fis   ais c d f,   bes4 ~ | % 17
   bes4 aes8. r16 \times 4/7 { c,8 cis e g b4 bes8 } | % 18
-  fis16 f aes g    d e fis gis   c2 ~ | % 19
-  c8 d4. ~ d4. c8 ~ | % 20
-  \times 8/9 { c8. g16   aes16 c f, ees   c d dis e   f8 r16 c16 d f } | % 21
-  fis16 r g8 g g   aes16 c g f   b, c d dis | % 22
+  fis16 f aes g    d e fis a   cis2 ~ | % 19
+  cis8 d4. ~ d4. c8 ~ | % 20
+  \times 8/9 { c8. bes16   c16 d a g   f fis g gis   f8 r16 aes16 bes c } | % 21
+  d16 r e8 e e   c16 ees bes aes   g a bes b | % 22
   %%%%e8 r16 b   cis dis e fis     \times 4/5 { gis16 gis, a b   c cis d dis e r } | % 23
-  e8 r16 b   cis dis e fis     gis16 gis, a b   cis dis e r | % 23
-  r a, bes e    aes8. ges16   des16 c aes f   e fis gis b | % 25
+  c8 r16 g   a b c d     cis16 dis, f g   aes bes c r | % 23
+  r f, aes c    d8. bes16   a16 aes f d   cis d e g | % 25
   %%%%\times 8/9 { d8. c16 bes16 g f ees   e fis gis ais   c8 r16 f,16   a c } | % 26
+  bes8. aes16    g16 ees d c   cis e g a   r16 d,16 fis a   | % 26
+  c16 b gis f   e f g b   c8 r   r16 g a b | % 26
+  cis16 c g fis   f16 r g8   g8.    aes16  \times 4/5 { g ees c g' ges } | % 27
+  \times 4/5 { f16 e f g b }   d8 r16 aes   g'8 g    \times 4/5 { g  f16 ees d } | % 28
+  aes16 g fis g   ees g aes c    \times 2/3 { d8 r f } bes,16 g ees b' | % 29
+  a c d ees   g8 r   c,16 d ees16 bes    g ges f r | % 30
+  r8 a16 b ~ b g f aes16 \times 2/3 { g8 fis f } r16 a8 b16 ~ | % 31
+  %%%%%%b g ees d g a c bes ~ bes a c b ~ \times 4/5 { b bes c bes bes ~ } |
+  \times 2/3 { b4 aes8 } \times 2/3 { g4 aes8 } \times 2/3 { g8 fis8 f } \times 2/3 { c4 g'8 ~ }
 }
 slightlyLessCrazy = \relative c' {
-  d8. c16    bes16 g f ees   e gis ais c   r16 f,16 a c   | % 26
-  ees16 d bes aes   g aes bes ees   e8 r   r16 bes c e | % 26
-  fis16 d bes c   e16 r bes'8   bes8.    d16  \times 4/5 { bes g e d c } | % 27
-  \times 4/5 { a16 g a b d }   fis8 r16 c   bes'8 bes    \times 4/5 { bes  c16 d bes } | % 28
-  f16 d c bes   g bes c ees    \times 2/3 { bes'8 r c } d16 bes g d | % 29
-  c ees f g   bes8 r   a16 bes c16 d    bes a aes r | % 30
-  r8 c16 d ~ d bes a c16 \times 2/3 { d8 bes bes } r16 c8 d16 ~ | % 31
-  d bes g f d c e g ~ g fis a ees ~ \times 4/5 { ees fis a \tag #'alto { ees g ~ } \tag #'tenor { bes bes ~ }  } |
 }
 
 alsoFundamentalism = \lyricmode {
@@ -439,8 +449,6 @@ yes = \lyricmode {
   Such ge -- ne -- ro -- si -- ty
   Such o -- ver -- whel -- ming hope
   Ra -- di -- ate, shine, and flic -- ker like a bur -- ning wad of
-}
-yesser = \lyricmode {
   flesh
   Mur -- der me with in -- tran -- si -- gent verve
   Ren -- der me im -- po -- tent with ti -- til -- la -- ting lust
@@ -452,7 +460,8 @@ yesser = \lyricmode {
   De -- flo -- wer -- ing my an -- scil -- la -- ry hairs
   Ut -- ter -- ly in -- cre -- du -- lous
   Fes -- tive if not ex -- u -- ber -- ant
-  Win -- some is how I'd ca -- te -- go -- rize this mer -- ry e -- ner -- gized state
+  %%%%Win -- some is how I'd ca -- te -- go -- rize this mer -- ry e -- ner -- gized state
+  Win -- some is how I'd ca -- te -- go -- rize it
 }
 
 no = \lyricmode {
@@ -469,6 +478,8 @@ no = \lyricmode {
   heave
   bark
   yowl
+}
+noer = \lyricmode {
   swing
   pinch
   rip
@@ -649,7 +660,7 @@ sopranoWords = \lyricmode {
   of Oz
   Think some -- thing's bur -- ning in my heart
   So strong I can't con -- tain it now
-  \no
+  \no \noer
   He was sco -- ur -- ing through the at -- tic
   sing -- ing tunes and a cou -- ple of tra la las
   know -- ing
@@ -780,16 +791,9 @@ mezzo = {
     bes2 r |
     r4 c2. |
     r2 bes ~ |
-    bes4 r4 r4 bes ~ |
-    bes2. r4 |
-    r2 c ~ |
-    c2 r2 |
-    r4 a2. |
-    r2 d2 ~ |
-    d4 r r ees ~ |
-    ees r4 r2 |
-    r4 aes^\< ~ aes2 |
+    bes4 r4 r2 |
   }
+  << { \transpose c c' \keepWithTag #'short \theme r8 r4 r2 } { s1\< s1\f } >> |
   \relative c' {
     r8 fis8^\f r g r bes r c |
     aes8 bes4 g8 ~ g c bes g |
@@ -846,7 +850,7 @@ mezzoWords = \lyricmode {
   of Oz
   Think some -- thing's bur -- ning in my heart
   So strong I can't con -- tain it now
-  \no
+  \no \themeWords
   He's bel -- low -- ing
   Ho ho ho
   while di -- ving
@@ -999,7 +1003,7 @@ altoWords = \lyricmode {
   of Oz
   Think some -- thing's bur -- ning in my heart
   So strong I can't con -- tain it
-  \yes \yesser
+  \yes
   Yup yup the wi -- zard fain -- ted
   Be -- cause of all the smoke e -- mer -- ging from his cham -- bers
   He was pan -- ting like an asth -- ma -- tic
@@ -1080,13 +1084,9 @@ tenor = \relative c {
   }
   \clef "treble_8"
   \removeWithTag #'alto { \iHateMyLife }
-  \keepWithTag #'short \theme
-  \relative c' { 
-    r8 r4 r2 |
-  }
   %% CPTTEN
   \relative c' {
-    bes8 r c4 bes g |
+    g8 r c4 bes g |
     ees'4. bes8 \times 2/3 { g aes bes } g ees |
     c' bes8 aes f d' c bes f |
     f' ees d c bes aes r c |
@@ -1130,8 +1130,7 @@ tenorWords = \lyricmode {
   Think some -- thing's bur -- ning in my heart
   So strong I can't con -- tain it
   \yes
-  \themeWords
-  ? A mea -- nie
+  A mea -- nie
   His de -- ri -- sion was sys -- te -- ma -- tic
   he was un -- der -- mi -- ning
   ef -- forts towards a peace -- ful state
