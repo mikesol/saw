@@ -31,13 +31,19 @@ SMODULO = (0,)
 NPLAY = (8,)
 PMODULO = (0,)
 SHIFT = 78
-'''
 START = 3
 NSKIP = (4,)
 SMODULO = (0,)
 NPLAY = (16,)
 PMODULO = (0,)
 SHIFT = 0
+'''
+START = 3
+NSKIP = (16,)
+SMODULO = (0,)
+NPLAY = (16,)
+PMODULO = (0,)
+SHIFT = 78
 
 TP = 'g'
 #########################################

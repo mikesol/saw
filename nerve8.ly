@@ -134,7 +134,7 @@ soprano = {
     c8 ( d16 c ) a8 c8 ~ c4. ais8 |
     b\> d8 b bes8 a c8 a aes8 |
     g b8 g ges8 f a8 f d8 |
-    ees\mf g8 ees c8 a ges'4 r8 |
+    ees\mf g8 ees c8 a ges'4 r8 |o
   }
   \sopranoSmooth
   %\sopranoHocket
