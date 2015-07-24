@@ -38,12 +38,12 @@ NPLAY = (16,)
 PMODULO = (0,)
 SHIFT = 0
 '''
-START = 3
-NSKIP = (16,)
+START = 7+64
+NSKIP = (4,)
 SMODULO = (0,)
-NPLAY = (16,)
+NPLAY = (8,)
 PMODULO = (0,)
-SHIFT = 78
+SHIFT = 0
 
 TP = 'g'
 #########################################
@@ -156,3 +156,4 @@ OUTFI.close()
 
 print (len(OUT) / 2) * 60./96.
 subprocess.call('lilypond '+sys.argv[1], shell=True)
+subprocess.call('open '+sys.argv[1][:-3]+'.pdf', shell=True)

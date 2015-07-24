@@ -97,11 +97,17 @@ theme = \relative c {
 marks = {
   \tempo "Dixie" 4=96
   \time 4/4
+  \set Score.tempoWholesPerMinute = #(ly:make-moment (* 3 96) 8 0 0)
   \partial 8 s8
-  \repeat unfold 25 { s1 }
+  \repeat unfold 200 \unfoldSwing #96
 }
 
 soprano = \transpose c c {
+  r8
+  R1*7
+  r2 r4.
+  \transpose c c' \removeWithTag #'second \theme
+  r4 r4 r8
   \transpose c c' \removeWithTag #'second \theme
   r4 r4 r8
   \transpose c c' \removeWithTag #'first \theme
@@ -151,7 +157,8 @@ soprano = \transpose c c {
 sopranoWords = \lyricmode {
 }
 
-test = {
+test = \transpose c c, {
+  \clef "treble_8"
   REPLACEME
 }
 
