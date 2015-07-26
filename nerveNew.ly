@@ -131,8 +131,8 @@ soprano = \relative c' {
   R1 |
   r4 bes8 a g4 g'8 f |
   ees d r4 r2 |
-  R1%r4 c8 bes c c bes8 bes |
-  R1%bes bes r4 r2 |
+  r4 c8 bes a a a'g |
+  f ees r4 r2 |
   r4 d8 c bes bes bes bes |
   bes4 r4 r2 |
   r4 bes4 ~ bes2 |
@@ -303,8 +303,8 @@ alto = \relative c'' {
   r2 bes4^\mf r8 cis,8 |
   d8 bes8 g8 f8 d'8 d4 bes8 ~ |
   bes2. r8 fis'8 |
-  g8 ees c aes g' g4 ees8 ~ |
-  ees2 r4 ees8 e8 |
+  g8 ees c aes c f4 d8 ~ |
+  d2 r4 ees8 e8 |
   f8 a f e ees g ees cis |
   d f d des c ees c cis |
   d bes g f f' d4 bes8 ~ |

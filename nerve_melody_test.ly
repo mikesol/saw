@@ -106,10 +106,10 @@ soprano = \transpose c c {
   r8
   R1*7
   r2 r4.
-  \transpose c c' \removeWithTag #'second \theme
-  r4 r4 r8
-  \transpose c c' \removeWithTag #'second \theme
-  r4 r4 r8
+  \repeat unfold THEMEREPEATS {
+    \transpose c c' \removeWithTag #'second \theme
+    r4 r4 r8
+  }
   \transpose c c' \removeWithTag #'first \theme
   \relative c' {
     \times 2/3 { r8 bes c } \times 2/3 { d f g } |

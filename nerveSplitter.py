@@ -5,18 +5,21 @@ SMODULO = (0,)
 NPLAY = (4,)
 PMODULO = (0,)
 SHIFT = 0
+THEMES = 3
 START = 7
 NSKIP = (8,)
 SMODULO = (0,)
 NPLAY = (8,)
 PMODULO = (0,)
 SHIFT = 0
+THEMES = 3
 START = 9#7#1#3
 NSKIP = (2,)
 SMODULO = (0,)
 NPLAY = (2,)
 PMODULO = (0,)
 SHIFT = 0
+THEMES = 3
 '''
 '''
 START = 7 + (8*15)#9#7#1#3
@@ -25,25 +28,39 @@ SMODULO = (0,)
 NPLAY = (48,)
 PMODULO = (0,)
 SHIFT = 0
+THEMES = 3
+# ??
 START = 3
 NSKIP = (8,)
 SMODULO = (0,)
 NPLAY = (8,)
 PMODULO = (0,)
 SHIFT = 78
+THEMES = 3
+# bigger chunks
 START = 3
 NSKIP = (4,)
 SMODULO = (0,)
 NPLAY = (16,)
 PMODULO = (0,)
 SHIFT = 0
+THEMES = 3
+# more distilled
+START = 3+(8*2)
+NSKIP = (8,)
+SMODULO = (0,)
+NPLAY = (6,)
+PMODULO = (0,)
+SHIFT = 0
+THEMES = 3
 '''
-START = 7+64
-NSKIP = (4,)
+START = 3+(6*8)
+NSKIP = (8,)
 SMODULO = (0,)
 NPLAY = (8,)
 PMODULO = (0,)
 SHIFT = 0
+THEMES = 3
 
 TP = 'g'
 #########################################
@@ -144,7 +161,8 @@ while ctr < len(NOTES) :
 REPLACEME = [OUT[x].toLily(False if x == len(OUT) - 1 else (False if OUT[x+1].note == SR else True)) for x in range(len(OUT))]
 
 NERVE_TEST = gulp('nerve_melody_test.ly')
-NERVE_TEST = NERVE_TEST.replace('REPLACEME', '\\transpose g {0} {{ '.format(TP)+(' '.join(REPLACEME))+" }")
+NERVE_TEST = NERVE_TEST.replace('REPLACEME', '\\transpose g {0} {{ '.format(TP)+('\n'.join(REPLACEME))+" }")
+NERVE_TEST = NERVE_TEST.replace('THEMEREPEATS', str(THEMES))
 
 if os.path.exists(sys.argv[1]) :
   print "Cowardly refusing to overwrite file"
