@@ -1004,7 +1004,7 @@ altoWords = \lyricmode {
   Think some -- thing's bur -- ning in my heart
   So strong I can't con -- tain it
   \yes
-  Yup yup the wi -- zard fain -- ted
+  Yup yup yup the wi -- zard fain -- ted
   Be -- cause of all the smoke e -- mer -- ging from his cham -- bers
   He was pan -- ting like an asth -- ma -- tic
   He was spen -- ding the
