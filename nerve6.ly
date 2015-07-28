@@ -141,7 +141,7 @@ soprano = \relative c' {
   r4 c8 d r4. bes8 |
   r8 c ~ c4 r8 d ~ d4 |
   r8 f4 r8 r4. g8 |
-  d c bes r8 r4. f'8 ~ |
+  r8 d4 c8 r4 bes8 f'8 ~ |
   f8 r r4 r8 d8 ~ d4 ~ |
   d2. r4 |
   r4. ees8 ~  ees4 f8 d |
@@ -354,10 +354,41 @@ mezzoWords = \lyricmode {
   A dan -- dy king de -- ny -- ing %verve
   Show the di -- no -- saurs my ha -- bits
   Oh I'd roar and rrwuff the rab -- bits
-  I'd be aw -- ful if I had the nerve
+  I'd be aw -- ful if I had the
 
   Ne -- ver -- more would I show
   I'm just an aw -- ful king, Oh no
+  A dan -- dy li -- on in my core
+  I roared be fore
+  I'd ruff, I'd bet -- ter my core prow -- ess
+  Not a -- frai of Mis -- sy mou -- se I'm de -- ny -- ing if I had the
+  Ne -- ver -- more, a -- no -- ther nerve
+
+  I'd be gen -- tle as a li -- zard's verve
+  I'd show my fate I'd ne -- ver serve
+  If the Wi -- zard is a Wi -- zard a bli -- zard a li -- zard
+  Ne -- ver more be if I had the nerve
+
+  nerve nerve
+  I'm sure to get a re -- gal core
+  A cea -- sar who would ruff some more
+  I could serve an aw -- ful li -- on
+  If you're sad I'm de -- ny -- ing Then the vim and verve
+  are aw -- ful like a bee -- zer
+  stride da
+  Ruff roar
+  A ha -- bit that I do not de -- serve
+  don't de -- serve On -- ly then I would change a for -- us
+  Ra -- bit 
+  I'd be
+  nerve
+  verve
+  If I on -- ly had
+  Oh he was a sin -- ner
+  Al -- ways was a win -- ner
+  I am get -- ting thin he Wiz of Oz
+  Hea -- vens I'm a spin -- ner
+  Shucks I'm a be -- gin -- ner please have mer -- cy on me
 }
 
 alto = \relative c'' {
@@ -413,9 +444,9 @@ alto = \relative c'' {
   R1 |
   r4. d8 ~ d c a g |
   a a4 fis'8 ~ fis e d b |
-  d d e fis r g r gis ~ |
-  gis a8 ~ a4 ~ a8 r r4 |
-  r4. e8 ~ e4 d8 bes |
+  d d e fis r g r gis ~ ( |
+  gis a8 ~ a4 ~ a8 ) r r4 |
+  r4. e8 ~ e e d8 bes |
   d d r a' ~ a g f ees |
   f c4 d8 c4 bes |
   r8  ees8  d8 bes'8 bes8 r8 r4 |
@@ -472,18 +503,33 @@ altoWords = \lyricmode {
   A bee -- zer king, oh I would serve
   Oh I'd bet my core prow -- ess
   Not a -- fraid of Mis -- sy mou -- se
-  I'm de -- ny -- ing if I had the nerve
+  I'm de -- ny -- ing if I had the, the nerve
+  nerve I'd roar some more and be gen -- tle as a li -- zard
+  I'd show my fate I no my fate, a sis -- sy
+  It's sad be -- ieve me Mis -- sy
+  Wiz
+  A king a roar show me
+  more be if I had the nerve
+  nerve
+  sure to get a re -- gal I'm a -- fraid there's no de -- ny -- ing
+  A cea -- sar who would ruff some more, ruff my core I'd
 
-%{
+  If you're sad well I'm de -- ny -- ing Then the vim and verve are aw -- ful
+  be
   I would be in my stride dan -- dy li -- on
-  Roar some more
-  A re -- gal king they bet -- ter serve, bet -- ter serve,
-  I could then show my pro -- wess, a li -- on
-  I de -- serve
-  Change my roar, a re -- gal bee -- zer
-  I could be a -- no -- ther cea -- ser
-  If I on -- ly had the nerve I'd
-%}
+  Ruff and roar
+  A ha -- bit that I don't de -- serve, don't de -- serve
+  On -- ly then I would change in my for -- us
+  Ra -- bit serve
+  I'd be cle -- ver as a gi -- zard I'd be re -- gal like a bli -- zard Mis -- sy 
+  If I on -- ly had the
+
+  Al -- ways was a win -- ner
+  I am get -- ting
+  thin -- ner just Wiz of Oz
+  Hea -- vens I'm a
+  spin -- ner
+  Shucks I'm a be -- gin -- ner have mer -- cy
 }
 tenor = \relative c' {
   \clef "treble_8"
@@ -517,8 +563,8 @@ tenor = \relative c' {
   R1 |
   R1 |
   r4. c'8 ~ c b a g |
-  fis a cis d c e c d ~ |
-  d fis e d ~ d c a g |
+  fis a c a c a g eis |
+  fis d'4 d8 ~ d c a g |
   a a4 bes8 ~ bes bes g g |
   c c r c ~ c g g bes |
   a a r a c g r g |
@@ -561,6 +607,29 @@ tenor = \relative c' {
 }
 
 tenorWords = \lyricmode {
+  Bee -- zer
+  Li -- zard
+  more
+  if
+  nerve nerve
+  nerve
+  sure to
+  I'm sure to get a re -- gal core A
+  see cea -- sar ruff some would show the dan -- dy fo -- rus
+  I could serve aw -- ful lie If you're sad well de -- ny -- ing
+  vim and verve are aw -- ful be
+  stride da
+  ruff rar
+  Hab, a ha -- bit that I don't de no I do not would
+  Change a for -- us
+  Ra -- bit I'd be nerve
+  verve
+  If I
+  I am get -- ting
+  thin -- ner when I think a -- bout the Wi -- zard
+  Can't keep down my din -- ner
+  Hea -- vens I'm a spin -- ner
+  Shucks I'm a be -- gin -- ner have mer -- cy be -- cause
 }
 
 bass = \relative c {
@@ -615,7 +684,7 @@ bass = \relative c {
   g'8\mf r8 r4 r2 |
   c,2 f,4 c'8 cis8 |
   d8 d fis,4 g gis |
-  a8 d d aes g d' d, eis |
+  a8 d ~ d aes g d' d, eis |
   fis d' fis,4 g gis |
   a8 d4 b8 a g fis d' |
   d d fis,4 g a |
@@ -667,7 +736,51 @@ bassWords = \lyricmode {
   be -- lieve me Mis -- sy yes it's sad
   would show the di -- no -- saur -- us
   sis -- sy when you're born to be a
-  
+  re -- gal born to
+  re -- gal don't serve a
+  dan -- dy king
+  a dan -- dy de -- ny -- ing
+  di -- no ha -- bit I'd 
+  roar the ra -- bit
+  aw - ful had the
+  aw -- ful if I
+  had the nerve
+  more
+  serve
+  king no core
+  bet
+  ny
+  nerve
+  scared verve
+  show
+  fate
+  sis -- sy, yes it's sad be -- lieve me Mis -- say
+  Wi --zard is a Wiz a king
+  show me more
+  if I
+  home and a heart would have the
+  sure to re -- gal
+  I'd get a re -- gal
+  core a cea -- sar
+  cea -- sar who'd ruff some
+  serve an aw -- ful li -- on If you're 
+  sad I'm de -- ny -- ing  Then
+  vim verve are aw -- ful like a bee -- zer
+  stride da
+  ruff rar get a
+  ha -- bit don't de
+  don't de -- serve would
+  Change my
+  Ra -- bit I'd
+  nerve
+  verve
+  If I
+  He's the Wi -- zard of Oz is
+  One Oh the Wi -- zard oh the
+  Wi -- zard of Oz is one, one be -- cause he is the
+  Wi -- zard of Oz the Won -- der -- ful Wiz the won -- der
+  Wi -- zard of Oz is
+  one wi -- zard is one one be -- cause
 }
 
 ugh = \transpose c c, {
