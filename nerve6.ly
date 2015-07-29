@@ -144,8 +144,8 @@ soprano = \relative c' {
   r8 d4 c8 r4 bes8 f'8 ~ |
   f8 r r4 r8 d8 ~ d4 ~ |
   d2. r4 |
-  r4. ees8 ~  ees4 f8 d |
-  bes8 c4 r8 d8 bes4 c8 |
+  r4. ees8 ~  ees4 f8 d ~ |
+  d4 bes8 c d8 bes4 c8 |
   d8 r r4 r8 bes g a | % D
   bes g r4 r2 | % g
   r4 bes ~ bes2 | % C
@@ -361,7 +361,7 @@ mezzoWords = \lyricmode {
   A dan -- dy li -- on in my core
   I roared be fore
   I'd ruff, I'd bet -- ter my core prow -- ess
-  Not a -- frai of Mis -- sy mou -- se I'm de -- ny -- ing if I had the
+  Not a -- fraid of Mis -- sy mou -- se I'm de -- ny -- ing if I had the
   Ne -- ver -- more, a -- no -- ther nerve
 
   I'd be gen -- tle as a li -- zard's verve
@@ -389,6 +389,11 @@ mezzoWords = \lyricmode {
   I am get -- ting thin he Wiz of Oz
   Hea -- vens I'm a spin -- ner
   Shucks I'm a be -- gin -- ner please have mer -- cy on me
+
+  ly had
+  the nerve
+  de -- ny -- ing
+  be -- lieve me Mis -- sy and
 }
 
 alto = \relative c'' {
@@ -530,6 +535,10 @@ altoWords = \lyricmode {
   Hea -- vens I'm a
   spin -- ner
   Shucks I'm a be -- gin -- ner have mer -- cy
+
+  I on -- ly had
+  ny -- ing I'm a, a
+  be -- lieve me Mis and
 }
 tenor = \relative c' {
   \clef "treble_8"
@@ -630,6 +639,8 @@ tenorWords = \lyricmode {
   Can't keep down my din -- ner
   Hea -- vens I'm a spin -- ner
   Shucks I'm a be -- gin -- ner have mer -- cy be -- cause
+  I on -- ly had nerve
+  me mis
 }
 
 bass = \relative c {
@@ -690,7 +701,7 @@ bass = \relative c {
   d d fis,4 g a |
   c8 d des c ~ c bes a g |
   a f' a,4 bes b |
-  c4 \times 2/3 { bes8 c bes } a4 g8 cis |
+  c4 f, a4 g8 cis |
   d8 r8 r4 r2 |
   g,8 r8 r4 r4  f8 r8 |
   e8 r8 r4 r4 c'8 r8 |
@@ -703,8 +714,8 @@ bass = \relative c {
   g4. r8 g'4 f |
   ees2 e |
   f g8 ees c g |
-  f8 f r f' ~ f f, f f |
-  f f r f' ~ f f, f des' |
+  f8 a r f' ~ f f, g f |
+  f a r f' ~ f f, a des |
   c4 g'8 ges f f, g a |
   bes d f bes ~ bes f d bes |
   ees8 ees ~ ees4 ~ ees8 ees8 ~ ees4 |
@@ -780,7 +791,11 @@ bassWords = \lyricmode {
   Wi -- zard of Oz is one, one be -- cause he is the
   Wi -- zard of Oz the Won -- der -- ful Wiz the won -- der
   Wi -- zard of Oz is
-  one wi -- zard is one one be -- cause
+  one Wi -- zard one be -- cause
+  nerve
+  oh
+  fraid vim
+  verve
 }
 
 ugh = \transpose c c, {
