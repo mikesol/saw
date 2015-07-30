@@ -80,6 +80,7 @@ midiPrefatoryMatter = {
 }
 marks = {
   \tempo "Dixie" 4=96
+  \repeat unfold 93 { \repeat unfold 4 \unfoldSwing #96 } \bar "|."
 }
 
 beamComm = {
@@ -105,7 +106,7 @@ soprano = \relative c' {
   %bes8 r4. f8 f r4 |
   %f8 f r4 f8 r r4 |
   R1*16 |%r8
-  r2. d8 ees |
+  r2. d8^\mf ees |
   f d bes c d bes8 r4 |
   r4 \times 2/3 { r8 bes c8 } d bes g a |
   bes g r4 r4. bes8 |
@@ -128,24 +129,24 @@ soprano = \relative c' {
   r4 c8 bes a a a' g |
   f ees r4 r4 d8 c |
   bes bes bes bes bes4 r4 |
-  r bes ~ bes2 |
+  r << { bes ~ bes2 } { s2^\< s8 s8^\f } >> |
   r2. bes4 |
   g'2 r |
   r8 fis g a ~ a4. f8 ~ |
   f2 r |
   r4 g ees8 ees4 ees8 ~ |
   ees2 r |
-  r4 f d2 |
-  r2. d8 d |
-  c bes c bes c bes r4 |
-  r4 c8 d r4. bes8 |
+  r4 f^\mf d2 |
+  r4 d8 d c bes c bes |
+  c bes c d8 r4 bes |
+  R1 |
   r8 c ~ c4 r8 d ~ d4 |
   r8 f4 r8 r4. g8 |
   r8 d4 c8 r4 bes8 f'8 ~ |
-  f8 r r4 r8 d8 ~ d4 ~ |
-  d2. r4 |
-  r4. ees8 ~  ees4 f8 d ~ |
-  d4 bes8 c d8 bes4 c8 |
+  f8 r r4 r2 |
+  r8 d4 r8 r2 |
+  r4. ees8-- ~  ees r4 f8 ~ |
+  f8 d bes c d8 bes4 c8 |
   d8 r r4 r8 bes g a | % D
   bes g r4 r2 | % g
   r4 bes ~ bes2 | % C
@@ -153,8 +154,8 @@ soprano = \relative c' {
   r4 bes4 ~ bes8 a ~ a4 | % Bb
   g4 g'8 f ees d c bes | % Eb
   a8 a a' g f ees ~ ees4 | % Ao
-  r8 d ~ d4 ~ d8 c ~ c4 | % D
-  bes8 bes bes bes bes2 |
+  r8 d^\< ~ d4 ~ d8 c ~ c4 | % D
+  bes8^\f bes bes bes bes2 |
   r bes4 a |
   g2 g'4 f |
   ees4. d8 c4. bes8 |
@@ -233,7 +234,7 @@ mezzo = \relative c' {
   %r8 a ~ a4 ~ a2 |
   %f2. r4 |
   %R1*2 |
-  r4. cis8 d bes g f |
+  r4. cis8^\f d bes g f |
   d'8 d4 bes8 ~ bes2 |
   r4. fis'8 g ees c bes |
   g' g4 ees8 ~ ees2 |
@@ -241,7 +242,7 @@ mezzo = \relative c' {
   ees g ees cis d f d des |
   c ees c cis d bes g f |
   f' d4 bes8 ~ bes r r4 |
-  r2 r4. cis8 |
+  r2 r4. cis8^\mf |
   d8 bes8 g8 f8 d'8 d4 bes8 ~ |
   bes2. r8 fis'8 |
   g8 ees c bes g' g8 ~ g4 |
@@ -274,24 +275,24 @@ mezzo = \relative c' {
   %d bes g f d' d4 bes8 ~ |
   f8 a f d ees g f ees |
   d4 bes'8 a g f d ees |
-  f g bes g c bes g bes |
+  f^\< g bes g c bes g bes |
   a4. aes8 ~ aes2 |
-  g8 g ~ g4 ~ g2 |
+  g8^\f g ~ g4 ~ g2 |
   g4. g8 ~ g4. e8 |
   f8 a8 f d8 f e8  ees d8 ~ |
   d8 des8  c bes8 ~  \times 2/3 { bes bes c } \times 2/3 { d f g } |
   a8 a8 ~  a4  a8 a4 r8 |
   a4. a8 ~ a4 f8 fis |
   g8 r8 r4 r2 |
-  f8\mf r8 r4 r2 |
+  f8^\mf r8 r4 r2 |
   c8 ees8 c g8 a4. r8 |
   r4. d8 ~ d c a g |
   a a4 fis'8 ~ fis e d b |
   d d4 a'8 ~ a g fis e |
-  fis a r a r b r c ~ |
-  c4. r8 r2 |
-  r4. a8 ~ a g f d |
-  f f r c'8 ~ c bes a g |
+  fis a^\< r a r b r bis^\f ~ ( |
+  bis \glissando c4 ) r8 r2 |
+  r4. a8^\mf ~ a g f d |
+  f f r c'8-- ~ c bes a g |
   a g f d f d c cis | % don't forget the eis4
   r4 r8 cis'8 d8 r8 r8 c8 |
   bes8 ees,8  d8  a'8 r2 |
@@ -300,17 +301,17 @@ mezzo = \relative c' {
   g8 r8 r8 a8 r8 g8 r8 fis'8 |
   r4 f,8 r8 f'8 r8 r8 g,8 |
   ees8 e8 f8 r8 bes8 ees,8  a8 r8 |
-  g'8  g r gis, a bes c cis |
-  d bes g f d' d4 bes8 ~ |
+  g'8^\<  g r gis, a bes c cis |
+  d^\f bes g f d' d4 bes8 ~ |
   bes2. r8 fis' |
   g ees c bes g' g4 ees8 ~ |
   ees2 ~ ees8 r8 r4 |
   r8 c c c r bes bes bes |
-  r d d bes r c c b |
-  bes4-. bes4-. bes8 a g a ~ |
+  r d d des r c c b |
+  bes4-. bes4-. bes8 ( a ) g a ~ |
   a aes4 g8 f ees4 d8 |
   c8 ees g bes ees, g bes d |
-  c8-. r4 c8 ~ \times 2/3 { c g gis a ais b } |
+  c8-. r4 c8 ~ \times 2/3 { c g gis } \times 2/3 { a ais b } |
   c e c a bes d bes g |
   a c a f ~ f4 d |
   g4 \times 2/3 { g8 gis a } \times 2/3 { bes a aes } \times 2/3 { g fis e } |
@@ -321,7 +322,7 @@ mezzo = \relative c' {
   \times 2/3 { bes c bes } \times 2/3 { des c bes } g f d bes |
   ees f g bes a f ~ \times 2/3 { f f' ees }
   d8 f d bes des c bes g |
-  r4 g' r f8 ees |
+  r4 ees' r \times 2/3 { g8 f8 ees } |
   d c bes a ~ a g4 f8 |
   \times 2/3 { g ees bes' } \times 2/3 { g d' bes } \times 2/3 { f' e ees } \times 2/3 { d des c }
   bes8 c bes g g' f d bes |
@@ -336,7 +337,7 @@ mezzo = \relative c' {
   %g4 g r g |
   %f8 d4 a'8 ~ a g4 f8 |
   %ees8 g bes d c bes a g |
-  %f bes f ees \times 2/3 { d bes c d f g } |
+  %f bes f ees \times 2/3 { d bes c } \times 2/3 { d f g } |
   %bes4 g r g |
   %d'8 des c bes ~ bes g f g |
   %ees g bes d c f, g a |
@@ -378,15 +379,14 @@ mezzoWords = \lyricmode {
   stride da
   Ruff roar
   A ha -- bit that I do not de -- serve
-  don't de -- serve On -- ly then I would change a for -- us
+  don't de -- serve On -- ly then I would change in for -- us
   Ra -- bit 
-  I'd be
-  nerve
+  I would serve
   verve
   If I on -- ly had
   Oh he was a sin -- ner
   Al -- ways was a win -- ner
-  I am get -- ting thin he Wiz of Oz
+  I am get -- ting thin the Wiz of Oz
   Hea -- vens I'm a spin -- ner
   Shucks I'm a be -- gin -- ner please have mer -- cy on me
 
@@ -394,14 +394,44 @@ mezzoWords = \lyricmode {
   the nerve
   de -- ny -- ing
   be -- lieve me Mis -- sy and
+  a di rus I'd show
+  ess
+  be my
+  si roar I'd
+  show the for if I had bee -- zer
+  I on -- ly had
+  An aw -- ful fate I don't de -- serve
+  A king with -- out the vim and verve
+  be -- lieve me, sy When you're 
+  to be a sy Ne -- ver
+  If I had the nerve
+  Be a king they could
+  serve a cle -- ver cea -- sar
+  If I roar more then I'd be in my 
+  stride, a rab -- bit don't de -- serve
+  A li -- zard don't serve I could
+  And with a giz -- zard that you bet -- ter
+  Roar like be -- fore
+  Ne -- ver more would I show it like a gi -- zard
+  I'd be re -- gal like a bli -- zard I'm a -- fraid
+  there's no de -- ny -- ing when you're
+  born not a Wi -- zard a li -- on
+  If a dan -- dy is a bliz -- zard
+  When you're born with -- out the vim and verve I'd
+  %{serve%} nerve %{roar%} more no you're born in a way to be
+  gi -- zard bli -- zard gi -- zard li -- zard the Wi -- zard of
+  Oz is one be -- cause he is the won -- der -- ful the
+  Wi -- zard of Oz is one be -- cause a li -- on would -- n't be a sis -- sy
+  Nerve
 }
+
 
 alto = \relative c'' {
   R1*4 |
-  r8 a ~ a4 ~ a2 |
+  r8 a^\f ~ a4 ~ a2 |
   f2. r4 |
   R1
-  r2. bes8 cis,8 |
+  r2. bes8^\mf cis,8 |
   d8 bes8 g8 f8 d'8 d4 bes8 ~ |
   bes2. r8 fis'8 |
   g8 ees c bes g' g4 ees8 ~ |
@@ -435,43 +465,43 @@ alto = \relative c'' {
   %g
   r2. d8 ees |
   f a f ees d c b aes |
-  g8 g g g g g4 f'8 ~ |
-  f2 \times 2/3 { r8 bes,^\< c } \times 2/3 { d f g } |
-  bes\f bes4 bes8 g8 bes4 r8 |
+  g8^\< g g g g g4 f'8 ~ |
+  f2 \times 2/3 { r8 bes, c } \times 2/3 { d f g } |
+  bes^\f bes4 bes8 g8 bes4 r8 |
   bes8 ( c16 bes ) g8 bes8 ~ bes4. gis8 |
   a8 c8 a  f g4 a8 f8 ~ |
   f e8 ees d8 ~ \times 2/3 { d d e } \times 2/3 { fis a b } |
   c8 c4 c8  a8 c4 r8 |
   c8 ( d16 c ) a8 c8 ~ c4 a8 ais |
-  b\> d8 b bes8 a c8 a aes8 |
+  b^\> d8 b bes8 a c8 a aes8 |
   g b8 g ges8 f a8 f d8 |
-  ees\mf g8 ees c8 a ges'4 r8 |
+  ees^\mf g8 ees c8 a ges'4 r8 |
   R1 |
   r4. d8 ~ d c a g |
   a a4 fis'8 ~ fis e d b |
-  d d e fis r g r gis ~ ( |
-  gis a8 ~ a4 ~ a8 ) r r4 |
-  r4. e8 ~ e e d8 bes |
-  d d r a' ~ a g f ees |
+  d d e^\< fis r g r gis^\f ~ ( |
+  gis \glissando a8 ~ a4 ~ a8 ) r r4 |
+  r4. e8^\mf ~ e e d8 bes |
+  d d r a'-- ~ a g f ees |
   f c4 d8 c4 bes |
   r8  ees8  d8 bes'8 bes8 r8 r4 |
   r4 bes,8 ees8 cis8 d8 r8 dis8 |
   r8  d8 e8 a,8  bes8 r8 r8  c8 |
    d8 fis8 g8  r8 r8 bes8 r8 ges8 |
   f8 ces8  bes8 ees8 r8 d8 r8 cis'8 |
-  r8 g, r4 c'8 r4 d,8 |
+  r8 bes, r4 c'8 r4 d,8 |
   r8 c8 r4 r8 c8 g'8 r8 |
-  ees8 f8 g8  d8 fis8 g8  a8 fis8 |
-  a4 g f ees |
+  ees8^\< f8 g8  d8 fis8 g8  a8 fis8 |
+  a4^\f g f ees |
   d a'8 bes a g f d |
   c2 g' |
   a r4 ees8 e |
   f a f e ees g ees cis |
   d f d des c ees c cis |
-  d f g f d' c bes c ~ |
+  d f g f d' ( c ) bes c ~ |
   c bes4 r8 \times 2/3 { r8 bes, c } \times 2/3 { d f g } |
   bes8 bes c bes des c bes g |
-  c8 des16 c g8 bes8 ~ \times 2/3 { bes e, f fis g gis } |
+  c8 ( des16 c ) g8 bes8 ~ \times 2/3 { bes e, f fis g gis } |
   a c a f g f a e |
   f e ees d ~ \times 2/3 { d d e } \times 2/3 { fis a b } |
   c8 r \times 2/3 { c cis d } \times 2/3 { ees d des } c8 a |
@@ -539,14 +569,51 @@ altoWords = \lyricmode {
   I on -- ly had
   ny -- ing I'm a, a
   be -- lieve me Mis and
+  I'm a di rus
+  I'd
+  show my pro -- wess
+  be my
+  a roar I'd
+  the I had
+  bee -- zer
+  If I on -- ly had 
+  An aw -- ful fate I serve
+  What a li -- on when you're
+  born -- to
+  verve
+  Yes it's sad be -- lieve me mis -- sy
+  When you're born to be a sis -- sy
+  Ne -- ver
+  If I on -- ly had the nerve
+  Be
+  I would be there to
+  serve a cle -- ver cea -- sar If I
+  roar some more
+  then I'd be in my
+  stride, a rab -- bit don't de -- serve
+  A li -- zard don't serve
+  On -- ly then when I
+  could And with a gi -- zard you bet -- ter
+  Wi -- zard a Wi -- zard the Wi -- zard of Oz he would
+  show it like
+  I would be re -- gal just like
+  Oh I'm a -- fraid there's de -- ny -- ing
+  you're born not a li -- on On -- ly if
+  dan bli -- zard
+  born with vim and
+  verve nerve more
+  born, born a -- way to be the gi -- zard the bli -- zard of
+  Oz, Wi -- zard is the won -- der -- ful
+  the Wiz a sis -- sy Nerve
 }
+
 tenor = \relative c' {
   \clef "treble_8"
   R1*4 |
-  r8 f ~ f4 ~ f2 |
+  r8 f^\f ~ f4 ~ f2 |
   c2. r4 |
   R1*23 |
-  r2 bes4 g |
+  r2 bes4^\mf g |
   bes r ees, r |
   d g r bes |
   ees,8 g r cis d bes g f |
@@ -558,24 +625,24 @@ tenor = \relative c' {
   %ees'8 d ~ d4 c8 c4 d8 ~ |
   bes4 a8 g f4 c'8 bes |
   a8 g4 g8 b4 g |
-  ees8 ees ees ees ees ees4 d'8 ~ |
+  ees8^\< ees ees ees ees ees4 d'8 ~ |
   d1
-  c8 c ~ c4 ~ c2 |
+  c8^\f c ~ c4 ~ c2 |
   c4. c8 ~ c4. r8 |
   c4. gis8 a8 c8 a f8 |
   g8 a4 f8 f8 e8 ees d8 |
   ees' ees8 ~ ees4 ees8 ees4 r8 |
   fis4. fis8 ~ fis4 d8 des |
   d8 r8 r4 r2 |
-  b8\mf r8 r4 r2 |
+  b8^\mf r8 r4 r2 |
   g2 ees2 |
   R1 |
   R1 |
-  r4. c'8 ~ c b a g |
+  r4. d'8 ~ d b a g |
   fis a c a c a g eis |
   fis d'4 d8 ~ d c a g |
   a a4 bes8 ~ bes bes g g |
-  c c r c ~ c g g bes |
+  c c r c-- ~ c g g bes |
   a a r a c g r g |
   fis8 c' bes r r gis a r |
   r4 fis8 r8 r2 |
@@ -584,11 +651,11 @@ tenor = \relative c' {
   d8 a8 g8 r8 r8 c b8  bes8 |
   g'8 r8 des8 r fis8 f8 e8 r8 |
   c8 b8 r8 cis8 r8  a8 r8 aes8 |
-  c8 d8  ees8 b8  c8 b8 gis8 a8 |
-  fis'4 ees d c8 cis |
+  c8^\< d8  ees8 b8  c8 b8 gis8 a8 |
+  fis'4^\f ees d c8 cis |
   d bes g f d' d4 bes8 ~ |
-  bes2. r8 fis |
-  g ees c bes g'8 g4 ges8 |
+  bes2. r8 fis' |
+  g ees c bes g'8 g4 ges,8 |
   f c c c r g' g g |
   r gis gis a r g g fis' |
   g ees c bes g' ees4 d8 ~ |
@@ -612,7 +679,7 @@ tenor = \relative c' {
   c4 bes r bes |
   bes2 a4 g |
   bes2 c2 |
-  f,8 f r c'8 ~ c2 |
+  f,8 f r c'8 ~ c2^\fermata |
 }
 
 tenorWords = \lyricmode {
@@ -630,8 +697,8 @@ tenorWords = \lyricmode {
   stride da
   ruff rar
   Hab, a ha -- bit that I don't de no I do not would
-  Change a for -- us
-  Ra -- bit I'd be nerve
+  change in for -- us
+  Ra -- bit I would serve
   verve
   If I
   I am get -- ting
@@ -641,26 +708,59 @@ tenorWords = \lyricmode {
   Shucks I'm a be -- gin -- ner have mer -- cy be -- cause
   I on -- ly had nerve
   me mis
+  verve di -- no rus Oh I'd
+  show my pro
+  be in my stride
+  si roar some more
+  show the rus I a
+  bee -- zer If I on -- ly had An
+  aw -- ful fate I An aw -- ful fate I don't de -- serve
+  A king with -- out the vim and it's sad be -- lieve me 
+  sy When you're
+  to be a
+  sy Ne -- ver
+  If I on -- ly had the nerve
+  serve a
+  roar more I would stride
+  a rab -- bit
+  Rab -- bit don't serve
+  On -- ly could change my hab -- bits
+  Wiz Wiz -- ard the Wi -- zard of Oz would
+  Show just like a gi -- zard he'd show it
+  re -- gal lie a bli -- zard I'm a fraid
+  there's no de -- ny -- ing when you're just
+  born Wi -- zard
+  dan bli -- zard
+  born vim and verve
+  nerve more
+  born
+  gi -- zard of 
+  Oz Wiz
+  won -- der
+  ful Wiz -- ard of Oz a sis -- sy Nerve
+ 
+  
+  
 }
 
 bass = \relative c {
   \clef "bass"
-  bes4 a g b |
+  bes4^\f a g b |
   c g8 ges f g a f |
   bes4 a g d' |
   c g8 ges f f' d c |
   r8 bes a4 g d'8 des |
   c ees c bes a f f' b, |
   c bes a g f g a f |
-  bes bes' a g f ees d des |  
-  c4 g f a |
+  bes bes'^\> a g f ees d des |  
+  c4^\mf g f a |
   bes8 bes a4 g ges |
   f c' bes d |
   ees8 ees d4 c cis |
   d bes c a8 f |
   bes4 d c g |
   c g f a |
-  bes8 d f bes r bes, r b |
+  bes8 d f bes r bes,4 b8 |
   c4 r f, r |
   bes r4 r2 |
   f4 r bes r |
@@ -683,23 +783,23 @@ bass = \relative c {
   ees8 ees d4 c cis |
   d8 bes a bes c a f a |
   bes4 d8 fis, g8 a b4 |
-  c4 g8 ges f g a f |
+  c4^\< g8 ges f g a f |
   bes4. bes8 ~ bes2 |
-  ees8 ees ~ ees4 ~ ees2 |
+  ees8^\f ees ~ ees4 ~ ees2 |
   e4. e,8 ~ e e'4 ges8 |
   f4 f, g a |
   bes c d bes |
   a2 ~ a8 ees'8 ~ ees4 |
   d2 ~ d8 a4 aes8 |
   g8 r8 r4 r2 |
-  g'8\mf r8 r4 r2 |
+  g'8^\mf r8 r4 r2 |
   c,2 f,4 c'8 cis8 |
   d8 d fis,4 g gis |
   a8 d ~ d aes g d' d, eis |
   fis d' fis,4 g gis |
   a8 d4 b8 a g fis d' |
-  d d fis,4 g a |
-  c8 d des c ~ c bes a g |
+  d d fis,4 g gis |
+  a8 d des c ~ c bes a g |
   a f' a,4 bes b |
   c4 f, a4 g8 cis |
   d8 r8 r4 r2 |
@@ -709,27 +809,27 @@ bass = \relative c {
   r8 ges8 f8 r8 fis,8 r8 cis'8 r8 |
   ees8  f8 r8 a,8 r4 r8  f'8 |
   r4 r8 a8 r4 r8 ees8 |
-  d8 aes'8 a,8 bes8 ees8 d8 aes8 d8 |
-  g,1 ~ |
+  d8^\< aes'8 a,8 bes8 ees8 d8 aes8 d8 |
+  g,1^\f ~ |
   g4. r8 g'4 f |
   ees2 e |
-  f g8 ees c g |
-  f8 a r f' ~ f f, g f |
-  f a r f' ~ f f, a des |
+  f g8 ees c bes |
+  a8 c r f ~ f ees c a |
+  f f r f' ~ f d c g |
   c4 g'8 ges f f, g a |
   bes d f bes ~ bes f d bes |
-  ees8 ees ~ ees4 ~ ees8 ees8 ~ ees4 |
+  ees8 ees ~ ees4 ees8 ees8 ~ ees4 |
   e4. e8 ~ e e4 e8 |
-  f4. f,8 ~ f f'8 ~ f4 |
-  d8 des c bes ~ bes c d4 |
+  f4. f,8 ~ f f8 g a |
+  bes8 des c bes ~ bes c d4 |
   c8 a ~ a4 ~ a8 ees'4. |
   d4. d8 ~ d4. d8 |
   g, r8 r4 r2 |
   g'8 r \times 2/3 { g a ais } \times 2/3 { b a aes } g d |
   c2 f8 ees d c |
   bes8 bes4 g8 ~ g8 a bes4 |
-  c g' f8 g a4 |
-  bes bes,8 c d ees f g |
+  c g' f8 f, a4 |
+  bes bes8 c d ees f g |
   ees4 r e r |
   f fis g d8 des |
   c4 g' f8 g a4 |
@@ -753,7 +853,7 @@ bassWords = \lyricmode {
   a dan -- dy de -- ny -- ing
   di -- no ha -- bit I'd 
   roar the ra -- bit
-  aw - ful had the
+  aw -- ful had the
   aw -- ful if I
   had the nerve
   more
@@ -762,11 +862,11 @@ bassWords = \lyricmode {
   bet
   ny
   nerve
-  scared verve
+  scared more verve
   show
   fate
   sis -- sy, yes it's sad be -- lieve me Mis -- say
-  Wi --zard is a Wiz a king
+  Wi -- zard is a Wiz a king
   show me more
   if I
   home and a heart would have the
@@ -795,7 +895,36 @@ bassWords = \lyricmode {
   nerve
   oh
   fraid vim
-  verve
+  verve sau
+  Oh I'd
+  my prow
+  I'd in
+  stride a sy I'd
+  rus
+  a bee -- zer
+  I could be a li -- on
+  roar don't de -- serve a
+  king vim and verve it's sad yes
+  mis -- sy when you're
+  born to sis -- sy
+  Ne -- ver more
+  on -- ly had, I had the 
+  nerve of a rab -- bit I would
+  serve a cea -- sar
+  roar more I would stride now
+  a ra -- bit li -- zard don't serve then when
+  could change a Wi -- zard
+  of Oz
+  re just like a bli -- zard I'm just a -- fraid
+  ny -- ing when you're
+  born not
+  Wi -- zard of Oz
+  is one be -- cause
+  won -- der -- ful things the Wi -- zard
+  verve ruff
+  born to roar he's the gi -- zard bli -- zard of Oz
+  Wi -- zard the won -- der
+  Wiz of Oz is one a li -- on sis -- sy Nerve
 }
 
 ugh = \transpose c c, {
@@ -1662,9 +1791,6 @@ r8 }
       \new Voice = "soprano" { << { \numericTimeSignature
 	\midiPrefatoryMatter
         \soprano
-      } {
-   \repeat unfold 372 \unfoldSwing #96
-
       } {
 	\midiPrefatoryMatter
         \marks
