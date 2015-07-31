@@ -90,49 +90,34 @@ beamComm = {
 }
 
 soprano = \relative c' {
-  %R1*2 |
-  %r8 d r4 r2 |
-  %R1 |
-  %R1 |
-  %r2. ees8 r |
-  %r4 f8 r r4 d8 r |
-  %bes8 r r4 r2 |
-  %r4. c8 r2 | 
-  %r8 d r4 r8 bes r4 |
-  %r4 c8 r d r bes r |
-  %r2. g8 r |
-  %r2. a8 r |
-  %bes8 r8 r4 g8 r8 r4
-  %bes8 r4. f8 f r4 |
-  %f8 f r4 f8 r r4 |
-  R1*16 |%r8
+  R1*16 |
   r2. d8^\mf ees |
   f d bes c d bes8 r4 |
   r4 \times 2/3 { r8 bes c8 } d bes g a |
   bes g r4 r4. bes8 |
-  f f f f f4 r4 |
-  r f ~ f2 |
+  f f f f f2 ~ |
+  f1 |
   r2. bes8 a |
   g r g' f ees d r4 |
   r4 c8 bes a a a' g |
   f ees r4 r4 d8 c |
-  bes bes bes bes bes4 r4 |
-  r4 bes4 ~ bes2 |
+  bes bes bes bes bes2 ~ |
+  bes1 |
   r2. d8 ees |
   f d bes c d bes r4 |
   r4 \times 2/3 { bes8 bes c8 } d bes g a |
   bes g r4 r4. bes8 |
-  f f f f f4 r |
-  r f4 ~ f2 |
-  r2. bes8 a |
-  g r g' f ees d r4 |
+  f f f f f2 ~ |
+  f1 |
+  r2. bes8 a|
+  g4 g'8 f ees d r4 |
   r4 c8 bes a a a' g |
   f ees r4 r4 d8 c |
-  bes bes bes bes bes4 r4 |
-  r << { bes ~ bes2 } { s2^\< s8 s8^\f } >> |
+  bes bes bes bes << { bes2 ~ |
+     bes1 } { s2^\< s2. s8 s8^\f } >> |
   r2. bes4 |
   g'2 r |
-  r8 fis g a ~ a4. f8 ~ |
+  r4. fis8 g a4 f8 ~ |
   f2 r |
   r4 g ees8 ees4 ees8 ~ |
   ees2 r |
@@ -189,22 +174,18 @@ sopranoWords = \lyricmode {
 Yeh, it's sad, be -- lieve me, Mis -- sy
 When you're born to be a sis -- sy
 With -- out the vim and verve
-(erve)
 
 But I could change my ha -- bits
 Ne -- ver more be scared of rab -- bits
 If I on -- ly had the nerve
-(erve)
 
 I'm af -- raid there's no de -- ny -- ing
 I'm just an aw -- ful dan -- dy li -- on
 A fate I don't de -- serve
-(erve)
 
 But I could show my pro -- wess
 Be a li -- on, not a mou -- se
 If I on -- ly had the nerve
-(erve)
 
 Oh I'd be in my stride
 A king down to the core
@@ -230,10 +211,6 @@ A heart, a home, the nerve
 }
 
 mezzo = \relative c' {
-  %R1*4 |
-  %r8 a ~ a4 ~ a2 |
-  %f2. r4 |
-  %R1*2 |
   r4. cis8^\f d bes g f |
   d'8 d4 bes8 ~ bes2 |
   r4. fis'8 g ees c bes |
@@ -248,34 +225,31 @@ mezzo = \relative c' {
   g8 ees c bes g' g8 ~ g4 |
   r2. ees8 e8 |
   f8 a f e ees g ees cis |
-  d f d des c f, g cis |
+  d bes g f d' d4 cis8 |
   d bes g f f' d8 r4 |
   r8 fis g bes ~ bes g ges4 |
   f8 f g f bes g f cis |
-  d bes bes' a aes bes, ees f |
+  d c bes' a aes bes, ees f |
   g bes g f ees d ees e |
   f a d des c a g ges |
   f a f e ees f g ges |
-  f bes f d c bes g' ges |
+  f bes f d c a g' ges |
   f ees d a c4-. d8-. cis8 |
-  d8 bes8 g8 f8 d'8 d4 bes8 ~ |
-  bes2. r8 f'8 |
+  d8 bes8 g4 d'8 d4 bes8 ~ |
+  bes4 d8 f bes4 f8 fis |
   g8 ees c aes g' g4 ees8 ~ |
   ees2 r4 ees8 e8 |
   f8 a f e ees g4 ges8 |
-  f f,4 fis8 g8 bes d cis |
-  d bes d ees f d4 bes8 ~ |
+  f f,4 fis8 g8 bes d dis |
+  bes4 d8 ees f4 d8 c |
   bes4 r bes' g8 cis, |
-  d8 bes8 g8 f8 d'8 d4 bes8 ~ |
-  bes2. r8 f'8 |
-  g8 ees c aes g' g4 ees8 ~ |
-  ees2 r4 ees8 e8 |
-  %f8 a4 g8 f ees4 cis8 |
-  %d c bes c d ees f ees |
-  %d bes g f d' d4 bes8 ~ |
-  f8 a f d ees g f ees |
-  d4 bes'8 a g f d ees |
-  f^\< g bes g c bes g bes |
+  d8 bes8 g4 d'4 c |
+  d2 ~ d8 r c d |
+  c fis g fis d ees4 ees8 |
+  f8 ees d4 aes'8 g f ees |
+  d f aes g f g f ees |
+  bes' bes f ees b' b g a |
+  bes^\< bes bes bes bes bes4 a8 ~ |
   a4. aes8 ~ aes2 |
   g8^\f g ~ g4 ~ g2 |
   g4. g8 ~ g4. e8 |
@@ -354,8 +328,8 @@ mezzoWords = \lyricmode {
   A re -- gal born to ne -- ver serve
   A dan -- dy king de -- ny -- ing %verve
   Show the di -- no -- saurs my ha -- bits
-  Oh I'd roar and rrwuff the rab -- bits
   I'd be aw -- ful if I had the
+  be aw -- ful if I had the
 
   Ne -- ver -- more would I show
   I'm just an aw -- ful king, Oh no
@@ -365,17 +339,18 @@ mezzoWords = \lyricmode {
   Not a -- fraid of Mis -- sy mou -- se I'm de -- ny -- ing if I had the
   Ne -- ver -- more, a -- no -- ther nerve
 
-  I'd be gen -- tle as a li -- zard's verve
+  I'd be gen -- tle as li -- zard's verve
+  ne -- ver scared If
   I'd show my fate I'd ne -- ver serve
   If the Wi -- zard is a Wi -- zard a bli -- zard a li -- zard
-  Ne -- ver more be if I had the nerve
+  Ne -- ver more if I had, had the nerve
 
   nerve nerve
-  I'm sure to get a re -- gal core
-  A cea -- sar who would ruff some more
+  I'm sure to get re -- gal core
+  Oh, A cea -- sar who would ruff some, some more could show pro -- wess
   I could serve an aw -- ful li -- on
-  If you're sad I'm de -- ny -- ing Then the vim and verve
-  are aw -- ful like a bee -- zer
+  If you're sad well I'm de -- ny -- ing Then the vim and verve
+  are aw -- ful bee -- zer
   stride da
   Ruff roar
   A ha -- bit that I do not de -- serve
@@ -437,36 +412,33 @@ alto = \relative c'' {
   g8 ees c bes g' g4 ees8 ~ |
   ees2 r4 ees8 e8 |
   f8 a f e ees g ees cis |
-  d f d des c ees c cis |
-  d bes g f f' d4 bes8 ~ |
-  bes4 r bes'-. r8 cis,8 |
+  d f d des c ees c a |
+  ees4 des' a8 f ~ f4 ~ |
+  f4 r bes'-. r8 cis,8 |
   d8 bes g f d' d4 bes8 ~ |
   bes2. r8 fis'8 |
-  g8 ees d c bes g'4 ees8 ~ |
-  ees2 r4 c8 cis8 |
+  g8 ees d4 c8 g'4 d8 ~ |
+  d c bes aes g r c8 cis8 |
   d4 f8 e ees f ees cis |
   d f d des c ees c cis |
   d bes g f ees' c4 d8 |
   bes4 r aes'4-. fis-. |
   g-. ees c ees8 cis |
-  d bes g f d'8 d4 bes8 |
-  ees8 c aes f d'8 c bes aes |
+  d bes g f d'8 d4 a8 |
+  aes8 c aes f d'8 c bes aes |
   c bes4 g8 ees f g a |
-  bes4 bes r bes |
-  r8 a' f e ees g4 fis8 |
+  bes4 bes r bes8 c |
+  d8 a' f e ees g4 fis8 |
   f d bes g a8 a4 a8 ~ |
   a4 r r d' |
-  bes,8 cis d bes g f d' ees |
-  f d bes c d bes4 r8 |
-  r8 aes c ees d bes d c |
-  bes4 ees8 d g,4 bes |
-  %a4 f'8 ees d c4 bes8 |
-  %a bes g gis a f b fis |
-  %g
-  r2. d8 ees |
-  f a f ees d c b aes |
-  g8^\< g g g g g4 f'8 ~ |
-  f2 \times 2/3 { r8 bes, c } \times 2/3 { d f g } |
+  bes,8 cis d cis a fis'4 ees8 |
+  f d bes c d bes ees fis |
+  g8 bes c bes g8 f4 bes8 ~ |
+  bes2 \times 2/3 { r8 c, cis } \times 2/3 { d f g }
+  bes8 bes ees, ees bes' bes ees, cis |
+  d c a' g f ees d ees |
+  f8^\< g bes g c bes g ges |
+  f4. f8 ~ \times 2/3 { f8 bes, c } \times 2/3 { d f g } |
   bes^\f bes4 bes8 g8 bes4 r8 |
   bes8 ( c16 bes ) g8 bes8 ~ bes4. gis8 |
   a8 c8 a  f g4 a8 f8 ~ |
@@ -530,27 +502,28 @@ altoWords = \lyricmode {
   A dan -- dy king de -- ny -- ing verve
   Show the di -- no -- saurs my ha -- bits
   Oh I'd roar and rrwuff the rab -- bits
-  I'd be aw -- ful if I had the nerve
+  I'd be aw -- ful had the
 
   Nerve
 
   The cea -- sar show -- ing I de -- serve
-  A bee -- zer king, oh I would serve
+  A bee -- zer king I would serve, I roared be --  fore
   Oh I'd bet my core prow -- ess
   Not a -- fraid of Mis -- sy mou -- se
   I'm de -- ny -- ing if I had the, the nerve
   nerve I'd roar some more and be gen -- tle as a li -- zard
   I'd show my fate I no my fate, a sis -- sy
-  It's sad be -- ieve me Mis -- sy
-  Wiz
-  A king a roar show me
+  It's sad be -- lieve me Mis -- sy
+  I'm a -- fraid
+  A king -- 'd roar show me
   more be if I had the nerve
   nerve
-  sure to get a re -- gal I'm a -- fraid there's no de -- ny -- ing
-  A cea -- sar who would ruff some more, ruff my core I'd
-
-  If you're sad well I'm de -- ny -- ing Then the vim and verve are aw -- ful
-  be
+  sure to get a re -- gal a -- fraid there's no de -- ny -- ing
+  Oh A cea -- sar who would ruff some more, ruff my core I would
+  serve an aw -- ful li -- on If you're
+  sad well I'm de -- ny -- ing Then the
+  vim and verve are aw -- ful like a
+  be -- zer
   I would be in my stride dan -- dy li -- on
   Ruff and roar
   A ha -- bit that I don't de -- serve, don't de -- serve
@@ -613,19 +586,16 @@ tenor = \relative c' {
   r8 f^\f ~ f4 ~ f2 |
   c2. r4 |
   R1*23 |
-  r2 bes4^\mf g |
-  bes r ees, r |
+  r2 bes4.^\mf a8 |
+  g4 r ees r |
   d g r bes |
-  ees,8 g r cis d bes g f |
-  d'8 d4 bes8 ~ bes4 d |
-  c8 r f, g aes c4 fis,8 |
-  g aes bes d, ees f g a |
-  %f8 f r4 f8 f r4 |
-  %f8 f r4 g8 g r4 |
-  %ees'8 d ~ d4 c8 c4 d8 ~ |
-  bes4 a8 g f4 c'8 bes |
-  a8 g4 g8 b4 g |
-  ees8^\< ees ees ees ees ees4 d'8 ~ |
+  ees,8 g r bes ees, a4 g8 |
+  a4 g ~ g a8 b |
+  a aes a c aes c4 c8 |
+  d8 c ~ c4 ges'8 ees aes, g |
+  aes4 ees'8 c ees4 c8 bes |
+  bes4 c8 cis d4 f |
+  ees8^\< c g ees ees ees4 d'8 ~ |
   d1
   c8^\f c ~ c4 ~ c2 |
   c4. c8 ~ c4. r8 |
@@ -690,9 +660,10 @@ tenorWords = \lyricmode {
   nerve nerve
   nerve
   sure to
-  I'm sure to get a re -- gal core A
-  see cea -- sar ruff some would show the dan -- dy fo -- rus
-  I could serve aw -- ful lie If you're sad well de -- ny -- ing
+  I'll sure get a re -- gal core A
+  cea -- sar would would ruff some, some
+  show my  prow -- wess I could serve aw -- ful lie If you're
+  sad I'm de -- ny -- ing
   vim and verve are aw -- ful be
   stride da
   ruff rar
@@ -755,19 +726,19 @@ bass = \relative c {
   bes bes'^\> a g f ees d des |  
   c4^\mf g f a |
   bes8 bes a4 g ges |
-  f c' bes d |
-  ees8 ees d4 c cis |
-  d bes c a8 f |
-  bes4 d c g |
-  c g f a |
-  bes8 d f bes r bes,4 b8 |
+  f ees' d bes |
+  ees8 ees g,4 aes8 bes c cis |
+  d4 bes c a8 f |
+  bes4 d8 g, c4 g |
+  c e, f a |
+  bes8 c d r r4 d8 b |
   c4 r f, r |
   bes r4 r2 |
   f4 r bes r |
   ees4 r4 r2 |
   f,4 r4 r2 |
   R1 |
-  f4 r4 r2 |
+  c'4 r4 f, r4 |
   r2 bes4 r |
   ees4 r f, r |
   bes r4 r2 |
@@ -775,13 +746,13 @@ bass = \relative c {
   g'8 ees c bes g'8 g c,8 cis |
   d4 des c8 a f a |
   bes4 d c4 g8 b |
-  c4 r f, fis |
-  g8 bes d a' ~ a g d cis |
-  c4 g f a |
-  bes8 bes a4 g ges |
-  f c' bes d |
-  ees8 ees d4 c cis |
-  d8 bes a bes c a f a |
+  c4 r f,4. fis8 |
+  g8 bes d a' ~ a g4 g8 |
+  c,4 ges f a8 f |
+  bes8 bes d,4 ees g8 e |
+  f4 ees'8 a, bes4 aes8 fis |
+  g4 aes a c8 cis |
+  d8 bes4 bes8 bes8 bes4 bes8 |
   bes4 d8 fis, g8 a b4 |
   c4^\< g8 ges f g a f |
   bes4. bes8 ~ bes2 |
@@ -850,17 +821,17 @@ bassWords = \lyricmode {
   re -- gal born to
   re -- gal don't serve a
   dan -- dy king
-  a dan -- dy de -- ny -- ing
+  a dan -- dy de -- ny -- ing show the
   di -- no ha -- bit I'd 
-  roar the ra -- bit
+  roar rrwuff the ra -- bit
   aw -- ful had the
-  aw -- ful if I
+  aw -- ful if
   had the nerve
   more
   serve
   king no core
   bet
-  ny
+  ny had
   nerve
   scared more verve
   show
@@ -869,12 +840,12 @@ bassWords = \lyricmode {
   Wi -- zard is a Wiz a king
   show me more
   if I
-  home and a heart would have the
-  sure to re -- gal
-  I'd get a re -- gal
-  core a cea -- sar
-  cea -- sar who'd ruff some
-  serve an aw -- ful li -- on If you're 
+  home and a heart would -- 've
+  sure to re -- gal oh
+  I'd get a re -- gal, a
+  core would would ruff, ruff some
+  more  de -- ny I could
+  serve aw -- ful li -- on you're 
   sad I'm de -- ny -- ing  Then
   vim verve are aw -- ful like a bee -- zer
   stride da
