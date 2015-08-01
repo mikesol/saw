@@ -1,3 +1,34 @@
+%{
+  GM w/ 2 entries
+  GM w/ 4 entries
+  IRREGULAR HOCKET .---..--..--
+  TIGHTER HOCKET -.-.--.-.-.-
+  3+3+2 (meaning --.--.--.--.-.-.)
+  
+  f g a f d' c bes c [but harmonized interestingly, bes at end becomes 3rd of ges major]
+  ...
+  SOLO MPer
+  SOLO MPic
+  SOLO Mike / SOLO Ryan
+  SOLO Mathieu + tutti -...^^^----- where . = mathieu & ^ is loud rebuke
+  CHROM
+  CHROM
+  DIM
+  DIM
+  CUTE
+  CUTE
+  CUTE
+  CUTEWWWHAM
+  4 MEASURES OF SOLO (EX g bes c bes c des16 c g8 bes
+     g d f g' d c bes f |
+     g a bes g a bes c f, |
+     d' bes c d c bes f fis |
+  WHAM bam WHAM bam
+  |-|-.-|cis8
+  d bes g f f' d4 f, |
+  bes d f bes r4 fwefafeafefaefeafefaewfefaefef
+
+%}
 \version "2.19.0"
 \include "defs-devel.ly"
 
@@ -236,7 +267,7 @@ mezzo = \relative c' {
   f bes f d c a g' ges |
   f ees d a c4-. d8-. cis8 |
   d8 bes8 g4 d'8 d4 bes8 ~ |
-  bes4 d8 f bes4 f8 fis |
+  bes4. r8 bes'4 f8 fis |
   g8 ees c aes g' g4 ees8 ~ |
   ees2 r4 ees8 e8 |
   f8 a f e ees g4 ges8 |
@@ -249,7 +280,7 @@ mezzo = \relative c' {
   f8 ees d4 aes'8 g f ees |
   d f aes g f g f ees |
   bes' bes f ees b' b g a |
-  bes^\< bes bes bes bes bes4 a8 ~ |
+  bes^\< bes bes bes bes bes4 bes8 |
   a4. aes8 ~ aes2 |
   g8^\f g ~ g4 ~ g2 |
   g4. g8 ~ g4. e8 |
@@ -278,44 +309,7 @@ mezzo = \relative c' {
   g'8^\<  g r gis, a bes c cis |
   d^\f bes g f d' d4 bes8 ~ |
   bes2. r8 fis' |
-  g ees c bes g' g4 ees8 ~ |
-  ees2 ~ ees8 r8 r4 |
-  r8 c c c r bes bes bes |
-  r d d des r c c b |
-  bes4-. bes4-. bes8 ( a ) g a ~ |
-  a aes4 g8 f ees4 d8 |
-  c8 ees g bes ees, g bes d |
-  c8-. r4 c8 ~ \times 2/3 { c g gis } \times 2/3 { a ais b } |
-  c e c a bes d bes g |
-  a c a f ~ f4 d |
-  g4 \times 2/3 { g8 gis a } \times 2/3 { bes a aes } \times 2/3 { g fis e } |
-  d fis a d \times 2/3 { r fis, g } \times 2/3 { gis a ais }
-  b d8 b bes8 a c8 a aes8 |
-  g b8 g ges8 f a8 f d8 |
-  ees8 f g ees f g a f |
-  \times 2/3 { bes c bes } \times 2/3 { des c bes } g f d bes |
-  ees f g bes a f ~ \times 2/3 { f f' ees }
-  d8 f d bes des c bes g |
-  r4 ees' r \times 2/3 { g8 f8 ees } |
-  d c bes a ~ a g4 f8 |
-  \times 2/3 { g ees bes' } \times 2/3 { g d' bes } \times 2/3 { f' e ees } \times 2/3 { d des c }
-  bes8 c bes g g' f d bes |
-  ees4 g, r g8 f |
-  d' des c bes ~ bes g f g |
-  ees f g bes a f g a |
-  aes aes r g' ~ g2^\fermata |
-  %g4 bes a8 bes c4 |
-  %\times 2/3 { d8 des c } bes4 ~ bes8 g8 f d |
-  %ees g bes d \times 2/3 { c a bes } \times 2/3 { c d ees } |
-  %f g, f bes ~ bes a aes ees |
-  %g4 g r g |
-  %f8 d4 a'8 ~ a g4 f8 |
-  %ees8 g bes d c bes a g |
-  %f bes f ees \times 2/3 { d bes c } \times 2/3 { d f g } |
-  %bes4 g r g |
-  %d'8 des c bes ~ bes g f g |
-  %ees g bes d c f, g a |
-  %aes aes r g' ~ g2^\fermata |
+  
 }
 
 mezzoWords = \lyricmode {
@@ -340,7 +334,7 @@ mezzoWords = \lyricmode {
   Ne -- ver -- more, a -- no -- ther nerve
 
   I'd be gen -- tle as li -- zard's verve
-  ne -- ver scared If
+  nerve If
   I'd show my fate I'd ne -- ver serve
   If the Wi -- zard is a Wi -- zard a bli -- zard a li -- zard
   Ne -- ver more if I had, had the nerve
@@ -350,7 +344,7 @@ mezzoWords = \lyricmode {
   Oh, A cea -- sar who would ruff some, some more could show pro -- wess
   I could serve an aw -- ful li -- on
   If you're sad well I'm de -- ny -- ing Then the vim and verve
-  are aw -- ful bee -- zer
+  are aw -- ful, a bee -- zer
   stride da
   Ruff roar
   A ha -- bit that I do not de -- serve
@@ -376,28 +370,6 @@ mezzoWords = \lyricmode {
   show the for if I had bee -- zer
   I on -- ly had
   An aw -- ful fate I don't de -- serve
-  A king with -- out the vim and verve
-  be -- lieve me, sy When you're 
-  to be a sy Ne -- ver
-  If I had the nerve
-  Be a king they could
-  serve a cle -- ver cea -- sar
-  If I roar more then I'd be in my 
-  stride, a rab -- bit don't de -- serve
-  A li -- zard don't serve I could
-  And with a giz -- zard that you bet -- ter
-  Roar like be -- fore
-  Ne -- ver more would I show it like a gi -- zard
-  I'd be re -- gal like a bli -- zard I'm a -- fraid
-  there's no de -- ny -- ing when you're
-  born not a Wi -- zard a li -- on
-  If a dan -- dy is a bliz -- zard
-  When you're born with -- out the vim and verve I'd
-  %{serve%} nerve %{roar%} more no you're born in a way to be
-  gi -- zard bli -- zard gi -- zard li -- zard the Wi -- zard of
-  Oz is one be -- cause he is the won -- der -- ful the
-  Wi -- zard of Oz is one be -- cause a li -- on would -- n't be a sis -- sy
-  Nerve
 }
 
 
@@ -466,33 +438,6 @@ alto = \relative c'' {
   ees8^\< f8 g8  d8 fis8 g8  a8 fis8 |
   a4^\f g f ees |
   d a'8 bes a g f d |
-  c2 g' |
-  a r4 ees8 e |
-  f a f e ees g ees cis |
-  d f d des c ees c cis |
-  d f g f d' ( c ) bes c ~ |
-  c bes4 r8 \times 2/3 { r8 bes, c } \times 2/3 { d f g } |
-  bes8 bes c bes des c bes g |
-  c8 ( des16 c ) g8 bes8 ~ \times 2/3 { bes e, f fis g gis } |
-  a c a f g f a e |
-  f e ees d ~ \times 2/3 { d d e } \times 2/3 { fis a b } |
-  c8 r \times 2/3 { c cis d } \times 2/3 { ees d des } c8 a |
-  \times 2/3 { c a e' } \times 2/3 { c g' e } \times 2/3 { b' a aes } \times 2/3 { g f ees } |
-  d8 d f,4 r \times 2/3 { g8 gis a } |
-  \times 2/3 { b a aes } g4 r \times 2/3 { d8 des c } |
-  bes8 bes r d c c r ees |
-  d a4 fis'8 d8 bes \times 2/3 { g8 a bes } |
-  c2 d4 bes' |
-  a aes g f |
-  c c' r c |
-  a fis8 ees d g d' c |
-  bes g4 bes8 a8 f4 a8 |
-  f4. g8 ~ g g a g |
-  g4 ees r e8 d |
-  d1 ~ |
-  d2 ees |
-  d8 d r8 aes'8 ~ aes2 |
-  
 }
 
 altoWords = \lyricmode {
@@ -552,32 +497,6 @@ altoWords = \lyricmode {
   If I on -- ly had 
   An aw -- ful fate I serve
   What a li -- on when you're
-  born -- to
-  verve
-  Yes it's sad be -- lieve me mis -- sy
-  When you're born to be a sis -- sy
-  Ne -- ver
-  If I on -- ly had the nerve
-  Be
-  I would be there to
-  serve a cle -- ver cea -- sar If I
-  roar some more
-  then I'd be in my
-  stride, a rab -- bit don't de -- serve
-  A li -- zard don't serve
-  On -- ly then when I
-  could And with a gi -- zard you bet -- ter
-  Wi -- zard a Wi -- zard the Wi -- zard of Oz he would
-  show it like
-  I would be re -- gal just like
-  Oh I'm a -- fraid there's de -- ny -- ing
-  you're born not a li -- on On -- ly if
-  dan bli -- zard
-  born with vim and
-  verve nerve more
-  born, born a -- way to be the gi -- zard the bli -- zard of
-  Oz, Wi -- zard is the won -- der -- ful
-  the Wiz a sis -- sy Nerve
 }
 
 tenor = \relative c' {
@@ -623,33 +542,7 @@ tenor = \relative c' {
   c8 b8 r8 cis8 r8  a8 r8 aes8 |
   c8^\< d8  ees8 b8  c8 b8 gis8 a8 |
   fis'4^\f ees d c8 cis |
-  d bes g f d' d4 bes8 ~ |
-  bes2. r8 fis' |
-  g ees c bes g'8 g4 ges,8 |
-  f c c c r g' g g |
-  r gis gis a r g g fis' |
-  g ees c bes g' ees4 d8 ~ |
-  d1 |
-  bes8 c ~ c4 ~ c2 |
-  g4. g8 ~ g c4 ees8 |
-  d4 f e ees8 d ~ |
-  d bes c a ~ a c4 d8 |
-  ees8 ees4 ees8 c8 a8 ~ a4 |
-  a4 \times 2/3 { a8 ais b } \times 2/3 { c cis d } ees8 ees |
-  g4 \times 2/3 { d8 dis e } \times 2/3 { f e ees } d8 ais |
-  b d b bes a c a aes |
-  g4 \times 2/3 { c8 b bes } \times 2/3 { a aes g } f ees |
-  a4 d ~ d c |
-  bes2 a4 c |
-  bes2 d4 bes |
-  g bes r bes |
-  a1 |
-  bes2 a4 c |
-  bes2 d |
-  c4 bes r bes |
-  bes2 a4 g |
-  bes2 c2 |
-  f,8 f r c'8 ~ c2^\fermata |
+  d bes g f d' d4 bes8 |
 }
 
 tenorWords = \lyricmode {
@@ -686,31 +579,6 @@ tenorWords = \lyricmode {
   show the rus I a
   bee -- zer If I on -- ly had An
   aw -- ful fate I An aw -- ful fate I don't de -- serve
-  A king with -- out the vim and it's sad be -- lieve me 
-  sy When you're
-  to be a
-  sy Ne -- ver
-  If I on -- ly had the nerve
-  serve a
-  roar more I would stride
-  a rab -- bit
-  Rab -- bit don't serve
-  On -- ly could change my hab -- bits
-  Wiz Wiz -- ard the Wi -- zard of Oz would
-  Show just like a gi -- zard he'd show it
-  re -- gal lie a bli -- zard I'm a fraid
-  there's no de -- ny -- ing when you're just
-  born Wi -- zard
-  dan bli -- zard
-  born vim and verve
-  nerve more
-  born
-  gi -- zard of 
-  Oz Wiz
-  won -- der
-  ful Wiz -- ard of Oz a sis -- sy Nerve
- 
-  
   
 }
 
@@ -783,32 +651,6 @@ bass = \relative c {
   d8^\< aes'8 a,8 bes8 ees8 d8 aes8 d8 |
   g,1^\f ~ |
   g4. r8 g'4 f |
-  ees2 e |
-  f g8 ees c bes |
-  a8 c r f ~ f ees c a |
-  f f r f' ~ f d c g |
-  c4 g'8 ges f f, g a |
-  bes d f bes ~ bes f d bes |
-  ees8 ees ~ ees4 ees8 ees8 ~ ees4 |
-  e4. e8 ~ e e4 e8 |
-  f4. f,8 ~ f f8 g a |
-  bes8 des c bes ~ bes c d4 |
-  c8 a ~ a4 ~ a8 ees'4. |
-  d4. d8 ~ d4. d8 |
-  g, r8 r4 r2 |
-  g'8 r \times 2/3 { g a ais } \times 2/3 { b a aes } g d |
-  c2 f8 ees d c |
-  bes8 bes4 g8 ~ g8 a bes4 |
-  c g' f8 f, a4 |
-  bes bes8 c d ees f g |
-  ees4 r e r |
-  f fis g d8 des |
-  c4 g' f8 g a4 |
-  bes4. bes,8 ~ bes c d4 |
-  ees4 r e r |
-  f fis g4 g, |
-  c g' f f, |
-  bes8 bes r bes ~ bes2^\fermata |
 }
 
 bassWords = \lyricmode {
@@ -874,28 +716,7 @@ bassWords = \lyricmode {
   rus
   a bee -- zer
   I could be a li -- on
-  roar don't de -- serve a
-  king vim and verve it's sad yes
-  mis -- sy when you're
-  born to sis -- sy
-  Ne -- ver more
-  on -- ly had, I had the 
-  nerve of a rab -- bit I would
-  serve a cea -- sar
-  roar more I would stride now
-  a ra -- bit li -- zard don't serve then when
-  could change a Wi -- zard
-  of Oz
-  re just like a bli -- zard I'm just a -- fraid
-  ny -- ing when you're
-  born not
-  Wi -- zard of Oz
-  is one be -- cause
-  won -- der -- ful things the Wi -- zard
-  verve ruff
-  born to roar he's the gi -- zard bli -- zard of Oz
-  Wi -- zard the won -- der
-  Wiz of Oz is one a li -- on sis -- sy Nerve
+  roar don't de
 }
 
 ugh = \transpose c c, {
