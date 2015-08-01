@@ -1,8 +1,18 @@
+\version "2.19.0"
+\include "defs-devel.ly"
+lo = #(define-music-function(parser location m)(ly:music?) #{ \longSwung $m #})
+sh = #(define-music-function(parser location m)(ly:music?) #{ \shortSwung $m #})
+lod = #(define-music-function(parser location m)(ly:music?) #{ \longDottedSwung $m #})
+ssh = #(define-music-function(parser location m)(ly:music?) #{ \shortShortSwung $m #})
+%lo = { }
+%sh = { }
+%lod = { }
+%ssh = { }
 %{
   GM w/ 2 entries
   GM w/ 4 entries
   IRREGULAR HOCKET .---..--..--
-  TIGHTER HOCKET -.-.--.-.-.-
+  TIGHTER HOCKET -.- .--    .-.   -.-
   3+3+2 (meaning --.--.--.--.-.-.)
   
   f g a f d' c bes c [but harmonized interestingly, bes at end becomes 3rd of ges major]
@@ -29,8 +39,6 @@
   bes d f bes r4 fwefafeafefaefeafefaewfefaefef
 
 %}
-\version "2.19.0"
-\include "defs-devel.ly"
 
 marD = \markup \null
 elsD = \markup \null
@@ -111,7 +119,22 @@ midiPrefatoryMatter = {
 }
 marks = {
   \tempo "Dixie" 4=96
-  \repeat unfold 93 { \repeat unfold 4 \unfoldSwing #96 } \bar "|."
+  s1*64
+  \mark "rall."
+  \unfoldChange #96 #90 #8
+  \tempo 4=90
+  s1
+  s2 \mark "rall." \unfoldChange #90 #84 #4 |
+  \tempo 4=84
+  s1*3
+  s2.
+     \mark "rall."
+     \unfoldChange #84 #70 #18 |
+  \mark "accel."
+  \unfoldChange #70 #96 #8
+  \mark "a tempo"
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 96 4 0 0)
+  s1
 }
 
 beamComm = {
@@ -122,83 +145,75 @@ beamComm = {
 
 soprano = \relative c' {
   R1*16 |
-  r2. d8^\mf ees |
-  f d bes c d bes8 r4 |
-  r4 \times 2/3 { r8 bes c8 } d bes g a |
-  bes g r4 r4. bes8 |
-  f f f f f2 ~ |
+  r2. \lo d8^\mf \sh ees |
+  \lo f \sh d \lo bes \sh c \lo d \sh bes8 r4 |
+  r4 \times 2/3 { r8 bes c8 } \lo d \sh bes \lo g \sh a |
+  \lo bes \sh g r4 \lod r4. \sh bes8 |
+  \lo f \sh f \lo f \sh f f2 ~ |
   f1 |
-  r2. bes8 a |
-  g r g' f ees d r4 |
-  r4 c8 bes a a a' g |
-  f ees r4 r4 d8 c |
-  bes bes bes bes bes2 ~ |
+  r2. \lo bes8 \sh a |
+  \lo g \sh r \lo g' \sh f \lo ees \sh d r4 |
+  r4 \lo c8 \sh bes \lo a \sh a \lo a' \sh g |
+  \lo f \sh ees r4 r4 \lo d8 \sh c |
+  \lo bes \sh bes \lo bes \sh bes bes2 ~ |
   bes1 |
-  r2. d8 ees |
-  f d bes c d bes r4 |
-  r4 \times 2/3 { bes8 bes c8 } d bes g a |
-  bes g r4 r4. bes8 |
-  f f f f f2 ~ |
+  r2. \lo d8 \sh ees |
+  \lo f \sh d \lo bes \sh c \lo d \sh bes r4 |
+  r4 \times 2/3 { bes8 bes c8 } \lo d \sh bes \lo g \sh a |
+  \lo bes \sh g r4 \lod r4. \sh bes8 |
+  \lo f \sh f \lo f \sh f f2 ~ |
   f1 |
-  r2. bes8 a|
-  g4 g'8 f ees d r4 |
-  r4 c8 bes a a a' g |
-  f ees r4 r4 d8 c |
-  bes bes bes bes << { bes2 ~ |
+  r2. \lo bes8 \sh a |
+  g4 \lo g'8 \sh f \lo ees \sh d r4 |
+  r4 \lo c8 \sh bes \lo a \sh a \lo a' \sh g |
+  \lo f \sh ees r4 r4 \lo d8 \sh c |
+  \lo bes \sh bes \lo bes \sh bes << { bes2 ~ |
      bes1 } { s2^\< s2. s8 s8^\f } >> |
   r2. bes4 |
   g'2 r |
-  r4. fis8 g a4 f8 ~ |
+  \lod r4. \sh fis8 \lo g a4 \sh f8 ~ |
   f2 r |
-  r4 g ees8 ees4 ees8 ~ |
+  r4 g \lo ees8 ees4 \sh ees8 ~ |
   ees2 r |
   r4 f^\mf d2 |
-  r4 d8 d c bes c bes |
-  c bes c d8 r4 bes |
+  r4 \lo d8 \sh d \lo c \sh bes \lo c \sh bes |
+  \lo c \sh bes \lo c \sh d8 r4 bes |
   R1 |
-  r8 c ~ c4 r8 d ~ d4 |
-  r8 f4 r8 r4. g8 |
-  r8 d4 c8 r4 bes8 f'8 ~ |
-  f8 r r4 r2 |
-  r8 d4 r8 r2 |
-  r4. ees8-- ~  ees r4 f8 ~ |
-  f8 d bes c d8 bes4 c8 |
-  d8 r r4 r8 bes g a | % D
-  bes g r4 r2 | % g
+  \lo r8 \sh c ~ c4 \lo r8 \sh d ~ d4 |
+  \lo r8 f4 \sh r8 \lod r4. \sh g8 |
+  \lo r8 d4 \sh c8 r4 \lo bes8 \sh f'8 ~ |
+  \lo f8 \sh r r4 r2 |
+  \lo r8 d4 \sh r8 r2 |
+  \lod r4. \sh ees8-- ~  \lo ees r4 \sh f8 ~ |
+  \lo f8 \sh d \lo bes \sh c \lo d8 bes4 \sh c8 |
+  \lo d8 \sh r r4 \lo r8 \sh bes \lo g \sh a | % D
+  \lo bes \sh g r4 r2 | % g
   r4 bes ~ bes2 | % C
-  f8 f f f f2 | % F
-  r4 bes4 ~ bes8 a ~ a4 | % Bb
-  g4 g'8 f ees d c bes | % Eb
-  a8 a a' g f ees ~ ees4 | % Ao
-  r8 d^\< ~ d4 ~ d8 c ~ c4 | % D
-  bes8^\f bes bes bes bes2 |
+  \lo f8 \sh f \lo f \sh f f2 | % F
+  r4 bes4 ~ \lo bes8 \sh a ~ a4 | % Bb
+  g4 \lo g'8 \sh f \lo ees \sh d \lo c \sh bes | % Eb
+  \lo a8 \sh a \lo a' \sh g \lo f \sh ees ~ ees4 | % Ao
+  \lo r8 \sh d^\< ~ d4 ~ \lo d8 \sh c ~ c4 | % D
+  \lo bes8^\f \sh bes \lo bes \sh bes bes2 |
   r bes4 a |
   g2 g'4 f |
-  ees4. d8 c4. bes8 |
+  \lod ees4. \sh d8 ~ \lo d c4 \sh bes8 |
   a4 a a' g |
-  f4. ees8 d4. c8 |
-  bes4 bes bes' a |
-  g8 f ~ f4 ees4. d8 |
-  c4. c8 ~ c2 |
-  c'4. bes8 ~ bes2 |
-  a4. g8 ~ g2 |
-  f4. g8 ~ g2 |
-  a1 |
-  r4 d ~ d8 d ~ d4 |
-  r d r d |
-  r d r d |
-  bes4 r r4. d8 |
-  bes4 r r4. d8 |
-  bes4 r r2 |
-  r8 d8 ~ d4 ~ d2 |
-  bes1 ~ |
-  bes ~ |
-  bes ~ |
-  bes ~ |
-  bes ~ |
-  bes ~ |
-  bes ~ |
-  bes |
+  \lod f4. \sh ees8 d4 \lo ees8 \sh c8 |
+  bes4 bes \lod bes'4. \sh a8 |
+  \lo g8 \sh f ~ f4 \lo r8 ees4 \sh d8 ~ |
+  \lo d c4 \sh c8 ~ c2 |
+  \lod c'4. \sh bes8 ~ bes2 |
+  \times 2/3 { r8 a g } \stemDown f16 g d' ( c ~ c2 | \stemNeutral
+  c2.. ) r8 |
+  R1 |
+  \lo r8 \sh d ~ d4 ~ d2 ~ |
+  d1 ~ |
+  d1 ~ |
+  \lod d4. \sh r8 r4 c ~ |
+  c r4 \lo bes8 \sh bes r4 |
+  r4 \lo bes8 \sh bes8 r2 |
+  r2 \lo r8 \sh bes r4 |
 }
 
 sopranoWords = \lyricmode {
@@ -234,7 +249,7 @@ If I on -- ly had the nerve
 
 I'd be brave as a bliz -- zard
 I'd be gen -- tle as a li -- zard
-I'd be cle -- ver as a giz -- zard
+I would be cle -- ver as a giz -- zard
 If the Wi -- zard is a Wi -- zard who will serve?
 
 Then I'm sure to get a brain
@@ -242,74 +257,90 @@ A heart, a home, the nerve
 }
 
 mezzo = \relative c' {
-  r4. cis8^\f d bes g f |
-  d'8 d4 bes8 ~ bes2 |
-  r4. fis'8 g ees c bes |
-  g' g4 ees8 ~ ees2 |
-  r4 d8 ees f a f e |
-  ees g ees cis d f d des |
-  c ees c cis d bes g f |
-  f' d4 bes8 ~ bes r r4 |
-  r2 r4. cis8^\mf |
-  d8 bes8 g8 f8 d'8 d4 bes8 ~ |
-  bes2. r8 fis'8 |
-  g8 ees c bes g' g8 ~ g4 |
-  r2. ees8 e8 |
-  f8 a f e ees g ees cis |
-  d bes g f d' d4 cis8 |
-  d bes g f f' d8 r4 |
-  r8 fis g bes ~ bes g ges4 |
-  f8 f g f bes g f cis |
-  d c bes' a aes bes, ees f |
-  g bes g f ees d ees e |
-  f a d des c a g ges |
-  f a f e ees f g ges |
-  f bes f d c a g' ges |
-  f ees d a c4-. d8-. cis8 |
-  d8 bes8 g4 d'8 d4 bes8 ~ |
-  bes4. r8 bes'4 f8 fis |
-  g8 ees c aes g' g4 ees8 ~ |
-  ees2 r4 ees8 e8 |
-  f8 a f e ees g4 ges8 |
-  f f,4 fis8 g8 bes d dis |
-  bes4 d8 ees f4 d8 c |
-  bes4 r bes' g8 cis, |
-  d8 bes8 g4 d'4 c |
-  d2 ~ d8 r c d |
-  c fis g fis d ees4 ees8 |
-  f8 ees d4 aes'8 g f ees |
-  d f aes g f g f ees |
-  bes' bes f ees b' b g a |
-  bes^\< bes bes bes bes bes4 bes8 |
-  a4. aes8 ~ aes2 |
-  g8^\f g ~ g4 ~ g2 |
-  g4. g8 ~ g4. e8 |
-  f8 a8 f d8 f e8  ees d8 ~ |
-  d8 des8  c bes8 ~  \times 2/3 { bes bes c } \times 2/3 { d f g } |
-  a8 a8 ~  a4  a8 a4 r8 |
-  a4. a8 ~ a4 f8 fis |
-  g8 r8 r4 r2 |
-  f8^\mf r8 r4 r2 |
-  c8 ees8 c g8 a4. r8 |
-  r4. d8 ~ d c a g |
-  a a4 fis'8 ~ fis e d b |
-  d d4 a'8 ~ a g fis e |
-  fis a^\< r a r b r bis^\f ~ ( |
-  bis \glissando c4 ) r8 r2 |
-  r4. a8^\mf ~ a g f d |
-  f f r c'8-- ~ c bes a g |
-  a g f d f d c cis | % don't forget the eis4
-  r4 r8 cis'8 d8 r8 r8 c8 |
-  bes8 ees,8  d8  a'8 r2 |
-  r8 c8 bes8 des,8 c8 e8 r8 bes' |
-  r8 bes8 a8 r8 r8  des8 r8 c8 |
-  g8 r8 r8 a8 r8 g8 r8 fis'8 |
-  r4 f,8 r8 f'8 r8 r8 g,8 |
-  ees8 e8 f8 r8 bes8 ees,8  a8 r8 |
-  g'8^\<  g r gis, a bes c cis |
-  d^\f bes g f d' d4 bes8 ~ |
-  bes2. r8 fis' |
-  
+  \lod r4. \sh cis8^\f \lo d \sh bes \lo g \sh f |
+  \lo d'8 d4 \sh bes8 ~ bes2 |
+  \lod r4. \sh fis'8 \lo g \sh ees \lo c \sh bes |
+  \lo g' g4 \sh ees8 ~ ees2 |
+  r4 \lo d8 \sh ees \lo f \sh a \lo f \sh e |
+  \lo ees \sh g \lo ees \sh cis \lo d \sh f \lo d \sh des |
+  \lo c \sh ees \lo c \sh cis \lo d \sh bes \lo g \sh f |
+  \lo f' d4 \sh bes8 ~ \lo bes \sh r r4 |
+  r2 \lod r4. \sh cis8^\mf |
+  \lo d8 \sh bes8 \lo g8 \sh f8 \lo d'8 d4 \sh bes8 ~ |
+  bes2. \lo r8 \sh fis'8 |
+  \lo g8 \sh ees \lo c \sh bes \lo g' \sh g8 ~ g4 |
+  r2. \lo ees8 \sh e8 |
+  \lo f8 \sh a \lo f \sh e \lo ees \sh g \lo ees \sh cis |
+  \lo d \sh bes \lo g \sh f \lo d' d4 \sh cis8 |
+  \lo d \sh bes \lo g \sh f \lo f' \sh d8 r4 |
+  \lo r8 \sh fis \lo g \sh bes ~ \lo bes \sh g ges4 |
+  \lo f8 \sh f \lo g \sh f \lo bes \sh g \lo f \sh cis |
+  \lo d \sh c \lo bes' \sh a \lo aes \sh bes, \lo ees \sh f |
+  \lo g \sh bes \lo g \sh f \lo ees \sh d \lo ees \sh e |
+  \lo f \sh a \lo d \sh des \lo c \sh a \lo g \sh ges |
+  \lo f \sh a \lo f \sh e \lo ees \sh f \lo g \sh ges |
+  \lo f \sh bes \lo f \sh d \lo c \sh a \lo g' \sh ges |
+  \lo f \sh ees \lo d \sh a c4-. \lo d8-. \sh cis8 |
+  \lo d8 \sh bes8 g4 \lo d'8 d4 \sh bes8 ~ |
+  \lod bes4. \sh r8 bes'4 \lo f8 \sh fis |
+  \lo g8 \sh ees \lo c \sh aes \lo g' g4 \sh ees8 ~ |
+  ees2 r4 \lo ees8 \sh e8 |
+  \lo f8 \sh a \lo f \sh e \lo ees g4 \sh ges8 |
+  \lo f f,4 \sh fis8 \lo g8 \sh bes \lo d \sh dis |
+  bes4 \lo d8 \sh ees f4 \lo d8 \sh c |
+  bes4 r bes' \lo g8 \sh cis, |
+  \lo d8 \sh bes8 g4 d'4 c |
+  d2 ~ \lo d8 \sh r \lo c \sh d |
+  \lo c \sh fis \lo g \sh fis \lo d ees4 \sh ees8 |
+  \lo f8 \sh ees d4 \lo aes'8 \sh g \lo f \sh ees |
+  \lo d \sh f \lo aes \sh g \lo f \sh g \lo f \sh ees |
+  \lo bes' \sh bes \lo f \sh ees \lo b' \sh b \lo g \sh a |
+  \lo bes^\< \sh bes \lo bes \sh bes \lo bes bes4 \sh bes8 |
+  \lod a4. \sh aes8 ~ aes2 |
+  \lo g8^\f \sh g ~ g4 ~ g2 |
+  \lod g4. \sh g8 ~ \lod g4. \sh e8 |
+  \lo f8 \sh a8 \lo f \sh d8 \lo f \sh e8 \lo ees \sh d8 ~ |
+  \lo d8 \sh des8 \lo c \sh bes8 ~  \times 2/3 { bes bes c } \times 2/3 { d f g } |
+  \lo a8 \sh a8 ~  a4  \lo a8 a4 \sh r8 |
+  \lod a4. \sh a8 ~ a4 \lo f8 \sh fis |
+  \lo g8 \sh r8 r4 r2 |
+  \lo f8^\mf \sh r8 r4 r2 |
+  \lo c8 \sh ees8 \lo c \sh g8 \lod a4. \sh r8 |
+  \lod r4. \sh d8 ~ \lo d \sh c \lo a \sh g |
+  \lo a a4 \sh fis'8 ~ \lo fis \sh e \lo d \sh b |
+  \lo d d4 \sh a'8 ~ \lo a \sh g \lo fis \sh e |
+  \lo fis \sh a^\< \lo r \sh a \lo r \sh b \lo r \sh bis^\f ~ ( |
+  \lo bis \glissando c4 ) \sh r8 r2 |
+  \lod r4. \sh a8^\mf ~ \lo a \sh g \lo f \sh d |
+  \lo f \sh f \lo r \sh c'8-- ~ \lo c \sh bes \lo a \sh g |
+  \lo a \sh g \lo f \sh d \lo f \sh d \lo c \sh cis | % don't forget the eis4
+  r4 \lo r8 \sh cis'8 \lo d8 \sh r8 \lo r8 \sh c8 |
+  \lo bes8 \sh ees,8 \lo d8 \sh a'8 r2 |
+  \lo r8 \sh c8 \lo bes8 \sh des,8 \lo c8 \sh e8 \lo r8 \sh bes' |
+  \lo r8 \sh bes8 \lo a8 \sh r8 \lo r8 \sh des8 \lo r8 \sh c8 |
+  \lo g8 \sh r8 \lo r8 \sh a8 \lo r8 \sh g8 \lo r8 \sh fis'8 |
+  r4 \lo f,8 \sh r8 \lo f'8 \sh r8 \lo r8 \sh g,8 |
+  \lo ees8 \sh e8 \lo f8 \sh r8 \lo bes8 \sh ees,8 \lo a8 \sh r8 |
+  \lo g'8^\<  \sh g \lo r \sh gis, \lo a \sh bes \lo c \sh cis |
+  \lo d^\f \sh bes \lo g \sh f \lo d' d4 \sh bes8 ~ |
+  bes4 \lo r8 \sh cis8 \lo d \sh bes \lo g \sh f |
+  \times 2/3 { r fis' fis } \times 2/3 { fis r4 } \times 2/3 { f8 f r } \times 2/3 { r8 c cis } |
+  \times 2/3 { d8 r f } \times 2/3 { r8 d c } \times 2/3 { r b r } \times 2/3 { e r a, }
+  \lo gis \sh a \lo r \sh b [ \lo c ] \sh r \lo ais \sh b |
+  \lo r \sh dis [ \lo e ] \sh fis, \lo g [ \sh cis ] \lo d [ \sh bes ] |
+  \lo g \sh f \lo d' \sh d ~ d2 ~ |
+  \lo d \sh bes ~ bes4 ~ bes \lo c8 \sh b |
+  \lo bes \sh bes r4 r2 |
+  \lo bes8 \sh bes \lo g' \sh f \times 2/3 { des c bes } g16 bes c d |
+  \times 2/3 { r8 c c } \times 2/3 { c r4 } \times 2/3 { ges8 f f } \times 2/3 { f r4 } |
+  \times 2/3 { a8 r4 } \times 2/3 { r8 fis' fis } \times 2/3 { fis fis fis } \times 2/3 { fis fis fis } |
+  fis4-\bendAfter #-3 \times 2/3 { c8 cis d } \times 2/3 { ees d des } c4 |
+  \lo c8 \ssh d16 \ssh c \lo a8 \sh c ~ \times 2/3 { c fis, g } \times 2/3 { gis a ais } |
+  \lo b \sh d \lo b \sh bes \lo a \sh c \lo a \sh aes |
+  \lo g \sh b \lo g \sh ges \lo f \sh a \lo f \sh d |
+  \times 2/3 { ees8 r4 } r4 \times 2/3 { ges8 r4 } r4 |
+  \lo r8 f4 \sh f8 r4 \lo r8 \sh fis |
+  r4 \lo g8 \sh r \times 2/3 { r8 a r } r4 |
 }
 
 mezzoWords = \lyricmode {
@@ -370,74 +401,92 @@ mezzoWords = \lyricmode {
   show the for if I had bee -- zer
   I on -- ly had
   An aw -- ful fate I don't de -- serve
+  An aw -- ful fate I
 }
 
 
 alto = \relative c'' {
   R1*4 |
-  r8 a^\f ~ a4 ~ a2 |
+  \lo r8 \sh a^\f ~ a4 ~ a2 |
   f2. r4 |
   R1
-  r2. bes8^\mf cis,8 |
-  d8 bes8 g8 f8 d'8 d4 bes8 ~ |
-  bes2. r8 fis'8 |
-  g8 ees c bes g' g4 ees8 ~ |
-  ees2 r4 ees8 e8 |
-  f8 a f e ees g ees cis |
-  d f d des c ees c a |
-  ees4 des' a8 f ~ f4 ~ |
-  f4 r bes'-. r8 cis,8 |
-  d8 bes g f d' d4 bes8 ~ |
-  bes2. r8 fis'8 |
-  g8 ees d4 c8 g'4 d8 ~ |
-  d c bes aes g r c8 cis8 |
-  d4 f8 e ees f ees cis |
-  d f d des c ees c cis |
-  d bes g f ees' c4 d8 |
+  r2. \lo bes8^\mf \sh cis,8 |
+  \lo d8 \sh bes8 \lo g8 \sh f8 \lo d'8 d4 \sh bes8 ~ |
+  bes2. \lo r8 \sh fis'8 |
+  \lo g8 \sh ees \lo c \sh bes \lo g' g4 \sh ees8 ~ |
+  ees2 r4 \lo ees8 \sh e8 |
+  \lo f8 \sh a \lo f \sh e \lo ees \sh g \lo ees \sh cis |
+  \lo d \sh f \lo d \sh des \lo c \sh ees \lo c \sh a |
+  ees4 des' \lo a8 \sh f ~ f4 ~ |
+  f4 r bes'-. \lo r8 \sh cis,8 |
+  \lo d8 \sh bes \lo g \sh f \lo d' d4 \sh bes8 ~ |
+  bes2. \lo r8 \sh fis'8 |
+  \lo g8 \sh ees d4 \lo c8 g'4 \sh d8 ~ |
+  \lo d \sh c \lo bes \sh aes \lo g \sh r \lo c8 \sh cis8 |
+  d4 \lo f8 \sh e \lo ees \sh f \lo ees \sh cis |
+  \lo d \sh f \lo d \sh des \lo c \sh ees \lo c \sh cis |
+  \lo d \sh bes \lo g \sh f \lo ees' c4 \sh d8 |
   bes4 r aes'4-. fis-. |
-  g-. ees c ees8 cis |
-  d bes g f d'8 d4 a8 |
-  aes8 c aes f d'8 c bes aes |
-  c bes4 g8 ees f g a |
-  bes4 bes r bes8 c |
-  d8 a' f e ees g4 fis8 |
-  f d bes g a8 a4 a8 ~ |
+  g-. ees c \lo ees8 \sh cis |
+  \lo d \sh bes \lo g \sh f \lo d'8 d4 \sh a8 |
+  \lo aes8 \sh c \lo aes \sh f \lo d'8 \sh c \lo bes \sh aes |
+  \lo c bes4 \sh g8 \lo ees \sh f \lo g \sh a |
+  bes4 bes r \lo bes8 \sh c |
+  \lo d8 \sh a' \lo f \sh e \lo ees g4 \sh fis8 |
+  \lo f \sh d \lo bes \sh g \lo a8 a4 \sh a8 ~ |
   a4 r r d' |
-  bes,8 cis d cis a fis'4 ees8 |
-  f d bes c d bes ees fis |
-  g8 bes c bes g8 f4 bes8 ~ |
+  \lo bes,8 \sh cis \lo d \sh cis \lo a fis'4 \sh ees8 |
+  \lo f \sh d \lo bes \sh c \lo d \sh bes \lo ees \sh fis |
+  \lo g8 \sh bes \lo c \sh bes \lo g8 f4 \sh bes8 ~ |
   bes2 \times 2/3 { r8 c, cis } \times 2/3 { d f g }
-  bes8 bes ees, ees bes' bes ees, cis |
-  d c a' g f ees d ees |
-  f8^\< g bes g c bes g ges |
-  f4. f8 ~ \times 2/3 { f8 bes, c } \times 2/3 { d f g } |
-  bes^\f bes4 bes8 g8 bes4 r8 |
-  bes8 ( c16 bes ) g8 bes8 ~ bes4. gis8 |
-  a8 c8 a  f g4 a8 f8 ~ |
-  f e8 ees d8 ~ \times 2/3 { d d e } \times 2/3 { fis a b } |
-  c8 c4 c8  a8 c4 r8 |
-  c8 ( d16 c ) a8 c8 ~ c4 a8 ais |
-  b^\> d8 b bes8 a c8 a aes8 |
-  g b8 g ges8 f a8 f d8 |
-  ees^\mf g8 ees c8 a ges'4 r8 |
+  \lo bes8 \sh bes \lo ees, \sh ees \lo bes' \sh bes \lo ees, \sh cis |
+  \lo d \sh c \lo a' \sh g \lo f \sh ees \lo d \sh ees |
+  \lo f8^\< \sh g \lo bes \sh g \lo c \sh bes \lo g \sh ges |
+  \lod f4. \sh f8 ~ \times 2/3 { f8 bes, c } \times 2/3 { d f g } |
+  \lo bes^\f bes4 \sh bes8 \lo g8 bes4 \sh r8 |
+  \lo bes8 ( \ssh c16 \ssh bes ) \lo g8 \sh bes8 ~ \lod bes4. \sh gis8 |
+  \lo a8 \sh c8 \lo a \sh f g4 \lo a8 \sh f8 ~ |
+  \lo f \sh e8 \lo ees \sh d8 ~ \times 2/3 { d d e } \times 2/3 { fis a b } |
+  \lo c8 c4 \sh c8 \lo a8 c4 \sh r8 |
+  \lo c8 ( \ssh d16 \ssh c ) \lo a8 \sh c8 ~ c4 \lo a8 \sh ais |
+  \lo b^\> \sh d8 \lo b \sh bes8 \lo a \sh c8 \lo a \sh aes8 |
+  \lo g \sh b8 \lo g \sh ges8 \lo f \sh a8 \lo f \sh d8 |
+  \lo ees^\mf \sh g8 \lo ees \sh c8 \lo a ges'4 \sh r8 |
   R1 |
-  r4. d8 ~ d c a g |
-  a a4 fis'8 ~ fis e d b |
-  d d e^\< fis r g r gis^\f ~ ( |
-  gis \glissando a8 ~ a4 ~ a8 ) r r4 |
-  r4. e8^\mf ~ e e d8 bes |
-  d d r a'-- ~ a g f ees |
-  f c4 d8 c4 bes |
-  r8  ees8  d8 bes'8 bes8 r8 r4 |
-  r4 bes,8 ees8 cis8 d8 r8 dis8 |
-  r8  d8 e8 a,8  bes8 r8 r8  c8 |
-   d8 fis8 g8  r8 r8 bes8 r8 ges8 |
-  f8 ces8  bes8 ees8 r8 d8 r8 cis'8 |
-  r8 bes, r4 c'8 r4 d,8 |
-  r8 c8 r4 r8 c8 g'8 r8 |
-  ees8^\< f8 g8  d8 fis8 g8  a8 fis8 |
-  a4^\f g f ees |
-  d a'8 bes a g f d |
+  \lod r4. \sh d8 ~ \lo d \sh c \lo a \sh g |
+  \lo a a4 \sh fis'8 ~ \lo fis \sh e \lo d \sh b |
+  \lo d \sh d \lo e^\< \sh fis \lo r \sh g \lo r \sh gis^\f ~ ( |
+  \lo gis \glissando \sh a8 ~ a4 ~ \lo a8 ) \sh r r4 |
+  \lod r4. \sh e8^\mf ~ \lo e \sh e \lo d8 \sh bes |
+  \lo d \sh d \lo r \sh a'-- ~ \lo a \sh g \lo f \sh ees |
+  \lo f c4 \sh d8 c4 bes |
+  \lo r8 \sh ees8 \lo d8 \sh bes'8 \lo bes8 \sh r8 r4 |
+  r4 \lo bes,8 \sh ees8 \lo cis8 \sh d8 \lo r8 \sh dis8 |
+  \lo r8 \sh d8 \lo e8 \sh a,8 \lo bes8 \sh r8 \lo r8 \sh c8 |
+  \lo d8 \sh fis8 \lo g8 \sh r8 \lo r8 \sh bes8 \lo r8 \sh ges8 |
+  \lo f8 \sh ces8 \lo bes8 \sh ees8 \lo r8 \sh d8 \lo r8 \sh cis'8 |
+  \lo r8 \sh  bes, r4 \lo c'8 r4 \sh d,8 |
+  \lo r8 \sh c8 r4 \lo r8 \sh c8 \lo g'8 \sh r8 |
+  \lo ees8^\< \sh f8 \lo g8 \sh d8 \lo fis8 \sh g8 \lo a8 \sh fis8 |
+  a2^\f \lod ees4. \sh cis'8 |
+  \lo d \sh bes \lo g \sh f \lo d' \sh d ~ \times 2/3 { d des c } |
+  \times 2/3 { b bes bes } \times 2/3 { bes r4 } \times 2/3 { ces8 ces r } \times 2/3 { r8 aes a } |
+  \times 2/3 { a r b } \times 2/3 { r8 a aes } \times 2/3 { r g r } \times 2/3 { b r e, } |
+  \lo f \sh fis \lo r \sh fis [ \lo f ] \sh r \lo f \sh e |
+  \lo r \sh b' [ \lo b ] \sh c, \lo f [ \sh aes ] \lo g \sh ees |
+  \lo e \sh d \lo a' \sh g ~ \lo g \sh ees \lo f \sh g ~ |
+  g4 c,4 des aes' |
+  \lo g8 \sh g \times 2/3 { bes c bes } \lo des \sh c^\turn bes16 g bes g |
+  \lo e \sh e r4 r2 |
+  \times 2/3 { r8 e e } \times 2/3 { e r4 } \times2/3 { r8 ees ees } \times 2/3 { ees8 r4 } |
+  \times 2/3 { f8 r4 } \times 2/3 { r8 f fis } \times 2/3 { g gis a } \times 2/3 { ais b c } |
+  \lo c8 c4 \sh c8 a4 \times 2/3 { fis8 g gis } |
+  \times 2/3 { a aes g } \lo fis8 \sh d' \times 2/3 { b' bes a } \times 2/3 { aes g ges } |
+  \lo f \sh f r4 r2 |
+  \times 2/3 { r8 f, f } r4 r2 |
+  \times 2/3 { bes,8 r4 } r4 \times 2/3 { ees8 r4 } r4 |
+  \lo r8 d4 \sh d8 r4 \lo r8 \sh d |
+  r4 \lo ees8 \sh r \times 2/3 { r8 ees r } r4 |
 }
 
 altoWords = \lyricmode {
@@ -495,54 +544,71 @@ altoWords = \lyricmode {
   the I had
   bee -- zer
   If I on -- ly had 
-  An aw -- ful fate I serve
-  What a li -- on when you're
+  An aw -- ful An aw -- ful fate I don't de
+  what a
 }
 
 tenor = \relative c' {
   \clef "treble_8"
   R1*4 |
-  r8 f^\f ~ f4 ~ f2 |
+  \lo r8 \sh f^\f ~ f4 ~ f2 |
   c2. r4 |
   R1*23 |
-  r2 bes4.^\mf a8 |
+  r2 \lod bes4.^\mf \sh a8 |
   g4 r ees r |
   d g r bes |
-  ees,8 g r bes ees, a4 g8 |
-  a4 g ~ g a8 b |
-  a aes a c aes c4 c8 |
-  d8 c ~ c4 ges'8 ees aes, g |
-  aes4 ees'8 c ees4 c8 bes |
-  bes4 c8 cis d4 f |
-  ees8^\< c g ees ees ees4 d'8 ~ |
+  \lo ees,8 \sh g \lo r \sh bes \lo ees, a4 \sh g8 |
+  a4 g ~ g \lo a8 \sh b |
+  \lo a \sh aes \lo a \sh c \lo aes c4 \sh c8 |
+  \lo d8 \sh c ~ c4 \lo ges'8 \sh ees \lo aes, \sh g |
+  aes4 \lo ees'8 \sh c ees4 \lo c8 \sh bes |
+  bes4 \lo c8 \sh cis d4 f |
+  \lo ees8^\< \sh c \lo g \sh ees \lo ees ees4 \sh d'8 ~ |
   d1
-  c8^\f c ~ c4 ~ c2 |
-  c4. c8 ~ c4. r8 |
-  c4. gis8 a8 c8 a f8 |
-  g8 a4 f8 f8 e8 ees d8 |
-  ees' ees8 ~ ees4 ees8 ees4 r8 |
-  fis4. fis8 ~ fis4 d8 des |
-  d8 r8 r4 r2 |
-  b8^\mf r8 r4 r2 |
+  \lo c8^\f \sh c ~ c4 ~ c2 |
+  \lod c4. \sh c8 ~ \lod c4. \sh r8 |
+  \lod c4. \sh gis8 \lo a8 \sh c8 \lo a \sh f8 |
+  \lo g8 a4 \sh f8 \lo f8 \sh e8 \lo ees \sh d8 |
+  \lo ees' \sh ees8 ~ ees4 \lo ees8 ees4 \sh r8 |
+  \lod fis4. \sh fis8 ~ fis4 \lo d8 \sh des |
+  \lo d8 \sh r8 r4 r2 |
+  \lo b8^\mf \sh r8 r4 r2 |
   g2 ees2 |
   R1 |
   R1 |
-  r4. d'8 ~ d b a g |
-  fis a c a c a g eis |
-  fis d'4 d8 ~ d c a g |
-  a a4 bes8 ~ bes bes g g |
-  c c r c-- ~ c g g bes |
-  a a r a c g r g |
-  fis8 c' bes r r gis a r |
-  r4 fis8 r8 r2 |
-  r4 r8 fis8 g8 r8 r4 |
-  a8 r8 des c r8 g'8  g8  ees8 |
-  d8 a8 g8 r8 r8 c b8  bes8 |
-  g'8 r8 des8 r fis8 f8 e8 r8 |
-  c8 b8 r8 cis8 r8  a8 r8 aes8 |
-  c8^\< d8  ees8 b8  c8 b8 gis8 a8 |
-  fis'4^\f ees d c8 cis |
-  d bes g f d' d4 bes8 |
+  \lod r4. \sh d'8 ~ \lo d \sh b \lo a \sh g |
+  \lo fis \sh a \lo c \sh a \lo c \sh a \lo g \sh eis |
+  \lo fis d'4 \sh d8 ~ \lo d \sh c \lo a \sh g |
+  \lo a a4 \sh bes8 ~ \lo bes \sh bes \lo g \sh g |
+  \lo c \sh c \lo r \sh c-- ~ \lo c \sh g \lo g \sh bes |
+  \lo a \sh a \lo r \sh a \lo c \sh g \lo r \sh g |
+  \lo fis8 \sh c' \lo bes \sh r \lo r \sh gis \lo a \sh r |
+  r4 \lo fis8 \sh r8 r2 |
+  r4 \lo r8 \sh fis8 \lo g8 \sh r8 r4 |
+  \lo a8 \sh r8 \lo des \sh c \lo r8 \sh g'8 \lo g8 \sh ees8 |
+  \lo d8 \sh a8 \lo g8 \sh r8 \lo r8 \sh c \lo b8 \sh bes8 |
+  \lo g'8 \sh r8 \lo des8 \sh r \lo fis8 \sh f8 \lo e8 \sh r8 |
+  \lo c8 \sh b8 \lo r8 \sh cis8 \lo r8 \sh a8 \lo r8 \sh aes8 |
+  \lo c8^\< \sh d8 \lo ees8 \sh b8 \lo c8 \sh b8 \lo gis8 \sh a8 |
+  fis'4^\f \lo ees8 \sh cis \lo d \sh bes \lo a \sh g |
+  \lo fis \sh cis' \lo d \sh bes \lo g \sh cis \lo d \sh bes
+  \times 2/3 { cis d d } \times 2/3 { d r4 } \times 2/3 { des8 des r } \times 2/3 { r ees d } |
+  \times 2/3 { ces r g' } \times 2/3 { r f fis } \times 2/3 { r fes r } \times 2/3 { aes r d, } |
+  \lo ees \sh ees \lo r \sh ees [ \lo d ] \sh r \lo d \sh cis |
+  \lo r \sh a' [ \lo gis ] \sh a, \lo b [ \sh fis' ] \lo g \sh a, |
+  \lo d \sh g, ees'4 ~ \lo ees8 \sh c \lo des \sh ees ~  |
+  \lo ees \sh aes, ~ aes4 \lo bes \sh ges' ~ ges4 |
+  \lo c,8 \sh c r4 r2 |
+  \lo g \sh g r4 r2 |
+  \times 2/3 { r8 bes a } \times 2/3 { a r4 } \times 2/3 { r8 a a } \times 2/3 { a r4 }
+  \times 2/3 { d8 d16_"the" d_"wi" d_"zard" d_"of" } \times 2/3 { d8_"oz" a' aes } \times 2/3 { g ges f } \times 2/3 { e ees d }
+  \times 2/3 { ees e f } fis4 \times 2/3 { a,8 ais b } \times 2/3 { c b bes } |
+  fis'4 \times 2/3 { c8 b bes } a4 c |
+  \lo b8 \sh b r4 r2 |
+  \times 2/3 { r8 d d } r4 r2 |
+  \times 2/3 { g,8 r4 } r4 \times 2/3 { a8 r4 } r4 |
+  \lo r8 a4 \sh a8 r4 \lo r8 \sh b |
+  r4 \lo d8 \sh r \times 2/3 { r8 c r } r4 |
 }
 
 tenorWords = \lyricmode {
@@ -578,28 +644,29 @@ tenorWords = \lyricmode {
   si roar some more
   show the rus I a
   bee -- zer If I on -- ly had An
-  aw -- ful fate I An aw -- ful fate I don't de -- serve
-  
+  aw -- ful An aw -- ful fate I don't
+  An aw -- ful fate
+  An aw -- ful
 }
 
 bass = \relative c {
   \clef "bass"
   bes4^\f a g b |
-  c g8 ges f g a f |
+  c \lo g8 \sh ges \lo f \sh g \lo a \sh f |
   bes4 a g d' |
-  c g8 ges f f' d c |
-  r8 bes a4 g d'8 des |
-  c ees c bes a f f' b, |
-  c bes a g f g a f |
-  bes bes'^\> a g f ees d des |  
+  c \lo g8 \sh ges \lo f \sh f' \lo d \sh c |
+  \lo r8 \sh bes a4 g \lo d'8 \sh des |
+  \lo c \sh ees \lo c \sh bes \lo a \sh f \lo f' \sh b, |
+  \lo c \sh bes \lo a \sh g \lo f \sh g \lo a \sh f |
+  \lo bes \sh bes'^\> \lo a \sh g \lo f \sh ees \lo d \sh des |  
   c4^\mf g f a |
-  bes8 bes a4 g ges |
+  \lo bes8 \sh bes a4 g ges |
   f ees' d bes |
-  ees8 ees g,4 aes8 bes c cis |
-  d4 bes c a8 f |
-  bes4 d8 g, c4 g |
+  \lo ees8 \sh ees g,4 \lo aes8 \sh bes \lo c \sh cis |
+  d4 bes c \lo a8 \sh f |
+  bes4 \lo d8 \sh g, c4 g |
   c e, f a |
-  bes8 c d r r4 d8 b |
+  \lo bes8 \sh c \lo d \sh r r4 \lo d8 \sh b |
   c4 r f, r |
   bes r4 r2 |
   f4 r bes r |
@@ -611,46 +678,63 @@ bass = \relative c {
   ees4 r f, r |
   bes r4 r2 |
   f'4 r bes, r |
-  g'8 ees c bes g'8 g c,8 cis |
-  d4 des c8 a f a |
-  bes4 d c4 g8 b |
-  c4 r f,4. fis8 |
-  g8 bes d a' ~ a g4 g8 |
-  c,4 ges f a8 f |
-  bes8 bes d,4 ees g8 e |
-  f4 ees'8 a, bes4 aes8 fis |
-  g4 aes a c8 cis |
-  d8 bes4 bes8 bes8 bes4 bes8 |
-  bes4 d8 fis, g8 a b4 |
-  c4^\< g8 ges f g a f |
-  bes4. bes8 ~ bes2 |
-  ees8^\f ees ~ ees4 ~ ees2 |
-  e4. e,8 ~ e e'4 ges8 |
+  \lo g'8 \sh ees \lo c \sh bes \lo g'8 \sh g \lo c,8 \sh cis |
+  d4 des \lo c8 \sh a \lo f \sh a |
+  bes4 d c4 \lo g8 \sh b |
+  c4 r \lod f,4. \sh fis8 |
+  \lo g8 \sh bes \lo d \sh a' ~ \lo a g4 \sh g8 |
+  c,4 ges f \lo a8 \sh f |
+  \lo bes8 \sh bes d,4 ees \lo g8 \sh e |
+  f4 \lo ees'8 \sh a, bes4 \lo aes8 \sh fis |
+  g4 aes a \lo c8 \sh cis |
+  \lo d8 bes4 \sh bes8 \lo bes8 bes4 \sh bes8 |
+  bes4 \lo d8 \sh fis, \lo g8 \sh a b4 |
+  c4^\< \lo g8 \sh ges \lo f \sh g \lo a \sh f |
+  \lod bes4. \sh bes8 ~ bes2 |
+  \lo ees8^\f \sh ees ~ ees4 ~ ees2 |
+  \lod e4. \sh e,8 ~ \lo e e'4 \sh ges8 |
   f4 f, g a |
   bes c d bes |
-  a2 ~ a8 ees'8 ~ ees4 |
-  d2 ~ d8 a4 aes8 |
-  g8 r8 r4 r2 |
-  g'8^\mf r8 r4 r2 |
-  c,2 f,4 c'8 cis8 |
-  d8 d fis,4 g gis |
-  a8 d ~ d aes g d' d, eis |
-  fis d' fis,4 g gis |
-  a8 d4 b8 a g fis d' |
-  d d fis,4 g gis |
-  a8 d des c ~ c bes a g |
-  a f' a,4 bes b |
-  c4 f, a4 g8 cis |
-  d8 r8 r4 r2 |
-  g,8 r8 r4 r4  f8 r8 |
-  e8 r8 r4 r4 c'8 r8 |
-  f8 r8 r4  d8 r8 a8 a'8 |
-  r8 ges8 f8 r8 fis,8 r8 cis'8 r8 |
-  ees8  f8 r8 a,8 r4 r8  f'8 |
-  r4 r8 a8 r4 r8 ees8 |
-  d8^\< aes'8 a,8 bes8 ees8 d8 aes8 d8 |
+  a2 ~ \lo a8 \sh ees'8 ~ ees4 |
+  d2 ~ \lo d8 a4 \sh aes8 |
+  \lo g8 \sh r8 r4 r2 |
+  \lo g'8^\mf \sh r8 r4 r2 |
+  c,2 f,4 \lo c'8 \sh cis8 |
+  \lo d8 \sh d fis,4 g gis |
+  \lo a8 d4 \sh aes8 \lo g \sh d' \lo d, \sh eis |
+  \lo fis \sh d' fis,4 g gis |
+  \lo a8 d4 \sh b8 \lo a \sh g \lo fis \sh d' |
+  \lo d \sh d fis,4 g gis |
+  \lo a8 \sh d \lo des \sh c ~ \lo c \sh bes \lo a \sh g |
+  \lo a \sh f' a,4 bes b |
+  c4 f, a4 \lo g8 \sh cis |
+  \lo d8 \sh r8 r4 r2 |
+  \lo g,8 \sh r8 r4 r4 \lo f8 \sh r8 |
+  \lo e8 \sh r8 r4 r4 \lo c'8 \sh r8 |
+  \lo f8 \sh r8 r4 \lo d8 \sh r8 \lo a8 \sh a'8 |
+  \lo r8 \sh ges8 \lo f8 \sh r8 \lo fis,8 \sh r8 \lo cis'8 \sh r8 |
+  \lo ees8 \sh f8 \lo r8 \sh a,8 r4 \lo r8 \sh f'8 |
+  r4 \lo r8 \sh a8 r4 \lo r8 \sh ees8 |
+  \lo d8^\< \sh aes'8 \lo a,8 \sh bes8 \lo ees8 \sh d8 \lo aes8 \sh d8 |
   g,1^\f ~ |
-  g4. r8 g'4 f |
+  \lo g8 \sh r8 a'4 ~ \times 2/3 { a8 aes g } \times 2/3 { ges f e } |
+  \times 2/3 { ees8 r4 } \times 2/3 { r8 a, a } \times 2/3 { r4 fes'8 } \times 2/3 { aes, r4 } |
+  \times 2/3 { r8 g r } \times 2/3 { fis' r4 } \times 2/3 { f8 r a, } \times 2/3 { r f' r } |
+  \lo c [ \sh c ] \lo f, \sh cis' [ \lo cis ] \sh fis, \lo d' [ \sh d ] |
+  \lo f, \sh e' [ \lo e ] \sh aes, \lo g [ \sh e' ] c4 |
+  e f aes, ges ~ |
+  ges des' aes fes' |
+  \lo ees8 \sh ees r4 r2 |
+  \lo c \sh c r4 r2 |
+  \lo f8 \sh f r4 r16 f, f g bes g f g |
+  \times 2/3 { bes8 r4 } \times 2/3 { r8 b' bes } \times 2/3 { a aes g } \times 2/3 { ges f e }
+  \lo a,8 a4 \sh a8 ~ a4 ees' |
+  \lod d4. \sh d8 ~ \lo d fis,4 \sh a8 |
+  \lo g8 \sh g8 r4 r2 |
+  \times 2/3 { r8 b' b } r4 r2 |
+  \times 2/3 { c,8 r4 } r4 \times 2/3 { f,8 r4 } r4 |
+  \lo r8 bes4 \sh bes8 r4 \lo r8 \sh g |
+  r4 \lo c8 \sh r \times 2/3 { r8 f, r } r4 |
 }
 
 bassWords = \lyricmode {
@@ -716,7 +800,7 @@ bassWords = \lyricmode {
   rus
   a bee -- zer
   I could be a li -- on
-  roar don't de
+  roar What a li -- on when you're
 }
 
 ugh = \transpose c c, {

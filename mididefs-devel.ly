@@ -78,3 +78,52 @@ unfoldSwingChange =
   $m %\set Score.tempoWholesPerMinute = #(ly:make-moment $tp 4 0 1)
 #})
 
+#(define (longize d)
+  (ly:make-duration 3 0 4 3))
+
+#(define (shortize d)
+  (ly:make-duration 3 0 2 3))
+
+#(define (sshortize d)
+  (ly:make-duration 4 0 2 3))
+
+#(define (longdize d)
+  (ly:make-duration 2 1 10 9))
+
+#(define (durize music durfun)
+   (let ((es (ly:music-property music 'elements))
+         (e (ly:music-property music 'element))
+         (d (ly:music-property music 'duration)))
+     (if (pair? es)
+         (ly:music-set-property!
+          music 'elements
+          (map (lambda (x) (durize x)) es)))
+     (if (ly:music? e)
+         (ly:music-set-property!
+          music 'element
+          (durize e)))
+     (if (ly:duration? d)
+         (begin
+           (set! d (durfun d))
+           (ly:music-set-property! music 'duration d)))
+     music))
+
+longSwung =
+#(define-music-function (parser location m)
+   (ly:music?)
+   (durize m longize))
+
+shortSwung =
+#(define-music-function (parser location m)
+   (ly:music?)
+   (durize m shortize))
+
+shortShortSwung =
+#(define-music-function (parser location m)
+   (ly:music?)
+   (durize m sshortize))
+
+longDottedSwung =
+#(define-music-function (parser location m)
+   (ly:music?)
+   (durize m longdize))
