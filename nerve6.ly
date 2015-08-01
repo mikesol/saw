@@ -8,6 +8,7 @@ ssh = #(define-music-function(parser location m)(ly:music?) #{ \shortShortSwung 
 %sh = { }
 %lod = { }
 %ssh = { }
+ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
 %{
   GM w/ 2 entries
   GM w/ 4 entries
@@ -132,9 +133,8 @@ marks = {
      \unfoldChange #84 #70 #18 |
   \mark "accel."
   \unfoldChange #70 #96 #8
-  \mark "a tempo"
-  \set Score.tempoWholesPerMinute = #(ly:make-moment 96 4 0 0)
-  s1
+  \tempo 4=88
+  s1*20 \bar "|."
 }
 
 beamComm = {
@@ -170,7 +170,7 @@ soprano = \relative c' {
   \lo bes \sh bes \lo bes \sh bes << { bes2 ~ |
      bes1 } { s2^\< s2. s8 s8^\f } >> |
   r2. bes4 |
-  g'2 r |
+  g'2. r4 |
   \lod r4. \sh fis8 \lo g a4 \sh f8 ~ |
   f2 r |
   r4 g \lo ees8 ees4 \sh ees8 ~ |
@@ -213,7 +213,16 @@ soprano = \relative c' {
   \lod d4. \sh r8 r4 c ~ |
   c r4 \lo bes8 \sh bes r4 |
   r4 \lo bes8 \sh bes8 r2 |
-  r2 \lo r8 \sh bes r4 |
+  r2 \lo r8 \sh bes \times 2/3 { r8 \ntrill d4^\ff\startTrillSpan ~ } |
+  \lo d8 \sh bes8\stopTrillSpan ~ bes4 ~ bes4 r4 |
+  r2 \lo r8 \sh d ~ d4 |
+  bes1 |
+  r2 \times 2/3 { r8 d4 ~ } d4 |
+  bes1 ~ |
+  bes1 ~ |
+  bes1 ~ |
+  bes1 ~ |
+  bes1 ~ |
 }
 
 sopranoWords = \lyricmode {
@@ -324,12 +333,12 @@ mezzo = \relative c' {
   \lo g'8^\<  \sh g \lo r \sh gis, \lo a \sh bes \lo c \sh cis |
   \lo d^\f \sh bes \lo g \sh f \lo d' d4 \sh bes8 ~ |
   bes4 \lo r8 \sh cis8 \lo d \sh bes \lo g \sh f |
-  \times 2/3 { r fis' fis } \times 2/3 { fis r4 } \times 2/3 { f8 f r } \times 2/3 { r8 c cis } |
-  \times 2/3 { d8 r f } \times 2/3 { r8 d c } \times 2/3 { r b r } \times 2/3 { e r a, }
+  \times 2/3 { r g' g } \times 2/3 { g r4 } \times 2/3 { fis8 fis r } \times 2/3 { r8 d d } |
+  \times 2/3 { d8 r f } \times 2/3 { r8 cis cis } \times 2/3 { r c r } \times 2/3 { e r a, }
   \lo gis \sh a \lo r \sh b [ \lo c ] \sh r \lo ais \sh b |
   \lo r \sh dis [ \lo e ] \sh fis, \lo g [ \sh cis ] \lo d [ \sh bes ] |
   \lo g \sh f \lo d' \sh d ~ d2 ~ |
-  \lo d \sh bes ~ bes4 ~ bes \lo c8 \sh b |
+  \lo d \sh bes ~ bes4 ~ bes ~ \times 2/3  { bes8 d c } |
   \lo bes \sh bes r4 r2 |
   \lo bes8 \sh bes \lo g' \sh f \times 2/3 { des c bes } g16 bes c d |
   \times 2/3 { r8 c c } \times 2/3 { c r4 } \times 2/3 { ges8 f f } \times 2/3 { f r4 } |
@@ -341,6 +350,16 @@ mezzo = \relative c' {
   \times 2/3 { ees8 r4 } r4 \times 2/3 { ges8 r4 } r4 |
   \lo r8 f4 \sh f8 r4 \lo r8 \sh fis |
   r4 \lo g8 \sh r \times 2/3 { r8 a r } r4 |
+  r2. \times 2/3 { r8 \ntrill bes'4^\ff\startTrillSpan ~ }
+  \lo bes8 \sh g8\stopTrillSpan \times 2/3 { des8 c bes } \lo g8 \sh r bes4 |
+  a4^\markup \italic "not swung" f8 g a4 bes |
+  \lo f^\markup \italic "swung" \sh a \lo f \sh e \lo ees \sh g \lo ees \sh cis |
+  \lo d \sh f \lo d \sh des \lo c \sh ees \lo c \sh cis |
+  \lo c8 \sh c g''4 r g |
+  \lo f8 \sh d \lo c \sh bes ~ \lo bes \sh cis \lo d \sh cis |
+  \lo d \sh bes \lo g \sh f \lo f' d4 \sh f,8 |
+  \lo bes, \sh d \lo f \sh bes r4 aes'4 ~ |
+  aes1 |
 }
 
 mezzoWords = \lyricmode {
@@ -475,18 +494,28 @@ alto = \relative c'' {
   \lo f \sh fis \lo r \sh fis [ \lo f ] \sh r \lo f \sh e |
   \lo r \sh b' [ \lo b ] \sh c, \lo f [ \sh aes ] \lo g \sh ees |
   \lo e \sh d \lo a' \sh g ~ \lo g \sh ees \lo f \sh g ~ |
-  g4 c,4 des aes' |
+  \lod g4. \sh c,8 des4 aes' |
   \lo g8 \sh g \times 2/3 { bes c bes } \lo des \sh c^\turn bes16 g bes g |
   \lo e \sh e r4 r2 |
   \times 2/3 { r8 e e } \times 2/3 { e r4 } \times2/3 { r8 ees ees } \times 2/3 { ees8 r4 } |
   \times 2/3 { f8 r4 } \times 2/3 { r8 f fis } \times 2/3 { g gis a } \times 2/3 { ais b c } |
   \lo c8 c4 \sh c8 a4 \times 2/3 { fis8 g gis } |
-  \times 2/3 { a aes g } \lo fis8 \sh d' \times 2/3 { b' bes a } \times 2/3 { aes g ges } |
+  \times 2/3 { a aes e' } \times 2/3 { c g' e } \times 2/3 { b' bes a } \times 2/3 { aes g ges } |
   \lo f \sh f r4 r2 |
   \times 2/3 { r8 f, f } r4 r2 |
   \times 2/3 { bes,8 r4 } r4 \times 2/3 { ees8 r4 } r4 |
   \lo r8 d4 \sh d8 r4 \lo r8 \sh d |
-  r4 \lo ees8 \sh r \times 2/3 { r8 ees r } r4 |
+  r4 \lo ees8 \sh r \times 2/3 { r8 e r } r4 |
+  r2. \times 2/3 { r8 \ntrill f4^\ff\startTrillSpan ~ } |
+  \lo f8 ~ \sh f8\stopTrillSpan \lo g \sh cis \lo d \sh bes \lo g \sh f |
+  \lo d'8 d4 \sh bes8 ~ bes4 \lo ges \sh f |
+  \lod ees4. \sh fis8 \lo g \sh ees \lo c \sh bes |
+  \lo g' g4 \sh ees8 ~ ees2 |
+  \lo ees8 \sh ees ees'4 r ees |
+  \lo d8 bes4 \sh a ~ \lo a \sh bes \lo g \sh cis |
+  \lo d \sh bes \lo g \sh f \lo d' a4 \sh f8 |
+  \lo bes, \sh d \lo f \sh bes r4 c4 ~ |
+  c1 |
 }
 
 altoWords = \lyricmode {
@@ -600,15 +629,25 @@ tenor = \relative c' {
   \lo ees \sh aes, ~ aes4 \lo bes \sh ges' ~ ges4 |
   \lo c,8 \sh c r4 r2 |
   \lo g \sh g r4 r2 |
-  \times 2/3 { r8 bes a } \times 2/3 { a r4 } \times 2/3 { r8 a a } \times 2/3 { a r4 }
+  \times 2/3 { r8 bes bes } \times 2/3 { bes r4 } \times 2/3 { r8 a a } \times 2/3 { a r4 }
   \times 2/3 { d8 d16_"the" d_"wi" d_"zard" d_"of" } \times 2/3 { d8_"oz" a' aes } \times 2/3 { g ges f } \times 2/3 { e ees d }
   \times 2/3 { ees e f } fis4 \times 2/3 { a,8 ais b } \times 2/3 { c b bes } |
-  fis'4 \times 2/3 { c8 b bes } a4 c |
+  fis'4 ~ \times 2/3 { fis8 b, bes } a4 c |
   \lo b8 \sh b r4 r2 |
   \times 2/3 { r8 d d } r4 r2 |
   \times 2/3 { g,8 r4 } r4 \times 2/3 { a8 r4 } r4 |
   \lo r8 a4 \sh a8 r4 \lo r8 \sh b |
   r4 \lo d8 \sh r \times 2/3 { r8 c r } r4 |
+  r2. \times 2/3 { r8 \ntrill c4^\ff\startTrillSpan ~ } |
+  \lo c8 ~ \sh c8\stopTrillSpan ~ c4 ~ c4 \lo d8 \sh ees |
+  \lo f \sh d \lo bes \sh c \lo d bes4 \sh c8 |
+  \lo d \sh bes \lo g \sh a \lo bes g4 \sh bes8 |
+  \lo f \sh f \lo f \sh f f4 \lo bes8 \sh a |
+  \lo g8 \sh g a'4 r c, |
+  \lo g'8 \sh f \lo ees  \sh d ~ \lo d \sh c \lo bes \sh cis |
+  \lo d \sh bes \lo g \sh f \lo a c4 \sh d8 |
+  \lo bes \sh d, \lo f \sh bes r4 d4 ~ |
+  d1 |
 }
 
 tenorWords = \lyricmode {
@@ -721,9 +760,9 @@ bass = \relative c {
   \times 2/3 { ees8 r4 } \times 2/3 { r8 a, a } \times 2/3 { r4 fes'8 } \times 2/3 { aes, r4 } |
   \times 2/3 { r8 g r } \times 2/3 { fis' r4 } \times 2/3 { f8 r a, } \times 2/3 { r f' r } |
   \lo c [ \sh c ] \lo f, \sh cis' [ \lo cis ] \sh fis, \lo d' [ \sh d ] |
-  \lo f, \sh e' [ \lo e ] \sh aes, \lo g [ \sh e' ] c4 |
+  \lo g, \sh e' [ \lo e ] \sh aes, \lo g [ \sh e' ] c4 |
   e f aes, ges ~ |
-  ges des' aes fes' |
+  ges des' \lod aes4. \sh fes'8 |
   \lo ees8 \sh ees r4 r2 |
   \lo c \sh c r4 r2 |
   \lo f8 \sh f r4 r16 f, f g bes g f g |
@@ -735,6 +774,16 @@ bass = \relative c {
   \times 2/3 { c,8 r4 } r4 \times 2/3 { f,8 r4 } r4 |
   \lo r8 bes4 \sh bes8 r4 \lo r8 \sh g |
   r4 \lo c8 \sh r \times 2/3 { r8 f, r } r4 |
+  r2. \times 2/3 { r8 \ntrill bes4^\ff ~ } |
+  \lo bes8 \sh ees8 \lo ees \sh ees \lo r \sh e \lo e \sh e |
+  \lo r8 f4 \sh d8 ~ \lo d8 g4 \sh d8 |
+  c4 \lo g'8 \sh c, \lo f f,4 \sh f'8 |
+  bes,8^\markup \italic "not swung" d c bes aes g f f' |
+  \lo ees8^\markup \italic "swung" \sh ees r4 e r4 |
+  f4 fis \lo g8 \sh d \lo bes \sh g |
+  c4 \lo g' \sh ges \lo f f,4 \sh f'8 |
+  \lo bes, \sh d \lo f \sh bes \times 2/3 { r8 c, ces } bes4 ~ |
+  bes1 |
 }
 
 bassWords = \lyricmode {
