@@ -9,6 +9,24 @@ ssh = #(define-music-function(parser location m)(ly:music?) #{ \shortShortSwung 
 %lod = { }
 %ssh = { }
 ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
+%scared
+%  then I'd rrwuff
+%gen -- tle
+%   giz -- zard
+%be -- fore
+%   Wiz of Oz
+%nerve
+%   I'd
+%king
+%   roar some
+%home
+%   brain
+%a
+%   heart
+%the
+%   nerve
+
+
 %{
   GM w/ 2 entries
   GM w/ 4 entries
@@ -122,19 +140,25 @@ marks = {
   \tempo "Dixie" 4=96
   s1*64
   \mark "rall."
-  \unfoldChange #96 #90 #8
-  \tempo 4=90
+  \unfoldChange #96 #92 #8
+  \tempo 4=92
   s1
   s2 \mark "rall." \unfoldChange #90 #84 #4 |
   \tempo 4=84
   s1*3
   s2.
      \mark "rall."
-     \unfoldChange #84 #70 #18 |
+     \unfoldChange #84 #70 #8
+  \tempo "Maestoso" 4=72
+     s4 | \noBreak
+  s1 |
+  \tempo "più leggero"
   \mark "accel."
   \unfoldChange #70 #96 #8
   \tempo 4=88
-  s1*20 \bar "|."
+  s1*18
+  s2 \set Score.tempoWholesPerMinute = #(ly:make-moment 72 4 0 0) s4 \set Score.tempoWholesPerMinute = #(ly:make-moment 88 4 0 0) s4 |
+  s1 \bar "|."
 }
 
 beamComm = {
@@ -167,17 +191,17 @@ soprano = \relative c' {
   g4 \lo g'8 \sh f \lo ees \sh d r4 |
   r4 \lo c8 \sh bes \lo a \sh a \lo a' \sh g |
   \lo f \sh ees r4 r4 \lo d8 \sh c |
-  \lo bes \sh bes \lo bes \sh bes << { bes2 ~ |
-     bes1 } { s2^\< s2. s8 s8^\f } >> |
+  << { \times 4/5 { bes4 bes bes bes bes ~ } |
+     bes1 } { s1^\< s2. s8 s8^\f } >> |
   r2. bes4 |
   g'2. r4 |
   \lod r4. \sh fis8 \lo g a4 \sh f8 ~ |
   f2 r |
   r4 g \lo ees8 ees4 \sh ees8 ~ |
   ees2 r |
-  r4 f^\mf d2 |
+  r4 f^\mf d2^\turn |
   r4 \lo d8 \sh d \lo c \sh bes \lo c \sh bes |
-  \lo c \sh bes \lo c \sh d8 r4 bes |
+  \lo c \sh bes \lo c \sh d8 \lo r8 bes4-\bendAfter #-3 \sh r8 |
   R1 |
   \lo r8 \sh c ~ c4 \lo r8 \sh d ~ d4 |
   \lo r8 f4 \sh r8 \lod r4. \sh g8 |
@@ -195,22 +219,22 @@ soprano = \relative c' {
   \lo a8 \sh a \lo a' \sh g \lo f \sh ees ~ ees4 | % Ao
   \lo r8 \sh d^\< ~ d4 ~ \lo d8 \sh c ~ c4 | % D
   \lo bes8^\f \sh bes \lo bes \sh bes bes2 |
-  r bes4 a |
+  \lod r4. \sh bes8 ~ bes4 a |
   g2 g'4 f |
   \lod ees4. \sh d8 ~ \lo d c4 \sh bes8 |
   a4 a a' g |
   \lod f4. \sh ees8 d4 \lo ees8 \sh c8 |
-  bes4 bes \lod bes'4. \sh a8 |
-  \lo g8 \sh f ~ f4 \lo r8 ees4 \sh d8 ~ |
-  \lo d c4 \sh c8 ~ c2 |
-  \lod c'4. \sh bes8 ~ bes2 |
+  bes4 bes \lod bes'4. \sh a8 ~ |
+  a4 ~ \times 2/3 { a8 g4 ~ } \times 2/3 { g8 f4 } \times 2/3 { ees8 d4 } |
+  \lo c8 \sh c8 r4 r2 |
+  \lo c'8 \sh bes8 r4 r2 |
   \times 2/3 { r8 a g } \stemDown f16 g d' ( c ~ c2 | \stemNeutral
   c2.. ) r8 |
   R1 |
   \lo r8 \sh d ~ d4 ~ d2 ~ |
+  d1^\> ~ |
   d1 ~ |
-  d1 ~ |
-  \lod d4. \sh r8 r4 c ~ |
+  \lod d4.^\p \sh r8 r4 c ~ |
   c r4 \lo bes8 \sh bes r4 |
   r4 \lo bes8 \sh bes8 r2 |
   r2 \lo r8 \sh bes \times 2/3 { r8 \ntrill d4^\ff\startTrillSpan ~ } |
@@ -289,7 +313,7 @@ mezzo = \relative c' {
   \lo f \sh a \lo d \sh des \lo c \sh a \lo g \sh ges |
   \lo f \sh a \lo f \sh e \lo ees \sh f \lo g \sh ges |
   \lo f \sh bes \lo f \sh d \lo c \sh a \lo g' \sh ges |
-  \lo f \sh ees \lo d \sh a c4-. \lo d8-. \sh cis8 |
+  \lo f \sh ees \lo d \sh a c4-_ \lo d8-_ \sh cis8 |
   \lo d8 \sh bes8 g4 \lo d'8 d4 \sh bes8 ~ |
   \lod bes4. \sh r8 bes'4 \lo f8 \sh fis |
   \lo g8 \sh ees \lo c \sh aes \lo g' g4 \sh ees8 ~ |
@@ -333,33 +357,33 @@ mezzo = \relative c' {
   \lo g'8^\<  \sh g \lo r \sh gis, \lo a \sh bes \lo c \sh cis |
   \lo d^\f \sh bes \lo g \sh f \lo d' d4 \sh bes8 ~ |
   bes4 \lo r8 \sh cis8 \lo d \sh bes \lo g \sh f |
-  \times 2/3 { r g' g } \times 2/3 { g r4 } \times 2/3 { fis8 fis r } \times 2/3 { r8 d d } |
-  \times 2/3 { d8 r f } \times 2/3 { r8 cis cis } \times 2/3 { r c r } \times 2/3 { e r a, }
-  \lo gis \sh a \lo r \sh b [ \lo c ] \sh r \lo ais \sh b |
-  \lo r \sh dis [ \lo e ] \sh fis, \lo g [ \sh cis ] \lo d [ \sh bes ] |
+  \times 2/3 { r g'-. g-. } \times 2/3 { g-. r4 } \times 2/3 { fis8-. fis-. r } \times 2/3 { r8 d-. d-. } |
+  \times 2/3 { d8-. r f-. } \times 2/3 { r8 cis-. cis-. } \times 2/3 { r c-. r } \times 2/3 { e r-. a, }
+  \lo gis-- \( \sh a-. \) \lo r \sh b [ \( \lo c \) ] \sh r \lo ais-- \( \sh b-. \) |
+  \lo r \sh dis [ \( \lo e \) ] \sh fis, \( \lo g \) [ \sh cis ] \lo d [ \sh bes ] |
   \lo g \sh f \lo d' \sh d ~ d2 ~ |
   \lo d \sh bes ~ bes4 ~ bes ~ \times 2/3  { bes8 d c } |
   \lo bes \sh bes r4 r2 |
-  \lo bes8 \sh bes \lo g' \sh f \times 2/3 { des c bes } g16 bes c d |
+  \lo bes8 \sh bes \lo g' \sh f \times 2/3 { des ( c ) bes } g16 bes c d |
   \times 2/3 { r8 c c } \times 2/3 { c r4 } \times 2/3 { ges8 f f } \times 2/3 { f r4 } |
-  \times 2/3 { a8 r4 } \times 2/3 { r8 fis' fis } \times 2/3 { fis fis fis } \times 2/3 { fis fis fis } |
-  fis4-\bendAfter #-3 \times 2/3 { c8 cis d } \times 2/3 { ees d des } c4 |
-  \lo c8 \ssh d16 \ssh c \lo a8 \sh c ~ \times 2/3 { c fis, g } \times 2/3 { gis a ais } |
-  \lo b \sh d \lo b \sh bes \lo a \sh c \lo a \sh aes |
+  a16 r8. \times 2/3 { r8 fis' fis } \times 2/3 { fis^\> fis fis } \times 2/3 { fis^\< fis fis } |
+  fis4^\f-\bendAfter #-3 \times 2/3 { c8 cis d } \times 2/3 { ees d des } c4 |
+  \lo c8 ( \ssh d16 \ssh c ) \lo a8 \sh c ~ \times 2/3 { c fis, g } \times 2/3 { gis a ais } |
+  \lo b^\> \sh d \lo b \sh bes \lo a \sh c \lo a \sh aes |
   \lo g \sh b \lo g \sh ges \lo f \sh a \lo f \sh d |
-  \times 2/3 { ees8 r4 } r4 \times 2/3 { ges8 r4 } r4 |
+  \times 2/3 { ees8^\pp r4 } r4 \times 2/3 { ges8 r4 } r4 |
   \lo r8 f4 \sh f8 r4 \lo r8 \sh fis |
   r4 \lo g8 \sh r \times 2/3 { r8 a r } r4 |
   r2. \times 2/3 { r8 \ntrill bes'4^\ff\startTrillSpan ~ }
-  \lo bes8 \sh g8\stopTrillSpan \times 2/3 { des8 c bes } \lo g8 \sh r bes4 |
+  \lo bes8 \sh g8\stopTrillSpan \times 2/3 { des8 ( c ) bes } \lo g8 \sh r bes4 |
   a4^\markup \italic "not swung" f8 g a4 bes |
   \lo f^\markup \italic "swung" \sh a \lo f \sh e \lo ees \sh g \lo ees \sh cis |
   \lo d \sh f \lo d \sh des \lo c \sh ees \lo c \sh cis |
   \lo c8 \sh c g''4 r g |
   \lo f8 \sh d \lo c \sh bes ~ \lo bes \sh cis \lo d \sh cis |
   \lo d \sh bes \lo g \sh f \lo f' d4 \sh f,8 |
-  \lo bes, \sh d \lo f \sh bes r4 aes'4 ~ |
-  aes1 |
+  \lo bes, \sh d \lo f \sh bes r4 \ntrill aes'4\startTrillSpan ~ |
+  aes4 ~ aes2\stopTrillSpan-\bendAfter #-5 r4 |
 }
 
 mezzoWords = \lyricmode {
@@ -379,7 +403,7 @@ mezzoWords = \lyricmode {
   I'm just an aw -- ful king, Oh no
   A dan -- dy li -- on in my core
   I roared be fore
-  I'd ruff, I'd bet -- ter my core prow -- ess
+  I'd rrwuff, I'd bet -- ter my core prow -- ess
   Not a -- fraid of Mis -- sy mou -- se I'm de -- ny -- ing if I had the
   Ne -- ver -- more, a -- no -- ther nerve
 
@@ -391,7 +415,7 @@ mezzoWords = \lyricmode {
 
   nerve nerve
   I'm sure to get re -- gal core
-  Oh, A cea -- sar who would ruff some, some more could show pro -- wess
+  Oh, A cea -- sar who would rrwuff some, some more could show pro -- wess
   I could serve an aw -- ful li -- on
   If you're sad well I'm de -- ny -- ing Then the vim and verve
   are aw -- ful, a bee -- zer
@@ -421,6 +445,51 @@ mezzoWords = \lyricmode {
   I on -- ly had
   An aw -- ful fate I don't de -- serve
   An aw -- ful fate I
+%scared
+  then I'd rrwuff
+%gen -- tle
+   giz -- zard
+%be -- fore
+   Wiz of Oz
+%nerve
+   I'd
+%king
+   roar some
+%home
+   brain
+%a
+   heart
+%the
+   nerve
+  bli -- zard de -- serve
+  li -- zard the verve
+  to serve
+  be aw -- ful if I had the nerve
+  king of fo -- rus
+  sau -- rus
+  Such a Wi -- zard, off to see my
+  Wiz of Oz
+  my Won -- der -- ful
+  off
+  The Wi -- zard of Oz is one be -- cause
+  cause of the won -- der -- ful things
+  that he does 
+  Don't -- chya know that we're
+  bee -- zer like I ne -- ver could a 
+  cea -- ser if I on -- ly would it's
+  sad
+  be -- lieve me
+  when you are
+  born to be a sis -- sy o -- ver the rain -- bow
+  roar the way I roared be -- fore
+  I'd serve a -- round the home some more my
+  pro -- wess
+  serve
+  verve
+  Won -- der -- ful things he does
+  We're off to see the Wi -- zard
+  If I had the nerve
+  nerve!
 }
 
 
@@ -445,7 +514,7 @@ alto = \relative c'' {
   d4 \lo f8 \sh e \lo ees \sh f \lo ees \sh cis |
   \lo d \sh f \lo d \sh des \lo c \sh ees \lo c \sh cis |
   \lo d \sh bes \lo g \sh f \lo ees' c4 \sh d8 |
-  bes4 r aes'4-. fis-. |
+  bes4 r aes'4-_ fis-_ |
   g-. ees c \lo ees8 \sh cis |
   \lo d \sh bes \lo g \sh f \lo d'8 d4 \sh a8 |
   \lo aes8 \sh c \lo aes \sh f \lo d'8 \sh c \lo bes \sh aes |
@@ -456,21 +525,21 @@ alto = \relative c'' {
   a4 r r d' |
   \lo bes,8 \sh cis \lo d \sh cis \lo a fis'4 \sh ees8 |
   \lo f \sh d \lo bes \sh c \lo d \sh bes \lo ees \sh fis |
-  \lo g8 \sh bes \lo c \sh bes \lo g8 f4 \sh bes8 ~ |
+  \lo g8 \sh bes \lo c \sh bes \lo g8 f4 \sh g8 |
   bes2 \times 2/3 { r8 c, cis } \times 2/3 { d f g }
   \lo bes8 \sh bes \lo ees, \sh ees \lo bes' \sh bes \lo ees, \sh cis |
   \lo d \sh c \lo a' \sh g \lo f \sh ees \lo d \sh ees |
   \lo f8^\< \sh g \lo bes \sh g \lo c \sh bes \lo g \sh ges |
   \lod f4. \sh f8 ~ \times 2/3 { f8 bes, c } \times 2/3 { d f g } |
-  \lo bes^\f bes4 \sh bes8 \lo g8 bes4 \sh r8 |
+  \lo bes^\f \ntrill bes4\startTrillSpan \sh bes8\stopTrillSpan \lo g8 bes4 \sh r8 |
   \lo bes8 ( \ssh c16 \ssh bes ) \lo g8 \sh bes8 ~ \lod bes4. \sh gis8 |
   \lo a8 \sh c8 \lo a \sh f g4 \lo a8 \sh f8 ~ |
   \lo f \sh e8 \lo ees \sh d8 ~ \times 2/3 { d d e } \times 2/3 { fis a b } |
-  \lo c8 c4 \sh c8 \lo a8 c4 \sh r8 |
+  \lo c8 \ntrill c4\startTrillSpan \sh c8\stopTrillSpan \lo a8 c4 \sh r8 |
   \lo c8 ( \ssh d16 \ssh c ) \lo a8 \sh c8 ~ c4 \lo a8 \sh ais |
   \lo b^\> \sh d8 \lo b \sh bes8 \lo a \sh c8 \lo a \sh aes8 |
   \lo g \sh b8 \lo g \sh ges8 \lo f \sh a8 \lo f \sh d8 |
-  \lo ees^\mf \sh g8 \lo ees \sh c8 \lo a ges'4 \sh r8 |
+  \lo ees^\mf \sh g8 \lo ees \sh c8 \lo a ges'4-\bendAfter #-3 \sh r8 |
   R1 |
   \lod r4. \sh d8 ~ \lo d \sh c \lo a \sh g |
   \lo a a4 \sh fis'8 ~ \lo fis \sh e \lo d \sh b |
@@ -489,33 +558,33 @@ alto = \relative c'' {
   \lo ees8^\< \sh f8 \lo g8 \sh d8 \lo fis8 \sh g8 \lo a8 \sh fis8 |
   a2^\f \lod ees4. \sh cis'8 |
   \lo d \sh bes \lo g \sh f \lo d' \sh d ~ \times 2/3 { d des c } |
-  \times 2/3 { b bes bes } \times 2/3 { bes r4 } \times 2/3 { ces8 ces r } \times 2/3 { r8 aes a } |
-  \times 2/3 { a r b } \times 2/3 { r8 a aes } \times 2/3 { r g r } \times 2/3 { b r e, } |
-  \lo f \sh fis \lo r \sh fis [ \lo f ] \sh r \lo f \sh e |
-  \lo r \sh b' [ \lo b ] \sh c, \lo f [ \sh aes ] \lo g \sh ees |
+  \times 2/3 { b bes-. bes-. } \times 2/3 { bes-. r4 } \times 2/3 { ces8-. ces-. r } \times 2/3 { r8 aes-. a-. } |
+  \times 2/3 { a-. r b-. } \times 2/3 { r8 a-. aes-. } \times 2/3 { r g-. r } \times 2/3 { b-. r e,-. } |
+  \lo f-- \( \sh fis-. \) \lo r \sh fis [ \( \lo f \) ] \sh r \lo f-- \( \sh e-. \) |
+  \lo r \sh b' [ \( \lo b \) ] \sh c, \( \lo f [ \sh aes \) ] \lo g \sh ees |
   \lo e \sh d \lo a' \sh g ~ \lo g \sh ees \lo f \sh g ~ |
-  \lod g4. \sh c,8 des4 aes' |
+  \lo g8 \sh c,8 ~ c4 des4 aes' |
   \lo g8 \sh g \times 2/3 { bes c bes } \lo des \sh c^\turn bes16 g bes g |
   \lo e \sh e r4 r2 |
   \times 2/3 { r8 e e } \times 2/3 { e r4 } \times2/3 { r8 ees ees } \times 2/3 { ees8 r4 } |
-  \times 2/3 { f8 r4 } \times 2/3 { r8 f fis } \times 2/3 { g gis a } \times 2/3 { ais b c } |
-  \lo c8 c4 \sh c8 a4 \times 2/3 { fis8 g gis } |
+  f16 r8. \times 2/3 { r8 f fis } \times 2/3 { g^\> gis a } \times 2/3 { ais^\< b c } |
+  \lo c8^\f c4 \sh c8 a4 \times 2/3 { fis8 g gis } |
   \times 2/3 { a aes e' } \times 2/3 { c g' e } \times 2/3 { b' bes a } \times 2/3 { aes g ges } |
   \lo f \sh f r4 r2 |
-  \times 2/3 { r8 f, f } r4 r2 |
-  \times 2/3 { bes,8 r4 } r4 \times 2/3 { ees8 r4 } r4 |
+  \times 2/3 { r8 f,^\mf f } r4 r2 |
+  \times 2/3 { bes,8^\pp r4 } r4 \times 2/3 { ees8 r4 } r4 |
   \lo r8 d4 \sh d8 r4 \lo r8 \sh d |
   r4 \lo ees8 \sh r \times 2/3 { r8 e r } r4 |
-  r2. \times 2/3 { r8 \ntrill f4^\ff\startTrillSpan ~ } |
-  \lo f8 ~ \sh f8\stopTrillSpan \lo g \sh cis \lo d \sh bes \lo g \sh f |
+  r2. \times 2/3 { r8 \ntrill aes4^\ff\startTrillSpan ~ } |
+  \times 2/3 { aes8 f4\stopTrillSpan } \lo g \sh cis \lo d \sh bes \lo g \sh f |
   \lo d'8 d4 \sh bes8 ~ bes4 \lo ges \sh f |
   \lod ees4. \sh fis8 \lo g \sh ees \lo c \sh bes |
   \lo g' g4 \sh ees8 ~ ees2 |
   \lo ees8 \sh ees ees'4 r ees |
   \lo d8 bes4 \sh a ~ \lo a \sh bes \lo g \sh cis |
   \lo d \sh bes \lo g \sh f \lo d' a4 \sh f8 |
-  \lo bes, \sh d \lo f \sh bes r4 c4 ~ |
-  c1 |
+  \lo bes, \sh d \lo f \sh bes r4 \ntrill c4\startTrillSpan ~ |
+  c4 ~ c2\stopTrillSpan-\bendAfter #-5 r4 |
 }
 
 altoWords = \lyricmode {
@@ -542,7 +611,8 @@ altoWords = \lyricmode {
   more be if I had the nerve
   nerve
   sure to get a re -- gal a -- fraid there's no de -- ny -- ing
-  Oh A cea -- sar who would ruff some more, ruff my core I would
+  Oh A cea -- sar who would rrwuff some, some more,
+  rrwuff my core I would
   serve an aw -- ful li -- on If you're
   sad well I'm de -- ny -- ing Then the
   vim and verve are aw -- ful like a
@@ -575,6 +645,49 @@ altoWords = \lyricmode {
   If I on -- ly had 
   An aw -- ful An aw -- ful fate I don't de
   what a
+scared
+  then I'd rrwuff
+%gen -- tle
+   giz -- zard
+%be -- fore
+   Wiz of Oz
+%nerve
+   I'd
+%king
+   roar some
+%home
+   brain
+%a
+   heart
+%the
+   nerve
+  bli -- zard de -- serve
+  li -- zard the verve
+  to serve
+  be aw -- ful if I had the
+  de -- ny -- ing
+  a cea -- sar for -- us
+  Oh what a Wi -- zard can -- not take it
+  sau -- rus
+  Wiz of Oz
+  Won -- der -- ful
+  off
+  The Wi -- zard of Oz is one be -- cause
+  dan -- dy li cause of the won -- der
+  Wiz a wiz a Wi -- zard of Oz is a bee -- zer
+  cea -- ser
+  sad be -- lieve me 
+  when
+  you are born
+  to be
+  A dan -- dy king they bet -- ter serve
+  Bet -- ter serve
+  A re -- gal Wi -- zard I de -- serve
+  pro -- wess
+  serve verve
+  Won -- der things he does
+  We're off to see the Wi -- zard If I had the nerve
+  nerve!
 }
 
 tenor = \relative c' {
@@ -589,7 +702,7 @@ tenor = \relative c' {
   \lo ees,8 \sh g \lo r \sh bes \lo ees, a4 \sh g8 |
   a4 g ~ g \lo a8 \sh b |
   \lo a \sh aes \lo a \sh c \lo aes c4 \sh c8 |
-  \lo d8 \sh c ~ c4 \lo ges'8 \sh ees \lo aes, \sh g |
+  \lo d8 \sh c ~ c4 \lo f8 \sh ees \lo aes, \sh g |
   aes4 \lo ees'8 \sh c ees4 \lo c8 \sh bes |
   bes4 \lo c8 \sh cis d4 f |
   \lo ees8^\< \sh c \lo g \sh ees \lo ees ees4 \sh d'8 ~ |
@@ -609,9 +722,9 @@ tenor = \relative c' {
   \lo fis \sh a \lo c \sh a \lo c \sh a \lo g \sh eis |
   \lo fis d'4 \sh d8 ~ \lo d \sh c \lo a \sh g |
   \lo a a4 \sh bes8 ~ \lo bes \sh bes \lo g \sh g |
-  \lo c \sh c \lo r \sh c-- ~ \lo c \sh g \lo g \sh bes |
+  \lo c \sh c \lo r \sh f-- ~ \lo f \sh d \lo c \sh bes |
   \lo a \sh a \lo r \sh a \lo c \sh g \lo r \sh g |
-  \lo fis8 \sh c' \lo bes \sh r \lo r \sh gis \lo a \sh r |
+  \lo fis8 \sh c' \lo bes \sh r \lo r \sh d, \lo a' \sh r |
   r4 \lo fis8 \sh r8 r2 |
   r4 \lo r8 \sh fis8 \lo g8 \sh r8 r4 |
   \lo a8 \sh r8 \lo des \sh c \lo r8 \sh g'8 \lo g8 \sh ees8 |
@@ -621,33 +734,33 @@ tenor = \relative c' {
   \lo c8^\< \sh d8 \lo ees8 \sh b8 \lo c8 \sh b8 \lo gis8 \sh a8 |
   fis'4^\f \lo ees8 \sh cis \lo d \sh bes \lo a \sh g |
   \lo fis \sh cis' \lo d \sh bes \lo g \sh cis \lo d \sh bes
-  \times 2/3 { cis d d } \times 2/3 { d r4 } \times 2/3 { des8 des r } \times 2/3 { r ees d } |
-  \times 2/3 { ces r g' } \times 2/3 { r f fis } \times 2/3 { r fes r } \times 2/3 { aes r d, } |
-  \lo ees \sh ees \lo r \sh ees [ \lo d ] \sh r \lo d \sh cis |
-  \lo r \sh a' [ \lo gis ] \sh a, \lo b [ \sh fis' ] \lo g \sh a, |
+  \times 2/3 { cis d-. d-. } \times 2/3 { d-. r4 } \times 2/3 { des8-. des-. r } \times 2/3 { r ees-. d-. } |
+  \times 2/3 { ces-. r g'-. } \times 2/3 { r f-. fis-. } \times 2/3 { r fes-. r } \times 2/3 { aes-. r d,-. } |
+  \lo ees-- \sh ees-. \lo r \sh ees [ \( \lo d \) ] \sh r \lo d-- \( \sh cis-. \) |
+  \lo r \sh a' [ \( \lo gis \) ] \sh a, \( \lo b \)  [ \sh fis' ] \lo g \sh a, |
   \lo d \sh g, ees'4 ~ \lo ees8 \sh c \lo des \sh ees ~  |
-  \lo ees \sh aes, ~ aes4 \lo bes \sh ges' ~ ges4 |
+  \lod ees4. \sh aes,8 \lo bes \sh ges' ~ ges4 |
   \lo c,8 \sh c r4 r2 |
   \lo g \sh g r4 r2 |
   \times 2/3 { r8 bes bes } \times 2/3 { bes r4 } \times 2/3 { r8 a a } \times 2/3 { a r4 }
-  \times 2/3 { d8 d16_"the" d_"wi" d_"zard" d_"of" } \times 2/3 { d8_"oz" a' aes } \times 2/3 { g ges f } \times 2/3 { e ees d }
-  \times 2/3 { ees e f } fis4 \times 2/3 { a,8 ais b } \times 2/3 { c b bes } |
+  \times 4/5 { d16 [ d d d d ] } \times 2/3 { d8 a' aes8 } \times 2/3 { g^\> ges f } \times 2/3 { e^\< ees d }
+  \times 2/3 { c^\f d dis } e4 \times 2/3 { a,8 ais b } \times 2/3 { c b bes } |
   fis'4 ~ \times 2/3 { fis8 b, bes } a4 c |
   \lo b8 \sh b r4 r2 |
-  \times 2/3 { r8 d d } r4 r2 |
-  \times 2/3 { g,8 r4 } r4 \times 2/3 { a8 r4 } r4 |
+  \times 2/3 { r8 d^\mf d } r4 r2 |
+  \times 2/3 { g,8^\pp r4 } r4 \times 2/3 { a8 r4 } r4 |
   \lo r8 a4 \sh a8 r4 \lo r8 \sh b |
   r4 \lo d8 \sh r \times 2/3 { r8 c r } r4 |
-  r2. \times 2/3 { r8 \ntrill c4^\ff\startTrillSpan ~ } |
-  \lo c8 ~ \sh c8\stopTrillSpan ~ c4 ~ c4 \lo d8 \sh ees |
+  r2. \times 2/3 { r8 \ntrill f4^\ff \glissando } |
+  c2 ~ \lo c8 \sh r8 \lo d8 \sh ees |
   \lo f \sh d \lo bes \sh c \lo d bes4 \sh c8 |
   \lo d \sh bes \lo g \sh a \lo bes g4 \sh bes8 |
   \lo f \sh f \lo f \sh f f4 \lo bes8 \sh a |
-  \lo g8 \sh g a'4 r c, |
-  \lo g'8 \sh f \lo ees  \sh d ~ \lo d \sh c \lo bes \sh cis |
+  \lo g8 \sh g a'4 r a |
+  \lo bes,8 \sh f' \lo ees  \sh d ~ \lo d \sh c \lo bes \sh cis |
   \lo d \sh bes \lo g \sh f \lo a c4 \sh d8 |
-  \lo bes \sh d, \lo f \sh bes r4 d4 ~ |
-  d1 |
+  \lo bes \sh d, \lo f \sh bes r4 \ntrill d4\startTrillSpan ~ |
+  d4 ~ d2\stopTrillSpan-\bendAfter #-5 r4 |
 }
 
 tenorWords = \lyricmode {
@@ -659,12 +772,12 @@ tenorWords = \lyricmode {
   nerve
   sure to
   I'll sure get a re -- gal core A
-  cea -- sar would would ruff some, some
+  cea -- sar would would rrwuff some, some
   show my  prow -- wess I could serve aw -- ful lie If you're
   sad I'm de -- ny -- ing
   vim and verve are aw -- ful be
   stride da
-  ruff rar
+  rrwuff roar
   Hab, a ha -- bit that I don't de no I do not would
   change in for -- us
   Ra -- bit I would serve
@@ -686,6 +799,50 @@ tenorWords = \lyricmode {
   aw -- ful An aw -- ful fate I don't
   An aw -- ful fate
   An aw -- ful
+scared
+  then I'd rrwuff
+%gen -- tle
+   giz -- zard
+%be -- fore
+   Wiz of Oz
+%nerve
+   I'd
+%king
+   roar some
+%home
+   brain
+%a
+   heart
+%the
+   nerve
+  bli -- zard de -- serve
+  li -- zard the verve
+  to serve
+  be aw -- ful if I had
+  de -- ny -- ing nerve
+  cea -- sar
+  for -- us
+  sau -- rus
+  Wiz of Oz
+  Won -- der -- ful
+  off The Wi -- zard of Oz
+  The Wi -- zard of Oz is one be -- 
+  cause of the won
+  cause of the won -- der ful
+  things
+  wiz a Wi -- zard
+  bee -- zer
+  cea -- ser
+  sad be -- lieve me when
+  you are
+  born when
+  Yes it's sad be -- lieve me Mis -- sy
+  you're born to be a sis -- sy
+  With -- out the vim and verve
+  I could pro -- wess serve verve
+  Won -- der -- ful things he does 
+  We're off to see the Wi -- zard If I had the nerve
+  nerve!
 }
 
 bass = \relative c {
@@ -705,7 +862,7 @@ bass = \relative c {
   d4 bes c \lo a8 \sh f |
   bes4 \lo d8 \sh g, c4 g |
   c e, f a |
-  \lo bes8 \sh c \lo d \sh r r4 \lo d8 \sh b |
+  \lo bes8 \sh c \lo d \sh f bes4-. \lo d,8 \sh b |
   c4 r f, r |
   bes r4 r2 |
   f4 r bes r |
@@ -757,33 +914,33 @@ bass = \relative c {
   \lo d8^\< \sh aes'8 \lo a,8 \sh bes8 \lo ees8 \sh d8 \lo aes8 \sh d8 |
   g,1^\f ~ |
   \lo g8 \sh r8 a'4 ~ \times 2/3 { a8 aes g } \times 2/3 { ges f e } |
-  \times 2/3 { ees8 r4 } \times 2/3 { r8 a, a } \times 2/3 { r4 fes'8 } \times 2/3 { aes, r4 } |
-  \times 2/3 { r8 g r } \times 2/3 { fis' r4 } \times 2/3 { f8 r a, } \times 2/3 { r f' r } |
+  \times 2/3 { ees8-_ r4 } \times 2/3 { r8 a,-_ a-_ } \times 2/3 { r4 fes'8-_ } \times 2/3 { aes,-_ r4 } |
+  \times 2/3 { r8 g-_ r } \times 2/3 { fis'-_ r4 } \times 2/3 { f8-_ r a,-_ } \times 2/3 { r f'-_ r } |
   \lo c [ \sh c ] \lo f, \sh cis' [ \lo cis ] \sh fis, \lo d' [ \sh d ] |
   \lo g, \sh e' [ \lo e ] \sh aes, \lo g [ \sh e' ] c4 |
   e f aes, ges ~ |
   ges des' \lod aes4. \sh fes'8 |
   \lo ees8 \sh ees r4 r2 |
   \lo c \sh c r4 r2 |
-  \lo f8 \sh f r4 r16 f, f g bes g f g |
-  \times 2/3 { bes8 r4 } \times 2/3 { r8 b' bes } \times 2/3 { a aes g } \times 2/3 { ges f e }
-  \lo a,8 a4 \sh a8 ~ a4 ees' |
+  \times 2/3 { f,8 f' f } \times 2/3 { f r4 } r16 f, f g bes g f g |
+  bes16 r8. \times 2/3 { r8 b' bes } \times 2/3 { a^\> aes g } \times 2/3 { ges^\< f e }
+  \lo a,8^\f a4 \sh a8 a4 ees' |
   \lod d4. \sh d8 ~ \lo d fis,4 \sh a8 |
   \lo g8 \sh g8 r4 r2 |
-  \times 2/3 { r8 b' b } r4 r2 |
-  \times 2/3 { c,8 r4 } r4 \times 2/3 { f,8 r4 } r4 |
+  \times 2/3 { r8 b'^\mf b } r4 r2 |
+  \times 2/3 { c,8^\pp r4 } r4 \times 2/3 { f,8 r4 } r4 |
   \lo r8 bes4 \sh bes8 r4 \lo r8 \sh g |
   r4 \lo c8 \sh r \times 2/3 { r8 f, r } r4 |
   r2. \times 2/3 { r8 \ntrill bes4^\ff ~ } |
-  \lo bes8 \sh ees8 \lo ees \sh ees \lo r \sh e \lo e \sh e |
+  \lo bes8 \sh ees8 \lo ees \sh ees \lo r \sh e \lo e \sh g |
   \lo r8 f4 \sh d8 ~ \lo d8 g4 \sh d8 |
   c4 \lo g'8 \sh c, \lo f f,4 \sh f'8 |
   bes,8^\markup \italic "not swung" d c bes aes g f f' |
   \lo ees8^\markup \italic "swung" \sh ees r4 e r4 |
   f4 fis \lo g8 \sh d \lo bes \sh g |
-  c4 \lo g' \sh ges \lo f f,4 \sh f'8 |
+  c4 \lo g' \sh c, \lo f f,4 \sh f'8 |
   \lo bes, \sh d \lo f \sh bes \times 2/3 { r8 c, ces } bes4 ~ |
-  bes1 |
+  bes2. \times 2/3 { bes8 bes r } |
 }
 
 bassWords = \lyricmode {
@@ -799,7 +956,7 @@ bassWords = \lyricmode {
   a dan -- dy de -- ny -- ing show the
   di -- no ha -- bit I'd 
   roar rrwuff the ra -- bit
-  aw -- ful had the
+  aw -- ful I had, had the
   aw -- ful if
   had the nerve
   more
@@ -818,13 +975,13 @@ bassWords = \lyricmode {
   home and a heart would -- 've
   sure to re -- gal oh
   I'd get a re -- gal, a
-  core would would ruff, ruff some
+  core would would rrwuff, rrwuff some
   more  de -- ny I could
   serve aw -- ful li -- on you're 
   sad I'm de -- ny -- ing  Then
   vim verve are aw -- ful like a bee -- zer
   stride da
-  ruff rar get a
+  rrwuff roar get a
   ha -- bit don't de
   don't de -- serve would
   Change my
@@ -849,712 +1006,57 @@ bassWords = \lyricmode {
   rus
   a bee -- zer
   I could be a li -- on
-  roar What a li -- on when you're
+  roar Oh show the king what a
+  scared
+%  then I'd rrwuff
+  gen -- tle
+%   giz -- zard
+  be -- fore
+%   Wiz of Oz
+  nerve
+%   I'd
+  king
+%   roar some
+  home
+%   brain
+  a
+%   heart
+  the
+%   nerve
+  bli -- zard I'd de -- serve a
+  li -- zard and the verve
+  to serve
+  be aw -- ful if the nerve de -- ny -- ing
+  for -- us
+  sau -- rus
+  Wiz, Wiz of Oz
+  Oh don't -- chya know that we are
+  off
+  The Wi -- zard of Oz is one be -- cause
+  dan -- dy li -- on
+  won -- der
+  he's a
+  bee -- zer
+  cea -- ser
+  sad
+  be -- lieve me
+  when you are
+  born
+  to be a
+  a -- round the
+  fo -- rus when you're
+  born when you're born
+  to a si -- sy then I'd roar and rrwuff some
+  pro -- wess
+  nerve
+  Wo -- onder
+  Wi -- zard no We're off
+  see the Wi -- zard
+  If I had the nerve
+  Had the nerve!
+  Wi -- zard
 }
 
-ugh = \transpose c c, {
-  \clef "treble_8"
-  \transpose g g { r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-ees''8
-f''8
-d''8
-bes'8
-c''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-bes'8
-r8
-c''8
-d''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-g'8
-a'8
-bes'8
-g'8
-r8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f'8
-f'8
-f'8
-f'8
-f'8 ~
-f'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f'8 ~
-f'8 ~
-f'8 ~
-f'8 ~
-f'8 ~
-f'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-a'8
-g'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-g''8
-f''8
-ees''8
-d''8
-c''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-a'8
-r8
-a''8
-g''8
-f''8
-ees''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-c''8
-bes'8
-bes'8
-bes'8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8 ~
-bes'8 ~
-bes'8 ~
-bes'8 ~
-bes'8 ~
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8 ~
-bes'8
-r8
-r8
-d''8
-ees''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f''8
-d''8
-bes'8
-c''8
-d''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-c''8
-d''8
-bes'8
-g'8
-a'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-g'8
-r8
-bes'8
-f'8
-f'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f'8
-f'8
-f'8 ~
-f'8 ~
-f'8 ~
-f'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f'8 ~
-f'8 ~
-f'8 ~
-f'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-a'8
-g'8
-r8
-g''8
-f''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-ees''8
-d''8
-c''8
-bes'8
-a'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-a''8
-g''8
-f''8
-ees''8
-d''8
-c''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-bes'8
-bes'8
-bes'8
-bes'8 ~
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8 ~
-bes'8 ~
-bes'8 ~
-bes'8 ~
-bes'8 ~
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8 ~
-bes'8
-g''8 ~
-g''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-g''8 ~
-g''8
-r8
-fis''8
-g''8
-a''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f''8 ~
-f''8 ~
-f''8 ~
-f''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-g''8 ~
-g''8
-ees''8 ~
-ees''8
-ees''8 ~
-ees''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-ees''8 ~
-ees''8
-f''8 ~
-f''8
-d''8 ~
-d''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8 ~
-d''8
-r8
-r8
-d''8
-d''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-c''8
-bes'8
-c''8
-bes'8
-c''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-c''8
-d''8
-bes'8 ~
-bes'8 ~
-bes'8 ~
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-c''8
-d''8
-f''8
-g''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-c''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f''8 ~
-f''8 ~
-f''8 ~
-f''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-ees''8
-f''8
-d''8
-bes'8
-c''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-bes'8
-r8
-c''8
-d''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-g'8
-a'8
-bes'8
-g'8
-r8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f'8
-f'8
-f'8
-f'8
-f'8 ~
-f'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-f'8 ~
-f'8 ~
-f'8 ~
-f'8 ~
-f'8 ~
-f'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-a'8
-g'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-g''8
-f''8
-ees''8
-d''8
-c''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-a'8
-r8
-a''8
-g''8
-f''8
-ees''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-c''8
-bes'8
-r8
-bes''8
-a''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-g''8
-f''8
-ees''8
-d''8
-c''8
-c''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-c'''8
-bes''8
-a''8
-g''8
-fis''8
-g''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes''8 ~
-bes''8 ~
-bes''8 ~
-bes''8 ~
-bes''8 ~
-bes''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes''8 ~
-bes''8 ~
-bes''8 ~
-bes''8 ~
-bes''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-bes'8
-d''8
-d''8
-d''8
-d''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-r8
-r8
-d''8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-d''8
-bes'8
-r8
-r8
-d''8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-bes'8
-r8
-r8
-r8
-r8
-r8
-r8
-r8
-r8 }
-}
 
 \score {
   \new ChoirStaff <<
@@ -1617,6 +1119,8 @@ r8 }
   \layout {
     \context {
       \Voice
+      %\override PhrasingSlur #'style = #'dotted
+      \override PhrasingSlur.dash-definition = #'((0 1 0.4 0.75))
       \override TextScript #'layer = #6
       \override NoteHead #'layer = #7
       \override Glissando #'breakable = ##t

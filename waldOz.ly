@@ -166,20 +166,12 @@ bassWords = \lyricmode {
 marksProof = {
   \tempo 2=40
   \time 4/4
-  s1*9 |
-  \tempo 2=60
-  s1 |
-  \mark "accel."
-  \unfoldChange #120 #144 #24
-  %s1*3 |
+  s1*3 |
   \tempo 2=72
   s1 |
   \mark "rall."
   \unfoldChange #144 #60 #54
-  %s1*6 |
-  %s2.
-  %\tempo "" 4=60
-    s4 | %\mark \markup \override #'(baseline-skip . 3) \center-column { "G.P." \musicglyph #"scripts.ufermata" }
+    s4 |
 }
 
 sopranoProof = \relative c' {
@@ -187,16 +179,6 @@ sopranoProof = \relative c' {
   R1\! |
   \times 2/3 { r2 ees2.^\pp r4 } |
   \times 2/3 { r2 ees4 } r2 |
-  \times 2/3 { r2 f2. r4 } |
-  \times 2/3 { r2 f2. r4 } |
-  \times 2/3 { r2 g r } |
-  \times 2/3 { r2 ges r } |
-  \times 2/3 { r2 f r } |
-  \times 2/3 { r2 ees ~ ( ees8 des ) c ( bes ) } | 
-  R1 |
-  R1 |
-  R1 |
-  R1 |
   c'1^\f |
   c |
   ees |
@@ -211,13 +193,6 @@ sopranoProof = \relative c' {
 sopranoProofWords = \lyricmode {
   I'll
   a
-  up
-  are
-  hind
-  me
-  hind
-  me
-  Where
   where you'll find me, oh
   Some -- where
   o -- ver the rain % -- bow
@@ -227,21 +202,12 @@ mezzoProof = \relative c' {
    \key aes \major \relative c' {
   ees1^\subPd |
   \times 4/6 { aes,4 ( c ) ees g ( ees ) c } |
-  \times 2/3 { a ( c ) ees } gis g |
-  \times 4/6 { bes, ( des ) f aes ( f ) des } |
-  \times 2/3 { b ( d ) f } aes bes |
-  \times 4/6 { c, ( ees g ) bes ( g ees  } |
-  \times 4/6 { ces ees ges beses ges ees } |
-  \times 4/6 { bes des f aes f des } |
-  \times 4/6 { g, bes ees g4. f8 ) ees^\< ( des ) } |
-  c4^\mp ees c ees |
-  c ees c ees |
-  d f d f |
-  \times 2/3 { d^\< ( f ) g } aes bes |
-  c^\f ( b bes a ) |
+  \times 2/3 { a ( c ) ees } \mark "rall." aes4 \breathe  bes |
+  \mark "a tempo"
+  c^\mf^\< ( b bes a ) |
   aes ( g f ees ) |
-  des ( c bes aes ) |
-  g1 |
+  des\!\> ( c bes aes ) |
+  g1\! |
   aes |
   R1 |
   r4 ees'2 r4 |
@@ -249,10 +215,7 @@ mezzoProof = \relative c' {
 }}
 
 mezzoProofWords = \lyricmode {
-  Some day I'll wish u -- pon a star and
-  wake up where the clouds are far be -- hind me.
-  Where trou -- bles melt like le -- mon drops a --
-  way a -- bove the chim -- ney tops is
+  Some day I'll wish u -- pon a star, that's
   where you'll find me
   Some
   o
@@ -265,19 +228,9 @@ altoProof = \relative c' { %\autoBeamOff
   R1\! |
   \times 2/3 { r4 c4^\pp ~ c1 } |
   \times 2/3 { r4 c2 } r2 |
-  \times 2/3 { r4 des4 ~ des1 } |
-  \times 2/3 { r4 d4 ~ d1 } |
-  \times 2/3 { r4 ees4 ~ ees1 ~ } |
-  \times 2/3 { ees4 r ees1 } |
-  \times 2/3 { r4 des1 r4 } |
-  \times 2/3 { r4 bes2 ~ } bes4 r | %b |
   R1 |
   R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  f'1^\f^\> |
+  f1^\mf^\> |
   g2 ees |
   aes,1^\p |
   R1 |
@@ -289,15 +242,8 @@ altoProof = \relative c' { %\autoBeamOff
 altoProofWords = \lyricmode {
   day
   pon
-  wake
-  clouds
-  hind
-  me
-  hind
-  me
   find me oh
   Some
-  %bow
 }
 
 tenorProof = \relative c' { %\autoBeamOff
@@ -306,19 +252,9 @@ tenorProof = \relative c' { %\autoBeamOff
   R1\! |
   aes2^\pp ~ \times 2/3 { aes2 r4 } |  
   a2 r |
-  bes2 ~ \times 2/3 { bes2 r4 } |
-  b1 |
-  c |
-  \times 2/3 { r4 ces2 ~ } ces |
-  \times 2/3 { r4 bes1 ( aes4 ) } |
-  g1 |
-  r4 aes^\mp ees aes |
-  c aes ees2 |
-  r4 d' bes f |
-  d^\< f bes d |
-  ees1^\f |
+  ees'1^\mf^\> |
   ees |
-  f4^\> ( ees des c ) |
+  f4\!^\> ( ees des c ) |
   des2 c4 ( bes ) |
   aes1^\p |
   c1 |
@@ -329,14 +265,7 @@ tenorProof = \relative c' { %\autoBeamOff
 tenorProofWords = \lyricmode {
   day
   pon
-  wake
-  clouds
-  hind
-  me
-  hind
-  me
-  bles melt like le -- mon drops
-  a -- bove the chim -- ney tops is where
+  where
   you'll find me, oh
   Some -- where o rain -- bow
 }
@@ -345,16 +274,6 @@ bassProof = \relative c' {
   %\clef bass
    \key aes \major \relative c' {
   R1\! |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
   R1 |
   R1 |
   R1 |
@@ -1046,253 +965,57 @@ bassDecelWords = \lyricmode {
   way up high
 }
 
-%%% 526
-marksSimone = {
-  \tempo 2=72
-  \time 4/4
-  s1 |
-  \time 7/8
-  s1*7/8 |
-  \tempo 2=86
-  \time 4/4
-  s1 |
-  \time 3/4
-  s2. | % BIRDS!!!
-}
-
-sopranoSimone = \relative c'' { %\autoBeamOff
-   \key cis \major {
-  R1 |
-  r4 cis^\mf ais4. |
-  R1 |
-  R2. |
-}}
-
-sopranoSimoneWords = \lyricmode {
-  where trou
-}
-
-mezzoSimone = \relative c' { %\autoBeamOff 
-   \key cis \major {
-  eis2 r4 bis'4^\mf |
-  gis2 ~ gis4. |
-  eis8^\mp e dis d eis gis fis gis |
-  R2. |
-}}
-
-mezzoSimoneWords = \lyricmode {
-  trou  where trou melt like le -- mon drops
-  a -- way a
-}
-
-altoSimone = \relative c'' { %\autoBeamOff
-   \key cis \major {
-  r4 ais^\mf fisis2 ~ |
-  fisis2 ~ fisis4 dis'8 |
-  R1 |
-  << { ais,2.^\markup \italic "(angry)" } { \hairlen #8 s2^\pp^\< s8 s8\ff } >> |
-}}
-
-altoSimoneWords = \lyricmode {
-  where trou -- bles
-  birds.
-}
-
-tenorSimone = \relative c' { %\autoBeamOff
-  %\clef "treble_8"
-   \key cis \major {
-  cis4^\mf r4 r2 |
-  r2 r4. |
-  b8^\mp bis b ais a d dis e |
-  R2.
-}}
-
-tenorSimoneWords = \lyricmode {
-  trou
-  melt like le -- mon drops a -- way a
-}
-
-bassSimone = \relative c { %\autoBeamOff
-  %\clef bass
-   \key cis \major {
-  R1 |
-  R1*7/8 |
-  r4 r8 a^\mp dis gis, cis c |
-  R2. |
-}}
-
-bassSimoneWords = \lyricmode {
-  dum dum dum
-  dum dum
-}
-
 %%% 504
 marksCartoon = {
   \tempo 4=108
   \time 2/4
   s2 |
-  \time 3/4
-  s2. |
-  s2. |
-  \time 2/4
-  s2 |
-  \time 4/4
-  s1 |
-  \tempo 2=72
-  s1 |
-  s1 |
-  \time 3/4
-  s2. |
-  \time 2/4
-  s2 |
-  \time 4/4
-  \tempo 2=60
-  s1 |
-  \time 5/4
-  s1*5/4 |
 }
 
 sopranoCartoon = \relative c'' { %\autoBeamOff
    \key b \major {
   b2^\mf |
-  \times 2/3 { gis4 ais fisis } a |
-  b, gis' fis |
-  gis,8 e'4. |
-  dis4 b8 [ cis ] r8 %|
-  ais'4 r8 |
-  cis2 gis4. fis8 |
-  ais8-. r8 dis,4 ~ dis a'4 |
-  \times 2/3 { r4 gis4 ais ~ } ais4 |
-  b,4^\mf^\> gis' |
-}   \key ees \major \relative c'' {
-  g ees8 f g4 aes |
-  f4^\mp r bes2 ees,4 |
 }}
 
 sopranoCartoonWords = \lyricmode {
-  If hap -- py lit
-  blue
-  be -- hind me
-  where land that I
-  lem
-  that I
-  oh some some bow
-  rain fly
-  birds fly o -- ver the rain dreams
-  why if
+  If
 }
 
 mezzoCartoon = \relative c'' { %\autoBeamOff 
    \key b \major {
   a2^\mf |
-  \times 2/3 { e4 gis dis4 } fis |
-  gis, d' dis |
-  r8 cis4. |
-  b4 r4 r8 %|
-  fis'4 r8 |
-  e2 r4 dis8 [ d ] |
-  r2. fis4 |
-  e4 r fis |
-  R2 |
-}   \key ees \major \relative c' {
-  r2. ees4^\mp |
-  r4 d4 r2 r4 |
 }}
 
 mezzoCartoonWords = \lyricmode {
-  If hap -- py lit
-  blue
-  be -- hind me
-  land that
-  lem
-  that I
-  bow rain fly
-  dreams why
+  If
 }
 
 altoCartoon = \relative c' { %\autoBeamOff
    \key b \major {
   fis2^\mf |
-  \times 2/3 { cis4 eis cis4 } dis |
-  e, b' bis |
-  r8 ais4. |
-  ais4 r4 r8 %|
-  cisis4 r8 |
-  cis4^\< ( dis ) e fis |
-  fis4^\f r4 r4 dis4 |
-  \times 2/3 { r4 d dis ~ } dis |
-  r eis^\mf^\> |
-}   \key ees \major \relative c' {
-  ees d d c |
-  bes^\mp r r2 r4 |
 }}
 
 altoCartoonWords = \lyricmode {
-  If hap -- py lit
-  blue
-  be -- hind me
-  land that
-  lem
-  that I
-  oh some bow
-  rain fly
-  fly o -- ver rain dreams
-  why
+  If
 }
 
 tenorCartoon = \relative c' { %\autoBeamOff
   %\clef "treble_8"
    \key b \major {
   dis2^\mf |
-  \times 2/3 { b4 cisis ais4 } c |
-  cis, f r |
-  e8 g4. |
-  fis4 r4 r8 %|
-  ais4 r8 |
-  r4 gis2^\f r4 |
-  r2. b4 |
-  r2 bis4^\mf^\> |
-  gis8 ( g ) fis ( f ) |
-}   \key ees \major \relative c' {
-  bes4 aes ees c^\mp |
-  R1*5/4 |
 }}
 
 tenorCartoonWords = \lyricmode {
-  If hap -- py lit
-  blue
-  be -- hind
-  where land that
-  lem
-  that bow fly
-  birds fly
-  o -- ver rain dreams
+  If 
 }
 
 bassCartoon = \relative c { %\autoBeamOff
   %\clef bass
    \key b \major {
   R2 |
-  R2. |
-  cis4^\mf ais gis8 [ fis ] |
-  r8 ais4. |
-  R1 |
-  \times 2/3 { cis4 gis^\< fis ~ } fis8 bis4. |
-  cis4^\f r2 b4 |
-  e4 r2 |
-  r8 b^\mf^\> e gis, |
-  cis8. bis16 ~ bis8 fis ~ fis16 b8.
-}   \key ees \major \relative c, {
-  f4 | bes^\mp
-  r r2 r4 |
 }}
 
 bassCartoonWords = \lyricmode {
-  be -- hind me
-  land that that
-  I oh some bow rain %fly birds fly
-  \repeat unfold 7 dum
-  dreams why
 }
 
 %%% 600
@@ -1606,8 +1329,8 @@ bassSurprises = \relative c { %\autoBeamOff
   R2 |
   r4 b4 ~ |
   b8 b4. r8 |
-  r8 b4. r8 |
-  r4 b2 r4 |
+  fis16 gis b4. b8 |
+  r8 fis8 b4 ~ b8 b4 r8 |
   r4 b |
   r2 b2 |
   b4^\< cis fis cis a b
@@ -1626,8 +1349,8 @@ bassSurprises = \relative c { %\autoBeamOff
 
 bassSurprisesWords = \lyricmode {
   hap -- py
-  hap
-  hap -- py
+  rai -- ny hap -- py
+  so hap -- py hap
   like
   le -- mon drops and wake up where and wake up where
   the trou -- bles melt like le -- mon drops and wake up where
@@ -1658,14 +1381,6 @@ marksOpera = {
   \tempo 2=64
   \time 2/4
   s2 |
-  %\time 4/4
-  %s1*2 |
-  %\time 3/4
-  %s2. |
-  %\time 5/4
-  %s1*5/4 |
-  \time 4/4
-  s1 |
 }
 
 sopranoOpera = \relative c' { %\autoBeamOff
@@ -1682,8 +1397,6 @@ sopranoOpera = \relative c' { %\autoBeamOff
   \times 2/3 { a2^> a^> a^> }
   \times 2/3 { a^> b,1 } |
   bis'4^\f^\> eis, |
-  dis4 bis8 cis dis4^\! r4 %eis4 |
-  %fis4 r r2 |
 }}
 
 sopranoOperaWords = \lyricmode {
@@ -1694,8 +1407,7 @@ sopranoOperaWords = \lyricmode {
   \repeat unfold 4 { hap -- py }
   Schloß where
   py py py py
-  Some up fly o -- ver the
-  rain %-- bow why
+  Some up fly
 }
 
 mezzoOpera = \relative c' { %\autoBeamOff 
@@ -1712,8 +1424,6 @@ mezzoOpera = \relative c' { %\autoBeamOff
   \times 2/3 { fis^> fis^> fis^> } |
   \times 2/3 { fis^> b,1 } |
   gis'4^\f r |
-  ais,4^\> gis8 ais bis4\! gis'4^\mf %bis |
-  %cis4 r a'2 |
 }}
 
 mezzoOperaWords = \lyricmode {
@@ -1723,8 +1433,7 @@ mezzoOperaWords = \lyricmode {
   \repeat unfold 4 { hap -- py }
   Schloß where py py py py
   Some
-  up o -- ver the rain %-- bow why
-  Where
+  up
 }
 
 altoOpera = \relative c' { %\autoBeamOff
@@ -1735,15 +1444,13 @@ altoOpera = \relative c' { %\autoBeamOff
   e4 r r g4^. |
   R1*5 |
   dis4^\f^\> gis, |
-  fis dis8 eis fis4\! r4 %fis |
-  %fis4 r r2 |
 }}
 
 altoOperaWords = \lyricmode {
   skies are blue
   and the
   dreams to
-  up fly o -- ver the rain %-- bow why
+  up fly
 }
 
 tenorOpera = \relative c { %\autoBeamOff
@@ -1759,10 +1466,6 @@ tenorOpera = \relative c { %\autoBeamOff
   \times 2/3 { a'^> a^> a^> } |
   \times 2/3 { a^> b1 } |
   bis4^\f r4 |
-  %R1*2 |
-  %R2. |
-  %R1*5/4 |
-  R1 |
 }}
 
 tenorOperaWords = \lyricmode {
@@ -1783,14 +1486,11 @@ bassOpera = \relative c { %\autoBeamOff
   b %{bis cis%} r4 r a,^. |
   R1*5 |
   R2 |
-  fis4^\mf^\> dis gis4\! r4 %gis |
-  %fis4 r r2 |
 }}
 
 bassOperaWords = \lyricmode {
   skies are
   blue and the dreams %{ you dare %} to
-  o -- ver rain %-- bow why
 }
 
 %%% 518
@@ -2234,129 +1934,54 @@ bassRampWords = \lyricmode {
 
 %%% 431
 marksIfhap = {
-  \time 4/4
-  \tempo 4=92
-  s1*3 |
-  \time 3/4
-  s2. |
-  \time 4/4
-  s1 | s4
-  << { \mark "rall." s2. |
   \time 5/4
-  s1 } { \unfoldChange #92 #40 #14 } >> %\parenthesize \tempo "" 4=40
-     s4 |
+  \tempo 4=92
+  s4*5 |
 }
 
 sopranoIfhap = \relative c' { %\autoBeamOff
    \key ees \major \relative c' {
-  c ees c ees |
-  c ees c ees |
-  des ees des ees |
-  des ees des |
-  %{ des ees %} f f f f |
-  f f f f |
-  f f f f
-  f | %f f f |
+  c4 ees c ees c | 
 }}
 
 sopranoIfhapWords = \lyricmode {
-  If hap -- py lit -- tle
-  blue -- birds fly be -- yond
-  if hap -- py lit -- tle blue
-  hap hap hap hap
-  hap hap hap hap
-  hap hap hap hap
-  hap %hap hap hap
+  lit -- tle
+  blue -- birds fly
 }
 
 mezzoIfhap = \relative c' { %\autoBeamOff 
    \key ees \major \relative c' {
-  r4 ees c ees |
-  c ees c ees |
-  bes ees des ees |
-  des ees des |
-  f f f f |
-  f f f f |
-  f f %f f
-  f e ees %d |
+  c4 ees c ees c |
 }}
 
 mezzoIfhapWords = \lyricmode {
-  If hap -- py lit -- tle
-  blue -- birds fly be -- yond
-  if hap lit -- tle %blue -- birds
-  %%%
-  hap hap
-  %%%
-  hap hap
-  hap hap hap hap
-  hap hap hap hap
-  hap %hap hap hap
+  hap -- py lit -- tle
+  blue
 }
 
 altoIfhap = \relative c' { %\autoBeamOff
    \key ees \major \relative c' {
-  r2. ees4 |
-  c ees c ees |
-  bes ees bes ees |
-  des ees des |
-  %des ees des ees |
-  f f %f f |
-  f f f f
-  f f f e
-  ees d des %c |
+  r4 ees4 c ees c |
 }}
 
 altoIfhapWords = \lyricmode {
-  If hap -- py lit -- tle
-  blue -- birds fly be -- yond
-  hap -- py %lit -- tle blue -- birds
-  %%%
-  hap hap hap hap
-  %%%
-  hap hap hap hap
-  hap hap hap hap
-  hap %hap hap hap
+  If hap -- py lit
 }
 
 tenorIfhap = \relative c' { %\autoBeamOff
   %\clef "treble_8"
    \key ees \major \relative c' {
-  R1 |
-  r4 ees c ees |
-  bes ees bes ees |
-  bes ees des |
-  %{des ees des ees |
-  des ees %} f f f f | f f %f f |
-  f e ees d
-  des c b %bes |
+  r2. ees4 c |
 }}
 
 tenorIfhapWords = \lyricmode {
-  If hap -- py lit -- tle
-  blue -- birds fly be -- yond
-  %if hap -- py lit -- tle blue -- birds
-  %%%
-  hap hap hap hap hap hap
-  %%%
-  hap hap
-  hap hap hap hap
-  hap %hap hap hap
+  If hap
 }
 
 bassIfhap = \relative c { %\autoBeamOff
   %\clef bass
    \key ees \major \relative c' {
-  \time 4/4
-  \tempo 4=92
-  R1*3 |
-  \time 3/4
-  R2. |
-  \time 4/4
-  R1 | R1
-  \time 5/4
-  R1*5/4
-
+   R4*5
 }}
 
 bassIfhapWords = \lyricmode {
@@ -3381,33 +3006,6 @@ bassWowWords = \lyricmode {
 
 %%% 1036
 marksRealcome = {
-  \time 4/4
-  \tempo 2=132
-  s1*3 |
-  \time 3/4
-  s2. |
-  \tempo 4=132
-  \time 5/4
-  s1*5/4 |
-  \time 2/4
-  s2 |
-  \tempo 2=96
-  \time 4/4
-  s1 |
-  \time 3/4
-  s2. |
-  %\tempo 2=96
-  \time 4/4
-  s1*2 |
-  %\tempo 2=80
-  \time 2/4
-  s2 |
-  \tempo 2=72
-  \time 3/4
-  s2. |
-  \tempo 2=92
-  \time 2/4
-  s2 |
   \tempo 2=84
   \time 5/4
   s1*5/4
@@ -3420,27 +3018,8 @@ marksRealcome = {
 }
 
 sopranoRealcome = \relative c' { %\autoBeamOff
-   \key b \major {
-  b2^\mf^\< gis' |
-  fis1^\> |
-  gis,2\! e' |
-  dis2 b4 |
-}   \key fis \major {
-  cis4.^\< ais'8 ~ ais r8 fis4^\> eis |
-  dis bis8 cis |
-}   \key ees \major \relative c' {
-  c2^\< c' |
-  bes2^\> r4\! |
-}   \key cis \major {
-  fisis4^\< ais fisis ais |
-}   \key c \major {
-  b4^\f r b,2^\> |
-}   \key cis \major {
-  eis2 |
-  dis4^\mf bis8 cis dis4 |
-  gis2 |
-}   \key ees \major \relative c' {
-  f4^\p^\< ees f g aes^\f
+   \key ees \major \relative c' {
+  f4^mp^\< ees f g aes^\f
 }   \key a \major {
   d4^\mp^\< e fis8 |
 }   \key cis \major {
@@ -3451,37 +3030,13 @@ sopranoRealcome = \relative c' { %\autoBeamOff
 }}
 
 sopranoRealcomeWords = \lyricmode {
-  way up high
-  there's a rain -- bow
-  skies are and the dreams that you way up high
-  chim -- ney tops that's where blue fly
-  once in a lul
-  some bey -- ond the rain -- bow
+  bey -- ond the rain -- bow
   why oh why
   rain real come
 }
 
 mezzoRealcome = \relative c' { %\autoBeamOff 
-   \key b \major {
-  gis2^\mf^\< d' |
-  dis^\> bis |
-  r4\! b2 ais4 |
-  b4 ( ais ) gis |
-}   \key fis \major {
-  r2 cis4^\mf^\> ais gis |
-  fis dis |
-}   \key ees \major \relative c' {
-  ees2\! r2 |
-  r4 ees ees |
-}   \key cis \major {
-  dis'2^\< dis |
-}   \key c \major {
-  f2^\f r |
-}   \key cis \major {
-  cis2^\> |
-  R2.\! |
-  fis,2^\mf |
-}   \key ees \major \relative c' {
+   \key ees \major \relative c' {
   r2 r4 f^\< ees^\f |
 }   \key a \major {
   cis'8^\mp^\< b4 b4 |
@@ -3490,44 +3045,14 @@ mezzoRealcome = \relative c' { %\autoBeamOff
 }}
 
 mezzoRealcomeWords = \lyricmode {
-  way up
-  way up
-  there's a rain -- bow
-  are and the
-  dreams you
-  way
-  way up
-  chim -- ney
-  where
-  fly
-  some
   rain -- bow
   why oh why
   rain real come
 }
 
 altoRealcome = \relative c' { %\autoBeamOff
-   \key b \major {
-  R1 |
-  gis2^\mf^\< fis'^\> |
-  e cis |
-  b2\! b4 |
-}   \key fis \major {
-  ais4^\< cis e^\> dis cis |
-  bis gis8 gisis |
-}   \key ees \major \relative c' {
-  ais4\! f^\< fis2 |
-  g2^\> a4 |
-}   \key cis \major {
-  ais4^\< fisis dis fisis |
-}   \key c \major {
-  g2^\f g4^\> ( fis ) |
-}   \key cis \major {
-  fis2 |
-  fis4.^\mf eis8 dis4 |
-  dis2 |
-}   \key ees \major \relative c' {
-  bes2^\p^\< c4 b c^\f |
+   \key ees \major \relative c' {
+  bes2^mp^\< c4 b c^\f |
 }   \key a \major {
   a'^\mp^\< gis a8 |
 }   \key cis \major {
@@ -3535,43 +3060,14 @@ altoRealcome = \relative c' { %\autoBeamOff
 }}
 	
 altoRealcomeWords = \lyricmode {
-  way up high
-  a rain -- bow
-  skies, skies are
-  and the dreams that you
-  way, way up way up
-  chim -- ney tops that's
-  where blue
-  fly
-  once a lul some
   be the rain -- bow
   why oh why
   rain real come
 }
 
-tenorRealcome = \relative c { %\autoBeamOff
-  %\clef "treble_8"
-   \key b \major {
-  e2^\mf^\< eis |
-  fis1^\>
-  gis2\! g2 |
-  fis2 gis4 |
-}   \key fis \major {
-  fis4.^\< fisis8 ~ fisis\! r gis4^\> ais |
-  bis4 bis8 ais\! |
-}   \key ees \major \relative c' {
-  r4 aes4^\< a2 |
-  bes^\> c4 |
-}   \key cis \major {
-  ais^\< cisis ais cisis |
-}   \key c \major {
-  d4^\f ( b ) g^\> ( a ) |
-}   \key cis \major {
-  ais2 |
-  bis4^\mf gis8 ais gis4 |
-  bis2 |
-}   \key ees \major \relative c' {
-  bes2^\p^\< aes4 g f^\f |
+tenorRealcome = \relative c' { %\autoBeamOff
+   \key ees \major \relative c' {
+  bes2^mp^\< aes4 g f^\f |
 }   \key a \major {
   fis4^\mp^\< e e8 |
 }   \key cis \major {
@@ -3579,43 +3075,14 @@ tenorRealcome = \relative c { %\autoBeamOff
 }}
 
 tenorRealcomeWords = \lyricmode {
-  way up high
-  there's a rain -- bow
-  skies are
-  and the dreams that you
-  way up way up
-  chim -- ney tops that's
-  where blue
-  fly
-  once in a lul some
   be the rain -- bow
   why oh why
   rain real come
 }
 
 bassRealcome = \relative c { %\autoBeamOff
-  %\clef bass
-   \key b \major {
-  r4 b^\mf e ais, |
-  dis d gis, g |
-  r cis2 fis,4 |
-  gis2 e'4 |
-}   \key fis \major {
-  dis4^\< bis8 cis\! r4 cis4^\> ais |
-  fis gis8 fis |
-}   \key ees \major \relative c, {
-  f2^\< ees' |
-  d4^\> c bes |
-}   \key cis \major {
-  dis'^\< cis bis ais |
-}   \key c \major {
-  R1\! |
-}   \key cis \major {
-  gis2^\> |
-  dis^\mf gis4 |
-  bis2 |
-}   \key ees \major \relative c {
-  g4^\p^\< ~ g8 f ~ f4 d'4 f^\f |
+\key ees \major \relative c {
+  g4^mp^\< ~ g8 f ~ f4 d'4 f^\f |
 }   \key a \major {
   d4.^\mp^\< e,4 |
 }   \key cis \major {
@@ -3623,13 +3090,6 @@ bassRealcome = \relative c { %\autoBeamOff
 }}
 
 bassRealcomeWords = \lyricmode {
-  \repeat unfold 7 dum
-  there's a there's a once in a
-  and the dreams that you
-  there's a land that I
-  chim -- ney tops that's
-  fly
-  once lul some
   be -- yond rain -- bow
   why oh
   rain real come
@@ -3713,143 +3173,6 @@ bassLargeWords = \lyricmode {
   Why oh Why Why oh
 }
 
-%%% not in orig...
-marksFuzz = {
-  \time 2/4
-  \tempo 2=80
-  s2
-  \time 3/4
-  \tempo 2=72
-  s2. |
-  \time 5/8
-  \tempo 4.=80
-  s1*5/8 |
-  \tempo 2=88
-  \time 3/4
-  s2. |
-  \tempo 4.=80
-  \time 6/8
-  s2. |
-  \time 4/4
-  \tempo 4=116
-  s1 |
-}
-
-sopranoFuzz = \relative c' { %\autoBeamOff
-   \key a \major {
-  b4 gis8 [ a ] |
-}   \key b \major {
-  cis4^\f ais8 [ b ] cis4 |
-  fis4.^\espressivo b,4 |
-}   \key c \major {
-  g'4 e4^\mf g
-}   \key cis \major {
-  cis,4. ais'4 gis8 |
-}   \key cis \major {
-  ais,4^\< fis' eis4 cis %\times 2/3 { eis4 cis dis } |
-}}
-
-sopranoFuzzWords = \lyricmode {
-  Why oh
-  Why oh why
-  Why I
-  If hap -- py
-  blue -- birds fly
-  birds fly o -- ver %the
-}
-
-mezzoFuzz = \relative c' { %\autoBeamOff 
-   \key a \major {
-  R2 |
-}   \key b \major {
-  r2 b4 |
-  gis8 [ a ] b8. cis16 r8 |
-}   \key c \major {
-  e4 c4 e |
-}   \key cis \major {
-   %cis4 e eis |
-   r4 cis'2 |
-}   \key cis \major {
-  r4. %{cis'4^_%} bis,8^\< cis2 |
-}}
-
-mezzoFuzzWords = \lyricmode {
-  Why oh why can't
-  If hap -- py
-  %blue -- birds fly
-  birds
-  %birds
-  birds o
-}
-
-altoFuzz = \relative c' { %\autoBeamOff
-   \key a \major {
-  R2 |
-}   \key b \major {
-  r2 dis4 |
-  dis dis b8 ~ |
-}   \key c \major {
-   %\times 6/7 { ais4 gis8 fis e4 c8 } |
-   b8 r r2 |
-}   \key cis \major {
-  eis4 cis8 dis eis fis |
-}   \key c \major {
-  \times 2/3 { gis2 ais4 } gis8 [ fis ] eis dis |
-}}
-	
-altoFuzzWords = \lyricmode {
-  why why why
-  why %oh why oh why can't
-  o -- ver the rain -- bow why
-  oh o -- ver the
-}
-
-tenorFuzz = \relative c { %\autoBeamOff
-  %\clef "treble_8"
-   \key a \major {
-  %d4 e |
-  R2 |
-}   \key b \major {
-  cis4^\f ~ cis8 fis ~ fis4 |
-  gis4 ais r8 |
-}   \key c \major {
-  r2 r8 b8 |
-}   \key cis \major {
-  ais4^\mf fisis gis |
-}   \key c \major {
-   \times 2/3 { r4 a^\< gis } \times 2/3 { r4 eis2 }
-}}
-
-tenorFuzzWords = \lyricmode {
-  %Why oh
-  Why why
-  Why I
-  If
-  blue birds fly
-  birds fly o
-}
-
-bassFuzz = \relative c' { %\autoBeamOff
-  %\clef bass
-   \key a \major {
-  R2 |
-}   \key b \major {
-  gis8^\< [ fis ] e [ dis ] cis4^\f |
-  r8 fis,4 ~ fis8 b |
-}   \key c \major {
-  R2. |
-}   \key cis \major {
-  r8 fis8 ~ fis8. gis8. ~ gis16 fis ~ |
-}   \key c \major {
-  fis4 gis8 r \times 4/5 { cis8^\< b ais gis ais } |
-}}
-
-bassFuzzWords = \lyricmode {
-  Why oh why
-  Why I
-  why oh why oh
-  o -- ver the rain -- bow
-}
 
 %%% not in orig...
 marksDenouement = {
@@ -4303,13 +3626,11 @@ bassFinaleWords = \lyricmode {
         \sopranoElan
         \sopranoSugar
         \sopranoOpera
-        \sopranoSimone
         \sopranoRealcome
         \sopranoSurprises
         \sopranoWortspiel
         \sopranoCartoon
         \sopranoIfhap
-        \sopranoFuzz
         \sopranoProof
         \sopranoFinale
         \sopranoStutter
@@ -4324,13 +3645,11 @@ bassFinaleWords = \lyricmode {
         \marksElan
         \marksSugar
         \marksOpera
-        \marksSimone
         \marksRealcome
         \marksSurprises
         \marksWortspiel
         \marksCartoon
         \marksIfhap
-        \marksFuzz
         \marksProof
         \marksFinale
         \marksStutter
@@ -4346,13 +3665,11 @@ bassFinaleWords = \lyricmode {
         \sopranoElanWords
         \sopranoSugarWords
         \sopranoOperaWords
-        \sopranoSimoneWords
         \sopranoRealcomeWords
         \sopranoSurprisesWords
         \sopranoWortspielWords
         \sopranoCartoonWords
         \sopranoIfhapWords
-        \sopranoFuzzWords
         \sopranoProofWords
         \sopranoFinaleWords
         \sopranoStutterWords
@@ -4371,13 +3688,11 @@ bassFinaleWords = \lyricmode {
         \mezzoElan
         \mezzoSugar
         \mezzoOpera
-        \mezzoSimone
         \mezzoRealcome
         \mezzoSurprises
         \mezzoWortspiel
         \mezzoCartoon
         \mezzoIfhap
-        \mezzoFuzz
         \mezzoProof
         \mezzoFinale
         \mezzoStutter
@@ -4393,13 +3708,11 @@ bassFinaleWords = \lyricmode {
         \mezzoElanWords
         \mezzoSugarWords
         \mezzoOperaWords
-        \mezzoSimoneWords
         \mezzoRealcomeWords
         \mezzoSurprisesWords
         \mezzoWortspielWords
         \mezzoCartoonWords
         \mezzoIfhapWords
-        \mezzoFuzzWords
         \mezzoProofWords
         \mezzoFinaleWords
         \mezzoStutterWords
@@ -4418,13 +3731,11 @@ bassFinaleWords = \lyricmode {
         \altoElan
         \altoSugar
         \altoOpera
-        \altoSimone
         \altoRealcome
         \altoSurprises
         \altoWortspiel
         \altoCartoon
         \altoIfhap
-        \altoFuzz
         \altoProof
         \altoFinale
         \altoStutter
@@ -4440,13 +3751,11 @@ bassFinaleWords = \lyricmode {
         \altoElanWords
         \altoSugarWords
         \altoOperaWords
-        \altoSimoneWords
         \altoRealcomeWords
         \altoSurprisesWords
         \altoWortspielWords
         \altoCartoonWords
         \altoIfhapWords
-        \altoFuzzWords
         \altoProofWords
         \altoFinaleWords
         \altoStutterWords
@@ -4465,13 +3774,11 @@ bassFinaleWords = \lyricmode {
         \tenorElan
         \tenorSugar
         \tenorOpera
-        \tenorSimone
         \tenorRealcome
         \tenorSurprises
         \tenorWortspiel
         \tenorCartoon
         \tenorIfhap
-        \tenorFuzz
         \tenorProof
         \tenorFinale
         \tenorStutter
@@ -4487,13 +3794,11 @@ bassFinaleWords = \lyricmode {
         \tenorElanWords
         \tenorSugarWords
         \tenorOperaWords
-        \tenorSimoneWords
         \tenorRealcomeWords
         \tenorSurprisesWords
         \tenorWortspielWords
         \tenorCartoonWords
         \tenorIfhapWords
-        \tenorFuzzWords
         \tenorProofWords
         \tenorFinaleWords
         \tenorStutterWords
@@ -4512,13 +3817,11 @@ bassFinaleWords = \lyricmode {
         \bassElan
         \bassSugar
         \bassOpera
-        \bassSimone
         \bassRealcome
         \bassSurprises
         \bassWortspiel
         \bassCartoon
         \bassIfhap
-        \bassFuzz
         \bassProof
         \bassFinale
         \bassStutter
@@ -4534,13 +3837,11 @@ bassFinaleWords = \lyricmode {
         \bassElanWords
         \bassSugarWords
         \bassOperaWords
-        \bassSimoneWords
         \bassRealcomeWords
         \bassSurprisesWords
         \bassWortspielWords
         \bassCartoonWords
         \bassIfhapWords
-        \bassFuzzWords
         \bassProofWords
         \bassFinaleWords
         \bassStutterWords
@@ -4596,13 +3897,11 @@ bassFinaleWords = \lyricmode {
         \sopranoElan
         \sopranoSugar
         \sopranoOpera
-        \sopranoSimone
         \sopranoRealcome
         \sopranoSurprises
         \sopranoWortspiel
         \sopranoCartoon
         \sopranoIfhap
-        \sopranoFuzz
         \sopranoProof
         \sopranoFinale
         \sopranoStutter
@@ -4618,13 +3917,11 @@ bassFinaleWords = \lyricmode {
         \marksElan
         \marksSugar
         \marksOpera
-        \marksSimone
         \marksRealcome
         \marksSurprises
         \marksWortspiel
         \marksCartoon
         \marksIfhap
-        \marksFuzz
         \marksProof
         \marksFinale
         \marksStutter
@@ -4640,13 +3937,11 @@ bassFinaleWords = \lyricmode {
         \sopranoElanWords
         \sopranoSugarWords
         \sopranoOperaWords
-        \sopranoSimoneWords
         \sopranoRealcomeWords
         \sopranoSurprisesWords
         \sopranoWortspielWords
         \sopranoCartoonWords
         \sopranoIfhapWords
-        \sopranoFuzzWords
         \sopranoProofWords
         \sopranoFinaleWords
         \sopranoStutterWords
@@ -4665,13 +3960,11 @@ bassFinaleWords = \lyricmode {
         \mezzoElan
         \mezzoSugar
         \mezzoOpera
-        \mezzoSimone
         \mezzoRealcome
         \mezzoSurprises
         \mezzoWortspiel
         \mezzoCartoon
         \mezzoIfhap
-        \mezzoFuzz
         \mezzoProof
         \mezzoFinale
         \mezzoStutter
@@ -4687,13 +3980,11 @@ bassFinaleWords = \lyricmode {
         \mezzoElanWords
         \mezzoSugarWords
         \mezzoOperaWords
-        \mezzoSimoneWords
         \mezzoRealcomeWords
         \mezzoSurprisesWords
         \mezzoWortspielWords
         \mezzoCartoonWords
         \mezzoIfhapWords
-        \mezzoFuzzWords
         \mezzoProofWords
         \mezzoFinaleWords
         \mezzoStutterWords
@@ -4712,13 +4003,11 @@ bassFinaleWords = \lyricmode {
         \altoElan
         \altoSugar
         \altoOpera
-        \altoSimone
         \altoRealcome
         \altoSurprises
         \altoWortspiel
         \altoCartoon
         \altoIfhap
-        \altoFuzz
         \altoProof
         \altoFinale
         \altoStutter
@@ -4734,13 +4023,11 @@ bassFinaleWords = \lyricmode {
         \altoElanWords
         \altoSugarWords
         \altoOperaWords
-        \altoSimoneWords
         \altoRealcomeWords
         \altoSurprisesWords
         \altoWortspielWords
         \altoCartoonWords
         \altoIfhapWords
-        \altoFuzzWords
         \altoProofWords
         \altoFinaleWords
         \altoStutterWords
@@ -4759,13 +4046,11 @@ bassFinaleWords = \lyricmode {
         \tenorElan
         \tenorSugar
         \tenorOpera
-        \tenorSimone
         \tenorRealcome
         \tenorSurprises
         \tenorWortspiel
         \tenorCartoon
         \tenorIfhap
-        \tenorFuzz
         \tenorProof
         \tenorFinale
         \tenorStutter
@@ -4781,13 +4066,11 @@ bassFinaleWords = \lyricmode {
         \tenorElanWords
         \tenorSugarWords
         \tenorOperaWords
-        \tenorSimoneWords
         \tenorRealcomeWords
         \tenorSurprisesWords
         \tenorWortspielWords
         \tenorCartoonWords
         \tenorIfhapWords
-        \tenorFuzzWords
         \tenorProofWords
         \tenorFinaleWords
         \tenorStutterWords
@@ -4806,13 +4089,11 @@ bassFinaleWords = \lyricmode {
         \bassElan
         \bassSugar
         \bassOpera
-        \bassSimone
         \bassRealcome
         \bassSurprises
         \bassWortspiel
         \bassCartoon
         \bassIfhap
-        \bassFuzz
         \bassProof
         \bassFinale
         \bassStutter
@@ -4828,13 +4109,11 @@ bassFinaleWords = \lyricmode {
         \bassElanWords
         \bassSugarWords
         \bassOperaWords
-        \bassSimoneWords
         \bassRealcomeWords
         \bassSurprisesWords
         \bassWortspielWords
         \bassCartoonWords
         \bassIfhapWords
-        \bassFuzzWords
         \bassProofWords
         \bassFinaleWords
         \bassStutterWords
