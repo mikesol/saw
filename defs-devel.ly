@@ -153,6 +153,8 @@ as @code{\\compoundMeter #'((3 2 8))} or shorter
 
 slash = \once \override NoteHead #'style = #'slash
 cross = \once \override NoteHead #'style = #'cross
+Cross = \override NoteHead #'style = #'cross
+nnnn = \revert NoteHead #'style
 tri = \once \override NoteHead #'style = #'triangle
 xCircle = \once \override NoteHead #'style = #'xcircle
 harm =  \once \override NoteHead #'style = #'harmonic-mixed
