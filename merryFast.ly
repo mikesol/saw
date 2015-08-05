@@ -186,9 +186,12 @@ bass = \relative c, {
   e fis gis eis |
   %%%
   fis ais cis dis |
-  cis b gis g |
-  fis ais cis c |
-  gis a g ais |
+  d cis c gis |
+  b ais g a |
+  gis g fis f |
+  %cis b gis g |
+  %fis ais cis c |
+  %gis a g ais |
   b fis ais a |
   e gis g dis |
   g fis b fis |
