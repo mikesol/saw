@@ -27,6 +27,14 @@ myblack = \revert NoteHead.color
 %myred = \revert NoteHead.color
 %myblack = \revert NoteHead.color
 
+%{
+  repeated note
+  repeated lick
+  digs, scoops, etc
+  rests in strange places...
+  
+%}
+
 \header {
   title = "The Merry Old Land of Oz" %(1)"
   subtitle = \markup { for Jon Hendricks }
@@ -171,14 +179,14 @@ bass = \relative c, {
   g fis e bis |
   cis e a fis |
   g b e, gis |
-  a aes g fis |
-  e cis' g gis |
+  a gis b fis |
+  f cis' g gis |
   bes a fis gis |
   g e fis f |
   %%%
   a b cis ais |
   b cis d bis |
-  cis cis a a |
+  cis c bes a |
   b gis fis e |
   a e cis' c |
   b e, d' bis |
@@ -189,18 +197,16 @@ bass = \relative c, {
   d cis c gis |
   b ais g a |
   gis g fis f |
-  %cis b gis g |
-  %fis ais cis c |
-  %gis a g ais |
   b fis ais a |
   e gis g dis |
   g fis b fis |
   ais a f gis |
+  %%
   e e gis gis |
-  fis fis a a |
-  gis gis b bis |
-  cis gis a eis |
-  fis a cis c |
+  a a ais ais |
+  b b gis gis |
+  cis cis gis g |
+  fis a cis ais |
   b a gis fis |
   e gis fis a |
   gis b a fis |

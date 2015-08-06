@@ -41,53 +41,69 @@ marks = {
   \time 2/2
   \tempo "Allegro" 2=120
   \key ees \major
-  s1 |
+  s2.
   \key e \major
-  s1 |
+  s2.
   \key f \major
-  s1 |
+  s2.
   \key ges \major
-  s1 |
+  s2.
   \key g \major
-  s1 |
+  s2.
   \key aes \major
-  s1 |
+  s2.
   \key a \major
-  s1 |
+  s2.
   \key bes \major
-  s1 |
+  s2.
   \key ces \major
-  s1 |
+  s2.
   \key c \major
-  s1 |
+  s2.
   \key des \major
-  s1 |
+  s2.
   \key d \major
-  s1 |
+  s2.
   \key ees \major
-  s1 |
+  s2.
   \key e \major
-  s1 |
+  s2.
   \key f \major
-  s1 |
+  s2.
   \key ges \major
-  s1 |
+  s2.
   \key g \major
-  s1 |
+  s2.
   \key aes \major
-  s1 |
+  s2.
   \key a \major
-  s1 |
+  s2.
   \key bes \major
-  s1 |
+  s2.
   \key ces \major
-  s1 |
+  s2.
   \key c \major
-  s1 |
+  s2.
   \key des \major
-  s1 |
+  s2.
   \key d \major
-  s1 |
+  s2.
+  \key ees \major
+  s2.
+  \key e \major
+  s2.
+  \key f \major
+  s2.
+  \key ges \major
+  s2.
+  \key g \major
+  s2.
+  \key aes \major
+  s2.
+  \key a \major
+  s2.
+  \key bes \major
+  s2.
 }
 
 prefatoryMatter = {
@@ -96,20 +112,35 @@ prefatoryMatter = {
 
 soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 ees d8 ees d4 |
-  e e dis8 e dis4 |
-  f f e8 f d4 |
-  des1 |
-  r4 g fis8 g fis4 |
-  aes aes g8 aes f4 |
-  e1 |
-  r4 f ~ f f-. |
-  r4 des fes8 fes fes4 |
-  f2 e4 f |
-  f2 ees4 f |
-  f2 d4 e |
-  ees2 d4 ees |
-  dis2 cis4 dis |
+  %{ees%} r4 ees d8 ees %{e%} dis4 |
+  e e %{f%} e8 f e4 |
+  f %{ges%} ges f8 ges ees4 %{g%} |
+  d2. %{aes%} r4 |
+  %%%
+  r4 aes' %{a%} gis8 a gis4 |
+  a4 %{bes%} bes a8 bes g4 %{ces%} |
+  ges2. %{c%} r4 |
+  r4 c, %{des%} ( des ) d |  %% TT sub...
+  %%%%
+  r4 %{d%} e4 g8 g g4 %{ees%} |
+  aes2 g4 %{e%} a |
+  gis2 %{f%} g4 a |
+  aes4 ( %{ges%} beses4 ) ges aes |
+  %%%
+  %{g%} g2 fis4 %{aes%} aes4 |
+  g2 %{a%} fis4 gis |
+  fis4 %{bes%} ( g2. ) |
+  aes2-\bendAfter #-3 r4 ees4-. |
+  %%%
+  r4 c,4 %{des%} c8 des c4 |
+  des4 %{d%} d cis8 d cis4 |
+  %{ees%} ees4 ees d8 ees %{e%} cis4 |
+  b2 ( %{f%} c4 ) r4 |
+  r4 f %{ges%} f8 ges f4 |
+  ges4 %{g%} g fis8 g e4 |
+  %{aes%} ees ees d8 d %{a%} dis4 |
+  d4 e %{bes%} g a 
+  
 }
 
 sopranoWords = \lyricmode {
@@ -117,21 +148,22 @@ sopranoWords = \lyricmode {
 
 mezzo = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 c c8 c c4 |
-  cis cis bis8 cis bis4 |
-  d d des8 des c4 |
-  beses1 |
-  r4 d cis8 d cis4 |
-  d d cis8 d c4 |
-  cis2 b |
-  bes a |
-  %r4 d4 ~ d d-. |
-  r4 ces ces8 ces ces4 |
-  d2 cis4 d |
-  c2 ces4 c |
-  b2 ais4 b |
-  c2 bes4 c |
-  b2 b4 b4 |
+  r4 c c8 c cis4 |
+  cis cis cis8 d cis4 |
+  d ees d8 ees c4 |
+  c2. r4 |
+  r ees dis8 e8 dis4 |
+  ees e e8 e e4 |
+  fes2. r4 |
+  r4 bes, ( ces2 ) |
+  r4 cis4 d8 d d4 |
+  c2 ces4 e |
+  dis2 e4 e |
+  d ges ees ees |
+  e2 ees4 des |
+  c2 c4 cis |
+  b4 ees4 ~ ees c |
+  fes2-\bendAfter #-3 r4 aes,-. |
 }
 
 mezzoWords = \lyricmode {
@@ -139,19 +171,22 @@ mezzoWords = \lyricmode {
 
 alto = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 bes a8 bes a4 |
-  b b ais8 b ais4 |
-  bes bes bes8 bes a4 |
-  ges1 |
-  r4 b bes8 b bes4 |
-  b b ais8 b gis4 |
-  g2 gis |
-  g fis |
-  r4 aes4 aes8 aes aes4 |
-  a2 gis4 a |
-  aes2 g4 aes |
-  aes2 g4 aes |
-  g2 f4 g |
+  r4 bes a8 bes ais4 |
+  b4 b b8 b b4 |
+  bes ces ces8 ces a4 |
+  g2 a4 b |
+  c4 c4 bis8 cis8 bis4 |
+  c cis cis8 cis cis4 |
+  ces2 ces4 ( c ) |
+  g2 aes4 g |
+  r4 bes b8 b b4 |
+  beses2 beses4 fis |
+  f2 bes4 g |
+  b4 c c c |
+  c2 c4 bes |
+  bes2 a4 b4 |
+  gis bes2. |
+  ges2-\bendAfter #-3 r4 f-. |
 }
 
 altoWords = \lyricmode {
@@ -161,19 +196,22 @@ tenor = \relative c'' {
   \autoBeamOff
   \prefatoryMatter
   \clef "treble_8"
-  r4 g fis8 g fis4 |
-  g g ges8 g ges4 |
-  g g g8 fis f4 |
-  c2 ees4 f |
-  r dis ~ dis e |
-  f f e8 f d4 |
-  e1 |
-  r4 d ~ d d |
-  r4 fes4 des8 des des4 |
-  c2 b4 c |
-  d2 f4 d |
-  cis2 bis4 cis |
-  aes2 g4 aes |
+  r4 g fis8 g fisis4 |
+  g g gis8 gis gis4 |
+  a aes4 aes8 aes ges4 |
+  e2 f4 g |
+  aes4 f fis8 fis fis4 |
+  fis g g8 g g4 |
+  aes2 aes4 ( a ) |
+  e2 f2 | 
+  r4 g e8 e e4 |
+  ees2 d4 cis |
+  b2 d4 c |
+  f4 ees aes f |
+  a2 a4 f |
+  ees2 ees4 e4 |
+  d4 c ~ c4 e |
+  des2-\bendAfter #-3 r4 des-. | % jajaja TT Sub h4x0r
 }
 
 tenorWords = \lyricmode {
@@ -186,7 +224,7 @@ bass = \relative c {
   bes2. bes4 |
   bes2. bes4 |
   bes2. bes4 |
-  bes2 ces4 aes |
+  bes2 c4 aes |
   r4 bes ~ bes bes |
   r4 bes ~ bes bes |
   bes2 d |
@@ -196,9 +234,17 @@ bass = \relative c {
   g2 g |
   ges ges |
   f f |
-  ees ees |
-  aes aes |
-  bes bes |
+  g g |
+  aes a |
+  bes b |
+  bes2. bes4 |
+  bes2. bes4 |
+  bes2. bes4 |
+  bes2 ces4 aes |
+  r4 bes ~ bes bes |
+  r4 bes ~ bes bes |  
+  bes2 c |
+  c e, |
 }
 
 bassWords = \lyricmode {

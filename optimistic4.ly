@@ -41,53 +41,53 @@ marks = {
   \time 2/2
   \tempo "Allegro" 2=120
   \key ees \major
-  s1 |
+  s2.
   \key e \major
-  s1 |
+  s1
   \key f \major
-  s1 |
+  s1
   \key ges \major
-  s1 |
+  s1
   \key g \major
-  s1 |
+  s1
   \key aes \major
-  s1 |
+  s1
   \key a \major
-  s1 |
+  s1
   \key bes \major
-  s1 |
+  s1
   \key ces \major
-  s1 |
+  s1
   \key c \major
-  s1 |
+  s1
   \key des \major
-  s1 |
+  s1
   \key d \major
-  s1 |
+  s1
   \key ees \major
-  s1 |
+  s1
   \key e \major
-  s1 |
+  s1
   \key f \major
-  s1 |
+  s1
   \key ges \major
-  s1 |
+  s1
   \key g \major
-  s1 |
+  s1
   \key aes \major
-  s1 |
+  s1
   \key a \major
-  s1 |
+  s1
   \key bes \major
-  s1 |
+  s1
   \key ces \major
-  s1 |
+  s1
   \key c \major
-  s1 |
+  s1
   \key des \major
-  s1 |
+  s1
   \key d \major
-  s1 |
+  s1
 }
 
 prefatoryMatter = {
@@ -95,21 +95,22 @@ prefatoryMatter = {
 }
 
 soprano = \relative c'' { \autoBeamOff
-  \prefatoryMatter
-  r4 ees d8 ees d4 |
-  e e dis8 e dis4 |
-  f f e8 f d4 |
-  des1 |
-  r4 g fis8 g fis4 |
-  aes aes g8 aes f4 |
-  e1 |
-  r4 f ~ f f-. |
-  r4 des fes8 fes fes4 |
-  f2 e4 f |
-  f2 ees4 f |
-  f2 d4 e |
-  ees2 d4 ees |
-  dis2 cis4 dis |
+  \prefatoryMatter  
+  r4 ees d8 ees dis4 | %ees
+  e e dis8 e e4 | %e
+  f f e8 f ees4 | %f
+  des2. ( d4 ) | %ges
+  r4 g fis8 g g4 | %g
+  aes aes g8 aes fis4 | %aes
+  e2. ( f4 ) | %a
+  r4 f ~ f fis-. | %bes
+  r4 des fes8 fes f4 | %ces
+  f2 e4 ges | %c
+  f2 ees4 fis | %des
+  eis2 d4 f | %d
+  ees2 d4 e | %ees
+  dis2 cis4 e | %e
+  d2. ( ees4 ) | %f
 }
 
 sopranoWords = \lyricmode {
@@ -117,21 +118,6 @@ sopranoWords = \lyricmode {
 
 mezzo = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 c c8 c c4 |
-  cis cis bis8 cis bis4 |
-  d d des8 des c4 |
-  beses1 |
-  r4 d cis8 d cis4 |
-  d d cis8 d c4 |
-  cis2 b |
-  bes a |
-  %r4 d4 ~ d d-. |
-  r4 ces ces8 ces ces4 |
-  d2 cis4 d |
-  c2 ces4 c |
-  b2 ais4 b |
-  c2 bes4 c |
-  b2 b4 b4 |
 }
 
 mezzoWords = \lyricmode {
@@ -139,19 +125,6 @@ mezzoWords = \lyricmode {
 
 alto = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 bes a8 bes a4 |
-  b b ais8 b ais4 |
-  bes bes bes8 bes a4 |
-  ges1 |
-  r4 b bes8 b bes4 |
-  b b ais8 b gis4 |
-  g2 gis |
-  g fis |
-  r4 aes4 aes8 aes aes4 |
-  a2 gis4 a |
-  aes2 g4 aes |
-  aes2 g4 aes |
-  g2 f4 g |
 }
 
 altoWords = \lyricmode {
@@ -161,19 +134,7 @@ tenor = \relative c'' {
   \autoBeamOff
   \prefatoryMatter
   \clef "treble_8"
-  r4 g fis8 g fis4 |
-  g g ges8 g ges4 |
-  g g g8 fis f4 |
-  c2 ees4 f |
-  r dis ~ dis e |
-  f f e8 f d4 |
-  e1 |
-  r4 d ~ d d |
-  r4 fes4 des8 des des4 |
-  c2 b4 c |
-  d2 f4 d |
-  cis2 bis4 cis |
-  aes2 g4 aes |
+  
 }
 
 tenorWords = \lyricmode {
@@ -199,6 +160,12 @@ bass = \relative c {
   ees ees |
   aes aes |
   bes bes |
+  bes2. bes4 |
+  bes2. bes4 |
+  bes2. bes4 |
+  bes2 ces4 aes |
+  r4 bes ~ bes bes |
+  r4 bes ~ bes bes |  
 }
 
 bassWords = \lyricmode {
