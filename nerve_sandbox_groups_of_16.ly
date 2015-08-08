@@ -158,7 +158,7 @@ test = {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -171,7 +171,7 @@ test = {
         \sopranoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\scorePrefatoryMatter

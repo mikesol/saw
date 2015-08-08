@@ -3614,7 +3614,7 @@ bassFinaleWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
         \sopranoBeginning
@@ -3676,7 +3676,7 @@ bassFinaleWords = \lyricmode {
         \sopranoDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
         \mezzoBeginning
@@ -3719,7 +3719,7 @@ bassFinaleWords = \lyricmode {
         \mezzoDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Mike" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
         \altoBeginning
@@ -3762,7 +3762,7 @@ bassFinaleWords = \lyricmode {
         \altoDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
         \tenorBeginning
@@ -3805,7 +3805,7 @@ bassFinaleWords = \lyricmode {
         \tenorDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Eudes" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
         \bassBeginning
@@ -3884,7 +3884,7 @@ bassFinaleWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 \midiBeginning
@@ -3948,7 +3948,7 @@ bassFinaleWords = \lyricmode {
         \sopranoDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 \midiBeginning        \mezzoBeginning
@@ -3991,7 +3991,7 @@ bassFinaleWords = \lyricmode {
         \mezzoDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Mike" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
 \midiBeginning        \altoBeginning
@@ -4034,7 +4034,7 @@ bassFinaleWords = \lyricmode {
         \altoDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
 \midiBeginning        \tenorBeginning
@@ -4077,7 +4077,7 @@ bassFinaleWords = \lyricmode {
         \tenorDenouementWords
       }
     >>
-    \new Staff \with { instrumentName = #"Eudes" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
 \midiBeginning        \bassBeginning

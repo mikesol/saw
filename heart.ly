@@ -113,7 +113,7 @@ arco = \markup \null
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -126,7 +126,7 @@ arco = \markup \null
         \sopranoWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -136,7 +136,7 @@ arco = \markup \null
         \mezzoWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Mike" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -146,7 +146,7 @@ arco = \markup \null
         \altoWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -158,7 +158,7 @@ arco = \markup \null
         \tenorWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Eudes" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -262,7 +262,7 @@ arco = \markup \null
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Marie" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -275,7 +275,7 @@ arco = \markup \null
         \sopranoWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Elsa" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -285,7 +285,7 @@ arco = \markup \null
         \mezzoWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Mike" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -295,7 +295,7 @@ arco = \markup \null
         \altoWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Ryan" %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -305,7 +305,7 @@ arco = \markup \null
         \tenorWordsFirst
       }
     >>
-    \new Staff \with { instrumentName = #"Eudes" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
 	\midiPrefatoryMatter

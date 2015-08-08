@@ -57,7 +57,7 @@ mFY = \myfinaldarkyellow
 
 \header {
   title = "Finale: Sit Ozfårs Wundrföl Wysr"
-  subtitle = \markup { for Marie Perbost \super 1}
+  subtitle = \markup { for Bitch Perbost \super 1}
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -374,7 +374,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
 }
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Marie" } <<
+    \new Staff \with { instrumentName = #"Bitch" } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\scorePrefatoryMatter
 	\sopranoFinalRepeat
@@ -389,7 +389,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \sopranoLastNoteWords
       }
     >>
-    \new Staff \with { instrumentName = #"Elsa" } <<
+    \new Staff \with { instrumentName = #"Dörty" } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\scorePrefatoryMatter
 	\mezzoFinalRepeat
@@ -400,7 +400,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \mezzoLastNoteWords
       }
     >>
-    \new Staff \with { instrumentName = #"Mike" } <<
+    \new Staff \with { instrumentName = #"Ttö" } <<
       \new Voice = "alto" { \numericTimeSignature
 	\scorePrefatoryMatter
 	\altoFinalRepeat
@@ -411,7 +411,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \altoLastNoteWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ryan" } <<
+    \new Staff \with { instrumentName = #"Fakbyd" } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\scorePrefatoryMatter
 	\tenorFinalRepeat
@@ -422,7 +422,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \tenorLastNoteWords
       }
     >>
-    \new Staff \with { instrumentName = #"Eudes" } <<
+    \new Staff \with { instrumentName = #"Wysr" } <<
       \new Voice = "bass" { \numericTimeSignature
 	\scorePrefatoryMatter
 	\bassFinalRepeat
