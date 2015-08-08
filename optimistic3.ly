@@ -127,63 +127,63 @@ marks = {
   %\set tupletFullLengthNote = ##t
   \override TupletNumber.text = \markup \smart-flat "Mi"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Mi"
+  \override TupletNumber.text = \markup \normal-text "Mi"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Fa"
+  \override TupletNumber.text = \markup \normal-text "Fa"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Sol"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Sol"
+  \override TupletNumber.text = \markup \normal-text "Sol"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "La"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "La"
+  \override TupletNumber.text = \markup \normal-text "La"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Si"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Do"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Do"
+  \override TupletNumber.text = \markup \normal-text "Do"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Ré"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Ré"
+  \override TupletNumber.text = \markup \normal-text "Ré"
   \times 1/1 { s2. }
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Mi"
+  \override TupletNumber.text = \markup \normal-text "Mi"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Fa"
+  \override TupletNumber.text = \markup \normal-text "Fa"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Sol"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Sol"
+  \override TupletNumber.text = \markup \normal-text "Sol"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "La"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "La"
+  \override TupletNumber.text = \markup \normal-text "La"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Si"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Do"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Do"
+  \override TupletNumber.text = \markup \normal-text "Do"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Ré"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Ré"
+  \override TupletNumber.text = \markup \normal-text "Ré"
   \times 1/1 { s2. }
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Mi"
+  \override TupletNumber.text = \markup \normal-text "Mi"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Fa"
+  \override TupletNumber.text = \markup \normal-text "Fa"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Sol"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "Sol"
+  \override TupletNumber.text = \markup \normal-text "Sol"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "La"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup "La"
+  \override TupletNumber.text = \markup \normal-text "La"
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Si"
   \times 1/1 { s2. }

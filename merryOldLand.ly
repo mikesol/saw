@@ -1445,11 +1445,12 @@ bassWords = \lyricmode {
       }
     >>
     \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
-} <<
+}
+ <<
       \new Voice = "alto" { << { \numericTimeSignature
         \alto
       } {
-        \nothing
+        \marks
       } >> }
       \new Lyrics \lyricsto "alto" {
         \altoWords
