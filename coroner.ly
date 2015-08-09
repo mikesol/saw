@@ -50,8 +50,12 @@ marksCoronerFirst = {
   \tempo "Allegro" 4=120
   \partial 8 s8
   %%%%%%%
-  s2*7
-  s4. \bar "||"
+  s2*8
+  \time 3/4
+  s2.*6 |
+  \time 2/4
+  s2*8 |
+  s2*8
 }
 
 prefatoryMatterCoronerFirst = {
@@ -67,26 +71,57 @@ sopranoCoronerFirst = \relative c' { \prefatoryMatterCoronerFirst
   R2 |
   r4. fis8 |
   gis a b a |
-  b cis d b |
-  a fis e d |
-  b' g e b' |
-  a fis g bes, |
-  e fis d %endOne
+  b cis b a |
+  gis fis e cis' |
+  b a gis b |
+  a gis fis a |
+  gis fis e %{endOne%} a, |
+  d cis d e f g |
+  a d des c ces bes |
+  a gis a f e d |
+  bes' g e bes' a g |
+  f e f a, e' f |
+  d2 r4 |
+  r8 a' d cis |
+  b4 r |
+  r8 b, e d |
+  cis4 r |
+  r8 a' fis' e |
+  d4 r |
+  r8 d, g fis |
+  e fis fis r |
 }
 
-sopranoCoronerFirstWords = \secondPart
+sopranoCoronerFirstWords = {
+  \secondPart
+  \coronerWords
+}
 
 
 mezzoCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   r8 |
   R2 |
   r4. dis8 |
-  e cis gis' e |
-  fis fis fis fis |
-  fis d cis b |
-  e e c ees |
-  e dis e bes |
-  d cis b %endOne
+  e fis e a |
+  gis fis gis dis |
+  e cis b e |
+  e fis e eis |
+  fis e dis e |
+  e dis e %{endOne%} r |
+  r8 a, d cis d e |
+  f g a g d e |
+  f e f4 a ~ |
+  a2. ~ |
+  a2. ~ |
+  a8 r e f d r |
+  R2 |
+  r8 fis b a |
+  g4 r |
+  r8 e a g |
+  fis4 r |
+  r8 d a' g |
+  fis4 r |
+  R2 |
 }
 
 mezzoCoronerFirstWords = \secondPart
@@ -96,12 +131,34 @@ altoCoronerFirst = \relative c' {
   r8 |
   R2 |
   r4. b8 |
-  b cis e cis |
-  dis d e ees |
-  d bes a gis |
-  cis d a b |
-  c b b g |
-  b bes a %endOne
+  b cis e e |
+  e dis e b |
+  b cis gis cis |
+  e cis b cis |
+  cis b b cis |
+  b b b %{endOne%} r |
+  R2. |
+  R2. |
+  r2 fis'4 ~ |
+  fis g d8 e |
+  d8 cis d4 cis8 d |
+  a2 r8 a8 |
+  d cis d ais |
+  b ais b dis |
+  e d cis b |
+  a cis d bes |
+  a fis a fis' |
+  fis e d a |
+  b g b cis |
+  e d d a |
+  bes d f a |
+  g e c bes |
+  a c e g |
+  f d bes a |
+  g bes d f |
+  e c a g |
+  fis a c ees |
+  d e fis d |
 }
 
 altoCoronerFirstWords = \secondPart
@@ -111,12 +168,26 @@ tenorCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   a8 |
   d cis d e |
   fis e g a, |
-  gis e gis fis |
-  a gis c c |
-  b g fis f |
-  a ais fis f |
-  e a g e |
-  g g fis %endOne
+  gis fis gis cis |
+  b a gis fis |
+  e fis gis a |
+  b cis gis gis |
+  a b fis fis |
+  gis a gis %{endOne%} r |
+  r2 r8 a, |
+  d e f e f g |
+  a d des c bes a |
+  g a bes g f e |
+  f g a g f a, |
+  e' f d2 |
+  r4. fis8 |
+  b, cis d4 |
+  r4. e8 |
+  a g fis4 |
+  r4. a8 |
+  c b a4 |
+  r4. a8
+  fis g a4 |
 }
 
 tenorCoronerFirstWords = \coronerWords
@@ -127,11 +198,24 @@ bassCoronerFirst = \relative c {   \prefatoryMatterCoronerFirst
   R2 |
   r4. b8 |
   e cis b cis |
-  b e a, d |
-  g, d' a b |
-  fis cis' b d |
-  g, a b cis |
-  d a d %endOne
+  gis fis gis a |
+  b a gis fis |
+  gis a b gis |
+  fis gis a fis |
+  b b e %{endOne%} r |
+  R2. |
+  r2 r8 a, |
+  d4-. r d4 ~ |
+  d g,2 |
+  d'2 a4 ~ |
+  a4 d4. r8 |
+  R2 |
+  r4. fis8 |
+  e fis g4 |
+  r4. cis,8 |
+  fis e d4 |
+  r4. dis8 |
+  e d cis4 |
 }
 
 bassCoronerFirstWords = \secondPart
@@ -337,7 +421,7 @@ bassCoronerFirstWords = \secondPart
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% second
-
+%{
 marksCoronerSecond = {
   \time 2/4
   \tempo "Adagio" 2=44
@@ -492,7 +576,7 @@ bassCoronerSecondWords = \coronerWords
   }
 }
 
-%{
+
 %%% piano redux
 #(set-global-staff-size 20)
 
@@ -541,7 +625,7 @@ bassCoronerSecondWords = \coronerWords
     }
   }
 }
-%}
+
 %%% MIDI
 
 \score {
@@ -596,3 +680,4 @@ bassCoronerSecondWords = \coronerWords
   >>
   \midi {}
 }
+%}
