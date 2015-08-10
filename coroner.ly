@@ -119,8 +119,8 @@ mezzoCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   g4 r |
   r8 e a g |
   fis4 r |
-  r8 d a' g |
-  fis4 r |
+  r8 fis b a |
+  g4 r |
   R2 |
 }
 
@@ -131,11 +131,11 @@ altoCoronerFirst = \relative c' {
   r8 |
   R2 |
   r4. b8 |
-  b cis e e |
+  b cis b e |
   e dis e b |
   b cis gis cis |
   e cis b cis |
-  cis b b cis |
+  cis b cis a |
   b b b %{endOne%} r |
   R2. |
   R2. |
@@ -146,10 +146,10 @@ altoCoronerFirst = \relative c' {
   d cis d ais |
   b ais b dis |
   e d cis b |
-  a cis d bes |
+  a cis d b |
   a fis a fis' |
-  fis e d a |
-  b g b cis |
+  fis e d c |
+  b a b cis |
   e d d a |
   bes d f a |
   g e c bes |
@@ -184,10 +184,10 @@ tenorCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   b, cis d4 |
   r4. e8 |
   a g fis4 |
+  r4. ais8 |
+  d cis b4 |
   r4. a8 |
-  c b a4 |
-  r4. a8
-  fis g a4 |
+  g a a4 |
 }
 
 tenorCoronerFirstWords = \coronerWords
@@ -197,11 +197,11 @@ bassCoronerFirst = \relative c {   \prefatoryMatterCoronerFirst
   r8 |
   R2 |
   r4. b8 |
-  e cis b cis |
+  e fis, gis a |
   gis fis gis a |
   b a gis fis |
   gis a b gis |
-  fis gis a fis |
+  fis gis a cis |
   b b e %{endOne%} r |
   R2. |
   r2 r8 a, |
@@ -212,10 +212,11 @@ bassCoronerFirst = \relative c {   \prefatoryMatterCoronerFirst
   R2 |
   r4. fis8 |
   e fis g4 |
-  r4. cis,8 |
+  r4. e8 |
   fis e d4 |
   r4. dis8 |
-  e d cis4 |
+  g fis e4 ~ |
+  e8 a, d4 |
 }
 
 bassCoronerFirstWords = \secondPart
