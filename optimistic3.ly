@@ -29,7 +29,7 @@ agogic = #(make-articulation "downbow")
 
 \header {
   title = "Optimistic Voices"
-  %subtitle = \markup { for Ahti Sonninen }
+  %subtitle = \markup { for John Oswald }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

@@ -13,6 +13,12 @@
 \include "shameless-copying.ly"
 \include "vibster.ly"
 
+#(define (position-hack grob)
+     (let* ((pos (ly:tuplet-bracket::calc-positions grob))
+            (mx (max (car pos) (cdr pos))))
+       (cons mx mx)))
+
+
 #(define-markup-command (textSharp layout props) ()
   (interpret-markup layout props (markup #:raise 1 #:small #:sharp)))
 
@@ -467,6 +473,20 @@ unMonoShift = {
   (set-object-property! symbol 'backend-type? type?)
   (set-object-property! symbol 'backend-doc description)
   symbol)
+
+#(define (kill-second-spanner grob)
+   (let* (
+          ;; have we been split?
+          (orig (ly:grob-original grob))
+
+          ;; if yes, get the split pieces (our siblings)
+          (siblings (if (ly:grob? orig)
+                        (ly:spanner-broken-into orig)
+                        '())))
+
+     (if (and (>= (length siblings) 2)
+              (eq? (car (last-pair siblings)) grob))
+         (ly:grob-suicide! grob))))
 
 %%%%#(define-grob-property 'buddies list? "List of grobs")
 %%%%#(define-grob-property 'my-name symbol? "List of grobs")
