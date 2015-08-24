@@ -199,7 +199,7 @@ prefatoryMatterComeout = {
 }
 
 %\times 15/9 { b4 b4 e4 cis4. b2. }
-sopranoComeout = \relative c'' { \prefatoryMatterComeout
+altoComeout = \relative c'' { \prefatoryMatterComeout
   r4 |
   R2.*13 |
   gis4^\mf gis eis |
@@ -233,13 +233,13 @@ sopranoComeout = \relative c'' { \prefatoryMatterComeout
       \bendHack \bendInto gis4-\bendAfter #-2 \bendInto gis4-\bendAfter #-2 \bendInto gis8-\bendAfter #-2 ~ gis8 } 
     a4^\mp a |
   fis r2 |
-  \times 7/12 { \repeat unfold 5 { \bendInto b2^\p-\bendAfter #-2 } \bendInto b4-\bendAfter #-2 ~ b } r2 |
+  \times 7/12 { \bendInto b2^\p-\bendAfter #-2 \repeat unfold 4 { \bendInto b2-\bendAfter #-2 } \bendInto b4-\bendAfter #-2 ~ b } r2 |
   R2. |
   r4 dis,^\p dis |
   b2^\fermata 
 }
 %%132
-sopranoComeoutWords = \lyricmode {
+altoComeoutWords = \lyricmode {
   \sheBringsUsGoodNews
   \sheBringsUs
   \sheBringsUsGoodNews
@@ -281,9 +281,9 @@ mezzoComeout = \relative c'' {   \prefatoryMatterComeout
   R2.\! |
   << { gis4 gis eis } { \tptext #3 #"delayed" } >> |
   fis \tupFrac \times 9/8 { gis4 \bendHack \bendInto cis,^\mp-\bendAfter #-2
-  \bendHack \bendInto cis-\bendAfter #-2 \bendInto cis-\bendAfter #-2 } a'8^\mf ~ |
-  a a4. fis4 ~ |
-  fis8 g4. \tupFrac \override TupletBracket #'direction = #UP \times 11/12 { \bendInto a4^\>-\bendAfter #-2 \repeat unfold 11 { \bendInto a4-\bendAfter #-2 } }
+  \bendHack \bendInto cis-\bendAfter #-2 \bendInto cis-\bendAfter #-2 } r8 |
+  a'4.^\mf a4. |
+  fis4. g8 \tupFrac \override TupletBracket #'direction = #UP \times 11/12 { \bendInto a4^\>-\bendAfter #-2 \repeat unfold 11 { \bendInto a4-\bendAfter #-2 } }
      \tupFrac \tupFrac \override TupletBracket #'direction = #UP \times 8/11 { \bendInto b4.^\p^\<-\bendAfter #-2 \bendInto b4.-\bendAfter #-2  \repeat unfold 8 { \bendInto b4-\bendAfter #-2 } } |
   g4 g e |
   f4^\f^\cresc g2 |
@@ -337,7 +337,7 @@ mezzoComeoutWords = \lyricmode {
   \repeat unfold 5 \sshe
 }
 
-altoComeout = \relative c' {
+sopranoComeout = \relative c' {
   \prefatoryMatterComeout
   r4 |
   r2 fis4^\mp |
@@ -396,7 +396,7 @@ altoComeout = \relative c' {
   r2
 }
 
-altoComeoutWords = \lyricmode {
+sopranoComeoutWords = \lyricmode {
   \sheBringsUs
   \sheBringsUs
   \sheBringsUsGoodNews

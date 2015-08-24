@@ -13,7 +13,7 @@
   ragged-last-bottom = ##f
   %max-systems-per-page = #2
 }
-
+ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
 #(ly:set-option 'point-and-click #f)
 
 legero = \markup \italic "legero"
@@ -32,10 +32,10 @@ marksLullaby = {
   \time 2/4
   \tempo "Adagio" 4=40
   s2*11 |
-  \time 9/16
+  \time 11/16
   s16 \bar "!"
   s4 \bar "!"
-  s4
+  s4.
   \time 2/4
   s2*5 \bar "|."
 }
@@ -60,13 +60,15 @@ sopranoLullaby = \relative c' { \autoBeamOff
   b4 ~ b16 r ees8 |
   d d b'4 |
   %\time 9/16
-  ees16 b,8 ees des c16 r |
+  ees16 b,8 ees des \ntrill c4\startTrillSpan |
   %\time 6/16
   %\time 2/4
-  b'4 \glissando e4 |
+  b'4\stopTrillSpan \glissando e4 |
   %\time 2/4
-  d8 des c b |
-  des,4 fis' |
+  %d8 des c b |
+  %des,4 fis' |
+  d8 des c e, |
+  des4 fis' |
   dis,4 fis | %%% DOM
   g8 ( \glissando aes4. ) | %%%ton in sop, ab everywhere else, slides up
 }
@@ -98,10 +100,12 @@ mezzoLullaby = \relative c' { \autoBeamOff
   ais8 b a4 |
   gis4 ~ gis16 r c8 |
   b b gis'4 |
-  c16 gis,8 c bes8 a16 r |
-  gis'4 \glissando c |
-  b8 bes a gis |
-  bes,4 d' |
+  c16 gis,8 c bes8 \ntrill a4\startTrillSpan |
+  gis'4\stopTrillSpan \glissando c |
+  %b8 bes a gis |
+  %bes,4 d' |
+  b8 bes a des, |
+  bes4 d' |
   b, dis |
   f2 |
 }
@@ -133,10 +137,12 @@ altoLullaby = \relative c' { \autoBeamOff
   gis gis g4 |
   fis4 ~ fis16 r bes8 |
   a a fis'4 |
-  bes16 fis,8 bes aes g16 r |
-  fis'4 \glissando a |
-  a8 aes g fis |
-  aes,4 b' |
+  bes16 fis,8 bes aes \ntrill g4\startTrillSpan |
+  fis'4\stopTrillSpan \glissando a |
+  %a8 aes g fis |
+  %aes,4 b' |
+  a8 aes g ces, |
+  aes4 b' |
   gis, cis |
   ees2 |
 }
@@ -170,10 +176,12 @@ tenorLullaby = \relative c' {
   eis fis e4 |
   dis ~ dis16 r g8 |
   fis fis dis'4 | 
-  g16 dis,8 g f e16 r |
-  d'4 \glissando g |
-  fis8 f e dis |
-  f,4 a' |
+  g16 dis,8 g f \ntrill e4\startTrillSpan |
+  d'4\stopTrillSpan \glissando g |
+  %fis8 f e dis |
+  %f,4 a' |
+  fis8 f e aes, |
+  f4 a' |
   fis, a | 
   c2 |
 }

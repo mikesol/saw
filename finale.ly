@@ -65,14 +65,226 @@ mFY = \myfinaldarkyellow
 
 prefatoryMatter = {
   \autoBeamOff
+  \key aes \major
 }
 
-scorePrefatoryMatter = {
-  \prefatoryMatter
+marksChorale = {
+  \tempo "Adagio" 4=68
+  \time 4/4
+  \partial 4
+  s4 |
+  s1 |
 }
 
-midiPrefatoryMatter = {
-  \prefatoryMatter
+sopranoChorale = \relative c'' {
+  bes4 |
+  c aes ees f |
+  aes c2 c4 |
+  c bes8 aes g4 aes8 bes |
+  aes2 r4 e |
+  f aes c aes |
+  g4 aes8 g f4 g |
+  g aes8 bes bes4 g |
+  c4 aes bes g |
+  aes aes8 g f4 f8 g |
+  aes4 bes c g |
+  aes bes ges bes |
+  aes ges f g |
+  aes f aes bes |
+  c bes aes des |
+  aes1 ~ |
+  aes2 r4 bes |
+  bes4 bes8 bes bes4 bes8 bes |
+  ees4 bes bes4. r8 |
+  des4 c8 bes aes4 bes8 bes |
+  bes2 bes |
+  c4 aes ees f |
+  g4 aes2 des4 |
+  c4 c8 c bes4 c8 bes |
+  aes2.
+}
+
+sopranoChoraleWords = \lyricmode {
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he is a whiz of a wiz,
+  If ev -- er a wiz there
+  wiz there was.
+  If ev -- er, oh ev -- er a wiz there was,
+  The Wi -- zard %{of%} Oz is one be -- cause
+  be -- cause be -- cause be -- cause be -- cause be -- cause
+  be -- cause of the won -- der -- ful things he does.
+  Won -- der -- ful things that he does.
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.  
+}
+
+mezzoChorale = \relative c' {
+  r4 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+}
+
+mezzoChoraleWords = \lyricmode {
+}
+
+altoChorale = \relative c' {
+  des4 |
+  c c c des |
+  ees f2 ees4 |
+  des4 ees8 f ees4 ees8 des |
+  c4 des c c |
+  c f aes ees |
+  ees4 ees8 ees c4 f |
+  ees ees8 f ees4 ees |
+  f2 ( ees4 ) ees |
+  f4 f8 ees des4 bes |
+  c4 ees c ees |
+  des des8 c bes4 des |
+  des4 bes des c |
+  c c c c |
+  f g g ges |
+  f ges f ees |
+  f ges aes aes |
+  g4 f g aes |
+  bes aes g ( aes ) |
+  bes4 aes8 g f4 g8 f |
+  g2 g |
+  ees4 c c des |
+  ees c des f |
+  aes4 aes8 aes g4 aes8 g |
+  f2 ( ees4 )
+}
+
+altoChoraleWords = \lyricmode {
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.
+  of Oz.
+  We hear he is a whiz of a wiz,
+  If ev -- er a wiz there was.
+  If ev -- er, oh ev -- er %{a%} wiz there was,
+  The Wi -- zard of Oz is one be -- cause
+  be -- cause be -- cause be -- cause be -- cause be -- cause
+  be -- cause be -- cause be -- cause
+  be -- cause of won -- der things he does.
+  Won -- der -- ful things that he does.
+  We're off to see the Wi -- Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.  
+}
+
+tenorChorale = \relative c' {
+  \clef "treble_8"
+  g4 |
+  aes aes aes aes |
+  aes aes2 ges4 |
+  f aes8 c bes4 c8 g |
+  aes2 r4 c |
+  aes c ees aes, |
+  bes4 c8 bes aes4 b |
+  bes aes8 g c4 c |
+  des2 ( g,4 ) g |
+  f aes8 bes aes4 g |
+  aes4 g aes g |
+  bes f ges ges |
+  f ges aes bes |
+  aes aes aes aes |
+  des c c bes |
+  c bes des bes |
+  des ees f f |
+  ees d ees f |
+  g ees ees ( f ) |
+  e4 f8 des ees4 ees8 d |
+  ees8 bes g bes g4 g |
+  aes4 aes aes aes |
+  bes aes2 bes4 |
+  ees4 ees8 ees des4 ees8 des |
+  des4 ( bes c )
+}
+
+tenorChoraleWords = \lyricmode {
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he is a whiz of a wiz,
+  If ev -- er a wiz there was.
+  If ev -- er, oh ev -- er %{a%} wiz there was,
+  The Wi -- zard %{of%} Oz is one be -- cause
+  be -- cause be -- cause be -- cause be -- cause be -- cause
+  be -- cause be -- cause be -- cause
+  be -- cause of won -- der things he does.
+  Won -- der -- ful things that he does.
+  We're
+  off to see. We're
+  off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.  
+}
+
+bassChorale = \relative c {
+  \clef "bass"
+  ees4 |
+  aes,4 c ees des |
+  c f f, a |
+  bes c8 des ees4 ees,8 ees |
+  f4 g aes g |
+  f f' ees c |
+  bes ees d g |
+  c,4 c8 c f4 a, |
+  bes2 ( ees4 ) ees |
+  des4 c8 c bes4 ees |
+  c4 bes aes ees' |
+  ges bes, ees aes, |
+  des ees f e |
+  f f e e |
+  ees e f aes, |
+  des ees f ges |
+  aes bes c d, |
+  ees aes g f |
+  ees c' bes ( aes ) |
+  g4 aes8 bes c4 bes8 bes, |
+  ees2 des8 c bes ees |
+  aes,4 c ees des |
+  c f e des |
+  ees4 ees8 ees ees4 ees8 ees |
+  f4 ( g aes )
+}
+
+bassChoraleWords = \lyricmode {
+  We're off to see the Wi -- zard.
+  Wiz
+  The Won -- der -- ful Wi -- zard of Oz.
+  of Oz.
+  We hear he is a whiz of
+  wiz,
+  If ev -- er a wiz there was.
+  If ev -- er, oh ev -- er %{a%} wiz there was,
+  The Wi -- zard %{of%} Oz is one be -- cause
+  be -- cause be -- cause be -- cause be -- cause be -- cause
+  be -- cause be -- cause be -- cause
+  be -- cause of won -- der things he does.
+  Won -- der -- ful things that he does.
+  does. We're off to
+  off to see the Wi -- Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.  
 }
 
 marksFinalRepeat = {
@@ -376,61 +588,72 @@ bassLastNoteDraftTwoWords = \lyricmode {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = #"Bitch" } <<
       \new Voice = "soprano" { << { \numericTimeSignature
-	\scorePrefatoryMatter
-	\sopranoFinalRepeat
-        \sopranoLastNote
+	\prefatoryMatter
+	\sopranoChorale
+	%\sopranoFinalRepeat
+        %\sopranoLastNote
       } {
-	\scorePrefatoryMatter
-	\marksFinalRepeat
-        \marksLastNote
+	\prefatoryMatter
+	\marksChorale
+	%\marksFinalRepeat
+        %\marksLastNote
       } >> }
-      \lyricsto "soprano" \new Lyrics {
-	\sopranoFinalRepeatWords
-        \sopranoLastNoteWords
+      \new Lyrics \lyricsto "soprano" {
+	\sopranoChoraleWords
+	%\sopranoFinalRepeatWords
+        %\sopranoLastNoteWords
       }
     >>
     \new Staff \with { instrumentName = #"Dörty" } <<
       \new Voice = "mezzo" { \numericTimeSignature
-	\scorePrefatoryMatter
-	\mezzoFinalRepeat
-        \mezzoLastNote
+	\prefatoryMatter
+	\mezzoChorale
+	%\mezzoFinalRepeat
+        %\mezzoLastNote
       }
-      \lyricsto "mezzo" \new Lyrics {
-	\mezzoFinalRepeatWords
-        \mezzoLastNoteWords
+      \new Lyrics \lyricsto "mezzo" {
+	\mezzoChoraleWords
+	%\mezzoFinalRepeatWords
+        %\mezzoLastNoteWords
       }
     >>
     \new Staff \with { instrumentName = #"Ttö" } <<
       \new Voice = "alto" { \numericTimeSignature
-	\scorePrefatoryMatter
-	\altoFinalRepeat
-        \altoLastNote
+	\prefatoryMatter
+	\altoChorale
+	%\altoFinalRepeat
+        %\altoLastNote
       }
-      \lyricsto "alto" \new Lyrics {
-	\altoFinalRepeatWords
-        \altoLastNoteWords
+      \new Lyrics \lyricsto "alto" {
+	\altoChoraleWords
+	%\altoFinalRepeatWords
+        %\altoLastNoteWords
       }
     >>
     \new Staff \with { instrumentName = #"Fakbyd" } <<
       \new Voice = "tenor" { \numericTimeSignature
-	\scorePrefatoryMatter
-	\tenorFinalRepeat
-        \tenorLastNote
+	\prefatoryMatter
+	\tenorChorale
+	%\tenorFinalRepeat
+        %\tenorLastNote
       }
-      \lyricsto "tenor" \new Lyrics {
-	\tenorFinalRepeatWords
-        \tenorLastNoteWords
+      \new Lyrics \lyricsto "tenor" {
+	\tenorChoraleWords
+	%\tenorFinalRepeatWords
+        %\tenorLastNoteWords
       }
     >>
     \new Staff \with { instrumentName = #"Wysr" } <<
       \new Voice = "bass" { \numericTimeSignature
-	\scorePrefatoryMatter
-	\bassFinalRepeat
-        \bassLastNote
+	\prefatoryMatter
+	\bassChorale
+	%\bassFinalRepeat
+        %\bassLastNote
       }
-      \lyricsto "bass" \new Lyrics {
-	\bassFinalRepeatWords
-        \bassLastNoteWords
+      \new Lyrics \lyricsto "bass" {
+	\bassChoraleWords
+	%\bassFinalRepeatWords
+        %\bassLastNoteWords
       }
     >>
   >>
