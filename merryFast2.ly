@@ -85,9 +85,9 @@ alto = \relative c'' {
   r2. gis,4 ~ |
   gis2 b4 cis |
   e4 e2. |
-  d4 r r2 |
-  r2. \times 2/3 { gis,8 b cis } |
-  e8 d4 b8 ~ b eis, fis gis |
+  d2 r2 |
+  r2 r8 gis,8 b cis |
+  e8 d4 b8 ~ b e, fis gis |
   b4 b ~ b8 e, fis gis |
   ais8 a4 gis8 ~ gis ais, b cis |
   e4 e d8 b gis r |
@@ -95,32 +95,50 @@ alto = \relative c'' {
   \times 4/5 { b4 bes a f e ~ } |
   e
     \clef treble
-    r4 r8 e'''' ~ e4 |
+    r4 r4 e''''4 ~  |
+  e-\bendAfter #-3 r
   \clef "treble_8"
-  %r8 g,,4 e8 ~ e gis4 e8 ~ |
-  %e a4 e8 ~ e ais4 e8 |
-  r8 \times 15/16 { g,,4 e gis e a e ais e } |
-  b'4 b2 a8 b |
+  % 3 3 3 2 = 11
+  \tupFrac
+  \times 9/11 { g,,2 e4 gis2 e4 a2 e4 ais2 }
+      b4 ~ |
+  b8 b ~ b4 ~ b4 a8 b |
   gis e cis b gis a b cis |
   e4 fis r cis' ~ |
-  cis b8 cis gis e cis b |
-  gis'4 r r e'4 ~ |
-  e8 cis4. ~ cis8 b8 ~ b
-  dis,8 e fis gis b d cis4 b8 ~  |
-  b gis fis gis b4 a8 b |
-  gis e cis b e4 fis |
-  %{\times 32/35 fis4 %} gis4 a ais
-    b gis a ais %|
-  b%{8%} e8 d8 b gis e d b %e |
-  d e g gis e cis b e f %{}%} | 
-  %g gis a ais b gis e f |
-  fis4
-  %b gis fis gis b4 b |
-  %a8 b gis e g fis4 e8 ~ |
-  %e cis b cis e4 fis ~ |
-  %fis8 eis fis g \times 2/3 { gis4 e cis } |
-  %\times 2/3 { b4 gis a } b8 cis e f |
+  cis b gis e |
+  \tupFrac
+  \times 8/7 {
+    r2
+    e'4. r8
+    cis4. r8 
+    \times 2/3 { b2 dis,4 }
+    \times 2/3 { e gis b }
+    d8 cis4 b4
+     gis8 fis gis } |
+  b4 b2 a8 b |
+  gis e d b gis a b cis |
+  e4 fis r8 cis'4 b8 ~ |
+  b gis4 e8 ~ e r r4 |
   %fis
+  %fis2 r4 ^2 _4 ^2 _4 ^2 _4 ^2 _4 &4 &4 &4 where & is chromatic descent to target
+  % just thinking...
+  % no he is a won -- der ba -- by have -- n't you heard
+  % 16
+  \tupFrac
+  \times 8/9 { fis2 r4 gis2 g4 fis2 cis4 fis2 gis4 a2 ais4 dis4 d cis } |
+  % and then why not...gumshoe!
+  % b4 b a a gis gis8 fis ~ fis b4 \glissando b, b' \glissando b, b' \glissando b, b'8 cis b a gis fis e
+  % but above, only do two slides, slower and can have complete bottom, so 2 in the space of three...
+  % in theory shouldn't have too much of the slow jerky stuff - need to field test
+  b4 b a a |
+  gis gis8 fis ~ fis4 \tupFrac \times 3/4 { b2 \glissando
+      b,4 r b'2 \glissando b,4 r } b'8 cis b a gis fis |
+  gis4 r r2 |
+  r4. ais8 ~ ais b a b |
+  \tupFrac
+  \times 8/11 { e4 gis, a ais b %{%} e gis, a ais b %{%} e b d cis b fisis %{%} gis b gis e b e } |
+  r8 b'4 cis8 b gis fis b, |
+  gis'8 b gis \tupFrac \times 5/8 { e4 a gis fis } |
 }
 
 altoWords = \lyricmode {
@@ -142,8 +160,11 @@ altoWords = \lyricmode {
   % out of time
   Wiz of Oz
   You know that he's one be -- cause
-  be -- cause of all the ra -- di -- a -- ting po -- wer that he's send -- ing
-  Ne -- ver end -- ing love
+  be -- cause of all the heal -- in' ra -- di -- a -- ting po -- wer that he's send -- ing
+  Ne -- ver end -- ing %{ love = arrival %} love
+  Gosh he is a won -- der ba -- by have -- n't you heard
+  The wi -- zard flipped the bird dash -- ing smash -- ing
+  would -- n't e -- ver wan -- na stop
 }
 
 tenor = \relative c' {
