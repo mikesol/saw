@@ -90,6 +90,9 @@ unfoldSwingChange =
 #(define (longdize d)
   (ly:make-duration 2 1 10 9))
 
+#(define (longddize d)
+  (ly:make-duration 1 2 22 21))
+
 #(define (durize music durfun)
    (let ((es (ly:music-property music 'elements))
          (e (ly:music-property music 'element))
@@ -127,3 +130,14 @@ longDottedSwung =
 #(define-music-function (parser location m)
    (ly:music?)
    (durize m longdize))
+
+longDottedDottedSwung =
+#(define-music-function (parser location m)
+   (ly:music?)
+   (durize m longddize))
+
+lo = #(define-music-function(parser location m)(ly:music?) #{ \longSwung $m #})
+sh = #(define-music-function(parser location m)(ly:music?) #{ \shortSwung $m #})
+lod = #(define-music-function(parser location m)(ly:music?) #{ \longDottedSwung $m #})
+lodd = #(define-music-function(parser location m)(ly:music?) #{ \longDottedDottedSwung $m #})
+ssh = #(define-music-function(parser location m)(ly:music?) #{ \shortShortSwung $m #})

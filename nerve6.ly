@@ -1,9 +1,5 @@
 \version "2.19.0"
 \include "defs-devel.ly"
-lo = #(define-music-function(parser location m)(ly:music?) #{ \longSwung $m #})
-sh = #(define-music-function(parser location m)(ly:music?) #{ \shortSwung $m #})
-lod = #(define-music-function(parser location m)(ly:music?) #{ \longDottedSwung $m #})
-ssh = #(define-music-function(parser location m)(ly:music?) #{ \shortShortSwung $m #})
 %lo = { }
 %sh = { }
 %lod = { }
