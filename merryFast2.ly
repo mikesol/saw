@@ -410,49 +410,49 @@ compWords = \lyricmode {
 bass = \relative c, {
   \prefatoryMatter
   \clef "bass"
-  R1*3 |
-  R1*24 |
+  R1*3 | \barNumberCheck #4
+  R1*24 | \barNumberCheck #28
   e4 r gis r |
   a r ais r |
   b r e r |
-  cis r b r |
+  cis r b r | \barNumberCheck #32
   gis r e r |
   fis r a r |
   gis r cis r |
-  b r gis r |
+  b r gis r | \barNumberCheck #36
   e r gis r |
   fis r ais r |
   cis r dis r |
-  e r dis r |
+  e r dis r | \barNumberCheck #40
   cis r ais r |
   b r cis r |
   dis r e r |
-  fis r dis r |
+  fis r dis r | \barNumberCheck #44
   cis r b r |
   gis r e r |
   fis r g r |
-  gis r cis r |
-  b r a r |
-  gis r b r |
-  fis r a r |
-  gis r e r |
-  cis' r b r |
-  e, r gis r |
-  fis r a r |
-  gis r g r |
-  fis r a r |
-  gis r cis r |
+  gis r cis r | \barNumberCheck #48
   b r a r |
   gis r e r |
   fis r a r |
-  gis r e r |
+  gis r b r | \barNumberCheck #52
+  a r fis r |
+  e r gis r |
   fis r a r |
-  gis r b r |
+  gis r g r | \barNumberCheck #56
+  fis r a r |
+  gis r d' r |
+  cis r c r |
+  b r gis r | \barNumberCheck #60
   a r cis r |
   b r gis r |
-  a r fis r |
-  gis r b r |
-  e, r f r |
+  fis r a r |
+  gis r b r | \barNumberCheck #64
+  a r cis r |
+  b r a r |
+  gis r e' r |
+  cis r b r | \barNumberCheck #68
+  gis r g r |
   fis r ais r |
   gis r g r |
   fis r cis' r |
@@ -460,8 +460,8 @@ bass = \relative c, {
   ais r fis r |
   e r gis r |
   fis r cis' r |
-  gis r fis r |
-  e fis gis e |
+  a r b r |
+  e, fis gis e |
   fis cis' b a |
   gis a b gis |
   a e' cis c |
@@ -469,6 +469,22 @@ bass = \relative c, {
   fis cis' b ais |
   b e, gis fis |
   e gis a b |
+  e,4 r gis r |
+  fis r a r |
+  gis r d' r |
+  cis r c r |
+  b r bes r |
+  a r g r |
+  gis r b r |
+  a r fis r |
+  gis r g r |
+  fis r a r |
+  gis r b r |
+  a r ais r |
+  b r gis r |
+  fis r a r |
+  gis r cis r |
+  b r r2 |
 }
 
 bassWords = \lyricmode {
@@ -550,7 +566,7 @@ bassWords = \lyricmode {
 
 \score {
   \transpose c c \new ChoirStaff <<
-    \new DrumStaff \drummode { \repeat unfold 90 { r4 hhc r4 hhc } }
+    \new DrumStaff \drummode { \repeat unfold 100 { r4 hhc r4 hhc } }
     \new Staff \with { midiInstrument = #"tenor sax" instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
@@ -588,8 +604,12 @@ bassWords = \lyricmode {
 nothingSecondPart = {}
 
 marksSecondPart = {
+  
   \time 2/2
+  \once \override Score.TimeSignature.stencil = ##f
+  \set Score.currentBarNumber = #101
   \tempo "Freely" 2=60
+  \bar ""
   s1*6 |
   \time 4/4
   \tempo "Slow" 4=40
@@ -611,12 +631,11 @@ sopranoSecondPart = \relative c' {
   R1 |
   R1 |
   \lo r8 \sh e, \lo fis \sh cis' b4 a |
-  \times 2/3 { d,8 d r } r4 \times 2/3 { r4 c' c } |
-  \times 2/3 { b b b } \times 2/3 { b r4 } a4
-  %r2 \lo r8 \sh gis \lo a \sh e' |
-  %\lod d4. \sh cis8 \lo b \sh gis \times 2/3 { r8 gis r } |
-  %\lo r8 \sh e'8 ~ e4 ~ e2 ~ |
-  %e2.. r8 |
+  \times 2/3 { d,8 d r } \lo r \sh fis \times 2/3 { r8 c'4 } \times 2/3 { r8 c4 } |
+  \times 2/3 { b8 b b } \times 2/3 { b r4 } \times 2/3 { r8 a8 a } \times 2/3 { r dis,4 } |
+  \lo d8 \sh e \lo e \sh b \lo d b4 \sh cis8 |
+  \lo e8 \sh fis8 \lo e \sh d \lo ais' \sh a \times 2/3 { gis8 g e }
+  dis4 d \lo cis8 \sh g' \lo fis \sh f8 |
 }
 
 sopranoWordsSecondPart = \lyricmode {
@@ -626,7 +645,14 @@ sopranoWordsSecondPart = \lyricmode {
   wiz -- ard
   He is a
   Wi -- zard
-  ev -- er
+  ev -- er a
+  Wi -- zard
+  ev -- er, oh ev
+  Wi -- zard
+  We're off to see the Wi -- zard
+  The won -- der -- ful Wiz
+  What a won -- der -- ful Wi -- zard won -- der -- ful the
+
 }
 
 mezzoSecondPart = \relative c' {
@@ -639,15 +665,12 @@ mezzoSecondPart = \relative c' {
   r4 fis4 ~ fis8 fis8 ~ fis4 |
   R1 |
   R1 |
-  r2 g,4 ais |
-  \times 2/3 { b8 b r } r4 \times 2/3 { r d4 d } |
-  \times 2/3 { e8 e e } \times 2/3 { fis fis f } g4 \times 2/3 { r8 fis4 } | 
-  %\lod r4. \sh fis8 ~ fis2 |
-  %e2.. r8 |
-  %r2 \lo r8 \sh e \lo fis \sh d |
-  %\lod e4. \sh b8 \lo e \sh e \lo e \sh b |
-  %\lo d b4 \sh b8 \lo e \sh fis \times 2/3 { e b d ~  } |
-  %\lo d \sh e \lo fis \sh a gis2 |
+  r2 g,4 e' |
+  \times 2/3 { b8 b r } \lo r8 \sh b \times 2/3 { r8 d4 } \times 2/3 { r8 d4 } |
+  \times 2/3 { e8 e e } \times 2/3 { e r g } g4 \lo fis8 \sh g |
+  \times 2/3 { e8 b b } \times 2/3 { b r b8 } b8^\markup \italic "not swung" e fisis gis |
+  \times 2/3 { d4 ( cis2 ) } \times 2/3 { eis4 fis4 eis8 e } |
+  \times 2/3  { cis8 a4 } \lo r8^\markup \italic "swung" \sh b \lo e \sh e \lo e \sh b |
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -656,7 +679,14 @@ mezzoWordsSecondPart = \lyricmode {
   I know
   wiz -- ard
   Wi -- zard
-  ev -- er
+  ev -- er a
+  Wi -- zard
+  ev -- er, oh ev a wiz
+  there The
+  Wi -- zard of Oz is one be -- cause be -- cause
+  Wi -- zard
+  Wiz the won -- der
+  We're off to see the
 }
 
 altoSecondPart = \relative c'' {
@@ -671,7 +701,7 @@ altoSecondPart = \relative c'' {
   \lo gis8 \sh e' \lo e8 \sh b \lo d b4 \sh b8 |
   \lo e8 \sh fis8 \times 2/3 { e ( b ) d ~ } \times 2/3 { d8 r e } \lo fis \sh a |
   gis2 fis4 fisis |
-  \times 2/3 { gis8 gis a, } \lo b \sh a' \lo gis \sh e r16 e ( fis e ) |
+  \times 2/3 { gis8 gis a, } \lo b \sh a' \lo gis \sh fis r16 e ( fis e ) |
   g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
   \lo g8 ( \sh e ~ e4 ~ e8 ) r \times 2/3 { e ( fis e ) } 
   g4 ~ \times 2/3 { g8 a b } \lo cis8 ( b4 ) \sh gis8 \glissando |
@@ -709,17 +739,7 @@ tenorSecondPart = \relative c' {
   \times 2/3 { cis cis cis } \times 2/3 { cis cis dis } \lo e \sh b \lo gis \sh b |
   \times 2/3 { a a gis } \lo fis \sh a \lo gis \sh fis \lo e \sh e |
   \lo e \sh e \lo e' \sh e \lo dis \sh dis \lo cis \sh cis |
-  fis2.
-
-  %\lod r4. \sh gis,8 \lo b \sh b \times 2/3 { d ( cis ) fisis, } |
-  %gis4 \lo gis8 \sh a ~ \lo a \sh a \lo cis \sh c |
-  %\lo b \sh e, \lo fis \sh cis' \lod b4. \sh cis8 |
-  %\lo e8 \sh e \lo e8 \sh b \lo d b4 \sh b8 |  
-  %\times 2/3 { d4 cis b } a r16 e fis e |
-  %g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
-  %\lo g8 ( \sh e ~ e4 ~ \lo e8 ) r4 \sh cis'8 |
-  %\lo b \sh b \lo b \sh fis \lo a fis4 \sh r8 |
-  
+  fis2 r2 |
 }
 
 tenorWordsSecondPart = \lyricmode {
@@ -749,19 +769,14 @@ bassSecondPart = \relative c {
   r4 b4 ~ b4. r8 |
   b2 ~ \times 2/3 { b4 cis fis, } |
   %%%%%%
-  \lod r4. \sh b8 \lo f' \sh d \lo cis8 \sh c |
-  b4 d g, \lo b8 \sh g |
-  \lo gis \sh b d4 \lo a8 \sh e \lo ais8 \sh cis |
-  b^\markup \italic "not swung" e gis, fis \lo d'^\markup \italic "swung" \sh b \times 2/3 { r8 gis e' } |
-  \times 2/3 { r8 a,4 ~ } a4 
-  %e4 gis g \lo a \sh ais |
-  %b4 d g, e' |
-  %d \lo b8 \sh a \lo gis \sh e \lo g \sh ais |
-  %\lo b8 e4 \sh b8 \lo e \sh e \lo e \sh b |
-  %a4 e g \lo e'8 \sh bis |
-  %cis4 a \times 4/5 { g'16 e d r g } \times 4/5 { e d d b bis } |
-  %cis16 a8. ~ \lo a8 \sh a \lo e' \sh e \times 2/3 { e8 dis cis } |
-  %\lo d b4 \sh fis8 \lo a \sh a \lo cis \sh c |
+  \lod r4. \sh b8 \lo f' \sh d \lo cis8 \sh fisis, |
+  \lo gis \sh b d4 g, \lo cis8 \sh g |
+  \lo gis \sh b d4 a4 \lo ais8 \sh cis |
+  \times 8/9 { b8 e16 gis,16. fis e16 gis b }   \lo d \sh b \times 2/3 { r8 gis e' } |
+  a,4 ~  \times 2/3 { a8 e' bes } \times 2/3 { d8 gis,  a } \lo cis \sh bis |
+  \lo cis \sh d \lo b \sh dis, \lo e \sh d' \lo cis \sh b |
+  \times 2/3 { a8 a a } \times 2/3 { a r a } \times 2/3 { g' cis, r  } \times 2/3 { dis ais cis } |
+  \lo b \sh b \lo b \sh fis \lo a cis4 \sh c |
 }
 
 bassWordsSecondPart = \lyricmode {
@@ -774,8 +789,12 @@ bassWordsSecondPart = \lyricmode {
   %We're off to see the
   %%%
   We're off to see the
-  Won -- der Wi -- zard of Oz of Oz
-  Hear he is a Wiz he is a Wi -- zard
+  Won -- der -- ful Wi -- zard of Oz of Oz
+  Hear is a Wiz he is a won -- der -- ful Wi -- zard
+  Wiz if
+  ev -- er, oh ev -- er a wiz the Wiz of Oz is one be -- cause
+  be -- cause of the won the Wi -- zard things that
+  We're off to see the won -- der -- ful
 }
 
 %%% SCORE
