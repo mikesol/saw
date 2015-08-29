@@ -610,6 +610,9 @@ sopranoSecondPart = \relative c' {
   r4 c'4 ~ c8 c8 ~ c4 |
   R1 |
   R1 |
+  \lo r8 \sh e, \lo fis \sh cis' b4 a |
+  \times 2/3 { d,8 d r } r4 \times 2/3 { r4 c' c } |
+  \times 2/3 { b b b } \times 2/3 { b r4 } a4
   %r2 \lo r8 \sh gis \lo a \sh e' |
   %\lod d4. \sh cis8 \lo b \sh gis \times 2/3 { r8 gis r } |
   %\lo r8 \sh e'8 ~ e4 ~ e2 ~ |
@@ -621,10 +624,9 @@ sopranoWordsSecondPart = \lyricmode {
   wi -- zard
   I know
   wiz -- ard
-  He is a wiz
-  a wi -- zard
-  If
-  see
+  He is a
+  Wi -- zard
+  ev -- er
 }
 
 mezzoSecondPart = \relative c' {
@@ -636,6 +638,10 @@ mezzoSecondPart = \relative c' {
   r2 cis |
   r4 fis4 ~ fis8 fis8 ~ fis4 |
   R1 |
+  R1 |
+  r2 g,4 ais |
+  \times 2/3 { b8 b r } r4 \times 2/3 { r d4 d } |
+  \times 2/3 { e8 e e } \times 2/3 { fis fis f } g4 \times 2/3 { r8 fis4 } | 
   %\lod r4. \sh fis8 ~ fis2 |
   %e2.. r8 |
   %r2 \lo r8 \sh e \lo fis \sh d |
@@ -649,9 +655,8 @@ mezzoWordsSecondPart = \lyricmode {
   wi -- zard
   I know
   wiz -- ard
-  wiz
-  wiz
-  We're off to see
+  Wi -- zard
+  ev -- er
 }
 
 altoSecondPart = \relative c'' {
@@ -662,11 +667,11 @@ altoSecondPart = \relative c'' {
   \times 2/3 { cis e r } r e |
   cis'2 ~ \times 2/3 { cis4 b cis } |
   gis8 ( fis e4 ~ e8 ) b d b |
-  d ( e16 d ) b4 ~ b b |
-  \lo e8 \sh e \lo e8 \sh b \lo d b4 \sh b8 |
+  d ( e16 d ) b4 ~ b fisis |
+  \lo gis8 \sh e' \lo e8 \sh b \lo d b4 \sh b8 |
   \lo e8 \sh fis8 \times 2/3 { e ( b ) d ~ } \times 2/3 { d8 r e } \lo fis \sh a |
-  gis2.. r8 |
-  \lo r8 \sh a,8 \lo b \sh a' \lo gis \sh e r16 e ( fis e ) |
+  gis2 fis4 fisis |
+  \times 2/3 { gis8 gis a, } \lo b \sh a' \lo gis \sh e r16 e ( fis e ) |
   g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
   \lo g8 ( \sh e ~ e4 ~ e8 ) r \times 2/3 { e ( fis e ) } 
   g4 ~ \times 2/3 { g8 a b } \lo cis8 ( b4 ) \sh gis8 \glissando |
@@ -681,6 +686,7 @@ altoWordsSecondPart = \lyricmode {
   We're off to see the Wi -- zard
   The won -- der -- ful Wiz
   He is a wiz
+  Wi -- zard ev -- er
   He is a wi -- zard
   If ev -- er a wiz there was
   The wi -- zard of Oz is one
@@ -696,8 +702,14 @@ tenorSecondPart = \relative c' {
   r fis ~ fis2 |
   r2 a |
   r4 dis4 ~ dis8 dis4 b8 |
-
-
+  \lo e \sh b \lo gis \sh a \lo b e4 \sh b |
+  \times 2/3 { cis8 b a } \times 2/3 { gis a fis } \lod e4. \sh e8 |
+  \lo e \sh e \lo e' \sh e \times 2/3 { dis dis dis } \lo cis \sh cis |
+  \times 2/3 { fis fis fis } \lo fis \sh dis b4 \lo r8 \sh b |
+  \times 2/3 { cis cis cis } \times 2/3 { cis cis dis } \lo e \sh b \lo gis \sh b |
+  \times 2/3 { a a gis } \lo fis \sh a \lo gis \sh fis \lo e \sh e |
+  \lo e \sh e \lo e' \sh e \lo dis \sh dis \lo cis \sh cis |
+  fis2.
 
   %\lod r4. \sh gis,8 \lo b \sh b \times 2/3 { d ( cis ) fisis, } |
   %gis4 \lo gis8 \sh a ~ \lo a \sh a \lo cis \sh c |
@@ -717,12 +729,13 @@ tenorWordsSecondPart = \lyricmode {
   wi -- zard
   I know
   wiz -- ard
-  We're off to see the wiz ful wiz
-  He is a wiz
-  He is a wiz
-  We're off to see the wiz -- ard
-  If ev -- er a wiz
-  If ev -- er a wiz there was
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he is a whiz of a wiz,
+  If ev -- er a wiz there was.
+  If ev -- er, oh ev -- er a wiz there was,
+  The Wi -- zard of Oz is one be -- cause
+  be -- cause be -- cause be -- cause be -- cause be -- cause
  
 }
 
@@ -734,15 +747,21 @@ bassSecondPart = \relative c {
   r4 a a r |
   r ais ~ ais2 |
   r4 b4 ~ b4. r8 |
-  b2 ~ \times 2/3 { b4 a g } |
-  e4 gis g \lo a \sh ais |
-  b4 d g, e' |
-  d \lo b8 \sh a \lo gis \sh e \lo g \sh ais |
-  \lo b8 e4 \sh b8 \lo e \sh e \lo e \sh b |
-  a4 e g \lo e'8 \sh bis |
-  cis4 a \times 4/5 { g'16 e d r g } \times 4/5 { e d d b bis } |
-  cis16 a8. ~ \lo a8 \sh a \lo e' \sh e \times 2/3 { e8 dis cis } |
-  \lo d b4 \sh fis8 \lo a \sh a \lo cis \sh c |
+  b2 ~ \times 2/3 { b4 cis fis, } |
+  %%%%%%
+  \lod r4. \sh b8 \lo f' \sh d \lo cis8 \sh c |
+  b4 d g, \lo b8 \sh g |
+  \lo gis \sh b d4 \lo a8 \sh e \lo ais8 \sh cis |
+  b^\markup \italic "not swung" e gis, fis \lo d'^\markup \italic "swung" \sh b \times 2/3 { r8 gis e' } |
+  \times 2/3 { r8 a,4 ~ } a4 
+  %e4 gis g \lo a \sh ais |
+  %b4 d g, e' |
+  %d \lo b8 \sh a \lo gis \sh e \lo g \sh ais |
+  %\lo b8 e4 \sh b8 \lo e \sh e \lo e \sh b |
+  %a4 e g \lo e'8 \sh bis |
+  %cis4 a \times 4/5 { g'16 e d r g } \times 4/5 { e d d b bis } |
+  %cis16 a8. ~ \lo a8 \sh a \lo e' \sh e \times 2/3 { e8 dis cis } |
+  %\lo d b4 \sh fis8 \lo a \sh a \lo cis \sh c |
 }
 
 bassWordsSecondPart = \lyricmode {
@@ -750,9 +769,13 @@ bassWordsSecondPart = \lyricmode {
   wi -- zard
   I know
   wiz No we're
-  off to see, see the won -- der
-  wiz a wiz he's a wiz -- ard, he's the Wiz -- zard
+  %off to see, see the won -- der
+  %wiz a wiz he's a wiz -- ard, he's the Wiz -- zard
+  %We're off to see the
+  %%%
   We're off to see the
+  Won -- der Wi -- zard of Oz of Oz
+  Hear he is a Wiz he is a Wi -- zard
 }
 
 %%% SCORE
