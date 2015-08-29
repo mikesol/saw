@@ -610,10 +610,10 @@ sopranoSecondPart = \relative c' {
   r4 c'4 ~ c8 c8 ~ c4 |
   R1 |
   R1 |
-  r2 \lo r8 \sh gis \lo a \sh e' |
-  \lod d4. \sh cis8 \lo b \sh gis \times 2/3 { r8 gis r } |
-  \lo r8 \sh e'8 ~ e4 ~ e2 ~ |
-  e2.. r8 |
+  %r2 \lo r8 \sh gis \lo a \sh e' |
+  %\lod d4. \sh cis8 \lo b \sh gis \times 2/3 { r8 gis r } |
+  %\lo r8 \sh e'8 ~ e4 ~ e2 ~ |
+  %e2.. r8 |
 }
 
 sopranoWordsSecondPart = \lyricmode {
@@ -636,11 +636,12 @@ mezzoSecondPart = \relative c' {
   r2 cis |
   r4 fis4 ~ fis8 fis8 ~ fis4 |
   R1 |
-  \lod r4. \sh fis8 ~ fis2 |
-  e2.. r8 |
-  r2 \lo r8 \sh e \lo fis \sh d |
-  \lod e4. \sh b8 \lo e \sh e \lo e \sh b |
-  \lo d b4 \sh b8 \lo e \sh fis \times 2/3 { e b d } |
+  %\lod r4. \sh fis8 ~ fis2 |
+  %e2.. r8 |
+  %r2 \lo r8 \sh e \lo fis \sh d |
+  %\lod e4. \sh b8 \lo e \sh e \lo e \sh b |
+  %\lo d b4 \sh b8 \lo e \sh fis \times 2/3 { e b d ~  } |
+  %\lo d \sh e \lo fis \sh a gis2 |
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -669,7 +670,7 @@ altoSecondPart = \relative c'' {
   g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
   \lo g8 ( \sh e ~ e4 ~ e8 ) r \times 2/3 { e ( fis e ) } 
   g4 ~ \times 2/3 { g8 a b } \lo cis8 ( b4 ) \sh gis8 \glissando |
-  b2. r4 |
+  b2 ~ b8 r8 r16 gis a gis |
 }
 
 altoWordsSecondPart = \lyricmode {
@@ -683,6 +684,7 @@ altoWordsSecondPart = \lyricmode {
   He is a wi -- zard
   If ev -- er a wiz there was
   The wi -- zard of Oz is one
+  Show me the way
 }
 
 tenorSecondPart = \relative c' {
@@ -693,14 +695,19 @@ tenorSecondPart = \relative c' {
   e fis fis r |
   r fis ~ fis2 |
   r2 a |
-  r4 dis4 ~ dis8 dis8 ~ dis4 |
-  \lod r4. \sh gis,8 \lo b \sh b \times 2/3 { d ( cis ) fisis, } |
-  gis4 \lo gis8 \sh a ~ \lo a \sh a \lo cis \sh c |
-  \lo b \sh e, \lo fis \sh cis' \lod b4. \sh cis8 |
-  \lo e8 \sh e \lo e8 \sh b \lo d b4 \sh b8 |  
-  \times 2/3 { d4 cis b } a r16 e fis e |
-  g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
-  \lo g8 ( \sh e ~ e4 ~ e8 ) r \times 2/3 { e ( fis e ) } 
+  r4 dis4 ~ dis8 dis4 b8 |
+
+
+
+  %\lod r4. \sh gis,8 \lo b \sh b \times 2/3 { d ( cis ) fisis, } |
+  %gis4 \lo gis8 \sh a ~ \lo a \sh a \lo cis \sh c |
+  %\lo b \sh e, \lo fis \sh cis' \lod b4. \sh cis8 |
+  %\lo e8 \sh e \lo e8 \sh b \lo d b4 \sh b8 |  
+  %\times 2/3 { d4 cis b } a r16 e fis e |
+  %g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
+  %\lo g8 ( \sh e ~ e4 ~ \lo e8 ) r4 \sh cis'8 |
+  %\lo b \sh b \lo b \sh fis \lo a fis4 \sh r8 |
+  
 }
 
 tenorWordsSecondPart = \lyricmode {
@@ -733,7 +740,9 @@ bassSecondPart = \relative c {
   d \lo b8 \sh a \lo gis \sh e \lo g \sh ais |
   \lo b8 e4 \sh b8 \lo e \sh e \lo e \sh b |
   a4 e g \lo e'8 \sh bis |
-  cis4
+  cis4 a \times 4/5 { g'16 e d r g } \times 4/5 { e d d b bis } |
+  cis16 a8. ~ \lo a8 \sh a \lo e' \sh e \times 2/3 { e8 dis cis } |
+  \lo d b4 \sh fis8 \lo a \sh a \lo cis \sh c |
 }
 
 bassWordsSecondPart = \lyricmode {
