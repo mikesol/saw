@@ -80,7 +80,7 @@ prefatoryMatter = {
 alto = \relative c'' {
   \prefatoryMatter
   \clef "treble_8"
-  r2 \times 2/3 { gis4 a gis } |
+  r2 \times 2/3 { gis4^\f a gis } |
   b2.^\fermata ( \times 2/3 { a8 b a ) } |
   gis4 ( e ) d ( b ) |
   d2 e ~ |
@@ -145,7 +145,7 @@ alto = \relative c'' {
   b4 b a a |
   gis gis8 fis ~ fis4 \tupFrac \times 3/4 { b2 \glissando
       b,4 r b'2 \glissando b,4 r } b'8 cis b a gis fis |
-  r4 gis4 r2 |
+  gis4 r r2 |
   r4. ais8 ~ ais b a b |
   \tupFrac
   \times 8/11 { e4 gis, a ais b %{%} e gis, a ais b %{%} e b d cis b fisis %{%} gis b gis e b e } |
@@ -211,11 +211,11 @@ alto = \relative c'' {
   \times 2/3 { dis4 d2 r gis4 } |
   R1 |
   R1 |
-  r2.. g8 ~ |
-  \times 4/5 { g8 r g4 g g g } |
-  \times 4/5 { g g g g g } |
-  \times 4/5 { g g g g g } |
-  \times 4/5 { g g r8 } gis4 gis |
+  r2.. g8^\mf ~ |
+  \times 15/17 { g8 r g4 g g g
+  g g g g g
+  g g g g g
+  g g } gis |
   gis r b,8 b4 b8 ~ |
   b r g'4 g g |
   r b,8 b ~ b b4 r8 |
@@ -301,7 +301,8 @@ altoWords = \lyricmode {
   Shout
   las
   That's how we laugh the day a -- way in the mer -- ry old land of Oz
-  \repeat unfold 4 { Ha ha ha Ho dee ho }
+  ha ha Ho dee ho
+  \repeat unfold 3 { Ha ha ha Ho dee ho }
   Ha ha ha
   \repeat unfold 5 No
   Show me the  
@@ -312,7 +313,7 @@ comp = \relative c' {
   \clef "treble_8"
   R1*3 |
   R1*49 |
-  <d e>4 <d e> <cis e> r |
+  <d e>4^\f <d e> <cis e> r |
   <b e>8 <b e>4 <cis e>8 ~ <cis e>4. r8 |
   R1*6
   <d e>4 <d e> <cis e> r |
@@ -322,22 +323,22 @@ comp = \relative c' {
   R1*4 |
   r2. <ais cis e>4 |
   R1*3 |
-  <dis a' cis>4 q4 \times 7/13 { r1 r1 <dis fis a>2 <b dis fis>2 r\breve <cis fis a>2 <b e gis> <a dis fis> } |
-  <gis b e> <b d gis> |
+  <dis a' cis>4 q4 \times 7/13 { r1 r1 <dis fis a>2 <b dis fis>2 r\breve <cis fis a>2^\> <b e gis> <a dis fis> } |
+  <gis b e>^\p <b d gis> |
   <a cis fis> <cis e a> |
-  <b dis gis> <d fis b> |
+  <b dis gis>^\< <d fis b> |
   <cis e a> \clef treble <a' dis gis> |
-  <gis cis e> <eis gis b> |
+  <gis cis e>^\f <eis gis b> |
   <cis fis a> \clef "treble_8" <a dis fis> |
-  <b e gis> <a cis fis> |
+  <b e gis>^\> <a cis fis> |
   <gis b e> <fis a cis> |
-  <d' e>4 q <cis e> r |
+  <d' e>4^\mf q <cis e> r |
   <b e>8 q4 <cis e>8 ~ q q8 q q |
   <d e> q q4 <cis e>8 q4 <b e>8 ~ |
-  \times 4/5 { q8 r <cis e>4 <d e> q <cis e> } |
-  \times 4/5 { <cis e> <b e> <b e> <cis e> <cis e> } |
-  \times 4/5 { <cis e> <d e> <d e> <d e> <cis e> }
-  \times 4/5 { <cis e>4 <b e> r8 } <d e>4 <d e> |
+  \tupFrac \times 15/17 { q8 r <cis e>4 <d e> q <cis e> 
+   <cis e> <b e> <b e> <cis e> <cis e>
+  <cis e> <d e> <d e> <d e> <cis e>
+  <cis e>4 <b e> } <d e>
   %
   <cis e> r <b e>8 <b e>4 <cis e>8 ~ |
   \times 2/3 { <cis e>4 <cis e> <cis e> } \times 2/3 { <d e>2 q4 ~ } |
@@ -351,26 +352,26 @@ comp = \relative c' {
 }
 
 tenMel = \relative c {
-  s1*3 |
-  s1*49 |
+  R1*3 |
+  R1*49 |
   e4 gis b r |
   a8 b4 gis8 ~ gis4. r8 |
-  s1*6
+  R1*6
   e4 gis b r |
   a8 b4 gis8 ~ gis8 fis4 fis8 |
   e8 e e4 gis8 b4 a8 ~ |
   a2. r4 |
-  s1*4 |
-  s1*4 |
-  s1*4 |
-  s1*8
+  R1*4 |
+  R1*4 |
+  R1*4 |
+  R1*8
   e4 gis b r |
   a8 b4 gis8 ~ gis gis fis fis |
   e e e4 gis8 b4 a8 ~ |
-  \times 4/5 { a8 r b4 e, gis b } |
-  \times 4/5 { e cis dis e a, } |
-  \times 4/5 { a gis gis gis a } |
-  \times 4/5 { fis4 e r8 } e4 gis |
+  \tupFrac \times 15/17 { a8 r b4 e, gis b
+  e cis dis e a,
+  a gis gis gis a
+  fis4 e } gis |
   b r a8 b4 gis8 ~ |
   \times 2/3 { gis4 fis fis } \times 2/3 { e2 e4 ~ } |
   \times 2/3 { e4 e2 } \times 2/3 { gis2 b4 ~ } |
@@ -400,7 +401,7 @@ compWords = \lyricmode {
   Ho dee ho dee and a
   cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry old land of Oz
-  Ha ha ha
+  %{Ha%} ha ha
   Ho dee ho and a
   cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry old land of Oz
@@ -412,9 +413,9 @@ bass = \relative c, {
   \clef "bass"
   R1*3 | \barNumberCheck #4
   R1*24 | \barNumberCheck #28
-  e4 r gis r |
+  e4^\mf^\< r gis r |
   a r ais r |
-  b r e r |
+  b^\f r e r |
   cis r b r | \barNumberCheck #32
   gis r e r |
   fis r a r |
@@ -426,7 +427,7 @@ bass = \relative c, {
   e r dis r | \barNumberCheck #40
   cis r ais r |
   b r cis r |
-  dis r e r |
+  dis4 r e r |
   fis r dis r | \barNumberCheck #44
   cis r b r |
   gis r e r |
@@ -469,7 +470,7 @@ bass = \relative c, {
   fis cis' b ais |
   b e, gis fis |
   e gis a b |
-  e,4 r gis r |
+  e, r gis r |
   fis r a r |
   gis r d' r |
   cis r c r |
@@ -477,7 +478,7 @@ bass = \relative c, {
   a r g r |
   gis r b r |
   a r fis r |
-  gis r g r |
+  gis r b r |
   fis r a r |
   gis r b r |
   a r ais r |
@@ -488,7 +489,23 @@ bass = \relative c, {
 }
 
 bassWords = \lyricmode {
-  \repeat unfold 16 ○
+  Wi -- zard is my re -- ve -- la -- tion
+  fills me up with joy and un -- re -- mit -- ting
+  love it's so out -- rage -- ous haven't you heard,
+  It's so re -- mar -- ka -- ble the Wi -- zard's mirth is
+  e -- per -- ves -- cent light he's quite a won -- drous chap, says
+  Ha ha ho he steals the show al -- lu -- ring mis -- tic po -- wer Wiz -- ard
+  Ha ha
+  ho And tra -- la la that's how we laugh the day a -- way in Oz
+  No he's my Wi -- zard
+  He's my lu -- min -- es -- cent won -- der Wiz of
+  Ha ha ha and ho ho ho and cou -- ple tra la las that's how we 
+  laugh that's how we laugh the day a -- way right here in
+  Oz the land of
+  Ha ha Ho ho cou -- ple tra la las
+  that's how we laugh the day a -- way in
+  mer -- ry land of Oz
+  that's how we laugh the day a -- way
 }
 
 %%% SCORE
@@ -622,27 +639,28 @@ prefatoryMatterSecondPart = {
 
 sopranoSecondPart = \relative c' {
   \prefatoryMatterSecondPart
-  r4 fis fis2 ~ |
-  fis4 r r2 |
+  r4 fis-- fis2--^\> ~ |
+  fis4^\mp r r2 |
   r4 cis cis r |
-  r gis' ~ gis2 |
-  r2 fis |
-  r4 c'4 ~ c8 c8 ~ c4 |
+  r gis'^\mf ~ gis2 |
+  r2 << { fis } { s4.^\> s8^\p } >> |
+  R1 |
+  %r4 c'4 ~ c8 c8 ~ c4 |
   R1 |
   R1 |
-  \lo r8 \sh e, \lo fis \sh cis' b4 a |
-  \times 2/3 { d,8 d r } \lo r \sh fis \times 2/3 { r8 c'4 } \times 2/3 { r8 c4 } |
-  \times 2/3 { b8 b b } \times 2/3 { b r4 } \times 2/3 { r8 a8 a } \times 2/3 { r dis,4 } |
-  \lo d8 \sh e \lo e \sh b \lo d b4 \sh cis8 |
-  \lo e8 \sh fis8 \lo e \sh d \lo ais' \sh a \times 2/3 { gis8 g e }
-  dis4 d \lo cis8 \sh g' \lo fis \sh f8 |
+  \lo r8 \sh e^\mp^\< \lo fis \sh cis' b4 a |
+  \times 2/3 { d,8--^\f d-- r } \lo r \sh fis^\mf \times 2/3 { r8 c'4 } \times 2/3 { r8 c4^\< } |
+  \times 2/3 { b8--^\f b-- b-- } \times 2/3 { b-- r4 } \times 2/3 { r8 a8^\mf a } \times 2/3 { r dis,4 } |
+  \lo d8^\< \sh e \lo e \sh b \lo d^\f b4 \sh cis8 |
+  \lo e8 \sh fis8 \lo e \sh d \lo ais'^\mp \sh a \times 2/3 { gis8^\< g e }
+  dis4^\> d \lo cis8^\mf \sh g' \lo fis \sh f8 |
 }
 
 sopranoWordsSecondPart = \lyricmode {
   The way
   wi -- zard
   I know
-  wiz -- ard
+  %wiz -- ard
   He is a
   Wi -- zard
   ev -- er a
@@ -657,27 +675,28 @@ sopranoWordsSecondPart = \lyricmode {
 
 mezzoSecondPart = \relative c' {
   \prefatoryMatterSecondPart
-  r4 d d2 ~ |
-  d4 r r2 |
+  r4 d--^\> d2-- ~ |
+  d4^\mp r r2 |
   r4 a a r |
-  r e'4 ~ e2 |
-  r2 cis |
-  r4 fis4 ~ fis8 fis8 ~ fis4 |
+  r e'4^\mf ~ e2 |
+  r2 << { cis } { s4.^\> s8^\p } >> |
+  %r4 fis4 ~ fis8 fis8 ~ fis4 |
   R1 |
   R1 |
-  r2 g,4 e' |
-  \times 2/3 { b8 b r } \lo r8 \sh b \times 2/3 { r8 d4 } \times 2/3 { r8 d4 } |
-  \times 2/3 { e8 e e } \times 2/3 { e r g } g4 \lo fis8 \sh g |
-  \times 2/3 { e8 b b } \times 2/3 { b r b8 } b8^\markup \italic "not swung" e fisis gis |
+  R1 |
+  r2 g4^\mp^\< e' |
+  \times 2/3 { b8--^\f b-- r } \lo r8 \sh b^\mf \times 2/3 { r8 d4 } \times 2/3 { r8 d4^\< } |
+  \times 2/3 { e8--^\f e-- e-- } \times 2/3 { e-- r g^\mp^\< } g4 \lo fis8 \sh g |
+  \times 2/3 { e8^\> b b } \times 2/3 { b^\mf r b8 } b8^\markup \italic "not swung" e fisis gis |
   \times 2/3 { d4 ( cis2 ) } \times 2/3 { eis4 fis4 eis8 e } |
-  \times 2/3  { cis8 a4 } \lo r8^\markup \italic "swung" \sh b \lo e \sh e \lo e \sh b |
+  \times 2/3  { cis8 a4 } \lo r8^\markup \italic "swung" \sh b^\< \lo e^\f \sh e \lo e \sh b |
 }
 
 mezzoWordsSecondPart = \lyricmode {
   The way
   wi -- zard
   I know
-  wiz -- ard
+  %wiz -- ard
   Wi -- zard
   ev -- er a
   Wi -- zard
@@ -693,10 +712,10 @@ altoSecondPart = \relative c'' {
   \prefatoryMatterSecondPart
   \clef "treble_8"
   b2. \times 2/3 { a8 ( b a ) } |
-  gis4 ( e ) d ( b ) |
-  \times 2/3 { cis e r } r e |
-  cis'2 ~ \times 2/3 { cis4 b cis } |
-  gis8 ( fis e4 ~ e8 ) b d b |
+  gis4^\> ( e ) d ( b ) |
+  \times 2/3 { cis^\mp e r } r e |
+  cis'2^\< ~ \times 2/3 { cis4 b cis } |
+  gis8^\mf ( fis e4 ~ e8 ) b^\mp d b |
   d ( e16 d ) b4 ~ b fisis |
   \lo gis8 \sh e' \lo e8 \sh b \lo d b4 \sh b8 |
   \lo e8 \sh fis8 \times 2/3 { e ( b ) d ~ } \times 2/3 { d8 r e } \lo fis \sh a |
@@ -726,17 +745,17 @@ altoWordsSecondPart = \lyricmode {
 tenorSecondPart = \relative c' {
   \prefatoryMatterSecondPart
   \clef "treble_8"
-  r4 gis gis2 ~ |
-  gis4 gis fis ( d ) |
+  r4 gis--^\> gis2-- ~ |
+  gis4^\mp gis fis ( d ) |
   e fis fis r |
-  r fis ~ fis2 |
-  r2 a |
+  r fis^\mf ~ fis2 |
+  r2 << { a } { s4.^\> s8\p } >> |
   r4 dis4 ~ dis8 dis4 b8 |
   \lo e \sh b \lo gis \sh a \lo b e4 \sh b |
-  \times 2/3 { cis8 b a } \times 2/3 { gis a fis } \lod e4. \sh e8 |
-  \lo e \sh e \lo e' \sh e \times 2/3 { dis dis dis } \lo cis \sh cis |
-  \times 2/3 { fis fis fis } \lo fis \sh dis b4 \lo r8 \sh b |
-  \times 2/3 { cis cis cis } \times 2/3 { cis cis dis } \lo e \sh b \lo gis \sh b |
+  \times 2/3 { cis8^\< b a } \times 2/3 { gis a fis } \lod e4.^\> \sh e8 |
+  \lo e^\p^\< \sh e \lo e' \sh e \times 2/3 { dis dis dis } \lo cis \sh cis |
+  \times 2/3 { fis^\mp fis fis } \lo fis \sh dis b4 \lo r8 \sh b |
+  \times 2/3 { cis--^\mf cis-- cis-- } \times 2/3 { cis-- cis^\mp dis } \lo e \sh b \lo gis \sh b |
   \times 2/3 { a a gis } \lo fis \sh a \lo gis \sh fis \lo e \sh e |
   \lo e \sh e \lo e' \sh e \lo dis \sh dis \lo cis \sh cis |
   fis2 r2 |
@@ -762,17 +781,17 @@ tenorWordsSecondPart = \lyricmode {
 bassSecondPart = \relative c {
   \prefatoryMatterSecondPart
   \clef bass
-  r4 d d2 ~ |
-  d4 r r2 |
+  r4 d--^\> d2-- ~ |
+  d4^\mp r r2 |
   r4 a a r |
-  r ais ~ ais2 |
+  r ais^\mf ~ ais2 |
   r4 b4 ~ b4. r8 |
-  b2 ~ \times 2/3 { b4 cis fis, } |
+  r4 b4^\mp ~ \times 2/3 { b4 cis dis } |
   %%%%%%
   \lod r4. \sh b8 \lo f' \sh d \lo cis8 \sh fisis, |
   \lo gis \sh b d4 g, \lo cis8 \sh g |
-  \lo gis \sh b d4 a4 \lo ais8 \sh cis |
-  \times 8/9 { b8 e16 gis,16. fis e16 gis b }   \lo d \sh b \times 2/3 { r8 gis e' } |
+  \lo gis \sh b d4^\< a4 \lo ais8 \sh cis |
+  \times 8/9 { b8^\f^\markup \italic "solo" e16 gis,16. fis e16 gis b }   \lo d8^\>^\markup \italic "ord." \sh b^\mf \times 2/3 { r8 gis e' } |
   a,4 ~  \times 2/3 { a8 e' bes } \times 2/3 { d8 gis,  a } \lo cis \sh bis |
   \lo cis \sh d \lo b \sh dis, \lo e \sh d' \lo cis \sh b |
   \times 2/3 { a8 a a } \times 2/3 { a r a } \times 2/3 { g' cis, r  } \times 2/3 { dis ais cis } |
