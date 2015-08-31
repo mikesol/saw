@@ -489,6 +489,37 @@ unMonoShift = {
               (eq? (car (last-pair siblings)) grob))
          (ly:grob-suicide! grob))))
 
+
+tptext =
+#(define-music-function
+     (parser location nr mk)
+     (number? markup?)
+#{
+  \once \override TupletBracket.direction = #UP
+  \once \override TupletBracket.bracket-flare = #'(0.5 . 0.5)
+  \once \override TupletBracket.positions = #position-hack
+  \once \override TupletBracket.bracket-visibility = ##t 
+  \once \set tupletFullLength = ##t
+  %\set tupletFullLengthNote = ##t
+  \once \override TupletNumber.text = $mk
+  \times 1/1 { \repeat unfold $nr s4 }
+#})
+
+tptextSm =
+#(define-music-function
+     (parser location nr mk)
+     (number? markup?)
+#{
+  \once \override TupletBracket.direction = #UP
+  \once \override TupletBracket.bracket-flare = #'(0.5 . 0.5)
+  \once \override TupletBracket.positions = #position-hack
+  \once \override TupletBracket.bracket-visibility = ##t 
+  \once \set tupletFullLength = ##t
+  %\set tupletFullLengthNote = ##t
+  \once \override TupletNumber.text = $mk
+  \times 1/1 { \repeat unfold $nr s8 }
+#})
+
 %%%%#(define-grob-property 'buddies list? "List of grobs")
 %%%%#(define-grob-property 'my-name symbol? "List of grobs")
 %%%%#(define-grob-property 'searching list? "List of grobs")

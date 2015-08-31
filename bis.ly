@@ -455,9 +455,9 @@ mezzo = \relative c'' {
   r8 cis4. a'4 e |
   ais c b ais |
   r8 d4. b8 gis4 r8 |
-  cis4 ais8 g ~ g r b4^\shoot |
-  fis8 d4 r8 b'4 fis8 e ~ |
-  e4 gis4 e8 cis4. |
+  cis4 a8 fis ~ fis r b4^\shoot |
+  gis8 e4 r8 a4 fis8 d ~ |
+  d4 gis4 e8 cis4. |
   fis1^\> ( |
   b2^\mf c ) |
   gis8 gis gis gis ~ gis fis4. |

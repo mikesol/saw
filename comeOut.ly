@@ -156,20 +156,6 @@ orHaventYouHeard = \lyricmode {
   \oor \hhavent \yyou \hheard
 }
 
-tptext =
-#(define-music-function
-     (parser location nr mk)
-     (number? markup?)
-#{
-  \once \override TupletBracket.direction = #UP
-  \once \override TupletBracket.bracket-flare = #'(0.5 . 0.5)
-  \once \override TupletBracket.positions = #position-hack
-  \once \override TupletBracket.bracket-visibility = ##t 
-  \once \set tupletFullLength = ##t
-  %\set tupletFullLengthNote = ##t
-  \once \override TupletNumber.text = $mk
-  \times 1/1 { \repeat unfold $nr s4 }
-#})
 
 marksComeout = {
   \time 3/4
