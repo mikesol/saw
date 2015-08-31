@@ -1,7 +1,7 @@
 %{
   Ha ha ha (feathered slow then fast)
   Ha ha ha, ho.. (crazy 8ths)
-  [16 m again][(back and forth)(same phrase that slows down, but w/ accompagniment so not boring...)]
+  [16 m again][(back and forth)(accents on odd places in the grid)]
   Ha ha ha (triplet speed all together - pony trick)
   Ha ha ha (now 4., at end Mike \times 4/6 {No4 No No No No No } )
   ooooo show me the way ooooo
@@ -15,6 +15,11 @@
        -2 ..--..--..
        -3 ..--..--..--..--..-
           FAS#%@#%@#T OZ!!!!! (oz (cute))
+
+  hmmm
+  one way of going about it is to have 2 groups of 8 where I present the material
+  then 4 groups of 8 (E|E|A/B|E) where it is constructed.
+
 %}
 \version "2.17.0"
 \include "defs-devel.ly"
@@ -148,7 +153,7 @@ alto = \relative c'' {
   gis4 r r2 |
   r4. ais8 ~ ais b a b |
   \tupFrac
-  \times 8/11 { e4 gis, a ais b %{%} e gis, a ais b %{%} e b d cis b fisis %{%} gis b gis e b e } |
+  \times 16/21 { e4 gis, a b %{%} e gis, a ais b %{%} e b d cis b fisis %{%} gis b gis e b e } |
   r8 b'4 cis8 b gis fis b, |
   gis'8 b gis \tupFrac \times 5/8 { e4 a gis fis } |
   R1 |
@@ -201,7 +206,34 @@ alto = \relative c'' {
   cis4 ais fis gis |
   ais fis b r |
   r2 \tupFrac \times 7/13 { ais2 b bis cis r1 gis2 a ais b r1. } |
-  %{e,8%} r8 gis, b cis fis a, c d |
+  r8 gis, b cis e a, c d |
+  f ais, cis fisis ~ fisis ais4 fisis8 |
+  gis b, cis e a c, ees ais %{fis%} |
+  %{ais%} r b4 cis8 b fis cis b |
+  e fis gis b r cis4 gis8 |
+  a fis dis b cis e fis b8 |
+  r b4 cis8 b gis fis b, |
+  gis' b gis e ~ e a gis fis |
+  e4 e gis, r |
+  \times 4/5 { b4 r cis r e } |
+  \times 4/5 { r fis r g \glissando e } |
+  \times 15/17 { r4 g g g g
+  g g g g g
+  g g g g g
+  g g } gis |
+  gis r b,8 b4 b8 ~ |
+  b r g'4 g g |
+  r b,8 b ~ b b4 r8 |
+  b4 e fis r |
+  gis8 b4 cis8 ~ cis r b4 |
+  gis fis r e8 fis ~ |
+  fis gis4 b8 ~ b cis4 b8 ~ |
+  b d4 cis8 ~ cis b4 gis8 |
+  r4 gis a gis |
+}
+
+endingPropositionOne = \relative c' {
+%{e,8%} r8 gis, b cis fis a, c d |
   fis ais, cis dis fisis b, d e |
   \times 4/6 { gis4 a b gis e ees } |
   d4 r gis a |
@@ -270,7 +302,7 @@ altoWords = \lyricmode {
   would -- n't e -- ver wan -- na stop
   go -- in' he's my
   %5
-  Wiz and oh what a
+  Wiz and %{oh%} what a
   %5
   Wiz and show me the
   %6
@@ -293,6 +325,24 @@ altoWords = \lyricmode {
   Gen -- ui -- ine op -- ti -- mis -- tic verve
   Oh how sa -- vante
   A di -- la -- tente
+  He was in -- cre -- di -- ble while un -- der the gun
+  He was gi -- vin me a hell of a run
+  He would au -- thor -- ize a mil -- li -- on bucks
+   for un -- reas' -- na -- able ex -- pen -- di -- tures
+  Fly like an ul -- ti -- ma -- tum at the U N
+   while say -- in
+  Ha ha ha
+  Ho and a cou -- ple of
+  That's how we laugh the day a -- way in the mer -- ry old land of Oz
+  ha ha
+  Ho ho ho
+  And a cou -- ple of tra
+  la las that's how we laugh
+  The day a way in the mer -- ry Old land of Oz, no
+  Show me the
+}
+
+firstPropositionEndingLyrics = \lyricmode {
   Oh what a cream and what a clout
   I got -- ta scream, I got -- ta shout
   He's sim -- ply mar -- vel -- ous
@@ -583,7 +633,7 @@ bassWords = \lyricmode {
 
 \score {
   \transpose c c \new ChoirStaff <<
-    \new DrumStaff \drummode { \repeat unfold 100 { r4 hhc r4 hhc } }
+    \new DrumStaff \drummode { s1*3 \repeat unfold 97 { r4 hhc r4 hhc } }
     \new Staff \with { midiInstrument = #"tenor sax" instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
@@ -630,6 +680,7 @@ marksSecondPart = {
   s1*6 |
   \time 4/4
   \tempo "Slow" 4=40
+  s1*8 \bar "||"
 }
 
 prefatoryMatterSecondPart = {
@@ -750,7 +801,7 @@ tenorSecondPart = \relative c' {
   e fis fis r |
   r fis^\mf ~ fis2 |
   r2 << { a } { s4.^\> s8\p } >> |
-  r4 dis4 ~ dis8 dis4 b8 |
+  r4 dis4 ~ dis8 dis8 b4 |
   \lo e \sh b \lo gis \sh a \lo b e4 \sh b |
   \times 2/3 { cis8^\< b a } \times 2/3 { gis a fis } \lod e4.^\> \sh e8 |
   \lo e^\p^\< \sh e \lo e' \sh e \times 2/3 { dis dis dis } \lo cis \sh cis |
@@ -817,8 +868,6 @@ bassWordsSecondPart = \lyricmode {
 }
 
 %%% SCORE
-#(set-global-staff-size 16)
-
 \score {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = #"(B.)" %shortInstrumentName = #"M."
@@ -950,3 +999,198 @@ bassWordsSecondPart = \lyricmode {
   >>
   \midi {}
 }
+
+%%%%% third part
+
+nothingThirdPart = {}
+
+marksThirdPart = {
+  
+  \time 2/2
+  \set Score.currentBarNumber = #115
+  \tempo "Freely" 2=60
+  \bar ""
+  \time 2/2
+  s1*2 |
+  \time 2/2
+  \tempo "Fast" 2=172
+  s1
+
+}
+
+prefatoryMatterThirdPart = {
+  \key e \major
+  #(set-accidental-style 'modern-cautionary)
+}
+
+
+altoThirdPart = \relative c'' {
+  \prefatoryMatterThirdPart
+  \clef "treble_8"
+  b4 r r cis8 b |
+  \times 2/3 { r2 gis4 } a8 gis r4 |
+  b4 a8 b gis e cis b |
+  bes d f a gis e cis b |
+  g c e g fis dis b a |
+  fis a c ees d b gis f |
+  d'4-\bendAfter #-3 r4 r2 |
+%{  bes d f a gis e cis b |
+  g c e g fis dis b a |
+  fis a c dis e4 fis,8 a |
+  cis eis4 fis,8 c' dis fis4 |
+  fis,8 c' dis ais' ~ ais gis4 cis8 ~ |
+  \times 4/6 { cis4 b ais gis r b } |
+  \times 2/3 { ais gis fis } f4 e8 g |
+  f cis g c \times 2/3 { e4 r gis } |
+  fis d8 e f d bes d |
+  f4 f f f |
+  g8 a4 f8 ~ f r g a ~ |
+  a f4 r8 g a f cis |
+%}
+}
+
+altoWordsThirdPart = \lyricmode {
+  way
+  Show me
+  Show me the
+  way
+}
+
+compThirdPart = \relative c {
+  \prefatoryMatterThirdPart
+  \clef "treble_8"
+  r4 <fis a dis> q r |
+  \times 2/3 { q q r } r q |
+}
+
+compWordsThirdPart = \lyricmode {
+  The way
+  The way
+  way
+}
+
+tenMelThirdPart = \relative c' {
+  \prefatoryMatterThirdPart
+  \clef "treble_8"
+}
+
+bassThirdPart = \relative c {
+  \prefatoryMatterThirdPart
+  \clef bass
+  r b b r |
+  \times 2/3 { b b r } r b |
+}
+
+bassWordsThirdPart = \lyricmode {
+  The way
+  The way
+  way
+}
+
+%%% SCORE
+
+\score {
+  \new ChoirStaff <<
+    \new Staff \with { instrumentName = #"(T.)" %shortInstrumentName = #"Mk."
+} <<
+      \new Voice = "alto" { << { \numericTimeSignature
+        \altoThirdPart
+      } {
+        \marksThirdPart
+      } >> }
+      \new Lyrics \lyricsto "alto" {
+        \altoWordsThirdPart
+      }
+    >>
+    \new Staff \with { printPartCombineTexts = ##f instrumentName = \markup \right-column { "(B.)" (D.) "(F.)" } %shortInstrumentName = #"R."
+} << \new Voice { \partcombine
+      { \numericTimeSignature
+        \compThirdPart
+      } {
+        \tenMelThirdPart
+      } }
+    \new NullVoice = "comp" \compThirdPart
+    \new Lyrics \lyricsto "comp" {
+      \compWordsThirdPart
+    } >>
+    \new Staff = "realBass" \with { instrumentName = #"(W.)" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+} <<
+      \new Voice = "bass" { << { \numericTimeSignature
+        \bassThirdPart
+      } {
+        \nothingThirdPart
+      } >> }
+      \new Lyrics \lyricsto "bass" {
+        \bassWordsThirdPart
+      }
+    >>
+  >>
+  \layout {
+    indent = #0
+    \context {
+      \Voice
+      \override TextScript #'layer = #6
+      \override NoteHead #'layer = #7
+      \override Glissando #'breakable = ##t
+      \override TupletNumber #'breakable = ##t
+      \override TupletBracket #'breakable = ##t
+      \remove "Forbid_line_break_engraver"
+    }
+    \context {
+      \Staff
+      \consists "Metronome_mark_engraver"
+      \override TimeSignature #'style = #'numbered
+      \override StaffSymbol #'layer = #4
+      \override TimeSignature #'layer = #3
+      \override TimeSignature #'whiteout = ##t
+    }
+    \context {
+      \Lyrics
+      %\override LyricText #'whiteout = ##t
+      \override LyricText #'layer = #6
+    }
+    \context {
+      \Score
+      \remove "Metronome_mark_engraver"
+      \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
+    }
+  }
+}
+
+%%% MIDI
+
+\score {
+  \transpose c c \new ChoirStaff <<
+    \new DrumStaff \drummode { s1*3 \repeat unfold 97 { r4 hhc r4 hhc } }
+    \new Staff \with { midiInstrument = #"tenor sax" instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
+} <<
+      \new Voice = "alto" { \numericTimeSignature
+        \altoThirdPart
+      }
+      { \marksThirdPart }
+      \new Lyrics \lyricsto "alto" {
+        \altoWordsThirdPart
+      }
+    >>
+    \new Staff \with { midiInstrument = #"baritone sax" instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
+} <<
+      \new Voice = "comp" { \numericTimeSignature
+        \compThirdPart
+      }
+      \new Lyrics \lyricsto "comp" {
+        \compWordsThirdPart
+      }
+    >>
+    \new Staff \with { midiInstrument = #"electric bass (finger)" instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+} <<
+      \new Voice = "bass" { \numericTimeSignature
+        \bassThirdPart
+      }
+      \new Lyrics \lyricsto "bass" {
+        \bassWordsThirdPart
+      }
+    >>
+  >>
+  \midi {}
+}
+
