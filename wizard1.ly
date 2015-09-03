@@ -1,6 +1,5 @@
 \version "2.17.0"
 \include "defs-devel.ly"
-%{
 \paper {
   ragged-right = ##f
   left-margin = 0.75\in
@@ -18,7 +17,8 @@
   arranger = "arr. Mike Solomon"
 }
 
-%}
+myBreak = { \break }
+
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
   footnote-padding = 5\mm
@@ -51,7 +51,11 @@ marks = {
   \time 3/8
   \tempo "Largo" %4.=36
   \set Score.tempoWholesPerMinute = #(ly:make-moment 54 4 0 0)
-  s4.*48 |
+  s4.*11 | \myBreak
+  s4.*10 | \myBreak
+  s4.*12 | \myBreak
+  s4.*10 | \myBreak
+  s4.*5 |
   s4 \tempo "Presto"
   \set Score.tempoWholesPerMinute = #(ly:make-moment 200 4 0 0)
     s8 |
@@ -258,9 +262,9 @@ alto = \relative c' { \autoBeamOff
   e f e |
   ees4 d8 |
   fes ges g |
-  g4 d8 |
-  c4. ~ |
-  c8 r \MyRed ees |
+  g4 ees8 |
+  d4. ~ |
+  d8 r \MyRed ees |
   f8 f f |
   f f g |
   aes4 ees8 |
@@ -340,9 +344,9 @@ tenor = \relative c { \autoBeamOff
   %a8 ) r c8 |
   %gis4. ( |
   %a8 ) r c8 |
-  ees4 gis,8 |
-  a4. ~ |
-  a8 r c8 |
+  ees4 a,8 |
+  b4. ~ |
+  b8 r c8 |
   des d c |
   e8 d bes |
   ees4 bes8 |
@@ -417,9 +421,9 @@ bass = \relative c { \autoBeamOff
   des' c f |
   g4 aes8 |
   ges fes aes, |
-  f'4 a,8 |
-  d4. ~ |
-  d8 r f |
+  f'4 fis,8 |
+  g4. ~ |
+  g8 r f' |
   bes, e aes, |
   d g, des' |
   c4 e8 |
