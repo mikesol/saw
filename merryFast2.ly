@@ -328,7 +328,7 @@ altoWords = \lyricmode {
   He was in -- cre -- di -- ble while un -- der the gun
   He was gi -- vin me a hell of a run
   He would au -- thor -- ize a mil -- li -- on bucks
-   for un -- reas' -- na -- able ex -- pen -- di -- tures
+   for un -- reason -- na -- able ex -- pen -- di -- tures
   Fly like an ul -- ti -- ma -- tum at the U N
    while say -- in
   Ha ha ha
@@ -1014,8 +1014,8 @@ marksThirdPart = {
   s1*2 |
   \time 2/2
   \tempo "Fast" 2=172
-  s1
-
+  s1*4 | \bar "||"
+  s4 \bar "!"
 }
 
 prefatoryMatterThirdPart = {
@@ -1032,8 +1032,7 @@ altoThirdPart = \relative c'' {
   b4 a8 b gis e cis b |
   bes d f a gis e cis b |
   g c e g fis dis b a |
-  fis a c ees d b gis f |
-  d'4-\bendAfter #-3 r4 r2 |
+  fis a c ees d b gis f | r4
 %{  bes d f a gis e cis b |
   g c e g fis dis b a |
   fis a c dis e4 fis,8 a |
@@ -1053,20 +1052,40 @@ altoWordsThirdPart = \lyricmode {
   way
   Show me
   Show me the
-  way
+  way.
+  Un -- for -- get -- ta -- ble his an -- tics were re -- gre -- ta -- ble
+  His le -- vels, they were  set -- ta -- ble
+  His ap -- pe -- tite was wet -- ta -- ble
+  His
 }
+
+fakbydSprak = \markup \fill-line { \box \pad-markup #1.0 \center-column {
+  "Ryn:"
+  \italic "Nitkokbyhäwnnitkokbyhäwn?"
+  \italic "Ttöfårs nyt by makn sit singsingfårs fiwdiwrklustrfakdiwrsingn?"
+  \italic "Nitkokbyhäwnnitkokbyhäwnfårs bäst by luwn sit begrfårs singplatz sit handhandfårs twiks sit hämhämfårs byn?"
+  \italic "Geh??"
+}}
 
 compThirdPart = \relative c {
   \prefatoryMatterThirdPart
   \clef "treble_8"
   r4 <fis a dis> q r |
   \times 2/3 { q q r } r q |
+  <b dis gis>2 <bes d g> <a cis fis> <aes c f> <g b e> <fis ais dis> <e gis cis> <ees g c>
+  %R1*4 |
+  d'4^"(Fkb.)"-\bendAfter #-3
+  %\cricket \fatText
+  %\once \override TextScript.Y-offset = #10
+  %s4^\fakbydSprak s2 |
 }
 
 compWordsThirdPart = \lyricmode {
   The way
   The way
   way
+  Wi -- zard was a gen -- tle heal -- er
+  No
 }
 
 tenMelThirdPart = \relative c' {
@@ -1077,14 +1096,21 @@ tenMelThirdPart = \relative c' {
 bassThirdPart = \relative c {
   \prefatoryMatterThirdPart
   \clef bass
-  r b b r |
+  r4 b b r |
   \times 2/3 { b b r } r b |
+  b fis ais g |
+  gis e g fis |
+  f d' b g |
+  cis a fis c' |
+  b
 }
 
 bassWordsThirdPart = \lyricmode {
   The way
   The way
   way
+  \repeat unfold 16 ○
+  "..."
 }
 
 %%% SCORE
@@ -1194,3 +1220,200 @@ bassWordsThirdPart = \lyricmode {
   \midi {}
 }
 
+\fakbydSprak
+
+%%%%% fourth part
+
+nothingFourthPart = {}
+
+marksFourthPart = {
+  
+  \time 2/2
+  \set Score.currentBarNumber = #121
+  \once \override Score.TimeSignature.stencil = ##f
+  \time 1/2
+  s2 |
+  \once \override Score.TimeSignature.stencil = ##f
+  \time 2/2
+  s1*6 |
+}
+
+prefatoryMatterFourthPart = {
+  \key e \major
+  #(set-accidental-style 'modern-cautionary)
+}
+
+
+altoFourthPart = \relative c' {
+  \prefatoryMatterFourthPart
+  \clef "treble_8"
+  r2 |
+  e4-- b gis e |
+  gis b d gis, |
+  a cis e dis |
+  fis dis c gis'-- |
+  g ees b fis'-- |
+  ais, fis'-- f gis, |
+  a cis e dis |
+  b r r2 |
+  e,8 fis gis a b cis, dis e |
+  fis gis fis e dis b cis dis |
+  e fis gis a b a b cis |
+  dis cis b a b cis dis e |
+  fis e dis cis e dis cis b |
+  dis cis b a cis b a fisis |
+  gis a b cis dis cis b gis |
+  a b cis dis e4 r |
+  f1 ~ |
+  f2.. r8 |
+  
+}
+
+altoWordsFourthPart = \lyricmode {
+  Mar -- ve -- lous and won -- der -- ful
+  Un -- can -- ny and re -- mar -- ka -- ble
+  Un -- park -- a -- ble
+  In fact
+  What a ka -- ni -- ving lit -- tle route
+  Or -- ne -- ry and ten -- u -- ous  
+}
+
+compFourthPart = \relative c' {
+  \prefatoryMatterFourthPart
+  \clef "treble_8"
+  fis4^"(F.)" r |
+  R1*7 |
+  r2 b4^"(B.)" r |
+  R1*7 |
+  r2. g4^"(D.)" |
+}
+
+compWordsFourthPart = \lyricmode {
+  een
+}
+
+tenMelFourthPart = \relative c' {
+  \prefatoryMatterFourthPart
+  \clef "treble_8"
+}
+
+bassFourthPart = \relative c {
+  \prefatoryMatterFourthPart
+  \clef bass
+  r2 |
+}
+
+bassWordsFourthPart = \lyricmode {
+  The way
+  The way
+  way
+  \repeat unfold 16 ○
+  "..."
+}
+
+%%% SCORE
+
+\score {
+  \new ChoirStaff <<
+    \new Staff \with { %instrumentName = #"(T.)" %shortInstrumentName = #"Mk."
+} <<
+      \new Voice = "alto" { << { \numericTimeSignature
+        \altoFourthPart
+      } {
+        \marksFourthPart
+      } >> }
+      \new Lyrics \lyricsto "alto" {
+        \altoWordsFourthPart
+      }
+    >>
+    \new Staff \with { printPartCombineTexts = ##f %instrumentName = \markup \right-column { "(B.)" (D.) "(F.)" } %shortInstrumentName = #"R."
+} << \new Voice { \partcombine
+      { \numericTimeSignature
+        \compFourthPart
+      } {
+        \tenMelFourthPart
+      } }
+    \new NullVoice = "comp" \compFourthPart
+    \new Lyrics \lyricsto "comp" {
+      \compWordsFourthPart
+    } >>
+    \new Staff = "realBass" \with { %instrumentName = #"(W.)" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+} <<
+      \new Voice = "bass" { << { \numericTimeSignature
+        \bassFourthPart
+      } {
+        \nothingFourthPart
+      } >> }
+      \new Lyrics \lyricsto "bass" {
+        \bassWordsFourthPart
+      }
+    >>
+  >>
+  \layout {
+    indent = #0
+    \context {
+      \Voice
+      \override TextScript #'layer = #6
+      \override NoteHead #'layer = #7
+      \override Glissando #'breakable = ##t
+      \override TupletNumber #'breakable = ##t
+      \override TupletBracket #'breakable = ##t
+      \remove "Forbid_line_break_engraver"
+    }
+    \context {
+      \Staff
+      \consists "Metronome_mark_engraver"
+      \override TimeSignature #'style = #'numbered
+      \override StaffSymbol #'layer = #4
+      \override TimeSignature #'layer = #3
+      \override TimeSignature #'whiteout = ##t
+    }
+    \context {
+      \Lyrics
+      %\override LyricText #'whiteout = ##t
+      \override LyricText #'layer = #6
+    }
+    \context {
+      \Score
+      \remove "Metronome_mark_engraver"
+      \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
+    }
+  }
+}
+
+%%% MIDI
+
+\score {
+  \transpose c c \new ChoirStaff <<
+    \new DrumStaff \drummode { s1*3 \repeat unfold 97 { r4 hhc r4 hhc } }
+    \new Staff \with { midiInstrument = #"tenor sax" instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
+} <<
+      \new Voice = "alto" { \numericTimeSignature
+        \altoFourthPart
+      }
+      { \marksFourthPart }
+      \new Lyrics \lyricsto "alto" {
+        \altoWordsFourthPart
+      }
+    >>
+    \new Staff \with { midiInstrument = #"baritone sax" instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
+} <<
+      \new Voice = "comp" { \numericTimeSignature
+        \compFourthPart
+      }
+      \new Lyrics \lyricsto "comp" {
+        \compWordsFourthPart
+      }
+    >>
+    \new Staff \with { midiInstrument = #"electric bass (finger)" instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+} <<
+      \new Voice = "bass" { \numericTimeSignature
+        \bassFourthPart
+      }
+      \new Lyrics \lyricsto "bass" {
+        \bassWordsFourthPart
+      }
+    >>
+  >>
+  \midi {}
+}
