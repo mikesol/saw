@@ -56,8 +56,8 @@ mFY = \myfinaldarkyellow
 }
 
 \header {
-  title = "Finale: Sit Ozfårs Wundrföl Wysr"
-  subtitle = \markup { for Bitch Perbost \super 1}
+  title = "Finale: Sit Ozfårs Wndrföl Wysr"
+  subtitle = \markup { for Marie Perbost \super 1}
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -68,7 +68,7 @@ prefatoryMatter = {
   \key aes \major
 }
 
-marksChorale = {
+marksChoraleBad = {
   \tempo "Adagio" 4=68
   \time 4/4
   \partial 4
@@ -76,7 +76,7 @@ marksChorale = {
   s1 |
 }
 
-sopranoChorale = \relative c'' {
+sopranoChoraleBad = \relative c'' {
   bes4 |
   c aes ees f |
   aes c2 c4 |
@@ -104,7 +104,7 @@ sopranoChorale = \relative c'' {
   aes2.
 }
 
-sopranoChoraleWords = \lyricmode {
+sopranoChoraleBadWords = \lyricmode {
   We're off to see the Wi -- zard.
   The Won -- der -- ful Wi -- zard of Oz.
   We hear he is a whiz of a wiz,
@@ -119,7 +119,7 @@ sopranoChoraleWords = \lyricmode {
   The Won -- der -- ful Wi -- zard of Oz.  
 }
 
-mezzoChorale = \relative c' {
+mezzoChoraleBad = \relative c' {
   r4 |
   R1 |
   R1 |
@@ -146,10 +146,10 @@ mezzoChorale = \relative c' {
   R1 |
 }
 
-mezzoChoraleWords = \lyricmode {
+mezzoChoraleBadWords = \lyricmode {
 }
 
-altoChorale = \relative c' {
+altoChoraleBad = \relative c' {
   des4 |
   c c c des |
   ees f2 ees4 |
@@ -177,7 +177,7 @@ altoChorale = \relative c' {
   f2 ( ees4 )
 }
 
-altoChoraleWords = \lyricmode {
+altoChoraleBadWords = \lyricmode {
   We're off to see the Wi -- zard.
   The Won -- der -- ful Wi -- zard of Oz.
   of Oz.
@@ -193,7 +193,7 @@ altoChoraleWords = \lyricmode {
   The Won -- der -- ful Wi -- zard of Oz.  
 }
 
-tenorChorale = \relative c' {
+tenorChoraleBad = \relative c' {
   \clef "treble_8"
   g4 |
   aes aes aes aes |
@@ -222,7 +222,7 @@ tenorChorale = \relative c' {
   des4 ( bes c )
 }
 
-tenorChoraleWords = \lyricmode {
+tenorChoraleBadWords = \lyricmode {
   We're off to see the Wi -- zard.
   The Won -- der -- ful Wi -- zard of Oz.
   We hear he is a whiz of a wiz,
@@ -239,7 +239,7 @@ tenorChoraleWords = \lyricmode {
   The Won -- der -- ful Wi -- zard of Oz.  
 }
 
-bassChorale = \relative c {
+bassChoraleBad = \relative c {
   \clef "bass"
   ees4 |
   aes,4 c ees des |
@@ -268,7 +268,7 @@ bassChorale = \relative c {
   f4 ( g aes )
 }
 
-bassChoraleWords = \lyricmode {
+bassChoraleBadWords = \lyricmode {
   We're off to see the Wi -- zard.
   Wiz
   The Won -- der -- ful Wi -- zard of Oz.
@@ -285,6 +285,271 @@ bassChoraleWords = \lyricmode {
   does. We're off to
   off to see the Wi -- Wi -- zard.
   The Won -- der -- ful Wi -- zard of Oz.  
+}
+
+marksChorale = {
+  \tempo "Adagio" 4=68
+  \time 4/4
+  \partial 4
+  s4 |
+  s1 |
+}
+
+sopranoChorale = \relative c' {
+  \key aes \major
+  ees4 |
+  aes ees c des |
+  ees aes ~ aes ees |
+  f ees8 des c4 des8 bes |
+  aes2. c4 |
+  aes aes aes' aes |
+  g4 g8 g f4 f |
+  bes bes8 bes bes4 g |
+  ees2 r4 ees |
+  f4 f8 f f4 f8 g |
+  aes4 ees c ees |
+  des4 des8 c bes4 des |
+  c bes aes aes |
+  aes aes aes' aes |
+  g g f f |
+  bes1 ~ |
+  bes2 r4 aes4 |
+  bes bes8 bes bes4 bes8 bes |
+  bes4 g ees2 |
+  des'4 c8 bes aes4 g8 f |
+  ees2 ees |
+  aes4 ees c des |
+  ees aes ~ aes bes |
+  c c8 c bes4 c8 bes |
+  aes1 |
+}
+
+sopranoChoraleWords = \lyricmode {
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he is a whiz of a wiz,
+  If ev -- er a wiz there
+  was.
+  If ev -- er, oh ev -- er a wiz there was,
+  The Wi -- zard of Oz is one be -- cause
+  be -- cause be -- cause be -- cause be -- cause be -- cause
+  be -- cause of the won -- der -- ful things he does.
+  Won -- der -- ful things that he does.
+  We're off to see the Wi -- zard.
+  The Won -- der -- ful Wi -- zard of Oz.  
+}
+
+mezzoChorale = \relative c' {
+  r4 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+}
+
+mezzoChoraleWords = \lyricmode {
+}
+
+altoChorale = \relative c {
+  \clef "treble_8"
+  r4 |
+  R1 |
+  ees2\startGroup ees\stopGroup |
+  aes1 |
+  \clef treble
+  c4\startGroup des ees aes\stopGroup |
+  c,4\startGroup c8 c\stopGroup f4\startGroup f\stopGroup |
+  ees2. r4 |
+  f4\startGroup f8 f\stopGroup des4\startGroup ees\stopGroup |
+  r ees\startGroup aes ees |
+  c\stopGroup r des\startGroup ees\stopGroup |
+  c'4\startGroup c8 c bes4 c8 bes |
+  aes4\stopGroup aes\startGroup g g\stopGroup |
+  ees2\startGroup ees\stopGroup |
+  aes4\startGroup ees c des |
+  ees aes ~ aes ees\stopGroup |
+  des4\startGroup c8 bes\stopGroup f'4\startGroup ees8 des\stopGroup |
+  aes'4\startGroup g g f\stopGroup |
+  f8\startGroup f f4 f8 g aes4\stopGroup |
+  g4\startGroup ees2.\stopGroup |
+  f4\startGroup f8 f f4\stopGroup bes,4\startGroup
+  bes bes8 bes bes4 bes8 bes\stopGroup |
+  g4\startGroup g8 g f4 f\stopGroup |
+  ees'\startGroup c\stopGroup f4\startGroup f8 g |
+  aes4\stopGroup des,\startGroup ees\stopGroup g8 g\startGroup |
+  f1\stopGroup
+}
+
+altoChoraleWords = \lyricmode {
+  does. We're Oz
+  see the Wi -- zard
+  won -- der -- ful wiz if
+  was
+  ev -- er oh the wiz
+  We're off to see
+  the wiz
+  Won -- der -- ful Wi -- zard of Oz
+  be cause be
+  does. We're
+  off to see the Wi -- zard the
+  won -- der -- ful
+  won -- der -- ful
+  be -- cause be -- cause
+  ver oh ev -- er a wiz
+  there was
+  ev -- er oh ev
+  be -- cause of the won -- der -- ful things he does
+  wiz of a wiz if
+  to see
+  ev -- er a wiz
+  the wiz
+  of a
+}
+
+tenorChorale = \relative c' {
+  \clef "treble_8"
+  r4 |
+  c4\startGroup des8 bes aes4\stopGroup bes\startGroup |
+  des c bes aes\stopGroup |
+  des4\startGroup c8 bes aes4\stopGroup f8\startGroup g |
+  aes4 ees c ees\stopGroup |
+  f4\startGroup f8 f f4\stopGroup f\startGroup |
+  bes1\stopGroup |
+  des4\startGroup des8 c bes4 des |
+  c bes\stopGroup f\startGroup f |
+  bes4 bes8 bes\stopGroup bes4\startGroup bes8 bes\stopGroup |
+  c4\startGroup des ees aes\stopGroup |
+  f4\startGroup f bes4 bes8 bes |
+  bes4 g ees\stopGroup c\startGroup |
+  des ees\stopGroup f4\startGroup f\stopGroup |
+  bes,4\startGroup des c\stopGroup aes\startGroup |
+  bes4 bes8 bes\stopGroup des4\startGroup c8 bes\stopGroup |
+  f'4\startGroup ees8 des c4 des8 bes\stopGroup |
+  des4\startGroup des8 c bes4 des4 |
+  c bes\stopGroup g\startGroup ees\stopGroup |
+  des'8\startGroup bes aes2.\stopGroup |
+  g4\startGroup g8 g f4\stopGroup des'4\startGroup |
+  c4 bes aes aes |
+  aes aes aes'\stopGroup f4\startGroup |
+  f4 f8 f\stopGroup des4\startGroup ees\stopGroup |
+ 
+}
+
+tenorChoraleWords = \lyricmode {
+  Wi -- zard of Oz Oz
+  is one be -- cause
+  Won -- der -- ful things ver a
+  Wiz there was the
+  ev -- er, oh ev
+  be -- cause
+  Wi -- zard of Oz is one be
+  wiz if e -- ver the
+  won -- der -- ful
+  see the Wi -- zard
+  wiz if ev -- er a wiz there was
+  see the wiz wiz if
+  Oz is one be -- cause of the
+  won  -- der -- ful
+  won -- der -- ful Wi -- zard of
+  Wi -- zard of Oz is one be
+  there was
+  wiz of Oz
+  wiz of a wiz
+  is one be -- cause be -- cause be -- cause
+  if ev -- er oh the wiz
+}
+
+bassChorale = \relative c' {
+  \clef "bass"
+  r4 |
+  R1*8 |
+  des4\startGroup c8 bes aes4 g8 f |
+  ees2 ees\stopGroup |
+  bes4\startGroup bes8 bes\stopGroup ees2\startGroup |
+  aes4 ees c\stopGroup g'8\startGroup g |
+  f4 f\stopGroup des4\startGroup des8 c |
+  bes4\stopGroup ees\startGroup f f8 f\stopGroup |
+  f4\startGroup f\stopGroup bes,2 ~ |
+  bes ees4\startGroup f\stopGroup |
+  f8\startGroup g aes4\stopGroup des,8\startGroup c bes4\stopGroup |
+  ees2 des'4\startGroup c8 bes |
+  aes4\stopGroup des,\startGroup c bes\stopGroup |
+  ees2.\startGroup ees4\stopGroup |
+  aes,1 |
+  c4\startGroup ees des des8 c |
+  bes4\stopGroup bes\startGroup g ees\stopGroup |
+  f\startGroup f8 g aes4\stopGroup
+}
+
+bassChoraleWords = \lyricmode {
+  Won -- der -- ful things that he does we're
+  cause of the
+  We're
+  Off to see
+  of a wiz If
+  Wi -- zard of Oz
+  If ev -- er oh
+  wiz if
+  cause
+  if ev
+  ver the wiz
+  ard of Oz
+  We're
+  Won -- der -- ful things
+  is one be
+  was
+  if 
+  Oz
+  was the Wi -- zard of Oz
+  wiz there was
+  ev -- er a wiz
+}
+
+marksCinqVoix = {
+  \tempo "Adagio" 4=68
+  \time 4/4
+}
+
+sopranoCinqVoix = \relative c'' {
+  \key c \major
+  s2. g4 |
+}
+
+sopranoCinqVoixWords = \lyricmode {
+}
+
+mezzoCinqVoix = \relative c' {
+  \key c \major
+  s1 |
+}
+
+mezzoCinqVoixWords = \lyricmode {
+}
+
+altoCinqVoix = \relative c {
+  \key c \major
+  s1 |
+}
+
+altoCinqVoixWords = \lyricmode {
+}
+
+tenorCinqVoix = \relative c' {
+  \clef "treble_8"
+  \key c \major
+  s1 |
+}
+
+tenorCinqVoixWords = \lyricmode {
+}
+
+bassCinqVoix = \relative c' {
+  \clef "bass"
+  \key c \major
+  s1 |
+}
+
+bassCinqVoixWords = \lyricmode {
 }
 
 marksFinalRepeat = {
@@ -304,8 +569,7 @@ sopranoFinalRepeat = \relative c''' {
   \mFR dis1 ~ |
   \mFR dis8 \mFB cis4. ~ \mFB cis8 \mFO b4 g8 ~ |
   \times 2/3 { g4 \mFG e'8 ~ } \mFG e4 ~ \mFG e2 |
-  ais,8 \mFM b4 \mFY cis8 ~ \mFY cis4 ~ cis4. bis8 r4 |
-  
+  ais,8 \mFM b4 \mFY cis8 ~ \mFY cis4 ~ cis4. bis8 r4 |  
 }
 
 sopranoFinalRepeatWords = \lyricmode {
@@ -589,17 +853,17 @@ bassLastNoteDraftTwoWords = \lyricmode {
     \new Staff \with { instrumentName = #"Bitch" } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\prefatoryMatter
-	\sopranoChorale
+	\sopranoCinqVoix
 	%\sopranoFinalRepeat
         %\sopranoLastNote
       } {
 	\prefatoryMatter
-	\marksChorale
+	\marksCinqVoix
 	%\marksFinalRepeat
         %\marksLastNote
       } >> }
       \new Lyrics \lyricsto "soprano" {
-	\sopranoChoraleWords
+	\sopranoCinqVoixWords
 	%\sopranoFinalRepeatWords
         %\sopranoLastNoteWords
       }
@@ -607,12 +871,12 @@ bassLastNoteDraftTwoWords = \lyricmode {
     \new Staff \with { instrumentName = #"Dörty" } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\prefatoryMatter
-	\mezzoChorale
+	\mezzoCinqVoix
 	%\mezzoFinalRepeat
         %\mezzoLastNote
       }
       \new Lyrics \lyricsto "mezzo" {
-	\mezzoChoraleWords
+	\mezzoCinqVoixWords
 	%\mezzoFinalRepeatWords
         %\mezzoLastNoteWords
       }
@@ -620,12 +884,12 @@ bassLastNoteDraftTwoWords = \lyricmode {
     \new Staff \with { instrumentName = #"Ttö" } <<
       \new Voice = "alto" { \numericTimeSignature
 	\prefatoryMatter
-	\altoChorale
+	\altoCinqVoix
 	%\altoFinalRepeat
         %\altoLastNote
       }
       \new Lyrics \lyricsto "alto" {
-	\altoChoraleWords
+	\altoCinqVoixWords
 	%\altoFinalRepeatWords
         %\altoLastNoteWords
       }
@@ -633,12 +897,12 @@ bassLastNoteDraftTwoWords = \lyricmode {
     \new Staff \with { instrumentName = #"Fakbyd" } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\prefatoryMatter
-	\tenorChorale
+	\tenorCinqVoix
 	%\tenorFinalRepeat
         %\tenorLastNote
       }
       \new Lyrics \lyricsto "tenor" {
-	\tenorChoraleWords
+	\tenorCinqVoixWords
 	%\tenorFinalRepeatWords
         %\tenorLastNoteWords
       }
@@ -646,12 +910,12 @@ bassLastNoteDraftTwoWords = \lyricmode {
     \new Staff \with { instrumentName = #"Wysr" } <<
       \new Voice = "bass" { \numericTimeSignature
 	\prefatoryMatter
-	\bassChorale
+	\bassCinqVoix
 	%\bassFinalRepeat
         %\bassLastNote
       }
       \new Lyrics \lyricsto "bass" {
-	\bassChoraleWords
+	\bassCinqVoixWords
 	%\bassFinalRepeatWords
         %\bassLastNoteWords
       }
@@ -660,6 +924,8 @@ bassLastNoteDraftTwoWords = \lyricmode {
   \layout {
     \context {
       \Voice
+      \override HorizontalBracket.direction = #UP
+      \consists "Horizontal_bracket_engraver"
       \override TextScript #'layer = #6
       \override NoteHead #'layer = #7
       \override Glissando #'breakable = ##t

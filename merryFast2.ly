@@ -1275,7 +1275,15 @@ altoWordsFourthPart = \lyricmode {
   Un -- park -- a -- ble
   In fact
   What a ka -- ni -- ving lit -- tle route
-  Or -- ne -- ry and ten -- u -- ous  
+  %%!
+  Or -- ne -- ry and te -- di -- ous
+  al -- lu -- ring, un -- be -- lieve -- a -- ble
+  The Wi -- zard was a can -- ny un -- der -- min -- ing
+  in -- di -- vi -- du -- al
+    %
+  A gen -- u -- ine in -- no -- cu -- ous fa -- na -- tic cor -- na -- co -- pi -- a
+  Of mo -- de -- rate de -- ni -- al, let me tell you, what a guy
+  
 }
 
 compFourthPart = \relative c' {

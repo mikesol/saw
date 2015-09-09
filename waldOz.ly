@@ -40,6 +40,31 @@
 \version "2.17.0"
 \include "defs-devel.ly"
 
+
+
+%{
+\paper {
+  #(define fonts
+    (set-global-fonts
+    #:music "cadence"
+    #:factor (/ staff-height pt 20)
+  ))
+}
+%}
+
+
+key =
+#(define-music-function (parser location tonic pitch-alist music)
+   ((ly:pitch? '()) (list? '()) ly:music?)
+music)
+
+hackKey =
+#(define-music-function (parser location tonic pitch-alist)
+   ((ly:pitch? '()) (list? '()))
+#{
+
+#})
+
 %{
 key =
 #(define-music-function (parser location tonic pitch-alist music)
@@ -62,18 +87,13 @@ If both are null, just generate @code{KeyChangeEvent}.")
                 'pitch-alist pitch-alist)
            tonic)))
 (ly:music-property music 'elements))))
-%}
 
-%{
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "cadence"
-    #:factor (/ staff-height pt 20)
-  ))
-}
-%}
+hackKey =
+#(define-music-function (parser location tonic pitch-alist)
+   ((ly:pitch? '()) (list? '()))
+#{
 
+#})
 
 hackKey =
 #(define-music-function (parser location tonic pitch-alist)
@@ -101,6 +121,7 @@ key =
       (make-music 'TransposedMusic
                'element (ly:music-transpose music (ly:pitch-diff (ly:make-pitch 0 1 1/2) (ly:make-pitch 0 2 -1/2))))
       music))
+%}
 
 #(ly:set-option 'point-and-click #f)
 
@@ -175,7 +196,7 @@ marksProof = {
 }
 
 sopranoProof = \relative c' {
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   R1\! |
   \times 2/3 { r2 ees2.^\pp r4 } |
   \times 2/3 { r2 ees4 } r2 |
@@ -188,7 +209,7 @@ sopranoProof = \relative c' {
   g2 ees4 f |
   g2 } \relative c'' {
  b2 |
-}}
+}}}
 
 sopranoProofWords = \lyricmode {
   I'll
@@ -199,7 +220,7 @@ sopranoProofWords = \lyricmode {
 }
 
 mezzoProof = \relative c' {
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   ees1^\subPd |
   \times 4/6 { aes,4 ( c ) ees g ( ees ) c } |
   \times 2/3 { a ( c ) ees } \mark "rall." aes4 \breathe  bes |
@@ -212,7 +233,7 @@ mezzoProof = \relative c' {
   R1 |
   r4 ees'2 r4 |
   \times 2/3 { r4 ees4 ees } \times 2/3 { ees r2 } |
-}}
+}}}
 
 mezzoProofWords = \lyricmode {
   Some day I'll wish u -- pon a star, that's
@@ -223,7 +244,7 @@ mezzoProofWords = \lyricmode {
 }
 
 altoProof = \relative c' { %\autoBeamOff
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   %\clef treble %\clef alto
   R1\! |
   \times 2/3 { r4 c4^\pp ~ c1 } |
@@ -237,7 +258,7 @@ altoProof = \relative c' { %\autoBeamOff
   R1 |
   R1 |
   %r2. c4 |
-}}
+}}}
 
 altoProofWords = \lyricmode {
   day
@@ -247,7 +268,7 @@ altoProofWords = \lyricmode {
 }
 
 tenorProof = \relative c' { %\autoBeamOff
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   %\clef "treble_8"
   R1\! |
   aes2^\pp ~ \times 2/3 { aes2 r4 } |  
@@ -260,7 +281,7 @@ tenorProof = \relative c' { %\autoBeamOff
   c1 |
   des |
   c4 ( bes ) aes ( ges ) |
-}}
+}}}
 
 tenorProofWords = \lyricmode {
   day
@@ -272,7 +293,7 @@ tenorProofWords = \lyricmode {
 
 bassProof = \relative c' {
   %\clef bass
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   R1\! |
   R1 |
   R1 |
@@ -286,7 +307,7 @@ bassProof = \relative c' {
   bes^"(!)" ( aes ) g f |
   ees ( des ) c ( bes ) |
   \ottava #0
-}}
+}}}
 
 bassProofWords = \lyricmode {
   me, oh
@@ -349,13 +370,13 @@ sopranoBeginning = \relative c' { \autoBeamOff
   R2 |
   b2^\mf gis'4 |
   R1*5/8
-}   \key ees \major \relative c'' {
+}   \key ees \major { \relative c'' {
   %\footnote "" #'(0 . 0) \ksnote
   g4^\f ees8 f g4 aes8 |
   R4. |
   R4. |
   r4 f'8^\p ~ f4^\espressivo f,4^\mp |
-}   \key c \major {
+}}   \key c \major {
   e4 g e-. |
   f2^\< g2 |
   a8^\f r r4 r4. |
@@ -390,12 +411,12 @@ mezzoBeginning = \relative c' { \autoBeamOff
   gis2^\mf e'4 |
   R1*5/8 |
   %fis,4.^\mp dis'4 |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   ees4^\f ees4 ees4 ees8 |
   f4 d8 |
   bes8 [ bes' ] g |
   d4.^\trill^\> ~ d8^\mp r8 r4 |
-}   \key c \major {
+}}   \key c \major {
   e4 ees d-. |
   r2 e2^\< |
   f8^\f r dis4 ~ dis4. |
@@ -430,12 +451,12 @@ altoBeginning = \relative c { \autoBeamOff
   R2 |
   e2^\mf b'4 |
   fis4.^\mp dis'4 |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   bes4^\f aes g4 r8 |
   r8 d'8 bes |
   aes [ f ] ees'
   bes4.^\> ~ bes8^\mp r8 r4 |
-}   \key c \major {
+}}   \key c \major {
   c4 ces bes-. |
   f'4 ( e ) d ( c ) |
   b8 r r4 r4. |
@@ -471,14 +492,14 @@ tenorBeginning = \relative c { \autoBeamOff
   R2. |
   R1*5/8 |
   %r4. fis4^\mp | 
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   des4^\f b4 d4 c8 |
   %r8 aes4 ~ |
   %aes8. r8. |
   r4 aes8 |
   f [ d ] c' |
   g4.^\> ~ g8^\p r8 r4 |
-}   \key c \major {
+}}   \key c \major {
   R2. |
   r2 e'4.^\mf^\< d8 ~ |
   d8^\f r r4 r4. |
@@ -510,14 +531,14 @@ bassBeginning = \relative c' { \autoBeamOff
   \cricket \tri c2^\f^\markup \italic "bruit blanc" |
   R2. |
   R1*5/8 |
-}   \key ees \major \relative c {
+}   \key ees \major { \relative c {
   \bNormal
   bes4 g c4. % r16
   %R1*15/16 |
   r8 bes4 ~ |
   bes8. r8. |
   r8 ees4 ~ ees8 r8 r4 |
-}   \key c \major {
+}}   \key c \major {
   R2. |
   r4 d,4^\mp^\< ~ d2 ~ |
   d8 g,8^\f r4 r4. |
@@ -585,11 +606,11 @@ sopranoTriumphal = \relative c'' { %\autoBeamOff
   dis2^\mf ~ ( dis8 [ b ) ] \times 2/3 { gis b dis } |
   fis2 ~ ( fis8 [ dis ) ] \times 2/3 { b^\< dis fis } |
   ais2^\f ( a |
-}   \key ees \major \relative c''' {
+}   \key ees \major { \relative c''' {
   aes8 ) bes,^\mp c d ees f g aes bes c |
   d4 ( \glissando bes ) bes ( \glissando g ) g ( \glissando d ~ |
   d c2 ) |
-}   \key b \major {
+}}   \key b \major {
   R2 |
 }   \key ees \major {
   R1*5/4 |
@@ -623,15 +644,15 @@ mezzoTriumphal = \relative c'' { %\autoBeamOff
   b2.^\mf ~ \times 2/3 { b8 gis b } |
   dis2. ~ \times 2/3 { dis8^\< b dis } |
   fis1^\f ~ |
-}   \key ees \major \relative c''' {
+}   \key ees \major { \relative c''' {
   ges8 r8 r4 r2 r4 |
   r4 f4^\mp ~ f4. r8  r8 f'4. ~ ( |
   f8 \glissando d ~ d4 ) r4 |
-}   \key b \major {
+}}   \key b \major {
   R2 |
-}   \key ees \major \relative c'' {
+}   \key ees \major { \relative c'' {
   aes4^\mf g ees8 f g4 aes |
-}   \key b \major {
+}}   \key b \major {
   R2 |
 }   \key d \major {
   R2. |
@@ -663,15 +684,15 @@ altoTriumphal = \relative c' { %\autoBeamOff
   gis1^\mf |
   b |
   dis^\f ~ |
-}   \key ees \major \relative c'' {
+}   \key ees \major { \relative c'' {
   ees8 r8 r4 r2 r4 |
   g,2^\mp\trill^\espressivo bes\trill^\espressivo d4 ( c |
   bes aes g ) |
-}   \key b \major {
+}}   \key b \major {
   R2 |
-}   \key ees \major  \relative c' {
+}   \key ees \major {  \relative c' {
   f4^\mf ees ees ees r |
-}   \key b \major {
+}}   \key b \major {
   gis,,2^\p |
 }   \key d \major {
   R2. |
@@ -705,11 +726,11 @@ tenorTriumphal = \relative c' { %\autoBeamOff
   e8^\mf b' e2 ~ e8 fis |
   g2.. a8 |
   b1^\f ~ |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   ces'8 r8 r4 r2 r4 |
   r2 r4 d,^\mp ( \glissando bes ) bes ( \glissando |
   g4. \glissando bes8 ~ bes4 ) |
-}   \key b \major {
+}}   \key b \major {
   gis,2^\p |
 }   \key ees \major {
   R1*5/4 |
@@ -748,15 +769,15 @@ bassTriumphal = \relative c { %\autoBeamOff
   e4.^\mf b8 e,2 ~ |
   e8 r8 e'2 b'4^\< |
   f'4^\f ( e ) ees d |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   des8 r8 r4 r2 r4 |
   r4 ees,4^\mp ~ ees2 ~ ees ~ |
   ees4. r8 r4 |
-}   \key b \major {
+}}   \key b \major {
   e,2^\p |
-}   \key ees \major \relative c {
+}   \key ees \major { \relative c {
   f4^\mf bes b d c |
-}   \key b \major {
+}}   \key b \major {
   R2 |
 }   \key d \major {
   e4^\mf^\< cis8 [ d ] e8\! r8 |
@@ -805,7 +826,7 @@ marksDecel = {
 }
 
 sopranoDecel = \relative c'' { %\autoBeamOff
-   \key aes \major \relative c'' {
+   \key aes \major { \relative c'' {
   R1 |
   R1*5/4 |
   R1 |
@@ -818,7 +839,7 @@ sopranoDecel = \relative c'' { %\autoBeamOff
   aes''4-. r2. |
   R1 |
   bes,2 bes des4-. r4 |
-}   \key b \major {
+}}   \key b \major {
   R1 |
   R1*5/4 |
   R1*4 |
@@ -831,7 +852,7 @@ sopranoDecelWords = \lyricmode {
 }
 
 mezzoDecel = \relative c' { %\autoBeamOff 
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   ees1^"not nec full mes" |
   aes8 aes g g f f ees ees des des |
   \times 2/3 { c4 bes bes' } g4 gis |
@@ -844,7 +865,7 @@ mezzoDecel = \relative c' { %\autoBeamOff
   aes'4-. r2. |
   g1^\espressivo |
   bes4 ( a ) aes ( g ) ges4-. r4 |
-}   \key b \major {
+}}   \key b \major {
   r2 e |
   dis4 b8 ( cis ) dis4 gis2 |
   eis4 gis4 r2 |
@@ -866,7 +887,7 @@ mezzoDecelWords = \lyricmode {
 }
 
 altoDecel = \relative c' { %\autoBeamOff
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   R1 |
   R1*5/4 |
   r2. des4 |
@@ -879,7 +900,7 @@ altoDecel = \relative c' { %\autoBeamOff
   aes4-. r2. |
   g1^\espressivo |
   r1 fes'4-. r4 |
-}   \key b \major {
+}}   \key b \major {
   gis,2 ais |
   cis8 ( b ) ais ( b ) fisis4 r2  |
   eis'4 eis r2 |
@@ -900,7 +921,7 @@ altoDecelWords = \lyricmode {
 
 tenorDecel = \relative c' { %\autoBeamOff
   %\clef "treble_8"
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   R1 |
   c8 c bes bes aes aes g g f f |
   \times 2/3 { ees4 des d } ees e |
@@ -913,7 +934,7 @@ tenorDecel = \relative c' { %\autoBeamOff
   R1 |
   R1 |
   r1 des4-. r4 |
-}   \key b \major {
+}}   \key b \major {
   e,2 g |
   r2 ais4 r2 |
   eis'4 cis r2 |
@@ -936,7 +957,7 @@ tenorDecelWords = \lyricmode {
 
 bassDecel = \relative c' { %\autoBeamOff
   %\clef bass
-   \key aes \major \relative c' {
+   \key aes \major { \relative c' {
   R1 |
   R1*5/4 |
   R1 |
@@ -949,7 +970,7 @@ bassDecel = \relative c' { %\autoBeamOff
   aes,4-. r2. |
   g1^\espressivo |
   R1. |
-}   \key b \major {
+}}   \key b \major {
   cis2 e |
   R1*5/4 |
   R1 |
@@ -1055,9 +1076,10 @@ sopranoRestartsWords = \lyricmode {
 mezzoRestarts = \relative c' { %\autoBeamOff 
    \key cis \major {
   disis4 eis8.-. disis8. |
-}   \key ees \major \relative c'' {
+}   \key ees \major { \relative c'' {
   r8 g4^\mf e8 \times 2/3 { a4 ( g ) f }
-  \times 2/3 { d4^\mp ees f ~ } f8 g4 ees8 } \key c \major { a'4^\f |
+  \times 2/3 { d4^\mp ees f ~ } f8 g4 ees8
+}} \key c \major { a'4^\f |
   fis8 a gis fis |
   << { e4. ~ e8 dis8 
 } { 
@@ -1078,7 +1100,7 @@ mezzoRestartsWords = \lyricmode {
 altoRestarts = \relative c' { %\autoBeamOff
    \key cis \major {
   r4 r8. bis8. |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   r2 \times 2/3 { f4^\mf ( e ) d } |
   \times 2/3 { bes^\mp c d ~ } d8 ees4 d8 r4 |
   r4. } \key c \major { a8^\f |
@@ -1088,7 +1110,7 @@ altoRestarts = \relative c' { %\autoBeamOff
 s2^\> %s8
 s8^\p 
 } >> |
-}}
+}}}
 
 altoRestartsWords = \lyricmode {
   I'll
@@ -1100,7 +1122,7 @@ tenorRestarts = \relative c' { %\autoBeamOff
   %\clef "treble_8"
    \key cis \major {
   gis4 cis8.-. gis8. |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   R1 |
 \tupFrac
   \times 7/8 { aes4^\mp g f bes } g8 } \key c \major { a4 |
@@ -1111,7 +1133,7 @@ tenorRestarts = \relative c' { %\autoBeamOff
 s2^\> %s8
 s8^\p 
 } >> |
-}}
+}}}
 
 tenorRestartsWords = \lyricmode {
   Some day I'll
@@ -1122,7 +1144,7 @@ bassRestarts = \relative c { %\autoBeamOff
   %\clef bass
    \key cis \major {
   R1*5/8 |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   r8 g4^\mf cis,8 d2 |
   f2^\mp bes,4. ees8 } \key c \major { r4 |
   d^\f dis |
@@ -1132,7 +1154,7 @@ bassRestarts = \relative c { %\autoBeamOff
 s2^\> %s8
 s8^\p 
 } >> |
-}}
+}}}
 
 bassRestartsWords = \lyricmode {
   some day rain lul -- la -- by day wish on
@@ -1789,14 +1811,14 @@ sopranoRamp = \relative c' { %\autoBeamOff
   eis r eis4  |
 }   \key b \major {
   r8 fis ~ fis4 ~ fis4 r8 |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   bes2^\mf^\> ees4. |
-}   \key e \major {
+}}   \key e \major {
   e4 dis8 cis dis4 |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   d4^\mp bes8 c d4 |
   R4. |
-}}
+}}}
 
 sopranoRampWords = \lyricmode {
   where you'll find that's
@@ -1820,14 +1842,14 @@ mezzoRamp = \relative c' { %\autoBeamOff
   cis,4 ais' |
 }   \key b \major {
   r8 ~ cis ~ cis4 ~ cis r8 |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   bes2^\mf^\> g'4. |
-}   \key e \major {
+}}   \key e \major {
   fis,4 dis8 e fis4 |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   f4^\mp d8 ees f4 |
   r8 bes,4 |
-}}
+}}}
 
 mezzoRampWords = \lyricmode {
   where you'll find that's
@@ -1850,14 +1872,14 @@ altoRamp = \relative c' { %\autoBeamOff
   r4 cis |
 }   \key b \major {
   r8 dis ~ dis4 ~ dis r8 |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   r2 c4.^\mf^\> |
-}   \key e \major {
+}}   \key e \major {
   cis4 a b |
-}   \key ees \major \relative c' {
+}   \key ees \major { \relative c' {
   c^\mp bes aes |
   R4. |
-}}
+}}}
 
 altoRampWords = \lyricmode {
   where you'll find
@@ -1881,14 +1903,14 @@ tenorRamp = \relative c' { %\autoBeamOff
   ais4 fisis |
 }   \key b \major {
   r8 b ~ b4 ~ b r8 |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   g4^\mf^\> ( ees ) beses'4. ~ |
-}   \key e \major {
+}}   \key e \major {
   a8 gis fis e dis4^\mp ~ | % MAKE TIE!!!!
-}   \key ees \major \relative c {
+}   \key ees \major { \relative c {
   ees2 c4 |
   r4 g'8 ~ |
-}}
+}}}
 
 tenorRampWords = \lyricmode {
   where you'll find that's where you'll find that's
@@ -1940,9 +1962,9 @@ marksIfhap = {
 }
 
 sopranoIfhap = \relative c' { %\autoBeamOff
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   c4 ees c ees c | 
-}}
+}}}
 
 sopranoIfhapWords = \lyricmode {
   lit -- tle
@@ -1950,9 +1972,9 @@ sopranoIfhapWords = \lyricmode {
 }
 
 mezzoIfhap = \relative c' { %\autoBeamOff 
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   c4 ees c ees c |
-}}
+}}}
 
 mezzoIfhapWords = \lyricmode {
   hap -- py lit -- tle
@@ -1960,9 +1982,9 @@ mezzoIfhapWords = \lyricmode {
 }
 
 altoIfhap = \relative c' { %\autoBeamOff
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   r4 ees4 c ees c |
-}}
+}}}
 
 altoIfhapWords = \lyricmode {
   If hap -- py lit
@@ -1970,9 +1992,9 @@ altoIfhapWords = \lyricmode {
 
 tenorIfhap = \relative c' { %\autoBeamOff
   %\clef "treble_8"
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   r2. ees4 c |
-}}
+}}}
 
 tenorIfhapWords = \lyricmode {
   If hap
@@ -1980,9 +2002,9 @@ tenorIfhapWords = \lyricmode {
 
 bassIfhap = \relative c { %\autoBeamOff
   %\clef bass
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
    R4*5
-}}
+}}}
 
 bassIfhapWords = \lyricmode {
 }
@@ -2504,11 +2526,11 @@ sopranoWortspiel = \relative c' { %\autoBeamOff
   \times 2/3 { gis4^\subPd e' dis } b8 [ cis ] dis4 e |
   cis4 ais8 [ b ] cis4 dis |
   b r eis2^\< |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   d4^\mf f d f |
   d f ees f |
   g a2 r4 |
-}   \key b \major {
+}}   \key b \major {
   b2 gis' |
 }   \key d \major {
   r4 fis a fis |
@@ -2548,11 +2570,11 @@ mezzoWortspiel = \relative c' { %\autoBeamOff
   r2.\! bis4^\p bis |
   b4 ais8 [ gis ] b4 ais8 [ gis ] |
   fis4 r4 r2 |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   R1 |
   r2 bes4^\mf bes |
   bes a2 r4 |
-}   \key b \major {
+}}   \key b \major {
   gis2. ais4 |
 }   \key d \major {
   R1 |
@@ -2586,11 +2608,11 @@ altoWortspiel = \relative c' { %\autoBeamOff
   \times 2/3 { gis4^\subPd g fis } fis4 fis fis |
   e4 fis gis ais |
   b^\< ( cis ) cisis ( dis ) |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   \times 2/3 { c^\mf ( bes c } \times 2/3 { bes c bes } 
   \times 2/3 { c bes c ) } c d |
   ees f2 r4 |
-}   \key b \major {
+}}   \key b \major {
   R1 |
 }   \key d \major {
   \times 2/3 { r4 d ( e } \times 2/3 { d e d ) } |
@@ -2630,11 +2652,11 @@ tenorWortspiel = \relative c { %\autoBeamOff
   \times 2/3 { r4\! eis fis } dis gis^\p gisis |
   ais4 r r2 |
   ais4 r r2 |
-}   \key bes \major \relative c' {
+}   \key bes \major { \relative c' {
   R1 |
   R1 |
   r4 ees2^\mf r4 |
-}   \key b \major {
+}}   \key b \major {
   e2. r4 |
 }   \key d \major {
   R1 |
@@ -2716,7 +2738,7 @@ marksChipmunk = {
 }
 
 sopranoChipmunk = \relative c'' { %\autoBeamOff
-   \key aes \major \relative c'' {
+   \key aes \major { \relative c'' {
   ees2 |
   c4 ees c-. |
   b2 |
@@ -2726,7 +2748,7 @@ sopranoChipmunk = \relative c'' { %\autoBeamOff
   b4 gis8 [ a ] b4 cis |
   b,2 gis
   fis1 |
-}}
+}}}
 
 sopranoChipmunkWords = \lyricmode {
   if hap -- py lit
@@ -3018,9 +3040,9 @@ marksRealcome = {
 }
 
 sopranoRealcome = \relative c' { %\autoBeamOff
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   f4^mp^\< ees f g aes^\f
-}   \key a \major {
+}}   \key a \major {
   d4^\mp^\< e fis8 |
 }   \key cis \major {
   dis4^\> eis4 cis4.^\mp |
@@ -3036,10 +3058,10 @@ sopranoRealcomeWords = \lyricmode {
 }
 
 mezzoRealcome = \relative c' { %\autoBeamOff 
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   r2 r4 f^\< ees^\f |
-}   \key a \major {
-  cis'8^\mp^\< b4 b4 |
+}}   \key a \major {
+  cis8^\mp^\< b4 b4 |
 }   \key cis \major {
   cis4^\> cis cis4.^\mp |
 }}
@@ -3051,10 +3073,10 @@ mezzoRealcomeWords = \lyricmode {
 }
 
 altoRealcome = \relative c' { %\autoBeamOff
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   bes2^mp^\< c4 b c^\f |
-}   \key a \major {
-  a'^\mp^\< gis a8 |
+}}   \key a \major {
+  a^\mp^\< gis a8 |
 }   \key cis \major {
   ais4^\> gis gis4.^\mp |
 }}
@@ -3066,10 +3088,10 @@ altoRealcomeWords = \lyricmode {
 }
 
 tenorRealcome = \relative c' { %\autoBeamOff
-   \key ees \major \relative c' {
+   \key ees \major { \relative c' {
   bes2^mp^\< aes4 g f^\f |
-}   \key a \major {
-  fis4^\mp^\< e e8 |
+}}   \key a \major {
+  fis,4^\mp^\< e e8 |
 }   \key cis \major {
   fis4^\> fis eis4.^\mp |
 }}
@@ -3081,9 +3103,9 @@ tenorRealcomeWords = \lyricmode {
 }
 
 bassRealcome = \relative c { %\autoBeamOff
-\key ees \major \relative c {
+\key ees \major { \relative c {
   g4^mp^\< ~ g8 f ~ f4 d'4 f^\f |
-}   \key a \major {
+}}   \key a \major {
   d4.^\mp^\< e,4 |
 }   \key cis \major {
   gis4^\> gis cis4.^\mp |
@@ -3145,9 +3167,9 @@ altoLargeWords = \lyricmode {
 
 tenorLarge = \relative c' { %\autoBeamOff
   %\clef "treble_8"
-   \key bes \major \relative c' {
+   \key bes \major { \relative c' {
   c4^\mf a8 [ bes ] c8 |
-}   \key b \major {
+}}   \key b \major {
   cis8.. ais32 |
 }   \key a \major {
   b4^\> gis8 [ a\! ] r4 |
@@ -3161,9 +3183,9 @@ tenorLargeWords = \lyricmode {
 
 bassLarge = \relative c, { %\autoBeamOff
   %\clef bass
-   \key bes \major \relative c, {
+   \key bes \major { \relative c, {
   ees2^\mf f8 |
-}   \key b \major {
+}}   \key b \major {
   cis'4 |
 }   \key a \major {
   d,^\> e4\! r |
@@ -3407,18 +3429,18 @@ sopranoFinale = \relative c'' {
   \key d \major {
     d'2 e4
   }
-  \key ais \major {
+  \key ais \minor {
     ais,4^> ais^> ais^> ais^> ais^> |
   }
   \key d \major {
     d ( cis ) e dis | % why if hap (4, 3)
   }
-  \key gis \major {
-    dis,2^\mf bis'4 |
-    ais2 |
+  \key ees \major {
+    ees,2^\mf c'4 |
+    bes2 |
   }
   \key b \major {
-    e4 e'^\f dis |
+    e,4 e'^\f dis |
   }
   \key d \major {
     d2 e4 |
@@ -3451,26 +3473,56 @@ sopranoFinaleWords = \lyricmode {
 }
 
 mezzoFinale = \relative c' {
-  e4 dis
-  fis^\mf d cis'^\f |
-  b ais a gis f fis |
-  cis'2^\subPd^\< b |
-  d cis4^\ff |
-  e,2^\mf e4 g^\f |
-  fis b ais |
-  c,4^\p^\< c c c |
-  c c c^\f |
-  c^\p^\< c c c^\f |
-  d4 ( cis ) cis |
-  ais'4^> ais^> ais^> ais^> ais^> |
-  b2 b4 b |
-  bis,2^\mf gis'4 |
-  fisis2 |
-  cis4 c'^\f b |
-  cis2 b4 |
-  fis4.^\> ( dis ) |
-  e4^\mf^\< ( dis ) cis | 
-  e^\f dis
+  \key e \major {
+    e4 dis |
+  }
+  \key d \major {
+    fis^\mf d cis'^\f |
+  }
+  \key b \major {
+    b ais a gis f fis |
+  }
+  \key d \major {
+    cis'2^\subPd^\< b |
+    d cis4^\ff |
+  } 
+  \key c \major {
+    e,2^\mf e4 g^\f |
+  }
+  \key b \major {
+    fis b ais |
+  }
+  \key c \major {
+    c,4^\p^\< c c c |
+    c c c^\f |
+    c^\p^\< c c c^\f |
+  }
+  \key d \major {
+    d4 ( cis ) cis |
+  }
+  \key ais \minor {
+    ais'4^> ais^> ais^> ais^> ais^> |
+  }
+  \key d \major {
+    b2 b4 b |
+  }
+  \key ees \major {
+    c,2^\mf aes'4 |
+    g2 |
+  }
+  \key b \major {
+    cis,4 c'^\f b |
+  }
+  \key d \major {
+    cis2 b4 |
+  }
+  \key e \major {
+    fis4.^\> ( dis ) |
+    e4^\mf^\< ( dis ) cis | 
+  }
+  \key fis \major {
+    e^\f dis
+  }
 }
 
 mezzoFinaleWords = \lyricmode {
@@ -3492,26 +3544,56 @@ mezzoFinaleWords = \lyricmode {
 }
 
 altoFinale = \relative c' { %\autoBeamOff
-  R2 |
-  d8^\mf [ e ] fis [ d ] ais'4^\f |
-  dis b dis b cis dis |
-  fis,2^\subPd^\< gis |
-  a2 a4\! |
-  g2^\mf g4 e^\f |
-  gis fis2 |
-  R1 |
-  R2. |
-  e4^\p^\< ees d cis^\f |
-  a4 ( b ) cis |
-  ais4^> ais^> ais^> ais^> ais^> |
-  a2 fis'4 fis |
-  des4^\mf bis bis |
-  \times 2/3 { bis ( cisis ) bis } |
-  gis4 fis^\f fis |
-  a a'2 |
-  fis2.^\> |
-  e2.^\mf^\< |
-  cis4^\f cis |
+  \key e \major {
+    R2 |
+  }
+  \key d \major {
+    d8^\mf [ e ] fis [ d ] ais'4^\f |
+  }
+  \key b \major {
+    dis b dis b cis dis |
+  }
+  \key d \major {
+    fis,2^\subPd^\< gis |
+    a2 a4\! |
+  }
+  \key c \major {
+    g2^\mf g4 e^\f |
+  }
+  \key b \major {
+    gis fis2 |
+  }
+  \key c \major {
+    R1 |
+    R2. |
+    e4^\p^\< ees d cis^\f |
+  }
+  \key d \major {
+    a4 ( b ) cis |
+  }
+  \key ais \minor {
+    ais4^> ais^> ais^> ais^> ais^> |
+  }
+  \key d \major {
+    a2 fis'4 fis |
+  }
+  \key ees \major {
+    des4^\mf c c |
+    \times 2/3 { c ( d ) c } |
+  }
+  \key b \major {
+    gis4 fis^\f fis |
+  }
+  \key d \major {
+    a a'2 |
+  }
+  \key e \major {
+    fis2.^\> |
+    e2.^\mf^\< |
+  }
+  \key fis \major {
+    cis4^\f cis |
+  }
 }
 
 altoFinaleWords = \lyricmode {
@@ -3530,26 +3612,56 @@ altoFinaleWords = \lyricmode {
 }
 
 tenorFinale = \relative c { %\autoBeamOff
-  e4 gis |
-  b^\mf b eis^\f |
-  fis f e dis d cis |
-  e2^\subPd^\< d |
-  d cis4^\ff |
-  c2^\mf c4 c^\f |
-  b dis fis |
-  c^\p^\< b bes a |
-  aes a fis^\f |
-  c'^\p^\< b bes a^\f |
-  fis2 e4 |
-  ais4^> ais^> ais^> ais^> ais^> |
-  fis'2 b,4 b |
-  gis2^\mf fis4 |
-  fisis4 dis |
-  gis4 cis^\f dis |
-  fis2. |
-  dis2.^\> |
-  e2^\mf^\< e4 |
-  ais,4^\f a |
+  \key e \major {
+    e4 gis |
+  }
+  \key d \major {
+    b^\mf b eis^\f |
+  }
+  \key b \major {
+    fis f e dis d cis |
+  }
+  \key d \major {
+    e2^\subPd^\< d |
+    d cis4^\ff |
+  }
+  \key c \major {
+    c2^\mf c4 c^\f |
+  }
+  \key b \major {
+    b dis fis |
+  }
+  \key c \major {
+    c^\p^\< b bes a |
+    aes a fis^\f |
+    c'^\p^\< b bes a^\f |
+  }
+  \key d \major {
+    fis2 e4 |
+  }
+  \key ais \minor {
+    ais4^> ais^> ais^> ais^> ais^> |
+  }
+  \key d \major {
+    fis'2 b,4 b |
+  }
+  \key ees \major {
+    aes2^\mf fis4 |
+    g4 ees |
+  }
+  \key b \major {
+    gis4 cis^\f dis |
+  }
+  \key d \major {
+    fis2. |
+  }
+  \key e \major {
+    dis2.^\> |
+    e2^\mf^\< e4 |
+  }
+  \key fis \major {
+    ais,4^\f a |
+  }
 }
 
 tenorFinaleWords = \lyricmode {
@@ -3571,26 +3683,56 @@ tenorFinaleWords = \lyricmode {
 }
 
 bassFinale = \relative c {
-  R2 |
-  g4^\mf g g^\f |
-  fis1. |
-  d'4^\subPd^\< a2 d4 ~ |
-  d g,2^\ff |
-  d'4^\mf ( cis ) c e,^\f |
-  fis2. |
-  R1 |
-  R2. |
-  R1 |
-  b'4 ( a ) g | % why oh
-  ais,^> ais^> ais^> ais^> ais^> |
-  dis2 g,4 fis |
-  gis2^\mf gisis4 |
-  ais4 bis |
-  e4 fis,^\f fis |
-  e' ( d ) d | % why oh
-  a2^\> b4 ~ |
-  b^\mf^\< fis' e |
-  g^\f fis |
+  \key e \major {
+    R2 |
+  }
+  \key d \major {
+    g4^\mf g g^\f |
+  }
+  \key b \major {
+    fis1. |
+  }
+  \key d \major {
+    d'4^\subPd^\< a2 d4 ~ |
+    d g,2^\ff |
+  }
+  \key c \major {
+    d'4^\mf ( cis ) c e,^\f |
+  }
+  \key b \major {
+    fis2. |
+  }
+  \key c \major {
+    R1 |
+    R2. |
+    R1 |
+  }
+  \key d \major {
+    b'4 ( a ) g | % why oh
+  }
+  \key ais \minor {
+    ais,^> ais^> ais^> ais^> ais^> |
+  }
+  \key d \major {
+    dis2 g,4 fis |
+  }
+  \key ees \major {
+    aes2^\mf a4 |
+    bes4 c |
+  }
+  \key b \major {
+    e4 fis,^\f fis |
+  }
+  \key d \major {
+    e' ( d ) d | % why oh
+  }
+  \key e \major {
+    a2^\> b4 ~ |
+    b^\mf^\< fis' e |
+  }
+  \key fis \major {
+    g^\f fis |
+  }
 }
 
 bassFinaleWords = \lyricmode {
@@ -3618,234 +3760,234 @@ bassFinaleWords = \lyricmode {
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
         \sopranoBeginning
-        \sopranoRestarts
-        \sopranoRamp
-        \sopranoWinding
-        \sopranoLarge
-        \sopranoTriumphal
-        \sopranoElan
-        \sopranoSugar
-        \sopranoOpera
-        \sopranoRealcome
-        \sopranoSurprises
-        \sopranoWortspiel
-        \sopranoCartoon
-        \sopranoIfhap
-        \sopranoProof
-        \sopranoFinale
-        \sopranoStutter
-        \sopranoDenouement
+%{!%}        \sopranoRestarts
+%{!%}        \sopranoRamp
+%{!%}        \sopranoWinding
+%{!%}        \sopranoLarge
+%{!%}        \sopranoTriumphal
+%{!%}        \sopranoElan
+%{!%}        \sopranoSugar
+%{!%}        \sopranoOpera
+%{!%}        \sopranoRealcome
+%{!%}        \sopranoSurprises
+%{!%}        \sopranoWortspiel
+%{!%}        \sopranoCartoon
+%{!%}        \sopranoIfhap
+%{!%}        \sopranoProof
+%{!%}        \sopranoFinale
+%{!%}        \sopranoStutter
+%{!%}        \sopranoDenouement
       } {
         \marksBeginning
-        \marksRestarts
-        \marksRamp
-        \marksWinding
-        \marksLarge
-        \marksTriumphal
-        \marksElan
-        \marksSugar
-        \marksOpera
-        \marksRealcome
-        \marksSurprises
-        \marksWortspiel
-        \marksCartoon
-        \marksIfhap
-        \marksProof
-        \marksFinale
-        \marksStutter
-        \marksDenouement
+%{!%}        \marksRestarts
+%{!%}        \marksRamp
+%{!%}        \marksWinding
+%{!%}        \marksLarge
+%{!%}        \marksTriumphal
+%{!%}        \marksElan
+%{!%}        \marksSugar
+%{!%}        \marksOpera
+%{!%}        \marksRealcome
+%{!%}        \marksSurprises
+%{!%}        \marksWortspiel
+%{!%}        \marksCartoon
+%{!%}        \marksIfhap
+%{!%}        \marksProof
+%{!%}        \marksFinale
+%{!%}        \marksStutter
+%{!%}        \marksDenouement
       } >> }
       \new Lyrics \lyricsto "soprano" {
-        \sopranoBeginningWords
-        \sopranoRestartsWords
-        \sopranoRampWords
-        \sopranoWindingWords
-        \sopranoLargeWords
-        \sopranoTriumphalWords
-        \sopranoElanWords
-        \sopranoSugarWords
-        \sopranoOperaWords
-        \sopranoRealcomeWords
-        \sopranoSurprisesWords
-        \sopranoWortspielWords
-        \sopranoCartoonWords
-        \sopranoIfhapWords
-        \sopranoProofWords
-        \sopranoFinaleWords
-        \sopranoStutterWords
-        \sopranoDenouementWords
+%{!%}        \sopranoBeginningWords
+%{!%}        \sopranoRestartsWords
+%{!%}        \sopranoRampWords
+%{!%}        \sopranoWindingWords
+%{!%}        \sopranoLargeWords
+%{!%}        \sopranoTriumphalWords
+%{!%}        \sopranoElanWords
+%{!%}        \sopranoSugarWords
+%{!%}        \sopranoOperaWords
+%{!%}        \sopranoRealcomeWords
+%{!%}        \sopranoSurprisesWords
+%{!%}        \sopranoWortspielWords
+%{!%}        \sopranoCartoonWords
+%{!%}        \sopranoIfhapWords
+%{!%}        \sopranoProofWords
+%{!%}        \sopranoFinaleWords
+%{!%}        \sopranoStutterWords
+%{!%}        \sopranoDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
-        \mezzoBeginning
-        \mezzoRestarts
-        \mezzoRamp
-        \mezzoWinding
-        \mezzoLarge
-        \mezzoTriumphal
-        \mezzoElan
-        \mezzoSugar
-        \mezzoOpera
-        \mezzoRealcome
-        \mezzoSurprises
-        \mezzoWortspiel
-        \mezzoCartoon
-        \mezzoIfhap
-        \mezzoProof
-        \mezzoFinale
-        \mezzoStutter
-        \mezzoDenouement
+%{!%}        \mezzoBeginning
+%{!%}        \mezzoRestarts
+%{!%}        \mezzoRamp
+%{!%}        \mezzoWinding
+%{!%}        \mezzoLarge
+%{!%}        \mezzoTriumphal
+%{!%}        \mezzoElan
+%{!%}        \mezzoSugar
+%{!%}        \mezzoOpera
+%{!%}        \mezzoRealcome
+%{!%}        \mezzoSurprises
+%{!%}        \mezzoWortspiel
+%{!%}        \mezzoCartoon
+%{!%}        \mezzoIfhap
+%{!%}        \mezzoProof
+%{!%}        \mezzoFinale
+%{!%}        \mezzoStutter
+%{!%}        \mezzoDenouement
       }
       \new Lyrics \lyricsto "mezzo" {
-        \mezzoBeginningWords
-        \mezzoRestartsWords
-        \mezzoRampWords
-        \mezzoWindingWords
-        \mezzoLargeWords
-        \mezzoTriumphalWords
-        \mezzoElanWords
-        \mezzoSugarWords
-        \mezzoOperaWords
-        \mezzoRealcomeWords
-        \mezzoSurprisesWords
-        \mezzoWortspielWords
-        \mezzoCartoonWords
-        \mezzoIfhapWords
-        \mezzoProofWords
-        \mezzoFinaleWords
-        \mezzoStutterWords
-        \mezzoDenouementWords
+%{!%}        \mezzoBeginningWords
+%{!%}        \mezzoRestartsWords
+%{!%}        \mezzoRampWords
+%{!%}        \mezzoWindingWords
+%{!%}        \mezzoLargeWords
+%{!%}        \mezzoTriumphalWords
+%{!%}        \mezzoElanWords
+%{!%}        \mezzoSugarWords
+%{!%}        \mezzoOperaWords
+%{!%}        \mezzoRealcomeWords
+%{!%}        \mezzoSurprisesWords
+%{!%}        \mezzoWortspielWords
+%{!%}        \mezzoCartoonWords
+%{!%}        \mezzoIfhapWords
+%{!%}        \mezzoProofWords
+%{!%}        \mezzoFinaleWords
+%{!%}        \mezzoStutterWords
+%{!%}        \mezzoDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
-        \altoBeginning
-        \altoRestarts
-        \altoRamp
-        \altoWinding
-        \altoLarge
-        \altoTriumphal
-        \altoElan
-        \altoSugar
-        \altoOpera
-        \altoRealcome
-        \altoSurprises
-        \altoWortspiel
-        \altoCartoon
-        \altoIfhap
-        \altoProof
-        \altoFinale
-        \altoStutter
-        \altoDenouement
+%{!%}        \altoBeginning
+%{!%}        \altoRestarts
+%{!%}        \altoRamp
+%{!%}        \altoWinding
+%{!%}        \altoLarge
+%{!%}        \altoTriumphal
+%{!%}        \altoElan
+%{!%}        \altoSugar
+%{!%}        \altoOpera
+%{!%}        \altoRealcome
+%{!%}        \altoSurprises
+%{!%}        \altoWortspiel
+%{!%}        \altoCartoon
+%{!%}        \altoIfhap
+%{!%}        \altoProof
+%{!%}        \altoFinale
+%{!%}        \altoStutter
+%{!%}        \altoDenouement
       }
       \new Lyrics \lyricsto "alto" {
-        \altoBeginningWords
-        \altoRestartsWords
-        \altoRampWords
-        \altoWindingWords
-        \altoLargeWords
-        \altoTriumphalWords
-        \altoElanWords
-        \altoSugarWords
-        \altoOperaWords
-        \altoRealcomeWords
-        \altoSurprisesWords
-        \altoWortspielWords
-        \altoCartoonWords
-        \altoIfhapWords
-        \altoProofWords
-        \altoFinaleWords
-        \altoStutterWords
-        \altoDenouementWords
+%{!%}        \altoBeginningWords
+%{!%}        \altoRestartsWords
+%{!%}        \altoRampWords
+%{!%}        \altoWindingWords
+%{!%}        \altoLargeWords
+%{!%}        \altoTriumphalWords
+%{!%}        \altoElanWords
+%{!%}        \altoSugarWords
+%{!%}        \altoOperaWords
+%{!%}        \altoRealcomeWords
+%{!%}        \altoSurprisesWords
+%{!%}        \altoWortspielWords
+%{!%}        \altoCartoonWords
+%{!%}        \altoIfhapWords
+%{!%}        \altoProofWords
+%{!%}        \altoFinaleWords
+%{!%}        \altoStutterWords
+%{!%}        \altoDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
-        \tenorBeginning
-        \tenorRestarts
-        \tenorRamp
-        \tenorWinding
-        \tenorLarge
-        \tenorTriumphal
-        \tenorElan
-        \tenorSugar
-        \tenorOpera
-        \tenorRealcome
-        \tenorSurprises
-        \tenorWortspiel
-        \tenorCartoon
-        \tenorIfhap
-        \tenorProof
-        \tenorFinale
-        \tenorStutter
-        \tenorDenouement
+%{!%}        \tenorBeginning
+%{!%}        \tenorRestarts
+%{!%}        \tenorRamp
+%{!%}        \tenorWinding
+%{!%}        \tenorLarge
+%{!%}        \tenorTriumphal
+%{!%}        \tenorElan
+%{!%}        \tenorSugar
+%{!%}        \tenorOpera
+%{!%}        \tenorRealcome
+%{!%}        \tenorSurprises
+%{!%}        \tenorWortspiel
+%{!%}        \tenorCartoon
+%{!%}        \tenorIfhap
+%{!%}        \tenorProof
+%{!%}        \tenorFinale
+%{!%}        \tenorStutter
+%{!%}        \tenorDenouement
       }
       \new Lyrics \lyricsto "tenor" {
-        \tenorBeginningWords
-        \tenorRestartsWords
-        \tenorRampWords
-        \tenorWindingWords
-        \tenorLargeWords
-        \tenorTriumphalWords
-        \tenorElanWords
-        \tenorSugarWords
-        \tenorOperaWords
-        \tenorRealcomeWords
-        \tenorSurprisesWords
-        \tenorWortspielWords
-        \tenorCartoonWords
-        \tenorIfhapWords
-        \tenorProofWords
-        \tenorFinaleWords
-        \tenorStutterWords
-        \tenorDenouementWords
+%{!%}        \tenorBeginningWords
+%{!%}        \tenorRestartsWords
+%{!%}        \tenorRampWords
+%{!%}        \tenorWindingWords
+%{!%}        \tenorLargeWords
+%{!%}        \tenorTriumphalWords
+%{!%}        \tenorElanWords
+%{!%}        \tenorSugarWords
+%{!%}        \tenorOperaWords
+%{!%}        \tenorRealcomeWords
+%{!%}        \tenorSurprisesWords
+%{!%}        \tenorWortspielWords
+%{!%}        \tenorCartoonWords
+%{!%}        \tenorIfhapWords
+%{!%}        \tenorProofWords
+%{!%}        \tenorFinaleWords
+%{!%}        \tenorStutterWords
+%{!%}        \tenorDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
-        \bassBeginning
-        \bassRestarts
-        \bassRamp
-        \bassWinding
-        \bassLarge
-        \bassTriumphal
-        \bassElan
-        \bassSugar
-        \bassOpera
-        \bassRealcome
-        \bassSurprises
-        \bassWortspiel
-        \bassCartoon
-        \bassIfhap
-        \bassProof
-        \bassFinale
-        \bassStutter
-        \bassDenouement
+%{!%}        \bassBeginning
+%{!%}        \bassRestarts
+%{!%}        \bassRamp
+%{!%}        \bassWinding
+%{!%}        \bassLarge
+%{!%}        \bassTriumphal
+%{!%}        \bassElan
+%{!%}        \bassSugar
+%{!%}        \bassOpera
+%{!%}        \bassRealcome
+%{!%}        \bassSurprises
+%{!%}        \bassWortspiel
+%{!%}        \bassCartoon
+%{!%}        \bassIfhap
+%{!%}        \bassProof
+%{!%}        \bassFinale
+%{!%}        \bassStutter
+%{!%}        \bassDenouement
       }
       \new Lyrics \lyricsto "bass" {
-        \bassBeginningWords
-        \bassRestartsWords
-        \bassRampWords
-        \bassWindingWords
-        \bassLargeWords
-        \bassTriumphalWords
-        \bassElanWords
-        \bassSugarWords
-        \bassOperaWords
-        \bassRealcomeWords
-        \bassSurprisesWords
-        \bassWortspielWords
-        \bassCartoonWords
-        \bassIfhapWords
-        \bassProofWords
-        \bassFinaleWords
-        \bassStutterWords
-        \bassDenouementWords
+%{!%}        \bassBeginningWords
+%{!%}        \bassRestartsWords
+%{!%}        \bassRampWords
+%{!%}        \bassWindingWords
+%{!%}        \bassLargeWords
+%{!%}        \bassTriumphalWords
+%{!%}        \bassElanWords
+%{!%}        \bassSugarWords
+%{!%}        \bassOperaWords
+%{!%}        \bassRealcomeWords
+%{!%}        \bassSurprisesWords
+%{!%}        \bassWortspielWords
+%{!%}        \bassCartoonWords
+%{!%}        \bassIfhapWords
+%{!%}        \bassProofWords
+%{!%}        \bassFinaleWords
+%{!%}        \bassStutterWords
+%{!%}        \bassDenouementWords
       }
     >>
   >>
@@ -3881,7 +4023,7 @@ bassFinaleWords = \lyricmode {
 }
 
 %%% MIDI
-
+%{
 \score {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
@@ -4123,3 +4265,4 @@ bassFinaleWords = \lyricmode {
   >>
   \midi {}
 }
+%}

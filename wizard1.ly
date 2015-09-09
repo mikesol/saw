@@ -262,9 +262,9 @@ alto = \relative c' { \autoBeamOff
   e f e |
   ees4 d8 |
   fes ges g |
-  g4 ees8 |
-  d4. ~ |
-  d8 r \MyRed ees |
+  g4 d8 |
+  b4. ~ |
+  b8 r \MyRed ees |
   f8 f f |
   f f g |
   aes4 ees8 |
@@ -345,8 +345,8 @@ tenor = \relative c { \autoBeamOff
   %gis4. ( |
   %a8 ) r c8 |
   ees4 a,8 |
-  b4. ~ |
-  b8 r c8 |
+  f4. ~ |
+  f8 r c'8 |
   des d c |
   e8 d bes |
   ees4 bes8 |

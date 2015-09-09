@@ -352,11 +352,11 @@ mezzo = \relative c'' {
   a4. gis8 ~ gis2 |
   r8 gis4. fis4 eis |
   gis4. fis8 ~ fis2 |
-  r8 fis4. e4 dis |
+  r8 fis4. e4 d |
   fis2 f |
   e e |
   d cis |
-  r8 b4. d4 fis |
+  r8 b4. d4 g |
   a ais a fis |
   cis8 a cis e ~ e cis e gis ~ |
   gis e gis b r ais4. |
@@ -559,7 +559,7 @@ alto = \relative c' {
   cis cis |
   cis ais |
   r8 a4. b4 dis |
-  fis gis fis d |
+  fis g fis d |
   b8 gis b dis ~ dis b dis fis ~ |
   fis dis fis gis r gis4. | 
   R1 |
