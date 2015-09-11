@@ -32,12 +32,19 @@ myfinalgreen = \mydarkgreen
 myfinaldarkmagenta = \mydarkmagenta
 myfinaldarkyellow = \mydarkyellow
 
-mFR = \myfinalred
-mFB = \myfinalblue 
-mFO = \myfinalorange
-mFG = \myfinalgreen 
-mFM = \myfinaldarkmagenta
-mFY = \myfinaldarkyellow
+%mFR = \myfinalred
+%mFB = \myfinalblue 
+%mFO = \myfinalorange
+%mFG = \myfinalgreen 
+%mFM = \myfinaldarkmagenta
+%mFY = \myfinaldarkyellow
+
+mFR = {}
+mFB = {}
+mFO = {}
+mFG = {}
+mFM = {}
+mFY = {}
 
 
 
@@ -65,7 +72,6 @@ mFY = \myfinaldarkyellow
 
 prefatoryMatter = {
   \autoBeamOff
-  \key aes \major
 }
 
 marksChoraleBad = {
@@ -73,10 +79,11 @@ marksChoraleBad = {
   \time 4/4
   \partial 4
   s4 |
-  s1 |
+  s1*27 |
 }
 
 sopranoChoraleBad = \relative c'' {
+  \key aes \major
   bes4 |
   c aes ees f |
   aes c2 c4 |
@@ -120,36 +127,16 @@ sopranoChoraleBadWords = \lyricmode {
 }
 
 mezzoChoraleBad = \relative c' {
+  \key aes \major
   r4 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
+  R1*24 |
 }
 
 mezzoChoraleBadWords = \lyricmode {
 }
 
 altoChoraleBad = \relative c' {
+  \key aes \major
   des4 |
   c c c des |
   ees f2 ees4 |
@@ -195,6 +182,7 @@ altoChoraleBadWords = \lyricmode {
 
 tenorChoraleBad = \relative c' {
   \clef "treble_8"
+  \key aes \major
   g4 |
   aes aes aes aes |
   aes aes2 ges4 |
@@ -241,6 +229,7 @@ tenorChoraleBadWords = \lyricmode {
 
 bassChoraleBad = \relative c {
   \clef "bass"
+  \key aes \major
   ees4 |
   aes,4 c ees des |
   c f f, a |
@@ -292,10 +281,11 @@ marksChorale = {
   \time 4/4
   \partial 4
   s4 |
-  s1 |
+  s1*24 |
 }
 
 sopranoChorale = \relative c' {
+  \key aes \major
   \key aes \major
   ees4 |
   aes ees c des |
@@ -340,11 +330,9 @@ sopranoChoraleWords = \lyricmode {
 }
 
 mezzoChorale = \relative c' {
+  \key aes \major
   r4 |
-  R1 |
-  R1 |
-  R1 |
-  R1 |
+  R1*24 |
 }
 
 mezzoChoraleWords = \lyricmode {
@@ -352,6 +340,7 @@ mezzoChoraleWords = \lyricmode {
 
 altoChorale = \relative c {
   \clef "treble_8"
+  \key aes \major
   r4 |
   R1 |
   ees2\startGroup ees\stopGroup |
@@ -376,8 +365,8 @@ altoChorale = \relative c {
   bes bes8 bes bes4 bes8 bes\stopGroup |
   g4\startGroup g8 g f4 f\stopGroup |
   ees'\startGroup c\stopGroup f4\startGroup f8 g |
-  aes4\stopGroup des,\startGroup ees\stopGroup g8 g\startGroup |
-  f1\stopGroup
+  aes4\stopGroup des,\startGroup ees\stopGroup g8\startGroup g |
+  f4\stopGroup ees2 f4 |
 }
 
 altoChoraleWords = \lyricmode {
@@ -398,16 +387,18 @@ altoChoraleWords = \lyricmode {
   ver oh ev -- er a wiz
   there was
   ev -- er oh ev
-  be -- cause of the won -- der -- ful things he does
+  be -- cause of the won -- der -- ful
   wiz of a wiz if
   to see
   ev -- er a wiz
   the wiz
-  of a
+  of a wiz
+  does We're
 }
 
 tenorChorale = \relative c' {
   \clef "treble_8"
+  \key aes \major
   r4 |
   c4\startGroup des8 bes aes4\stopGroup bes\startGroup |
   des c bes aes\stopGroup |
@@ -432,7 +423,7 @@ tenorChorale = \relative c' {
   c4 bes aes aes |
   aes aes aes'\stopGroup f4\startGroup |
   f4 f8 f\stopGroup des4\startGroup ees\stopGroup |
- 
+  c4\startGroup des8 bes\stopGroup c4 b |
 }
 
 tenorChoraleWords = \lyricmode {
@@ -457,10 +448,12 @@ tenorChoraleWords = \lyricmode {
   wiz of a wiz
   is one be -- cause be -- cause be -- cause
   if ev -- er oh the wiz
+  Wi -- zard of Oz We're
 }
 
 bassChorale = \relative c' {
   \clef "bass"
+  \key aes \major
   r4 |
   R1*8 |
   des4\startGroup c8 bes aes4 g8 f |
@@ -478,7 +471,7 @@ bassChorale = \relative c' {
   aes,1 |
   c4\startGroup ees des des8 c |
   bes4\stopGroup bes\startGroup g ees\stopGroup |
-  f\startGroup f8 g aes4\stopGroup
+  f\startGroup f8 g aes4\stopGroup d4 |
 }
 
 bassChoraleWords = \lyricmode {
@@ -503,53 +496,343 @@ bassChoraleWords = \lyricmode {
   was the Wi -- zard of Oz
   wiz there was
   ev -- er a wiz
+  We're
 }
 
 marksCinqVoix = {
   \tempo "Adagio" 4=68
   \time 4/4
+  s1*5 |
+  \time 3/4
+  s2.*8 |
+  \time 4/4
+  s1*8 |
+  \time 3/4
+  s2.*4 |
+  \time 4/4
+  s1*4 |
+  \time 3/4
+  s2.*4 |
+  \time 4/4
+  s1*2 |
 }
 
 sopranoCinqVoix = \relative c'' {
   \key c \major
   s2. g4 |
+  c g e f |
+  g c ~ c g |
+  a g8 f e4 f8 d |
+  c8 [ d e f g a ] b [ c ] |
+  d4 ( c ) a |
+  c2 c4 |
+  b4 b b |
+  a2 a4 |
+  d d d |
+  d2 b4 |
+  g2. ~ |
+  g2 g4 |
+  a2 a4 a |
+  a2 a4 b |
+  \key a \major
+  cis2 a |
+  e g4 cis |
+  d2 d4 cis |
+  b2 d |
+  \key fis \major
+  cis2. b4 |
+  ais2 ais |
+  \key d \major
+  fis2 fis4 |
+  fis'2 fis4 |
+  eis2 eis4 |
+  e2 e4 |
+  \key g \major
+  a2. r4 |
+  r d, ~ d8 r a'4 |
+  a a8 a a4 a8 a |
+  a4 fis d r8 ees |
+  \key bes \major
+  bes'2 ~ \times 2/3 { bes8 a bes } |
+  a2 ~ \times 2/3 { a8 gis a } |
+  gis2. |
+  g |
+  \key c \major
+  b4 g e f |
+  g b ~ b ees, |
 }
 
 sopranoCinqVoixWords = \lyricmode {
+  We're off to see the Wi -- zard
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he is a wiz of a wiz.
+  If ev -- er a wiz there was.
+  If ev -- er, oh ev -- er a wiz there was,
+  Oh the Wi -- zard of Oz is one be -- cause.
+  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  ful
+  Be -- cause of the won -- der -- ful things he does.
+  The Won -- der -- ful things that he does.
+  We're off to see the Wi -- zard of
 }
 
-mezzoCinqVoix = \relative c' {
+mezzoCinqVoix = \relative c'' {
   \key c \major
   s1 |
+  g4 e e d |
+  e g ~ g e |
+  f4 e8 d c4 d8 c |
+  a [ b c d e f ] g [ a ] |
+  g2 ges4 |
+  b4 g a |
+  fis fis f |
+  gis ( fis ) f |
+  bes bes c |
+  bes ( a ) g |
+  f4 e d |
+  f e ees |
+  f2 g4 ges |
+  f ( e ) fis gis |
+  \key a \major
+  gis ( g ) fis ( f ) |
+  cis2 e4 ais |
+  a ( gis ) b a |
+  gis ( a ) ais ( b ) |
+  \key fis \major
+  ais2 a4 fisis |
+  gis2 fisis4 ( fis ) |
+  \key d \major
+  e2 e4 |
+  cis'4 ( c ) b |
+  ais ( b ) c |
+  b ( bes ) a |
+  \key g \major
+  e'4 d8 e d4 gis, |
+  c8 b a g fis a d e |
+  ees d c b a eis' cis c |
+  e d c b a gis g c |
+  \key bes \major
+  d2. |
+  ees4 e f |
+  ees e f |
+  e4 bes ees |
+  \key c \major
+  g4 e c b |
+  cis f8 e ees d cis c |
 }
 
 mezzoCinqVoixWords = \lyricmode {
+  off to see the Wi -- zard
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he Wi -- zard a wiz of a wiz.
+  If ev -- er a wiz there
+  ev -- er, oh ev -- er.
+  If ev -- er, oh ev -- er a wiz there was,
+  Oh the Wi -- zard of Oz is one, one be -- cause.
+  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  ful the Won be
+  Ma -- gi -- cal re -- mar -- ka -- ble
+  In -- cre -- di -- ble as -- to -- nish -- ing
+  Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
+  Won things that he
+  Won -- der -- ful
+  Wi -- zard.
+  We're off to see the Wi -- zard the won -- der -- ful of
 }
 
-altoCinqVoix = \relative c {
+altoCinqVoix = \relative c' {
   \key c \major
   s1 |
+  e4 e c c |
+  c e ~ e c |
+  e d8 c b4 c8 a |
+  g [ a b c d e ] f [ g ] |
+  e2 ees4 |
+  g4 d ees |
+  e d d |
+  e2 ees4 |
+  a4 g aes |
+  g2 e4 |
+  c4 c b |
+  d d des |
+  e4 ( ees ) e ees |
+  d ( cis ) d f |
+  \key a \major
+  f ( e ) ees ( d ) |
+  b ( a )  d gis |
+  fis ( eis ) g f |
+  f ( fis ) g ( gis ) |
+  \key fis \major
+  eis e g eis |
+  dis ( eis ) eis ( e ) |
+  \key d \major
+  cis2 ais4 |
+  ais' ( a )  gis |
+  fisis ( gis ) a |
+  gis ( g ) fis |
+  \key g \major
+  fis2 ~ fis8 e d c |
+  gis a c b a4 fis' |
+  fis4. e8 e gis g a |
+  b a a gis fis e ees a |
+  \key bes \major
+  a4 aes b |
+  c cis d |
+  c2 b4 ~ |
+  b4 g b |
+  \key c \major
+  c8 [ b ] bes [ a ] aes [ a ] dis, [ e ] |
+  f [ a ] aes bes a gis a bes |
 }
 
 altoCinqVoixWords = \lyricmode {
+  off to see the Wi -- zard
+  The Won -- der -- ful Wi -- zard of Oz.
+  We hear he Wi -- zard a wiz of a wiz.
+  If ev -- er a wiz there
+  ev -- er, oh ev -- er.
+  If ev -- er, oh ev -- er a wiz there was,
+  Oh the Wi -- zard of Oz is one, is one be -- cause.
+  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  der -- ful the
+  Ma -- gi -- cal re -- mar
+  Be -- cause
+  as -- to -- nish -- ing
+  Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
+  Won -- der -- ful things that he
+  Won ful zard. We're
+  off to see the Wi -- zard the won -- der -- ful of
 }
 
 tenorCinqVoix = \relative c' {
   \clef "treble_8"
   \key c \major
   s1 |
+  e4 c c g |
+  a g f e |
+  c' b8 a b4 a8 f |
+  e [ f g a b c ] d [ e ] |
+  c2 c4 |
+  d4 b ees |
+  c a b |
+  c2 c4 |
+  f f f |
+  ees2 cis4 |
+  a g f |
+  c' b a |
+  c2 c4 c |
+  b4 ( ais ) cis d |
+  \key a \major
+  d ( b ) cis ( bes ) |
+  gis ( fis ) bes e |
+  cis2 e4 ees |
+  d4 ( dis ) e ( f ) |
+  \key fis \major
+  dis4 b d cis |
+  bis ( cis ) dis ( c ) |
+  \key d \major
+  ais ( a ) g |
+  d'2 dis4 |
+  e4 ( dis ) d |
+  cis ( d ) dis |
+  \key g \major
+  c8 b a g fis2 ~ |
+  fis2. b8 [ bes ] |
+  a4. b8 c cis ais dis |
+  gis fis e d c b bes ges' |
+  \key bes \major
+  f8 d bes f g' d |
+  bes ges gis' fis d b |
+  a' fis d bes a gis |
+  cis d dis fis \times 2/3 { f8 e cis } |
+  \key c \major
+  e [ ees ] d [ cis ] c [ fis, ] g [ gis ] |
+  a [ c ] d cis f e fis g |
 }
 
 tenorCinqVoixWords = \lyricmode {
+  off to see the
+  off to see the
+  Won -- der -- ful Wi -- zard of Oz.
+  We hear he Wi -- zard a wiz of a wiz.
+  If ev -- er a wiz there, ev -- er oh ev -- er.
+  If ev -- er, oh ev -- er a wiz there was,
+  Oh the Wi -- zard of Oz is one, is one be -- cause.
+  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  Be -- cause the won
+  Be -- cause as -- to -- nish -- ing
+  Sen -- sa -- tion -- al
+  mi -- ra -- cu -- lous the
+  Won -- der -- ful, the
+  Won -- der -- ful, the
+  Won -- der -- ful, the
+  Won -- der -- ful, Won -- der -- ful
+  Wiz, the Wi -- zard Wi -- zard We're
+  off to see the Wi -- zard the won -- der -- ful of 
 }
 
-bassCinqVoix = \relative c' {
+bassCinqVoix = \relative c {
   \clef "bass"
   \key c \major
   s1 |
+  c4 b' a g f e d c |
+  d e8 f g4 g, |
+  c2 b |
+  a2 a4 |
+  e'2 ees4 |
+  d4 e gis |
+  a2 a,4 |
+  f' d bes |
+  ees2 a,4 |
+  d2. |
+  g,2 ees'4 |
+  d2 d4 d |
+  g,2 b4 e, |
+  \key a \major
+  a1 ~ |
+  a4 a c fis, |
+  b2 f'4 bes, |
+  e2 e, |
+  \key fis \major |
+  fis4 cis' dis disis |
+  eis ( fis ) cis ( a ) |
+  \key d \major
+  d2 cis4 |
+  b2 b4 |
+  cis ( c ) b |
+  e2 bes4 |
+  \key g \major
+  d1 |
+  d,2. cis'4 |
+  c8 b a g fis2 ~ |
+  fis4 d' ~ d4. f,8 |
+  \key bes \major
+  bes2. ~ |
+  bes ~ |
+  bes |
+  d2 g,4 |
+  \key c \major
+  c1 ~ |
+  c |
 }
 
 bassCinqVoixWords = \lyricmode {
+  off to see the
+  off to see the
+  Won -- der -- ful Wi -- zard
+  Oz.
+  We hear he is a wiz of a wiz.
+  If ev -- er a wiz there was.
+  ev
+  If ev -- er, oh ev -- er a wiz, the
+  Oh the Wi -- zard of Oz is one, is one be -- cause.
+  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  cause. Be
+  cre -- di -- ble be -- cause.
+  Won the
+  Won
+  Wiz We're
+  off
 }
 
 marksFinalRepeat = {
@@ -846,78 +1129,89 @@ bassLastNoteDraftTwo = \relative c' {
 }
 
 bassLastNoteDraftTwoWords = \lyricmode {
-  Oz.
+  of Oz.
+  The Won
 }
 \score {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = #"Bitch" } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\prefatoryMatter
+        \sopranoChorale
 	\sopranoCinqVoix
-	%\sopranoFinalRepeat
-        %\sopranoLastNote
+	\sopranoFinalRepeat
+        \sopranoLastNoteDraftTwo
       } {
-	\prefatoryMatter
+        \marksChorale
 	\marksCinqVoix
-	%\marksFinalRepeat
-        %\marksLastNote
+	\marksFinalRepeat
+        \marksLastNoteDraftTwo
       } >> }
       \new Lyrics \lyricsto "soprano" {
+        \sopranoChoraleWords
 	\sopranoCinqVoixWords
-	%\sopranoFinalRepeatWords
-        %\sopranoLastNoteWords
+	\sopranoFinalRepeatWords
+        \sopranoLastNoteDraftTwoWords
       }
     >>
     \new Staff \with { instrumentName = #"Dörty" } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\prefatoryMatter
+        \mezzoChorale
 	\mezzoCinqVoix
-	%\mezzoFinalRepeat
-        %\mezzoLastNote
+	\mezzoFinalRepeat
+        \mezzoLastNoteDraftTwo
       }
       \new Lyrics \lyricsto "mezzo" {
+        \mezzoChoraleWords
 	\mezzoCinqVoixWords
-	%\mezzoFinalRepeatWords
-        %\mezzoLastNoteWords
+	\mezzoFinalRepeatWords
+        \mezzoLastNoteDraftTwoWords
       }
     >>
     \new Staff \with { instrumentName = #"Ttö" } <<
       \new Voice = "alto" { \numericTimeSignature
 	\prefatoryMatter
+        \altoChorale
 	\altoCinqVoix
-	%\altoFinalRepeat
-        %\altoLastNote
+	\altoFinalRepeat
+        \altoLastNoteDraftTwo
       }
       \new Lyrics \lyricsto "alto" {
+        \altoChoraleWords
 	\altoCinqVoixWords
-	%\altoFinalRepeatWords
-        %\altoLastNoteWords
+	\altoFinalRepeatWords
+        \altoLastNoteDraftTwoWords
       }
     >>
     \new Staff \with { instrumentName = #"Fakbyd" } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\prefatoryMatter
+        \tenorChorale
 	\tenorCinqVoix
-	%\tenorFinalRepeat
-        %\tenorLastNote
+	\tenorFinalRepeat
+        \tenorLastNoteDraftTwo
       }
       \new Lyrics \lyricsto "tenor" {
+        \tenorChoraleWords
 	\tenorCinqVoixWords
-	%\tenorFinalRepeatWords
-        %\tenorLastNoteWords
+	\tenorFinalRepeatWords
+        \tenorLastNoteDraftTwoWords
       }
     >>
     \new Staff \with { instrumentName = #"Wysr" } <<
       \new Voice = "bass" { \numericTimeSignature
 	\prefatoryMatter
+        \bassChorale
 	\bassCinqVoix
-	%\bassFinalRepeat
-        %\bassLastNote
+	\bassFinalRepeat
+        \bassLastNoteDraftTwo
       }
       \new Lyrics \lyricsto "bass" {
+        \bassChoraleWords
 	\bassCinqVoixWords
-	%\bassFinalRepeatWords
-        %\bassLastNoteWords
+	\bassFinalRepeatWords
+        \bassLastNoteDraftTwoWords
       }
     >>
   >>
