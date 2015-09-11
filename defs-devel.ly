@@ -422,10 +422,22 @@ subP = \markup { \center-align
 
 subPd = #(make-dynamic-script subP)
 
+fffffuck = \markup {
+  \concat { \dynamic fffff
+   \normal-text \fontsize #1.5 \raise #-0.5 \italic \bold uck! }
+}
+
+fffffuckd = #(make-dynamic-script fffffuck)
+
 fppInternal = \markup { \center-align
 \dynamic "fpp" }
 
 fpp = #(make-dynamic-script fppInternal)
+
+ffpInternal = \markup { \center-align
+\dynamic "ffp" }
+
+ffp = #(make-dynamic-script fppInternal)
 
 fatText = {
   \once \override TextScript #'extra-spacing-width = #'(0 . 0)

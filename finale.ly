@@ -75,7 +75,7 @@ prefatoryMatter = {
 }
 
 marksChorale = {
-  \tempo "Adagio" 4=68
+  \tempo "Moderato" 4=68
   \time 4/4
   \partial 4
   s4 |
@@ -84,8 +84,7 @@ marksChorale = {
 
 sopranoChorale = \relative c' {
   \key aes \major
-  \key aes \major
-  ees4 |
+  ees4^\mp |
   aes ees c des |
   ees aes ~ aes ees |
   f ees8 des c4 des8 bes |
@@ -109,7 +108,7 @@ sopranoChorale = \relative c' {
   aes4 ees c des |
   ees aes ~ aes bes |
   c c8 c bes4 c8 bes |
-  aes1 |
+  aes2. \breathe g4^\mf |
 }
 
 sopranoChoraleWords = \lyricmode {
@@ -127,13 +126,15 @@ sopranoChoraleWords = \lyricmode {
   The Won -- der -- ful Wi -- zard of Oz.  
 }
 
-mezzoChorale = \relative c' {
+mezzoChorale = \relative c'' {
   \key aes \major
   r4 |
-  R1*24 |
+  R1*23 |
+  r2. \breathe g4^\mf |
 }
 
 mezzoChoraleWords = \lyricmode {
+  We're
 }
 
 altoChorale = \relative c {
@@ -141,7 +142,7 @@ altoChorale = \relative c {
   \key aes \major
   r4 |
   R1 |
-  ees2\startGroup ees\stopGroup |
+  ees2^\mp\startGroup ees\stopGroup |
   aes1 |
   \clef treble
   c4\startGroup des ees aes\stopGroup |
@@ -164,7 +165,7 @@ altoChorale = \relative c {
   g4\startGroup g8 g f4 f\stopGroup |
   ees'\startGroup c\stopGroup f4\startGroup f8 g |
   aes4\stopGroup des,\startGroup ees\stopGroup g8\startGroup g |
-  f4\stopGroup ees2 f4 |
+  f4\stopGroup ees2 \breathe f4^\mf |
 }
 
 altoChoraleWords = \lyricmode {
@@ -198,7 +199,7 @@ tenorChorale = \relative c' {
   \clef "treble_8"
   \key aes \major
   r4 |
-  c4\startGroup des8 bes aes4\stopGroup bes\startGroup |
+  c4^\mp\startGroup des8 bes aes4\stopGroup bes\startGroup |
   des c bes aes\stopGroup |
   des4\startGroup c8 bes aes4\stopGroup f8\startGroup g |
   aes4 ees c ees\stopGroup |
@@ -221,7 +222,7 @@ tenorChorale = \relative c' {
   c4 bes aes aes |
   aes aes aes'\stopGroup f4\startGroup |
   f4 f8 f\stopGroup des4\startGroup ees\stopGroup |
-  c4\startGroup des8 bes\stopGroup c4 b |
+  c4\startGroup des8 bes\stopGroup c4 \breathe b^\mf |
 }
 
 tenorChoraleWords = \lyricmode {
@@ -254,7 +255,7 @@ bassChorale = \relative c' {
   \key aes \major
   r4 |
   R1*8 |
-  des4\startGroup c8 bes aes4 g8 f |
+  des4^\mp\startGroup c8 bes aes4 g8 f |
   ees2 ees\stopGroup |
   bes4\startGroup bes8 bes\stopGroup ees2\startGroup |
   aes4 ees c\stopGroup g'8\startGroup g |
@@ -269,7 +270,7 @@ bassChorale = \relative c' {
   aes,1 |
   c4\startGroup ees des des8 c |
   bes4\stopGroup bes\startGroup g ees\stopGroup |
-  f\startGroup f8 g aes4\stopGroup d4 |
+  f\startGroup f8 g aes4\stopGroup \breathe d4^\mf |
 }
 
 bassChoraleWords = \lyricmode {
@@ -298,27 +299,41 @@ bassChoraleWords = \lyricmode {
 }
 
 marksCinqVoix = {
-  \tempo "Adagio" 4=68
-  \time 4/4
-  s1*5 |
+  %\time 4/4
+  s1*3 |
+  \rall
+  \unfoldChange #68 #62 #8 |
   \time 3/4
+  \tempo "Adagio" 4=62
   s2.*8 |
   \time 4/4
-  s1*8 |
+  \rall
+  \unfoldChange #62 #58 #16
+  \tempo "Lento" 4=58
+  s1*5 |
+  \rall
+  \unfoldChange #58 #54 #8
   \time 3/4
-  s2.*4 |
+  \tempo "Larghetto" 4=54
+  s2.*3 |
+  \rall
+  \unfoldChange #54 #48 #6
   \time 4/4
-  s1*4 |
+  \tempo "Largo" 4=48
+  s1*3 |
+  \rall
+  \unfoldChange #48 #42 #8
   \time 3/4
+  \tempo "Larghissimo" 4=42
   s2.*4 |
+  \tempo "Grave" 4=36
   \time 4/4
   s1*2 |
 }
 
 sopranoCinqVoix = \relative c'' {
   \key c \major
-  s2. g4 |
-  c g e f |
+  c4 g e f |
   g c ~ c g |
   a g8 f e4 f8 d |
   c8 [ d e f g a ] b [ c ] |
@@ -330,33 +345,33 @@ sopranoCinqVoix = \relative c'' {
   d2 b4 |
   g2. ~ |
   g2 g4 |
-  a2 a4 a |
+  a2^\< a4 a |
   a2 a4 b |
   \key a \major
-  cis2 a |
+  cis2^\f a |
   e g4 cis |
   d2 d4 cis |
   b2 d |
   \key fis \major
-  cis2. b4 |
+  cis2.^\< b4 |
   ais2 ais |
   \key d \major
-  fis2 fis4 |
+  fis2^\ff fis4 |
   fis'2 fis4 |
   eis2 eis4 |
   e2 e4 |
   \key g \major
-  a2. r4 |
+  a2.^\< r4 |
   r d, ~ d8 r a'4 |
   a a8 a a4 a8 a |
   a4 fis d r8 ees |
   \key bes \major
-  bes'2 ~ \times 2/3 { bes8 a bes } |
+  bes'2^\fff ~ \times 2/3 { bes8 a bes } |
   a2 ~ \times 2/3 { a8 gis a } |
   gis2. |
-  g |
+  g^\< |
   \key c \major
-  b4 g e f |
+  b4^\ffff g e f |
   g b ~ b ees, |
 }
 
@@ -376,7 +391,6 @@ sopranoCinqVoixWords = \lyricmode {
 
 mezzoCinqVoix = \relative c'' {
   \key c \major
-  s1 |
   g4 e e d |
   e g ~ g e |
   f4 e8 d c4 d8 c |
@@ -389,33 +403,33 @@ mezzoCinqVoix = \relative c'' {
   bes ( a ) g |
   f4 e d |
   f e ees |
-  f2 g4 ges |
+  f2^\< g4 ges |
   f ( e ) fis gis |
   \key a \major
-  gis ( g ) fis ( f ) |
+  gis^\f ( g ) fis ( f ) |
   cis2 e4 ais |
   a ( gis ) b a |
   gis ( a ) ais ( b ) |
   \key fis \major
-  ais2 a4 fisis |
+  ais2^\< a4 fisis |
   gis2 fisis4 ( fis ) |
   \key d \major
-  e2 e4 |
+  e2^\ff e4 |
   cis'4 ( c ) b |
   ais ( b ) c |
   b ( bes ) a |
   \key g \major
-  e'4 d8 e d4 gis, |
+  e'4^\< d8 e d4 gis, |
   c8 b a g fis a d e |
   ees d c b a eis' cis c |
   e d c b a gis g c |
   \key bes \major
-  d2. |
+  d2.^\fff |
   ees4 e f |
   ees e f |
-  e4 bes ees |
+  e4^\< bes ees |
   \key c \major
-  g4 e c b |
+  g4^\ffff e c b |
   cis f8 e ees d cis c |
 }
 
@@ -440,7 +454,6 @@ mezzoCinqVoixWords = \lyricmode {
 
 altoCinqVoix = \relative c' {
   \key c \major
-  s1 |
   e4 e c c |
   c e ~ e c |
   e d8 c b4 c8 a |
@@ -453,33 +466,33 @@ altoCinqVoix = \relative c' {
   g2 e4 |
   c4 c b |
   d d des |
-  e4 ( ees ) e ees |
+  e4^\< ( ees ) e ees |
   d ( cis ) d f |
   \key a \major
-  f ( e ) ees ( d ) |
+  f^\f ( e ) ees ( d ) |
   b ( a )  d gis |
   fis ( eis ) g f |
   f ( fis ) g ( gis ) |
   \key fis \major
-  eis e g eis |
+  eis^\< e g eis |
   dis ( eis ) eis ( e ) |
   \key d \major
-  cis2 ais4 |
+  cis2^\ff ais4 |
   ais' ( a )  gis |
   fisis ( gis ) a |
   gis ( g ) fis |
   \key g \major
-  fis2 ~ fis8 e d c |
+  fis2^\< ~ fis8 e d c |
   gis a c b a4 fis' |
   fis4. e8 e gis g a |
   b a a gis fis e ees a |
   \key bes \major
-  a4 aes b |
+  a4^\fff aes b |
   c cis d |
   c2 b4 ~ |
-  b4 g b |
+  b4^\< g b |
   \key c \major
-  c8 [ b ] bes [ a ] aes [ a ] dis, [ e ] |
+  c8^\ffff [ b ] bes [ a ] aes [ a ] dis, [ e ] |
   f [ a ] aes bes a gis a bes |
 }
 
@@ -505,7 +518,6 @@ altoCinqVoixWords = \lyricmode {
 tenorCinqVoix = \relative c' {
   \clef "treble_8"
   \key c \major
-  s1 |
   e4 c c g |
   a g f e |
   c' b8 a b4 a8 f |
@@ -518,33 +530,33 @@ tenorCinqVoix = \relative c' {
   ees2 cis4 |
   a g f |
   c' b a |
-  c2 c4 c |
+  c2^\< c4 c |
   b4 ( ais ) cis d |
   \key a \major
-  d ( b ) cis ( bes ) |
+  d^\f ( b ) cis ( bes ) |
   gis ( fis ) bes e |
   cis2 e4 ees |
   d4 ( dis ) e ( f ) |
   \key fis \major
-  dis4 b d cis |
+  dis4^\< b d cis |
   bis ( cis ) dis ( c ) |
   \key d \major
-  ais ( a ) g |
+  ais^\ff ( a ) g |
   d'2 dis4 |
   e4 ( dis ) d |
   cis ( d ) dis |
   \key g \major
-  c8 b a g fis2 ~ |
+  c8^\< b a g fis2 ~ |
   fis2. b8 [ bes ] |
   a4. b8 c cis ais dis |
   gis fis e d c b bes ges' |
   \key bes \major
-  f8 d bes f g' d |
+  f8^\fff d bes f g' d |
   bes ges gis' fis d b |
   a' fis d bes a gis |
-  cis d dis fis \times 2/3 { f8 e cis } |
+  cis^\< d dis fis \times 2/3 { f8 e cis } |
   \key c \major
-  e [ ees ] d [ cis ] c [ fis, ] g [ gis ] |
+  e^\ffff [ ees ] d [ cis ] c [ fis, ] g [ gis ] |
   a [ c ] d cis f e fis g |
 }
 
@@ -572,7 +584,6 @@ tenorCinqVoixWords = \lyricmode {
 bassCinqVoix = \relative c {
   \clef "bass"
   \key c \major
-  s1 |
   c4 b' a g f e d c |
   d e8 f g4 g, |
   c2 b |
@@ -584,33 +595,33 @@ bassCinqVoix = \relative c {
   ees2 a,4 |
   d2. |
   g,2 ees'4 |
-  d2 d4 d |
+  d2^\< d4 d |
   g,2 b4 e, |
   \key a \major
-  a1 ~ |
+  a1^\f ~ |
   a4 a c fis, |
   b2 f'4 bes, |
   e2 e, |
   \key fis \major |
-  fis4 cis' dis disis |
+  fis4^\< cis' dis disis |
   eis ( fis ) cis ( a ) |
   \key d \major
-  d2 cis4 |
+  d2^\ff cis4 |
   b2 b4 |
   cis ( c ) b |
   e2 bes4 |
   \key g \major
-  d1 |
+  d1^\< |
   d,2. cis'4 |
   c8 b a g fis2 ~ |
   fis4 d' ~ d4. f,8 |
   \key bes \major
-  bes2. ~ |
+  bes2.^\fff ~ |
   bes ~ |
   bes |
-  d2 g,4 |
+  d2^\< g,4 |
   \key c \major
-  c1 ~ |
+  c1^\ffff ~ |
   c |
 }
 
@@ -634,7 +645,7 @@ bassCinqVoixWords = \lyricmode {
 }
 
 marksFinalRepeat = {
-  \tempo "Andante" 4=76
+  \tempo "Incedendo" 2=32
   \override Score.RehearsalMark #'self-alignment-X = #LEFT
   << { \unfoldChange #76 #56 #40 } { s1 \rall } >>
   \time 6/4
@@ -645,15 +656,19 @@ marksFinalRepeat = {
 
 sopranoFinalRepeat = \relative c''' {
   \key b \major
-  \mFM c1 ~ |
-  \mFM c2. \mFY d,4 |
+  \mFM c1^\fffffuckd ~ |
+  \mFM c2. \mFY d,4^\ff |
   \mFR dis1 ~ |
   \mFR dis8 \mFB cis4. ~ \mFB cis8 \mFO b4 g8 ~ |
   \times 2/3 { g4 \mFG e'8 ~ } \mFG e4 ~ \mFG e2 |
-  ais,8 \mFM b4 \mFY cis8 ~ \mFY cis4 ~ cis4. bis8 r4 |  
+  ais,8 \mFM b4 \mFY cis8 ~ ( \mFY cis4 ~ cis4. bis8 ) r4 |  
 }
 
 sopranoFinalRepeatWords = \lyricmode {
+  Oz.
+  The Won -- der -- ful
+  The Wiz
+  Wi -- zard of
 }
 
 tasteless = \markup \justify {
@@ -663,16 +678,16 @@ tasteless = \markup \justify {
 
 mezzoFinalRepeat = \relative c''' {
   \key b \major
-  \mFM g1 ~ |
-  \mFM g2. \mFY ais,4 |
-  %\mFR \times 2/3 {  b4 b'8 ~ } \times 6/7 { b [ ais8 gis8 ] fis4 dis8 [ \mFR b ] } |
-  \mFR \times 2/3 {  b4 b'8 ~ } \times 6/7 { b [ ais8 gis8 ] fis [ e ] dis8 [ cis ] } |
+  \mFM g1^\fffffuckd ~ |
+  \mFM g2. \mFY ais,4^\ff |
+  %\mFR \times 2/3 {  b4 b'8 ~ } \times 6/7 { b [ ais8 gis8 ] fis4 dis8 \mFR b } |
+  \mFR \times 2/3 {  b4 b'8 ~ } \times 6/7 { b ais8 gis8 fis e dis8 cis } |
   %\times 2/3 { \mFR ais8 \mFB a4 ~ } \mFB a4 \mFO fis2 |
-  \times 2/3 { %{\mFR%} b8 [ \mFB a8. \footnote #'(1 . 1) \tasteless NoteHead c'16 ] } \times 2/3 { g16 [ bes e,8 dis ] } \times 2/3 { d'16 [ gis, b f a d, ~ ] } d [ \mFO eis8. ] |
+  \times 2/3 { %{\mFR%} b8 \mFB a8. \footnote #'(1 . 1) \tasteless NoteHead c'16 } \times 2/3 { g16 bes e,8 [ dis ] } \times 2/3 { d'16 [ gis, b f a ] d, ~ } d \mFO eis8. |
   % c' g bes e, dis      d' gis, b f a
   %\mFG b,4  g16 dis''8. ~ dis8 \mFM b,8 ~ \mFM \times 2/3 { b8 cis4 ~ } |
-  \mFG fis4  g,8 [ dis''8 ~ ] dis16 [ cis b8 ] ais16 [ gis fis8 ] | 
-  e8 [ \mFM dis8 ~ ] \mFM dis4 ~ dis8 gis8 ~ gis8 \mFY g4. r4 |
+  \mFG fis4  g,8 dis''8 ~ dis16 cis b8 ais16 gis fis8 | 
+  e8 \mFM dis8 ~ \mFM dis4 ~ dis8 gis8 ~ gis8 \mFY g4. r4 |
   %b16 [ b' ais gis ] fis [ e dis cis ] \times 4/5 { b8. [ ais'16 fis16 ] } \times 4/5 { a16 [  cis,8. c16 ~ ] } |
   %c8 [ \times 2/3 { gis'16 eis g ] } ais,8  [ \times 2/3 { fis'16 cis e ] }  \times 2/3 { dis8 [ b f ~ ] } f16 [ d' e,8 ] |
   %\times 2/3 { gis d' g ~ } g16 cis,8. ~ cis4 fis, |
@@ -680,35 +695,47 @@ mezzoFinalRepeat = \relative c''' {
 
 mezzoFinalRepeatWords = \lyricmode {
   Oz.
+  The Won, Won -- der -- ful, Won -- der -- ful the Wiz -- ard
+  Wi -- zard of Oz
+  Won -- der -- ful
+  Wiz the Wi -- zard Won -- der -- ful Won -- der -- ful
+  Wi -- zard
 }
 
 altoFinalRepeat = \relative c'' {
   \key b \major
-  \mFM dis1 ~ |
-  \mFM dis4 d, gis, \mFY gis' |
-  \mFR gis2 ~ \times 2/3 { gis8 [ g,8 g' ~ ] } \times 2/3 { g8 [ a b ] } |
+  \mFM dis1^\fffffuckd ~ |
+  \mFM dis4 d, gis, \mFY gis'^\ff |
+  \mFR gis2 ~ \times 2/3 { gis8 g,8 g' ~ } \times 2/3 { g8 a b } |
   %\mFB fis2 \mFO d2 |
   \mFB \times 2/3 { fis4 g2 } gis4 ~ gis16 \mFO a8. ~ | %a8 \mFO d,8 |
   \mFG a4. %{\mFG a'4.%} a,8 \mFM gis'4 fis8 b8 |
-  \times 2/3 { cis,4 a'16 [ cis, ] } \times 2/3 { g' [ a, ] fis'4 } \mFY e2 dis4 r4 |
-  %gis2 %~ gis16 [ ais gis fis ] e [ dis cis b ] |
-  %\times 2/3 { a'4    f8 }  c16  [ c' b a ] g [ f e d ]
+  \times 2/3 { cis,4 a'16 cis, } \times 2/3 { g' a, fis'4 } \mFY e2 dis4 r4 |
+  %gis2 %~ gis16 ais gis fis e dis cis b |
+  %\times 2/3 { a'4    f8 }  c16  c' b a g f e d ]
 }
 
 altoFinalRepeatWords = \lyricmode {
-  Oz
+  Oz.
+  of Oz. The Won
+  The Won -- der -- ful
+  ma -- gi -- cal
+  Won
+  The Wi -- zard of Oz
+  Won -- der -- ful
+  the Wi -- zard of
 }
 
 tenorFinalRepeat = \relative c'' {
   \clef "treble_8"
   \key b \major
-  \mFM a2. b,4 |
-  f2. \mFY f'4 |
-  \mFR e8 [ fis, ] fis' [ eis ] cis [ %{\mFR%} e ] \times 2/3 { dis [ b d ] } |
-  \times 4/5 { ais8 [ b ] \mFB e4 d8 } \times 4/5 { eis,8 [ fis ] cis'8. [ \mFO bis ] } %cis'~ \times 2/3 { cis [ e, f ] } } |
-  %\mFO bis8 [ fis8 ] \mFG \times 2/3 { eis'8 [ bis8 dis ] } \mFM cis4 ~ \times 2/3 { \mFM cis8 [ ais8 b8 ] } |
-  b8 [ ais8 ] \mFG eis'4 ~ \times 2/3 { \mFG eis4 \mFM cis8 ~ } \times 2/3 { \mFM cis8 [ ais8 b8 ] } |
-  gis'8 [ fis8 ] e8 [ d8 ] c4 \mFY ais2 r4 |
+  \mFM a2.^\fffffuckd b,4 |
+  f2. \mFY f'4^\ff |
+  \mFR e8 fis, fis' eis cis %{\mFR%} e \times 2/3 { dis b d } |
+  \times 4/5 { ais8 b \mFB e4 d8 } \times 4/5 { eis,8 fis cis'8. \mFO bis } %cis'~ \times 2/3 { cis e, f } } |
+  %\mFO bis8 fis8 \mFG \times 2/3 { eis'8 bis8 dis } \mFM cis4 ~ \times 2/3 { \mFM cis8 ais8 b8 } |
+  b8 ais8 \mFG eis'4 ~ \times 2/3 { \mFG eis4 \mFM cis8 ~ } \times 2/3 { \mFM cis8 ais8 b8 } |
+  gis'8 fis8 e8 d8 c4 \mFY ais2 r4 |
 
   %\times 2/3 { g,8 [ e' c ] } \times 2/3 { dis [ eis, d' ] } \times 2/3 { e, [ cis' g ] } \times 2/3 { b [ eis, ais ] } |
   %\times 4/5 { cis,8. [ gis''16 eis16 ] } \times 4/5 { g16 [  a,8. b'16 ] } \times 4/5 { g16 [  ais16 fis16. f16. ] } a16 b,8 ais16 ~ |
@@ -717,13 +744,20 @@ tenorFinalRepeat = \relative c'' {
 
 tenorFinalRepeatWords = \lyricmode {
   Oz.
+  of Oz.
+  The Won
+  The won -- der -- ful the ma -- gi -- cal
+  He's the Wi -- zard
+  He's the Won -- der -- ful the Wiz -- zard
+  He's my Won -- der -- ful my Wi -- zard
+
 }
 
 bassFinalRepeat = \relative c' {
   \clef bass
   \key b \major
-  r4 gis4 \mFM d2 ~ |
-  \mFM d2 ~ \mFM d8 \mFY g,4. |
+  r4 gis4^\fffffuckd \mFM d2 ~ |
+  \mFM d2 ~ \mFM d8 \mFY g,4.^\ff |
   \mFR fis1 |
   \mFB d'2 \mFO gis, |
   \mFG g ~ \mFG g8 \mFM e'4. ~ | 
@@ -734,7 +768,8 @@ bassFinalRepeat = \relative c' {
 }
 
 bassFinalRepeatWords = \lyricmode {
-  Oz.
+  of Oz.
+  Thw Won -- der -- ful Wi -- zard of
 }
 
 marksLastNote = {
@@ -851,85 +886,98 @@ marksLastNoteDraftTwo = {
 
 sopranoLastNoteDraftTwo = \relative c''' {
   %\key b \major
+  b1^\ffp ~ |
   b1 ~ |
+  b1^\< ~ |
+  b1^\> |
+  R1\! |
+  b1^\ppp^\< ~ |
   b1 ~ |
-  b1 ~ |
-  b1 |
-  R1 |
-  b1 ~ |
-  b1 ~ |
-  b4 r r2^\fermata |
+  b4^\fff r r2^\fermata |
 }
 
 sopranoLastNoteDraftTwoWords = \lyricmode {
+  Oz.
   Oz.
 }
 
 mezzoLastNoteDraftTwo = \relative c'' {
   %\key b \major
-  r2 fis4 e |
-  g dis a' e |
-  ais f e d |
-  cis d b e |
-  R1 |
-  dis1 ~ |
+  r2 fis4^\mf e |
+  g^\< dis a' e |
+  ais^\ff f e d |
+  cis^\> d b e |
+  R1\! |
+  dis1^\ppp^\< ~ |
   dis ~ |
-  dis4 r4 r2^\fermata |
+  dis4^\fff r4 r2^\fermata |
 }
 
 mezzoLastNoteDraftTwoWords = \lyricmode {
+  off to see the Wi -- zard
+  Won -- der -- ful
+  To see the Wi -- zard
   Oz.
 }
 
 altoLastNoteDraftTwo = \relative c'' {
   %\key b \major
-  b2. c4 |
-  ees b c b |
-  e c ais b |
-  a ais g c |
-  R1 |
-  b1 ~ |
+  b2.^\ffp c4^\mf |
+  ees^\< b c b |
+  e^\ff c ais b |
+  a^\> ais g c |
+  R1\! |
+  b1^\ppp^\< ~ |
   b ~ |
-  b4 r r2^\fermata |
+  b4^\fff r r2^\fermata |
 }
 
 altoLastNoteDraftTwoWords = \lyricmode {
   Oz
+  to see the Wi -- zard
+  Won -- der -- ful
+  To see the Wi -- zard
+  Oz.
 }
 
 tenorLastNoteDraftTwo = \relative c'' {
   \clef "treble_8"
   %\key b \major
-  r2 a4 g bes f fis g |
+  r2 a4^\mf g |
+  bes^\< f fis g |
   gis a fis g |
-  f fis d fis |
-  R1 |
-  fis1 ~ |
+  f^\> fis d fis |
+  R1\! |
+  fis1^\ppp^\< ~ |
   fis ~ |
-  fis4 r4 r2^\fermata |
+  fis4^\fff r4 r2^\fermata |
 }
 
 tenorLastNoteDraftTwoWords = \lyricmode {
+  off to see the Wi -- zard
+  Won -- der -- ful
+  To see the Wi -- zard
   Oz.
 }
 
 bassLastNoteDraftTwo = \relative c' {
   \clef bass
   %\key b \major
+  b1^\ffp ~ |
   b1 ~ |
+  b1^\< ~ |
+  b1^\> |
+  R1\! |
+  b,1^\ppp^\< ~ |
   b1 ~ |
-  b1 ~ |
-  b1 |
-  R1 |
-  b,1 ~ |
-  b1 ~ |
-  b4 r r2^\fermata |
+  b4^\fff r r2^\fermata |
 }
 
 bassLastNoteDraftTwoWords = \lyricmode {
-  of Oz.
-  The Won
+  Oz.
+  Oz.
 }
+
 \score {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = #"Bitch" } <<
