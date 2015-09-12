@@ -14,6 +14,7 @@
 #(ly:set-option 'point-and-click #f)
 
 #(set-global-staff-size 15.87)
+#(set-accidental-style 'modern-cautionary)
 
 rall = \mark \markup \italic "rall."
 moltorall = \mark \markup \italic "molto rall."
@@ -59,12 +60,12 @@ mFY = {}
   top-margin = 0.5\in
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
-  max-systems-per-page = #2
+  %max-systems-per-page = #2
 }
 
 \header {
   title = "Finale: Sit Ozfårs Wndrföl Wysr"
-  subtitle = \markup { for Marie Perbost \super 1}
+  subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "tu veux une finale ? voilà ta finale. t'es contente ?? t'es contente ?!?!? " }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -334,8 +335,8 @@ marksCinqVoix = {
 sopranoCinqVoix = \relative c'' {
   \key c \major
   c4 g e f |
-  g c ~ c g |
-  a g8 f e4 f8 d |
+  g c ~ c c, |
+  a' g8 f e4 f8 d |
   c8 [ d e f g a ] b [ c ] |
   d4 ( c ) a |
   c2 c4 |
@@ -343,8 +344,8 @@ sopranoCinqVoix = \relative c'' {
   a2 a4 |
   d d d |
   d2 b4 |
-  g2. ~ |
-  g2 g4 |
+  g2. |
+  a4 g g4 |
   a2^\< a4 a |
   a2 a4 b |
   \key a \major
@@ -380,6 +381,7 @@ sopranoCinqVoixWords = \lyricmode {
   The Won -- der -- ful Wi -- zard of Oz.
   We hear he is a wiz of a wiz.
   If ev -- er a wiz there was.
+  ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one be -- cause.
   Be -- cause be -- cause be -- cause be -- cause be -- cause.
@@ -392,7 +394,7 @@ sopranoCinqVoixWords = \lyricmode {
 mezzoCinqVoix = \relative c'' {
   \key c \major
   g4 e e d |
-  e g ~ g e |
+  e g a b |
   f4 e8 d c4 d8 c |
   a [ b c d e f ] g [ a ] |
   g2 ges4 |
@@ -408,14 +410,14 @@ mezzoCinqVoix = \relative c'' {
   \key a \major
   gis^\f ( g ) fis ( f ) |
   cis2 e4 ais |
-  a ( gis ) b a |
-  gis ( a ) ais ( b ) |
+  a ( gis ) b gis |
+  a ( gis ) a ( b ) |
   \key fis \major
-  ais2^\< a4 fisis |
+  ais2.^\< a4 |
   gis2 fisis4 ( fis ) |
   \key d \major
   e2^\ff e4 |
-  cis'4 ( c ) b |
+  cis'2 b4 |
   ais ( b ) c |
   b ( bes ) a |
   \key g \major
@@ -429,18 +431,18 @@ mezzoCinqVoix = \relative c'' {
   ees e f |
   e4^\< bes ees |
   \key c \major
-  g4^\ffff e c b |
-  cis f8 e ees d cis c |
+  \times 2/3 { g8^\ffff ges f } \times 2/3 { e ees d } d [ cis ] ees [ d ] |
+  \times 2/3 { cis d ees } \times 2/3 { d ees f } \times 2/3 { e ees d } \times 2/3 { fis f e }
 }
 
 mezzoCinqVoixWords = \lyricmode {
-  off to see the Wi -- zard
+  off to see the, off to see
   The Won -- der -- ful Wi -- zard of Oz.
   We hear he Wi -- zard a wiz of a wiz.
   If ev -- er a wiz there
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
-  Oh the Wi -- zard of Oz is one, one be -- cause.
+  Oh the Wi -- zard of Oz is one be -- cause.
   Be -- cause be -- cause be -- cause be -- cause be -- cause.
   ful the Won be
   Ma -- gi -- cal re -- mar -- ka -- ble
@@ -449,13 +451,15 @@ mezzoCinqVoixWords = \lyricmode {
   Won things that he
   Won -- der -- ful
   Wi -- zard.
-  We're off to see the Wi -- zard the won -- der -- ful of
+  We're %off to see the Wi -- zard the won -- der -- ful of
+  won -- er -- ful mar -- ve -- lous see the
+  won -- der -- ful ma -- gi -- cal won -- der -- ful my -- sti -- cal
 }
 
 altoCinqVoix = \relative c' {
   \key c \major
   e4 e c c |
-  c e ~ e c |
+  c e f g |
   e d8 c b4 c8 a |
   g [ a b c d e ] f [ g ] |
   e2 ees4 |
@@ -471,13 +475,13 @@ altoCinqVoix = \relative c' {
   \key a \major
   f^\f ( e ) ees ( d ) |
   b ( a )  d gis |
-  fis ( eis ) g f |
+  fis ( eis ) a fis |
   f ( fis ) g ( gis ) |
   \key fis \major
-  eis^\< e g eis |
-  dis ( eis ) eis ( e ) |
+  eis^\< e g fis |
+  dis4 ( eis ) eis ( e ) |
   \key d \major
-  cis2^\ff ais4 |
+  cis4^\ff ( c ) cis4 |
   ais' ( a )  gis |
   fisis ( gis ) a |
   gis ( g ) fis |
@@ -492,12 +496,12 @@ altoCinqVoix = \relative c' {
   c2 b4 ~ |
   b4^\< g b |
   \key c \major
-  c8^\ffff [ b ] bes [ a ] aes [ a ] dis, [ e ] |
-  f [ a ] aes bes a gis a bes |
+  c8^\ffff [ b ] bes [ a ] \times 2/3 { aes a bes } \times 2/3 { b c bes } |
+  \times 2/3 { a gis g } \times 2/3 { fis g gis } \times 2/3 { g a fis } \times 2/3 { a aes g } |
 }
 
 altoCinqVoixWords = \lyricmode {
-  off to see the Wi -- zard
+  off to see the, off to see
   The Won -- der -- ful Wi -- zard of Oz.
   We hear he Wi -- zard a wiz of a wiz.
   If ev -- er a wiz there
@@ -512,7 +516,8 @@ altoCinqVoixWords = \lyricmode {
   Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
   Won -- der -- ful things that he
   Won ful zard. We're
-  off to see the Wi -- zard the won -- der -- ful of
+  off to won -- der -- ful my -- thi -- cal
+  won -- der -- ful ma -- gi -- cal won -- der -- ful mys -- ti -- cal
 }
 
 tenorCinqVoix = \relative c' {
@@ -535,13 +540,13 @@ tenorCinqVoix = \relative c' {
   \key a \major
   d^\f ( b ) cis ( bes ) |
   gis ( fis ) bes e |
-  cis2 e4 ees |
-  d4 ( dis ) e ( f ) |
+  cis2 g'4 e |
+  dis4 ( d ) dis ( f ) |
   \key fis \major
-  dis4^\< b d cis |
-  bis ( cis ) dis ( c ) |
+  dis4^\< b d bis |
+  cis2 dis4 ( c ) |
   \key d \major
-  ais^\ff ( a ) g |
+  ais^\ff ( a ) gis |
   d'2 dis4 |
   e4 ( dis ) d |
   cis ( d ) dis |
@@ -552,12 +557,12 @@ tenorCinqVoix = \relative c' {
   gis fis e d c b bes ges' |
   \key bes \major
   f8^\fff d bes f g' d |
-  bes ges gis' fis d b |
+  bes ges gis' fis c b |
   a' fis d bes a gis |
   cis^\< d dis fis \times 2/3 { f8 e cis } |
   \key c \major
-  e^\ffff [ ees ] d [ cis ] c [ fis, ] g [ gis ] |
-  a [ c ] d cis f e fis g |
+  e^\ffff [ ees ] d [ cis ] \times 2/3 { c f, fis } g gis |
+  \times 2/3 { b bes a } \times 2/3 { gis a d } cis bes \times 2/3 { c b bes } | 
 }
 
 tenorCinqVoixWords = \lyricmode {
@@ -578,7 +583,8 @@ tenorCinqVoixWords = \lyricmode {
   Won -- der -- ful, the
   Won -- der -- ful, Won -- der -- ful
   Wiz, the Wi -- zard Wi -- zard We're
-  off to see the Wi -- zard the won -- der -- ful of 
+  off to won -- der -- ful mys -- tic
+  won -- der -- ful ma -- gi -- cal won -- der mys -- ti -- cal
 }
 
 bassCinqVoix = \relative c {
@@ -600,13 +606,14 @@ bassCinqVoix = \relative c {
   \key a \major
   a1^\f ~ |
   a4 a c fis, |
-  b2 f'4 bes, |
-  e2 e, |
+  b2 f'4 ais, |
+  %{ e'4 a, c e, | %}
+  e'2 b4 e, |
   \key fis \major |
   fis4^\< cis' dis disis |
   eis ( fis ) cis ( a ) |
   \key d \major
-  d2^\ff cis4 |
+  d2^\ff ais4 |
   b2 b4 |
   cis ( c ) b |
   e2 bes4 |
@@ -616,9 +623,9 @@ bassCinqVoix = \relative c {
   c8 b a g fis2 ~ |
   fis4 d' ~ d4. f,8 |
   \key bes \major
-  bes2.^\fff ~ |
-  bes ~ |
-  bes |
+  bes2^\fff f4 ~ |
+  f bes2 |
+  f4 bes cis |
   d2^\< g,4 |
   \key c \major
   c1^\ffff ~ |
@@ -634,12 +641,12 @@ bassCinqVoixWords = \lyricmode {
   If ev -- er a wiz there was.
   ev
   If ev -- er, oh ev -- er a wiz, the
-  Oh the Wi -- zard of Oz is one, is one be -- cause.
+  Oh the Wi -- zard of Oz, %{of%} Oz is one, is one be -- cause.
   Be -- cause be -- cause be -- cause be -- cause be -- cause.
   cause. Be
   cre -- di -- ble be -- cause.
   Won the
-  Won
+  Won -- der Won -- der -- ful
   Wiz We're
   off
 }
@@ -647,10 +654,14 @@ bassCinqVoixWords = \lyricmode {
 marksFinalRepeat = {
   \tempo "Incedendo" 2=32
   \override Score.RehearsalMark #'self-alignment-X = #LEFT
-  << { \unfoldChange #76 #56 #40 } { s1 \rall } >>
+  s1 |
+  \rall
+  \unfoldChange #64 #44 #8
+  \tempo "Seriamente?" 2=22
+  s1*3 |
   \time 6/4
   \moltorall
-  \unfoldChange #56 #36 #10
+  \unfoldChange #40 #36 #10
   \unfoldChange #70 #84 #2
 }
 
@@ -784,7 +795,10 @@ marksLastNote = {
   \tempo "Andante con moto" 4=88
   s1 |
   \rall
-  \unfoldChange #88 #60 #48 \bar "|."
+  \unfoldChange #88 #40 #16
+  \tempo "Largo" 4=40
+  s1*4
+  \bar "|."
 }
 
 sopranoLastNote = \relative c''' {
@@ -879,7 +893,7 @@ marksLastNoteDraftTwo = {
   << { \unfoldChange #80 #68 #24  } { s1 \rall } >> 
   \unfoldChange #72 #40 #8
   \unfoldChange #112 #112 #8
-  \tempo "Largo"
+  %\tempo "Largo"
   \unfoldChange #112 #40 #16
   s1 \bar "|."
 }
@@ -890,10 +904,10 @@ sopranoLastNoteDraftTwo = \relative c''' {
   b1 ~ |
   b1^\< ~ |
   b1^\> |
-  R1\! |
+  R1\!^\fermataMarkup |
   b1^\ppp^\< ~ |
   b1 ~ |
-  b4^\fff r r2^\fermata |
+  b2^\fff r2^\longfermata |
 }
 
 sopranoLastNoteDraftTwoWords = \lyricmode {
@@ -907,10 +921,10 @@ mezzoLastNoteDraftTwo = \relative c'' {
   g^\< dis a' e |
   ais^\ff f e d |
   cis^\> d b e |
-  R1\! |
+  R1\!^\fermataMarkup |
   dis1^\ppp^\< ~ |
   dis ~ |
-  dis4^\fff r4 r2^\fermata |
+  dis2^\fff r2^\longfermata |
 }
 
 mezzoLastNoteDraftTwoWords = \lyricmode {
@@ -926,10 +940,10 @@ altoLastNoteDraftTwo = \relative c'' {
   ees^\< b c b |
   e^\ff c ais b |
   a^\> ais g c |
-  R1\! |
+  R1\!^\fermataMarkup |
   b1^\ppp^\< ~ |
   b ~ |
-  b4^\fff r r2^\fermata |
+  b2^\fff r2^\longfermata |
 }
 
 altoLastNoteDraftTwoWords = \lyricmode {
@@ -947,10 +961,10 @@ tenorLastNoteDraftTwo = \relative c'' {
   bes^\< f fis g |
   gis a fis g |
   f^\> fis d fis |
-  R1\! |
+  R1\!^\fermataMarkup |
   fis1^\ppp^\< ~ |
   fis ~ |
-  fis4^\fff r4 r2^\fermata |
+  fis2^\fff r2^\longfermata |
 }
 
 tenorLastNoteDraftTwoWords = \lyricmode {
@@ -967,10 +981,10 @@ bassLastNoteDraftTwo = \relative c' {
   b1 ~ |
   b1^\< ~ |
   b1^\> |
-  R1\! |
+  R1\!^\fermataMarkup |
   b,1^\ppp^\< ~ |
   b1 ~ |
-  b4^\fff r r2^\fermata |
+  b2^\fff r2^\longfermata |
 }
 
 bassLastNoteDraftTwoWords = \lyricmode {
@@ -1095,3 +1109,74 @@ bassLastNoteDraftTwoWords = \lyricmode {
   \midi {}
 }
 
+\pageBreak
+
+\score {
+  \new PianoStaff <<
+    \new Staff  {
+      \new Voice = "soprano" { << { \numericTimeSignature
+        \prefatoryMatter
+        \sopranoChorale
+        \sopranoCinqVoix
+        \sopranoFinalRepeat
+        \sopranoLastNoteDraftTwo
+      } \\ {         \prefatoryMatter
+        \mezzoChorale
+        \mezzoCinqVoix
+        \mezzoFinalRepeat
+        \mezzoLastNoteDraftTwo } \\ {         \prefatoryMatter
+        \altoChorale
+        \altoCinqVoix
+        \altoFinalRepeat
+        \altoLastNoteDraftTwo } {
+        \marksChorale
+        \marksCinqVoix
+        \marksFinalRepeat
+        \marksLastNoteDraftTwo
+      } >> }
+    }
+    \new Staff  {
+      \new Voice = "tenor" { << { \numericTimeSignature
+        \prefatoryMatter
+        \tenorChorale
+        \tenorCinqVoix
+        \tenorFinalRepeat
+        \tenorLastNoteDraftTwo
+      } \\ \\ {         \prefatoryMatter
+        \bassChorale
+        \bassCinqVoix
+        \bassFinalRepeat
+        \bassLastNoteDraftTwo } {
+      } >> }
+    }
+  >>
+  \layout {
+    \context {
+      \Voice
+      \override TextScript #'layer = #6
+      \override NoteHead #'layer = #7
+      \override Glissando #'breakable = ##t
+      \override TupletNumber #'breakable = ##t
+      \override TupletBracket #'breakable = ##t
+      \remove "Forbid_line_break_engraver"
+    }
+    \context {
+      \Staff
+      %\consists "Metronome_mark_engraver"
+      \override TimeSignature #'style = #'numbered
+      \override StaffSymbol #'layer = #4
+      \override TimeSignature #'layer = #3
+      \override TimeSignature #'whiteout = ##t
+    }
+    \context {
+      \Lyrics
+      %\override LyricText #'whiteout = ##t
+      \override LyricText #'layer = #6
+    }
+    \context {
+      \Score
+      %\remove "Metronome_mark_engraver"
+      \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
+    }
+  }
+}
