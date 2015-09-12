@@ -548,7 +548,7 @@ tenorCinqVoix = \relative c' {
   \key d \major
   ais^\ff ( a ) gis |
   d'2 dis4 |
-  e4 ( dis ) d |
+  dis4 ( d ) d |
   cis ( d ) dis |
   \key g \major
   c8^\< b a g fis2 ~ |
