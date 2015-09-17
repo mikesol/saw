@@ -3,8 +3,12 @@
 %%%%%% e fis b, cis ais'
 
 %{
+  generally, it is too stacky and is just using tactuses to change propulsion
+  rely more on suspensions
+  %%xxxxxxx
   keep tenor at original octave
   slightly slower at wonderful in chorale?
+  ?????????? cinq voix
   keep as Wi -- zard in m. 27
   test articulating each syllable m. 29
   cesure between 2 & 3 ? m. 30
@@ -13,6 +17,19 @@
   start qnote triplets m. 40
   suspension over bar into 41, otherwise it deflates (this can even be soprano - this is a dangerous moment, sois jusqu'au-boutiste!)
   clearly indicate breating all over!
+  f-sharp in tenor is ugly m. 42
+  alto x4 x x x ~ | x x x ( x ~ | x ) x x8 [ x ] |  (similar tenor) m. 44-46
+  alto 8th on 1st beat m. 47
+  bring tenor along m. 48
+  tenor x4. x8 x x x | m. 49
+  d in mezzo needs to stay over bar, c not important, too heavy m. 50
+  bass can pick up the slack, low D is too lourdingue
+  bass sucks m. 51
+  bass can be on "ra cu lous" m. 53
+  make sure to get changes from recording and handwriting on score m. 53
+  bass needs to telescope down m. 56
+  bass needs to follow recording m. 58
+  save m. 63
 %}
 
 \version "2.17.0"
