@@ -17,7 +17,7 @@
   arranger = "arr. Mike Solomon"
 }
 
-myBreak = { \break }
+myBreak = { %{\break%} }
 
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
@@ -51,7 +51,9 @@ marks = {
   \time 3/8
   \tempo "Largo" %4.=36
   \set Score.tempoWholesPerMinute = #(ly:make-moment 54 4 0 0)
-  s4.*11 | \myBreak
+  \partial 8
+  s8 |
+  s4.*10 | \myBreak
   s4.*10 | \myBreak
   s4.*12 | \myBreak
   s4.*10 | \myBreak
@@ -62,6 +64,58 @@ marks = {
   s4.*8 |
 }
 
+annotations = {
+  \override Score.RehearsalMark.self-alignment-X = #LEFT
+  %\override Score.RehearsalMark.extra-spacing-width = ##f
+  \mark \markup \box \bold 1
+  s8 |
+  s4. |
+  s4. |
+  s8 \mark \markup \box \bold 2 s4 |
+  s4.
+  \mark \markup \box \bold 3
+  s8 \mark \markup \box \bold 4 s4 |
+  s4.
+  s4. 
+  s4. 
+  s4. 
+  \mark \markup \box \bold 5
+  s4 \mark \markup \box \bold 6 s8 |
+  \mark \markup \box \bold 7 s4. |
+  \mark \markup \box \bold 8 s4. |
+  \mark \markup \box \bold 9 s4. |
+  \mark \markup \box \bold 10 s4. |
+  \mark \markup \box \bold 11 s4. |
+  s4 \mark \markup \box \bold 12 s8 |
+  \mark \markup \box \bold 13 s8 \mark \markup \box \bold 14 s4 |
+  \mark \markup \box \bold 15 s8 \mark \markup \box \bold 16 s8 \mark \markup \box \bold 17 s8 |
+  \mark \markup \box \bold 18 s4. |
+  \mark \markup \box \bold 19 s4. |
+  \mark \markup \box \bold 20 s4. |
+  \mark \markup \box \bold 21 s4. |
+  \mark \markup \box \bold 22 s4. |
+  \mark \markup \box \bold 23 s4. |
+  \mark \markup \box \bold 24 s4. |
+  s4.
+  \mark \markup \box \bold 25 s4. |
+  s4.
+  \mark \markup \box \bold 26 s4. |
+  s4. |
+  s4. |
+  s4 \mark \markup \box \bold 27 s8 |
+  s4 \mark \markup \box \bold 28 s8 |
+  \mark \markup \box \bold 29 s8 \mark \markup \box \bold 30 s8 \mark \markup \box \bold 31 s8 |
+  \mark \markup \box \bold 32 s4. |
+  \mark \markup \box \bold 33 s4. |
+  \mark \markup \box \bold 34 s8 \mark \markup \box \bold 35 s8 \mark \markup \box \bold 36 s8 |
+  s4.
+  \mark \markup \box \bold 37 s4. |
+  s4.
+  \mark \markup \box \bold 38 s4. |
+  s4. |
+  s4 \mark \markup \box \bold 39 s8 |
+}
+
 prefatoryMatter = {
   \key aes \major
   #(set-accidental-style 'modern-cautionary)
@@ -70,7 +124,7 @@ prefatoryMatter = {
 soprano = \relative c' { \autoBeamOff
   \prefatoryMatter
   \MyRed
-  ees4.
+  ees8 |
      %\footnote #'(0 . 0) \markup { Bitonal harmony resulting from tertian extensions used in directional, voice led counterpoint. } NoteHead |
   aes4 ees8 |
   c4 des8 |
@@ -131,7 +185,7 @@ soprano = \relative c' { \autoBeamOff
 }
 
 dynamicsGlobal = {
-  s4.^\f
+  s8^\f
   s4.*4 |
   s4.^\> |
   s4. |
@@ -172,7 +226,7 @@ sopranoWords = \lyricmode {
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
   \MyRed
-  ees4. |
+  ees8 |
   aes4 ees8 |
   c4 des8 |
   ees8 \MyBlack e4 ~ |
@@ -248,7 +302,7 @@ mezzoWords = \lyricmode {
 
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
-  \MyRed ees4. |
+  \MyRed ees8 |
   aes4 ees8 |
   c4 des8 |
   ees8 \MyBlack d4 ~ |
@@ -325,7 +379,7 @@ altoWords = \lyricmode {
 tenor = \relative c { \autoBeamOff
   \prefatoryMatter
   \clef "treble_8"
-  \MyRed ees4. |
+  \MyRed ees8 |
   aes4 ees8 |
   c4 des8 |
   ees8 \MyBlack a4 ~ |
@@ -407,7 +461,7 @@ tenorWords = \lyricmode {
 bass = \relative c { \autoBeamOff
   \prefatoryMatter
   \clef bass
-  \MyRed ees4. |
+  \MyRed ees8 |
   aes4 ees8 |
   c4 des8 |
   ees8 \MyBlack b4 ~ |
@@ -492,7 +546,7 @@ bassWords = \lyricmode {
         \soprano
       } {
         \marks
-      } {
+      } { \annotations } {
         \dynamicsGlobal
       }>> }
       \new Lyrics \lyricsto "soprano" {

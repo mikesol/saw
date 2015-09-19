@@ -52,7 +52,7 @@
 }
 %}
 
-
+%{
 key =
 #(define-music-function (parser location tonic pitch-alist music)
    ((ly:pitch? '()) (list? '()) ly:music?)
@@ -64,8 +64,8 @@ hackKey =
 #{
 
 #})
+%}
 
-%{
 key =
 #(define-music-function (parser location tonic pitch-alist music)
    ((ly:pitch? '()) (list? '()) ly:music?)
@@ -94,7 +94,7 @@ hackKey =
 #{
 
 #})
-
+%{
 hackKey =
 #(define-music-function (parser location tonic pitch-alist)
    ((ly:pitch? '()) (list? '()))
@@ -528,11 +528,11 @@ bassBeginning = \relative c' { \autoBeamOff
   \hackKey b \major
   \clef bass
    \key b \major {
-  \cricket \tri c2^\f^\markup \italic "bruit blanc" |
+  \tag #'normal { \cricket \tri c2^\f^\markup \italic "bruit blanc" } \tag #'piano { R2 } |
   R2. |
   R1*5/8 |
 }   \key ees \major { \relative c {
-  \bNormal
+  \tag #'normal { \bNormal } \tag #'piano { }
   bes4 g c4. % r16
   %R1*15/16 |
   r8 bes4 ~ |
@@ -3752,10 +3752,288 @@ bassFinaleWords = \lyricmode {
   hap -- py
 }
 
+giantKludgyRewriteRightHand = {
+  \key b \major
+{
+  R2 |
+  <e' gis' b'>2 <b' e'' gis''>4 |
+  fis'4. dis''4 |
+}
+  \key ees \major
+{
+  <<
+     {\voiceOne
+       g'4 ees'8 f' g'4 aes'8 |
+       f'4
+     } \\
+     {\voiceTwo
+       <bes des' ees'>4 <aes b ees'> <g d' ees'> <c' ees'>8 |
+       r8 d'
+     }
+   >>
+   <bes d'> |
+   bes bes' g'  |
+   r4 f''8 ~ f''4 f'4 |
+}
+  \key c \major
+{
+   <c' e'>4 <ces' ees' g'> <bes d' e'> |
+   <<
+     {
+       f'2 <e' g'> |
+     } \\
+     {
+       f'4 e' d' c' |
+     }
+   >>
+   <b f' a'>8 r dis'4 ~ dis'4. |
+}
+  \key b \major
+{
+  b2 gis'4 |
+  << {\voiceOne fis'2 } \\ {\voiceTwo fis4 dis' } >> |
+  << { \voiceOne <gis cis'>4. <d' e'> } \\ {\voiceTwo b2. } >> |
+  << {\voiceOne \times 3/5 { dis'2 b cis' dis' e' } } \\ {\voiceTwo cis'2 cis' c' } \\ {\voiceFour a1. } >> |
+  <gis b cis'>8 r4 r |
+  <e' ais'>2 |
+  <dis' cis''>2. |
+}
+  \key cis \major
+{
+  <disis' gis'>4 eis'8. <disis' gis'> |
+}
+  \key ees \major
+{
+  r8 g'4 e'8 \times 2/3 { <f' a'>4 <e' g'> <d' f'> } |
+  \times 2/3 { <bes d'> <c' ees'> <d' f'> ~ } q8 <ees' g'>4 <d' ees'>8
+}
+  \key c \major
+{
+  a'4 |
+  fis'8 a' gis' <fis' a'> |
+  << {\voiceOne gis'4 ~ gis'16 gis' gis' gis' r } \\ {\voiceTwo e'4. ~ e'8 dis' } >> |
+  e'4 f' fis' g' |
+  << {\voiceOne gis'8 [ g' ] } \\ {\voiceTwo <d' e'>4  } >> <cis' dis' a'>4 << {\voiceOne <d' gis'>4 <gis' ais'> } \\ {\voiceTwo e'2 } >> |
+}
+  \key fis \major {
+  << {\voiceOne g'8 b'4. b'4 <fis' gis'>4 e'8 <dis' fis'> <e' gis'>8 |  } \\ {\voiceTwo <c' e' b'>4 <b fis' g'> <cis' e' a'> <b dis'>4 r8 b4 } >> |
+}
+  \key cis \major {
+   cis'4 <cis' e' ais'> |
+}
+  \key b \major
+{
+  r8 <dis' fis' cis''>8 ~ q4 ~ q4 r8 |
+}
+  \key bes \major
+{
+  bes2 <c' ees' g'>4. |
+}
+  \key e \major
+{
+  << {\voiceOne <e' fis'>4 dis'8 <cis' e'> <dis' fis'>4 | } \\ {\voiceTwo cis'4 a b | } >>
+}
+  \key ees \major
+{
+  << {\voiceOne <d' f'>4 <bes d'>8 <c' ees'> <d' f'>4 | } \\ {\voiceTwo c'4 bes a | } >>
+  r8 bes4 |
+}
+  \key b \major 
+{
+  dis'2 |
+  %<< {\voiceOne \times 2/3 { fis'4 b' gis' } e'8. dis'16 ~ dis' cis'8. ~ cis'8 r }
+  %<< {\voiceOne \times 2/3 { fis'4 b' gis' } \times 2/3 { e' dis' cis' ! } cis'4 }
+  %\\ {\voiceTwo \times 2/3 { r2 a4 } \times 2/3 { bis4 gis' fis' } e'4  } >>
+  \times 2/3 { fis'4 b' <a gis'> } \times 2/3 { <bis e'> <dis' gis'> <cis' fis'> } <b cis' e'> ~ |
+  \stemDown e'8 \stemNeutral
+  << {\voiceOne r8 ais8 [ bis8 ] g'4 g'4 e'2 dis'2. fis'4. } \\ {\voiceTwo s4. ais2 ~ ais1 } >>
+  <b dis'>4 <ais cis' e'>4 \times 4/5 { <g b d'> <b gis cis' f'> <f a c' e'> <gis d' fis'> <dis' e' gis'> ~ } |
+  <dis' e' gis'>2 <cis' e' gis'> |
+}
+  \key bes \major
+{
+  R1*5/8
+}
+  \key b \major
+{
+  R4
+}
+  \key a \major
+{
+  R2.
+}
+  \key b \major
+{
+  r2 b'2 |
+  ais'4 ~ \times 2/3 { ais'8 fis' <e' gis'> } <e' ais'>4 <dis' a' b'> |
+  r2 <e' gis'> |
+  r4 <bis dis' fis'>2 r4 |
+  r2 << { e'4 fis' } \\ { cis'2 } >>
+  <b dis'>4 b8 cis' dis'4 e' |
+  cis' ais8 b cis'4 dis' |
+  << { \voiceOne b4. cis'8 } \\ {\voiceTwo a2 } >> <<{\voiceOne \times 2/3 { <b dis'>8 <cis' e'> <dis' fis'> } <e' gis'>16 [ <fis' a'> <gis' b'> <a' cis''> ] } \\ {\voiceTwo r8 b4 dis'8 } >> |
+}
+  << { <b' dis''>2. \times 2/3 { gis'8 <gis' b'> <b' dis''> } <dis'' fis''>2. \times 2/3 { b'8 <b' dis''> <dis'' fis''> } | ais''2 a'' | \key ees \major { aes''8 } } \\ { gis'1 b' <dis'' fis''> ~ | q8 } >>
+  bes'8 c'' d'' ees'' f'' g'' aes'' bes'' c''' |
+  << {\voiceOne d'''4 bes''4 bes''4 g''4 r8 f'''4. ~ f'''8 d''' ~ d'''4 r } \\ {\voiceTwo g''4 f'' ~ f''4. r8 <g'' d'''>4 <d'' c'''> ~ | <d'' bes''> <c'' aes''> ~ <c'' g''> | } >>
+  \key b \major { R2 | }
+  \key ees \major { << { aes'4 g' ees'8 f' g'4 aes' } \\ { f' ees' ees' ees' r } >> | }
+  \key b \major { R2 } |
+  \key d \major { r2 r32 fis'8.. } |
+  \key e \major
+{
+  e'4 e' d' fis' |
+  d' d' c 'c' |
+  bes bes a a |
+  g b c' d' |
+  << { r4 g'2. } \\ { e'1 }>> |
+  <d' fis'>2 <c' e'> |
+}
+}
+
+giantKludgyRewriteLeftHand = {
+  \key b \major
+{
+  \clef bass
+  R2 |
+  R2. |
+  R1*5/8 |
+}
+  \key ees \major
+{
+  bes,4 g, c4. |
+  <<
+     {\voiceOne
+       r4 aes8 |
+       <f aes> <d f> <c' ees'> |
+     } \\
+     {\voiceTwo
+       r8 bes,4 ~ |
+       bes,8. r |
+     }
+   >>
+   << {\voiceOne <g bes d'>4. ~ q8 r r4 } \\ {\voiceTwo r8 ees4 ~ ees8 } >> |
+}
+  \key c \major
+{
+  R2. |
+  <<
+   {\voiceOne
+     r2 e'4. d'8 ~ |
+     d'8 r8 
+   } \\
+   {\voiceTwo
+     r4 d ~ d2 ~ |
+     d8 [ g, ]
+   }
+  >> r4 r4.
+}
+  \key b \major
+{
+  << {\voiceOne fis4. f4. ais a8 ~ | a4 gis8 ~ gis4 g8 ~ | g4 fis2 a4 ~ a8 gis ~ gis4 e8 r4 r | } \\
+  {\voiceTwo r8. a, dis f, |
+  \times 2/3 { cis4 c gis, } |
+  cis8. bis, fis, f, |
+  \times 6/8 { bes,4 a, e, aes, g, ees, ges, e, } |
+  d,8 r4 r } >> |
+  <<{\voiceOne <g cis'>2 } \\ {\voiceTwo r4 fis,4 }  >> |
+  <b, fis b>2. |
+} \key cis \major
+{
+  gis4 cis'8. gis |
+}
+  \key ees \major
+{
+  r8 g4 cis8 d2 |
+  << {\voiceOne \times 7/8 { aes4 g f bes } g8 } \\ {\voiceTwo f2 bes,4. ees8 } >>
+}
+  \key c \major
+{
+  a4 |
+  <d d'>4 <dis b> |
+  <e b>4. ~ q4 |
+  << {\voiceOne bes4 a c' b | bes a cis' c' | } \\ {\voiceTwo r8 gis, d cis c fis, b, bes | a, e, gis, g, r fis, r4 | } >>
+}
+  \key fis \major
+{
+  r8 d4 r8 r4 |
+  b,4 gis, } << {\voiceOne s8 | ais4 fisis | } \\ { \voiceTwo cis8 ~ |
+  \key cis \major
+{
+  cis8 fis,4 r8 |
+} } >>
+  \key b \major
+{
+  r8 <b, b>8 ~ q4 ~ q4 r8 |
+}
+  << { \voiceOne \key bes \major
+{
+  \stemDown g4 ees a4. ~ |
+} \key e \major {
+  \stemUp a8 gis fis e ( dis4 |
+} \key ees \major { ees2 c4 ) r4 g8 ~ | }
+ \key b \major
+{
+  g8 r8 fis4 |
+  gis2. a4. gis8 |
+}  } \\ {\voiceTwo s4. s4 s4 fis,2 b,4 | s2. s4. | \times 2/3 { r4 dis4 d } cis dis e fis gis ~ gis }
+>>
+  << {\voiceOne r8 dis'8 ~ dis'4 ~ dis'8 cis'8 ~ cis'4 ~ cis'4 r b2 } \\ {\voiceTwo g4 fis4. fis,8 ~ fis,2 cis2 ais,2 gis,8 ~ | gis,4 } 
+     \\ {\voiceThree s4 s s s s s fis2 ~ fis4. ~ | fis4 } >>
+   r4 r2 r2 |
+  gis4 r r2 |
+  << { \key bes \major { c'4 a8 bes c'8 } \key b \major { cis'8.. ais32 | } \key a \major { b4 gis8 [ a ] } } \\ {e,2 fis,8 cis4 dis, e, } >> r4 |
+  R1 |
+  R1 |
+  <e gis>2 r |
+  R1 |
+  <e gis>2 <g ais> |
+  ais4 b8 ais a4 <gis, gis> |
+  <cis gis> ais8 gis fis4 <fis, e gis> |
+  <b, dis>2 ~ b,8 fis << { b16 a gis fis } \\ { fis4 } >> |
+  << { s8 b8 e'2 ~ e'8 fis' g'2.. a'8 \clef treble b'1 ~ b'8 } \\ { e4. b,8 e,2 ~ | e,8 r e2 b4 | f' e' ees' d' | \key ees \major { des'8 } } >>
+    r8 r4 r2 r4 |
+  \clef bass
+  << { r2. d'4 bes bes g4. bes } \\ { r4 ees ~ ees1 ~ ees4. r } >>
+  \key b \major
+{
+  <e gis>2 |
+}
+  \key ees \major
+{
+  f4 bes b d' c' |
+}
+  \key b \major
+{
+  <e gis>2 |
+}
+  \key d \major
+{
+  e4 cis8 [ d ] e r |
+}
+
+  << {\voiceOne
+
+    r4 e'2 e'4 |
+    r2 <d' fis'> ~ | q4 <c' e'>2 d'4 ~ | d'2 c'2 ~ | c'4 bes2. ~ | bes4 c'2. |
+  } \\ {\voiceTwo   \key e \major
+{
+  r4 b, e bes, |
+} d4 cis g, c |
+
+  b,4 fis, b, f, |
+  bes, a, f, e, |
+  \times 2/3 { gis,2 g, dis, } |
+  \times 2/3 { fis, f, d, } |
+  \key f \major { f,4. } e,8 ~ e, r f,4 |
+  r8 f,8 ~ f,4 r e,4 | }
+  >>
+}
+
 %%% SCORE
 
 \score {
-  \new ChoirStaff <<
+  << \new ChoirStaff <<
     \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
@@ -3950,7 +4228,7 @@ bassFinaleWords = \lyricmode {
     \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
-%{!%}        \bassBeginning
+%{!%}        \keepWithTag #'normal \removeWithTag #'piano \bassBeginning
 %{!%}        \bassRestarts
 %{!%}        \bassRamp
 %{!%}        \bassWinding
@@ -3990,6 +4268,118 @@ bassFinaleWords = \lyricmode {
 %{!%}        \bassDenouementWords
       }
     >>
+  >>
+%   \new PianoStaff <<
+%    \new Staff << { \partcombine
+%      \new Voice = "sopranopiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
+%\voiceOne \partcombineChords %{!%}        \sopranoBeginning
+%%{!%}        \sopranoRestarts
+%%{!%}        \sopranoRamp
+%%{!%}        \sopranoWinding
+%%{!%}        \sopranoLarge
+%%{!%}        \sopranoTriumphal
+%%{!%}        \sopranoElan
+%%{!%}        \sopranoSugar
+%%{!%}        \sopranoOpera
+%%{!%}        \sopranoRealcome
+%%{!%}        \sopranoSurprises
+%%{!%}        \sopranoWortspiel
+%%{!%}        \sopranoCartoon
+%%{!%}        \sopranoIfhap
+%%{!%}        \sopranoProof
+%%{!%}        \sopranoFinale
+%%{!%}        \sopranoStutter
+%%{!%}        \sopranoDenouement
+%      }
+%      \new Voice = "mezzopiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
+%        \voiceTwo
+%        \mezzoBeginning
+%        \mezzoRestarts
+%        \mezzoRamp
+%        \mezzoWinding
+%        \mezzoLarge
+%        \mezzoTriumphal
+%        \mezzoElan
+%        \mezzoSugar
+%        \mezzoOpera
+%        \mezzoRealcome
+%        \mezzoSurprises
+%        \mezzoWortspiel
+%        \mezzoCartoon
+%        \mezzoIfhap
+%        \mezzoProof
+%        \mezzoFinale
+%        \mezzoStutter
+%        \mezzoDenouement
+%      } } \\
+%      \new Voice = "altopiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
+%        \voiceThree
+%        \altoBeginning
+%        \altoRestarts
+%        \altoRamp
+%        \altoWinding
+%        \altoLarge
+%        \altoTriumphal
+%        \altoElan
+%        \altoSugar
+%        \altoOpera
+%        \altoRealcome
+%        \altoSurprises
+%        \altoWortspiel
+%        \altoCartoon
+%        \altoIfhap
+%        \altoProof
+%        \altoFinale
+%        \altoStutter
+%        \altoDenouement
+%      } >>
+%    \new Staff \partcombine
+%      \new Voice = "tenorpiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
+%\voiceOne %{!%}        \tenorBeginning
+%%{!%}        \tenorRestarts
+%%{!%}        \tenorRamp
+%%{!%}        \tenorWinding
+%%{!%}        \tenorLarge
+%%{!%}        \tenorTriumphal
+%%{!%}        \tenorElan
+%%{!%}        \tenorSugar
+%%{!%}        \tenorOpera
+%%{!%}        \tenorRealcome
+%%{!%}        \tenorSurprises
+%%{!%}        \tenorWortspiel
+%%{!%}        \tenorCartoon
+%%{!%}        \tenorIfhap
+%%{!%}        \tenorProof
+%%{!%}        \tenorFinale
+%%{!%}        \tenorStutter
+%%{!%}        \tenorDenouement
+%      }
+%      \new Voice = "basspiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
+%        \voiceTwo
+%        \keepWithTag #'piano \removeWithTag #'normal \bassBeginning
+%        \bassRestarts
+%        \bassRamp
+%        \bassWinding
+%        \bassLarge
+%        \bassTriumphal
+%        \bassElan
+%        \bassSugar
+%        \bassOpera
+%        \bassRealcome
+%        \bassSurprises
+%        \bassWortspiel
+%        \bassCartoon
+%        \bassIfhap
+%        \bassProof
+%        \bassFinale
+%        \bassStutter
+%        \bassDenouement
+%      }
+%  >>
+  \new PianoStaff <<
+    \new Staff \giantKludgyRewriteRightHand
+    \new Staff \giantKludgyRewriteLeftHand
+  >>
   >>
   \layout {
     \context {
@@ -4222,7 +4612,7 @@ bassFinaleWords = \lyricmode {
     \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
-\midiBeginning        \bassBeginning
+\midiBeginning        \keepWithTag #'normal \removeWithTag #'piano \bassBeginning
         \bassRestarts
         \bassRamp
         \bassWinding
@@ -4262,7 +4652,6 @@ bassFinaleWords = \lyricmode {
         \bassDenouementWords
       }
     >>
-  >>
   \midi {}
 }
 %}

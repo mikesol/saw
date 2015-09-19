@@ -362,22 +362,22 @@ marksCinqVoix = {
 sopranoCinqVoix = \relative c'' {
   \key c \major
   c4 g e f |
-  g c ~ c c, |
-  a' g8 f e4 f8 d |
-  c8 [ d e f g a ] b [ c ] |
-  d4 ( c ) a |
-  c2 c4 |
+  g c ~ c g |
+  a g8 f e4 f8 d |
+  c8 d e f g a b c |
+  d4 ( c ) b |
+  c r c4 |
   b4 b b |
   a2 a4 |
   d d d |
-  d2 b4 |
+  d ( c ) b4 |
   g2. |
   a4 g g4 |
   a2^\< a4 a |
   a2 a4 b |
   \key a \major
-  cis2^\f a |
-  e g4 cis |
+  cis2^\f a ~ |
+  a4 e g4 cis |
   d2 d4 cis |
   b2 d |
   \key fis \major
@@ -404,10 +404,11 @@ sopranoCinqVoix = \relative c'' {
 }
 
 sopranoCinqVoixWords = \lyricmode {
-  We're off to see the Wi -- zard
+  We're off to see the Wi -- zard,
   The Won -- der -- ful Wi -- zard of Oz.
+  He is the Won -- der -- ful
   We hear he is a wiz of a wiz.
-  If ev -- er a wiz there was.
+  If ev -- er a wiz there was
   ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one be -- cause.
@@ -421,23 +422,23 @@ sopranoCinqVoixWords = \lyricmode {
 mezzoCinqVoix = \relative c'' {
   \key c \major
   g4 e e d |
-  e g a b |
+  \times 2/3 { e4 g'8 } \times 2/3 { g e g } c4 e,, |
   f4 e8 d c4 d8 c |
-  a [ b c d e f ] g [ a ] |
-  g2 ges4 |
-  b4 g a |
-  fis fis f |
-  gis ( fis ) f |
+  a b c d e f f gis |
+  gis4 ( a ) f4 |
+  gis4 r g |
+  fis f gis |
+  gis ( fis ) a |
   bes bes c |
-  bes ( a ) g |
+  bes ( a ) gis |
   f4 e d |
   f e ees |
   f2^\< g4 ges |
   f ( e ) fis gis |
   \key a \major
-  gis^\f ( g ) fis ( f ) |
-  cis2 e4 ais |
-  a ( gis ) b gis |
+  \times 2/3 { gis^\f ( g fis ) } \times 2/3 {  fis ( f ees } |
+  d4 ) cis e4 ais |
+  a ( gis ) b ais |
   a ( gis ) a ( b ) |
   \key fis \major
   ais2.^\< a4 |
@@ -463,9 +464,10 @@ mezzoCinqVoix = \relative c'' {
 }
 
 mezzoCinqVoixWords = \lyricmode {
-  off to see the, off to see
+  off to see the Wiz, The Wi -- zard of Oz!
   The Won -- der -- ful Wi -- zard of Oz.
-  We hear he Wi -- zard a wiz of a wiz.
+  He is the Won -- der -- ful,
+  We hear he is a wiz of a wiz.
   If ev -- er a wiz there
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
@@ -485,24 +487,24 @@ mezzoCinqVoixWords = \lyricmode {
 
 altoCinqVoix = \relative c' {
   \key c \major
-  e4 e c c |
-  c e f g |
+  e4 e d d |
+  \times 2/3 { c4 e'8 } \times 2/3 { e c e } g4 cis,, |
   e d8 c b4 c8 a |
-  g [ a b c d e ] f [ g ] |
-  e2 ees4 |
-  g4 d ees |
-  e d d |
-  e2 ees4 |
+  g a b c d e d dis |
+  e2 dis4 |
+  e4 r dis |
+  d d d |
+  d ( e ) a4 |
   a4 g aes |
   g2 e4 |
   c4 c b |
-  d d des |
+  d d cis |
   e4^\< ( ees ) %{ e2^\< %} e4 ees |
   d ( cis ) d f |
   \key a \major
-  f^\f ( e ) ees ( d ) |
-  b ( a )  d gis |
-  fis ( eis ) a fis |
+  \times 2/3 { f^\f ( e ees ) } d4 ( cis |
+  b ) b  d gis |
+  fis2 g4 fis |
   f ( fis ) g ( gis ) |
   \key fis \major
   eis^\< e g fis |
@@ -528,9 +530,10 @@ altoCinqVoix = \relative c' {
 }
 
 altoCinqVoixWords = \lyricmode {
-  off to see the, off to see
+  off to see the Wiz, The Wi -- zard of Oz!
   The Won -- der -- ful Wi -- zard of Oz.
-  We hear he Wi -- zard a wiz of a wiz.
+  He is the Won -- der -- ful,
+  We hear he is a wiz of a wiz.
   If ev -- er a wiz there
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
@@ -550,24 +553,24 @@ altoCinqVoixWords = \lyricmode {
 tenorCinqVoix = \relative c' {
   \clef "treble_8"
   \key c \major
-  e4 c c g |
-  a g f e |
-  c' b8 a b4 a8 f |
-  e [ f g a b c ] d [ e ] |
-  c2 c4 |
-  d4 b ees |
-  c a b |
-  c2 c4 |
-  f f f |
-  ees2 cis4 |
+  e4 c c b |
+  \times 2/3 { c4 c8 } \times 2/3 { c g c } e4 b |  
+  c b8 a b4 a8 f |
+  e f g a b c b a |
+  b4 ( a ) a4 |
+  bes4 r a |
+  gis a b |
+  b4 ( c ) a4 |
+  f' f f |
+  f2 cis4 |
   a g f |
   c' b a |
   c2^\< c4 c |
   b4 ( ais ) cis d |
   \key a \major
-  d^\f ( b ) cis ( bes ) |
-  gis ( fis ) bes e |
-  cis2 g'4 e |
+  d^\f ( b ) \times 2/3 { cis ( gis a } |
+  f ) gis bes e |
+  cis4 ( b ) ees dis%{^\markup \italic "(sorry)"%} |
   dis4 ( d ) dis ( f ) |
   \key fis \major
   dis4^\< b d bis |
@@ -593,11 +596,11 @@ tenorCinqVoix = \relative c' {
 }
 
 tenorCinqVoixWords = \lyricmode {
-  off to see the
-  off to see the
-  Won -- der -- ful Wi -- zard of Oz.
-  We hear he Wi -- zard a wiz of a wiz.
-  If ev -- er a wiz there, ev -- er oh ev -- er.
+  off to see the Wiz, The Wi -- zard of Oz!
+  The Won -- der -- ful Wi -- zard of Oz.
+  He is the Won -- der -- ful,
+  We hear he is a wiz of a wiz.
+  If ev -- er a wiz there, ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one, is one be -- cause.
   Be -- cause be -- cause be -- cause be -- cause be -- cause.
@@ -617,23 +620,24 @@ tenorCinqVoixWords = \lyricmode {
 bassCinqVoix = \relative c {
   \clef "bass"
   \key c \major
-  c4 b' a g f e d c |
+  c4 b' a g |
+  c b a g |
   d e8 f g4 g, |
-  c2 b |
-  a2 a4 |
-  e'2 ees4 |
-  d4 e gis |
-  a2 a,4 |
-  f' d bes |
+  c2 r4 gis8 e |
+  a2 g4 |
+  fis4 r b |
+  e4 b e, |
+  a2 a'4 |
+  f d bes |
   ees2 a,4 |
   d2. |
-  g,2 ees'4 |
+  g,2 b4 |
   d2^\< d4 d |
   g,2 b4 e, |
   \key a \major
   a1^\f ~ |
-  a4 a c fis, |
-  b2 f'4 ais, |
+  a4 r c fis, |
+  b2 f'4 gis, |
   %{ e'4 a, c e, | %}
   e'2 b4 e, |
   \key fis \major |
@@ -660,14 +664,13 @@ bassCinqVoix = \relative c {
 }
 
 bassCinqVoixWords = \lyricmode {
-  off to see the
-  off to see the
-  Won -- der -- ful Wi -- zard
-  Oz.
+  off to see, We're off to see,
+  The Won -- der -- ful Wi -- zard
+  Oz. ful
   We hear he is a wiz of a wiz.
   If ev -- er a wiz there was.
   ev
-  If ev -- er, oh ev -- er a wiz, the
+  If ev -- er, oh ev -- er a wiz,
   Oh the Wi -- zard of Oz, %{of%} Oz is one, is one be -- cause.
   Be -- cause be -- cause be -- cause be -- cause be -- cause.
   cause. Be
