@@ -3889,6 +3889,16 @@ giantKludgyRewriteRightHand = {
   << { r4 g'2. } \\ { e'1 }>> |
   <d' fis'>2 <c' e'> |
 }
+  \key f \major
+{
+  <bes ees'>4 <a c'> <g b cis'> <a c' d' a'> ~ |
+  <g d' aes'> <c' ees' g'> ~ <ees' fis' gis'> <fis' g' ais'>
+}
+\key a \major
+{
+  << {\voiceOne <gis' b'>4 <fis' a'> <e' gis'> <d' a'> | \key e \major { <cis' a'>2 } <e' e''> | <fis' dis''>4 b'8 <a' cis''> <gis' b' dis''>4 } \\ {\voiceTwo r4 e'2 b4 ~ b4 a2 a'4 ~ a'2 } >> |
+}
+  <g ais bis>4. <dis' eis' gis'> <d' fisis' ais'>4 |
 }
 
 giantKludgyRewriteLeftHand = {
@@ -4025,9 +4035,19 @@ giantKludgyRewriteLeftHand = {
   bes, a, f, e, |
   \times 2/3 { gis,2 g, dis, } |
   \times 2/3 { fis, f, d, } |
-  \key f \major { f,4. } e,8 ~ e, r f,4 |
-  r8 f,8 ~ f,4 r e,4 | }
+  }  
   >>
+  \key f \major { f,4. } e,8 ~ e, r f,4 |
+  r8 f,8 ~ f,4 r e,4 |
+  \key a \major {
+    << { gis4 a b cis' } \\ { e,4. e8 ~ e2 } >> 
+  }
+  \key e \major
+{
+  << { dis'2 cis' } \\ { \times 2/3 { r4 b,4 ais, } \times 2/3 { gis,4 fis,2 } } >>
+  <fis, b>4 <fisis, a> <gis, gis> |
+  fis4. bis ais4 |
+}
 }
 
 %%% SCORE
