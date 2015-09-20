@@ -799,7 +799,7 @@ mezzoSecondPart = \relative c' {
   g4 \lo r8 \sh bes r4 eis, |
   \lo r8 \sh e r4 g4 \lo r8 \sh fis8 |
   r4 g4 \lo r8 \sh gis8 r4 |
-  g4 \lo r8 \sh ais r4 f |
+  a4 \lo r8 \sh ais r4 f |
   \lo r8 \sh g r4 fis \lo r8 \sh c8 |
   r4 g'4 \lo r8 \sh gis8 r4 |
   %\mark "?"
