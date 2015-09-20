@@ -800,12 +800,11 @@ sopranoSecondPart = \relative c' {
   R1\! |
   R1|
   r4 g,^\mf g r |
-  gis8 gis4 gis8 ~ gis8 a4 a8 |
-  a8 a a4 ais8 ais4 ais8 ~ |
-  \times 2/3 { ais1 a2^\f } |
-  gis2. gis4 |
+  gis8 gis4 gis8 ~ gis8 gis4 gis8 |
   b2 e |
-  cis4 dis2 e4 ~ |
+  cis4 dis2 e4 ~ 
+  e a,2 a4 |
+  gis cis4 dis e4 ~ 
   e a,2 a4 |
   \times 2/3 { gis2 gis4 } gis2 |
   a2 ~ a8 fis ~ fis4 |
@@ -815,10 +814,10 @@ sopranoSecondPart = \relative c' {
   %\times 2/3 { e2 gis b } |
   %a1 |
   \times 4/6 { e4 gis b2 a4 b } |
-  \times 4/6 { gis4 fis8 fis e e e4 gis b } |
-  %!!a2 \times 2/3 { b4 e,4. gis8 } |
-  %!!\times 4/6 { b4 e cis8 dis4 e4 a,4 a8 } |
-  %!!\times 4/6 { gis8 gis gis4 a fis r2 }
+  %!\times 4/6 { gis4 fis8 fis e e e4 gis b } |
+  %!a2 \times 2/3 { b4 e,4. gis8 } | %
+  \times 4/6 { %{b4%} gis e' cis8 dis4 e4 a,4 a8 } | %
+  \times 4/6 { gis8 gis gis4 a fis r2 } | %
   %gis1 |
   %\times 2/3 { gis2 b1 } |
   %\times 2/3 { e1 cis2 } |
@@ -930,8 +929,8 @@ mezzoSecondPart = \relative c' {
   d d d4 dis8 e4 f8 ~ |
   \times 2/3 { f2 e fis,2 } |
   e2. e4 |
-  gis2 g |
-  fis4 gis2 cis4 ~ |
+  gis2 b |
+  a4 b2 cis4 ~ |
   cis fis,2 fis4 |
   \times 2/3 { e2 e4 } e2 |
   fis2 ~ fis8 dis ~ dis4 |
@@ -1234,7 +1233,7 @@ bassSecondPart = \relative c {
   a4 gis fis d' |
   cis c b dis, |
   e d' a b |
-  \lo e8 \sh e d4 cis g4 |
+  \lo cis8 \sh e d4 cis g4 |
   fis c' b g |
   gis4 g bes eis, |
   fis b c cis |
@@ -1276,7 +1275,7 @@ bassSecondPart = \relative c {
   gis r b r |
   cis r a r |
   gis r g r |
-  fis r %{a%} f r |
+  fis r a r |
   gis r b r |
   a r fisis r |
   gis r e r |
