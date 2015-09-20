@@ -798,11 +798,12 @@ sopranoSecondPart = \relative c' {
   e a,2 a4 |
   \times 2/3 { gis2 gis4 } gis2 |
   \times 2/3 { a1 fis2 } |
-  \times 2/3 { r2 gis b2 ~ } |
-  \times 2/3 { b a b } |
-  \times 2/3 { gis2 fis4 fis e e } |
-  \times 2/3 { e2 gis b } |
-  a1 |
+  \times 2/3 { r2 e gis2 } |
+  \times 2/3 { b1 a2 } |
+  \times 2/3 { b gis fis4 fis } |
+  \times 2/3 { e e e2 gis } |
+  \times 2/3 { b a1 } |
+  %a1 |
   %gis1 |
   %\times 2/3 { gis2 b1 } |
   %\times 2/3 { e1 cis2 } |
