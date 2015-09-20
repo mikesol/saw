@@ -749,13 +749,20 @@ sopranoSecondPart = \relative c' {
   \lo r8 \sh gis r4 r4 fis |
   r4 \lo r8 \sh f r2 |
   e4 r4 r2 | % 1
-  \lod fisis,4. \sh gis8 ~ \lod gis4. \sh b8 ~ | %2
-  b4 cis ~ cis d ~ | % 3
-  \lo d8 \sh cis ~ cis4 ~ \lo cis8 \sh b ~ b4 | %4
-  gis2 \lod fis4. \sh gis8 ~ | % 5
-  \lod gis4. \sh b8 ~ b4 cis4 ~ | % 6
-  cis a ~ \lo a8 \sh b8 ~ b4 ~ | % 7
-  \lo b8 \sh fis ~ fis4 e4 e |
+  %\lod fisis,4. \sh gis8 ~ \lod gis4. \sh b8 ~ | %2
+  %b4 cis ~ cis d ~ | % 3
+  %\lo d8 \sh cis ~ cis4 ~ \lo cis8 \sh b ~ b4 | %4
+  %gis2 \lod fis4. \sh gis8 ~ | % 5
+  %\lod gis4. \sh b8 ~ b4 cis4 ~ | % 6
+  %cis a ~ \lo a8 \sh b8 ~ b4 ~ | % 7
+  %\lo b8 \sh fis ~ fis4
+  R1 |
+  r4 gis, ~ gis a |
+  r ais ~ ais b |
+  r cis ~ cis c |
+  r b ~ b a |
+  r gis ~ gis fis |
+  r2 e4 e |
   e4 r e8 e4 e8 ~ |
   e e4 e8 e8 e e4 |
   e8 e4 e8 ~ e2 ~ |
@@ -1009,15 +1016,16 @@ tenorSecondPart = \relative c' {
   r2 b4 r |
   \lod r4. \sh bes8 r2 |
   r4 c r2 |
-  \lo r8 \sh b r4 r2 |
-  cis4 r4 r2 |
-  r2 \lod r4. \sh fisis,8 ~ | %2
-  fisis4 gis ~ gis b ~ | % 3
-  \lo b8 \sh cis ~ cis4 ~ \lo cis8 \sh d ~ d4 | %4
-  cis2 \lod b4. \sh gis8 ~ | % 5
-  \lod gis4. \sh fis8 ~ fis4 gis4 ~ | % 6
-  gis b ~ \lo b8 \sh cis8 ~ cis4 ~ | % 7
-  \lo cis8 \sh ais ~ ais4 b4 b |
+  \lo r8 \sh b r4 r2 | % 1
+  cis4 r4 r2 | % 2
+  R1 |
+  r2. cis4 ~ |
+  cis c r d ~ |
+  d a r e' ~ |
+  e f r dis ~ |
+  dis cis r b ~ |
+  b ais b4 b | % 1
+  %\lo cis8 \sh ais ~ ais4 b4 b |
   bes4 r b8 b4 c8 ~ |
   c c4 c8 cis8 cis cis4 |
   c8 c4 b8 ~ b2 ~ |
