@@ -765,7 +765,7 @@ sopranoSecondPart = \relative c' {
   %\lo r8 fis4 \sh r8 \lo r8 f4 \sh r8 |
   %e4 \lo r8 \sh b'8 ~ \lo b8 r4 \sh ais8 ~  |
   %\lo ais8 \sh a8 gis4 fis e |
-  \times 4/5 { r gis, r a r }
+  \times 4/5 { r4 gis, r a r }  %%%% here to change
   \times 4/5 { ais4 r b r fis  }
   \times 4/5 { r f r e r }
   s1*2 |
