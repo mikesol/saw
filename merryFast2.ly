@@ -798,8 +798,8 @@ mezzoSecondPart = \relative c' {
   r4 g4 \lo r8 \sh gis8 r4 |
   g4 \lo r8 \sh bes r4 eis, |
   \lo r8 \sh e r4 g4 \lo r8 \sh fis8 |
-  r4 fis4 \lo r8 \sh f8 r4 |
-  fis4 \lo r8 \sh fis r4 f |
+  r4 g4 \lo r8 \sh gis8 r4 |
+  g4 \lo r8 \sh fis r4 f |
   \lo r8 \sh g r4 f \lo r8 \sh c8 |
   r4 g'4 \lo r8 \sh fis8 r4 |
   %\mark "?"
@@ -869,7 +869,7 @@ altoSecondPart = \relative c'' {
   r2 eis4 r |
   \lo r8 \sh fis r4 r4 dis |
   r4 \lo r8 \sh eis r2 |
-  dis4 r4 \lo r8 \sh g r4 |
+  dis4 r4 \lo r8 \sh fis r4 |
   \clef treble
   e4 gis b2 |
   \lo a8 b4 \sh gis8 ~ \lo gis fis4 \sh fis8 |
@@ -1005,7 +1005,7 @@ bassSecondPart = \relative c {
   a4 gis g cis |
   fis, d' b dis, |
   e gis a b |
-  \lo e8 \sh e bes4 cis g4 |
+  \lo bes8 \sh bes e4 cis g4 |
   fis c' b g |
   gis4 g bes eis, |
   fis f cis' c |
