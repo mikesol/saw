@@ -3899,7 +3899,91 @@ giantKludgyRewriteRightHand = {
   << {\voiceOne <gis' b'>4 <fis' a'> <e' gis'> <d' a'> | \key e \major { <cis' a'>2 } <e' e''> | <fis' dis''>4 b'8 <a' cis''> <gis' b' dis''>4 } \\ {\voiceTwo r4 e'2 b4 ~ b4 a2 a'4 ~ a'2 } >> |
 }
   <g ais bis>4. <dis' eis' gis'> <d' fisis' ais'>4 |
+  \key b \major
+{
+  << { gis'2 g'4 fis'2 ~ fis'8 r8 } \\ { r4 gis e' dis'2 ~ dis'8 r } >> 
 }
+  \key d \major
+{
+  <b e'>4 <g cis'>8 <a d'> <b e'>4 <cis' fis'> |
+  <c' d'> <c' fis' a'> |
+  <b d' fis'>8. <b fis' a'>16 ~ q4 <bes fis'>4 <bes a'>4 |
+  <a fis'>4 <a d' fis> q8 |
+  <b d' g'>4 <b d' fis'>8 <bes cis' e'> <a b d'>4 <b dis' fis'> |
+  <b d' g'> <g b> <g bes cis'> |
+  << { <fis' a'>2 <gis' d''> } \\ { cis'4 ~ cis'16 b a g e'2 } >> |
+  <b d' e'>4 r <dis' fis' d''>2 |
+  <b d' eis'>4 r |
+  <a d' fis'>4 q4 q8 q8 q16 q16 q16 q16 |
+  q4 r d''2 |
+  <b d' g'>4 r
+  << { gis'8 cis''8 ~ | cis''8 b' cis'' d'' e'' d'' cis'' b'  }
+      \\ { <d' f'>8 <fis' a'> ~ <fis' a'>4. <f' b'>8 <e' cis''> <f' b'> <fis' ais'> <f' gis'> |  } >>
+  \times 2/3 { <e' fisis' ais'>4 q8 } d''8 <d' d''> cis'' |
+  << { d'2 b'4 cis'' } \\ { \times 2/3 { d' cis' c' } <b fis'>2 } >>
+}
+  \key e \major
+{
+  <d' fis' b'>4 <cis' f' bes'> <c' e' a> |
+  <b dis'>2 << { a'4 b' } \\ { <dis' fis'>2 } >> |
+  <e' gis'>4 e'8 <dis' fis'> <cis' gis'>4 <cis' g' a'> |
+}
+  \key d \major
+{
+  \repeat unfold 4 { <d' fis'>4 <fis' a'> } |
+  \times 2/3 { b1 b'2 } \times 2/3 { <fis' a'>2 q q } \times 2/3 { q2 b1 } |
+}
+  \key ees \major
+{
+  <aes' c''>4 f' |
+  f'4 ees' <c' f'> <b f' g'> <c' ees' aes'> |
+}
+  \key a \major
+{
+  << { <a d'>4 <gis e'> <a fis'>8 } \\ { cis'8 b4 b } >> |
+}
+  \key cis \major
+{
+  <ais cis' dis'>4 <gis cis' eis'>4 <gis bis cis'>4. |
+}
+  \key e \major
+{
+  a'2 |
+  <e' gis'>8. <d' b'>16 ~ q4 |
+  <cis' ais'>4 <ais fis'> <dis' a'>8 |
+  << { b' gis'4. } \\ { d'4 d' cis'8 } >> |
+  <e' g'>2 <fis' a'> |
+  <d' fis'>4 <c' a'> |
+  <dis' gis'>4 <d' e'> <cis' fis'> <d' gis'> |
+  <cis' e' a'>4 <cis' e' fis'> <a dis'> <a cis' e'> <cis' e' fis'> <cis' e' gis'> |
+  <b e'> <a e'> <cis' e' fis'> <cis' e' gis'> |
+  <b e'> <b dis' b'> <b e' gis'> <b fis' b'> <b e' gis'> <b fis' b'> |
+  <b gis' cis''> <b fis' b'> < b e' gis'> <b fis' b'> <cis' gis' ais'> <e' ais' cis''> |
+  <a' b'>4 r8 <fis' b'>8 ~ q4 <e' a'> |
+  cis'4 <e' a' d''> ~ q8 <g' c''>4. |
+  \times 2/3 { <fis' b'>4 <e' a'> r } \times 2/3 { r <fis' cis''> <g' e''> } |
+  << { \times 2/3 { cis'' e'' cis'' } r8 d''4 c''8 } \\ { \times 2/3 { a'4 b'4 a'4 } \times 2/3 { g' <fis' a'> g' } } >> |
+  << { r4 cis'' r8 f''8 ~ f''4 \times 2/3 { e''4 g'' e'' } } \\ { r8 fis'8 ~ fis'4 e'8 r4 a'8 ~ \times 2/3 { <g' a'>4 <fis' g'> fis' } } >>
+  e'8 <fis' d''>4 <e' c''>8 |
+  << { \times 2/3 { gis'4 b' r } } \\ { <d' b'>4 <c' a'>8 r } >>
+  << { r8 gis''4 fis''8 ~ fis''4 e''4 d'' | } \\ { \times 2/3 { e'4 fis'2 ~ } \times 2/3 { fis'4 gis'2 ~ } gis'4 | } \\ { ais'2 ~ ais'4. \autoBeamOff ais'8 ais' ais' \autoBeamOn | } >>
+}
+  \key b \major
+{
+  \times 2/3 { gis4 e' dis' } b8 cis' <bis dis'>4 <bis e'> |
+  <b cis'>4 ais8 <gis b> <b cis'>4 << { dis'4 } \\ { ais8 gis } >> <fis b>4 r4 eis'2 |
+}
+  \key bes \major
+{
+  d'4 f' d' f' d' f' <c' ees'> <d' f'> <ees' g'> <ees' f' a'>2 r4 |
+}
+}
+
+%%%%%%%%% !
+%%%%%%%%% !
+%%%%%%%%% !
+%%%%%%%%% !
+%%%%%%%%% !
 
 giantKludgyRewriteLeftHand = {
   \key b \major
@@ -3980,8 +4064,8 @@ giantKludgyRewriteLeftHand = {
 {
   \stemDown g4 ees a4. ~ |
 } \key e \major {
-  \stemUp a8 gis fis e ( dis4 |
-} \key ees \major { ees2 c4 ) r4 g8 ~ | }
+  \stemUp a8 gis fis e dis4 ( |
+} \key ees \major { ees2 ) c4 r4 g8 ~ | }
  \key b \major
 {
   g8 r8 fis4 |
@@ -4047,6 +4131,83 @@ giantKludgyRewriteLeftHand = {
   << { dis'2 cis' } \\ { \times 2/3 { r4 b,4 ais, } \times 2/3 { gis,4 fis,2 } } >>
   <fis, b>4 <fisis, a> <gis, gis> |
   fis4. bis ais4 |
+}
+  \key b \major
+{
+  << { cis'2. } \\ { r4 cis <fis ais> } >>
+  b2 ~ b8 r |
+}
+  \key d \major
+{
+  << { g4 e8 fis g4 a4 } \\ { e,2 a,2 } >>
+  <d a>4 <fis a> |
+  << { a4 r r2 } \\ { g1 } >>
+  r2 d8 |
+  << { fis4 a8 g g4 a } \\ { b, a, g, fis, } >> |
+  << { g4 e ees } \\ { e,2 a,4 } >> |
+  << { \mergeDifferentlyHeadedOn d4 d' c'2 } \\ { d2 dis2 } >> |
+  \mergeDifferentlyHeadedOff
+  <e g>4 r <ais, c'>2 |
+  <eis gis>4 r |
+  << { a4 a a8 a a16 a a a a4 } \\ { d4 a, d8 a, d a, d4 } >> r r2 |
+  << { e4 r b8 e' } \\ { g,4 r e, | } >>
+  << { dis'8 d' cis' b ais b cis' d' } \\ { a,2 e, | } >> |
+  << { \times 2/3 { cis'4 cis'8 } } \\ { ees,4 } >> d'8 <d, d> cis' |
+  << { d2 d'2 } \\ { b,4 a, gis, b, } >> |
+}
+  \key e \major
+{
+  <a, a>4 <cis gis> <e g> |
+  << { fis2 cis'4 c' } \\ { d4 fis a2 } >>
+  b4 r r <a, cis'> |
+}
+  \key d \major
+{
+  d'4 r d' r | d' r d' r |
+  \times 2/3 { b1 b,2 } | \times 2/3 { a2 a a } | \times 2/3 { a b1 } |
+}
+  \key ees \major
+{
+  <c' ees'>4 aes |
+  << { bes2 aes4 g f } \\ { g,4. f,4. d4 f } >> |
+}
+  \key a \major
+{
+  << { fis4 e e8 } \\ { d4. e,4 } >> |
+}
+  \key cis \major
+{
+  <gis, fis>4 <gis, fis> <cis eis>4. |
+}
+  \key e \major
+{
+  R2 |
+  r4 b, ~ |
+  b,8 b,4. r8 |
+  fis,16 gis, b,4. b,8 |
+  << { c'4 e' d' c' } \\ { r8 fis, b,4 ~ b,8 b,4 r8 } >> |
+  ais4 <b, a> |
+  << { c'4 b ais b } \\ { r2 b, } >> |
+  <b, b>4 <cis a> < fis gis> <cis fis> <a, a> <b, a> |
+  <e gis> <cis fis> <a, a> <b, a> |
+  <e gis> <fis, a> <e, gis> <dis, fis> <cis, cis'> <dis, a> |
+  <e, gis> <fis, a> <gis, b> <fis, a> <e, cis'> <fis, ais> |
+  << { <b dis'>4. <a cis'>8 ~ q4 r } \\ { b,4 b, b, r } >>
+  << { \times 2/3 { g b d' ~ } \times 2/3 { <a d'> <a cis'> <b d'> ~ } d'4 c' fis' e' } \\ { b,4 c d e r d c r } >>
+  << { d'4. <c' fis'>8 ~ \times 2/3 { q4 a b } } \\ { r4 b, b, r } >>
+  << { \times 2/3 { c'4 d' c' } \times 2/3 { <b d'> <\tweak #'duration-log #1 a e'> fis' }} \\ { r a, b, c } >>
+  << { \times 2/3 { c'2 e'4 } \times 2/3 { fis'4 <b e'> <c' d'> } } \\ { d4 r b, b, } >>
+  << { \times 2/3 { d'4 \csmk e'2 ^\markup { \hspace #2 \raise #2 \draw-dashed-line #'(8 . 8) } } r8 fis'4 e'8 ~ e' d'4 c'4 b8 } \\ { r4 d4 c c b,8. c d e| } >>
+}
+  \key b \major
+{
+  \times 2/3 { gis4 <eis g> <dis fis> } <dis fis> <fis gis> <fis gisis> |
+  <e ais> fis <fis gis> <fis, a> |
+  <b, ais b> cis' cisis' dis' |
+}
+  \key bes \major
+{
+    \times 2/3 { c'4 bes c' } \times 2/3 { bes c' bes } \times 2/3 { c' bes c' } bes4 bes | bes a2 r4 |
 }
 }
 

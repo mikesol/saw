@@ -169,6 +169,8 @@ lyrRot = \once \override LyricText #'stencil = #(lambda (grob) (ly:stencil-rotat
 noTime = \once \override Score . TimeSignature #'stencil = ##f
 noHead = \once \override NoteHead #'transparent = ##t
 
+csmk = \once \override TextScript #'cross-staff = ##t
+
 brackVis = \once \override TupletBracket #'bracket-visibility = ##t
 
 barStub = {
