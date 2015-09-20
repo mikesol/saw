@@ -724,12 +724,12 @@ sopranoSecondPart = \relative c' {
   r2 e4 r |
   \lo r8 \sh d r4 r4 cis4 |
   r4 \lo r8 \sh c r2 |
-  b4 r \lo r8 \sh ais r4 |
-  r4 gis4 r4 \lo r8 \sh d'8 |
-  r2 dis4 r4 |
-  \lo r8 \sh cis r4 r4 b |
-  r4 \lo r8 \sh ais r2 |
-  cis4 r \lo r8 \sh b r4 |
+  b4 r \lo r8 \sh a r4 |
+  r4 gis4 r4 \lo r8 \sh dis'8 |
+  r2 d4 r4 |
+  \lo r8 \sh cis r4 r4 c |
+  r4 \lo r8 \sh b r2 |
+  ais4 r \lo r8 \sh b r4 |
   r4 c4 r4 \lo r8 \sh cis8 |
   r2 d4 r4 |
   \lo r8 \sh d r4 r4 dis |
@@ -793,8 +793,8 @@ mezzoSecondPart = \relative c' {
   r2 bes4 r |
   \lo r8 \sh gis r4 r4 gis4 |
   r4 \lo r8 \sh fis r2 |
-  g4 r \lo r8 \sh fis r4 |
-  r4 eis r \lo r8 \sh fis |
+  g4 r \lo r8 \sh e r4 |
+  r4 eis r \lo r8 \sh a |
   r4 g4 \lo r8 \sh gis8 r4 |
   g4 \lo r8 \sh bes r4 eis, |
   \lo r8 \sh e r4 g4 \lo r8 \sh fis8 |
@@ -865,7 +865,7 @@ altoSecondPart = \relative c'' {
   \lo r8 \sh e r4 r4 eis4 |
   r4 \lo r8 \sh d r2 |
   cis4 r \lo r8 \sh d r4 |
-  r4 cis4 r4 \lo r8 \sh dis |
+  r4 cis4 r4 \lo r8 \sh fis |
   r2 eis4 r |
   \lo r8 \sh fis r4 r4 dis |
   r4 \lo r8 \sh eis r2 |
