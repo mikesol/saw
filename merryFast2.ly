@@ -765,18 +765,22 @@ sopranoSecondPart = \relative c' {
   %\lo r8 fis4 \sh r8 \lo r8 f4 \sh r8 |
   %e4 \lo r8 \sh b'8 ~ \lo b8 r4 \sh ais8 ~  |
   %\lo ais8 \sh a8 gis4 fis e |
-  \times 4/5 { r4 gis, r a r }  %%%% here to change
+  \times 4/5 { r1 gis,4 ~  }  %%%% here to change
+  \times 4/5 { gis2 r2. }
+  \times 4/5 { r2 a2. }
+  R1 |
   \times 4/5 { ais4 r b r fis  }
   \times 4/5 { r f r e r }
-  s1*2 |
+  R1*2 |
   fis4 fis e4 e |
   e4 r e8 e4 e8 ~ |
   e e4 e8 e8 e e4 |
   e8 e4 e8 ~ e2 ~ |
   e8 r8 e4 e4. e8 |
-  e4 e4 e8 e4 e8 ~ |
-  e8 e8 ~ e4 e2 |
-  e2 ~ e8 e ~ e4 |
+  %e4 e4 e8 e4 e8 ~ |
+  %e8 e8 ~ e4 e2 |
+  %e2 ~ e8 e ~ e4 |
+  R1*3 |
   R1*5 |
   r2 bis |
   cis1 |
@@ -1022,7 +1026,7 @@ altoSecondPart = \relative c'' {
   fis cis | % 3
   e1 | % 4
   cis1 ~ | % 5
-  cis2 a' | % 6
+  cis2 cis | % 6
   fis1 | % 7
   gis2 fis2 | % 8
   cis2 e | % 9 !!
@@ -1134,9 +1138,9 @@ tenorSecondPart = \relative c' {
   e2 dis |
   e1 ~ |
   e2 r 
-  dis cis |
+  b' ais |
   R1 |
-  r4 b'4 r2 |
+  r4 b4 r2 |
   r8 a4 r8 r2 |
   R1 |
   r8 e'4 r8 r8 dis4 r8 |
