@@ -681,10 +681,11 @@ marksSecondPart = {
   \bar ""
   \unfoldChange #168 #120 #48
   \time 4/4
-  \tempo "Slow" 4=56
+  \tempo "Slow" 4=48
   s1*8 \bar "||"
   \time 2/2
-  \tempo \markup { "Freely" \note #"4" #UP = \note #"2" #UP }
+  %\tempo \markup { "Freely" \note #"4" #UP = \note #"2" #UP }
+  \tempo 2=56
   \set Score.tempoWholesPerMinute = #(ly:make-moment 112 4 0 0)
   s1 |
   \time 3/4
@@ -759,12 +760,16 @@ sopranoSecondPart = \relative c' {
   %cis a ~ \lo a8 \sh b8 ~ b4 ~ | % 7
   %\lo b8 \sh fis ~ fis4
   R1 |
-  r4 gis, r a |
-  r ais r b |
-  r fis r e |
-  r b' r a |
-  r gis fis e |
-  fis fis e4 e |
+  %r4 gis, r a |
+  %r ais r b |
+  %\lo r8 fis4 \sh r8 \lo r8 f4 \sh r8 |
+  %e4 \lo r8 \sh b'8 ~ \lo b8 r4 \sh ais8 ~  |
+  %\lo ais8 \sh a8 gis4 fis e |
+  \times 4/5 { r gis, r a r }
+  \times 4/5 { ais4 r b r fis  }
+  \times 4/5 { r f r e r }
+  s1*2 |
+  fis4 fis e4 e |
   e4 r e8 e4 e8 ~ |
   e e4 e8 e8 e e4 |
   e8 e4 e8 ~ e2 ~ |
@@ -782,27 +787,32 @@ sopranoSecondPart = \relative c' {
   r8 fis4 r8 r2 |
   R1 |
   R1 |
-  r4 f'2.^\p^\< ~ |
-  f1 ~ |
-  f1^\> ~ |
-  f2.\! r4 |
   R1 |
-  R1 |
+  r4 fis'2.^\p^\< ~ |
+  fis2 g2 ~ |
+  g2. fis4^\> ~ |
+  fis1 |
+  R1\! |
   r4 g,^\mf g r |
-  g8 g4 g8 ~ g8 g4 g8 |
-  g8 g g4 g8 g4 g8 ~ |
-  \times 2/3 { g1 a2^\f } |
+  gis8 gis4 gis8 ~ gis8 ais4 ais8 |
+  ais8 ais ais4 ais8 ais4 a8 ~ |
+  \times 2/3 { a1 a2^\f } |
   gis2. gis4 |
   b2 e |
   cis4 dis2 e4 ~ |
   e a,2 a4 |
   \times 2/3 { gis2 gis4 } gis2 |
-  \times 2/3 { a1 fis2 } |
-  \times 2/3 { r2 gis b2 ~ } |
-  \times 2/3 { b a b } |
-  \times 2/3 { gis2 fis4 fis e e } |
-  \times 2/3 { e2 gis b } |
-  a1 |
+  a2 ~ a8 fis ~ fis4 |
+  %\times 2/3 { e gis b ~ } |
+  %\times 2/3 { b a b } |
+  %\times 2/3 { gis2 fis4 fis e e } |
+  %\times 2/3 { e2 gis b } |
+  %a1 |
+  \times 4/6 { e4 gis b2 a4 b } |
+  \times 4/6 { gis4 fis8 fis e e e4 gis b } |
+  a2 \times 2/3 { b4 e,4. gis8 } |
+  \times 4/6 { b4 e cis8 dis4 e4 a,4 a8 } |
+  \times 4/6 { gis8 gis gis4 a fis r2 }
   %gis1 |
   %\times 2/3 { gis2 b1 } |
   %\times 2/3 { e1 cis2 } |
@@ -909,11 +919,21 @@ mezzoSecondPart = \relative c' {
   \times 2/3 { r fis r } |
   \times 2/3 { e r a } |
   \times 2/3 { r b r }
-  ais4 ais ais r |
-  ais8 ais4 ais8 ~ ais ais4 ais8 |
-  ais ais ais4 ais8 ais4 ais8 |
-  \times 2/3 { ais1 fis2 } |
-
+  ais4 ais b r |
+  c8 c4 cis8 ~ cis cis4 cis8 |
+  d d d4 dis8 e4 f8 ~ |
+  \times 2/3 { f2 e fis,2 } |
+  e2. e4 |
+  gis2 b |
+  a4 b2 cis4 ~ |
+  cis fis,2 fis4 |
+  \times 2/3 { e2 e4 } e2 |
+  fis2 ~ fis8 dis ~ dis4 |
+  \times 4/6 { b4 d fis2 e4 fis } |
+  \times 4/6 { cis4 cis8 cis b b b4 d fis } |
+  e2 \times 2/3 { fis4 d4. e8 } |
+  \times 4/6 { fis4 a gis8 a4 b4 fis4 fis8 } |
+  \times 4/6 { e8 e e4 fis d r2 }
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -1026,6 +1046,7 @@ altoSecondPart = \relative c'' {
   \times 2/3 { cis2 b cis } |
   \times 2/3 { g fis e ~ } |
   e1 |
+  R1*6 |
 }
 
 altoWordsSecondPart = \lyricmode {
@@ -1134,7 +1155,7 @@ tenorSecondPart = \relative c' {
   e4 e2 a4 ~ |
   a cis,2 cis4 |
   \times 2/3 { b2 b4 } b2 |
-  \times 2/3  {b1 a2 } |
+  b2 ~ b8 a ~ a4 |
   %gis1 |
   % %%%% %% % % % %
   %b1 |
@@ -1143,6 +1164,11 @@ tenorSecondPart = \relative c' {
   %\times 2/3 { e1 a2 ~ } |
   %\times 2/3 { a e1 } |
   %\times 2/3 { e2 e e } |
+  \times 4/6 { gis4 b d2 cis4 d } |
+  \times 4/6 { b4 a8 a gis gis gis4 b d } |
+  cis2 \times 2/3 { d4 gis,4. b8 } |
+  \times 4/6 { d4 fis a,8 b4 cis4 c4 c8 } |
+  \times 4/6 { b8 b b4 cis b r2 }
 }
 
 tenorWordsSecondPart = \lyricmode {
