@@ -772,7 +772,7 @@ sopranoSecondPart = \relative c' {
   \times 4/5 { ais4 r b r fis  }
   \times 4/5 { r f r e r }
   R1*2 |
-  r4 fis e e |
+  r8 fis ~ fis4 e e |
   e4 r e8 e4 e8 ~ |
   e e4 e8 e8 e e4 |
   e8 e4 e8 ~ e2 ~ |
@@ -782,12 +782,13 @@ sopranoSecondPart = \relative c' {
   %e2 ~ e8 e ~ e4 |
   R1*3 |
   R1*5 |
-  r2 bis |
-  cis c |
-  b2 ais |
-  a gis |  
-  R1 |
-  r4 gis' r2 |
+  %r2 bis |
+  %cis c |
+  %b2 ais |
+  %a gis |  
+  R1*5
+  %R1 |
+  r4 gis%{'%} r2 |
   r8 fis4 r8 r2 |
   R1 |
   %R1 |
@@ -1139,10 +1140,8 @@ tenorSecondPart = \relative c' {
   e2 dis |
   d1 |
   cis2 r |
-  dis d |
-  R1 |
-  r4 b'4 r2 |
-  r8 a4 r8 r2 |
+  b' c |
+  cis c b ais a gis |
   R1 |
   r8 e'4 r8 r8 dis4 r8 |
   r8 d4 r8 r8 cis4 r8 |
