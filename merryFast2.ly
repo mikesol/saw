@@ -1011,13 +1011,13 @@ tenorSecondPart = \relative c' {
   r4 c r2 |
   \lo r8 \sh b r4 r2 |
   cis4 r4 r2 |
-  \lod ais4. \sh b8 ~ \lod b4. \sh d8 ~ | %2
-  d4 e ~ e eis ~ | % 3
-  \lo eis8 \sh fis ~ fis4 ~ \lo fis8 \sh d ~ d4 | %4
-  e2 \lod a,4. \sh dis8 ~ | % 5
-  \lod dis4. \sh cis8 ~ cis4 b4 ~ | % 6
-  b cis ~ \lo cis8 \sh fis8 ~ fis4 ~ | % 7
-  \lo fis8 \sh ais, ~ ais4 b4 b |
+  r2 \lod r4. \sh fisis,8 ~ | %2
+  fisis4 gis ~ gis b ~ | % 3
+  \lo b8 \sh cis ~ cis4 ~ \lo cis8 \sh d ~ d4 | %4
+  cis2 \lod b4. \sh gis8 ~ | % 5
+  \lod gis4. \sh fis8 ~ fis4 gis4 ~ | % 6
+  gis b ~ \lo b8 \sh cis8 ~ cis4 ~ | % 7
+  \lo cis8 \sh ais ~ ais4 b4 b |
   bes4 r b8 b4 c8 ~ |
   c c4 c8 cis8 cis cis4 |
   c8 c4 b8 ~ b2 ~ |
