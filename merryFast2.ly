@@ -772,7 +772,7 @@ sopranoSecondPart = \relative c' {
   \times 4/5 { ais4 r b r fis  }
   \times 4/5 { r f r e r }
   R1*2 |
-  fis4 fis e4 e |
+  r4 fis e e |
   e4 r e8 e4 e8 ~ |
   e e4 e8 e8 e e4 |
   e8 e4 e8 ~ e2 ~ |
@@ -783,24 +783,26 @@ sopranoSecondPart = \relative c' {
   R1*3 |
   R1*5 |
   r2 bis |
-  cis1 |
+  cis c |
   b2 ais |
   a gis |  
   R1 |
   r4 gis' r2 |
   r8 fis4 r8 r2 |
   R1 |
-  R1 |
-  R1 |
-  r4 fis'2.^\p^\< ~ |
-  fis2 g2 ~ |
-  g2. fis4^\> ~ |
-  fis1 |
+  %R1 |
+  %R1 |
+  r2. fis'4^\p^\< ~ |
+  fis1 ~ |
+  fis4 g2. ~ |
+  g2. gis4^\> ~ |
+  gis1 |
   R1\! |
+  R1|
   r4 g,^\mf g r |
-  gis8 gis4 gis8 ~ gis8 ais4 ais8 |
-  ais8 ais ais4 ais8 ais4 a8 ~ |
-  \times 2/3 { a1 a2^\f } |
+  gis8 gis4 gis8 ~ gis8 a4 a8 |
+  a8 a a4 ais8 ais4 ais8 ~ |
+  \times 2/3 { ais1 a2^\f } |
   gis2. gis4 |
   b2 e |
   cis4 dis2 e4 ~ |
@@ -814,9 +816,9 @@ sopranoSecondPart = \relative c' {
   %a1 |
   \times 4/6 { e4 gis b2 a4 b } |
   \times 4/6 { gis4 fis8 fis e e e4 gis b } |
-  a2 \times 2/3 { b4 e,4. gis8 } |
-  \times 4/6 { b4 e cis8 dis4 e4 a,4 a8 } |
-  \times 4/6 { gis8 gis gis4 a fis r2 }
+  %!!a2 \times 2/3 { b4 e,4. gis8 } |
+  %!!\times 4/6 { b4 e cis8 dis4 e4 a,4 a8 } |
+  %!!\times 4/6 { gis8 gis gis4 a fis r2 }
   %gis1 |
   %\times 2/3 { gis2 b1 } |
   %\times 2/3 { e1 cis2 } |
@@ -928,8 +930,8 @@ mezzoSecondPart = \relative c' {
   d d d4 dis8 e4 f8 ~ |
   \times 2/3 { f2 e fis,2 } |
   e2. e4 |
-  gis2 b |
-  a4 b2 cis4 ~ |
+  gis2 g |
+  fis4 gis2 cis4 ~ |
   cis fis,2 fis4 |
   \times 2/3 { e2 e4 } e2 |
   fis2 ~ fis8 dis ~ dis4 |
@@ -1136,11 +1138,11 @@ tenorSecondPart = \relative c' {
   ais1 |
   fis2 e ~ |
   e2 dis |
-  e1 ~ |
-  e2 r 
-  b' ais |
+  d1 |
+  cis2 r |
+  dis d |
   R1 |
-  r4 b4 r2 |
+  r4 b'4 r2 |
   r8 a4 r8 r2 |
   R1 |
   r8 e'4 r8 r8 dis4 r8 |
@@ -1274,7 +1276,7 @@ bassSecondPart = \relative c {
   gis r b r |
   cis r a r |
   gis r g r |
-  fis r a r |
+  fis r %{a%} f r |
   gis r b r |
   a r fisis r |
   gis r e r |
