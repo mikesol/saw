@@ -73,7 +73,7 @@ marks = {
   \tempo "Freely" 2=60
   s1*3 |
   \time 2/2
-  \tempo "Fast" 2=172
+  \tempo "Fast" 2=168
   s1*96 \bar "||"
 }
 
@@ -675,19 +675,27 @@ marksSecondPart = {
   \time 2/2
   \once \override Score.TimeSignature.stencil = ##f
   \set Score.currentBarNumber = #101
-  \tempo "Freely" 2=60
+  \tempo "Freely" 2=84
   \bar ""
-  s1*6 |
+  \unfoldChange #168 #120 #48
   \time 4/4
-  \tempo "Slow" 4=40
+  \tempo "Slow" 4=56
   s1*8 \bar "||"
   \time 2/2
-  \tempo "Freely" 2=60
+  \tempo \markup { "Freely" \note #"4" #UP = \note #"2" #UP }
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 112 4 0 0)
   s1 |
   \time 3/4
   s2. |
   \time 4/4
-  s1*4 |
+  s1*8 |
+  \mark "accel. poco a poco"
+  \unfoldChange #112 #150 #64
+  \unfoldChange #150 #160 #32
+  \unfoldChange #160 #220 #32
+  \unfoldChange #220 #336 #128
+  \tempo "Fast" 2=168
+  s1 |
 }
 
 prefatoryMatterSecondPart = {
@@ -740,7 +748,26 @@ sopranoSecondPart = \relative c' {
   r2 g4 r4 |
   \lo r8 \sh gis r4 r4 fis |
   r4 \lo r8 \sh f r2 |
-  e4
+  e4 r4 r2 | % 1
+  \lod fisis,4. \sh gis8 ~ \lod gis4. \sh b8 ~ | %2
+  b4 cis ~ cis d ~ | % 3
+  \lo d8 \sh cis ~ cis4 ~ \lo cis8 \sh b ~ b4 | %4
+  gis2 \lod fis4. \sh gis8 ~ | % 5
+  \lod gis4. \sh b8 ~ b4 cis4 ~ | % 6
+  cis a ~ \lo a8 \sh b8 ~ b4 ~ | % 7
+  \lo b8 \sh fis ~ fis4 e4 e |
+  e4 r e8 e4 e8 ~ |
+  e e4 e8 e8 e e4 |
+  e8 e4 e8 ~ e2 ~ |
+  e8 r8 e4 e4. e8 |
+  e4 e4 e8 e4 e8 ~ |
+  e8 e8 ~ e4 e2 |
+  e2 ~ e8 e ~ e4 |
+  R1*5 |
+  r2 bis |
+  cis1 |
+  b2 ais |
+  a gis |  
 }
 
 sopranoWordsSecondPart = \lyricmode {
@@ -798,20 +825,35 @@ mezzoSecondPart = \relative c' {
   r4 g4 \lo r8 \sh gis8 r4 |
   g4 \lo r8 \sh bes r4 eis, |
   \lo r8 \sh e r4 g4 \lo r8 \sh fis8 |
-  r4 g4 \lo r8 \sh gis8 r4 |
-  a4 \lo r8 \sh ais r4 f |
-  \lo r8 \sh g r4 fis \lo r8 \sh c8 |
+  r4 gis4 \lo r8 \sh g8 r4 |
+  ais4 \lo r8 \sh a r4 eis |
+  \lo r8 \sh e r4 fis \lo r8 \sh c8 |
   r4 g'4 \lo r8 \sh gis8 r4 |
   %\mark "?"
-  e4 \lo r8 \sh g r4 fis |
-  \lo r8 \sh g r4 dis \lo r8 \sh gis8 |
+  eis4 \lo r8 \sh g r4 fis |
+  \lo r8 \sh g r4 d \lo r8 \sh gis8 |
   r4 g4 \lo r8 \sh fis8 r4 |
   %\mark "?"
-  eis4 \lo r8 \sh fis r4 a |
+  e4 \lo r8 \sh fis r4 a |
   \lo r8 \sh ais r4 a \lo r8 \sh g8 |
-  r4 fis4 \lo r8 \sh g8 r4 |
+  r4 gis4 \lo r8 \sh g8 r4 |
   %\mark "@"
-  gis4 
+  gis4 b'4 gis \lo fis8 \sh fis |
+  \lo e \sh e e4 gis b |
+  a2 ~ \lo a8 \sh r b4 |
+  \lod e,4. \sh gis8 b4 e |
+  \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
+  \lo gis8 \sh gis gis4 a fis |
+  e2.. r8 |
+  d4 d d r | %1
+  d8 d4 d8 ~ d d4 d8 | %2
+  d8 d d4 d8 d4 d8 ~ | %3
+  d2 ~ d8 r d4 | %4
+  d4. d8 d4 d^"the" | %5
+  d d d4.^"way" d8^"in" ~ |%6
+  d4 d^"the" ~ d d^"me" ~ | %7
+  d4. d8^"ry" ~ d2 | %8
+  R1*9 |
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -869,7 +911,7 @@ altoSecondPart = \relative c'' {
   r2 eis4 r |
   \lo r8 \sh fis r4 r4 dis |
   r4 \lo r8 \sh eis r2 |
-  dis4 r4 \lo r8 \sh fis r4 |
+  dis4 r4 \lo r8 \sh f r4 |
   \clef treble
   e4 gis b2 |
   \lo a8 b4 \sh gis8 ~ \lo gis fis4 \sh fis8 |
@@ -880,7 +922,30 @@ altoSecondPart = \relative c'' {
   \lo gis \sh gis gis4 a fis |
   e1 \glissando |
   e'4 gis b2 |
-  a4
+  \lo a8 \sh b, \lo gis \sh e \lo d \sh b \lo cis \sh dis |
+  \lo e \sh b \lo cis \sh e \lo fis \sh b, \lo cis \sh g' |
+  \lo gis8 \sh e \lo d \sh b \lo gis \sh a \lo b \sh cis |
+  e4-. \lo r8 \sh b' ~ \lo b gis4 \sh r8 |
+  \lo a8 b4 \sh cis8 ~ \lo cis \sh cis \lo b \sh a |
+  \lo b \sh b, \lo a' \sh b \lo gis \sh e \lo d \sh b |
+  \lo e \sh fis \lo cis' \sh b \lo gis \sh e \lo d \sh b |
+  gis4 gis' gis r | % 1
+  g8 g4 g8 ~ g g4 g8 | %2
+  gis8 gis gis4 gis8 gis4 a8 ~ | %3
+  a2 ~ a8 r fisis4 | %4
+  gis4. gis8 gis4 gis | %5
+  a a a4. ais8 ~ |%6
+  ais4 ais ~ ais ais ~ | %7
+  ais4. a8 ~ a2 | %8
+  R1 | % 1
+  fis2 fis ~  | % 2
+  fis cis | % 3
+  e1 | % 4
+  cis1 ~ | % 5
+  cis2 a' | % 6
+  fis1 | % 7
+  gis2 fis2 | % 8
+  cis2 e | % 9 !!
 }
 
 altoWordsSecondPart = \lyricmode {
@@ -936,7 +1001,7 @@ tenorSecondPart = \relative c' {
   \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
   \lo gis \sh gis gis4 a fis |
   gis4 b cis dis |
-  r4 d r2 |
+  r4 b r2 |
   \lo r8 \sh cis r4 r2 |
   cis4 r4 \lod r4. \sh c8 |
   r2. d4 |
@@ -945,7 +1010,29 @@ tenorSecondPart = \relative c' {
   \lod r4. \sh bes8 r2 |
   r4 c r2 |
   \lo r8 \sh b r4 r2 |
-  cis4
+  cis4 r4 r2 |
+  \lod ais4. \sh b8 ~ \lod b4. \sh d8 ~ | %2
+  d4 e ~ e eis ~ | % 3
+  \lo eis8 \sh fis ~ fis4 ~ \lo fis8 \sh d ~ d4 | %4
+  e2 \lod a,4. \sh dis8 ~ | % 5
+  \lod dis4. \sh cis8 ~ cis4 b4 ~ | % 6
+  b cis ~ \lo cis8 \sh fis8 ~ fis4 ~ | % 7
+  \lo fis8 \sh ais, ~ ais4 b4 b |
+  bes4 r b8 b4 c8 ~ |
+  c c4 c8 cis8 cis cis4 |
+  c8 c4 b8 ~ b2 ~ |
+  b8 r8 c4 b4. b8 |
+  ais4 ais4 b8 b4 c8 ~ |
+  c8 c8 ~ c4 c2 |
+  b2 ~ b8 c ~ c4 |
+  R1*2 |
+  r2 gisis |
+  ais1 |
+  fis2 e ~ |
+  e2 dis |
+  e1 ~ |
+  e2 r 
+  dis cis |
 }
 
 tenorWordsSecondPart = \lyricmode {
@@ -999,23 +1086,38 @@ bassSecondPart = \relative c {
   \lodd r2.. \sh b8 |
   e4 dis d cis |
   c b dis b |
-  d gis, b eis, |
+  a gis b eis, |
   fis4 c' b4 fisis |
-  gis d' cis bes |
-  a4 gis g cis |
-  fis, d' b dis, |
-  e gis a b |
-  \lo bes8 \sh bes e4 cis g4 |
+  gis d' cis gis |
+  a4 gis fis d' |
+  cis c b dis, |
+  e d' a b |
+  \lo e8 \sh e d4 cis g4 |
   fis c' b g |
   gis4 g bes eis, |
-  fis f cis' c |
-  b bes fis f |
-  e bes' a eis |
+  fis b c cis |
+  d bes g b |
+  e, bes' a eis |
   fis c' b a |
   gis g fis a |
-  gis d' cis c8 eis, |
-  fis4
-
+  gis d' cis \lo c8 \sh eis, |
+  fis4 r4 r2 | %a cis c | b
+  r4 gis fis e |
+  fis a gis fis |
+  gis a b c |
+  cis a gis fis |
+  b bes a cis |
+  gis fis cis' c |
+  b d b gis |
+  a fis cis' c |
+  b e bes a |
+  gis g fis a |
+  gis b cis a |
+  d cis b ais |
+  b e b a |
+  gis dis e eis |
+  fis2 r |
+  R1*8 |
 }
 
 bassWordsSecondPart = \lyricmode {

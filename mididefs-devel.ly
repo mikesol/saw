@@ -8,8 +8,8 @@ unfoldSwing =
 #})
 
 % quarters % quarters % eighths!
-unfoldChange =
-#(define-music-function (parser location tp1 tp2 beats) (integer? integer? integer?)
+unfoldChangeRobust =
+#(define-music-function (parser location tp1 tp2 beats exp) (integer? integer? integer? number?)
   (define m
     (make-music
       'SequentialMusic
@@ -18,7 +18,9 @@ unfoldChange =
           append
           (map
             (lambda (x)
-              (let ((val (+ (* (* 2 tp2) (/ x beats)) (* (* 2 tp1) (/ (- beats x) beats)))))
+              (let* (
+                 (dv (/ x beats))
+                 (val (+ (* (* 2 tp2) dv) (* (* 2 tp1) (- 1 dv)))))
                (list
                 (make-music
                   'ContextSpeccedMusic
@@ -42,6 +44,13 @@ unfoldChange =
 #{
   $m %\set Score.tempoWholesPerMinute = #(ly:make-moment tp2 4 0 1)
 #})
+
+unfoldChange =
+#(define-music-function (parser location tp1 tp2 beats) (integer? integer? integer?)
+#{
+  \unfoldChangeRobust $tp1 $tp2 $beats #1.0
+#})
+
 
 unfoldSwingChange =
 #(define-music-function (parser location tp1 tp2 beats) (integer? integer? integer?)
