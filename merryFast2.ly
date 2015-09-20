@@ -84,7 +84,7 @@ prefatoryMatter = {
 
 alto = \relative c'' {
   \prefatoryMatter
-  \clef "treble_8"
+  \clef treble
   r2 \times 2/3 { gis4^\f a gis } |
   b2.^\fermata ( \times 2/3 { a8 b a ) } |
   gis4 ( e ) d ( b ) |
@@ -95,6 +95,7 @@ alto = \relative c'' {
   \times 2/3 { cis2 b cis }
   gis4 ( fis e ) r |
   R1 |
+  \clef "treble_8"
   r2. gis,4 ~ |
   gis2 b4 cis |
   e4 e2. |
@@ -110,7 +111,6 @@ alto = \relative c'' {
     \clef treble
     r4 r4 e''''4 ~  |
   e-\bendAfter #-3 r
-  \clef "treble_8"
   % 3 3 3 2 = 11
   \tupFrac
   \times 9/14 { g,,2 e gis2 e a2 e ais2 }
@@ -157,6 +157,7 @@ alto = \relative c'' {
   r8 b'4 cis8 b gis fis b, |
   gis'8 b gis \tupFrac \times 5/8 { e4 a gis fis } |
   R1 |
+  \clef "treble_8"
   r2 r8 b4 b8 ~ |
   b8 b gis b gis e cis c |
   b cis dis e r b'4 b8 ~ |
@@ -202,6 +203,7 @@ alto = \relative c'' {
   e fis gis a ais cis b g |
   gis e d c b cis dis e |
   fis4-. r r2 |
+  \clef treble
   r4. dis''8 ~ dis2 |
   cis4 ais fis gis |
   ais fis b r |
@@ -757,12 +759,12 @@ sopranoSecondPart = \relative c' {
   %cis a ~ \lo a8 \sh b8 ~ b4 ~ | % 7
   %\lo b8 \sh fis ~ fis4
   R1 |
-  r4 gis, ~ gis a |
-  r ais ~ ais b |
-  r cis ~ cis c |
-  r b ~ b a |
-  r gis ~ gis fis |
-  r2 e4 e |
+  r4 gis, r a |
+  r ais r b |
+  r fis r e |
+  r b' r a |
+  r gis fis e |
+  fis fis e4 e |
   e4 r e8 e4 e8 ~ |
   e e4 e8 e8 e e4 |
   e8 e4 e8 ~ e2 ~ |
@@ -775,6 +777,41 @@ sopranoSecondPart = \relative c' {
   cis1 |
   b2 ais |
   a gis |  
+  R1 |
+  r4 gis' r2 |
+  r8 fis4 r8 r2 |
+  R1 |
+  R1 |
+  r4 f'2.^\p^\< ~ |
+  f1 ~ |
+  f1^\> ~ |
+  f2.\! r4 |
+  R1 |
+  R1 |
+  r4 g,^\mf g r |
+  g8 g4 g8 ~ g8 g4 g8 |
+  g8 g g4 g8 g4 g8 ~ |
+  \times 2/3 { g1 a2^\f } |
+  gis2. gis4 |
+  b2 e |
+  cis4 dis2 e4 ~ |
+  e a,2 a4 |
+  \times 2/3 { gis2 gis4 } gis2 |
+  \times 2/3 { a1 fis2 } |
+  \times 2/3 { r2 gis b2 ~ } |
+  \times 2/3 { b a b } |
+  \times 2/3 { gis2 fis4 fis e e } |
+  \times 2/3 { e2 gis b } |
+  a1 |
+  %gis1 |
+  %\times 2/3 { gis2 b1 } |
+  %\times 2/3 { e1 cis2 } |
+  %\times 2/3 { dis1 e2 ~ } |
+  %\times 2/3 { e2 cis1 } |
+  %\times 2/3 { cis b b } |
+  %\times 2/3 { b1 cis2 ~ } |
+  %\times 2/3 { cis2 a1 } |
+  %gis4
 }
 
 sopranoWordsSecondPart = \lyricmode {
@@ -861,6 +898,22 @@ mezzoSecondPart = \relative c' {
   d4 d^"the" ~ d d^"me" ~ | %7
   d4. d8^"ry" ~ d2 | %8
   R1*9 |
+  R1 |
+  r4 cis, r2 |
+  r8 c4 r8 r2 |
+  R1 |
+  \times 2/3 { r2 a' r } |
+  \times 2/3 { ais r b } |
+  \times 2/3 { r cis r } |
+  \times 2/3 { d r g, } |
+  \times 2/3 { r fis r } |
+  \times 2/3 { e r a } |
+  \times 2/3 { r b r }
+  ais4 ais ais r |
+  ais8 ais4 ais8 ~ ais ais4 ais8 |
+  ais ais ais4 ais8 ais4 ais8 |
+  \times 2/3 { ais1 fis2 } |
+
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -889,7 +942,7 @@ altoSecondPart = \relative c'' {
   \clef "treble_8"
   b2. \times 2/3 { a8 ( b a ) } |
   gis4^\> ( e ) d ( b ) |
-  \times 2/3 { cis^\mp e r } \lo r8 \sh e8 ~ e4  |
+  \times 2/3 { cis^\mp e r } \lo r8 \sh r8 e4  |
   cis'2^\< ~ \times 2/3 { cis4 b cis } |
   gis8^\mf ( fis e4 ~ e8 ) b^\mp d b |
   d ( e16 d ) b4 ~ \times 2/3 { b b b } |
@@ -907,7 +960,7 @@ altoSecondPart = \relative c'' {
   b1 ~ |
   b4 r \times 2/3 { r4 a4 ( b ) } |
   gis4 e ~ ( \lo e8 \sh cis8 b4 ) |
-  \lo b8 \sh b r4 r e4 |
+  \lo b8 \sh b r4 \lo r8 \sh e8 ~ e4 |
   cis'2 ~ \times 2/3 { cis4 b cis } |
   \times 2/3 { g4 ( fis e ~ } \lod e4. ) \sh dis8 |
   r2 g4 r4 |
@@ -953,6 +1006,26 @@ altoSecondPart = \relative c'' {
   fis1 | % 7
   gis2 fis2 | % 8
   cis2 e | % 9 !!
+  b'8 gis a b gis e d b |
+  fis' f d b bes d e gis |
+  g e cis b a b d f |
+  e4 r f r | %1
+  fis r g r | %2
+  gis r a r | %3
+  ais r b r | %4
+  e r cis r | %5
+  b r a r | %6
+  gis r fis r | %7
+  \times 2/3 { e2 gis a } |
+  \times 2/3 { gis b1 ~ } |
+  \times 2/3 { b1 a4 b } |
+  \times 2/3 { gis2 e d }
+  \times 2/3 { b d e } |
+  r2 e |
+  r4 cis'2. ~ |
+  \times 2/3 { cis2 b cis } |
+  \times 2/3 { g fis e ~ } |
+  e1 |
 }
 
 altoWordsSecondPart = \lyricmode {
@@ -1019,12 +1092,12 @@ tenorSecondPart = \relative c' {
   \lo r8 \sh b r4 r2 | % 1
   cis4 r4 r2 | % 2
   R1 |
-  r2. cis4 ~ |
-  cis c r d ~ |
-  d a r e' ~ |
-  e f r dis ~ |
-  dis cis r b ~ |
-  b ais b4 b | % 1
+  r4 b r c |
+  r4 cis r d |
+  r cis r c |
+  r d r cis |
+  r b a fisis |
+  gis e b'4 b | % 1
   %\lo cis8 \sh ais ~ ais4 b4 b |
   bes4 r b8 b4 c8 ~ |
   c c4 c8 cis8 cis cis4 |
@@ -1041,6 +1114,35 @@ tenorSecondPart = \relative c' {
   e1 ~ |
   e2 r 
   dis cis |
+  R1 |
+  r4 b'4 r2 |
+  r8 a4 r8 r2 |
+  R1 |
+  r8 e'4 r8 r8 dis4 r8 |
+  r8 d4 r8 r8 cis4 r8 |
+  r8 c4 r8 r8 b4 r8 |
+  r8 ais4 r8 r8 a4 r8 |
+  r8 gis4 r8 r8 g4 r8 |
+  r8 fis4 r8 r8 b4 r8 |
+  r8 ais4 r8 r8 a4 r8 |
+  r8 gis4 r8 r8 b ~ b4 |
+  a8 b4 gis8 ~ gis fis4 fis8 |
+  e8 e8 e4 gis8 b4 a8 ~ |
+  \times 2/3 { a1 b2 } |
+  b2. b4 |
+  e2 gis |
+  e4 e2 a4 ~ |
+  a cis,2 cis4 |
+  \times 2/3 { b2 b4 } b2 |
+  \times 2/3  {b1 a2 } |
+  %gis1 |
+  % %%%% %% % % % %
+  %b1 |
+  %\times 2/3 { b2 e1 }
+  %\times 2/3 { gis1 e2 } |
+  %\times 2/3 { e1 a2 ~ } |
+  %\times 2/3 { a e1 } |
+  %\times 2/3 { e2 e e } |
 }
 
 tenorWordsSecondPart = \lyricmode {
@@ -1126,6 +1228,32 @@ bassSecondPart = \relative c {
   gis dis e eis |
   fis2 r |
   R1*8 |
+  b4 fis ais a |
+  gis e cis g' |
+  fis d' cis g |
+  \times 2/3 { gis2 a ais } |
+  \times 2/3 { b c cis } |
+  \times 2/3 { d cis c } |
+  \times 2/3 { b bes a } |
+  \times 2/3 { gis b e } |
+  \times 2/3 { cis b eis, } |
+  \times 2/3 { fis a cis } |
+  b4 a gis fis |
+  e r gis r |
+  fis r a r |
+  gis r b r |
+  cis r a r |
+  gis r g r |
+  fis r a r |
+  gis r b r |
+  a r fisis r |
+  gis r e r |
+  fis r a r |
+  gis r b r |
+  a r cis r |
+  b r bes r |
+  a r gis r |
+  fis r b r |
 }
 
 bassWordsSecondPart = \lyricmode {
