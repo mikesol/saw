@@ -730,8 +730,8 @@ sopranoSecondPart = \relative c' {
   \lo r8 \sh cis r4 r4 c |
   r4 \lo r8 \sh b r2 |
   ais4 r \lo r8 \sh b r4 |
-  r4 c4 r4 \lo r8 \sh cis8 |
-  r2 d4 r4 |
+  r4 cis4 r4 \lo r8 \sh d8 |
+  r2 dis4 r4 |
   \lo r8 \sh d r4 r4 dis |
   r4 \lo r8 \sh e r2 |
   %\mark "!"
