@@ -41,7 +41,7 @@ subdX = \relative c' {
   b bes a b |
   cis b bes a |
   gis bis cis d |
-  a b dis b |
+  a cis d b |
   fis gis cis b |
   gis fis e fis
 }
@@ -51,7 +51,7 @@ tonX = \relative c' {
   fis f e fis |
   gis fis f e |
   dis g gis a |
-  e fis a fis
+  e gis a fis
   cis dis gis fis |
 }
 
