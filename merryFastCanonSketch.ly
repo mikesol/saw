@@ -7,8 +7,8 @@ subdX = \relative c' {
   b bes a b |
   cis b bes a |
   gis d' cis gis |
-  a b e b |
-  dis cis b a |
+  a b dis b |
+  fis gis cis b |
   gis fis e fis
 }
 
@@ -24,8 +24,8 @@ tonX = \relative c' {
   fis f e fis |
   gis fis f e |
   dis a' gis dis |
-  e fis b fis |
-  a gis fis e |
+  e fis a fis
+  cis dis gis fis |
 }
 
 tonY = \relative c' {
