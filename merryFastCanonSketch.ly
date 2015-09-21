@@ -2,7 +2,7 @@
 
 emj = { \tempo 2=80 \key e \major }
 
-subdX = \relative c' {
+subdZ = \relative c' {
   r4 a cis c |
   b bes a b |
   cis b bes a |
@@ -19,7 +19,7 @@ subdY = \relative c' {
   gis
 }
 
-tonX = \relative c' {
+tonZ = \relative c' {
   r4 e gis g |
   fis f e fis |
   gis fis f e |
@@ -33,6 +33,28 @@ tonY = \relative c' {
   fis f e f |
   fis
 }
+
+
+%%%%
+subdX = \relative c' {
+  r4 a cis c |
+  b bes a b |
+  cis b bes a |
+  gis bis c cis |
+  a b dis b |
+  fis gis cis b |
+  gis fis e fis
+}
+
+tonX = \relative c' {
+  r4 e gis g |
+  fis f e fis |
+  gis fis f e |
+  dis g gis a |
+  e fis a fis
+  cis dis gis fis |
+}
+
 
 \score {
 <<
