@@ -1265,7 +1265,7 @@ mezzoSurprises = \relative c' { %\autoBeamOff
   d4 c
   dis d cis d |
   cis^\< e dis cis e e e e e e |
-  e4 dis e fis e fis gis fis e fis gis ais |
+  e4 dis e fis e fis gis fis e fis fis ais |
   a4^\f r8 fis8 ~ fis4 e |
   r4 a4 ~ a8 g4. |
   \times 2/3 { fis4 e r } \times 2/3 { r fis g } |
@@ -1339,7 +1339,7 @@ tenorSurprises = \relative c' { %\autoBeamOff
   b^\< a gis fis a a |
   gis fis a a |
   gis a gis fis cis' a |
-  gis a b a cis ais |
+  gis a b a gis ais |
   b4.^\f a8 ~ a4 r4 |
   \times 2/3 { g4 b d ~ } \times 2/3 { d cis b } |
   \times 2/3 { a2 a r } |
@@ -3985,7 +3985,7 @@ giantKludgyRewriteRightHand = {
   <cis' e' a'>4 <cis' e' fis'> <a dis'> <a cis' e'> <cis' e' fis'> <cis' e' gis'> |
   <b e'> <a e'> <cis' e' fis'> <cis' e' gis'> |
   <b e'> <b dis' b'> <b e' gis'> <b fis' b'> <b e' gis'> <b fis' b'> |
-  <b gis' cis''> <b fis' b'> < b e' gis'> <b fis' b'> <cis' gis' ais'> <e' ais' cis''> |
+  <b gis' cis''> <b fis' b'> < b e' gis'> <b fis' b'> <cis' fis' ais'> <e' ais' cis''> |
   <a' b'>4 r8 <fis' b'>8 ~ q4 <e' a'> |
   cis'4 <e' a' d''> ~ q8 <g' c''>4. |
   \times 2/3 { <fis' b'>4 <e' a'> r } \times 2/3 { r <fis' cis''> <g' e''> } |
@@ -4354,7 +4354,7 @@ giantKludgyRewriteLeftHand = {
   <b, b>4 <cis a> < fis gis> <cis fis> <a, a> <b, a> |
   <e gis> <cis fis> <a, a> <b, a> |
   <e gis> <fis, a> <e, gis> <dis, fis> <cis, cis'> <dis, a> |
-  <e, gis> <fis, a> <gis, b> <fis, a> <e, cis'> <fis, ais> |
+  <e, gis> <fis, a> <gis, b> <fis, a> <e, gis> <fis, ais> |
   << { <b dis'>4. <a cis'>8 ~ q4 r } \\ { b,4 b, b, r } >>
   << { \times 2/3 { g b d' ~ } \times 2/3 { <a d'> <a cis'> <b d'> ~ } d'4 c' fis' e' } \\ { b,4 c d e r d c r } >>
   << { d'4. <c' fis'>8 ~ \times 2/3 { q4 a b } } \\ { r4 b, b, r } >>
