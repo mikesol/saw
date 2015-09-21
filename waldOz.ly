@@ -7,7 +7,7 @@
   top-margin = 0.5\in
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
-  max-systems-per-page = #2
+  %max-systems-per-page = #2
 }
 \header {
   %title = "wal'dOz"
@@ -19,6 +19,7 @@
   arranger = "arr. Mike Solomon"
   %arranger = "arr. (anon)"
 }
+mkf = \once \set Score.markFormatter = #format-mark-box-letters
 
 %{
   Mirku says...
@@ -2513,6 +2514,7 @@ marksWortspiel = {
   \time 4/4
   s1*2 |
   \tempo 2=72
+  \mkf \mark \default
   s1 |
   \mark "rall."
   \unfoldChange #144 #88 #16
@@ -2543,6 +2545,7 @@ marksWortspiel = {
   \unfoldChange #168 #72 #8
   %s1 |
   \tempo 4=72
+  \mkf \mark \default
   s1 |
   \time 3/4
   s2. |
@@ -3068,7 +3071,7 @@ marksRealcome = {
 
 sopranoRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
-  f4^mp^\< ees f g aes^\f
+  f4^\mp^\< ees f g aes^\f
 }}   \key a \major {
   d4^\mp^\< e fis8 |
 }   \key cis \major {
@@ -3101,7 +3104,7 @@ mezzoRealcomeWords = \lyricmode {
 
 altoRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
-  bes2^mp^\< c4 b c^\f |
+  bes2^\mp^\< c4 b c^\f |
 }}   \key a \major {
   a^\mp^\< gis a8 |
 }   \key cis \major {
@@ -3116,7 +3119,7 @@ altoRealcomeWords = \lyricmode {
 
 tenorRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
-  bes2^mp^\< aes4 g f^\f |
+  bes2^\mp^\< aes4 g f^\f |
 }}   \key a \major {
   fis,4^\mp^\< e e8 |
 }   \key cis \major {
@@ -3131,7 +3134,7 @@ tenorRealcomeWords = \lyricmode {
 
 bassRealcome = \relative c { %\autoBeamOff
 \accessoryKey ees \major { \relative c {
-  g4^mp^\< ~ g8 f ~ f4 d'4 f^\f |
+  g4^\mp^\< ~ g8 f ~ f4 d'4 f^\f |
 }}   \key a \major {
   d4.^\mp^\< e,4 |
 }   \key cis \major {
@@ -4131,8 +4134,8 @@ giantKludgyRewriteRightHand = {
   << { ais'4 fis'8 gis' b' a' gis' fis' } \\ { <dis' fis'>4 dis'8 e' dis'4 dis' } >> | |
   << { e'2 g'4 a' | fis'1 } \\ { e'8 dis' cis' b ais4 cis' dis'8 cis' b ais a4 dis' } >> |
   << { gis'4 b' g' a' } \\ { e'2. cis'4 } >>
-  <b dis' fis'>4 <b dis'>8 <cis e'> <dis' a'>4 <e' gis'>4 |
-  << { e'4 cis'8 d' cis'4 g'4 fis'2 a' } \\ { <ais cis'>4. <gis b>8 <fis ais>4 ais4 } >> |
+  <b dis' fis'>4 <b dis'>8 <cis' e'> <dis' a'>4 <e' gis'>4 |
+  << { e'4 cis'8 d' cis'4 g'4 } \\ { <ais cis'>4. <gis b>8 <fis ais>4 ais4 } >> |
   << { fis'2 a' } \\ { gis4 <fis \tweak #'duration-log #1 cis'> b4 <bis dis'> } >> |
   << { gis'4 g' fis' f' } \\ { e1 } >> |
   <cis' e'>2 <dis' fis'> <e' gis'> <dis' ais'> |
@@ -4511,7 +4514,6 @@ giantKludgyRewriteLeftHand = {
 
 %%% SCORE
 
-mkf = \once \set Score.markFormatter = #format-mark-box-letters
 
 uberMarks = {
         \marksBeginning \mkf \mark \default
@@ -4526,7 +4528,7 @@ uberMarks = {
         \marksRealcome \mkf \mark \default
         \marksSurprises \mkf \mark \default
         \marksWortspiel \mkf \mark \default
-        \marksCartoon \mkf \mark \default
+        \marksCartoon %\mkf \mark \default
         \marksIfhap \mkf \mark \default
         \marksProof \mkf \mark \default
         \marksFinale \mkf \mark \default
@@ -4535,229 +4537,230 @@ uberMarks = {
 }
 
 \score {
-  << \new ChoirStaff <<
+  <<
+\new ChoirStaff <<
     \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
         \sopranoBeginning
-%{!%}        \sopranoRestarts
-%{!%}        \sopranoRamp
-%{!%}        \sopranoWinding
-%{!%}        \sopranoLarge
-%{!%}        \sopranoTriumphal
-%{!%}        \sopranoElan
-%{!%}        \sopranoSugar
-%{!%}        \sopranoOpera
-%{!%}        \sopranoRealcome
-%{!%}        \sopranoSurprises
-%{!%}        \sopranoWortspiel
-%{!%}        \sopranoCartoon
-%{!%}        \sopranoIfhap
-%{!%}        \sopranoProof
-%{!%}        \sopranoFinale
-%{!%}        \sopranoStutter
-%{!%}        \sopranoDenouement
+        \sopranoRestarts
+        \sopranoRamp
+        \sopranoWinding
+        \sopranoLarge
+        \sopranoTriumphal
+        \sopranoElan
+        \sopranoSugar
+        \sopranoOpera
+        \sopranoRealcome
+        \sopranoSurprises
+        \sopranoWortspiel
+        \sopranoCartoon
+        \sopranoIfhap
+        \sopranoProof
+        \sopranoFinale
+        \sopranoStutter
+        \sopranoDenouement
       } {
    \uberMarks
       } >> }
       \new Lyrics \lyricsto "soprano" {
-%{!%}        \sopranoBeginningWords
-%{!%}        \sopranoRestartsWords
-%{!%}        \sopranoRampWords
-%{!%}        \sopranoWindingWords
-%{!%}        \sopranoLargeWords
-%{!%}        \sopranoTriumphalWords
-%{!%}        \sopranoElanWords
-%{!%}        \sopranoSugarWords
-%{!%}        \sopranoOperaWords
-%{!%}        \sopranoRealcomeWords
-%{!%}        \sopranoSurprisesWords
-%{!%}        \sopranoWortspielWords
-%{!%}        \sopranoCartoonWords
-%{!%}        \sopranoIfhapWords
-%{!%}        \sopranoProofWords
-%{!%}        \sopranoFinaleWords
-%{!%}        \sopranoStutterWords
-%{!%}        \sopranoDenouementWords
+        \sopranoBeginningWords
+        \sopranoRestartsWords
+        \sopranoRampWords
+        \sopranoWindingWords
+        \sopranoLargeWords
+        \sopranoTriumphalWords
+        \sopranoElanWords
+        \sopranoSugarWords
+        \sopranoOperaWords
+        \sopranoRealcomeWords
+        \sopranoSurprisesWords
+        \sopranoWortspielWords
+        \sopranoCartoonWords
+        \sopranoIfhapWords
+        \sopranoProofWords
+        \sopranoFinaleWords
+        \sopranoStutterWords
+        \sopranoDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
-%{!%}        \mezzoBeginning
-%{!%}        \mezzoRestarts
-%{!%}        \mezzoRamp
-%{!%}        \mezzoWinding
-%{!%}        \mezzoLarge
-%{!%}        \mezzoTriumphal
-%{!%}        \mezzoElan
-%{!%}        \mezzoSugar
-%{!%}        \mezzoOpera
-%{!%}        \mezzoRealcome
-%{!%}        \mezzoSurprises
-%{!%}        \mezzoWortspiel
-%{!%}        \mezzoCartoon
-%{!%}        \mezzoIfhap
-%{!%}        \mezzoProof
-%{!%}        \mezzoFinale
-%{!%}        \mezzoStutter
-%{!%}        \mezzoDenouement
+        \mezzoBeginning
+        \mezzoRestarts
+        \mezzoRamp
+        \mezzoWinding
+        \mezzoLarge
+        \mezzoTriumphal
+        \mezzoElan
+        \mezzoSugar
+        \mezzoOpera
+        \mezzoRealcome
+        \mezzoSurprises
+        \mezzoWortspiel
+        \mezzoCartoon
+        \mezzoIfhap
+        \mezzoProof
+        \mezzoFinale
+        \mezzoStutter
+        \mezzoDenouement
       }
       \new Lyrics \lyricsto "mezzo" {
-%{!%}        \mezzoBeginningWords
-%{!%}        \mezzoRestartsWords
-%{!%}        \mezzoRampWords
-%{!%}        \mezzoWindingWords
-%{!%}        \mezzoLargeWords
-%{!%}        \mezzoTriumphalWords
-%{!%}        \mezzoElanWords
-%{!%}        \mezzoSugarWords
-%{!%}        \mezzoOperaWords
-%{!%}        \mezzoRealcomeWords
-%{!%}        \mezzoSurprisesWords
-%{!%}        \mezzoWortspielWords
-%{!%}        \mezzoCartoonWords
-%{!%}        \mezzoIfhapWords
-%{!%}        \mezzoProofWords
-%{!%}        \mezzoFinaleWords
-%{!%}        \mezzoStutterWords
-%{!%}        \mezzoDenouementWords
+        \mezzoBeginningWords
+        \mezzoRestartsWords
+        \mezzoRampWords
+        \mezzoWindingWords
+        \mezzoLargeWords
+        \mezzoTriumphalWords
+        \mezzoElanWords
+        \mezzoSugarWords
+        \mezzoOperaWords
+        \mezzoRealcomeWords
+        \mezzoSurprisesWords
+        \mezzoWortspielWords
+        \mezzoCartoonWords
+        \mezzoIfhapWords
+        \mezzoProofWords
+        \mezzoFinaleWords
+        \mezzoStutterWords
+        \mezzoDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
-%{!%}        \altoBeginning
-%{!%}        \altoRestarts
-%{!%}        \altoRamp
-%{!%}        \altoWinding
-%{!%}        \altoLarge
-%{!%}        \altoTriumphal
-%{!%}        \altoElan
-%{!%}        \altoSugar
-%{!%}        \altoOpera
-%{!%}        \altoRealcome
-%{!%}        \altoSurprises
-%{!%}        \altoWortspiel
-%{!%}        \altoCartoon
-%{!%}        \altoIfhap
-%{!%}        \altoProof
-%{!%}        \altoFinale
-%{!%}        \altoStutter
-%{!%}        \altoDenouement
+        \altoBeginning
+        \altoRestarts
+        \altoRamp
+        \altoWinding
+        \altoLarge
+        \altoTriumphal
+        \altoElan
+        \altoSugar
+        \altoOpera
+        \altoRealcome
+        \altoSurprises
+        \altoWortspiel
+        \altoCartoon
+        \altoIfhap
+        \altoProof
+        \altoFinale
+        \altoStutter
+        \altoDenouement
       }
       \new Lyrics \lyricsto "alto" {
-%{!%}        \altoBeginningWords
-%{!%}        \altoRestartsWords
-%{!%}        \altoRampWords
-%{!%}        \altoWindingWords
-%{!%}        \altoLargeWords
-%{!%}        \altoTriumphalWords
-%{!%}        \altoElanWords
-%{!%}        \altoSugarWords
-%{!%}        \altoOperaWords
-%{!%}        \altoRealcomeWords
-%{!%}        \altoSurprisesWords
-%{!%}        \altoWortspielWords
-%{!%}        \altoCartoonWords
-%{!%}        \altoIfhapWords
-%{!%}        \altoProofWords
-%{!%}        \altoFinaleWords
-%{!%}        \altoStutterWords
-%{!%}        \altoDenouementWords
+        \altoBeginningWords
+        \altoRestartsWords
+        \altoRampWords
+        \altoWindingWords
+        \altoLargeWords
+        \altoTriumphalWords
+        \altoElanWords
+        \altoSugarWords
+        \altoOperaWords
+        \altoRealcomeWords
+        \altoSurprisesWords
+        \altoWortspielWords
+        \altoCartoonWords
+        \altoIfhapWords
+        \altoProofWords
+        \altoFinaleWords
+        \altoStutterWords
+        \altoDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
-%{!%}        \tenorBeginning
-%{!%}        \tenorRestarts
-%{!%}        \tenorRamp
-%{!%}        \tenorWinding
-%{!%}        \tenorLarge
-%{!%}        \tenorTriumphal
-%{!%}        \tenorElan
-%{!%}        \tenorSugar
-%{!%}        \tenorOpera
-%{!%}        \tenorRealcome
-%{!%}        \tenorSurprises
-%{!%}        \tenorWortspiel
-%{!%}        \tenorCartoon
-%{!%}        \tenorIfhap
-%{!%}        \tenorProof
-%{!%}        \tenorFinale
-%{!%}        \tenorStutter
-%{!%}        \tenorDenouement
+        \tenorBeginning
+        \tenorRestarts
+        \tenorRamp
+        \tenorWinding
+        \tenorLarge
+        \tenorTriumphal
+        \tenorElan
+        \tenorSugar
+        \tenorOpera
+        \tenorRealcome
+        \tenorSurprises
+        \tenorWortspiel
+        \tenorCartoon
+        \tenorIfhap
+        \tenorProof
+        \tenorFinale
+        \tenorStutter
+        \tenorDenouement
       }
       \new Lyrics \lyricsto "tenor" {
-%{!%}        \tenorBeginningWords
-%{!%}        \tenorRestartsWords
-%{!%}        \tenorRampWords
-%{!%}        \tenorWindingWords
-%{!%}        \tenorLargeWords
-%{!%}        \tenorTriumphalWords
-%{!%}        \tenorElanWords
-%{!%}        \tenorSugarWords
-%{!%}        \tenorOperaWords
-%{!%}        \tenorRealcomeWords
-%{!%}        \tenorSurprisesWords
-%{!%}        \tenorWortspielWords
-%{!%}        \tenorCartoonWords
-%{!%}        \tenorIfhapWords
-%{!%}        \tenorProofWords
-%{!%}        \tenorFinaleWords
-%{!%}        \tenorStutterWords
-%{!%}        \tenorDenouementWords
+        \tenorBeginningWords
+        \tenorRestartsWords
+        \tenorRampWords
+        \tenorWindingWords
+        \tenorLargeWords
+        \tenorTriumphalWords
+        \tenorElanWords
+        \tenorSugarWords
+        \tenorOperaWords
+        \tenorRealcomeWords
+        \tenorSurprisesWords
+        \tenorWortspielWords
+        \tenorCartoonWords
+        \tenorIfhapWords
+        \tenorProofWords
+        \tenorFinaleWords
+        \tenorStutterWords
+        \tenorDenouementWords
       }
     >>
     \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
-%{!%}        \keepWithTag #'normal \removeWithTag #'piano \bassBeginning
-%{!%}        \bassRestarts
-%{!%}        \bassRamp
-%{!%}        \bassWinding
-%{!%}        \bassLarge
-%{!%}        \bassTriumphal
-%{!%}        \bassElan
-%{!%}        \bassSugar
-%{!%}        \bassOpera
-%{!%}        \bassRealcome
-%{!%}        \bassSurprises
-%{!%}        \bassWortspiel
-%{!%}        \bassCartoon
-%{!%}        \bassIfhap
-%{!%}        \bassProof
-%{!%}        \bassFinale
-%{!%}        \bassStutter
-%{!%}        \bassDenouement
+        \keepWithTag #'normal \removeWithTag #'piano \bassBeginning
+        \bassRestarts
+        \bassRamp
+        \bassWinding
+        \bassLarge
+        \bassTriumphal
+        \bassElan
+        \bassSugar
+        \bassOpera
+        \bassRealcome
+        \bassSurprises
+        \bassWortspiel
+        \bassCartoon
+        \bassIfhap
+        \bassProof
+        \bassFinale
+        \bassStutter
+        \bassDenouement
       }
       \new Lyrics \lyricsto "bass" {
-%{!%}        \bassBeginningWords
-%{!%}        \bassRestartsWords
-%{!%}        \bassRampWords
-%{!%}        \bassWindingWords
-%{!%}        \bassLargeWords
-%{!%}        \bassTriumphalWords
-%{!%}        \bassElanWords
-%{!%}        \bassSugarWords
-%{!%}        \bassOperaWords
-%{!%}        \bassRealcomeWords
-%{!%}        \bassSurprisesWords
-%{!%}        \bassWortspielWords
-%{!%}        \bassCartoonWords
-%{!%}        \bassIfhapWords
-%{!%}        \bassProofWords
-%{!%}        \bassFinaleWords
-%{!%}        \bassStutterWords
-%{!%}        \bassDenouementWords
+        \bassBeginningWords
+        \bassRestartsWords
+        \bassRampWords
+        \bassWindingWords
+        \bassLargeWords
+        \bassTriumphalWords
+        \bassElanWords
+        \bassSugarWords
+        \bassOperaWords
+        \bassRealcomeWords
+        \bassSurprisesWords
+        \bassWortspielWords
+        \bassCartoonWords
+        \bassIfhapWords
+        \bassProofWords
+        \bassFinaleWords
+        \bassStutterWords
+        \bassDenouementWords
       }
     >>
   >>
-  \new PianoStaff <<
-    \new Staff << \uberMarks \giantKludgyRewriteRightHand >>
-    \new Staff \giantKludgyRewriteLeftHand
-  >>
+%  \new PianoStaff <<
+%    \new Staff << \uberMarks \giantKludgyRewriteRightHand >>
+%    \new Staff \giantKludgyRewriteLeftHand
+%  >>
   >>
   \layout {
     \context {
