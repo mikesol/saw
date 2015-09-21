@@ -58,6 +58,11 @@ key =
    ((ly:pitch? '()) (list? '()) ly:music?)
 music)
 
+accessoryKey =
+#(define-music-function (parser location tonic pitch-alist music)
+   ((ly:pitch? '()) (list? '()) ly:music?)
+music)
+
 hackKey =
 #(define-music-function (parser location tonic pitch-alist)
    ((ly:pitch? '()) (list? '()))
@@ -88,6 +93,12 @@ If both are null, just generate @code{KeyChangeEvent}.")
            tonic)))
 (ly:music-property music 'elements))))
 
+accessoryKey =
+#(define-music-function (parser location tonic pitch-alist music)
+   ((ly:pitch? '()) (list? '()) ly:music?)
+music)
+
+
 hackKey =
 #(define-music-function (parser location tonic pitch-alist)
    ((ly:pitch? '()) (list? '()))
@@ -113,6 +124,16 @@ If both are null, just generate @code{KeyChangeEvent}.")
            tonic))))
 
 key =
+#(define-music-function (parser location tonic pitch-alist music)
+   ((ly:pitch? '()) (list? '()) ly:music?) 
+  (if (or (equal? tonic (ly:make-pitch -1 5 -1/2))
+          (or (equal? tonic (ly:make-pitch -1 6 -1/2))
+              (or (equal? tonic (ly:make-pitch -1 2 -1/2)))))
+      (make-music 'TransposedMusic
+               'element (ly:music-transpose music (ly:pitch-diff (ly:make-pitch 0 1 1/2) (ly:make-pitch 0 2 -1/2))))
+      music))
+
+accessoryKey =
 #(define-music-function (parser location tonic pitch-alist music)
    ((ly:pitch? '()) (list? '()) ly:music?) 
   (if (or (equal? tonic (ly:make-pitch -1 5 -1/2))
@@ -1390,7 +1411,7 @@ bassSurprisesWords = \lyricmode {
 marksOpera = {
   \tempo 2=80
   \time 4/4
-  \mark "accel."
+  %\mark "accel."
   s1
   %\unfoldChange #80 #152 #8 %s1*4
   %\tempo 2=80
@@ -1406,7 +1427,7 @@ marksOpera = {
 }
 
 sopranoOpera = \relative c' { %\autoBeamOff
-   \key d \major {
+   \accessoryKey d \major {
   d2^\f^\> b'4 ( cis ) |
 }   \key e \major {
   b ( bes a ) | %fis ) |
@@ -1418,7 +1439,8 @@ sopranoOpera = \relative c' { %\autoBeamOff
   \times 2/3 { b,1 b'2 } |
   \times 2/3 { a2^> a^> a^> }
   \times 2/3 { a^> b,1 } |
-  bis'4^\f^\> eis, |
+} \key ees \major {
+  c'4^\f^\> f, |
 }}
 
 sopranoOperaWords = \lyricmode {
@@ -1433,7 +1455,7 @@ sopranoOperaWords = \lyricmode {
 }
 
 mezzoOpera = \relative c' { %\autoBeamOff 
-   \key d \major {
+   \accessoryKey d \major {
   \times 2/3 { d4^\> ( cis c ) } b2 |
 } \key e \major {
   d4 ( cis c ) % e ) |
@@ -1445,7 +1467,8 @@ mezzoOpera = \relative c' { %\autoBeamOff
   \times 2/3 { b,1 b'2 } |
   \times 2/3 { fis^> fis^> fis^> } |
   \times 2/3 { fis^> b,1 } |
-  gis'4^\f r |
+} \key ees \major {
+  aes'4^\f r |
 }}
 
 mezzoOperaWords = \lyricmode {
@@ -1459,13 +1482,14 @@ mezzoOperaWords = \lyricmode {
 }
 
 altoOpera = \relative c' { %\autoBeamOff
-   \key d \major {
+   \accessoryKey d \major {
   d2^\> fis |
+} \key e \major {
   fis4 ( f e ) |
   dis2^\mp dis |
   e4 r r g4^. |
-  R1*5 |
-  dis4^\f^\> gis, |
+} \key d \major {  R1*5 |
+ } \key ees \major { ees4^\f^\> aes, |
 }}
 
 altoOperaWords = \lyricmode {
@@ -1476,18 +1500,20 @@ altoOperaWords = \lyricmode {
 }
 
 tenorOpera = \relative c { %\autoBeamOff
-   \key d \major {
+   \accessoryKey d \major {
   %\clef "treble_8"
   d2^\> d' |
+} \key e \major {
   a4 ( gis g\! ) |
   fis2^\mp a |
   b4 r %{ e4 %} r cis4^. |
-  d4^\mf r d r |
+} \key d \major {  d4^\mf r d r |
   d r d r |
   \times 2/3 { b1 b,2 } |
   \times 2/3 { a'^> a^> a^> } |
   \times 2/3 { a^> b1 } |
-  bis4^\f r4 |
+  } \key ees \major {
+  c4^\f r4 |
 }}
 
 tenorOperaWords = \lyricmode {
@@ -1500,13 +1526,14 @@ tenorOperaWords = \lyricmode {
 
 bassOpera = \relative c { %\autoBeamOff
   %\clef bass
-   \key d \major {
+   \accessoryKey d \major {
   b4^\> ( a ) gis ( b ) |
-  a ( cis e ) | %cis ) |
 }  \key e \major {
+  a ( cis e ) | %cis ) |
   dis^\mp ( fis ) cis' ( c ) |
   b %{bis cis%} r4 r a,^. |
-  R1*5 |
+} \key d \major {  R1*5 |
+} \key ees \major {
   R2 |
 }}
 
@@ -1902,7 +1929,7 @@ tenorRamp = \relative c' { %\autoBeamOff
 }   \key cis \major {
   ais4 fisis |
 }   \key b \major {
-  r8 b ~ b4 ~ b r8 |
+  r8 ais ~ ais4 ~ ais r8 |
 }   \key bes \major { \relative c' {
   g4^\mf^\> ( ees ) beses'4. ~ |
 }}   \key e \major {
@@ -2186,7 +2213,7 @@ tenorElan = \relative c' { %\autoBeamOff
   gis, a b cis |
 }   \key e \major {
   dis2^\f cis |
-  b4 a gis | % do we want repeated C?
+  b4 e, eis | % do we want repeated C? % changed now
   fis4.^\mp bis ais4 |
 }   \key b \major {
   r2 ais4^\> |
@@ -2328,8 +2355,8 @@ marksSugar = {
   \tempo 4=108
   << { \unfoldChange #108 #72 #14 } {
   \time 4/4
-  \mark "rall."
-  s1 |
+  s2 \mark "rall."
+  s2 |
   \time 3/4
   s2. | } >>
   \time 4/4
@@ -2356,7 +2383,7 @@ marksSugar = {
 }
 
 sopranoSugar = \relative c'' { %\autoBeamOff
-   \key d \major {
+   \accessoryKey d \major {
   g4^\mp fis8 [ e ] d4 ( fis ) |
   g b, cis |
   a'2\trill d2^\espressivo |
@@ -2380,7 +2407,7 @@ sopranoSugarWords = \lyricmode {
 }
 
 mezzoSugar = \relative c' { %\autoBeamOff 
-   \key d \major {
+   \accessoryKey d \major {
   d4^\mp d8 [ cis ] b4 ( dis ) |
   d4 b bes |
   fis'2\trill gis^\espressivo |
@@ -2404,7 +2431,7 @@ mezzoSugarWords = \lyricmode {
 }
 
 altoSugar = \relative c' { %\autoBeamOff
-   \key d \major {
+   \accessoryKey d \major {
   b4^\mp b8 [ bes ] a4 ( b ) |
   b g g |
   cis4\trill ( cis16 [ b a g ) ] e'2^\espressivo |
@@ -2428,7 +2455,7 @@ altoSugarWords = \lyricmode {
 
 tenorSugar = \relative c { %\autoBeamOff
   %\clef "treble_8"
-   \key d \major {
+   \accessoryKey d \major {
   fis4^\mp a8 [ g ] g4 ( a ) |
   g e ees |
   d ( d' ) c2^\espressivo |
@@ -2453,7 +2480,7 @@ tenorSugarWords = \lyricmode {
 
 bassSugar = \relative c { %\autoBeamOff
   %\clef bass
-   \key d \major {
+   \accessoryKey d \major {
   b4^\mp a g ( fis )
   e2 a4 |
   d2 dis^\espressivo |
@@ -3040,7 +3067,7 @@ marksRealcome = {
 }
 
 sopranoRealcome = \relative c' { %\autoBeamOff
-   \key ees \major { \relative c' {
+   \accessoryKey ees \major { \relative c' {
   f4^mp^\< ees f g aes^\f
 }}   \key a \major {
   d4^\mp^\< e fis8 |
@@ -3058,12 +3085,12 @@ sopranoRealcomeWords = \lyricmode {
 }
 
 mezzoRealcome = \relative c' { %\autoBeamOff 
-   \key ees \major { \relative c' {
+   \accessoryKey ees \major { \relative c' {
   r2 r4 f^\< ees^\f |
 }}   \key a \major {
   cis8^\mp^\< b4 b4 |
 }   \key cis \major {
-  cis4^\> cis cis4.^\mp |
+  cis4^\> cis bis4.^\mp |
 }}
 
 mezzoRealcomeWords = \lyricmode {
@@ -3073,7 +3100,7 @@ mezzoRealcomeWords = \lyricmode {
 }
 
 altoRealcome = \relative c' { %\autoBeamOff
-   \key ees \major { \relative c' {
+   \accessoryKey ees \major { \relative c' {
   bes2^mp^\< c4 b c^\f |
 }}   \key a \major {
   a^\mp^\< gis a8 |
@@ -3088,7 +3115,7 @@ altoRealcomeWords = \lyricmode {
 }
 
 tenorRealcome = \relative c' { %\autoBeamOff
-   \key ees \major { \relative c' {
+   \accessoryKey ees \major { \relative c' {
   bes2^mp^\< aes4 g f^\f |
 }}   \key a \major {
   fis,4^\mp^\< e e8 |
@@ -3103,7 +3130,7 @@ tenorRealcomeWords = \lyricmode {
 }
 
 bassRealcome = \relative c { %\autoBeamOff
-\key ees \major { \relative c {
+\accessoryKey ees \major { \relative c {
   g4^mp^\< ~ g8 f ~ f4 d'4 f^\f |
 }}   \key a \major {
   d4.^\mp^\< e,4 |
@@ -3977,6 +4004,142 @@ giantKludgyRewriteRightHand = {
 {
   d'4 f' d' f' d' f' <c' ees'> <d' f'> <ees' g'> <ees' f' a'>2 r4 |
 }
+  \key b \major
+{
+  b2 gis' |
+}
+  \key d \major
+{
+  r4 fis' a' fis' |
+}
+  \key b \major
+{
+  gis2 e' |
+  << { dis'4 b8 cis' dis'4 } \\ { b2. } >> |
+}
+  \key cis \major
+{
+  <dis' gis'>2
+  eis'4 <dis' gis'> <cis' eis'> <eis' gis'> |
+  <dis' fisis'> <fisis' ais'> |
+  << { \times 2/3 { bis'2 bis' r } } \\ { gis'4 g' fis' ais' } >> |
+  << { <eis' dis''>4 <fisis' d''> cis'' b' | ais'4 gis' <ais fisis'> <gis dis'> } \\ {\voiceTwo gis'2 <dis' gis'> ~ |
+  <b gis'> cis'2 | } >>
+}
+  \key fis \major
+{
+  << { fis'8 gis'16 ais' b' cis'' dis'' eis'' <cis' fis''>2 } \\ { <ais fis'>2 ais'4 a' } >> |
+  << { eis''4 cis''8 dis'' eis''4 } \\ { gis'4 b' gis' } >> |
+}
+  \key b \major
+{
+  <dis' fis' a' b'>2 |
+}
+  \key ees \major
+{
+  c'4 ees' c' ees' c' |
+}
+  \key aes \major
+{
+  ees'1 |
+  \times 4/6 { aes4 c' ees' g' ees' c' } |
+  \times 2/3 { a c' ees' } aes'4 bes' |
+  << { c''1 c'' <f' ees''> <g' bes'>2 <ees' aes'> } \\ { c''4 b' bes' a' aes' g' f' ees' f' ees' des' c' des'2 c'4 bes } >> |
+  aes1 |
+  <c' aes'>1 |
+  << { <ees' g'>2 ees'4 f' | } \\ { des'1 | } >> |
+  << { g'2 b' | } \\ { c'4 <bes ees'> <aes ees'> ges | } >>
+}
+  \key e \major
+{
+  <e' gis'>4 <dis' b'> |
+}
+  \key d \major
+{
+  << { <fis' a'>4 <d' fis'> } \\ { d'8 [ e' ] fis' [ d' ] } >> <eis' ais' cis'' e''>4 |
+}
+  \key b \major
+{
+  <fis' b' dis''>4 <f' ais' b' fis''> <e' a' dis''> <dis' gis' b' fis''> <d' f' cis'' dis''> <cis' fis' dis'' fis''> |
+}
+  \key d \major
+{
+  <e' fis' cis'' d''>2 <d' gis' b' e''> |
+  <d' a' d'' fis''> <cis' a' cis'' gis''>4 |
+}
+  \key c \major
+{
+  <c' e' g' b'>2 <c' e' g' b'>4 <c' e' g' e''> |
+}
+  \key b \major
+{
+  <fis' gis' dis''>4 <fis' b' fis''> <fis' ais' dis''> |
+}
+  \key c \major
+{
+  \repeat unfold 3 { <c' e'>4 <c' g'> } <c' e'> |
+  \repeat unfold 2 { <c' e'>4 <c' g'> } |
+}
+  \key d \major
+{
+ <fis' d''>2 <e' e''>4
+}
+  \key cis \major
+{
+  ais'4 ais' ais' ais' ais' |
+}
+  \key d \major
+{
+  << { d''4 cis'' e'' dis'' } \\ { <a fis' b'>2 <b fis' b'>4 <b fis' b'> } >> |
+}
+  \key ees \major
+{
+  << { <c' ees'>2 <aes' c'>4 } \\ { des'4 c' c' } >> |
+  << { <g' bes'>2 } \\ { \times 2/3 { c'4 d' c' } } >>
+}
+  \key b \major
+{
+  <cis' e'>4 <cis' c'' e''> <dis' b ' dis''> |
+}
+  \key d \major
+{
+  << { <cis'' d''>2 <b' e''>4 } \\ { a4 a'2 } >>
+}
+  \key e \major
+{
+  << { cis''8. b'8. cis'' b' gis'2 b'4 } \\ { fis'4. dis'4. e'4 dis' cis' } >>
+}
+  \key fis \major
+{
+  <ais cis' e' ais'>4 <a cis' dis' cis'> |
+}
+  \key d \major
+{
+  <g b d' e'>4 q4 q4 e'8 |
+  e'4 cis'8 d' e'4 fis' |
+  r4. e'8 ~ e' cis' d' e' |
+  a'2 |
+  fis'4 r ais' |
+  gis' fis' e' d' |
+  cis' b ais g' |
+  fis' e' d' cis' |
+  d' r <d' fis' ais' cis''>2 |
+  <dis' a'>2 <dis' b'>4 |
+}
+  \key b \major
+{
+  << { ais'4 fis'8 gis' b' a' gis' fis' } \\ { <dis' fis'>4 dis'8 e' dis'4 dis' } >> | |
+  << { e'2 g'4 a' | fis'1 } \\ { e'8 dis' cis' b ais4 cis' dis'8 cis' b ais a4 dis' } >> |
+  << { gis'4 b' g' a' } \\ { e'2. cis'4 } >>
+  <b dis' fis'>4 <b dis'>8 <cis e'> <dis' a'>4 <e' gis'>4 |
+  << { e'4 cis'8 d' cis'4 g'4 fis'2 a' } \\ { <ais cis'>4. <gis b>8 <fis ais>4 ais4 } >> |
+  << { fis'2 a' } \\ { gis4 <fis \tweak #'duration-log #1 cis'> b4 <bis dis'> } >> |
+  << { gis'4 g' fis' f' } \\ { e1 } >> |
+  <cis' e'>2 <dis' fis'> <e' gis'> <dis' ais'> |
+  <dis' bis'>1 |
+  R1 |
+  r4 dis' dis'' cisis'' ~ | cisis''2 r |
+}
 }
 
 %%%%%%%%% !
@@ -4058,7 +4221,7 @@ giantKludgyRewriteLeftHand = {
 } } >>
   \key b \major
 {
-  r8 <b, b>8 ~ q4 ~ q4 r8 |
+  r8 <b, ais>8 ~ q4 ~ q4 r8 |
 }
   << { \voiceOne \key bes \major
 {
@@ -4129,7 +4292,7 @@ giantKludgyRewriteLeftHand = {
   \key e \major
 {
   << { dis'2 cis' } \\ { \times 2/3 { r4 b,4 ais, } \times 2/3 { gis,4 fis,2 } } >>
-  <fis, b>4 <fisis, a> <gis, gis> |
+  <fis, b>4 <fisis, e> <gis, eis> |
   fis4. bis ais4 |
 }
   \key b \major
@@ -4209,9 +4372,167 @@ giantKludgyRewriteLeftHand = {
 {
     \times 2/3 { c'4 bes c' } \times 2/3 { bes c' bes } \times 2/3 { c' bes c' } bes4 bes | bes a2 r4 |
 }
+  \key b \major
+{
+  <e gis>2. ais4 |
+}
+  \key d \major
+{
+  \times 2/3 { r4 d' e' } \times 2/3 { d' e' d' } |
+}
+  \key b \major
+{
+  <cis gis>2. <ais, g>4 |
+  <cis fis ais>4 < \tweak #'duration-log #1 dis gis>4 gis |
+}
+  \key cis \major
+{
+  <gis bis>2 |
+  cis'2 bis |
+  ais |
+  << { \times 4/5 { gis4 ais <gis bis> <ais cis'> <bis dis'> ~ } | bis1 ~ | bis4 dis'2 b4 | } \\ { dis4 cis bis, ais, gis,2. dis4 gis2. r4 | } >>
+}
+  \key fis \major
+{
+  << { cis'4 eis' dis' disis' | eis' gis'8 fis'8 eis'4 | } \\ { fis,2 fisis, gis,4 gisis, ais, } >>
+}
+  \key b \major
+{
+  R2 |
+}
+  \key ees \major
+{
+  R1*5/4 |
+}
+  \key aes \major
+{
+  R1*3 |
+  ees'1 |
+  ees' |
+  des'4 c' bes aes |
+  << { g1 } \\ { g4 f ees des } >> |
+  c bes, aes, ges, |
+  f, ees, des, c, |
+  \ottava #-1 bes,, aes,, g,, f,, |
+  ees,, des,, c,, bes,,,
+  \ottava #0
+}
+  \key e \major
+{
+  e4 gis |
+}
+  \key d \major
+{
+  <g, b> <g, b> g, |
+}
+  \key b \major
+{
+  fis,1. |
+}
+  \key d \major
+{
+  d4 a,2 d4 ~ |
+  d g,2 |
+}
+  \key c \major
+{
+  d4 cis c e,
+}
+  \key b \major
+{
+  fis,2. |
+}
+  \key c \major
+{
+  c'4 b bes a | aes a fis |
+  <c' e'> <b ees'> <bes d'> <a cis'> |
+}
+  \key d \major
+{
+  <a b d'> <a b cis'> <g cis'> |
+}
+  \key cis \major
+{
+  <ais, ais>4 q q q q |
+}
+  \key d \major
+{
+  dis2 g,4 fis, |
+}
+  \key ees \major
+{
+  <aes, aes>2 <a, fis>4 |
+  <bes, g>4 <c ees> |
+}
+  \key b \major
+{
+  <e gis>4 <fis, fis> <fis, fis> |
+}
+  \key d \major
+{
+  << { fis'2. } \\ { e4 d d } >>
+}
+  \key e \major
+{
+  << { <dis' fis'>2. e'2 e'4 } \\ { a,2 b,4 ~ | b,4 fis e | } >>
+}
+  \key fis \major
+{
+  g4 fis |
+}
+  \key d \major
+{
+  R1*7/8 |
+  <e, g b>2 <a, a cis'> |
+  \times 2/3 { <a cis' d'>2 q q } |
+  a4 a |
+  r2 <ais, ais>4 ~ |
+  ais r4 r2 |
+  R1 |
+  R1 |
+  R1 |
+  << { fis2. } \\ { r8 b,4 b,4 b,8 } >> |
+}
+  \key b \major
+{
+  << { fis8 gis ais4 <a b>4. b8 gis4 b cis' e' dis'2 cis' cis'4. b8 <ais cis'>2 } 
+      \\ { e2 dis4 fis gis4 e dis cis g4 fis b, a, gis,2 r4 e4 } \\
+   { s1 b1 ~ b1 } >>
+  << { a4 gis fis b } \\ { dis4. cis8 bis,2 } >>
+  << { gis4 fis e2 } \\ { cis2 fis, } >>
+  << { dis2 fis } \\ { b,1 } >>
+  <e gis>1 |
+  << { <gis b>2 <fis ais>2 <e b> <fisis cis'> } \\ { cis1 fis,2 r } >>
+  <gis bis>1
+  <gis, dis gis bis>2 q |
+  q1 ~ q1 |
+}
 }
 
 %%% SCORE
+
+mkf = \once \set Score.markFormatter = #format-mark-box-letters
+
+uberMarks = {
+        \marksBeginning \mkf \mark \default
+        \marksRestarts \mkf \mark \default
+        \marksRamp \mkf \mark \default
+        \marksWinding \mkf \mark \default
+        \marksLarge \mkf \mark \default
+        \marksTriumphal \mkf \mark \default
+        \marksElan \mkf \mark \default
+        \marksSugar \mkf \mark \default
+        \marksOpera \mkf \mark \default
+        \marksRealcome \mkf \mark \default
+        \marksSurprises \mkf \mark \default
+        \marksWortspiel \mkf \mark \default
+        \marksCartoon \mkf \mark \default
+        \marksIfhap \mkf \mark \default
+        \marksProof \mkf \mark \default
+        \marksFinale \mkf \mark \default
+        \marksStutter \mkf \mark \default
+        \marksDenouement
+}
 
 \score {
   << \new ChoirStaff <<
@@ -4237,24 +4558,7 @@ giantKludgyRewriteLeftHand = {
 %{!%}        \sopranoStutter
 %{!%}        \sopranoDenouement
       } {
-        \marksBeginning
-%{!%}        \marksRestarts
-%{!%}        \marksRamp
-%{!%}        \marksWinding
-%{!%}        \marksLarge
-%{!%}        \marksTriumphal
-%{!%}        \marksElan
-%{!%}        \marksSugar
-%{!%}        \marksOpera
-%{!%}        \marksRealcome
-%{!%}        \marksSurprises
-%{!%}        \marksWortspiel
-%{!%}        \marksCartoon
-%{!%}        \marksIfhap
-%{!%}        \marksProof
-%{!%}        \marksFinale
-%{!%}        \marksStutter
-%{!%}        \marksDenouement
+   \uberMarks
       } >> }
       \new Lyrics \lyricsto "soprano" {
 %{!%}        \sopranoBeginningWords
@@ -4450,115 +4754,8 @@ giantKludgyRewriteLeftHand = {
       }
     >>
   >>
-%   \new PianoStaff <<
-%    \new Staff << { \partcombine
-%      \new Voice = "sopranopiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
-%\voiceOne \partcombineChords %{!%}        \sopranoBeginning
-%%{!%}        \sopranoRestarts
-%%{!%}        \sopranoRamp
-%%{!%}        \sopranoWinding
-%%{!%}        \sopranoLarge
-%%{!%}        \sopranoTriumphal
-%%{!%}        \sopranoElan
-%%{!%}        \sopranoSugar
-%%{!%}        \sopranoOpera
-%%{!%}        \sopranoRealcome
-%%{!%}        \sopranoSurprises
-%%{!%}        \sopranoWortspiel
-%%{!%}        \sopranoCartoon
-%%{!%}        \sopranoIfhap
-%%{!%}        \sopranoProof
-%%{!%}        \sopranoFinale
-%%{!%}        \sopranoStutter
-%%{!%}        \sopranoDenouement
-%      }
-%      \new Voice = "mezzopiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
-%        \voiceTwo
-%        \mezzoBeginning
-%        \mezzoRestarts
-%        \mezzoRamp
-%        \mezzoWinding
-%        \mezzoLarge
-%        \mezzoTriumphal
-%        \mezzoElan
-%        \mezzoSugar
-%        \mezzoOpera
-%        \mezzoRealcome
-%        \mezzoSurprises
-%        \mezzoWortspiel
-%        \mezzoCartoon
-%        \mezzoIfhap
-%        \mezzoProof
-%        \mezzoFinale
-%        \mezzoStutter
-%        \mezzoDenouement
-%      } } \\
-%      \new Voice = "altopiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
-%        \voiceThree
-%        \altoBeginning
-%        \altoRestarts
-%        \altoRamp
-%        \altoWinding
-%        \altoLarge
-%        \altoTriumphal
-%        \altoElan
-%        \altoSugar
-%        \altoOpera
-%        \altoRealcome
-%        \altoSurprises
-%        \altoWortspiel
-%        \altoCartoon
-%        \altoIfhap
-%        \altoProof
-%        \altoFinale
-%        \altoStutter
-%        \altoDenouement
-%      } >>
-%    \new Staff \partcombine
-%      \new Voice = "tenorpiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
-%\voiceOne %{!%}        \tenorBeginning
-%%{!%}        \tenorRestarts
-%%{!%}        \tenorRamp
-%%{!%}        \tenorWinding
-%%{!%}        \tenorLarge
-%%{!%}        \tenorTriumphal
-%%{!%}        \tenorElan
-%%{!%}        \tenorSugar
-%%{!%}        \tenorOpera
-%%{!%}        \tenorRealcome
-%%{!%}        \tenorSurprises
-%%{!%}        \tenorWortspiel
-%%{!%}        \tenorCartoon
-%%{!%}        \tenorIfhap
-%%{!%}        \tenorProof
-%%{!%}        \tenorFinale
-%%{!%}        \tenorStutter
-%%{!%}        \tenorDenouement
-%      }
-%      \new Voice = "basspiano" \with { \remove "Script_engraver" \remove "Dynamic_engraver" } { \numericTimeSignature
-%        \voiceTwo
-%        \keepWithTag #'piano \removeWithTag #'normal \bassBeginning
-%        \bassRestarts
-%        \bassRamp
-%        \bassWinding
-%        \bassLarge
-%        \bassTriumphal
-%        \bassElan
-%        \bassSugar
-%        \bassOpera
-%        \bassRealcome
-%        \bassSurprises
-%        \bassWortspiel
-%        \bassCartoon
-%        \bassIfhap
-%        \bassProof
-%        \bassFinale
-%        \bassStutter
-%        \bassDenouement
-%      }
-%  >>
   \new PianoStaff <<
-    \new Staff \giantKludgyRewriteRightHand
+    \new Staff << \uberMarks \giantKludgyRewriteRightHand >>
     \new Staff \giantKludgyRewriteLeftHand
   >>
   >>
@@ -4621,24 +4818,7 @@ giantKludgyRewriteLeftHand = {
         \sopranoDenouement
       } {
 \midiBeginning
-        \marksBeginning
-        \marksRestarts
-        \marksRamp
-        \marksWinding
-        \marksLarge
-        \marksTriumphal
-        \marksElan
-        \marksSugar
-        \marksOpera
-        \marksRealcome
-        \marksSurprises
-        \marksWortspiel
-        \marksCartoon
-        \marksIfhap
-        \marksProof
-        \marksFinale
-        \marksStutter
-        \marksDenouement
+        \uberMarks
       } >> }
       \new Lyrics \lyricsto "soprano" {
         \sopranoBeginningWords

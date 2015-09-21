@@ -765,13 +765,12 @@ sopranoSecondPart = \relative c' {
   %\lo r8 fis4 \sh r8 \lo r8 f4 \sh r8 |
   %e4 \lo r8 \sh b'8 ~ \lo b8 r4 \sh ais8 ~  |
   %\lo ais8 \sh a8 gis4 fis e |
-  \times 4/5 { r1 gis,4 ~  }  %%%% here to change
-  \times 4/5 { gis2 r2. }
-  \times 4/5 { r2 a2. }
   R1 |
-  \times 4/5 { ais4 r b r fis  }
-  \times 4/5 { r f r e r }
-  R1*2 |
+  r4 e, gis g |
+  fis dis b f' |
+  e c cis d |
+  dis b fis' f |
+  R1*3 |
   r8 fis ~ fis4 e e |
   e4 r e8 e4 e8 ~ |
   e e4 e8 e8 e e4 |
@@ -1119,11 +1118,11 @@ tenorSecondPart = \relative c' {
   \lo r8 \sh b r4 r2 | % 1
   cis4 r4 r2 | % 2
   R1 |
-  r4 b r c |
-  r4 cis r d |
-  r cis r c |
-  r d r cis |
-  r b a fisis |
+  r4 a4 cis c |
+  b d cis gis |
+  a gis fis b |
+  a e fis fisis |
+  gis b a cis |
   gis e b'4 b | % 1
   %\lo cis8 \sh ais ~ ais4 b4 b |
   bes4 r b8 b4 c8 ~ |
@@ -1242,13 +1241,13 @@ bassSecondPart = \relative c {
   gis g fis a |
   gis d' cis \lo c8 \sh eis, |
   fis4 r4 r2 | %a cis c | b
-  r4 gis fis e |
-  fis a gis fis |
-  gis a b c |
-  cis a gis fis |
-  b bes a cis |
-  gis fis cis' c |
-  b d b gis |
+  r4 e' gis g |
+  fis dis b a |
+  gis e' cis b 
+  a b cis gis
+  a fis b dis |
+  cis b a fisis |
+  gis d' b gis |
   a fis cis' c |
   b e bes a |
   gis g fis a |
