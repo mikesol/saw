@@ -40,7 +40,7 @@ subdX = \relative c' {
   r4 a cis c |
   b bes a b |
   cis b bes a |
-  gis bis c cis |
+  gis bis cis d |
   a b dis b |
   fis gis cis b |
   gis fis e fis
