@@ -40,19 +40,20 @@ subdX = \relative c' {
   r4 a cis c |
   b bes a bis |
   cis b bes a |
-  gis bis cis d |
+  gis bis cis bes |
   a cis d dis |
-  b gis g fis |
-  b f e fis |
+  %c gis g fis b f e fis | %1
+  fis d cis g fis b e, fis | %2
 }
 
 tonX = \relative c' {
   r4 e gis g |
   fis f e fisis |
   gis fis f e |
-  dis g gis a |
+  dis g gis f |
   e gis a ais |
-  fis dis d cis
+  %g dis d cis %1
+  cis a gis d %2
 }
 
 
