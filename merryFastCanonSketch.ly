@@ -39,8 +39,8 @@ tonY = \relative c' {
 subdX = \relative c' {
   r4 a cis c |
   b bes a bis |
-  cis c b bes |
-  a gis bis cis |
+  cis b bes a |
+  gis bis cis bes |
   a cis d dis |
   %c gis g fis b f e fis | %1
   fis d cis g fis b e, b' | %2
@@ -49,8 +49,8 @@ subdX = \relative c' {
 tonX = \relative c' {
   r4 e gis g |
   fis f e fisis |
-  gis g fis f |
-  e dis fisis gis |
+  gis fis f e |
+  dis g gis f |
   e gis a ais |
   %g dis d cis %1
   cis a gis d %2
