@@ -43,7 +43,7 @@ subdX = \relative c' {
   gis bis cis bes |
   a cis d dis |
   %c gis g fis b f e fis | %1
-  fis d cis g fis b e, fis | %2
+  fis d cis g fis b e, b' | %2
 }
 
 tonX = \relative c' {
