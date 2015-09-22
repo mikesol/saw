@@ -36,8 +36,8 @@ tonY = \relative c' {
 
 
 %%%%
-subdXA = {  r4 a cis' c' | }
-subdXB = {  b bes a bis | }
+subdXA = {  a4 cis' c' | }
+subdXB = {  b ais b bis | }
 subdXC = {  cis' b bes a | }
 subdXD = {  gis bis cis' bes | }
 subdXE = {  a cis' d' dis' | }
@@ -54,8 +54,8 @@ subdX = {
   \subdXG
 }
 
-tonXA = { r4 e gis g | }
-tonXB = { fis f e fisis | }
+tonXA = { e4 gis g | }
+tonXB = { fis eis fis fisis | }
 tonXC = { gis fis f e | }
 tonXD = { dis g gis f | }
 tonXE = { e gis a ais | }
@@ -70,16 +70,17 @@ tonX = {
   \tonXF
 }
 
-
+%{
 \score {
 <<
 %\new ChordNames \chordmode { e1 fis1 e1 a1 e1 a1 b1 e1 }
-\new Staff { \clef "treble" \emj R1*5 \transpose c c' \subdX }
-\new Staff { \clef "treble" \emj R1*4 \transpose c c' \tonX }
-\new Staff { \clef "treble_8" \emj R1*3 \subdX }
-\new Staff { \clef "treble_8" \emj R1*2 \tonX }
-\new Staff { \clef bass \emj R1 \transpose c c, \subdX \set Score.skipTypesetting = ##t }
+\new Staff { \clef "treble" \emj R1*5 r4 \transpose c c' \subdX }
+\new Staff { \clef "treble" \emj R1*4 r4 \transpose c c' \tonX }
+\new Staff { \clef "treble_8" \emj R1*3 r4 \subdX }
+\new Staff { \clef "treble_8" \emj R1*2 r4 \tonX }
+\new Staff { \clef bass \emj R1 r4 \transpose c c, \subdX \set Score.skipTypesetting = ##t }
 >>
 \layout{}
 \midi{}
 }
+%}

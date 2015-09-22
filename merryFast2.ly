@@ -23,6 +23,7 @@
 %}
 \version "2.17.0"
 \include "defs-devel.ly"
+\include "merryFastCanonSketch.ly"
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
   footnote-padding = 5\mm
@@ -49,6 +50,9 @@ myblack = \revert NoteHead.color
 %MyBlack = \revert NoteHead.color
 %myred = \revert NoteHead.color
 %myblack = \revert NoteHead.color
+
+solo = \markup \italic "solo"
+ord = \markup \italic "ord."
 
 %{
   repeated note
@@ -723,49 +727,41 @@ sopranoSecondPart = \relative c' {
   \lo d8^\< \sh e \lo e \sh b \lo d^\f b4 \sh cis8 |
   \lo e8 \sh fis8 \lo e \sh d \lo ais'^\mp \sh a \times 2/3 { gis8^\< g e }
   dis4^\> d \lo cis8^\mf \sh g' \lo fis \sh f8 |
-  r4 dis' dis r |
-  \times 2/3 { dis dis r } r |
-  dis r4 r2 |
-  r2 \lo r8 \sh fisis,8 ~ fisis4 |
-  \lo gis8 \sh gis r4 r2 |
-  r4 a2 fisis4 |
-  \lo fis8 \sh fis r4 r2 |
-  r2 \lo r8 fis4 \sh fis8 |
-  \lo dis8 \sh r g'4-. r4 \lo r8 \sh fis8 |
-  r2 e4 r |
-  \lo r8 \sh d r4 r4 cis4 |
-  r4 \lo r8 \sh c r2 |
-  b4 r \lo r8 \sh a r4 |
-  r4 gis4 r4 \lo r8 \sh dis'8 |
-  r2 d4 r4 |
-  \lo r8 \sh cis r4 r4 c |
-  r4 \lo r8 \sh b r2 |
-  cis4 r \lo r8 \sh dis r4 |
-  r4 d4 r4 \lo r8 \sh cis8 |
-  r2 dis4 r4 |
-  \lo r8 \sh e r4 r4 f |
-  r4 \lo r8 \sh fis r2 |
-  %\mark "!"
-  g4 r \lo r8 \sh gis r4 |
-  r4 a4 r4 \lo r8 \sh fis8 |
-  r2 g4 r4 |
-  \lo r8 \sh gis r4 r4 fis |
-  r4 \lo r8 \sh f r2 |
-  e4 r4 r2 | % 1
-  %\lod fisis,4. \sh gis8 ~ \lod gis4. \sh b8 ~ | %2
-  %b4 cis ~ cis d ~ | % 3
-  %\lo d8 \sh cis ~ cis4 ~ \lo cis8 \sh b ~ b4 | %4
-  %gis2 \lod fis4. \sh gis8 ~ | % 5
-  %\lod gis4. \sh b8 ~ b4 cis4 ~ | % 6
-  %cis a ~ \lo a8 \sh b8 ~ b4 ~ | % 7
-  %\lo b8 \sh fis ~ fis4
+  r4 dis'--^\mf dis-- r |
+  \times 2/3 { dis-- dis-- r } r |
+  dis-- r4 r2 |
+  r2 \lo r8 \sh fisis,8^\mp ~ fisis4^\< |
+  \lo gis8^\mf \sh gis r4 r2 |
+  r4 a2^\> fisis4^\< |
+  \lo fis8^\mf \sh fis r4 r2 |
+  r2 \lo r8 fis4-- \sh fis8 |
+  \lo dis8-- \sh r g'4-.^\sf r4 \lo r8 \sh fis8-> |
+  r2 e4--^\p r |
+  \lo r8 \sh d-- r4 r4 cis4-- |
+  r4 \lo r8 \sh c-- r2 |
+  b4-- r \lo r8 \sh a-- r4 |
+  r4 gis4-- r4 \lo r8 \sh dis'8-- |
+  r2 d4-- r4 |
+  \lo r8 \sh cis-- r4 r4 c-- |
+  r4 \lo r8 \sh b-- r2 |
+  cis4-- r \lo r8 \sh dis-- r4 |
+  r4 d4-- r4 \lo r8 \sh cis8-- |
+  r2 dis4--^\crpoco r4 |
+  \lo r8 \sh e-- r4 r4 f-- |
+  r4 \lo r8 \sh fis-- r2 |
+  g4-- r \lo r8 \sh gis-- r4 |
+  r4 a4-- r4 \lo r8 \sh fis8-- |
+  r2 g4-- r4 |
+  \lo r8 \sh gis-- r4 r4 fis-- |
+  r4 \lo r8 \sh f-- r2 |
+  e4-^^\f r4 r2 | % 1
   R1 |
-  %r4 gis, r a |
-  %r ais r b |
-  %\lo r8 fis4 \sh r8 \lo r8 f4 \sh r8 |
-  %e4 \lo r8 \sh b'8 ~ \lo b8 r4 \sh ais8 ~  |
-  %\lo ais8 \sh a8 gis4 fis e |
-  R1 |
+  r4 \transpose c c { << { \subdXA } { s4^\p } >> |
+  \subdXB
+  \subdXC
+  \subdXD
+  \subdXE
+  }
   r4 e, gis g |
   fis dis b f' |
   e c cis d |
@@ -867,16 +863,16 @@ mezzoSecondPart = \relative c' {
   \times 2/3 { e8^\> b b } \times 2/3 { b^\mf r b8 } b8^\markup \italic "not swung" e fisis gis |
   \times 2/3 { d4 ( cis2 ) } \times 2/3 { eis4 fis4 eis8 e } |
   \times 2/3  { cis8 a4 } \lo r8^\markup \italic "swung" \sh b^\< \lo e^\f \sh e \lo e \sh b |
-  r4 a' a r |
-  \times 2/3 { a a r } r |
-  a r4 r2 |
-  r2 \lo r8 \sh dis,8 ~ dis4 |
-  \lo d8 \sh d r4 r2 |
-  r4 cis2 dis4 |
-  \lo d8 \sh d r4 r2 |
-  \lo g8 fis4 \sh e8 ~ \lo e dis4 \sh d8 |
-  \lo cis8 \sh r dis'4-. r4 \lo r8 \sh c8 |
-  r2 bes4 r |
+  r4 a'--^\mf a-- r |
+  \times 2/3 { a-- a-- r } r |
+  a-- r4 r2 |
+  r2 \lo r8 \sh dis,8^\mp ~ dis4^\< |
+  \lo d8^\mf \sh d r4 r2 |
+  r4 cis2^\> dis4^\< |
+  \lo d8^\mf \sh d r4 r2 |
+  \lo g8 fis4 \sh e8 ~ \lo e dis4-- \sh d8 |
+  \lo cis8-- \sh r dis'4-.^\sf r4 \lo r8 \sh c8-> |
+  r2 bes4--^\p r |
   \lo r8 \sh gis r4 r4 gis4 |
   r4 \lo r8 \sh fis r2 |
   g4 r \lo r8 \sh e r4 |
@@ -897,14 +893,16 @@ mezzoSecondPart = \relative c' {
   \lo r8 \sh ais r4 a \lo r8 \sh g8 |
   r4 gis4 \lo r8 \sh g8 r4 |
   %\mark "@"
-  gis4 b'4 gis \lo fis8 \sh fis |
-  \lo e \sh e e4 gis b |
-  a2 ~ \lo a8 \sh r b4 |
-  \lod e,4. \sh gis8 b4 e |
-  \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
-  \lo gis8 \sh gis gis4 a fis |
-  e2.. r8 |
-  d4 d d r | %1
+  gis4 r4 r2 |
+  R1 |
+  R1 |
+  r4 \transpose c c' {
+    \tonXA
+    \tonXB
+    \tonXC
+    \tonXD
+  }
+  d'4 d d r | %1
   d8 d4 d8 ~ d d4 d8 | %2
   d8 d d4 d8 d4 d8 ~ | %3
   d2 ~ d8 r d4 | %4
@@ -987,8 +985,8 @@ altoSecondPart = \relative c'' {
   gis4 e ~ ( \lo e8 \sh cis8 b4 ) |
   \lo b8 \sh b r4 \lo r8 \sh e8 ~ e4 |
   cis'2 ~ \times 2/3 { cis4 b cis } |
-  \times 2/3 { g4 ( fis e ~ } \lod e4. ) \sh dis8 |
-  r2 g4 r4 |
+  \times 2/3 { g4 ( fis e ~ } \lod e4. ) \sh dis8-> |
+  r2 g4--^\p r4 |
   \lo r8 \sh e r4 r4 eis4 |
   r4 \lo r8 \sh d r2 |
   cis4 r \lo r8 \sh d r4 |
@@ -1011,10 +1009,11 @@ altoSecondPart = \relative c'' {
   \lo e \sh b \lo cis \sh e \lo fis \sh b, \lo cis \sh g' |
   \lo gis8 \sh e \lo d \sh b \lo gis \sh a \lo b \sh cis |
   e4-. \lo r8 \sh b' ~ \lo b gis4 \sh r8 |
-  \lo a8 b4 \sh cis8 ~ \lo cis \sh cis \lo b \sh a |
-  \lo b \sh b, \lo a' \sh b \lo gis \sh e \lo d \sh b |
-  \lo e \sh fis \lo cis' \sh b \lo gis \sh e \lo d \sh b |
-  gis4 gis' gis r | % 1
+  bes4 \transpose c c' { \subdXA |
+  \subdXB
+  \subdXC
+  }
+  gis4 gis gis r | % 1
   g8 g4 g8 ~ g g4 g8 | %2
   gis8 gis gis4 gis8 gis4 a8 ~ | %3
   a2 ~ a8 r fisis4 | %4
@@ -1089,17 +1088,17 @@ tenorSecondPart = \relative c' {
   \times 2/3 { a a gis } \lo fis \sh a \lo gis \sh fis \lo e \sh e |
   \lo e \sh e \lo e' \sh e \lo dis \sh dis \lo cis \sh cis |
   fis2 r2 |
-  r4 fis fis r |
-  \times 2/3 { fis fis r } r |
-  fis r r d |
-  \lod cis4. \sh c8 ~ c2 |
-  \lo b8 \sh b r4 r2 |
-  r4 g2 a4 |
-  \lo gis8 \sh gis r4 r d' |
-  \lo cis8 d4 \sh cis8 ~ \lo cis c4 \sh c8 |
-  \lo a8 \sh r a'4-. r4 \lo r8 \sh gis8 |
+  r4 fis^\mf-- fis-- r |
+  \times 2/3 { fis-- fis-- r } r |
+  fis-- r r d^\p |
+  \lod cis4. \sh c8^\< ~ c2 |
+  \lo b8^\mf \sh b r4 r2 |
+  r4 g2^\> a4^\< |
+  \lo gis8^\mf \sh gis r4 r d' |
+  \lo cis8 d4 \sh cis8 ~ \lo cis c4-- \sh c8 |
+  \lo a8-- \sh r a'4-.^\sf r4 \lo r8 \sh gis8-> |
   R1 |
-  e,4 gis b2 |
+  e,4^\mp^\solo gis b2 |
   \lo a8 b4 \sh gis8 ~ \lo gis fis4 \sh fis8 |
   \lo e \sh e e4 \lo gis \sh b ~ b4 |
   a2 r4 b4 |
@@ -1117,12 +1116,12 @@ tenorSecondPart = \relative c' {
   r4 c r2 |
   \lo r8 \sh b r4 r2 | % 1
   cis4 r4 r2 | % 2
-  R1 |
-  r4 a4 cis c |
-  b d cis gis |
-  a gis fis b |
-  a e fis fisis |
-  gis b a cis |
+  r4 \transpose c c { \tonXA |
+  \tonXB
+  \tonXC
+  \tonXD
+  \tonXE
+  \tonXF }
   gis e b'4 b | % 1
   %\lo cis8 \sh ais ~ ais4 b4 b |
   bes4 r b8 b4 c8 ~ |
@@ -1213,16 +1212,16 @@ bassSecondPart = \relative c {
   \lo cis \sh d \lo b \sh dis, \lo e \sh d' \lo cis \sh b |
   \times 2/3 { a8 a a } \times 2/3 { a r a } \times 2/3 { g' cis, r  } \times 2/3 { dis ais cis } |
   \lo b \sh b \lo b \sh fis \lo a cis4 \sh c |
-  r4 b b r |
-  \times 2/3 { b b r } r |
-  b r b2 |
-  \lo a8 \sh b8 ~ b4 gis4 \lo g8 \sh fis8 |
+  r4 b--^\mf b-- r |
+  \times 2/3 { b-- b-- r } r |
+  b-- r b2^\p^\<^\solo |
+  \lo a8^\mf \sh b8 ~ b4 gis4 \lo g8 \sh fis8 |
   \lo e8 \sh e e4 gis4 b |
   a2 ~ \lo a8 \sh r8 b4 |
   \lod e,4. \sh gis8 b4 e |
   \lo a,8 b4 \sh cis8 ~ \lo cis a4 \sh a8 |
-  \lo b8 \sh b r4 r \lo b8 \sh r |
-  \lodd r2.. \sh b8 |
+  \lo b8 \sh b r4 r \lo b8-- \sh r |
+  \lodd r2.. \sh b8^\p^\ord |
   e4 dis d cis |
   c b dis b |
   a gis b eis, |
@@ -1240,13 +1239,16 @@ bassSecondPart = \relative c {
   fis c' b a |
   gis g fis a |
   gis d' cis \lo c8 \sh eis, |
-  fis4 r4 r2 | %a cis c | b
-  r4 e' gis g |
-  fis dis b a |
-  gis e' cis b 
-  a b cis gis
-  a fis b dis |
-  cis b a fisis |
+  fis4
+    \transpose c c, {
+    \subdXA
+    \subdXB
+    \subdXC
+    \subdXD
+    \subdXE
+    \subdXF
+    \subdXG
+  }
   gis d' b gis |
   a fis cis' c |
   b e bes a |

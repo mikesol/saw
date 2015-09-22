@@ -441,6 +441,8 @@ ffpInternal = \markup { \center-align
 
 ffp = #(make-dynamic-script fppInternal)
 
+crpoco = #(make-music 'CrescendoEvent 'span-direction START 'span-type 'text 'span-text "cresc. poco a poco")
+
 fatText = {
   \once \override TextScript #'extra-spacing-width = #'(0 . 0)
   \once \override TextScript #'Y-offset = #0
