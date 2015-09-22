@@ -36,24 +36,38 @@ tonY = \relative c' {
 
 
 %%%%
-subdX = \relative c' {
-  r4 a cis c |
-  b bes a bis |
-  cis b bes a |
-  gis bis cis bes |
-  a cis d dis |
-  %c gis g fis b f e fis | %1
-  fis d cis g fis b e, b' | %2
+subdXA = {  r4 a cis' c' | }
+subdXB = {  b bes a bis | }
+subdXC = {  cis' b bes a | }
+subdXD = {  gis bis cis' bes | }
+subdXE = {  a cis' d' dis' | }
+subdXF = {  fis' d' cis' g | }
+subdXG = {  fis b e b | }
+
+subdX = {
+  \subdXA
+  \subdXB
+  \subdXC
+  \subdXD
+  \subdXE
+  \subdXF
+  \subdXG
 }
 
-tonX = \relative c' {
-  r4 e gis g |
-  fis f e fisis |
-  gis fis f e |
-  dis g gis f |
-  e gis a ais |
-  %g dis d cis %1
-  cis a gis d %2
+tonXA = { r4 e gis g | }
+tonXB = { fis f e fisis | }
+tonXC = { gis fis f e | }
+tonXD = { dis g gis f | }
+tonXE = { e gis a ais | }
+tonXF = { cis' a gis d | }
+
+tonX = {
+  \tonXA
+  \tonXB
+  \tonXC
+  \tonXD
+  \tonXE
+  \tonXF
 }
 
 
@@ -61,9 +75,9 @@ tonX = \relative c' {
 <<
 %\new ChordNames \chordmode { e1 fis1 e1 a1 e1 a1 b1 e1 }
 \new Staff { \clef "treble" \emj R1*5 \transpose c c' \subdX }
-\new Staff { \clef "treble" \emj R1*4 \tonX }
+\new Staff { \clef "treble" \emj R1*4 \transpose c c' \tonX }
 \new Staff { \clef "treble_8" \emj R1*3 \subdX }
-\new Staff { \clef "treble_8" \emj R1*2 \transpose c c, \tonX }
+\new Staff { \clef "treble_8" \emj R1*2 \tonX }
 \new Staff { \clef bass \emj R1 \transpose c c, \subdX \set Score.skipTypesetting = ##t }
 >>
 \layout{}
