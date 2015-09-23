@@ -708,7 +708,12 @@ marksSecondPart = {
   \unfoldChange #160 #220 #32
   \unfoldChange #220 #336 #128
   \tempo "Fast" 2=168
-  s1 |
+  s1*35 \bar "||"
+  \time 2/4
+  s2 |
+  \time 4/4
+  \tempo "Adagio" 4=60
+  s1*4 |
 }
 
 prefatoryMatterSecondPart = {
@@ -792,37 +797,24 @@ sopranoSecondPart = \relative c' {
   a ais |
   R1*3 |
   ais'1 ~ |ais1 ~ | ais1 ~ | ais1 ~ |ais1 ~ | ais1 ~ | ais1 ~ |ais1 |
-  gis'1 |
-  R1 |
-  R1|
-  r4 g,^\mf g r |
-  gis8 gis4 gis8 ~ gis8 gis4 gis8 |
-  b2 e |
-  cis4 dis2 e4 ~ 
-  e a,2 a4 |
-  gis cis4 dis e4 ~ 
-  e a,2 a4 |
-  \times 2/3 { gis2 gis4 } gis2 |
-  a2 ~ a8 fis ~ fis4 |
-  %\times 2/3 { e gis b ~ } |
-  %\times 2/3 { b a b } |
-  %\times 2/3 { gis2 fis4 fis e e } |
-  %\times 2/3 { e2 gis b } |
-  %a1 |
-  \times 4/6 { e4 gis b2 a4 b } |
-  %!\times 4/6 { gis4 fis8 fis e e e4 gis b } |
-  %!a2 \times 2/3 { b4 e,4. gis8 } | %
-  \times 4/6 { %{b4%} gis e' cis8 dis4 e4 a,4 a8 } | %
-  \times 4/6 { gis8 gis gis4 a fis r2 } | %
-  %gis1 |
-  %\times 2/3 { gis2 b1 } |
-  %\times 2/3 { e1 cis2 } |
-  %\times 2/3 { dis1 e2 ~ } |
-  %\times 2/3 { e2 cis1 } |
-  %\times 2/3 { cis b b } |
-  %\times 2/3 { b1 cis2 ~ } |
-  %\times 2/3 { cis2 a1 } |
-  %gis4
+  a4 a a r |
+  a4. a8 ~ a2 |
+  a4. a8 ~ a4. r8 |
+  a2 gis2 ~ |
+  gis4 b b2 |
+  e cis4 dis ~ |
+  dis e4 ~ e a,4 ~ |
+  a a4 gis4 gis4 |
+  gis2 a |
+  d4 d d r |
+  %%%%%%%%%%%%%%%%%%%%%%%%%%
+  d4. d4. 
+  d4 ~ | d8 d4.
+  d4 d | d 
+  r d d |
+  d r d4 d |
+  r4 d d d |
+  R2 |
 }
 
 sopranoWordsSecondPart = \lyricmode {
@@ -864,6 +856,17 @@ sopranoWordsSecondPart = \lyricmode {
   ha ha ha
   ha ha
   ha ha
+  the won
+  ful wiz
+  wiz
+  Ha ha ha
+  Ho Ho
+  cou -- ple
+  That's how we laugh the day a -- way in the mer -- ry old land
+  Ha ha ha ho ho cou -- ple tra la that's
+  how we laugh
+  day a
+  mer -- ry old
 }
 
 mezzoSecondPart = \relative c' {
@@ -930,22 +933,23 @@ mezzoSecondPart = \relative c' {
   %d4. d8 d4 d^"the" | %5
   %d d d4.^"way" d8^"in" ~ |%6
   %d4 d^"the" ~ d d^"me" ~ | %7
-  %d4. d8^"ry" ~ d2 | %8
+  %d4. d8 ~ d2 | %8
   R1*5 |
   r2 dis |
   e1 |
-  R1*2 |
+  e2 r |
+  R1 |
   R1 |
   r4 cis r2 |
   r8 c4 r8 r2 |
-  R1 |
-  \times 4/7 { r4 a'1. ~ } |
-  \times 4/7 { a2 a1 ~ a4 ~ } |
-  \times 4/7 { a2. a1 ~ } |
-  \times 4/7 { a1 a2. ~ } |
-  \times 4/7 { a4 ~ a1 a2 ~ } |
-  \times 4/7 { a1. a4 ~  } |
-  a1 |
+  \times 4/5 { r1 e4 ~ } |
+  \times 4/5 { e2 r4 f2 ~ } |
+  \times 4/5 { f4 r4 fis2. } |
+  \times 4/5 { r4 g2. r4  } |
+  \times 4/5 { gis2. r4 a4 ~ } |
+  \times 4/5 { a2 r4 b2 ~ } |
+  \times 4/5 { b4 r cis2. } |
+  \times 4/5 { r4 d2. r4 } |
   %\times 2/3 { r2 a' r } |
   %\times 2/3 { ais r b } |
   %\times 2/3 { r cis r } |
@@ -968,22 +972,24 @@ mezzoSecondPart = \relative c' {
   %e2 \times 2/3 { fis4 d4. e8 } |
   %\times 4/6 { fis4 a gis8 a4 b4 fis4 fis8 } |
   %\times 4/6 { e8 e e4 fis d r2 }
-  a4 a a r |
-  a4. a8 ~ a2 |
-  a4. a8 ~ a4. a8 ~ |
-  a4. r8 a2 |
-  a2. a4 |
-  a2 a
-  a4 a2 a4 ~ |
-  a a2 a4 |
-  a4 a4 a2 |
-  a a |
-  a4 a a r |
+  fis,4 fis fis r |
+  fis4. fis8 ~ fis2 |
+  fis4. fis8 ~ fis4. r8 |
+  fis2 e2 ~ |
+  e4 gis gis2 |
+  gis a4 b ~ |
+  b cis4 ~ cis fis,4 ~ |
+  fis fis4 e4 e4 |
+  e2 e |
+  gis4 gis gis r |
   %%%%%%%%%%%%%%%%%%%%%%%%%%
-  \times 3/4
-  a4. a8 ~ a4 r4 |
-  a4.^"cou" a8 ~ a4^"ple" a4 |
-  a4 a 
+  gis4. gis4. 
+  gis4 ~ | gis8 gis4.
+  gis4 gis | gis 
+  r gis gis |
+  gis r gis4 gis |
+  r4 gis gis gis |
+  R2 |
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -1022,6 +1028,17 @@ mezzoWordsSecondPart = \lyricmode {
   ha ha ha
   ho ho ho and a cou -- ple of tra la las
   that's \repeat unfold 4 { how we laugh } how we
+  the won -- der
+  that ne
+  up we're go -- in' up he takes me so
+  Ha ha ha
+  Ho Ho
+  cou -- ple
+  That's how we laugh the day a -- way in the mer -- ry old land
+  Ha ha ha ho ho cou -- ple tra la that's
+  how we laugh
+  day a
+  mer -- ry old
 }
 
 altoSecondPart = \relative c'' {
@@ -1104,29 +1121,37 @@ altoSecondPart = \relative c'' {
   cis1 ~ | % 5
   cis2 r | % 6
   fis1 | % 7
-  gis2 fis2 | % 8
-  cis2 e | % 9 !!
+  gis2 fis2 ( | % 8
+  cis2 ) e | % 9 !!
   b'8 gis a b gis e d b |
   fis' f d b bes d e gis |
   g e cis b a b d f |
   e4 r f r | %1
   fis r g r | %2
   gis r a r | %3
-  ais r b r | %4
+  ais r b cis | %4
   e r cis r | %5
   b r a r | %6
   gis r fis r | %7
-  \times 2/3 { e2 gis a } |
-  \times 2/3 { gis b1 ~ } |
-  \times 2/3 { b1 a4 b } |
-  \times 2/3 { gis2 e d }
-  \times 2/3 { b d e } |
-  r2 e |
-  r4 cis'2. ~ |
-  \times 2/3 { cis2 b cis } |
-  \times 2/3 { g fis e ~ } |
-  e1 |
-  R1*6 |
+  e2 gis |
+  a2 gis |
+  b1 ~ |
+  b1 ~ |
+  b2 b, ~ |
+  b4 b4 e2 |
+  e e4 fis ~ |
+  fis4 e ~ e e ~ |
+  e e e e |
+  e2 dis |
+  fis4 fis fis r |
+  %%%%%%%%%%%%%%%%%%%%%%%%%%
+  fis4. fis4. 
+  fis4 ~ | fis8 fis4.
+  fis4 fis | fis 
+  r fis fis |
+  fis r fis4 fis |
+  r4 fis fis fis |
+  R2 |
 }
 
 altoWordsSecondPart = \lyricmode {
@@ -1163,6 +1188,18 @@ altoWordsSecondPart = \lyricmode {
   ho ho ho and a cou -- ple of tra la las
   that's how we laugh
   day a -- way in the mer -- ry
+  to see the Wi -- zard
+  won -- der -- ful wiz
+  ne -- ver would I ev -- er have i -- ma -- gined that the wi -- zard
+  was -- n't ge -- ne -- rous to a -- ni -- mals
+  go up
+  we're go -- in' up he takes me so high the wi -- zard's ne -- ver down
+  show me the way
+  how we laugh the day a -- way in the mer -- ry old land
+  Ha ha ha ho ho cou -- ple tra la that's
+  how we laugh
+  day a
+  mer -- ry old
 }
 
 tenorSecondPart = \relative c' {
@@ -1243,44 +1280,32 @@ tenorSecondPart = \relative c' {
   cis c |
   b ais |
   a gis |
-  \times 4/5 { r1 a4 ~ } |
-  \times 4/5 { a2. a2 ~ } |
-  \times 4/5 { a2 a2. ~ } |
-  \times 4/5 { a4 a1 } |
-  \times 4/5 { a1 a4 ~ } |
-  \times 4/5 { a2. a2 ~ } |
-  \times 4/5 { a2 a2. ~ } |
-  \times 4/5 { a4 a1 } |
-  %r8 e'4 r8 r8 dis4 r8 |
-  %r8 d4 r8 r8 cis4 r8 |
-  %r8 c4 r8 r8 b4 r8 |
-  %r8 ais4 r8 r8 a4 r8 |
-  %r8 gis4 r8 r8 g4 r8 |
-  %r8 fis4 r8 r8 b4 r8 |
-  %r8 ais4 r8 r8 a4 r8 |
-  r8 gis4 r8 r8 b ~ b4 |
-  a8 b4 gis8 ~ gis fis4 fis8 |
-  e8 e8 e4 gis8 b4 a8 ~ |
-  \times 2/3 { a1 b2 } |
-  b2. b4 |
-  e2 gis |
-  e4 e2 a4 ~ |
-  a cis,2 cis4 |
-  \times 2/3 { b2 b4 } b2 |
-  b2 ~ b8 a ~ a4 |
-  %gis1 |
-  % %%%% %% % % % %
-  %b1 |
-  %\times 2/3 { b2 e1 }
-  %\times 2/3 { gis1 e2 } |
-  %\times 2/3 { e1 a2 ~ } |
-  %\times 2/3 { a e1 } |
-  %\times 2/3 { e2 e e } |
-  \times 4/6 { gis4 b d2 cis4 d } |
-  \times 4/6 { b4 a8 a gis gis gis4 b d } |
-  cis2 \times 2/3 { d4 gis,4. b8 } |
-  \times 4/6 { d4 fis a,8 b4 cis4 c4 c8 } |
-  \times 4/6 { b8 b b4 cis b r2 }
+  R1 |
+  \times 4/7 { r4 b1. } |
+  \times 4/7 { r2 cis1 ~ cis4 ~ } |
+  \times 4/7 { cis4 r2 d1 ~ } |
+  \times 4/7 { d2 r fis2. ~ } |
+  \times 4/7 { fis4 ~ fis2 r f2 ~ } |
+  \times 4/7 { f1 r2 g4 ~  } |
+  \times 4/7 { g1 ~ g4 r2  } |
+  b,4 b b r |
+  b4. b8 ~ b2 |
+  b4. b8 ~ b4. r8 |
+  dis2 e ~ |
+  e4 e e2 |
+  b a4 a ~ |
+  a a ~ a c ~ |
+  c c b b |
+  b2 b |
+  b4 b b r |
+  %%%%%%%%%%%%%%%%%%%%%%%%%%
+  b4. b4. 
+  b4 ~ | b8 b4.
+  b4 b | b 
+  r b b |
+  b r b4 b |
+  r4 b b b |
+  R2 |
 }
 
 tenorWordsSecondPart = \lyricmode {
@@ -1323,6 +1348,17 @@ tenorWordsSecondPart = \lyricmode {
   day a -- way in the
   mer -- ry
   the mer -- ry
+  we're off to see the won -- der
+  ful wiz won -- der -- ful, the Wi -- zard
+  Wi -- zard Oz is one be
+  Ha ha ha
+  Ho Ho
+  cou -- ple
+  That's how we laugh the day a -- way in the mer -- ry old land
+  Ha ha ha ho ho cou -- ple tra la that's
+  how we laugh
+  day a
+  mer -- ry old
 }
 %  You know the biz
 %  He's on the riz
@@ -1412,21 +1448,22 @@ bassSecondPart = \relative c {
   \times 2/3 { cis b eis, } |
   \times 2/3 { fis a cis } |
   b4 a gis fis |
-  e r gis r |
-  fis r a r |
-  gis r b r |
-  cis r a r |
-  gis r g r |
-  fis r a r |
-  gis r b r |
-  a r fisis r |
-  gis r e r |
-  fis r a r |
-  gis r b r |
-  a r cis r |
-  b r bes r |
-  a r gis r |
-  fis r b r |
+  d'4 d d r |
+  d4. d8 ~ d2 |
+  d4. d8 ~ d4 gis, |
+  b bes fis a |
+  gis f g fis |
+  cis f e f |
+  fis g cis c |
+  b gis bes a |
+  d b cis c |
+  b c cis d |
+  cis gis g c |
+  b fis bes a |
+  f gis g b |
+  bes a cis d |
+  dis d bes a |
+  R2 |
 }
 
 bassWordsSecondPart = \lyricmode {
@@ -1462,6 +1499,15 @@ bassWordsSecondPart = \lyricmode {
   le what a wiz
   we're say -- in'
   \repeat unfold 33 ○
+  the won
+  \repeat unfold 12 ○
+  up go -- in' up and we're up
+  go -- in' down and we're down
+  the Wi -- zard of Oz is one be -- caue be -- cause be
+  Ha ha ha
+  Ho ho
+  cou -- ple
+  \repeat unfold 49 ○
 }
 
 %%% SCORE
