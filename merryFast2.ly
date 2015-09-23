@@ -789,24 +789,11 @@ sopranoSecondPart = \relative c' {
   r2 bis,2 |
   cis1 ~ |
   cis2 r |
-  %r2 bis |
-  %cis c |
-  %b2 ais |
-  %a gis |  
   a ais |
-  R1*4
-  %R1 |
-  r4 gis' r2 |
-  r8 fis4 r8 r2 |
+  R1*3 |
+  ais'1 ~ |ais1 ~ | ais1 ~ | ais1 ~ |ais1 ~ | ais1 ~ | ais1 ~ |ais1 |
+  gis'1 |
   R1 |
-  %R1 |
-  %R1 |
-  r2. fis'4^\p^\< ~ |
-  fis1 ~ |
-  fis4 g2. ~ |
-  g2. gis4^\> ~ |
-  gis1 |
-  R1\! |
   R1|
   r4 g,^\mf g r |
   gis8 gis4 gis8 ~ gis8 gis4 gis8 |
@@ -952,28 +939,51 @@ mezzoSecondPart = \relative c' {
   r4 cis r2 |
   r8 c4 r8 r2 |
   R1 |
-  \times 2/3 { r2 a' r } |
-  \times 2/3 { ais r b } |
-  \times 2/3 { r cis r } |
-  \times 2/3 { d r g, } |
-  \times 2/3 { r fis r } |
-  \times 2/3 { e r a } |
-  \times 2/3 { r b r }
-  ais4 ais b r |
-  c8 c4 cis8 ~ cis cis4 cis8 |
-  d d d4 dis8 e4 f8 ~ |
-  \times 2/3 { f2 e fis,2 } |
-  e2. e4 |
-  gis2 b |
-  a4 b2 cis4 ~ |
-  cis fis,2 fis4 |
-  \times 2/3 { e2 e4 } e2 |
-  fis2 ~ fis8 dis ~ dis4 |
-  \times 4/6 { b4 d fis2 e4 fis } |
-  \times 4/6 { cis4 cis8 cis b b b4 d fis } |
-  e2 \times 2/3 { fis4 d4. e8 } |
-  \times 4/6 { fis4 a gis8 a4 b4 fis4 fis8 } |
-  \times 4/6 { e8 e e4 fis d r2 }
+  \times 4/7 { r4 a'1. ~ } |
+  \times 4/7 { a2 a1 ~ a4 ~ } |
+  \times 4/7 { a2. a1 ~ } |
+  \times 4/7 { a1 a2. ~ } |
+  \times 4/7 { a4 ~ a1 a2 ~ } |
+  \times 4/7 { a1. a4 ~  } |
+  a1 |
+  %\times 2/3 { r2 a' r } |
+  %\times 2/3 { ais r b } |
+  %\times 2/3 { r cis r } |
+  %\times 2/3 { d r g, } |
+  %\times 2/3 { r fis r } |
+  %\times 2/3 { e r a } |
+  %\times 2/3 { r b r }
+  %ais4 ais b r |
+  %c8 c4 cis8 ~ cis cis4 cis8 |
+  %d d d4 dis8 e4 f8 ~ |
+  %\times 2/3 { f2 e fis,2 } |
+  %e2. e4 |
+  %gis2 b |
+  %a4 b2 cis4 ~ |
+  %cis fis,2 fis4 |
+  %\times 2/3 { e2 e4 } e2 |
+  %fis2 ~ fis8 dis ~ dis4 |
+  %\times 4/6 { b4 d fis2 e4 fis } |
+  %\times 4/6 { cis4 cis8 cis b b b4 d fis } |
+  %e2 \times 2/3 { fis4 d4. e8 } |
+  %\times 4/6 { fis4 a gis8 a4 b4 fis4 fis8 } |
+  %\times 4/6 { e8 e e4 fis d r2 }
+  a4 a a r |
+  a4. a8 ~ a2 |
+  a4. a8 ~ a4. a8 ~ |
+  a4. r8 a2 |
+  a2. a4 |
+  a2 a
+  a4 a2 a4 ~ |
+  a a2 a4 |
+  a4 a4 a2 |
+  a a |
+  a4 a a r |
+  %%%%%%%%%%%%%%%%%%%%%%%%%%
+  \times 3/4
+  a4. a8 ~ a4 r4 |
+  a4.^"cou" a8 ~ a4^"ple" a4 |
+  a4 a 
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -1011,7 +1021,7 @@ mezzoWordsSecondPart = \lyricmode {
   we're say -- in'
   ha ha ha
   ho ho ho and a cou -- ple of tra la las
-  that's \repeat unfold 5 { how we laugh } how we
+  that's \repeat unfold 4 { how we laugh } how we
 }
 
 altoSecondPart = \relative c'' {
@@ -1230,15 +1240,24 @@ tenorSecondPart = \relative c' {
   ais1 |
   ais2 r |
   b c |
-  cis c b ais a gis |
-  R1 |
-  r8 e'4 r8 r8 dis4 r8 |
-  r8 d4 r8 r8 cis4 r8 |
-  r8 c4 r8 r8 b4 r8 |
-  r8 ais4 r8 r8 a4 r8 |
-  r8 gis4 r8 r8 g4 r8 |
-  r8 fis4 r8 r8 b4 r8 |
-  r8 ais4 r8 r8 a4 r8 |
+  cis c |
+  b ais |
+  a gis |
+  \times 4/5 { r1 a4 ~ } |
+  \times 4/5 { a2. a2 ~ } |
+  \times 4/5 { a2 a2. ~ } |
+  \times 4/5 { a4 a1 } |
+  \times 4/5 { a1 a4 ~ } |
+  \times 4/5 { a2. a2 ~ } |
+  \times 4/5 { a2 a2. ~ } |
+  \times 4/5 { a4 a1 } |
+  %r8 e'4 r8 r8 dis4 r8 |
+  %r8 d4 r8 r8 cis4 r8 |
+  %r8 c4 r8 r8 b4 r8 |
+  %r8 ais4 r8 r8 a4 r8 |
+  %r8 gis4 r8 r8 g4 r8 |
+  %r8 fis4 r8 r8 b4 r8 |
+  %r8 ais4 r8 r8 a4 r8 |
   r8 gis4 r8 r8 b ~ b4 |
   a8 b4 gis8 ~ gis fis4 fis8 |
   e8 e8 e4 gis8 b4 a8 ~ |
