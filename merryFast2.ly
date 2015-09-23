@@ -21,6 +21,7 @@
   then 4 groups of 8 (E|E|A/B|E) where it is constructed.
 
 %}
+%1,2,3,5,7
 \version "2.17.0"
 \include "defs-devel.ly"
 \include "merryFastCanonSketch.ly"
@@ -85,7 +86,12 @@ prefatoryMatter = {
   \key e \major
   %#(set-accidental-style 'modern-cautionary)
 }
-
+% ba -- by boy, beau, bare boned ba -- boo
+% big bell's bye bye, blessed be bad bum
+% bab -- bling bar -- bate blabs back
+% damn dat deft darn dan -- dy dog
+% darn di -- dact dis -- dains dead days
+% da -- dy's dull dusk died
 alto = \relative c'' {
   \prefatoryMatter
   \clef treble
@@ -741,19 +747,19 @@ sopranoSecondPart = \relative c' {
   r4 \lo r8 \sh c-- r2 |
   b4-- r \lo r8 \sh a-- r4 |
   r4 gis4-- r4 \lo r8 \sh dis'8-- |
-  r2 d4-- r4 |
-  \lo r8 \sh cis-- r4 r4 c-- |
-  r4 \lo r8 \sh b-- r2 |
-  cis4-- r \lo r8 \sh dis-- r4 |
-  r4 d4-- r4 \lo r8 \sh cis8-- |
-  r2 dis4--^\crpoco r4 |
-  \lo r8 \sh e-- r4 r4 f-- |
-  r4 \lo r8 \sh fis-- r2 |
-  g4-- r \lo r8 \sh gis-- r4 |
-  r4 a4-- r4 \lo r8 \sh fis8-- |
-  r2 g4-- r4 |
-  \lo r8 \sh gis-- r4 r4 fis-- |
-  r4 \lo r8 \sh f-- r2 |
+  r2 d4-\bendAfter #-2 r4 |
+  \lo r8 \sh cis-. r4 r4 c-\bendAfter #-2 |
+  r4 \lo r8 \sh b-. r2 |
+  cis4-\bendAfter #-2 r \lo r8 \sh dis-. r4 |
+  r4 d4^\mp-\bendAfter #-2 r4 \lo r8 \sh cis8-. |
+  r2 dis4-\bendAfter #-2 ^\crpoco r4 |
+  \lo r8 \sh e-. r4 r4 f-\bendAfter #-2 |
+  r4 \lo r8 \sh fis-. r2 |
+  g4-\bendAfter #-2 r \lo r8 \sh gis-. r4 |
+  r4 a4-\bendAfter #-2 r4 \lo r8 \sh fis8-. |
+  r2 g4-\bendAfter #-2 r4 |
+  \lo r8 \sh gis-. r4 r4 fis-\bendAfter #-2 |
+  r4 \lo r8 \sh f-. r2 |
   e4-^^\f r4 r2 | % 1
   R1 |
   r4 \transpose c c { << { \subdXA } { s4^\p } >> |
@@ -762,28 +768,35 @@ sopranoSecondPart = \relative c' {
   \subdXD
   \subdXE
   }
-  r4 e, gis g |
-  fis dis b f' |
-  e c cis d |
-  dis b fis' f |
-  R1*3 |
-  r8 fis ~ fis4 e e |
-  e4 r e8 e4 e8 ~ |
-  e e4 e8 e8 e e4 |
-  e8 e4 e8 ~ e2 ~ |
-  e8 r8 e4 e4. e8 |
+  %R1*3 |
+  %r8 fis ~ fis4 e e |
+  %e4 r e8 e4 e8 ~ |
+  %e e4 e8 e8 e e4 |
+  %e8 e4 e8 ~ e2 ~ |
+  %e8 r8 e4 e4. e8 |
   %e4 e4 e8 e4 e8 ~ |
   %e8 e8 ~ e4 e2 |
   %e2 ~ e8 e ~ e4 |
-  R1*3 |
+  fis,4 r fis fis | % 1
+  r4. f8 ~ f f f f | % 2
+  fis4 fis fis r4 | % 3 
+  g8 g4 g8 ~ g g g g | % 4
+  gis8 gis gis4 gis gis8 gis8 ~ | % 5
+  gis4 gis gis gis | % 6
+  r4. gis8 ~ gis4 gis4 | % 7
+  r8 gis8 ~ gis4 ~ gis8 gis4. | % 8
   R1*5 |
+  r2 bis,2 |
+  cis1 ~ |
+  cis2 r |
   %r2 bis |
   %cis c |
   %b2 ais |
   %a gis |  
-  R1*5
+  a ais |
+  R1*4
   %R1 |
-  r4 gis%{'%} r2 |
+  r4 gis' r2 |
   r8 fis4 r8 r2 |
   R1 |
   %R1 |
@@ -842,8 +855,28 @@ sopranoWordsSecondPart = \lyricmode {
   The way
   The way
   way
-  The
-  Wi -- zard
+  Ho cou -- ple
+  He's my Wi -- zard
+  in the mer cold cause
+  no
+  ba -- by boy, beau, bare ba -- boo
+  big bell's bye -- bye, blessed be bad bum
+  be -- bop's black beard bu -- bles
+  Bus -- by's bi -- ble brings back blue
+  Don't need a quiz
+  Look how he fiz -- 
+  zles gon -- na siz --
+  le what a wiz
+  we're say -- in'
+  Ha
+  ha ha
+  ho dee and a
+  ha ha ha
+  ho ho ho dee and a
+  cou -- ple of tra la las
+  ha ha ha
+  ha ha
+  ha ha
 }
 
 mezzoSecondPart = \relative c' {
@@ -873,46 +906,50 @@ mezzoSecondPart = \relative c' {
   \lo g8 fis4 \sh e8 ~ \lo e dis4-- \sh d8 |
   \lo cis8-- \sh r dis'4-.^\sf r4 \lo r8 \sh c8-> |
   r2 bes4--^\p r |
-  \lo r8 \sh gis r4 r4 gis4 |
-  r4 \lo r8 \sh fis r2 |
-  g4 r \lo r8 \sh e r4 |
-  r4 eis r \lo r8 \sh a |
-  r4 g4 \lo r8 \sh gis8 r4 |
-  g4 \lo r8 \sh bes r4 eis, |
-  \lo r8 \sh e r4 g4 \lo r8 \sh fis8 |
-  r4 gis4 \lo r8 \sh g8 r4 |
-  ais4 \lo r8 \sh a r4 eis |
-  \lo r8 \sh e r4 fis \lo r8 \sh c8 |
-  r4 g'4 \lo r8 \sh gis8 r4 |
-  %\mark "?"
-  eis4 \lo r8 \sh g r4 fis |
-  \lo r8 \sh g r4 d \lo r8 \sh gis8 |
-  r4 g4 \lo r8 \sh fis8 r4 |
-  %\mark "?"
-  e4 \lo r8 \sh fis r4 a |
-  \lo r8 \sh ais r4 a \lo r8 \sh g8 |
-  r4 gis4 \lo r8 \sh g8 r4 |
-  %\mark "@"
-  gis4 r4 r2 |
+  \lo r8 \sh gis-- r4 r4 gis4-- |
+  r4 \lo r8 \sh fis-- r2 |
+  g4-- r \lo r8 \sh e-- r4 |
+  r4 eis-- r \lo r8 \sh a-- |
+  r2 eis4-\bendAfter #-2 r |
+  \lo r8 \sh fis-. r4 r4 dis-\bendAfter #-2 |
+  r4 \lo r8 \sh eis-. r2 |
+  dis4-\bendAfter #-2 r4 \lo r8 \sh f-. r4 |
+  e4^\solo^\mf gis b2 |
+  \lo a8 b4 \sh gis8 ~ \lo gis fis4 \sh fis8 |
+  \lo e \sh e e4 \lo gis \sh b ~ b4 |
+  a2 r4 b4 |
+  e,4 gis b e |
+  \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
+  \lo gis \sh gis gis4 a fis |
+  e1^\< \glissando |
+  e'4 gis b2 |
+  a4^\f-^ r4 r2 |
   R1 |
   R1 |
   r4 \transpose c c' {
-    \tonXA
+    << { \tonXA } { s4^\p } >>
     \tonXB
     \tonXC
     \tonXD
   }
-  d'4 d d r | %1
-  d8 d4 d8 ~ d d4 d8 | %2
-  d8 d d4 d8 d4 d8 ~ | %3
-  d2 ~ d8 r d4 | %4
-  d4. d8 d4 d^"the" | %5
-  d d d4.^"way" d8^"in" ~ |%6
-  d4 d^"the" ~ d d^"me" ~ | %7
-  d4. d8^"ry" ~ d2 | %8
-  R1*9 |
+  d,,4 d d r | %1
+  cis8 cis4 cis8 ~ cis cis4 cis8 | %2
+  d8 d d4 d4 d8 dis ~ | %3
+  dis2 ~ dis8 r dis4 | %4
+  d8 d4 d8 ~ d r d8 d8 ~ | % 5
+  d8 d4 r8 d8 d4 d8 ~ | % 6
+  d r d8 d8 ~ d r d4 ~ | % 7
+  d8 d8 ~ d4 ~ d8 d4. |
+  %d4. d8 d4 d^"the" | %5
+  %d d d4.^"way" d8^"in" ~ |%6
+  %d4 d^"the" ~ d d^"me" ~ | %7
+  %d4. d8^"ry" ~ d2 | %8
+  R1*5 |
+  r2 dis |
+  e1 |
+  R1*2 |
   R1 |
-  r4 cis, r2 |
+  r4 cis r2 |
   r8 c4 r8 r2 |
   R1 |
   \times 2/3 { r2 a' r } |
@@ -956,8 +993,25 @@ mezzoWordsSecondPart = \lyricmode {
   The way
   The way
   way
-  The
-  Wi -- zard
+  Ho cou -- ple
+  He's my Wi -- zard
+  day a -- way in the mer
+  cold cause no
+  ba -- by boy, beau, bare ba -- boo
+  big bell's bye -- bye, blessed be 
+  Ha ha ha
+  Ho ho ho
+  And a cou -- ple of tra la las
+  That's how we laugh the day a -- way in the mer -- ry old land of  
+  Oz ha ha ha
+  dew
+  Look how he fiz -- 
+  zles gon -- na siz --
+  le what a wiz
+  we're say -- in'
+  ha ha ha
+  ho ho ho and a cou -- ple of tra la las
+  that's \repeat unfold 5 { how we laugh } how we
 }
 
 altoSecondPart = \relative c'' {
@@ -987,46 +1041,58 @@ altoSecondPart = \relative c'' {
   cis'2 ~ \times 2/3 { cis4 b cis } |
   \times 2/3 { g4 ( fis e ~ } \lod e4. ) \sh dis8-> |
   r2 g4--^\p r4 |
-  \lo r8 \sh e r4 r4 eis4 |
-  r4 \lo r8 \sh d r2 |
-  cis4 r \lo r8 \sh d r4 |
-  r4 cis4 r4 \lo r8 \sh fis |
-  r2 eis4 r |
-  \lo r8 \sh fis r4 r4 dis |
-  r4 \lo r8 \sh eis r2 |
-  dis4 r4 \lo r8 \sh f r4 |
+  \lo r8 \sh e-- r4 r4 eis4-- |
+  r4 \lo r8 \sh d-- r2 |
+  cis4-- r \lo r8 \sh d-- r4 |
+  r4 cis4-- r4 \lo r8 \sh fis-- |
   \clef treble
-  e4 gis b2 |
-  \lo a8 b4 \sh gis8 ~ \lo gis fis4 \sh fis8 |
-  \lo e \sh e e4 \lo gis \sh b ~ b4 |
-  a2 r4 b4 |
-  e,4 gis b e |
-  \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
-  \lo gis \sh gis gis4 a fis |
-  e1 \glissando |
-  e'4 gis b2 |
-  \lo a8 \sh b, \lo gis \sh e \lo d \sh b \lo cis \sh dis |
-  \lo e \sh b \lo cis \sh e \lo fis \sh b, \lo cis \sh g' |
-  \lo gis8 \sh e \lo d \sh b \lo gis \sh a \lo b \sh cis |
-  e4-. \lo r8 \sh b' ~ \lo b gis4 \sh r8 |
-  bes4 \transpose c c' { \subdXA |
+  r4 g4^\espressivo \lo r8 \sh gis8-- r4 |
+  g4^\espressivo \lo r8 \sh bes-- r4 eis,^\espressivo |
+  \lo r8 \sh e-- r4 g4^\espressivo \lo r8 \sh fis8-- |
+  r4 gis4^\espressivo \lo r8 \sh g8-- r4 |
+  gis4^\mp^\espressivo \lo r8 \sh a-- r4 eis^\espressivo |
+  \lo r8 \sh e-- r4 fis^\espressivo^\crpoco \lo r8 \sh c8-- |
+  r4 g'4^\espressivo \lo r8 \sh gis8-- r4 |
+  %\mark "?"
+  eis4^\espressivo \lo r8 \sh g-- r4 fis^\espressivo |
+  \lo r8 \sh g-- r4 d^\espressivo \lo r8 \sh gis8-- |
+  r4 g4^\espressivo \lo r8 \sh fis8-- r4 |
+  %\mark "?"
+  e4^\espressivo \lo r8 \sh fis-- r4 a^\espressivo |
+  \lo r8 \sh ais-- r4 a^\espressivo \lo r8 \sh g8-- |
+  r4 gis4^\espressivo \lo r8 \sh g8-- r4 |
+  %\mark "@"
+  \lo gis8^\f-^^\> \sh b \lo gis \sh fis \lo e \sh cis \lo e \sh fis |
+  \lo gis^\mp \sh b, \lo c \sh cis \lo d \sh b \lo ais \sh a |
+  \lo gis8 \sh bis \lo cis \sh g' \lo gis \sh fis \lo e \sh cis |
+  b4-. \lo r8 \sh b' ~ \lo b \sh gis8 \lo e \sh d8 |
+  cis4 \transpose c c' { \subdXA |
   \subdXB
   \subdXC
   }
-  gis4 gis gis r | % 1
-  g8 g4 g8 ~ g g4 g8 | %2
-  gis8 gis gis4 gis8 gis4 a8 ~ | %3
-  a2 ~ a8 r fisis4 | %4
-  gis4. gis8 gis4 gis | %5
-  a a a4. ais8 ~ |%6
-  ais4 ais ~ ais ais ~ | %7
-  ais4. a8 ~ a2 | %8
+  % used to noodle on G GIS A AIS
+  %gis'4 r fis fis | % 1
+  %fis r f8 f4 f8 ~ | % 2
+  %f f f f e e e4 | % 3
+  %e8 e4 f8 ~ f2 | % 4
+  %fis4 fis fis r | % 5
+  %eis8 eis4 eis8 ~ eis eis eis eis | % 6
+  %fis fis fis4 fis8 fis4 g8 ~ | % 7
+  %g2 ~ g8 g ~ g4 | % 8
+  gis'4 gis gis r | % 1
+  g8 g4 g8 ~ g g4 g8 | % 2
+  gis8 gis gis4 gis4 gis8 a ~ | % 3
+  a2 ~ a8 r a4 | % 4
+  ais4 ais ais r | % 5
+  ais4. ais8 ~ ais4 r8 ais ~ | %6 
+  ais4. ais8 ~ ais4 r4 | % 7
+  ais4. ais8 ~ ais4 ais4 | % 8
   R1 | % 1
   fis2 fis ~  | % 2
   fis cis | % 3
   e1 | % 4
   cis1 ~ | % 5
-  cis2 cis | % 6
+  cis2 r | % 6
   fis1 | % 7
   gis2 fis2 | % 8
   cis2 e | % 9 !!
@@ -1068,7 +1134,25 @@ altoWordsSecondPart = \lyricmode {
   Show me the way
   Show me Show me the way
   oh migh -- ty Wi -- zard
-  Now I need to know Oz
+  Now I need to know cause
+  no
+  ba -- by boy, beau, bare ba -- boo
+  damn dat deft darn dan -- dy dog
+  darn di -- dact dis -- dains dead days
+  dad -- dy's dull dusk dwin -- dled, dimmed, died
+  dips down, dives deep, dee -- ded dae -- dal
+  dank, damp, da -- da dew
+  oh what a sil -- ly lit -- tle thing
+  oh what a pre -- cious lit -- tle swing
+  oh what a naugh -- ty lit -- tle fling
+  ding the Wi -- zard fiz --
+  zles gon -- na siz --
+  le what a wiz
+  we're say -- in'
+  ha ha ha
+  ho ho ho and a cou -- ple of tra la las
+  that's how we laugh
+  day a -- way in the mer -- ry
 }
 
 tenorSecondPart = \relative c' {
@@ -1105,40 +1189,47 @@ tenorSecondPart = \relative c' {
   e,4 gis b e |
   \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
   \lo gis \sh gis gis4 a fis |
-  gis4 b cis dis |
-  r4 b r2 |
-  \lo r8 \sh cis r4 r2 |
-  cis4 r4 \lod r4. \sh c8 |
-  r2. d4 |
-  r2 \lo r8 \sh a r4 |
-  r2 b4 r |
-  \lod r4. \sh bes8 r2 |
-  r4 c r2 |
-  \lo r8 \sh b r4 r2 | % 1
-  cis4 r4 r2 | % 2
-  r4 \transpose c c { \tonXA |
+  gis4 b cis c |
+  r4 b^\ord^\mp^\mordent r2 |
+  \lo r8 \sh cis-_^\crpoco r4 r2 |
+  cis4^\mordent r4 \lod r4. \sh c8-_ |
+  r2. d4^\mordent |
+  r2 \lo r8 \sh a-_ r4 |
+  r2 b4^\mordent r |
+  \lod r4. \sh bes8-_ r2 |
+  r4 c^\mordent r2 |
+  \lo r8 \sh b-_ r4 r2 | % 1
+  cis4^\f-^ r4 r2 | % 2
+  r4 \transpose c c { << { \tonXA } { s4^\p } >> |
   \tonXB
   \tonXC
   \tonXD
   \tonXE
   \tonXF }
-  gis e b'4 b | % 1
+  b r d4 d | % 1
   %\lo cis8 \sh ais ~ ais4 b4 b |
-  bes4 r b8 b4 c8 ~ |
-  c c4 c8 cis8 cis cis4 |
-  c8 c4 b8 ~ b2 ~ |
-  b8 r8 c4 b4. b8 |
-  ais4 ais4 b8 b4 c8 ~ |
-  c8 c8 ~ c4 c2 |
-  b2 ~ b8 c ~ c4 |
+  %bes4 r b8 b4 c8 ~ |
+  %c c4 c8 cis8 cis cis4 |
+  %c8 c4 b8 ~ b2 ~ |
+  %b8 r8 c4 b4. b8 |
+  %ais4 ais4 b8 b4 c8 ~ |
+  %c8 c8 ~ c4 c2 |
+  %b2 ~ b8 c ~ c4 |
+  r2 r8 ais4. |
+  r4 b2. |
+  c2 cis |
+  r4 c b r |
+  c8 c4 c8 ~ c8 c4 c8 |
+  r4 b b r |
+  c4. c8 ~ c4 c4 |
   R1*2 |
   r2 gisis |
   ais1 |
   fis2 e ~ |
-  e2 dis |
-  d1 |
-  cis2 r |
-  b' c |
+  e2 gisis |
+  ais1 |
+  ais2 r |
+  b c |
   cis c b ais a gis |
   R1 |
   r8 e'4 r8 r8 dis4 r8 |
@@ -1192,8 +1283,36 @@ tenorWordsSecondPart = \lyricmode {
   way
   ha ho ho
   cou -- ple
+  He's my Wi -- zard
+  the day a -- way in the mer
+  cold cause
+  Ha ha ha
+  Ho ho ho
+  And a cou -- ple of tra la las
+  That's how we laugh the day a -- way in the mer -- ry old land of
+  mer -- ry land of
+  chat, chafe, chide, chime, chip, charm, chant, chug, chuck, chop, chew
+  He's on the riz
+  Don't need a quiz
+  Look how he fiz -- 
+  zles gon -- na siz --
+  le what a wiz
+  we're say -- in'
+  Ha ha ha
+  ho the Wi -- zard
+  we laugh
+  day a -- way in the
+  mer -- ry
+  the mer -- ry
 }
-
+%  You know the biz
+%  He's on the riz
+%  Don't need a quiz
+%  Look how he fiz -- 
+%  zles gon -- na siz --
+%  le as it is
+%  Oh what a wiz
+%biz, fizz, quiz, is, wiz, riz, siz -- zle
 bassSecondPart = \relative c {
   \prefatoryMatterSecondPart
   \clef bass
@@ -1229,8 +1348,8 @@ bassSecondPart = \relative c {
   gis d' cis gis |
   a4 gis fis d' |
   cis c b dis, |
-  e d' a b |
-  \lo cis8 \sh e d4 cis g4 |
+  e d' bes a |
+  \lo cis8^\crpoco \sh e d4 cis g4 |
   fis c' b g |
   gis4 g bes eis, |
   fis b c cis |
@@ -1239,9 +1358,9 @@ bassSecondPart = \relative c {
   fis c' b a |
   gis g fis a |
   gis d' cis \lo c8 \sh eis, |
-  fis4
+  fis4^\f
     \transpose c c, {
-    \subdXA
+    << { \subdXA } { s4^\p } >>
     \subdXB
     \subdXC
     \subdXD
@@ -1258,7 +1377,11 @@ bassSecondPart = \relative c {
   b e b a |
   gis dis e eis |
   fis2 r |
-  R1*8 |
+  R1*4 |
+  r2 dis' |
+  cis1 ~ |
+  cis2 r |
+  R1 |
   b4 fis ais a |
   gis e cis g' |
   fis d' cis g |
@@ -1311,6 +1434,15 @@ bassWordsSecondPart = \lyricmode {
   And a cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry
   of
+  \repeat unfold 72 ○
+  You know the biz
+  He's on the riz
+  Don't need a quiz
+  Look how he fiz -- 
+  zles gon -- na siz --
+  le what a wiz
+  we're say -- in'
+  \repeat unfold 33 ○
 }
 
 %%% SCORE

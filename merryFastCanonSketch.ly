@@ -70,15 +70,24 @@ tonX = {
   \tonXF
 }
 
+fast = \relative c'' {
+  R1 |gis8 b gis fis e cis e fis |
+  gis b, c cis d b ais a |
+  gis bis cis g' gis fis e cis |
+  b4-. r8 b'8 ~ b gis4 r8 |
+  bes
+  
+}
 %{
 \score {
 <<
 %\new ChordNames \chordmode { e1 fis1 e1 a1 e1 a1 b1 e1 }
+\new Staff { \clef "treble" \fast }
 \new Staff { \clef "treble" \emj R1*5 r4 \transpose c c' \subdX }
 \new Staff { \clef "treble" \emj R1*4 r4 \transpose c c' \tonX }
 \new Staff { \clef "treble_8" \emj R1*3 r4 \subdX }
 \new Staff { \clef "treble_8" \emj R1*2 r4 \tonX }
-\new Staff { \clef bass \emj R1 r4 \transpose c c, \subdX \set Score.skipTypesetting = ##t }
+\new Staff { \clef bass \emj R1 fis,4 \transpose c c, \subdX \set Score.skipTypesetting = ##t }
 >>
 \layout{}
 \midi{}
