@@ -95,7 +95,7 @@ prefatoryMatter = {
 alto = \relative c'' {
   \prefatoryMatter
   \clef treble
-  r2 \times 2/3 { gis4^\f a gis } |
+  b4^\mf b \times 2/3 { gis4^\f a gis } |
   b2.^\fermata ( \times 2/3 { a8 b a ) } |
   gis4 ( e ) d ( b ) |
   d2 e ~ |
@@ -287,6 +287,7 @@ endingPropositionOne = \relative c' {
 %}
 
 altoWords = \lyricmode {
+  o -- pen
   Show me the way
   migh -- ty wi -- zard
   Now I wan -- na know
@@ -373,7 +374,9 @@ firstPropositionEndingLyrics = \lyricmode {
 comp = \relative c' {
   \prefatoryMatter
   \clef "treble_8"
-  R1*3 |
+  <a cis e>4^\mf q2. ~ |
+  q2 r |
+  R1 |
   R1*49 |
   <d e>4^\f <d e> <cis e> r |
   <b e>8 <b e>4 <cis e>8 ~ <cis e>4. r8 |
@@ -446,6 +449,7 @@ tenMel = \relative c {
 }
 
 compWords = \lyricmode {
+  o -- pen
   Ha ha ha
   Ho dee ho
   Ha ha ha
@@ -470,12 +474,14 @@ compWords = \lyricmode {
 }
 
 
-bass = \relative c, {
+bass = \relative c {
   \prefatoryMatter
   \clef "bass"
-  R1*3 | \barNumberCheck #4
+  b4^\mf b2. ~  |
+  b2 r |
+  R1 | \barNumberCheck #4
   R1*24 | \barNumberCheck #28
-  e4^\mf^\< r gis r |
+  e,4^\< r gis r |
   a r ais r |
   b^\f r e r |
   cis r b r | \barNumberCheck #32
@@ -551,6 +557,7 @@ bass = \relative c, {
 }
 
 bassWords = \lyricmode {
+  o -- pen
   Wi -- zard is my re -- ve -- la -- tion
   fills me up with joy and un -- re -- mit -- ting
   love it's so out -- rage -- ous haven't you heard,
@@ -711,9 +718,17 @@ marksSecondPart = {
   s1*35 \bar "||"
   \time 2/4
   s2 |
+  \time 7/8
+  \tempo "Adagio rubato" 4=60
+  s1*7/8 |
+  \time 3/8
+  s4. |
+  s4. |
+  \time 9/8
+  s1*9/8 |
   \time 4/4
-  \tempo "Adagio" 4=60
-  s1*4 |
+  \tempo "Really Fast" 2=200
+  s1*4 \bar "|."
 }
 
 prefatoryMatterSecondPart = {
@@ -770,26 +785,17 @@ sopranoSecondPart = \relative c' {
   r4 \transpose c c { << { \subdXA } { s4^\p } >> |
   \subdXB
   \subdXC
-  \subdXD
+  << { \subdXD } { s4^\< } >>
   \subdXE
   }
-  %R1*3 |
-  %r8 fis ~ fis4 e e |
-  %e4 r e8 e4 e8 ~ |
-  %e e4 e8 e8 e e4 |
-  %e8 e4 e8 ~ e2 ~ |
-  %e8 r8 e4 e4. e8 |
-  %e4 e4 e8 e4 e8 ~ |
-  %e8 e8 ~ e4 e2 |
-  %e2 ~ e8 e ~ e4 |
-  fis,4 r fis fis | % 1
+  fis,4^\mp r fis fis | % 1
   r4. f8 ~ f f f f | % 2
   fis4 fis fis r4 | % 3 
   g8 g4 g8 ~ g g g g | % 4
-  gis8 gis gis4 gis gis8 gis8 ~ | % 5
+  gis8^\< gis gis4 gis gis8 gis8 ~ | % 5
   gis4 gis gis gis | % 6
   r4. gis8 ~ gis4 gis4 | % 7
-  r8 gis8 ~ gis4 ~ gis8 gis4. | % 8
+  r8 gis8 ~ gis4 ~ gis8 gis4.^\mf | % 8
   R1*5 |
   r2 bis,2 |
   cis1 ~ |
@@ -815,6 +821,11 @@ sopranoSecondPart = \relative c' {
   d r d4 d |
   r4 d d d |
   R2 |
+  r16 fis, fis a   a cis cis e    gis e e cis    a fis |
+  r16 a   a [ cis ] cis [ dis ] |
+  r16 fis, a  [  cis ] cis [ e ] |
+  gis8 [ g fis f ] e [ dis d cis ] c |
+  R1*4 |
 }
 
 sopranoWordsSecondPart = \lyricmode {
@@ -867,6 +878,11 @@ sopranoWordsSecondPart = \lyricmode {
   how we laugh
   day a
   mer -- ry old
+  \repeat unfold 3 { Wi -- zard }
+  \repeat unfold 3 { the wiz } the
+  \repeat unfold 2 { the wiz } the
+  the wiz the wi -- zard
+  Won -- der -- ful the won -- der -- ful the won
 }
 
 mezzoSecondPart = \relative c' {
@@ -919,21 +935,17 @@ mezzoSecondPart = \relative c' {
   r4 \transpose c c' {
     << { \tonXA } { s4^\p } >>
     \tonXB
-    \tonXC
+    << { \tonXC } { s4^\< } >>
     \tonXD
   }
-  d,,4 d d r | %1
+  d,,4^\mp d d r | %1
   cis8 cis4 cis8 ~ cis cis4 cis8 | %2
   d8 d d4 d4 d8 dis ~ | %3
   dis2 ~ dis8 r dis4 | %4
-  d8 d4 d8 ~ d r d8 d8 ~ | % 5
+  d8^\< d4 d8 ~ d r d8 d8 ~ | % 5
   d8 d4 r8 d8 d4 d8 ~ | % 6
   d r d8 d8 ~ d r d4 ~ | % 7
-  d8 d8 ~ d4 ~ d8 d4. |
-  %d4. d8 d4 d^"the" | %5
-  %d d d4.^"way" d8^"in" ~ |%6
-  %d4 d^"the" ~ d d^"me" ~ | %7
-  %d4. d8 ~ d2 | %8
+  d8 d8 ~ d4 ~ d8 d4.^\mf |
   R1*5 |
   r2 dis |
   e1 |
@@ -990,6 +1002,13 @@ mezzoSecondPart = \relative c' {
   gis r gis4 gis |
   r4 gis gis gis |
   R2 |
+  r16 d d e   e g g cis    e cis cis bes    gis fis
+  r16 e   e [ g ]  g [ b ]
+  r16 d, e   [ g ] g [ cis ]    |
+  e8 [ ees d des ] c [ b bes a ] aes | 
+  R1*2 |
+  r4. gis8 ~ gis r8 r4 |
+  R1 |
 }
 
 mezzoWordsSecondPart = \lyricmode {
@@ -1039,6 +1058,12 @@ mezzoWordsSecondPart = \lyricmode {
   how we laugh
   day a
   mer -- ry old
+  \repeat unfold 3 { Wi -- zard }
+  \repeat unfold 3 { the wiz } the
+  \repeat unfold 2 { the wiz } the
+  the wiz the wi -- zard
+  Won -- der -- ful the won -- der -- ful the won
+  Oz
 }
 
 altoSecondPart = \relative c'' {
@@ -1093,27 +1118,18 @@ altoSecondPart = \relative c'' {
   \lo gis^\mp \sh b, \lo c \sh cis \lo d \sh b \lo ais \sh a |
   \lo gis8 \sh bis \lo cis \sh g' \lo gis \sh fis \lo e \sh cis |
   b4-. \lo r8 \sh b' ~ \lo b \sh gis8 \lo e \sh d8 |
-  cis4 \transpose c c' { \subdXA |
-  \subdXB
+  cis4 \transpose c c' { << { \subdXA } { s4^\p } >> |
+  << { \subdXB } { s4^\< } >>
   \subdXC
   }
-  % used to noodle on G GIS A AIS
-  %gis'4 r fis fis | % 1
-  %fis r f8 f4 f8 ~ | % 2
-  %f f f f e e e4 | % 3
-  %e8 e4 f8 ~ f2 | % 4
-  %fis4 fis fis r | % 5
-  %eis8 eis4 eis8 ~ eis eis eis eis | % 6
-  %fis fis fis4 fis8 fis4 g8 ~ | % 7
-  %g2 ~ g8 g ~ g4 | % 8
-  gis'4 gis gis r | % 1
+  gis'4^\mp gis gis r | % 1
   g8 g4 g8 ~ g g4 g8 | % 2
   gis8 gis gis4 gis4 gis8 a ~ | % 3
   a2 ~ a8 r a4 | % 4
-  ais4 ais ais r | % 5
+  ais4^\< ais ais r | % 5
   ais4. ais8 ~ ais4 r8 ais ~ | %6 
   ais4. ais8 ~ ais4 r4 | % 7
-  ais4. ais8 ~ ais4 ais4 | % 8
+  ais4. ais8 ~ ais4 ais4^\mf | % 8
   R1 | % 1
   fis2 fis ~  | % 2
   fis cis | % 3
@@ -1152,6 +1168,13 @@ altoSecondPart = \relative c'' {
   fis r fis4 fis |
   r4 fis fis fis |
   R2 |
+  r16 b, b e    e g g a d  a a g e b |
+  r16 e    e [ g ] g [ gis ] |
+  r16 b, e    [ g ]  g [ a ] |
+  d8 [ des c ces ] b [ a aes g ] ges |
+  gis8 b gis e d a b dis  |
+  e a, b f' \times 4/5 { fis f ees d c } |
+  R1*2 |
 }
 
 altoWordsSecondPart = \lyricmode {
@@ -1200,6 +1223,12 @@ altoWordsSecondPart = \lyricmode {
   how we laugh
   day a
   mer -- ry old
+  \repeat unfold 3 { Wi -- zard }
+  \repeat unfold 3 { the wiz } the
+  \repeat unfold 2 { the wiz } the
+  the wiz the wi -- zard
+  Won -- der -- ful the won -- der -- ful the won
+  cra -- zy I'm be -- liev -- in' that the Wi -- zard is my one and on -- ly love
 }
 
 tenorSecondPart = \relative c' {
@@ -1251,24 +1280,16 @@ tenorSecondPart = \relative c' {
   \tonXB
   \tonXC
   \tonXD
-  \tonXE
+  << { \tonXE } { s4^\< } >>
   \tonXF }
-  b r d4 d | % 1
-  %\lo cis8 \sh ais ~ ais4 b4 b |
-  %bes4 r b8 b4 c8 ~ |
-  %c c4 c8 cis8 cis cis4 |
-  %c8 c4 b8 ~ b2 ~ |
-  %b8 r8 c4 b4. b8 |
-  %ais4 ais4 b8 b4 c8 ~ |
-  %c8 c8 ~ c4 c2 |
-  %b2 ~ b8 c ~ c4 |
+  b^\mp r d4 d | % 1
   r2 r8 ais4. |
   r4 b2. |
   c2 cis |
-  r4 c b r |
+  r4 c^\< b r |
   c8 c4 c8 ~ c8 c4 c8 |
   r4 b b r |
-  c4. c8 ~ c4 c4 |
+  c4. c8 ~ c4 c4^\mf |
   R1*2 |
   r2 gisis |
   ais1 |
@@ -1306,6 +1327,13 @@ tenorSecondPart = \relative c' {
   b r b4 b |
   r4 b b b |
   R2 |
+  r16 a a cis    cis d d fis ais  fis fis d cis a |
+  r16 cis    cis [ d ] d [  fis ] |
+  r16 a, cis    [ d ] d [ fis ] |
+  ais8 [ a gis g ] fis [ eis e dis ] d |
+  R1*2 |
+  r4. b8 ~ b r8 r4 |
+  R1 |
 }
 
 tenorWordsSecondPart = \lyricmode {
@@ -1359,6 +1387,12 @@ tenorWordsSecondPart = \lyricmode {
   how we laugh
   day a
   mer -- ry old
+  \repeat unfold 3 { Wi -- zard }
+  \repeat unfold 3 { the wiz } the
+  \repeat unfold 2 { the wiz } the
+  the wiz the wi -- zard
+  Won -- der -- ful the won -- der -- ful the won
+  Oz
 }
 %  You know the biz
 %  He's on the riz
@@ -1420,18 +1454,18 @@ bassSecondPart = \relative c {
     \subdXC
     \subdXD
     \subdXE
-    \subdXF
+    << { \subdXF } { s4^\< } >>
     \subdXG
   }
-  gis d' b gis |
+  gis^\mp d' b gis |
   a fis cis' c |
   b e bes a |
   gis g fis a |
   gis b cis a |
   d cis b ais |
-  b e b a |
+  b^\< e b a |
   gis dis e eis |
-  fis2 r |
+  fis2^\mf r |
   R1*4 |
   r2 dis' |
   cis1 ~ |
@@ -1464,6 +1498,12 @@ bassSecondPart = \relative c {
   bes a cis d |
   dis d bes a |
   R2 |
+  e2. r8 |
+  e4 r8 |
+  e4. ~ |
+  e2. ~ e8 r4 |
+  R1*3 |
+  e'4 r r2 |
 }
 
 bassWordsSecondPart = \lyricmode {
@@ -1508,6 +1548,8 @@ bassWordsSecondPart = \lyricmode {
   Ho ho
   cou -- ple
   \repeat unfold 49 ○
+  Wiz
+  \repeat unfold 4 { Oz }
 }
 
 %%% SCORE
