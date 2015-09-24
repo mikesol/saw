@@ -439,7 +439,7 @@ mezzoCinqVoix = \relative c'' {
   \times 2/3 { gis^\f ( g fis ) } \times 2/3 {  fis ( f ees } |
   d4 ) cis e4 ais |
   a ( gis ) b ais |
-  a ( gis ) a ( b ) |
+  a2 ais |
   \key fis \major
   ais2.^\< a4 |
   gis2 fisis4 ( fis ) |
@@ -505,7 +505,7 @@ altoCinqVoix = \relative c' {
   \times 2/3 { f^\f ( e ees ) } d4 ( cis |
   b ) b  d gis |
   fis2 g4 fis |
-  f ( fis ) g ( gis ) |
+  \times 2/3 { f ( fis g ) } \times 2/3 { gis ( g fis ) } |
   \key fis \major
   eis^\< e g fis |
   dis4 ( eis ) eis ( e ) |
@@ -570,8 +570,8 @@ tenorCinqVoix = \relative c' {
   \key a \major
   d^\f ( b ) \times 2/3 { cis ( gis a } |
   f ) gis bes e |
-  cis4 ( b ) ees dis%{^\markup \italic "(sorry)"%} |
-  dis4 ( d ) dis ( f ) |
+  cis4 ( c ) ees4. e8 |
+  d4 ( dis ) \times 2/3 { e ( dis d ) } |
   \key fis \major
   dis4^\< b d bis |
   cis2 dis4 ( c ) |
@@ -639,7 +639,7 @@ bassCinqVoix = \relative c {
   a4 r c fis, |
   b2 f'4 gis, |
   %{ e'4 a, c e, | %}
-  e'2 b4 e, |
+  e'2. b8 e, |
   \key fis \major |
   fis4^\< cis' dis disis |
   eis ( fis ) cis ( a ) |
@@ -671,7 +671,7 @@ bassCinqVoixWords = \lyricmode {
   If ev -- er a wiz there was.
   ev
   If ev -- er, oh ev -- er a wiz,
-  Oh the Wi -- zard of Oz, %{of%} Oz is one, is one be -- cause.
+  Oh the Wi -- zard of Oz, wiz is one, is one be -- cause.
   Be -- cause be -- cause be -- cause be -- cause be -- cause.
   cause. Be
   cre -- di -- ble be -- cause.
