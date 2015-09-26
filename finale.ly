@@ -382,9 +382,9 @@ sopranoCinqVoix = \relative c'' {
   b2 d |
   \key fis \major
   cis2.^\< b4 |
-  ais4. r8 ais2 |
+  ais4. r8 ais4 ( b ~ |
   \key d \major
-  fis2^\ff fis4 \glissando |
+  b4^\ff ) a fis4 \glissando |
   fis'2 fis4 |
   eis2 eis4 |
   e2 e4 |
