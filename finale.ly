@@ -382,7 +382,7 @@ sopranoCinqVoix = \relative c'' {
   b2 d |
   \key fis \major
   cis2.^\< b4 |
-  ais2 ais |
+  ais4. r8 ais2 |
   \key d \major
   fis2^\ff fis4 \glissando |
   fis'2 fis4 |
@@ -442,7 +442,7 @@ mezzoCinqVoix = \relative c'' {
   a2 ais |
   \key fis \major
   ais2^\< ( a4 ) gis |
-  gis2 g2 |
+  gis4. r8 g2 |
   \key d \major
   e2^\ff e4 \glissando |
   d' ( cis4 ) d |
@@ -509,9 +509,9 @@ altoCinqVoix = \relative c' {
   \times 2/3 { f ( fis g ) } \times 2/3 { gis ( g fis ) } |
   \key fis \major
   eis2.^\< fis4 |
-  dis ( d ) d ( f ) |
+  dis cis dis e |
   \key d \major
-  c4^\ff ( cis4 ) d4 \glissando |
+  f4^\ff ( fis4 ) e4 |
   gis4 ( g ) a ~ |
   a8 fisis ( gis4. ) a8 |
   gis8 ( [ g ] fis4 ) g |
@@ -538,7 +538,8 @@ altoCinqVoixWords = \lyricmode {
   If ev -- er a wiz there
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
-  Oh the Wi -- zard of Oz is one be -- cause
+  Oh the Wi -- zard of Oz is one be -- cause,
+  is one be -- cause
   Be -- cause, be -- cause be -- cause be -- cause be -- cause.
   der -- ful the
   Ma -- gi -- cal re -- mar -- ka -- ble
@@ -575,9 +576,9 @@ tenorCinqVoix = \relative c' {
   d4 ( dis ) \times 2/3 { e ( dis d ) } |
   \key fis \major
   dis4^\< b ~ b d |
-  c2 b4 ( cis ) |
+  c4 r b ( c ) |
   \key d \major
-  gis4^\ff ( a ) ais ~ |
+  cis4^\ff gis ais ~ |
   ais b c |
   e ( dis ) d |
   f8 ( e4 ) dis8 d cis |
@@ -604,7 +605,7 @@ tenorCinqVoixWords = \lyricmode {
   If ev -- er a wiz there, ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one, one be -- cause
-  Be -- cause, be -- cause be -- cause be -- cause be -- cause be -- cause
+  Be -- cause, be -- cause be -- cause be -- cause be -- cause be -- cause be -- cause
   be -- cause the won
   cause -- be -- cause
   Be -- cause as -- to -- nish -- ing
@@ -644,7 +645,7 @@ bassCinqVoix = \relative c {
   g4 e' ~ e e, |
   \key fis \major |
   fis4^\< cis' dis disis |
-  eis ( fis ) cis ( a ) |
+  eis4. r8 cis4 ( a ) |
   \key d \major
   d2^\ff fis,4 |
   b2 b4 |
