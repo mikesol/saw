@@ -384,7 +384,7 @@ sopranoCinqVoix = \relative c'' {
   cis2.^\< b4 |
   ais2 ais |
   \key d \major
-  fis2^\ff fis4 |
+  fis2^\ff fis4 \glissando |
   fis'2 fis4 |
   eis2 eis4 |
   e2 e4 |
@@ -411,8 +411,8 @@ sopranoCinqVoixWords = \lyricmode {
   If ev -- er a wiz there was
   ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
-  Oh the Wi -- zard of Oz is one be -- cause.
-  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  Oh the Wi -- zard of Oz is one be -- cause
+  Be -- cause, be -- cause be -- cause be -- cause be -- cause.
   ful
   Be -- cause of the won -- der -- ful things he does.
   The Won -- der -- ful things that he does.
@@ -441,16 +441,16 @@ mezzoCinqVoix = \relative c'' {
   a ( gis ) b ais |
   a2 ais |
   \key fis \major
-  ais4^\< a b ais4 |
-  gis2 fisis4 ( fis ) |
+  ais2^\< ( a4 ) gis |
+  gis2 g2 |
   \key d \major
-  e2^\ff e4 |
-  cis'2 b4 |
-  ais ( b ) c |
-  b ( bes ) a |
+  e2^\ff e4 \glissando |
+  d' ( cis4 ) d |
+  cis ( b ) c |
+  cis ( c ) b4 |
   \key g \major
-  e'4^\< d8 e d4 gis, |
-  c8 b a g fis a d e |
+  c8^\< b a g fis4 gis4 ~ |
+  gis8 a c b e d c b |
   ees d c b a eis' cis c |
   e d c b a gis g c |
   \key bes \major
@@ -471,9 +471,10 @@ mezzoCinqVoixWords = \lyricmode {
   If ev -- er a wiz there
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
-  Oh the Wi -- zard of Oz is one, is one be -- cause.
-  Be -- cause be -- cause be -- cause be -- cause be -- cause.
-  ful the Won be
+  Oh the Wi -- zard of Oz is one be -- cause
+  Be -- cause, be -- cause be -- cause be -- cause be -- cause
+  be -- cause 
+  the Won
   Ma -- gi -- cal re -- mar -- ka -- ble
   In -- cre -- di -- ble as -- to -- nish -- ing
   Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
@@ -507,18 +508,18 @@ altoCinqVoix = \relative c' {
   fis2 g4 fis |
   \times 2/3 { f ( fis g ) } \times 2/3 { gis ( g fis ) } |
   \key fis \major
-  eis^\< g a fis ~ |
-  fis eis eis ( e ) |
+  eis2.^\< fis4 |
+  dis ( d ) d ( f ) |
   \key d \major
-  cis4^\ff ( c ) cis8 [ d ] |
-  ais'4 ( a )  gis |
-  fisis ( gis4. ) a8 |
+  c4^\ff ( cis4 ) d4 \glissando |
+  gis4 ( g ) a ~ |
+  a8 fisis ( gis4. ) a8 |
   gis8 ( [ g ] fis4 ) g |
   \key g \major
   fis2^\< ~ fis8 e d c |
-  gis a c b a4 fis' |
-  fis4. e8 e gis g a |
-  b a a gis fis e ees a |
+  b a e' d g8 fis e fis ~ |
+  fis fis4 d8 e gis fis g |
+  b a gis fis f e ees a |
   \key bes \major
   a4^\fff aes b |
   c cis d |
@@ -537,10 +538,10 @@ altoCinqVoixWords = \lyricmode {
   If ev -- er a wiz there
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
-  Oh the Wi -- zard of Oz is one, is one be -- cause.
-  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  Oh the Wi -- zard of Oz is one be -- cause
+  Be -- cause, be -- cause be -- cause be -- cause be -- cause.
   der -- ful the
-  Ma -- gi -- cal re -- mar
+  Ma -- gi -- cal re -- mar -- ka -- ble
   Be -- cause
   as -- to -- nish -- ing
   Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
@@ -573,18 +574,18 @@ tenorCinqVoix = \relative c' {
   cis4 ( c ) ees4. e8 |
   d4 ( dis ) \times 2/3 { e ( dis d ) } |
   \key fis \major
-  dis4^\< e eis dis ~ |
-  dis cis dis4 ( c ) |
+  dis4^\< b ~ b d |
+  c2 b4 ( cis ) |
   \key d \major
-  ais^\ff ( a ) gis |
-  d'2 dis4 |
-  dis4 ( d ) d |
-  cis ( d ) dis |
+  gis4^\ff ( a ) ais ~ |
+  ais b c |
+  e ( dis ) d |
+  f8 ( e4 ) dis8 d cis |
   \key g \major
-  c8^\< b a g fis2 ~ |
-  fis2. b8 [ bes ] |
-  a4. b8 c cis ais dis |
-  gis fis e d c b bes ges' |
+  e8^\< d c b a2 ~ |
+  a8 fis4 g8 ~ g gis4 a8 ~ |
+  a ais4 b8 c d c dis |
+  gis fis e ees d cis c ges' |
   \key bes \major
   f8^\fff d bes f g' d |
   bes ges gis' fis c b |
@@ -602,9 +603,10 @@ tenorCinqVoixWords = \lyricmode {
   We hear he is a wiz of a wiz.
   If ev -- er a wiz there, ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
-  Oh the Wi -- zard of Oz is one, is one be -- cause.
-  Be -- cause be -- cause be -- cause be -- cause be -- cause.
-  Be -- cause the won
+  Oh the Wi -- zard of Oz is one, one be -- cause
+  Be -- cause, be -- cause be -- cause be -- cause be -- cause be -- cause
+  be -- cause the won
+  cause -- be -- cause
   Be -- cause as -- to -- nish -- ing
   Sen -- sa -- tion -- al
   mi -- ra -- cu -- lous the
@@ -644,15 +646,15 @@ bassCinqVoix = \relative c {
   fis4^\< cis' dis disis |
   eis ( fis ) cis ( a ) |
   \key d \major
-  d2^\ff ais4 |
+  d2^\ff fis,4 |
   b2 b4 |
   cis ( c ) b |
-  e2 bes4 |
+  bes4 e2 |
   \key g \major
   d1^\< |
   d,2. cis'4 |
   c8 b a g fis2 ~ |
-  fis4 d' ~ d4. f,8 |
+  fis8 d'4 a8 c b d f, |
   \key bes \major
   bes2^\fff f4 ~ |
   f bes2 |
@@ -671,11 +673,11 @@ bassCinqVoixWords = \lyricmode {
   If ev -- er a wiz there was.
   ev
   If ev -- er, oh ev -- er a wiz,
-  Oh the Wi -- zard of Oz, wiz is one, is one be -- cause.
-  Be -- cause be -- cause be -- cause be -- cause be -- cause.
+  Oh the Wi -- zard of Oz, wiz is one, is one be -- cause
+  Be -- cause, be -- cause be -- cause be -- cause be -- cause.
   cause. Be
   cre -- di -- ble be -- cause.
-  Won the
+  Won mi -- cra -- cu -- lous the
   Won -- der Won -- der Won -- der
   Wiz We're
   off
