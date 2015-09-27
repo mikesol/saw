@@ -362,7 +362,7 @@ marksCinqVoix = {
 sopranoCinqVoix = \relative c'' {
   \key c \major
   c4 g e f |
-  g c ~ c g |
+  g c e b |
   a g8 f e4 f8 d |
   c8 d e f g a b c |
   d4 ( c ) b |
@@ -382,12 +382,12 @@ sopranoCinqVoix = \relative c'' {
   b2 d |
   \key fis \major
   cis2.^\< b4 |
-  ais4. r8 ais4 ( b ~ |
+  ais4. r8 ais2 |
   \key d \major
-  b4^\ff ) a fis4 \glissando |
+  b2^\ff g4 \glissando |
   fis'2 fis4 |
-  eis2 eis4 |
-  e2 e4 |
+  eis2 eis4 ~ |
+  eis8 e4 e4. |
   \key g \major
   a2.^\< r4 |
   r d, ~ d8 r a'4 |
@@ -404,7 +404,7 @@ sopranoCinqVoix = \relative c'' {
 }
 
 sopranoCinqVoixWords = \lyricmode {
-  We're off to see the Wi -- zard,
+  We're off to see the Wi -- zard, wiz,
   The Won -- der -- ful Wi -- zard of Oz.
   He is the Won -- der -- ful
   We hear he is a wiz of a wiz.
@@ -421,8 +421,8 @@ sopranoCinqVoixWords = \lyricmode {
 
 mezzoCinqVoix = \relative c'' {
   \key c \major
-  g4 e e d |
-  \times 2/3 { e4 g'8 } \times 2/3 { g e g } c4 e,, |
+  g4 e c d |
+  e4 g c g |
   f4 e8 d c4 d8 c |
   a b c d e f f gis |
   gis4 ( a ) f4 |
@@ -442,29 +442,29 @@ mezzoCinqVoix = \relative c'' {
   a2 ais |
   \key fis \major
   ais2^\< ( a4 ) gis |
-  gis4. r8 g2 |
+  gis4. r8 g4 ( gis ~ |
   \key d \major
-  e2^\ff e4 \glissando |
-  d' ( cis4 ) d |
-  cis ( b ) c |
-  cis ( c ) b4 |
+  gis4^\ff ) fis e4 \glissando |
+  d'2 cis4 |
+  dis ( d ) cis |
+  bis4 ( cis ) d ~ |
   \key g \major
-  c8^\< b a g fis4 gis4 ~ |
+  d2^\< ~ d8 r gis,4 |
   gis8 a c b e d c b |
   ees d c b a eis' cis c |
-  e d c b a gis g c |
+  e d c b a aes g c |
   \key bes \major
   d2.^\fff |
   ees4 e f |
-  ees e f |
-  e4^\< bes ees |
+  ees e f ~ |
+  f8^\< e8 ees4 d |
   \key c \major
   \times 2/3 { g8^\ffff ges f } \times 2/3 { e ees d } d [ cis ] ees [ d ] |
   \times 2/3 { cis d ees } \times 2/3 { d ees f } \times 2/3 { e ees d } \times 2/3 { fis f e }
 }
 
 mezzoCinqVoixWords = \lyricmode {
-  off to see the Wiz, The Wi -- zard of Oz!
+  off to see the Wiz -- ard, wiz,
   The Won -- der -- ful Wi -- zard of Oz.
   He is the Won -- der -- ful,
   We hear he is a wiz of a wiz.
@@ -473,8 +473,6 @@ mezzoCinqVoixWords = \lyricmode {
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one be -- cause
   Be -- cause, be -- cause be -- cause be -- cause be -- cause
-  be -- cause 
-  the Won
   Ma -- gi -- cal re -- mar -- ka -- ble
   In -- cre -- di -- ble as -- to -- nish -- ing
   Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
@@ -488,8 +486,8 @@ mezzoCinqVoixWords = \lyricmode {
 
 altoCinqVoix = \relative c' {
   \key c \major
-  e4 e d d |
-  \times 2/3 { c4 e'8 } \times 2/3 { e c e } g4 cis,, |
+  e4 c c b |
+  c e g e |
   e d8 c b4 c8 a |
   g a b c d e d dis |
   e2 dis4 |
@@ -509,29 +507,29 @@ altoCinqVoix = \relative c' {
   \times 2/3 { f ( fis g ) } \times 2/3 { gis ( g fis ) } |
   \key fis \major
   eis2.^\< fis4 |
-  dis cis dis e |
+  dis cis\startGroup dis e |
   \key d \major
-  f4^\ff ( fis4 ) e4 |
-  gis4 ( g ) a ~ |
-  a8 fisis ( gis4. ) a8 |
-  gis8 ( [ g ] fis4 ) g |
+  eis4\stopGroup^\ff ( c4 ) cis4 \glissando |
+  ais'4 ( a ) dis,\startGroup |
+  eis fis g\stopGroup |
+  gis4\startGroup ais4. b8 |
   \key g \major
-  fis2^\< ~ fis8 e d c |
+  c8\stopGroup^\< b a g fis e d c |
   b a e' d g8 fis e fis ~ |
   fis fis4 d8 e gis fis g |
-  b a gis fis f e ees a |
+  b a gis fis f e4 a8 |
   \key bes \major
   a4^\fff aes b |
   c cis d |
-  c2 b4 ~ |
-  b4^\< g b |
+  c2 cis8 c |
+  b4^\< c b |
   \key c \major
   c8^\ffff [ b ] bes [ a ] \times 2/3 { aes a bes } \times 2/3 { b c bes } |
   \times 2/3 { a gis g } \times 2/3 { fis g gis } \times 2/3 { g a fis } \times 2/3 { a aes g } |
 }
 
 altoCinqVoixWords = \lyricmode {
-  off to see the Wiz, The Wi -- zard of Oz!
+  off to see the Wi -- zard, wiz,
   The Won -- der -- ful Wi -- zard of Oz.
   He is the Won -- der -- ful,
   We hear he is a wiz of a wiz.
@@ -539,13 +537,13 @@ altoCinqVoixWords = \lyricmode {
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one be -- cause,
-  is one be -- cause
-  Be -- cause, be -- cause be -- cause be -- cause be -- cause.
-  der -- ful the
+  is one be -- cause,
+  Be -- cause, is one be -- cause is one be -- cause
+  be -- cause the won -- der -- ful the
   Ma -- gi -- cal re -- mar -- ka -- ble
   Be -- cause
   as -- to -- nish -- ing
-  Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
+  Sen -- sa -- tion -- al mi -- ra -- cu the
   Won -- der -- ful things that he
   Won ful zard. We're
   off to won -- der -- ful my -- thi -- cal
@@ -555,8 +553,8 @@ altoCinqVoixWords = \lyricmode {
 tenorCinqVoix = \relative c' {
   \clef "treble_8"
   \key c \major
-  e4 c c b |
-  \times 2/3 { c4 c8 } \times 2/3 { c g c } e4 b |  
+  c4 b a g |
+  c4 b a g |
   c b8 a b4 a8 f |
   e f g a b c b a |
   b4 ( a ) a4 |
@@ -578,19 +576,19 @@ tenorCinqVoix = \relative c' {
   dis4^\< b ~ b d |
   c4 r b ( c ) |
   \key d \major
-  cis4^\ff gis ais ~ |
-  ais b c |
-  e ( dis ) d |
-  f8 ( e4 ) dis8 d cis |
+  cis4^\ff gis\startGroup ais |
+  b c\stopGroup a ~ |
+  a ais dis |
+  d4 fis4. f8 |
   \key g \major
   e8^\< d c b a2 ~ |
   a8 fis4 g8 ~ g gis4 a8 ~ |
   a ais4 b8 c d c dis |
-  gis fis e ees d cis c ges' |
+  gis fis e ees d4 c8 ges' |
   \key bes \major
   f8^\fff d bes f g' d |
   bes ges gis' fis c b |
-  a' fis d bes a gis |
+  a' fis4 d8 b c8 |
   cis^\< d dis fis \times 2/3 { f8 e cis } |
   \key c \major
   e^\ffff [ ees ] d [ cis ] \times 2/3 { c f, fis } g gis |
@@ -598,19 +596,19 @@ tenorCinqVoix = \relative c' {
 }
 
 tenorCinqVoixWords = \lyricmode {
-  off to see the Wiz, The Wi -- zard of Oz!
+  off to see, We're off to see
   The Won -- der -- ful Wi -- zard of Oz.
   He is the Won -- der -- ful,
   We hear he is a wiz of a wiz.
   If ev -- er a wiz there, ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one, one be -- cause
-  Be -- cause, be -- cause be -- cause be -- cause be -- cause be -- cause be -- cause
-  be -- cause the won
+  Be -- cause, is one be -- cause be -- cause be -- cause be, be -- cause be -- cause
+  the won
   cause -- be -- cause
   Be -- cause as -- to -- nish -- ing
   Sen -- sa -- tion -- al
-  mi -- ra -- cu -- lous the
+  mi -- ra -- lous the
   Won -- der -- ful, the
   Won -- der -- ful, the
   Won -- der -- ful, the
@@ -623,8 +621,8 @@ tenorCinqVoixWords = \lyricmode {
 bassCinqVoix = \relative c {
   \clef "bass"
   \key c \major
-  c4 b' a g |
-  c b a g |
+  c1 ~ |
+  c2 r4 c |
   d e8 f g4 g, |
   c2 r4 gis8 e |
   a2 g4 |
@@ -644,30 +642,30 @@ bassCinqVoix = \relative c {
   %{ e'4 a, c e, | %}
   g4 e' ~ e e, |
   \key fis \major |
-  fis4^\< cis' dis disis |
-  eis4. r8 cis4 ( a ) |
+  fis4^\< cis'\startGroup dis disis |
+  eis4.\stopGroup r8 e4 ( a, ) |
   \key d \major
-  d2^\ff fis,4 |
-  b2 b4 |
-  cis ( c ) b |
-  bes4 e2 |
+  d2^\ff fis4 |
+  b,2 b4 |
+  c2 b4 |
+  ais4 e' ( a, ) |
   \key g \major
   d1^\< |
-  d,2. cis'4 |
+  d,2. e'8 d |
   c8 b a g fis2 ~ |
   fis8 d'4 a8 c b d f, |
   \key bes \major
-  bes2^\fff f4 ~ |
-  f bes2 |
-  f4 bes cis |
-  d2^\< g,4 |
+  bes2.^\fff ~ |
+  bes4 f bes ~ |
+  bes bes'8 a gis4 |
+  a bes4 g
   \key c \major
-  c1^\ffff ~ |
-  c |
+  c,4^\ffff ~ \times 2/3 { c4 g8 ~ } \times 2/3 { g8 c4 ~ } \times 2/3 { c4 g8 } |
+  c8 cis d cis \times 2/3 { ais'8 fis a } d, cis |
 }
 
 bassCinqVoixWords = \lyricmode {
-  off to see, We're off to see,
+  off
   The Won -- der -- ful Wi -- zard
   Oz. ful
   We hear he is a wiz of a wiz.
@@ -676,11 +674,11 @@ bassCinqVoixWords = \lyricmode {
   If ev -- er, oh ev -- er a wiz,
   Oh the Wi -- zard of Oz, wiz is one, is one be -- cause
   Be -- cause, be -- cause be -- cause be -- cause be -- cause.
-  cause. Be
+  cause. ble In --
   cre -- di -- ble be -- cause.
   Won mi -- cra -- cu -- lous the
-  Won -- der Won -- der Won -- der
-  Wiz We're
+  Won -- der Won -- der Won -- der -- ful
+  Wiz -- ard We're
   off
 }
 
@@ -690,7 +688,9 @@ marksFinalRepeat = {
   s1 |
   << { \unfoldChange #60 #44 #8 } { s2 \rall s2 } >>
   \tempo "Seriamente?" 2=22
-  s1*3 |
+  s1*2 |
+  \time 3/4
+  s2. |
   \time 6/4
   \moltorall
   \unfoldChange #40 #36 #10
@@ -699,12 +699,12 @@ marksFinalRepeat = {
 
 sopranoFinalRepeat = \relative c''' {
   \key b \major
-  \mFM c1^\fffffuckd ~ |
-  \mFM c2. \mFY d,4^\ff |
-  \mFR dis1 ~ |
-  \mFR dis8 \mFB cis4. \mFO b4. g8 ~ |
-  \times 2/3 { g4 \mFG e'8 ~ } \mFG e4 ~ \mFG e2 |
-  ais,8 \mFM b4 \mFY cis8 ~ ( \mFY cis4 ~ cis4. bis8 ) r4 |  
+  c1^\fffffuckd ~ |
+  c2. d,4^\ff |
+  dis1 |
+  cis2 b |
+  e dis4 ~ |
+  dis2. ~ dis8 cis4 ( bis8 ) r4 |
 }
 
 sopranoFinalRepeatWords = \lyricmode {
@@ -721,19 +721,12 @@ tasteless = \markup \justify {
 
 mezzoFinalRepeat = \relative c''' {
   \key b \major
-  \mFM g1^\fffffuckd ~ |
-  \mFM g2. \mFY ais,4^\ff |
-  %\mFR \times 2/3 {  b4 b'8 ~ } \times 6/7 { b [ ais8 gis8 ] fis4 dis8 \mFR b } |
-  \mFR \times 2/3 {  b4 b'8 ~ } \times 6/7 { b ais8 gis8 fis e dis8 cis } |
-  %\times 2/3 { \mFR ais8 \mFB a4 ~ } \mFB a4 \mFO fis2 |
-  \times 2/3 { %{\mFR%} b8 \mFB a8. \footnote #'(1 . 1) \tasteless NoteHead c'16 } \times 2/3 { g16 bes e,8 [ dis ] } \times 2/3 { d'16 gis, b f a d, ~ } d \mFO eis8. |
-  % c' g bes e, dis      d' gis, b f a
-  %\mFG b,4  g16 dis''8. ~ dis8 \mFM b,8 ~ \mFM \times 2/3 { b8 cis4 ~ } |
-  \mFG fis4  d8 dis'8 ~ dis16 cis b8 ais16 gis fis8 | 
-  e8 \mFM dis8 ~ \mFM dis4 ~ dis8 gis8 ~ gis8 \mFY g4. r4 |
-  %b16 [ b' ais gis ] fis [ e dis cis ] \times 4/5 { b8. [ ais'16 fis16 ] } \times 4/5 { a16 [  cis,8. c16 ~ ] } |
-  %c8 [ \times 2/3 { gis'16 eis g ] } ais,8  [ \times 2/3 { fis'16 cis e ] }  \times 2/3 { dis8 [ b f ~ ] } f16 [ d' e,8 ] |
-  %\times 2/3 { gis d' g ~ } g16 cis,8. ~ cis4 fis, |
+  g1^\fffffuckd ~ |
+  g2. ais,4^\ff |
+  \times 2/3 {  b4 b'8 ~ } \times 6/7 { b ais8 gis8 fis e dis8 cis } |
+  \times 2/3 { b8 a8. \footnote #'(1 . 1) \tasteless NoteHead c'16 } \times 2/3 { g16 bes e,8 [ dis ] } \times 2/3 { d'16 gis, b f a d, ~ } d eis8. |
+  fis4  \times 2/3 { c8 dis'8 cis } b16 ais gis fis ~ |
+  fis8 ais,4. gis'2 g4 r4 |
 }
 
 mezzoFinalRepeatWords = \lyricmode {
@@ -747,15 +740,12 @@ mezzoFinalRepeatWords = \lyricmode {
 
 altoFinalRepeat = \relative c'' {
   \key b \major
-  \mFM dis1^\fffffuckd ~ |
-  \mFM dis4 d, gis, \mFY gis'^\ff |
-  \mFR gis2 ~ \times 2/3 { gis8 g,8 g' ~ } \times 2/3 { g8 a b } |
-  %\mFB fis2 \mFO d2 |
-  \mFB \times 2/3 { fis4 g2 } \times 2/3 { f8 g a8 } c8 b |
-  \mFG ais8 a4 %{\mFG a'4.%} a,8 \mFM gis'4 fis8 b8 |
-  \times 2/3 { cis,4 a'16 cis, } \times 2/3 { g' a, fis'4 } \mFY e2 dis4 r4 |
-  %gis2 %~ gis16 ais gis fis e dis cis b |
-  %\times 2/3 { a'4    f8 }  c16  c' b a g f e d ]
+  dis1^\fffffuckd ~ |
+  dis2. gis,4\ff |
+  gis2 ~ gis8 g ~ \times 2/3 { g a b } |
+  fis2. f4 |
+  \times 2/3 { ais4 a8 ~ } a4 gis4 |
+  g4. fis8 ~ fis e ~ e4 ~ e4 r4 |
 }
 
 altoFinalRepeatWords = \lyricmode {
@@ -773,18 +763,12 @@ altoFinalRepeatWords = \lyricmode {
 tenorFinalRepeat = \relative c'' {
   \clef "treble_8"
   \key b \major
-  \mFM a2.^\fffffuckd b,4 |
-  f2. \mFY f'4^\ff |
-  \mFR e8 fis, fis' eis cis %{\mFR%} e \times 2/3 { dis b cis } |
-  %%%\times 4/5 { ais8 b \mFB e4 d8 } \times 4/5 { eis,8 fis cis'8. \mFO bis } %cis'~ \times 2/3 { cis e, f } } |
-  gis16 a e'8 ~ e16 d eis, fis \times 2/3 { cis'8 b d,16 e } \times 2/3 { ais8 a gis }
-  %\mFO bis8 fis8 \mFG \times 2/3 { eis'8 bis8 dis } \mFM cis4 ~ \times 2/3 { \mFM cis8 ais8 b8 } |
-  cis8 c8 \mFG eis fis \times 2/3 { \mFG eis4 \mFM cis8 ~ } \times 2/3 { \mFM cis8 ais8 b8 } |
-  gis'8 fis8 e8 d8 c4 \mFY ais2 r4 |
-
-  %\times 2/3 { g,8 [ e' c ] } \times 2/3 { dis [ eis, d' ] } \times 2/3 { e, [ cis' g ] } \times 2/3 { b [ eis, ais ] } |
-  %\times 4/5 { cis,8. [ gis''16 eis16 ] } \times 4/5 { g16 [  a,8. b'16 ] } \times 4/5 { g16 [  ais16 fis16. f16. ] } a16 b,8 ais16 ~ |
-  %\times 4/5 { ais [ bis' g ais fis ] ~ } fis [ f e8 ] b'16 [ cis,8. ] ais'16 [ bis,8. ] |
+  a1^\fffffuckd ~ |
+  a2. f4^\ff |
+  e8 fis, fis' eis cis %{\mFR%} e \times 2/3 { dis b cis } |
+  \times 2/3 { gis8 a e' ~ } e d ~ \times 2/3 { d eis, fis } \times 2/3 { cis'4 b8 }
+  f'4. fis4 e8 ~ |
+  e4. d8 c4 ais2 r4 |
 }
 
 tenorFinalRepeatWords = \lyricmode {
@@ -801,12 +785,12 @@ tenorFinalRepeatWords = \lyricmode {
 bassFinalRepeat = \relative c' {
   \clef bass
   \key b \major
-  r4^\fffffuckd gis4 \mFM d2 ~ |
-  \mFM d2 ~ \mFM d8 \mFY g,4.^\ff |
-  \mFR fis1 |
-  \mFB d'2 \mFO gis, |
-  \mFG g ~ \mFG g8 \mFM e'4. ~ | 
-  \mFM e4 \mFY fis,4 ~ \mFY fis2. r4 |
+  r4^\fffffuckd gis4 d b' |
+  f d' gis, f, |
+  fis1 |
+  d'2 gis, |
+  g cis4 ~ |
+  cis4 fis,4 ~ fis2. r4 |
   %~ |
   %fis2.. f8 ~ |
   %f1 |
@@ -1112,6 +1096,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
   \layout {
     \context {
       \Voice
+      \consists "Horizontal_bracket_engraver"
       \override HorizontalBracket.direction = #UP
       \consists "Horizontal_bracket_engraver"
       \override TextScript #'layer = #6
