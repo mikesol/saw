@@ -12,6 +12,7 @@
 %\include "sperm.ly"
 \include "shameless-copying.ly"
 \include "vibster.ly"
+\include "characterNames.ly"
 
 #(define (position-hack grob)
      (let* ((pos (ly:tuplet-bracket::calc-positions grob))

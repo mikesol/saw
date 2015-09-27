@@ -864,7 +864,7 @@ r8 }
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -877,7 +877,7 @@ r8 }
         \sopranoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\scorePrefatoryMatter

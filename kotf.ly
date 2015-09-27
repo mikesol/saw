@@ -167,7 +167,7 @@ bassKOTFWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Bitch" } <<
+    \new Staff \with { instrumentName = \bitchName } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\prefatoryMatter
         \sopranoKOTF
@@ -178,7 +178,7 @@ bassKOTFWords = \lyricmode {
         \sopranoKOTFWords
       }
     >>
-    \new Staff \with { instrumentName = #"Dörty" } <<
+    \new Staff \with { instrumentName = \dortyName } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\prefatoryMatter
         \mezzoKOTF
@@ -187,7 +187,7 @@ bassKOTFWords = \lyricmode {
         \mezzoKOTFWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ttö" } <<
+    \new Staff \with { instrumentName = \ttoName } <<
       \new Voice = "alto" { \numericTimeSignature
 	\prefatoryMatter
         \altoKOTF
@@ -196,7 +196,7 @@ bassKOTFWords = \lyricmode {
         \altoKOTFWords
       }
     >>
-    \new Staff \with { instrumentName = #"Fakbyd" } <<
+    \new Staff \with { instrumentName = \fakbydName } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\prefatoryMatter
         \tenorKOTF
@@ -205,7 +205,7 @@ bassKOTFWords = \lyricmode {
         \tenorKOTFWords
       }
     >>
-    \new Staff \with { instrumentName = #"Wysr" } <<
+    \new Staff \with { instrumentName = \wysrName } <<
       \new Voice = "bass" { \numericTimeSignature
 	\prefatoryMatter
         \bassKOTF

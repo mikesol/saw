@@ -109,7 +109,7 @@ arco = \markup \italic "arco"
 \score {
 %{
   <<
-    \new Staff \with { instrumentName = #"Ttö" shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = \ttoName shortInstrumentName = #"Mk."
       \override DynamicText #'direction = #UP
       \override DynamicLineSpanner #'direction = #UP
       \override Hairpin #'direction = #UP

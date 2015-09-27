@@ -12,11 +12,21 @@ autoBeamInstruction = \autoBeamOn
 
 solo = \markup \italic "solo"
 psolo = \markup \italic "(solo)"
-skat = \markup \italic "sit skat"
-shoot = \markup \italic "SYT"
+%skat = \markup \italic "sit skat"
+%shoot = \markup \italic "SYT"
+%heg = \markup Heg?
+%heart = \markup "♥"
+%heartheart = \markup "♥♥"
+heart = \markup ""
+heartheart = \markup ""
+wswing = "Med sit swng"
+skat = \markup \italic "scat"
+shoot = \markup \italic ""
+heg = \markup "Hey!"
+wswing = "Swung"
 
 \header {
-  title = "The Wonerful Wizard of Oz"
+  title = "The Wonderful Wizard of Oz"
   %subtitle = "for Jesper Holm"
   %title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
@@ -81,7 +91,7 @@ midiPrefatoryMatter = {
 }
 
 marks = {
-  \tempo "Med sit swng" 4=176
+  \tempo \wswing 4=176
   \repeat unfold 144 { \unfoldSwing #176 }
   \time 6/4
   \repeat unfold 6 { \unfoldSwing #176 }
@@ -215,13 +225,13 @@ soprano = \relative c'' {
   r cis ~ |
   cis r |
   ais2 r |
-  r2 ais'^\markup "♥" ~ |
+  r2 ais'^\heart ~ |
   ais1 ~ |
   ais ~ |
   ais ~ |
   ais ~ |
   ais2. r4 |
-  r4 b2.^\markup "♥♥" ~ |
+  r4 b2.^\heartheart ~ |
   b1 |
   r8 cis,4. b4 a |
   cis4. b8 ~ b2 |
@@ -897,7 +907,7 @@ tenorWords = \lyricmode {
   ba ba ba ba
   \repeat unfold 2 { ba da ba }
   ba
-  Heg?
+  \heg
 }
 
 bass = \relative c {
@@ -1070,18 +1080,18 @@ bass = \relative c {
 }
 
 bassWords = \lyricmode {
-  \repeat unfold 41 "&"
+  \repeat unfold 41 ○
   \repeat unfold 2 ba
-  \repeat unfold 214 "&"
+  \repeat unfold 214 ○
   Hey cha, the Wi -- zard
   Wi -- zard of Oz
   You know that he is
   hey hey
   \repeat unfold 34 { \skip 1 }
-  \repeat unfold 64 "&"
+  \repeat unfold 64 ○
   \repeat unfold 4 { ba da ba }
   ba da ba da ba 
-  \repeat unfold 61 "&"
+  \repeat unfold 61 ○
   \repeat unfold 7 nä
   be -- cause
   cause
@@ -1093,7 +1103,7 @@ bassWords = \lyricmode {
   \repeat unfold 11 nä
 }
 
-\markup \italic \fill-line { \center-column {
+introtext = \markup \italic \fill-line { \center-column {
 "Sitsit FRIZNGÅRDFÅRS-FRIZNGÅRDFÅRS BegrBerg gav sit tak?"
 "Wyn sit begr bäst by dön, sit begr fakbyd mak sit begr töst?"
 "Og nyt sit Ryn by sit töst makn?"
@@ -1101,9 +1111,11 @@ bassWords = \lyricmode {
 "een... zwi... een...zwi...dri...dri+een..."
 }}
 
+%\introtext
+
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -1116,7 +1128,7 @@ bassWords = \lyricmode {
         \sopranoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -1126,7 +1138,7 @@ bassWords = \lyricmode {
         \mezzoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -1136,7 +1148,7 @@ bassWords = \lyricmode {
         \altoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -1146,7 +1158,7 @@ bassWords = \lyricmode {
         \tenorWords
       }
     >>
-    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
 	\scorePrefatoryMatter
@@ -1246,7 +1258,7 @@ bassWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -1259,7 +1271,7 @@ bassWords = \lyricmode {
         \sopranoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -1269,7 +1281,7 @@ bassWords = \lyricmode {
         \mezzoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -1279,7 +1291,7 @@ bassWords = \lyricmode {
         \altoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\midiPrefatoryMatter
@@ -1289,7 +1301,7 @@ bassWords = \lyricmode {
         \tenorWords
       }
     >>
-    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
 	\midiPrefatoryMatter

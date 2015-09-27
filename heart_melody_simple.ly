@@ -201,7 +201,7 @@ funTimesWithSkips = {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\midiPrefatoryMatter

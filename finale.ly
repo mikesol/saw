@@ -1012,7 +1012,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Bitch" } <<
+    \new Staff \with { instrumentName = \bitchName } <<
       \new Voice = "soprano" { << { \numericTimeSignature
 	\prefatoryMatter
         \sopranoChorale
@@ -1032,7 +1032,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \sopranoLastNoteDraftTwoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Dörty" } <<
+    \new Staff \with { instrumentName = \dortyName } <<
       \new Voice = "mezzo" { \numericTimeSignature
 	\prefatoryMatter
         \mezzoChorale
@@ -1047,7 +1047,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \mezzoLastNoteDraftTwoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ttö" } <<
+    \new Staff \with { instrumentName = \ttoName } <<
       \new Voice = "alto" { \numericTimeSignature
 	\prefatoryMatter
         \altoChorale
@@ -1062,7 +1062,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \altoLastNoteDraftTwoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Fakbyd" } <<
+    \new Staff \with { instrumentName = \fakbydName } <<
       \new Voice = "tenor" { \numericTimeSignature
 	\prefatoryMatter
         \tenorChorale
@@ -1077,7 +1077,7 @@ bassLastNoteDraftTwoWords = \lyricmode {
         \tenorLastNoteDraftTwoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Wysr" } <<
+    \new Staff \with { instrumentName = \wysrName } <<
       \new Voice = "bass" { \numericTimeSignature
 	\prefatoryMatter
         \bassChorale

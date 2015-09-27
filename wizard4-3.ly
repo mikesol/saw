@@ -61,7 +61,8 @@ myblack = \revert NoteHead.color
 %myred = \revert NoteHead.color
 %myblack = \revert NoteHead.color
 
-agogic = #(make-articulation "downbow")
+%agogic = #(make-articulation "downbow")
+agogic = { }
 
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
@@ -387,43 +388,43 @@ tenor = \relative c' {
   %R1*3 | r2.
   r4 |
   R1 | R1 | R1 |
-  r2 a4 d\mydb ~ |
-  d a fis2\mydb |
-  g4 a\mydb d2 ~ |
-  d2\mydb a4 b\mydb |
-  a g fis\mydb g |
-  e d2.\mydb ~ |
-  d4\mydb r4 d d\mydb ~ |
-  d d d'2\mydb |
-  d4 cis\mydb cis cis |
-  b2\mydb b4 e\mydb |
-  e e e2\mydb |
-  cis4 a2.\mydb ~ |
-  a4\mydb r a b\mydb |
-  b b b\mydb b |
-  cis d2\mydb a4 |
-  fis2\mydb a4 g\mydb |
-  g fis e2\mydb |
-  g4 fis2\mydb e4 |
-  d2\mydb d4 d\mydb ~ |
-  d d d'2\mydb |
-  d4 cis2\mydb cis4 |
-  b2\mydb b4 e\mydb ~ |
-  e2 ~ e\mydb ~ |
-  e4 ~ e2.\mydb ~ |
-  e4\mydb r d4 e\mydb |
-  e e e\mydb e |
-  e e2\mydb cis4 |
-  a2.\mydb g'4\mydb |
-  fis e d\mydb cis |
-  b a2.\mydb |
-  a2.\mydb d4\mydb ~ |
-  d a fis2\mydb |
-  g4 a\mydb d2 ~ |
-  d4\mydb r e fis\mydb |
-  fis fis e\mydb fis |
-  e d2.\mydb ~ |
-  d2\mydb r2 |
+  r2 a4 d%{\mydb%} ~ |
+  d a fis2%{\mydb%} |
+  g4 a%{\mydb%} d2 ~ |
+  d2%{\mydb%} a4 b%{\mydb%} |
+  a g fis%{\mydb%} g |
+  e d2.%{\mydb%} ~ |
+  d4%{\mydb%} r4 d d%{\mydb%} ~ |
+  d d d'2%{\mydb%} |
+  d4 cis%{\mydb%} cis cis |
+  b2%{\mydb%} b4 e%{\mydb%} |
+  e e e2%{\mydb%} |
+  cis4 a2.%{\mydb%} ~ |
+  a4%{\mydb%} r a b%{\mydb%} |
+  b b b%{\mydb%} b |
+  cis d2%{\mydb%} a4 |
+  fis2%{\mydb%} a4 g%{\mydb%} |
+  g fis e2%{\mydb%} |
+  g4 fis2%{\mydb%} e4 |
+  d2%{\mydb%} d4 d%{\mydb%} ~ |
+  d d d'2%{\mydb%} |
+  d4 cis2%{\mydb%} cis4 |
+  b2%{\mydb%} b4 e%{\mydb%} ~ |
+  e2 ~ e%{\mydb%} ~ |
+  e4 ~ e2.%{\mydb%} ~ |
+  e4%{\mydb%} r d4 e%{\mydb%} |
+  e e e%{\mydb%} e |
+  e e2%{\mydb%} cis4 |
+  a2.%{\mydb%} g'4%{\mydb%} |
+  fis e d%{\mydb%} cis |
+  b a2.%{\mydb%} |
+  a2.%{\mydb%} d4%{\mydb%} ~ |
+  d a fis2%{\mydb%} |
+  g4 a%{\mydb%} d2 ~ |
+  d4%{\mydb%} r e fis%{\mydb%} |
+  fis fis e%{\mydb%} fis |
+  e d2.%{\mydb%} ~ |
+  d2%{\mydb%} r2 |
   R1*4 | r2. \bar "|." 
 }
 
@@ -585,7 +586,7 @@ bassWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
         \soprano
@@ -598,7 +599,7 @@ bassWords = \lyricmode {
         \sopranoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { << { \numericTimeSignature
         \mezzo
@@ -609,7 +610,7 @@ bassWords = \lyricmode {
         \mezzoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { << { \numericTimeSignature
         \alto
@@ -620,7 +621,7 @@ bassWords = \lyricmode {
         \altoWords
       }
     >>
-    \new Staff = "tenorstaff" \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
+    \new Staff = "tenorstaff" \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { << { \numericTimeSignature
         \tenor
@@ -631,7 +632,7 @@ bassWords = \lyricmode {
         \tenorWords
       }
     >>
-    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { << { \numericTimeSignature
         \bass
@@ -748,7 +749,7 @@ bassWords = \lyricmode {
       }>> }
     >>
 %}
-    \new Staff \with { instrumentName = #"Bitch" %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
         \soprano
@@ -759,7 +760,7 @@ bassWords = \lyricmode {
         \sopranoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Dörty" %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
         \mezzo
@@ -768,7 +769,7 @@ bassWords = \lyricmode {
         \mezzoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Ttö" %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
         \alto
@@ -777,7 +778,7 @@ bassWords = \lyricmode {
         \altoWords
       }
     >>
-    \new Staff \with { instrumentName = #"Fakbyd" %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
         \tenor
@@ -786,7 +787,7 @@ bassWords = \lyricmode {
         \tenorWords
       }
     >>
-    \new Staff \with { instrumentName = #"Wysr" %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+    \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
         \bass
