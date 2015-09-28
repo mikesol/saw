@@ -25,3 +25,28 @@ fugue = \relative c'' {
 
 \markup "fugue"
 \fugue
+
+sus = \relative c'' {
+  \key f \major
+  a2. fis4 |
+  g8 g r4 r2 |
+  g2. e4 |
+  f8 f r4 r2 |
+  c'2. a4 |
+  bes8 bes r4 r2 |
+}
+
+\markup "sus"
+\sus
+
+walkingbass = \relative c {
+  \key aes \major
+  \clef bass
+  aes4 bes c g8 ges |
+  f4 aes c b |
+  bes e, ees g |
+  aes 
+}
+
+\markup "walking bass"
+\walkingbass
