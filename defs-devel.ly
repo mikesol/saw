@@ -432,6 +432,13 @@ fffffuck = \markup {
 
 fffffuckd = #(make-dynamic-script fffffuck)
 
+ffffuck = \markup {
+  \concat { \dynamic ffff
+   \normal-text \fontsize #1.5 \raise #-0.5 \italic \bold uck! }
+}
+
+ffffuckd = #(make-dynamic-script ffffuck)
+
 fppInternal = \markup { \center-align
 \dynamic "fpp" }
 
