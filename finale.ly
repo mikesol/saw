@@ -43,6 +43,8 @@
 #(set-accidental-style 'modern-cautionary)
 
 rall = \mark \markup \italic "rall."
+rubato = \mark \markup \italic "rubato"
+piumosso = \mark \markup \italic "più mosso"
 moltorall = \mark \markup \italic "molto rall."
 
 myred = \once \override NoteHead #'color = #red
@@ -97,22 +99,31 @@ mFY = {}
   arranger = "arr. Mike Solomon"
 }
 
+maybeIntro = { }
+markIntro = { \partial 4 s4 }
+%maybeIntro = { s2. }
+%markIntro = { s1 }
+
 prefatoryMatter = {
   \autoBeamOff
 }
 
+
 marksChorale = {
   \tempo "Moderato" 4=68
   \time 4/4
-  %\partial 4
-  %s4 |
-  s1 |
-  s1*24 |
+  \markIntro
+  s1*14 |
+  \rubato
+  \unfoldChange #68 #64 #8
+  \unfoldChange #64 #68 #2 s2.
+  \mark "ord." s1 |
+  s1*7 |
 }
 
 sopranoChorale = \relative c' {
   \key aes \major
-  s2. ees4^\mp |
+  \maybeIntro ees4^\mp |
   aes ees c des |
   ees aes ~ aes ees |
   f ees8 des c4 des8 bes |
@@ -156,7 +167,7 @@ sopranoChoraleWords = \lyricmode {
 
 mezzoChorale = \relative c'' {
   \key aes \major
-  s2. r4 |
+  \maybeIntro r4 |
   R1*23 |
   r2. \breathe g4^\mf |
 }
@@ -168,7 +179,7 @@ mezzoChoraleWords = \lyricmode {
 altoChorale = \relative c {
   \clef "treble_8"
   \key aes \major
-  s2. r4 |
+  \maybeIntro r4 |
   R1 |
   ees2^\mp\startGroup ees\stopGroup |
   aes1 |
@@ -226,7 +237,7 @@ altoChoraleWords = \lyricmode {
 tenorChorale = \relative c' {
   \clef "treble_8"
   \key aes \major
-  s2. r4 |
+  \maybeIntro r4 |
   c4^\mp\startGroup des8 bes aes4\stopGroup bes\startGroup |
   des c bes aes\stopGroup |
   des4\startGroup c8 bes aes4\stopGroup f8\startGroup g |
@@ -281,7 +292,7 @@ tenorChoraleWords = \lyricmode {
 bassChorale = \relative c' {
   \clef "bass"
   \key aes \major
-  s2. r4 |
+  \maybeIntro r4 |
   R1*8 |
   des4^\mp\startGroup c8 bes aes4 g8 f |
   ees2 ees\stopGroup |
@@ -330,24 +341,34 @@ marksCinqVoix = {
   %\time 4/4
   s1*3 |
   \rall
-  \unfoldChange #68 #62 #8 |
+  << { \unfoldChange #68 #52 #8 \unfoldChange #66 #60 #6 | } { s1
   \time 3/4
-  \tempo "Adagio" 4=62
-  s2.*8 |
+  \tempo "Lento" 4=62
+  s2. } >>
+  << { s2.*1 |
+  \piumosso
+  s2. } { 
+  \unfoldChange #62 #66 #6 } >>
+  \unfoldChange #66 #64 #6
+  \unfoldChange #64 #66 #6
+  s2.*3 |
   \time 4/4
   \rall
-  \unfoldChange #62 #58 #16
-  \tempo "Lento" 4=58
-  s1*5 |
+  \unfoldChange #66 #54 #16
+  \tempo "Adagio" 4=64
+  s1 |
+  \rubato
+  \unfoldChange #64 #58 #4 \unfoldChange #58 #64 #4
+  s1*3 |
   \rall
-  \unfoldChange #58 #54 #8
+  \unfoldChange #64 #58 #8
   \time 3/4
-  \tempo "Larghetto" 4=54
+  \tempo "Larghetto" 4=58
   s2.*3 |
   \rall
-  \unfoldChange #54 #48 #6
+  \unfoldChange #58 #48 #6
   \time 4/4
-  \tempo "Largo" 4=48
+  \tempo "Largo" 4=50
   s1*2 |
   \rall
   \unfoldChange #48 #36 #16
@@ -372,7 +393,7 @@ sopranoCinqVoix = \relative c'' {
   d d d |
   d ( c ) b4 |
   g2. |
-  a4 g g4 |
+  a4 g8 r g4 |
   a2^\< a4 a |
   a2 a4 b |
   \key a \major
@@ -381,25 +402,25 @@ sopranoCinqVoix = \relative c'' {
   d2 d4 cis |
   b2 d |
   \key fis \major
-  cis2.^\< b4 |
-  ais4. r8 ais2 |
+  cis2.^\> b4 |
+  ais4.^\p r8 ais2^\< |
   \key d \major
-  b2^\ff g4 \glissando |
+  b2 g4 \glissando |
   fis'2 fis4 |
   eis2 eis4 ~ |
   eis8 e4 e4. |
   \key g \major
-  a2.^\< r4 |
+  a2.^\f^\< r4 |
   r d, ~ d8 r a'4 |
   a a8 a a4 a8 a |
   a4 fis d r8 ees |
   \key bes \major
-  bes'2^\fff ~ \times 2/3 { bes8 a bes } |
+  bes'2^\ff ~ \times 2/3 { bes8 a bes } |
   a2 ~ \times 2/3 { a8 gis a } |
   gis2. |
   g^\< |
   \key c \major
-  b4^\ffff g e f |
+  b4^\fff g e f |
   g b ~ b ees, |
 }
 
@@ -432,34 +453,34 @@ mezzoCinqVoix = \relative c'' {
   bes bes c |
   bes ( a ) gis |
   f4 e d |
-  f e ees |
+  f4 e8 r dis4 |
   f2^\< g4 ges |
   f ( e ) fis gis |
   \key a \major
   \times 2/3 { gis^\f ( g fis ) } \times 2/3 {  fis ( f ees } |
   d4 ) cis e4 ais |
   a ( gis ) b ais |
-  a2 ais |
+  a2 ais4 ( b ) |
   \key fis \major
-  ais2^\< ( a4 ) gis |
-  gis4. r8 g4 ( gis ~ |
+  ais2^\> ( a4 ) gis |
+  gis4.^\p r8 g4^\< ( gis ~ |
   \key d \major
-  gis4^\ff ) fis e4 \glissando |
+  gis4 ) fis e4 \glissando |
   d'2 cis4 |
   dis ( d ) cis |
   bis4 ( cis ) d ~ |
   \key g \major
-  d2^\< ~ d8 r gis,4 |
+  d2^\f^\< ~ d8 r gis,4 |
   gis8 a c b e d c b |
   ees d c b a eis' cis c |
   e d c b a aes g c |
   \key bes \major
-  d2.^\fff |
+  d2.^\ff |
   ees4 e f |
   ees e f ~ |
   f8^\< e8 ees4 d |
   \key c \major
-  \times 2/3 { g8^\ffff ges f } \times 2/3 { e ees d } d [ cis ] ees [ d ] |
+  \times 2/3 { g8^\fff ges f } \times 2/3 { e ees d } d [ cis ] ees [ d ] |
   \times 2/3 { cis d ees } \times 2/3 { d ees f } \times 2/3 { e ees d } \times 2/3 { fis f e }
 }
 
@@ -497,34 +518,34 @@ altoCinqVoix = \relative c' {
   a4 g aes |
   g2 e4 |
   c4 c b |
-  d d cis |
+  d d8 r cis4 |
   e4^\< ( ees ) %{ e2^\< %} e4 ees |
   d ( cis ) d f |
   \key a \major
   \times 2/3 { f^\f ( e ees ) } d4 ( cis |
   b ) b  d gis |
   fis2 g4 fis |
-  \times 2/3 { f ( fis g ) } \times 2/3 { gis ( g fis ) } |
+  \times 2/3 { f ( fis g ) } gis2 | %gis4. ( a8 ) | %\times 2/3 { gis ( g fis ) } |
   \key fis \major
-  eis2.^\< fis4 |
-  dis cis\startGroup dis e |
+  eis2.^\> fis4 |
+  dis^\p cis^\<\startGroup dis e |
   \key d \major
-  eis4\stopGroup^\ff ( c4 ) cis4 \glissando |
+  eis4\stopGroup ( c4 ) cis4 \glissando |
   ais'4 ( a ) dis,\startGroup |
   eis fis g\stopGroup |
   gis4\startGroup ais4. b8 |
   \key g \major
-  c8\stopGroup^\< b a g fis e d c |
+  c8^\f\stopGroup^\< b a g fis e d c |
   b a e' d g8 fis e fis ~ |
   fis fis4 d8 e gis fis g |
   b a gis fis f e4 a8 |
   \key bes \major
-  a4^\fff aes b |
+  a4^\ff aes b |
   c cis d |
   c2 cis8 c |
   b4^\< c b |
   \key c \major
-  c8^\ffff [ b ] bes [ a ] \times 2/3 { aes a bes } \times 2/3 { b c bes } |
+  c8^\fff [ b ] bes [ a ] \times 2/3 { aes a bes } \times 2/3 { b c bes } |
   \times 2/3 { a gis g } \times 2/3 { fis g gis } \times 2/3 { g a fis } \times 2/3 { a aes g } |
 }
 
@@ -564,34 +585,34 @@ tenorCinqVoix = \relative c' {
   f' f f |
   f2 cis4 |
   a g f |
-  c' b a |
+  c' b8 r a4 |
   c2^\< c4 c |
   b4 ( ais ) cis d |
   \key a \major
   d^\f ( b ) \times 2/3 { cis ( gis a } |
   f ) gis bes e |
-  cis4 ( c ) ees4. e8 |
+  cis4 ( c ) ees e |
   d4 ( dis ) \times 2/3 { e ( dis d ) } |
   \key fis \major
-  dis4^\< b ~ b d |
-  c4 r b ( c ) |
+  dis4^\> b ~ b d |
+  c4^\p r b^\< ( c ) |
   \key d \major
-  cis4^\ff gis\startGroup ais |
+  cis4 gis\startGroup ais |
   b c\stopGroup a ~ |
   a ais dis |
   d4 fis4. f8 |
   \key g \major
-  e8^\< d c b a2 ~ |
+  e8^\f^\< d c b a2 ~ |
   a8 fis4 g8 ~ g gis4 a8 ~ |
   a ais4 b8 c d c dis |
   gis fis e ees d4 c8 ges' |
   \key bes \major
-  f8^\fff d bes f g' d |
+  f8^\ff d bes f g' d |
   bes ges gis' fis c b |
   a' fis4 d8 b c8 |
   cis^\< d dis fis \times 2/3 { f8 e cis } |
   \key c \major
-  e^\ffff [ ees ] d [ cis ] \times 2/3 { c f, fis } g gis |
+  e^\fff [ ees ] d [ cis ] \times 2/3 { c f, fis } g gis |
   \times 2/3 { b bes a } \times 2/3 { gis a d } cis bes \times 2/3 { c b bes } | 
 }
 
@@ -622,7 +643,7 @@ bassCinqVoix = \relative c {
   \clef "bass"
   \key c \major
   c1 ~ |
-  c2 r4 c |
+  c2 r4 a |
   d e8 f g4 g, |
   c2 r4 gis8 e |
   a2 g4 |
@@ -632,7 +653,7 @@ bassCinqVoix = \relative c {
   f d bes |
   ees2 a,4 |
   d2. |
-  g,2 b4 |
+  g,4. r8 b4 |
   d2^\< d4 d |
   g,2 b4 e, |
   \key a \major
@@ -642,25 +663,25 @@ bassCinqVoix = \relative c {
   %{ e'4 a, c e, | %}
   g4 e' ~ e e, |
   \key fis \major |
-  fis4^\< cis'\startGroup dis disis |
-  eis4.\stopGroup r8 e4 ( a, ) |
+  fis4^\> cis'\startGroup dis disis |
+  eis4.^\p\stopGroup r8 e4^\< ( a, ) |
   \key d \major
-  d2^\ff fis4 |
+  d2 fis4 |
   b,2 b4 |
   c2 b4 |
   ais4 e' ( a, ) |
   \key g \major
-  d1^\< |
+  d1^\f^\< |
   d,2. e'8 d |
   c8 b a g fis2 ~ |
   fis8 d'4 a8 c b d f, |
   \key bes \major
-  bes2.^\fff ~ |
+  bes2.^\ff ~ |
   bes4 f bes ~ |
   bes bes'8 a gis4 |
   a bes4 g
   \key c \major
-  c,4^\ffff ~ \times 2/3 { c4 g8 ~ } \times 2/3 { g8 c4 ~ } \times 2/3 { c4 g8 } |
+  c,4^\fff ~ \times 2/3 { c4 g8 ~ } \times 2/3 { g8 c4 ~ } \times 2/3 { c4 g8 } |
   c8 cis d cis \times 2/3 { ais'8 fis a } d, cis |
 }
 
