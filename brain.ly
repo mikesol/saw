@@ -1,7 +1,6 @@
 %<ees d' f a f'> d bes c d bes
 %#(set-global-staff-size 14.14)
 #(set-global-staff-size 15.87)
-%{
 \paper {
   ragged-right = ##f
   left-margin = 0.75\in
@@ -9,7 +8,7 @@
   top-margin = 0.5\in
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
-  max-systems-per-page = #2
+  %max-systems-per-page = #2
 }
 \header{
   title = "If I Only Had a Brain"
@@ -20,7 +19,6 @@
   arranger = "arr. Mike Solomon"
   %arranger = "arr. (anon)"
 }
-%}
 %%%%%% ending with E major
 %%%%%% then D major
 %%%%%% then B major (if happy)
@@ -46,7 +44,9 @@ railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
   \breathe
 }
-myred = \once \override NoteHead #'color = #red
+
+%myred = \once \override NoteHead #'color = #red
+myred = {}
 
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
