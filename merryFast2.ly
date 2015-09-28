@@ -526,7 +526,7 @@ bass = \relative c {
   gis r g r |
   fis r cis' r |
   c r b r |
-  ais r fis r |
+  a r fis r |
   e r gis r |
   fis r cis' r |
   a r b r |
@@ -716,10 +716,10 @@ marksSecondPart = {
   \unfoldChange #220 #336 #128
   \tempo "Fast" 2=168
   s1*35 \bar "||"
-  \time 2/4
-  s2 |
+  %\time 2/4
+  s1 |
   \time 7/8
-  \tempo "Adagio rubato" 4=60
+  \tempo "Adagio rubato" 4=56
   s1*7/8 |
   \time 3/8
   s4. |
@@ -820,7 +820,7 @@ sopranoSecondPart = \relative c' {
   r d d |
   d r d4 d |
   r4 d d d |
-  R2 |
+  R1 |
   r16 fis,^\p^\< fis a   a cis cis e    gis^\> e e cis    a fis\! |
   r16 a^\<   a [ cis ] cis [ dis^\mf ] |
   r16 fis,^\p^\< a  [  cis ] cis [ e ] |
@@ -979,7 +979,7 @@ mezzoSecondPart = \relative c' {
   r gis gis |
   gis r gis4 gis |
   r4 gis gis gis |
-  R2 |
+  R1 |
   r16 d^\p^\< d e   e g g cis    e^\> cis cis bes    gis fis\!
   r16 e^\<   e [ g ]  g [ b^\mf ]
   r16 d,^\p^\< e   [ g ] g [ cis ]    |
@@ -1145,7 +1145,7 @@ altoSecondPart = \relative c'' {
   r fis fis |
   fis r fis4 fis |
   r4 fis fis fis |
-  R2 |
+  R1 |
   r16 b,^\p^\< b e    e g g a    d^\> a a g   e b\! |
   r16 e^\<    e [ g ] g [ gis^\mf ] |
   r16 b,^\p^\< e    [ g ]  g [ a ] |
@@ -1304,7 +1304,7 @@ tenorSecondPart = \relative c' {
   r b b |
   b r b4 b |
   r4 b b b |
-  R2 |
+  R1 |
   r16 a^\p^\< a cis    cis d d fis   ais^\> fis fis d cis a\! |
   r16 cis^\<    cis [ d ] d [  fis^\mf ] |
   r16 a,^\p^\< cis    [ d ] d [ fis ] |
@@ -1460,9 +1460,14 @@ bassSecondPart = \relative c {
   \times 2/3 { cis b eis, } |
   \times 2/3 { fis a cis } |
   b4^\< a gis fis |
-  d'4^\mf d d r |
-  d4. d8 ~ d2 |
-  d4. d8 ~ d4 gis, |
+  %e4^\mf d' d r |
+  %d4. d8 ~ d2 |
+  %d4. d8 ~ d4 gis, |
+  e4^\mf r d' r |
+  d r d r |
+  d r d g, |
+  %d4. d8 ~ d2 |
+  %d4. d8 ~ d4 gis, |
   b^\< bes fis a |
   gis f g fis |
   cis f e f |
@@ -1475,7 +1480,7 @@ bassSecondPart = \relative c {
   f gis g b |
   bes a cis d |
   dis d bes a |
-  R2 |
+  R1 |
   e2.--^\mf r8 |
   e4-- r8 |
   e4.-- ~ |
@@ -1522,7 +1527,7 @@ bassWordsSecondPart = \lyricmode {
   up go -- in' up and we're up
   go -- in' down and we're down
   the Wi -- zard of Oz is one be -- caue be -- cause be
-  Ha ha ha
+  Ha %{ha%} ha
   Ho ho
   cou -- ple
   \repeat unfold 49 ○
