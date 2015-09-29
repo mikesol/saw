@@ -715,17 +715,17 @@ marksSecondPart = {
   \unfoldChange #160 #220 #32
   \unfoldChange #220 #336 #128
   \tempo "Fast" 2=168
-  s1*35 \bar "||"
+  s1*35
   %\time 2/4
-  s1 |
+  s1 | \bar "||"
   \time 7/8
-  \tempo "Adagio rubato" 4=56
+  \tempo "Adagio rubato" 4=48
   s1*7/8 |
   \time 3/8
   s4. |
   s4. |
-  \time 9/8
-  s1*9/8 |
+  \time 7/8
+  s1*7/8 |
   \time 4/4
   \tempo "Really Fast" 2=200
   s1*4 \bar "|."
@@ -802,8 +802,8 @@ sopranoSecondPart = \relative c' {
   cis2 r |
   a ais |
   R1*3 |
-  ais'1^\p^\< ~ |ais1 ~ | ais1 ~ | ais1 ~ |ais1^\> ~ | ais1 ~ | ais1 ~ |ais1^\p |
-  a4^\mf a a r |
+  ais'1^\p^\< ~ |ais1 ~ | ais1 ~ | ais1 ~ |ais1^\> ~ | ais1 ~ | ais1 ~ |ais1^\p^\< ~ |
+  ais4^\mf a a r |
   a4. a8 ~ a2 |
   a4. a8 ~ a4. r8 |
   a2^\< gis2^\f ~ |
@@ -824,7 +824,7 @@ sopranoSecondPart = \relative c' {
   r16 fis,^\p^\< fis a   a cis cis e    gis^\> e e cis    a fis\! |
   r16 a^\<   a [ cis ] cis [ dis^\mf ] |
   r16 fis,^\p^\< a  [  cis ] cis [ e ] |
-  gis8^\mp [ g fis f ] e [ dis d cis ] c |
+  gis16.^\mp [ g fis f ] e [ dis d cis ] c8 |
   R1*4 |
 }
 
@@ -870,7 +870,7 @@ sopranoWordsSecondPart = \lyricmode {
   the won
   ful wiz
   wiz
-  Ha ha ha
+  %{Ha%} ha ha
   Ho Ho
   cou -- ple
   That's how we laugh the day a -- way in the mer -- ry old land
@@ -881,7 +881,7 @@ sopranoWordsSecondPart = \lyricmode {
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
-  the wiz the wi -- zard
+  the wiz the wiz the
   Won -- der -- ful the won -- der -- ful the won
 }
 
@@ -983,7 +983,7 @@ mezzoSecondPart = \relative c' {
   r16 d^\p^\< d e   e g g cis    e^\> cis cis bes    gis fis\!
   r16 e^\<   e [ g ]  g [ b^\mf ]
   r16 d,^\p^\< e   [ g ] g [ cis ]    |
-  e8^\mp [ ees d des ] c [ b bes a ] aes | 
+  e16.^\mp [ ees d des ] c [ b bes a ] aes8 | 
   R1*2 |
   r4. gis8^\espressivo ~ gis r8 r4 |
   R1 |
@@ -1039,7 +1039,7 @@ mezzoWordsSecondPart = \lyricmode {
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
-  the wiz the wi -- zard
+  the wiz the wiz the
   Won -- der -- ful the won -- der -- ful the won
   Oz
 }
@@ -1149,7 +1149,7 @@ altoSecondPart = \relative c'' {
   r16 b,^\p^\< b e    e g g a    d^\> a a g   e b\! |
   r16 e^\<    e [ g ] g [ gis^\mf ] |
   r16 b,^\p^\< e    [ g ]  g [ a ] |
-  d8^\mp [ des c ces ] b [ a aes g ] ges |
+  d16.^\mp [ des c ces ] bes [ a aes g ] ges8 |
   gis8^\f b gis e d a b dis  |
   e a, b f' \times 4/5 { fis f ees d c } |
   R1*2 |
@@ -1204,9 +1204,9 @@ altoWordsSecondPart = \lyricmode {
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
-  the wiz the wi -- zard
+  the wiz the wiz the
   Won -- der -- ful the won -- der -- ful the won
-  cra -- zy I'm be -- liev -- in' that the Wi -- zard is my one and on -- ly love
+  cra -- zy how I'm think -- in' that a Wi -- zard is a ter -- ri -- fy -- ing thing
 }
 
 tenorSecondPart = \relative c' {
@@ -1308,7 +1308,7 @@ tenorSecondPart = \relative c' {
   r16 a^\p^\< a cis    cis d d fis   ais^\> fis fis d cis a\! |
   r16 cis^\<    cis [ d ] d [  fis^\mf ] |
   r16 a,^\p^\< cis    [ d ] d [ fis ] |
-  ais8^\mp [ a gis g ] fis [ eis e dis ] d |
+  ais16.^\mp [ a gis g ] fis [ eis e dis ] d8 |
   R1*2 |
   r4. b8^\espressivo ~ b r8 r4 |
   R1 |
@@ -1368,7 +1368,7 @@ tenorWordsSecondPart = \lyricmode {
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
-  the wiz the wi -- zard
+  the wiz the wiz the
   Won -- der -- ful the won -- der -- ful the won
   Oz
 }
@@ -1484,7 +1484,7 @@ bassSecondPart = \relative c {
   e2.--^\mf r8 |
   e4-- r8 |
   e4.-- ~ |
-  e2. ~ e8 r4 |
+  e2 ~ e8 r4 |
   R1*3 |
   e'4^\espressivo^\mp r r2 |
 }
