@@ -38,80 +38,21 @@ prefatoryMatter = {
 }
 
 marksKOTF = {
-  \tempo "Adagio" 4=60
-  \time 4/4
-  \partial 4
-  s4 |
-  s1*2 |
-  \tempo "Andate" 4=72
-  s1*3 |
 }
 
 sopranoKOTF = \relative c'' {
-  r16 g8.^\p^\< |
-  gis4^\> \times 2/3 { b8^\mf cis b } d8 [ \times 2/3 { cis16 d cis ] } b8 gis |
-  b16 fis8. ~ fis4 ~ fis4. r8 |
-  r4 d' b2 |
-  r4 e b2 |
-  r4 cis b g |
-  gis4 \times 2/3 { b8^\mf cis b } d8 [ \times 2/3 { cis16 d cis ] } b8 gis |
-  b8 fis ~ fis4 ~ fis4. r8 |
-  r4 d' b2 |
-  r4 e b ais |
-  b d b cis ~ |
-  cis2. g4 |
-  ais4 \times 2/3 { b8^\mf cis b } d8 [ \times 2/3 { cis16 d cis ] } b8 gis |
 }
 
 sopranoKOTFWords = \lyricmode {
-  Wi -- zard
-  If I Were King of the Fo -- rest
-  not queen
-  not duke
-  not prince
-  Wi -- zard
 }
 
 mezzoKOTF = \relative c' {
-  r16 d8.^\p^\< |
-  << { dis1 } { s4^\> s2.^\p } >>  |
-  fis16^\mp cis8. ~ cis8 ais''^\pp ~ ais4. r8 |
-  r2. g,4 |
-  gis1 ~ |
-  gis4 ais g d |
-  e2 a4. e8 |
-  fis d ~ d4 ais''4. r8 |
-  R1 |
-  r2. fis,4 |
-  a2 gis ~ |
-  gis fis4 d |
-  f4 ~ \times 2/3 { f4 f8 ~ } \times 2/3 { f8 g f } \times 2/3 { aes g f ~ } |
-  \times 2/3 { f d4 } f8 d ~ d4. r8 |
 }
 
 mezzoKOTFWords = \lyricmode {
-  Wi -- zard
-  Fo -- rest Wiz
-  Wi -- zard
-  not queen
-  not prince
-  Wi -- zard
 }
 
 altoKOTF = \relative c' {
-  r16 c8.^\p^\< |
-  << { cis1 } { s4^\> s2.^\p } >>  |
-  dis16^\mp b8. ~ b4 ~ b4. r8 |
-  R1 |
-  r2. f'4 |
-  e fis f c |
-  cis2 fis4. d8 |
-  ees8 b ~ b4 ~ b4 cis |
-  r2. f4 |
-  e1 |
-  dis2 d |
-  dis e4 c |
-  dis1 |
 }
 
 altoKOTFWords = \lyricmode {
@@ -123,19 +64,6 @@ altoKOTFWords = \lyricmode {
 
 tenorKOTF = \relative c' {
   \clef "treble_8"
-  r16 aes8.^\p^\< |
-  << { a1 } { s4^\> s2.^\p } >> |
-  cis16^\mp gis8. ~ gis4 ~ gis4. r8 |
-  a1 ~ |
-  a1 ~ |
-  a4 a d aes |
-  b2 c8 e4 c8 ~ |
-  c8 g ~ g4 ~ g4. r8 |
-  a1 ~ |
-  a2. cis4 |
-  b2 e, |
-  a2. aes4 |
-  b1 |
 }
 
 tenorKOTFWords = \lyricmode {
@@ -147,21 +75,9 @@ tenorKOTFWords = \lyricmode {
 
 bassKOTF = \relative c {
   \clef "bass"
-  r16 bes8. |
-  b1 |
-  e16^\mp e8. ~ e4 ~ e4. r8 |
-  R1*2 |
-  r2. bes4 |
-  a2. r4 |
-  R1*4 r2. bes4 |
-  gis1 |
 }
 
 bassKOTFWords = \lyricmode {
-  Wi -- zard
-  Fo -- rest
-  Wi -- zard
-  Wi -- zard
 }
 
 
