@@ -1,7 +1,7 @@
 \version "2.19" 
 #(set-global-staff-size 18)
 nineBTheme = {
-  fis' a' gis' d' f' e' c' b dis'
+  fis' aes' g' d' f' e' c' b dis'
 }
 \header { title = "kotf9bscratch" }
 \paper {
