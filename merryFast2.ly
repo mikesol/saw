@@ -60,7 +60,7 @@ ord = \markup \italic "ord."
   repeated lick
   digs, scoops, etc
   rests in strange places...
-  
+
 %}
 
 \header {
@@ -73,6 +73,8 @@ ord = \markup \italic "ord."
 
 nothing = {}
 
+midihead = {\time 4/4 \tempo 2=60 s1 }
+
 marks = {
   \time 4/4
   \tempo "Freely" 2=60
@@ -80,6 +82,7 @@ marks = {
   \time 2/2
   \tempo "Fast" 2=168
   s1*96 \bar "||"
+  s1
 }
 
 prefatoryMatter = {
@@ -187,7 +190,7 @@ alto = \relative c'' {
   %x x x x
   %x x x x x
   % credit of 5 8ths here...
-  %b b a b gis e cis b 
+  %b b a b gis e cis b
   %gis b cis e
   %a b cis fis8.
   %e8. fis8. g8.
@@ -293,7 +296,7 @@ altoWords = \lyricmode {
   Now I wan -- na know
   You are my source of hope
   You are my te -- thered rope
-  With you I cope, no, 
+  With you I cope, no,
   You know that I ain't dope
   I ne -- ver mope when I got your
   E -- ver clea -- nin' soap
@@ -368,7 +371,7 @@ firstPropositionEndingLyrics = \lyricmode {
   \repeat unfold 3 { Ha ha ha Ho dee ho }
   Ha ha ha
   \repeat unfold 5 No
-  Show me the  
+  Show me the
 }
 
 comp = \relative c' {
@@ -400,7 +403,7 @@ comp = \relative c' {
   <d' e>4^\mf q <cis e> r |
   <b e>8 q4 <cis e>8 ~ q q8 q q |
   <d e> q q4 <cis e>8 q4 <b e>8 ~ |
-  \tupFrac \times 15/17 { q8 r <cis e>4 <d e> q <cis e> 
+  \tupFrac \times 15/17 { q8 r <cis e>4 <d e> q <cis e>
    <cis e> <b e> <b e> <cis e> <cis e>
   <cis e> <d e> <d e> <d e> <cis e>
   <cis e>4 <b e> } <d e>
@@ -479,48 +482,48 @@ bass = \relative c {
   \clef "bass"
   b4^\mf b2. ~  |
   b2 r |
-  R1 | \barNumberCheck #4
-  R1*24 | \barNumberCheck #28
+  R1 | %\barNumberCheck #4
+  R1*24 | %\barNumberCheck #28
   e,4^\< r gis r |
   a r ais r |
   b^\f r e r |
-  cis r b r | \barNumberCheck #32
+  cis r b r | %\barNumberCheck #32
   gis r e r |
   fis r a r |
   gis r cis r |
-  b r gis r | \barNumberCheck #36
+  b r gis r | %\barNumberCheck #36
   e r gis r |
   fis r ais r |
   cis r dis r |
-  e r dis r | \barNumberCheck #40
+  e r dis r | %\barNumberCheck #40
   cis r ais r |
   b r cis r |
   dis4 r e r |
-  fis r dis r | \barNumberCheck #44
+  fis r dis r | %\barNumberCheck #44
   cis r b r |
   gis r e r |
   fis r g r |
-  gis r cis r | \barNumberCheck #48
+  gis r cis r | %\barNumberCheck #48
   b r a r |
   gis r e r |
   fis r a r |
-  gis r b r | \barNumberCheck #52
+  gis r b r | %\barNumberCheck #52
   a r fis r |
   e r gis r |
   fis r a r |
-  gis r g r | \barNumberCheck #56
+  gis r g r | %\barNumberCheck #56
   fis r a r |
   gis r d' r |
   cis r c r |
-  b r gis r | \barNumberCheck #60
+  b r gis r | %\barNumberCheck #60
   a r cis r |
   b r gis r |
   fis r a r |
-  gis r b r | \barNumberCheck #64
+  gis r b r | %\barNumberCheck #64
   a r cis r |
   b r a r |
   gis r e' r |
-  cis r b r | \barNumberCheck #68
+  cis r b r | %\barNumberCheck #68
   gis r g r |
   fis r ais r |
   gis r g r |
@@ -568,7 +571,7 @@ bassWords = \lyricmode {
   ho And tra -- la la that's how we laugh the day a -- way in Oz
   No he's my Wi -- zard
   He's my lu -- min -- es -- cent won -- der Wiz of
-  Ha ha ha and ho ho ho and cou -- ple tra la las that's how we 
+  Ha ha ha and ho ho ho and cou -- ple tra la las that's how we
   laugh that's how we laugh the day a -- way right here in
   Oz the land of
   Ha ha Ho ho cou -- ple tra la las
@@ -617,6 +620,7 @@ bassWords = \lyricmode {
       }
     >>
   >>
+
   \layout {
     \context {
       \Voice
@@ -648,49 +652,12 @@ bassWords = \lyricmode {
   }
 }
 
-%%% MIDI
-
-\score {
-  \transpose c c \new ChoirStaff <<
-    \new DrumStaff \drummode { s1*3 \repeat unfold 97 { r4 hhc r4 hhc } }
-    \new Staff \with { midiInstrument = #"tenor sax" instrumentName = \ttoName %shortInstrumentName = #"Mk."
-} <<
-      \new Voice = "alto" { \numericTimeSignature
-        \alto
-      }
-      { \marks }
-      \new Lyrics \lyricsto "alto" {
-        \altoWords
-      }
-    >>
-    \new Staff \with { midiInstrument = #"baritone sax" instrumentName = \fakbydName %shortInstrumentName = #"R."
-} <<
-      \new Voice = "comp" { \numericTimeSignature
-        \comp
-      }
-      \new Lyrics \lyricsto "comp" {
-        \compWords
-      }
-    >>
-    \new Staff \with { midiInstrument = #"electric bass (finger)" instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
-} <<
-      \new Voice = "bass" { \numericTimeSignature
-        \bass
-      }
-      \new Lyrics \lyricsto "bass" {
-        \bassWords
-      }
-    >>
-  >>
-  \midi {}
-}
-
 %%%%% second part
 
 nothingSecondPart = {}
 
 marksSecondPart = {
-  
+
   \time 2/2
   \once \override Score.TimeSignature.stencil = ##f
   \set Score.currentBarNumber = #101
@@ -768,17 +735,17 @@ sopranoSecondPart = \relative c' {
   b4-- r \lo r8 \sh a-- r4 |
   r4 gis4-- r4 \lo r8 \sh dis'8-- |
   r2 d4-\bendAfter #-2 r4 |
-  \lo r8 \sh cis-. r4 r4 c-\bendAfter #-2 |
+  \lo r8 \sh cis-. r4 r4 c--%{\bendAfter #-2%} |
   r4 \lo r8 \sh b-. r2 |
-  cis4-\bendAfter #-2 r \lo r8 \sh dis-. r4 |
-  r4 d4^\mp-\bendAfter #-2 r4 \lo r8 \sh cis8-. |
-  r2 dis4-\bendAfter #-2 ^\crpoco r4 |
-  \lo r8 \sh e-. r4 r4 f-\bendAfter #-2 |
+  cis4--%{\bendAfter #-2%} r \lo r8 \sh dis-. r4 |
+  r4 d4^\mp--%{\bendAfter #-2%} r4 \lo r8 \sh cis8-. |
+  r2 dis4--%{\bendAfter #-2%} ^\crpoco r4 |
+  \lo r8 \sh e-. r4 r4 f--%{\bendAfter #-2%} |
   r4 \lo r8 \sh fis-. r2 |
-  g4-\bendAfter #-2 r \lo r8 \sh gis-. r4 |
-  r4 a4-\bendAfter #-2 r4 \lo r8 \sh fis8-. |
-  r2 g4-\bendAfter #-2 r4 |
-  \lo r8 \sh gis-. r4 r4 fis-\bendAfter #-2 |
+  g4--%{\bendAfter #-2%} r \lo r8 \sh gis-. r4 |
+  r4 a4--%{\bendAfter #-2%} r4 \lo r8 \sh fis8-. |
+  r2 g4--%{\bendAfter #-2%} r4 |
+  \lo r8 \sh gis-. r4 r4 fis--%{\bendAfter #-2%} |
   r4 \lo r8 \sh f-. r2 |
   e4-^^\f r4 r2 | % 1
   R1 |
@@ -790,7 +757,7 @@ sopranoSecondPart = \relative c' {
   }
   fis,4^\mp r fis fis | % 1
   r4. f8 ~ f f f f | % 2
-  fis4 fis fis r4 | % 3 
+  fis4 fis fis r4 | % 3
   g8 g4 g8 ~ g g g g | % 4
   gis8^\< gis gis4 gis gis8 gis8 ~ | % 5
   gis4 gis gis gis | % 6
@@ -814,9 +781,9 @@ sopranoSecondPart = \relative c' {
   gis2 a |
   d4 d d r |
   %%%%%%%%%%%%%%%%%%%%%%%%%%
-  d4. d4. 
+  d4. d4.
   d4 ~ | d8 d4.
-  d4 d | d 
+  d4 d | d
   r d d |
   d r d4 d |
   r4 d d d |
@@ -854,7 +821,7 @@ sopranoWordsSecondPart = \lyricmode {
   be -- bop's black beard bu -- bles
   Bus -- by's bi -- ble brings back blue
   Don't need a quiz
-  Look how he fiz -- 
+  Look how he fiz --
   zles gon -- na siz --
   le what a wiz
   we're say -- in'
@@ -916,10 +883,10 @@ mezzoSecondPart = \relative c' {
   r4 \lo r8 \sh fis-- r2 |
   g4-- r \lo r8 \sh e-- r4 |
   r4 eis-- r \lo r8 \sh a-- |
-  r2 eis4-\bendAfter #-2 r |
-  \lo r8 \sh fis-. r4 r4 dis-\bendAfter #-2 |
+  r2 eis4--%{\bendAfter #-2%} r |
+  \lo r8 \sh fis-. r4 r4 dis--%{\bendAfter #-2%} |
   r4 \lo r8 \sh eis-. r2 |
-  dis4-\bendAfter #-2 r4 \lo r8 \sh f-. r4 |
+  dis4--%{\bendAfter #-2%} r4 \lo r8 \sh f-. r4 |
   e4^\solo^\mf gis b2 |
   \lo a8 b4 \sh gis8 ~ \lo gis fis4 \sh fis8 |
   \lo e \sh e e4 \lo gis \sh b ~ b4 |
@@ -973,9 +940,9 @@ mezzoSecondPart = \relative c' {
   e2 e |
   gis4 gis gis r |
   %%%%%%%%%%%%%%%%%%%%%%%%%%
-  gis4. gis4. 
+  gis4. gis4.
   gis4 ~ | gis8 gis4.
-  gis4 gis | gis 
+  gis4 gis | gis
   r gis gis |
   gis r gis4 gis |
   r4 gis gis gis |
@@ -983,7 +950,7 @@ mezzoSecondPart = \relative c' {
   r16 d^\p^\< d e   e g g cis    e^\> cis cis bes    gis fis\!
   r16 e^\<   e [ g ]  g [ b^\mf ]
   r16 d,^\p^\< e   [ g ] g [ cis ]    |
-  e16.^\mp [ ees d des ] c [ b bes a ] aes8 | 
+  e16.^\mp [ ees d des ] c [ b bes a ] aes8 |
   R1*2 |
   r4. gis8^\espressivo ~ gis r8 r4 |
   R1 |
@@ -1011,14 +978,14 @@ mezzoWordsSecondPart = \lyricmode {
   day a -- way in the mer
   cold cause no
   ba -- by boy, beau, bare ba -- boo
-  big bell's bye -- bye, blessed be 
+  big bell's bye -- bye, blessed be
   Ha ha ha
   Ho ho ho
   And a cou -- ple of tra la las
-  That's how we laugh the day a -- way in the mer -- ry old land of  
+  That's how we laugh the day a -- way in the mer -- ry old land of
   Oz ha ha ha
   dew
-  Look how he fiz -- 
+  Look how he fiz --
   zles gon -- na siz --
   le what a wiz
   we're say -- in'
@@ -1058,7 +1025,7 @@ altoSecondPart = \relative c'' {
   gis2 fis4 fisis |
   \times 2/3 { gis8 gis a, } \lo b \sh a' \lo gis \sh fis r16 e ( fis e ) |
   g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
-  \lo g8 ( \sh e ~ e4 ~ e8 ) r \times 2/3 { e ( fis e ) } 
+  \lo g8 ( \sh e ~ e4 ~ e8 ) r \times 2/3 { e ( fis e ) }
   g4 ~ \times 2/3 { g8 a b } \lo cis8 ( b4 ) \sh gis8 \glissando |
   b2 ~ b8 r8 r16 gis a gis |
   b4 r r cis8 b |
@@ -1105,7 +1072,7 @@ altoSecondPart = \relative c'' {
   gis8 gis gis4 gis4 gis8 a ~ | % 3
   a2 ~ a8 r a4 | % 4
   ais4^\< ais ais r | % 5
-  ais4. ais8 ~ ais4 r8 ais ~ | %6 
+  ais4. ais8 ~ ais4 r8 ais ~ | %6
   ais4. ais8 ~ ais4 r4 | % 7
   ais4. ais8 ~ ais4 ais4^\mf | % 8
   R1 | % 1
@@ -1139,9 +1106,9 @@ altoSecondPart = \relative c'' {
   e2 dis |
   fis4 fis fis r |
   %%%%%%%%%%%%%%%%%%%%%%%%%%
-  fis4. fis4. 
+  fis4. fis4.
   fis4 ~ | fis8 fis4.
-  fis4 fis | fis 
+  fis4 fis | fis
   r fis fis |
   fis r fis4 fis |
   r4 fis fis fis |
@@ -1244,14 +1211,14 @@ tenorSecondPart = \relative c' {
   \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
   \lo gis \sh gis gis4 a fis |
   gis4 b cis c |
-  r4 b^\ord^\mp^\mordent r2 |
+  r4 b^\ord^\mp--%{^\mordent%} r2 |
   \lo r8 \sh cis-_^\crpoco r4 r2 |
-  cis4^\mordent r4 \lod r4. \sh c8-_ |
-  r2. d4^\mordent |
+  cis4--%{^\mordent%} r4 \lod r4. \sh c8-_ |
+  r2. d4--%{^\mordent%} |
   r2 \lo r8 \sh a-_ r4 |
-  r2 b4^\mordent r |
+  r2 b4--%{^\mordent%} r |
   \lod r4. \sh bes8-_ r2 |
-  r4 c^\mordent r2 |
+  r4 c--%{^\mordent%} r2 |
   \lo r8 \sh b-_ r4 r2 | % 1
   cis4^\f-^ r4 r2 | % 2
   r4 \transpose c c { << { \tonXA } { s4^\p } >> |
@@ -1298,9 +1265,9 @@ tenorSecondPart = \relative c' {
   b2 b |
   b4 b b r |
   %%%%%%%%%%%%%%%%%%%%%%%%%%
-  b4. b4. 
+  b4. b4.
   b4 ~ | b8 b4.
-  b4 b | b 
+  b4 b | b
   r b b |
   b r b4 b |
   r4 b b b |
@@ -1344,7 +1311,7 @@ tenorWordsSecondPart = \lyricmode {
   chat, chafe, chide, chime, chip, charm, chant, chug, chuck, chop, chew
   He's on the riz
   Don't need a quiz
-  Look how he fiz -- 
+  Look how he fiz --
   zles gon -- na siz --
   le what a wiz
   we're say -- in'
@@ -1375,7 +1342,7 @@ tenorWordsSecondPart = \lyricmode {
 %  You know the biz
 %  He's on the riz
 %  Don't need a quiz
-%  Look how he fiz -- 
+%  Look how he fiz --
 %  zles gon -- na siz --
 %  le as it is
 %  Oh what a wiz
@@ -1517,7 +1484,7 @@ bassWordsSecondPart = \lyricmode {
   You know the biz
   He's on the riz
   Don't need a quiz
-  Look how he fiz -- 
+  Look how he fiz --
   zles gon -- na siz --
   le what a wiz
   we're say -- in'
@@ -1628,42 +1595,77 @@ bassWordsSecondPart = \lyricmode {
   }
 }
 
+
 %%% MIDI
 
 \score {
+<<
   \transpose c c \new ChoirStaff <<
-    \new Staff \with { midiInstrument = #"alto sax" instrumentName = \bitchName %shortInstrumentName = #"M."
-} <<
-      \new Voice = "soprano" { << { \numericTimeSignature
-        \sopranoSecondPart
-      } {
-        \marksSecondPart
-      } >> }
-    >>
-    \new Staff \with { midiInstrument = #"trumpet" instrumentName = \dortyName %shortInstrumentName = #"E."
-} <<
-      \new Voice = "mezzo" { \numericTimeSignature
-        \mezzoSecondPart
-      }
-    >>
+    \new DrumStaff \drummode { \midihead s1*3 \repeat unfold 97 { r4 hhc r4 hhc } }
     \new Staff \with { midiInstrument = #"tenor sax" instrumentName = \ttoName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
-        \altoSecondPart
+        \midihead \alto
+      }
+      { \midihead \marks }
+      \new Lyrics \lyricsto "alto" {
+        \altoWords
       }
     >>
     \new Staff \with { midiInstrument = #"baritone sax" instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
-      \new Voice = "tenor" { \numericTimeSignature
-        \tenorSecondPart
+      \new Voice = "comp" { \numericTimeSignature
+        \midihead \comp
+      }
+      \new Lyrics \lyricsto "comp" {
+        \compWords
       }
     >>
     \new Staff \with { midiInstrument = #"electric bass (finger)" instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
-        \bassSecondPart
+        \midihead \bass
+      }
+      \new Lyrics \lyricsto "bass" {
+        \bassWords
       }
     >>
   >>
+  \transpose c c \new ChoirStaff <<
+    \new Staff \with { midiInstrument = #"alto sax" instrumentName = \bitchName %shortInstrumentName = #"M."
+} <<
+      \new Voice = "soprano" { << { \numericTimeSignature
+        \midihead #(skip-of-length marks) \sopranoSecondPart
+      } {
+        \midihead #(skip-of-length marks) \marksSecondPart
+      } >> }
+    >>
+    \new Staff \with { midiInstrument = #"trumpet" instrumentName = \dortyName %shortInstrumentName = #"E."
+} <<
+      \new Voice = "mezzo" { \numericTimeSignature
+        \midihead #(skip-of-length marks) \mezzoSecondPart
+      }
+    >>
+    \new Staff \with { midiInstrument = #"tenor sax" instrumentName = \ttoName %shortInstrumentName = #"Mk."
+} <<
+      \new Voice = "alto" { \numericTimeSignature
+        \midihead #(skip-of-length marks) \altoSecondPart
+      }
+    >>
+    \new Staff \with { midiInstrument = #"baritone sax" instrumentName = \fakbydName %shortInstrumentName = #"R."
+} <<
+      \new Voice = "tenor" { \numericTimeSignature
+        \midihead #(skip-of-length marks) \tenorSecondPart
+      }
+    >>
+    \new Staff \with { midiInstrument = #"electric bass (finger)" instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
+} <<
+      \new Voice = "bass" { \numericTimeSignature
+        \midihead #(skip-of-length marks) \bassSecondPart
+      }
+    >>
+  >>
+>>
   \midi {}
 }
+
