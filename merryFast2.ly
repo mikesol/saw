@@ -221,7 +221,8 @@ alto = \relative c'' {
   cis4 ais fis gis |
   ais fis b r |
   r2 \tupFrac \times 7/13 { ais2 b bis cis r1 gis2 a ais b r1. } |
-  r8 gis, b cis e a, c d |
+  \clef "treble_8"
+  r8 gis,, b cis e a, c d |
   f ais, cis fisis ~ fisis ais4 fisis8 |
   gis b, cis e a c, ees ais %{fis%} |
   %{ais%} r b4 cis8 b fis cis b |
@@ -229,8 +230,9 @@ alto = \relative c'' {
   a fis dis b cis e fis b8 |
   r b4 cis8 b gis fis b, |
   gis' b gis e ~ e a gis fis |
-  e4 e gis, r |
-  \times 4/5 { b4 r cis r e } |
+  e4 e e r |
+  \clef treble
+  \times 4/5 { b'4 r cis r e } |
   \times 4/5 { r fis r g \glissando e } |
   \times 15/17 { r4 g g g g
   g g g g g
@@ -1043,21 +1045,21 @@ altoSecondPart = \relative c'' {
   cis4-- r \lo r8 \sh d-- r4 |
   r4 cis4-- r4 \lo r8 \sh fis-- |
   \clef treble
-  r4 g4^\espressivo \lo r8 \sh gis8-- r4 |
-  g4^\espressivo \lo r8 \sh bes-- r4 eis,^\espressivo |
-  \lo r8 \sh e-- r4 g4^\espressivo \lo r8 \sh fis8-- |
-  r4 gis4^\espressivo \lo r8 \sh g8-- r4 |
-  gis4^\mp^\espressivo \lo r8 \sh a-- r4 eis^\espressivo |
-  \lo r8 \sh e-- r4 fis^\espressivo^\crpoco \lo r8 \sh c8-- |
-  r4 g'4^\espressivo \lo r8 \sh gis8-- r4 |
+  r4 g4--%{^\espressivo%} \lo r8 \sh gis8-- r4 |
+  g4--%{^\espressivo%} \lo r8 \sh bes-- r4 eis,--%{^\espressivo%} |
+  \lo r8 \sh e-- r4 g4--%{^\espressivo%} \lo r8 \sh fis8-- |
+  r4 gis4--%{^\espressivo%} \lo r8 \sh g8-- r4 |
+  gis4^\mp--%{^\espressivo%} \lo r8 \sh a-- r4 eis--%{^\espressivo%} |
+  \lo r8 \sh e-- r4 fis--%{^\espressivo%}^\crpoco \lo r8 \sh c8-- |
+  r4 g'4--%{^\espressivo%} \lo r8 \sh gis8-- r4 |
   %\mark "?"
-  eis4^\espressivo \lo r8 \sh g-- r4 fis^\espressivo |
-  \lo r8 \sh g-- r4 d^\espressivo \lo r8 \sh gis8-- |
-  r4 g4^\espressivo \lo r8 \sh fis8-- r4 |
+  eis4--%{^\espressivo%} \lo r8 \sh g-- r4 fis--%{^\espressivo%} |
+  \lo r8 \sh g-- r4 d--%{^\espressivo%} \lo r8 \sh gis8-- |
+  r4 g4--%{^\espressivo%} \lo r8 \sh fis8-- r4 |
   %\mark "?"
-  e4^\espressivo \lo r8 \sh fis-- r4 a^\espressivo |
-  \lo r8 \sh ais-- r4 a^\espressivo \lo r8 \sh g8-- |
-  r4 gis4^\espressivo \lo r8 \sh g8-- r4 |
+  e4--%{^\espressivo%} \lo r8 \sh fis-- r4 a--%{^\espressivo%} |
+  \lo r8 \sh ais-- r4 a--%{^\espressivo%} \lo r8 \sh g8-- |
+  r4 gis4--%{^\espressivo%} \lo r8 \sh g8-- r4 |
   %\mark "@"
   \lo gis8^\f-^^\> \sh b \lo gis \sh fis \lo e \sh cis \lo e \sh fis |
   \lo gis^\mp \sh b, \lo c \sh cis \lo d \sh b \lo ais \sh a |
