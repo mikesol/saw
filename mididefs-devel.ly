@@ -150,3 +150,4 @@ sh = #(define-music-function(parser location m)(ly:music?) #{ \shortSwung $m #})
 lod = #(define-music-function(parser location m)(ly:music?) #{ \longDottedSwung $m #})
 lodd = #(define-music-function(parser location m)(ly:music?) #{ \longDottedDottedSwung $m #})
 ssh = #(define-music-function(parser location m)(ly:music?) #{ \shortShortSwung $m #})
+quiet = { \once \set Staff.midiMinimumVolume = #0.0 \set Staff.midiMaximumVolume = #0.01 }
