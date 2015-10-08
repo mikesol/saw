@@ -1,5 +1,5 @@
 \version "2.19"
-#(set-global-staff-size 16)
+#(set-global-staff-size 15)
 \markup { "(6, 9, 1, 5, 4, 8, 10, 0, 3, 'TRIPLE')" \score { \new Staff { r4 <fis' \tweak #'font-size #-2 ais'> <a' \tweak #'font-size #-2 b'> <cis' \tweak #'font-size #-2 c''> <f' \tweak #'font-size #-2 cis''> <e' \tweak #'font-size #-2 d''> <gis' \tweak #'font-size #-2 dis''> <ais' \tweak #'font-size #-2 e''> <c' \tweak #'font-size #-2 f''> <dis' \tweak #'font-size #-2 fis''> } } }
 \markup { "(6, 9, 2, 4, 8, 7, 5, 0, 3, 'DOUBLE')" \score { \new Staff { r4 <fis' \tweak #'font-size #-2 ais'> <a' \tweak #'font-size #-2 b'> <d' \tweak #'font-size #-2 c''> <e' \tweak #'font-size #-2 cis''> <gis' \tweak #'font-size #-2 d''> <g' \tweak #'font-size #-2 dis''> <f' \tweak #'font-size #-2 e''> <c' \tweak #'font-size #-2 f''> <dis' \tweak #'font-size #-2 fis''> } } }
 \markup { "(6, 9, 4, 2, 1, 8, 7, 0, 3, 'DOUBLE')" \score { \new Staff { r4 <fis' \tweak #'font-size #-2 ais'> <a' \tweak #'font-size #-2 b'> <e' \tweak #'font-size #-2 c''> <d' \tweak #'font-size #-2 cis''> <cis' \tweak #'font-size #-2 d''> <gis' \tweak #'font-size #-2 dis''> <g' \tweak #'font-size #-2 e''> <c' \tweak #'font-size #-2 f''> <dis' \tweak #'font-size #-2 fis''> } } }

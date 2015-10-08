@@ -624,7 +624,7 @@ bassWords = \lyricmode {
     \new Staff = "tenorstaff" \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { << { \numericTimeSignature
-        \tenor
+        \tenorExperimental
       } {
         \nothing
       } >> }

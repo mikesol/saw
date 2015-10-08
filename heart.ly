@@ -140,7 +140,7 @@ arco = \markup \null
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\scorePrefatoryMatter
-        \keepWithTag #'lyrix { %{\Red%} \altoFirst }
+        \keepWithTag #'lyrix { \Red \altoFirst }
       }
       \new Lyrics \lyricsto "alto" {
         \altoWordsFirst
