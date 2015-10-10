@@ -70,8 +70,8 @@ marksKOTF = {
   %  no 5/4 here, need to cut double wait
   \tempo "plus fort" 4=60
   s1*3 |
-  \time 5/4
-  s1 \bar "!!" \tempo "lent" 4=44 s4 |
+  %\time 5/4
+  s2. \bar "!!" \tempo "lent" 4=44 s4 |
   \time 4/4
   s1 |
   \tempo "plus profond" 4=60
@@ -106,21 +106,21 @@ sopranoKOTF = \relative c' {
   \hairlenMed fisis4^\fp^\< |
   \set melismaBusyProperties = #'()
   gis16^\> [ ( gis gis gis gis gis gis gis ) ] r8\! << { \unset melismaBusyProperties gisis8 ~ gisis4 |
-  ais4 fis' a cis, |
-  eis e gis ais, |
-  c dis\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s4^\mp s2.^\p^\> s1 s4 s4^\pp } >>  r
+  ais4 \bblue fis' a \bblue cis, |
+  \bblue eis e \bblue gis \bblue ais, |
+  bis \bblue dis\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s4^\mp s2.^\p^\> s1 s4 s4^\pp } >>  r
   \key a \major
   g,4^\p^\< |
   a4 r\parend^\f ais4^\p fis'^\pp |
-  b,4^\mp a'^\pp^ ~ a^\< cis, |
-  f^\mf e gis \breathe ais,^\p |
+  b,4^\mp \bblue a'^\pp^ ~ \bblue a^\< \bblue cis, |
+  f^\mf \bblue e \bblue gis \breathe bes,^\p |
   c ees4^\> ~ ees2 ~ |
   ees2. r4\parend^\pp \key cis \major fisis,4^\< |
   ais2^\fp b4 fis'8^\pp^\< a |
-  bis,4 cis^\mf eis e |
-  gis ais, c dis ~ |
-  dis1 ~ |
-  dis2.\fermata r4 \key f \major g, |
+  bis,4 \bblue cis^\mf \bblue eis e |
+  \bblue gis \bblue ais, \bblue bis \bblue dis ~ |
+  \bblue dis1 ~ |
+  \bblue dis2 r4 \key f \major g, |
   b4 fis' c a' |
   cis,4 f ~ f2 ~ |
   f4 e4 ~ e gis ~ |
@@ -160,9 +160,12 @@ sopranoKOTF = \relative c' {
 
 sopranoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
-  the chip -- munks gen -- u -- flect to me. Though…
+  the chip -- munks gen -- uf -- lect to me. Though…
   I'd click my (my) heel
   show re -- spect to me the chip -- munks
+  The spar -- row's
+  spar -- row's wing
+  The chip -- munks gen -- uf -- lec -- ting
 }
 
 mezzoKOTF = \relative c' {
@@ -182,9 +185,9 @@ mezzoKOTF = \relative c' {
   gis2. r4\parend^\pp \key cis \major cisis,4^\< |
   fisis2^\fp fis^\< |
   gis2^\mf fis |
-  a4 cis, ~ cis eis |
-  e4 gis bes, bis |
-  dis2.\fermata r4 \key f \major d |
+  a4 \bblue cis, ~ \bblue cis \bblue eis |
+  e4 \bblue gis ~ \bblue gis2 ~ |
+  gis2 r4 \key f \major d |
   ges2 g |
   g2 fis4 a |
   cis, f ~ f2 ~ |
@@ -225,6 +228,8 @@ mezzoKOTF = \relative c' {
 mezzoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
   I'd click my heel
+  The spar -- row's wing
+  The chip -- munks uf -- lec -- ting
 }
 
 altoKOTF = \relative c' {
@@ -237,16 +242,16 @@ altoKOTF = \relative c' {
   dis2\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4 \key a \major
   c4^\p^\< |
   cis4 r\parend^\f << { d2 } { s4^\p s4^\< } >> |
-  e2^\mp fis4 a |
-  cis, eis e gis |
+  e2^\mp fis4 \bblue a |
+  \bblue cis, eis \bblue e \bblue gis |
   bes, c^\> ees c |
   ees c ees r4\parend^\pp \key cis \major
   bis4^\< |
   dis2^\fp bis^\<
   dis1^\mf ~ |
-  dis ~ |
-  dis | 
-  g2 fis4\fermata r \key f \major c4 |
+  dis4 fis a \bblue cis, ~  |
+  \bblue cis2 \bblue ais4 \bblue bis | 
+  \bblue dis2 r4 \key f \major c4 |
   ees2 e |
   ees1 ~ |
   ees4 r r2 |
@@ -288,6 +293,8 @@ altoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
   I'd click my heel
   would show re -- spect to me the \repeat unfold 3 { chip -- munks }
+  The spar -- row's wing
+  The chip -- munks uf -- lec -- ting
 }
 
 tenorKOTF = \relative c' {
@@ -305,12 +312,12 @@ tenorKOTF = \relative c' {
   cis1^\mp ~ |
   cis ~ |
   cis^\> ~ |
-  cis2.\fermata r4\parend^\pp \key cis \major gis4^\< |
+  cis2. r4\parend^\pp \key cis \major gis4^\< |
   cis2^\fp gis^\< |
   eis1^\mf ~ |
   eis ~ |
   eis ~ |
-  eis2.\fermata r4 \key f \major aes |
+  eis2 r4 \key f \major aes |
   c2 bes |
   a1 ~ |
   a2 fis4 a |
@@ -351,6 +358,7 @@ tenorKOTF = \relative c' {
 tenorKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
   I'd click my heel
+  The spar -- row's wing
 }
 
 bassKOTF = \relative c {
@@ -368,12 +376,12 @@ bassKOTF = \relative c {
   R1 |
   R1 |
   R1 |
-  r2.\fermata r4 \key cis \major ais^\< |
+  r2. r4 \key cis \major ais^\< |
   \hairtip gisis2.^\fp^\> r4\! |
   R1 |
   R1 |
   R1 |
-  r2.\fermata r4 \key f \major bes4 |
+  r2 r4 \key f \major bes4 |
   aes2. r4 |
   R1 |
   R1 |
@@ -414,6 +422,7 @@ bassKOTF = \relative c {
 bassKOTFWords = \lyricmode {
   If I (I I I I I I I)
   I'd click
+  The spa
 }
 
 
