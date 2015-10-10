@@ -117,16 +117,16 @@ sopranoKOTF = \relative c' {
   c ees4^\> ~ ees2 ~ |
   ees2. r4\parend^\pp \key cis \major fisis,4^\< |
   ais2^\fp b4 fis'8^\pp^\< a |
-  bis,4 \bblue cis^\mf \bblue eis e |
+  bis,4 \bblue cis \bblue eis^\mf e |
   \bblue gis \bblue ais, \bblue bis \bblue dis ~ |
-  \bblue dis1 ~ |
-  \bblue dis2 r4 \key f \major g, |
-  b4 fis' c a' |
-  cis,4 f ~ f2 ~ |
-  f4 e4 ~ e gis ~ |
-  gis bes, ~ bes c ~ |
-  c1 ~ |
-  c2\fermata r4 \key e \major g4 |
+  \hairtip \bblue dis1^\> ~ |
+  \bblue dis2 r4\! \key f \major \times 2/3 { r8 g,4^\mf } |
+  b4 \times 2/3 { fis'8^\p r4 } \times 2/3 { c2^\< a'4^\mf } |
+  cis,4^\p \bblue f^\< ~ f2 ~ |
+  f4^\f e4^\> gis bes, |
+  \bblue c1 ~ |
+  \bblue c1^\p ~ |
+  \bblue c2^\< r4\parend^\f \key e \major g4 |
   c4 fis8 a cis,4 f |
   d4 e ~ e dis ~ |
   dis d ~ d cis |
@@ -166,6 +166,9 @@ sopranoKOTFWords = \lyricmode {
   The spar -- row's
   spar -- row's wing
   The chip -- munks gen -- uf -- lec -- ting
+  His wife be Queen of May
+  show
+  The chip -- munks show
 }
 
 mezzoKOTF = \relative c' {
@@ -184,16 +187,16 @@ mezzoKOTF = \relative c' {
   gis^\> ~ |
   gis2. r4\parend^\pp \key cis \major cisis,4^\< |
   fisis2^\fp fis^\< |
-  gis2^\mf fis |
-  a4 \bblue cis, ~ \bblue cis \bblue eis |
-  e4 \bblue gis ~ \bblue gis2 ~ |
-  \bblue gis2 r4 \key f \major d |
-  ges2 g |
-  g2 fis4 a |
-  cis, f ~ f2 ~ |
-  f4 e gis2 ~ |
-  gis4 b, c ees ~ |
-  ees2\fermata r4 \key e \major d4 |
+  gis2^\mf^\> fis\p |
+  a4 \bblue cis,^\< ~ \bblue cis \bblue eis^\> |
+  e4 \bblue gis ~ \bblue gis2^\< ~ |
+  \bblue \hairtip gis2^\> r4\! \key f \major \times 2/3 { r8 d4^\mf } |
+  \times 2/3 { ges2 r4 } g2^\< |
+  g2^\> \bblue a4^\mf cis,^\p^\< |
+  \bblue f1 ~ |
+  \bblue f4^\f e gis bes, |
+  \bblue c4.^\> r8\parend^\p fis4 \bblue a^\< ~ |
+  \bblue a2 r4\parend^\f \key e \major d,4 |
   a'2 ais |
   a4 fis a cis, |
   f e gis ais, ~ |
@@ -230,6 +233,10 @@ mezzoKOTFWords = \lyricmode {
   I'd click my heel
   The spar -- row's wing
   The chip -- munks uf -- lec -- ting
+  His wife Queen May
+  chip -- munks show
+  The chip -- munks show
+  munks show
 }
 
 altoKOTF = \relative c' {
@@ -248,16 +255,16 @@ altoKOTF = \relative c' {
   ees c ees r4\parend^\pp \key cis \major
   bis4^\< |
   dis2^\fp bis^\<
-  dis1^\mf ~ |
-  dis4 fis a \bblue cis, ~  |
-  \bblue cis2 \bblue ais4 \bblue bis | 
-  \bblue dis2 r4 \key f \major c4 |
-  ees2 e |
-  ees1 ~ |
-  ees4 r r2 |
-  r2. fis4 |
-  a1 ~ |
-  a2\fermata r4 \key e \major c,4 |
+  dis1^\mf^\> ~ |
+  dis4 fis^\p a \bblue cis,^\< ~  |
+  << { \bblue cis2 } { s8 s4^\> } >> \bblue ais4^\mp \bblue bis | 
+  \bblue \hairtip dis2^\> r4\! \key f \major \times 2/3 { r8 c4^\mf } |
+  \times 2/3 { ees2 r4 } e2^\< |
+  ees1^\> ~ |
+  ees8^\pp r fis2.^\< |
+  \bblue a4^\mf cis,^\p \bblue f2^\< ~ |
+  << { \bblue f1^\> ~ | } { s2. s4^\< } >>
+  \bblue f2 r4\parend^\f \key e \major c4 |
   fis2 fisis |
   fis1 |
   r4 fis4 a cis, |
@@ -295,6 +302,8 @@ altoKOTFWords = \lyricmode {
   would show re -- spect to me the \repeat unfold 3 { chip -- munks }
   The spar -- row's wing
   The chip -- munks uf -- lec -- ting
+  His wife Queen May
+  The chip -- munks show
 }
 
 tenorKOTF = \relative c' {
@@ -314,16 +323,16 @@ tenorKOTF = \relative c' {
   cis^\> ~ |
   cis2. r4\parend^\pp \key cis \major gis4^\< |
   cis2^\fp gis^\< |
-  eis1^\mf ~ |
+  eis1^\mf^\> ~ |
   eis ~ |
-  eis ~ |
-  eis2 r4 \key f \major aes |
-  c2 bes |
-  a1 ~ |
-  a2 fis4 a |
-  cis, f e gis |
-  b, c ees2 |
-  r2\fermata r4 \key e \major gis |
+  << { eis^\p ~ | } { s2 s^\< } >>
+  \hairtip eis2^\> r4\! \key f \major \times 2/3 { r8 aes4^\mf } |
+  \times 2/3 { c2 r4 } bes2^\< |
+  \bblue a1^\> ~ |
+  \bblue a4^\p cis, \bblue f2^\< ~ |
+  f2. e4^\f^\> |
+  gis bes, \bblue c2 |
+  \bblue ees2^\< r4\parend^\f \key e \major gis |
   e'2 dis |
   b1 ~ |
   b2. r4 | 
@@ -359,6 +368,10 @@ tenorKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
   I'd click my heel
   The spar -- row's wing
+  His wife Queen
+  May
+  munks show
+  The chip -- munks show, show
 }
 
 bassKOTF = \relative c {
@@ -381,8 +394,8 @@ bassKOTF = \relative c {
   R1 |
   R1 |
   R1 |
-  r2 r4 \key f \major bes4 |
-  aes2. r4 |
+  r2 r4 \key f \major \times 2/3 { r8 bes4^\mf } |
+  \times 2/3 { aes2 r4 } r2 |
   R1 |
   R1 |
   R1 |
@@ -423,6 +436,7 @@ bassKOTFWords = \lyricmode {
   If I (I I I I I I I)
   I'd click
   The spa
+  His wife
 }
 
 
