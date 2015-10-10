@@ -187,7 +187,7 @@ mezzoKOTF = \relative c' {
   gis2^\mf fis |
   a4 \bblue cis, ~ \bblue cis \bblue eis |
   e4 \bblue gis ~ \bblue gis2 ~ |
-  gis2 r4 \key f \major d |
+  \bblue gis2 r4 \key f \major d |
   ges2 g |
   g2 fis4 a |
   cis, f ~ f2 ~ |
