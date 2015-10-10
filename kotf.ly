@@ -36,9 +36,19 @@ indy = #(make-articulation "downbow")
   arranger = "arr. Mike Solomon"
 }
 
+hairlenSmall = {
+  \hairlen #4
+}
+
+hairlenMed = {
+  \hairlen #8
+}
+
 prefatoryMatter = {
   \autoBeamOff
 }
+
+\defineBarLine "!!" #'("!!" "" "")
 
 marksKOTF = {
   \partial 4
@@ -47,62 +57,67 @@ marksKOTF = {
   s1 |
   \tempo "plus vif" 4=60
   s1*2 |
-  s2.
+  s2. \bar "!!"
     \tempo "lent" 4=44
     s4 |
   s1 |
   \tempo "plus animé" 4=60
-  s1*2 |
+  s1*3 |
   \time 5/4
-  s1 \tempo "lent" 4=44 s4
+  s1  \bar "!!" \tempo "lent" 4=44 s4
   \time 4/4
   s1 |
   %  no 5/4 here, need to cut double wait
   \tempo "plus fort" 4=60
   s1*3 |
   \time 5/4
-  s1 \tempo "lent" 4=44 s4 |
+  s1 \bar "!!" \tempo "lent" 4=44 s4 |
   \time 4/4
   s1 |
   \tempo "plus profond" 4=60
   s1*4 |
-  s2. \tempo "lent" 4=44 s4 |
+  s2. \bar "!!" \tempo "lent" 4=44 s4 |
   s1 |
   \tempo "plus dur" 4=60
   s1*4 |
   \time 3/4
-  s2 \tempo "lent" 4=44 s4 |
+  s2 \bar "!!" \tempo "lent" 4=44 s4 |
   \time 4/4
   s1 |
   \tempo "plus long" 4=60
   s1*4 |
   \time 3/4
-  s2 \tempo "lent" 4=44 s4 |
+  s2 \bar "!!" \tempo "lent" 4=44 s4 |
   \time 4/4
   s1 |
   \tempo "plus intense" 4=60
   s1*3 |
-  s2. \tempo "lent" 4=44 s4 |
+  s2. \bar "!!" \tempo "lent" 4=44 s4 |
   s1 |
   \tempo "plus rapide" 4=60
   s1*3 |
 }
 
+% not cot -- ton not chinz I'd com -- mand each
+% the chip -- munks gen -- u -- flect to me. Though...
+
 sopranoKOTF = \relative c' {
   \key fis \major
-  fisis4 |
-  gis2 r8 gisis8 ~ gisis4 |
+  \hairlenMed fisis4^\fp^\< |
+  \set melismaBusyProperties = #'()
+  gis16^\> [ ( gis gis gis gis gis gis gis ) ] r8\! << { \unset melismaBusyProperties gisis8 ~ gisis4 |
   ais4 fis' a cis, |
   eis e gis ais, |
-  c dis\fermata r
+  c dis\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s4^\mp s2.^\p^\> s1 s4 s4^\pp } >>  r
   \key a \major
-  g,4 |
-  a2 ais4 fis' |
-  b,4 a' ~ a cis, |
-  eis e gis ais, |
-  c dis2\fermata r4 \key cis \major fisis,4 |
-  ais2 b4 fis'8 a |
-  bis,4 cis eis e |
+  g,4^\p^\< |
+  a4 r\parend^\f ais4^\p fis'^\pp |
+  b,4^\mp a'^\pp^ ~ a^\< cis, |
+  f^\mf e gis \breathe ais,^\p |
+  c ees4^\> ~ ees2 ~ |
+  ees2. r4\parend^\pp \key cis \major fisis,4^\< |
+  ais2^\fp b4 fis'8^\pp^\< a |
+  bis,4 cis^\mf eis e |
   gis ais, c dis ~ |
   dis1 ~ |
   dis2.\fermata r4 \key f \major g, |
@@ -141,29 +156,34 @@ sopranoKOTF = \relative c' {
   ges ~ |
   ges ~ |
   ges2. r4 |
-  
 }
 
 sopranoKOTFWords = \lyricmode {
+  If I (I I I I I I I) were King
+  the chip -- munks gen -- u -- flect to me. Though…
+  I'd click my (my) heel
+  show re -- spect to me the chip -- munks
 }
 
 mezzoKOTF = \relative c' {
   \key fis \major
-  cisis4 |
-  dis2 r8 eis8 ~ eis4 |
+  \hairlenMed cisis4^\fp^\< |
+  \set melismaBusyProperties = #'()
+  dis16^\> [ ( dis dis dis dis dis dis dis ) ] r8\! \unset melismaBusyProperties << { eis8 ~ eis4 |
   eis1 ~ |
   eis ~ |
-  eis2\fermata  r4
+  eis2\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4
   \key a \major
-  d4 |
-  f2 fis |
-  gis1 ~ |
+  d4^\p^\< |
+  f4 r\parend^\f << { fis2 } { s4^\p s^\< } >> |
+  gis1^\mp ~ |
   gis ~ |
-  gis2.\fermata r4 \key cis \major cisis,4 |
-  fisis2 fis |
-  gis2 fis |
+  gis^\> ~ |
+  gis2. r4\parend^\pp \key cis \major cisis,4^\< |
+  fisis2^\fp fis^\< |
+  gis2^\mf fis |
   a4 cis, ~ cis eis |
-  e4 gis ais, bis |
+  e4 gis bes, bis |
   dis2.\fermata r4 \key f \major d |
   ges2 g |
   g2 fis4 a |
@@ -203,23 +223,27 @@ mezzoKOTF = \relative c' {
 }
 
 mezzoKOTFWords = \lyricmode {
+  If I (I I I I I I I) were King
+  I'd click my heel
 }
 
 altoKOTF = \relative c' {
   \key fis \major
-  bis4 |
-  cis2 r8 dis8 ~ dis4 |
+  \hairlenMed bis4^\fp^\< |
+  \set melismaBusyProperties = #'()
+  cis16^\> [ ( cis cis cis cis cis cis cis ) ] r8\! << { \unset melismaBusyProperties dis8 ~ dis4 |
   dis1 ~ |
   dis ~ |
-  dis2\fermata r4 \key a \major
-  c4 |
-  cis2 d |
-  e2 fis4 a |
+  dis2\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4 \key a \major
+  c4^\p^\< |
+  cis4 r\parend^\f << { d2 } { s4^\p s4^\< } >> |
+  e2^\mp fis4 a |
   cis, eis e gis |
-  ais, c dis\fermata r4 \key cis \major
-  bis4 |
-  dis2 bis
-  dis1 ~ |
+  bes, c^\> ees c |
+  ees c ees r4\parend^\pp \key cis \major
+  bis4^\< |
+  dis2^\fp bis^\<
+  dis1^\mf ~ |
   dis ~ |
   dis | 
   g2 fis4\fermata r \key f \major c4 |
@@ -261,24 +285,29 @@ altoKOTF = \relative c' {
 }
 
 altoKOTFWords = \lyricmode {
+  If I (I I I I I I I) were King
+  I'd click my heel
+  would show re -- spect to me the \repeat unfold 3 { chip -- munks }
 }
 
 tenorKOTF = \relative c' {
   \clef "treble_8"
   \key fis \major
-  gis4 |
-  a2 r8 b8 ~ b4 |
+  \hairlenMed gis4^\fp^\< |
+  \set melismaBusyProperties = #'()
+  a16^\> [ ( a a a a a a a ) ] r8\! << { \unset melismaBusyProperties b8 ~ b4 |
   cis1 ~ |
   cis ~ |
-  cis2\fermata r4
+  cis2\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >>  r4
   \key a \major
-  aes4 |
-  g2 gis |
-  cis1 ~ |
+  aes4^\p^\< |
+  g4 r\parend^\f << { gis2  } { s4^\p s4^\< } >> |
+  cis1^\mp ~ |
   cis ~ |
-  cis2.\fermata r4 \key cis \major gis4 |
-  cis2 gis |
-  eis1 ~ |
+  cis^\> ~ |
+  cis2.\fermata r4\parend^\pp \key cis \major gis4^\< |
+  cis2^\fp gis^\< |
+  eis1^\mf ~ |
   eis ~ |
   eis ~ |
   eis2.\fermata r4 \key f \major aes |
@@ -320,23 +349,27 @@ tenorKOTF = \relative c' {
 }
 
 tenorKOTFWords = \lyricmode {
+  If I (I I I I I I I) were King
+  I'd click my heel
 }
 
 bassKOTF = \relative c {
   \clef "bass"
   \key fis \major
-  ais4 |
-  b2. r4 |
+  \hairlenMed ais4^\fp^\< |
+  \set melismaBusyProperties = #'()
+  b16^\> [ ( b b b b b b b ) ] r8\! \unset melismaBusyProperties r8 r4 |
   R1 |
   R1 |
   r2\fermata r4
   \key a \major
-  bes4 |
-  bes2. r4 |
+  bes4^\p^\< |
+  bes4 r\parend^\f r2 |
   R1 |
   R1 |
-  r2.\fermata r4 \key cis \major ais |
-  gisis2. r4 |
+  R1 |
+  r2.\fermata r4 \key cis \major ais^\< |
+  \hairtip gisis2.^\fp^\> r4\! |
   R1 |
   R1 |
   R1 |
@@ -379,6 +412,8 @@ bassKOTF = \relative c {
 }
 
 bassKOTFWords = \lyricmode {
+  If I (I I I I I I I)
+  I'd click
 }
 
 

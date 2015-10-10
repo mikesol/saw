@@ -35,6 +35,17 @@ gSkip = {
   \once \override NoteHead #'no-ledgers = ##t
 }
 
+parend =
+#(define-event-function (dyn) (ly:event?)
+   (make-dynamic-script
+    #{ \markup \concat {
+         \normal-text \italic \fontsize #2 (
+	 \pad-x #0.2 #(ly:music-property dyn 'text)
+	 \normal-text \italic \fontsize #2 )
+       }
+    #}))
+
+
 hairtip = \once \override Hairpin #'circled-tip = ##t
 
 noStem = { \once \override Stem #'stencil = ##f \once \override Flag #'stencil = ##f }
@@ -423,7 +434,11 @@ subP = \markup { \center-align
 \normal-text { \italic { \italic sub } }
 \dynamic p }
 
-subPd = #(make-dynamic-script subP)
+subPP = \markup { \center-align
+\normal-text { \italic { \italic sub } }
+\dynamic pp }
+
+subPPd = #(make-dynamic-script subPP)
 
 fffffuck = \markup {
   \concat { \dynamic fffff
