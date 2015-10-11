@@ -1,3 +1,9 @@
+mtp =
+#(define-music-function (parser location tp) (integer?)
+#{
+  \set Score.tempoWholesPerMinute = #(ly:make-moment tp 4 0 0)
+#})
+
 unfoldSwing =
 #(define-music-function (parser location tp) (integer?)
 #{
