@@ -133,8 +133,9 @@ mezzo = \relative c' { \autoBeamOff
   \lod r4. \sh d8 \lo cis \sh d \lo fis \sh eis |
   \lo fis \sh a \lo gis \sh a d4-. r |
   R1 |
-  r8 eis,^\p^\< fis fisis gis4-.^\mf r |
-  r2 r8 cisis,^\p^\< dis disis |
+  %r8 eis,^\p^\< fis fisis gis4-.^\mf r |
+  r8 disis,^\p^\< eis fis fisis4-.^\mf fis-. |
+  r2 r8 cisis^\p^\< dis disis |
   eis4^\mf e dis d^\< |
   << { \pitchedTrill eis1\startTrillSpan fis
   eis4\stopTrillSpan-. } { s2.^\fp s4^\< s4^\f } >> r r2 |
@@ -155,7 +156,7 @@ mezzoWords = \lyricmode {
   cause cause
   The won -- der -- ful, the wiz of Oz
   the Wi -- zard won -- der -- ful the wiz of Oz
-  be -- cause be -- cause
+  be -- cause be -- cause, is
   he is the \repeat unfold 4 wiz
   Wi -- zard
 }

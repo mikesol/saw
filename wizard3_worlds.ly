@@ -12,8 +12,9 @@ wiz = \relative c' {
 \markup "main theme"
 \wiz
 
-fugue = \relative c'' {
+fugue = \relative c' {
   \partial 4
+  \clef bass
   \key c \minor
   g4 |
   ees f8 f g g aes4 |
@@ -23,7 +24,7 @@ fugue = \relative c'' {
   g c,
 }
 
-\markup "fugue"
+\markup "fugue (probably in the bass, chopped up)"
 \fugue
 
 sus = \relative c'' {
@@ -39,14 +40,22 @@ sus = \relative c'' {
 \markup "sus"
 \sus
 
-walkingbass = \relative c {
+scat = \relative c' {
   \key aes \major
-  \clef bass
-  aes4 bes c g8 ges |
-  f4 aes c b |
-  bes e, ees g |
-  aes 
+  \times 2/3 { bes8 c ees } g8 f r4 \times 2/3 { c8 ees f } |
+  bes aes \times 2/3 { ces, ees f } aes g
 }
 
-\markup "walking bass"
-\walkingbass
+\markup "scat (from merry)"
+\scat
+
+bam = \relative c' {
+  \key aes \major
+  r8 beses4. r8 g4. |
+  r8 aes4. r8 ces4. |
+  r8 bes4. r8 beses4. |
+  r8 aes4. r8 f4. |
+}
+
+\markup "BAM!"
+\scat
