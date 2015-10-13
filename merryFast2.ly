@@ -73,15 +73,12 @@ ord = \markup \italic "ord."
 
 nothing = {}
 
-midihead = {\time 4/4 \tempo 2=60 s1 }
+midihead = {\time 4/4 \tempo 2=168 s1 }
 
 marks = {
-  \time 4/4
-  \tempo "Freely" 2=60
-  s1*3 |
-  \time 2/2
   \tempo "Fast" 2=168
-  s1*96 \bar "||"
+  \time 2/2 |
+  s1*102 \bar "||"
   s1
 }
 
@@ -98,18 +95,15 @@ prefatoryMatter = {
 alto = \relative c'' {
   \prefatoryMatter
   \clef treble
-  b4^\mf b \times 2/3 { gis4^\f a gis } |
-  b2.^\fermata ( \times 2/3 { a8 b a ) } |
-  gis4 ( e ) d ( b ) |
-  d2 e ~ |
-  e4 r4 r2 |
-  r2. e4 ~ |
-  e4 r cis'2 ~ |
-  \times 2/3 { cis2 b cis }
-  gis4 ( fis e ) r |
-  R1 |
+  r4 b4 ( gis2 ) |
+  b1 ~ |
+  b \glissando
+  s1 |
+  s1 |
+  s2. \noStem b'4 |
+  R1*7 %7 |
   \clef "treble_8"
-  r2. gis,4 ~ |
+  r2. gis,,4 ~ |
   gis2 b4 cis |
   e4 e2. |
   d2 r2 |
@@ -292,7 +286,7 @@ endingPropositionOne = \relative c' {
 %}
 
 altoWords = \lyricmode {
-  o -- pen
+  o -- pen \skip 1
   Show me the way
   migh -- ty wi -- zard
   Now I wan -- na know
@@ -379,11 +373,15 @@ firstPropositionEndingLyrics = \lyricmode {
 comp = \relative c' {
   \prefatoryMatter
   \clef "treble_8"
-  <a cis e>4^\mf q2. ~ |
-  q2 r |
-  R1 |
-  R1*49 |
-  <d e>4^\f <d e> <cis e> r |
+  r4 <a cis e>2.^\mf |
+  q1 ~ |
+  q1\glissando |
+  s1 |
+  s1 |
+  s2.
+  \noStem <a' cis e>4 |
+  R1*49 %49 |
+  <d, e>4^\f <d e> <cis e> r |
   <b e>8 <b e>4 <cis e>8 ~ <cis e>4. r8 |
   R1*6
   <d e>4 <d e> <cis e> r |
@@ -423,7 +421,8 @@ comp = \relative c' {
 
 tenMel = \relative c {
   R1*3 |
-  R1*49 |
+  s1 s1 s1 |
+  R1*49 %49 |
   e4 gis b r |
   a8 b4 gis8 ~ gis4. r8 |
   R1*6
@@ -454,7 +453,7 @@ tenMel = \relative c {
 }
 
 compWords = \lyricmode {
-  o -- pen
+  o -- pen \skip 1
   Ha ha ha
   Ho dee ho
   Ha ha ha
@@ -482,38 +481,77 @@ compWords = \lyricmode {
 bass = \relative c {
   \prefatoryMatter
   \clef "bass"
-  b4^\mf b2. ~  |
-  b2 r |
-  R1 | %\barNumberCheck #4
-  R1*24 | %\barNumberCheck #28
-  e,4^\< r gis r |
+  r4 b2.^\mf |
+  b1 ~ |
+  b1 |
+
+  b4-- r b-- r |
+  b-- r b-- r |
+  b-- r b-- r |
+  b-- r b-- r |
+  %%%
+  b-- r bes r |
+  a r b r |
+  bes r a r |
+  gis r b r |
+  bes r b r |
+  bes r a r |
+  %%%
+  %gis r d' r |
+  %cis r bis r |
+  %cis r a r | 
+  %fis r c' r |
+  d r b r |
+  cis r c r |
+  %%%
+  b-- r b-- r |
+  b-- r b-- r |
+  b-- r bes r |
+  a r b r  |
+  bes r e r |
+  d r b r |
+  ais r a r |
+  g r d' r |
+  %%%
+  cis r c r |
+  b-- r b-- r |
+  b-- r bes r |
+  a r d r |
+  b r fis' r |
+  f r e r |
+  d r b r |
+  gis r a r |
+  %%%
+  ais r b-- r |
+  cis r d r |
+  cis r b r |
   a r ais r |
-  b^\f r e r |
-  cis r b r | %\barNumberCheck #32
-  gis r e r |
-  fis r a r |
-  gis r cis r |
-  b r gis r | %\barNumberCheck #36
-  e r gis r |
+  b r gis' r |
+  e r cis r |
+  b r cis r |
+  gis r g r |
+  %%%
   fis r ais r |
   cis r dis r |
-  e r dis r | %\barNumberCheck #40
+  e r dis r |
   cis r ais r |
   b r cis r |
-  dis4 r e r |
-  fis r dis r | %\barNumberCheck #44
+  dis r e r |
+  fis r dis r |
+  cis r c r |
+  %%%
+  b-- r b-- r |
+  b-- r b-- r |
+  b-- r c r |
   cis r b r |
-  gis r e r |
-  fis r g r |
-  gis r cis r | %\barNumberCheck #48
-  b r a r |
-  gis r e r |
-  fis r a r |
-  gis r b r | %\barNumberCheck #52
+  a r gis r |
+  fis r cis' r |
+  b r gis r |
   a r fis r |
+  %%%%%
   e r gis r |
   fis r a r |
-  gis r g r | %\barNumberCheck #56
+  gis r g r |
   fis r a r |
   gis r d' r |
   cis r c r |
