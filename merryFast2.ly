@@ -101,55 +101,36 @@ alto = \relative c'' {
   s1 |
   s1 |
   s2. \noStem b'4 |
-  R1*7 %7 |
+  R1*4 |
   \clef "treble_8"
-  r2. gis,,4 ~ |
-  gis2 b4 cis |
-  e4 e2. |
-  d2 r2 |
-  r2 r8 gis,8 b cis |
+  e,,4 e2. |
+  d1 |
+  r2. e4 |
   e8 d4 b8 ~ b e, fis gis |
-  b4 b ~ b8 e, fis gis |
-  ais8 a4 gis8 ~ gis ais, b cis |
-  e4 e d8 b gis r |
-  \clef "bass"
-  \times 4/5 { b4 bes a f e ~ } |
-  e
-    \clef treble
-    r4 r4 e''''4 ~  |
-  e-\bendAfter #-3 r
+  b4 b2. |
+  ais8 a4 gis8 ~ gis e fis fisis |
+  \times 8/9 { gis4 a b a
+  gis e cis b r } |
+  r2 e'2 |
   % 3 3 3 2 = 11
   \tupFrac
-  \times 9/14 { g,,2 e gis2 e a2 e ais2 }
-      b4 ~ |
-  b8 b ~ b4 ~ b4 a8 b |
-  gis e cis b gis a b cis |
+  \times 2/3 { fis e g }
+  \times 2/3 { e gis e }
+  ais b |
+  b1 |
+  gis8 e cis b gis a b cis |
   e4 fis r cis' ~ |
   cis b gis e |
-  \tupFrac
-  \times 4/7
-  {
-    r1
-    e'2. r4
-    cis2. r4
-    \times 2/3 { b1 dis,2 }
-    \times 2/3 { e gis b }
-    \times 2/3 { d1 cis2 }
-    \times 2/3 { b1 gis2 }
-    %%%%%d4 cis2 b2
-    %%%%%gis4 fis4 gis4
-  } |
-  b4 b2 a8 b |
-  gis e d b gis a b cis |
-  e4 fis r8 cis'4 b8 ~ |
-  b gis4 e8 ~ e r r8 fis ~ |
-  %fis
-  %fis2 r4 ^2 _4 ^2 _4 ^2 _4 ^2 _4 &4 &4 &4 where & is chromatic descent to target
-  % just thinking...
-  % no he is a won -- der ba -- by have -- n't you heard
-  % 16
-  \tupFrac
+  r2. e'4 ~ |
+  e2 r2 |
+  r4 b ~ b2 |
+  r4 d ~ d2 |
+  r4 fisis, gis cis |
+  b8 gis4 fis8 ~ fis gis4 a8 |
+  b8 gis fis e b cis e gis |
+  ais g fis e b cis e eis |
   \times 8/15 { fis1 r2 gis2 ~ gis g2 fis1 g2 gis1 a2 dis d cis } |
+  %%%% x8 x4 x8 r4 x8 x4 x8 r4 x8 x8 x8 x8 ...
   % and then why not...gumshoe!
   % b4 b a a gis gis8 fis ~ fis b4 \glissando b, b' \glissando b, b' \glissando b, b'8 cis b a gis fis e
   % but above, only do two slides, slower and can have complete bottom, so 2 in the space of three...
