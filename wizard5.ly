@@ -26,6 +26,21 @@ widedin = \once \override DynamicText . extra-spacing-width = ##f
   arranger = "arr. Mike Solomon"
 }
 
+%{
+  We're off to see the Wizard [1st theme] --- change 1st theme to "you know we're off to see..."
+  The Wonderful Wizard of Oz [(germanic Ich bette eine mark...)]
+  We hear he is a wiz of a wiz [.....    ..   ..]
+  If ever a wiz there was [^_^_^_^_^_^_^]
+  If ever oh ever a wiz there was [virtuoso]
+  The Wizard of Oz is one because [12/8 --.-.-.-.-.-. (minor key, piano, like what there would have been in the sucky version of nerve)]
+  Because because because because
+  Because
+  Because of the wonderful things he does
+  Wonderful things that he does
+  We're off to see the Wizard
+  The Wonderful Wizard of Oz
+%}
+
 swing = \markup \italic "sit swng"
 rall = \markup \italic "rall."
 accel = \markup \italic "accel."
@@ -339,7 +354,7 @@ bass = \relative c { \autoBeamOff
   r2. ais4^\mp |
   R1*4 |
   gis'4-.^\f r r2 |
-  r4 cis,-_ r2 |
+  r4 cis,32 c8..-_ r2 |
   r4 a'16-. a-. a-. a-. a4 ~ a8-. gis-. |
   g-. fis f4 ~ f4. fis16 g |
   gis8 g fis4
@@ -360,7 +375,7 @@ bassWords = \lyricmode {
   cause
   Oz
   wiz
-  Oz
+  of Oz
 }
 
 %%% SCORE

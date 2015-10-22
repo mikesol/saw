@@ -106,19 +106,20 @@ alto = \relative c'' {
   e,,4 e2. |
   d1 |
   r2. e4 |
-  e8 d4 b8 ~ b e, fis gis |
-  b4 b2. |
-  ais8 a4 gis8 ~ gis e fis fisis |
-  \times 8/9 { gis4 a b a
-  gis e cis b r } |
+  e8 d4 b8 ~ b fis gis4 |
+  b2 b2 |
+  ais8 a gis4 r8 e fis fisis |
+  %\times 8/9 { gis4 a b a
+  %gis e cis b r } |
+  gis4 a b a |
+  gis8 e ~ e4 d4. b8 |
   r2 e'2 |
-  % 3 3 3 2 = 11
-  \tupFrac
-  \times 2/3 { fis e g }
-  \times 2/3 { e gis e }
-  ais b |
-  b1 |
-  gis8 e cis b gis a b cis |
+  fis4. e8 ~ e4. g8 ~ |
+  g4. e8 ~ e2 |
+  gis2 e4. ais8 ~ |
+  ais4 ~ ais8 b ~ b2 ~ |
+  b8 b ~ b4 ~ b2 |
+  gis8 e dis cis b c cis4 |
   e4 fis r cis' ~ |
   cis b gis e |
   r2. e'4 ~ |
@@ -126,9 +127,9 @@ alto = \relative c'' {
   r4 b ~ b2 |
   r4 d ~ d2 |
   r4 fisis, gis cis |
-  b8 gis4 fis8 ~ fis gis4 a8 |
-  b8 gis fis e b cis e gis |
-  ais g fis e b cis e eis |
+  b8 gis4 fis8 ~ fis e4 fis8 |
+  gis a b cis b gis fis e |
+  a fis e cis b cis e eis |
   \times 8/15 { fis1 r2 gis2 ~ gis g2 fis1 g2 gis1 a2 dis d cis } |
   %%%% x8 x4 x8 r4 x8 x4 x8 r4 x8 x8 x8 x8 ...
   % and then why not...gumshoe!
@@ -136,17 +137,19 @@ alto = \relative c'' {
   % but above, only do two slides, slower and can have complete bottom, so 2 in the space of three...
   % in theory shouldn't have too much of the slow jerky stuff - need to field test
   b4 b a a |
-  gis gis8 fis ~ fis4 \tupFrac \times 3/4 { b2 \glissando
-      b,4 r b'2 \glissando b,4 r } b'8 cis b a gis fis |
-  gis4 r r2 |
-  r4. ais8 ~ ais b a b |
-  \tupFrac
-  \times 16/21 { e4 gis, a b %{%} e gis, a ais b %{%} e b d cis b fisis %{%} gis b gis e b e } |
-  r8 b'4 cis8 b gis fis b, |
-  gis'8 b gis \tupFrac \times 5/8 { e4 a gis fis } |
+  gis gis8 fis ~ fis e ~ e4 |
+  dis4 cis b8 gis4 b8 ~ |
+  b4 b'8 cis b a gis fis |
+  r4 gis r gis |
+  r gis gis r |
+  e'8 cis4 b8 ~ b4 r8 cis8 |
+  b4 gis4 r8 e4 fis8 |
+  gis a b cis b gis fis e |
+  fis e cis b ~ b cis e gis |
+  gis8 b gis fis ~ fis8 r a gis |
+  fis e r gis g fis e cis |
   R1 |
-  \clef "treble_8"
-  r2 r8 b4 b8 ~ |
+  r2 r8 b'4 b8 ~ |
   b8 b gis b gis e cis c |
   b cis dis e r b'4 b8 ~ |
   %%%%% space is 32
@@ -268,22 +271,16 @@ endingPropositionOne = \relative c' {
 
 altoWords = \lyricmode {
   o -- pen \skip 1
-  Show me the way
-  migh -- ty wi -- zard
-  Now I wan -- na know
-  You are my source of hope
-  You are my te -- thered rope
-  With you I cope, no,
-  You know that I ain't dope
-  I ne -- ver mope when I got your
-  E -- ver clea -- nin' soap
+  Source of hope
+  My te -- thered rope
+  I ain't dope, no,
+  Help me cope
+  Won -- der -- in do I mope
+  And I will tell you
   Nope
-  Wheel -- in deal -- in steal -- in that
-  % b b
-  Wi -- zard was a hap -- py lit -- tle won -- der for my spi -- rit
-  % cis b gis e
-  Let me hear it
-  % out of time
+  Wheel -- in deal -- in steal -- in the
+  Wi -- zard hap -- py lit -- tle won -- der -- ful spi -- rit
+  How I fear it!
   Wiz of Oz
   You know that he's one be -- cause
   be -- cause of all the
@@ -361,7 +358,7 @@ comp = \relative c' {
   s1 |
   s2.
   \noStem <a' cis e>4 |
-  R1*49 %49 |
+  R1*44 %49 |
   <d, e>4^\f <d e> <cis e> r |
   <b e>8 <b e>4 <cis e>8 ~ <cis e>4. r8 |
   R1*6
@@ -403,7 +400,7 @@ comp = \relative c' {
 tenMel = \relative c {
   R1*3 |
   s1 s1 s1 |
-  R1*49 %49 |
+  R1*44 %49 |
   e4 gis b r |
   a8 b4 gis8 ~ gis4. r8 |
   R1*6
@@ -475,43 +472,32 @@ bass = \relative c {
   a r b r |
   bes r a r |
   gis r b r |
-  bes r b r |
   bes r a r |
-  %%%
-  %gis r d' r |
-  %cis r bis r |
-  %cis r a r | 
-  %fis r c' r |
-  d r b r |
+  b r bes r |
+  a r d r |
   cis r c r |
   %%%
   b-- r b-- r |
   b-- r b-- r |
   b-- r bes r |
   a r b r  |
-  bes r e r |
+  bes r a r |
   d r b r |
   ais r a r |
-  g r d' r |
+  gis r d' r |
   %%%
   cis r c r |
   b-- r b-- r |
+  b-- r b-- r |
   b-- r bes r |
   a r d r |
-  b r fis' r |
-  f r e r |
-  d r b r |
-  gis r a r |
-  %%%
-  ais r b-- r |
+  cis r c r |
+  b r ais r |
+  b r c r |
   cis r d r |
-  cis r b r |
-  a r ais r |
-  b r gis' r |
-  e r cis r |
-  b r cis r |
-  gis r g r |
-  %%%
+  cis r c r |
+  b r gis r |
+  %%
   fis r ais r |
   cis r dis r |
   e r dis r |
