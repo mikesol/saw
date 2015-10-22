@@ -116,7 +116,7 @@ marksChorale = {
   \rubato
   \unfoldChange #68 #65 #8
   \unfoldChange #65 #68 #2 s2.
-  \mark "ord." s1 |
+  \mark \markup \italic "ord." s1 |
   s1*7 |
 }
 
@@ -766,8 +766,8 @@ altoFinalRepeat = \relative c'' {
   dis1^\ffffuckd ~ |
   dis2. gis,4\ff |
   gis2 ~ gis8 g ~ \times 2/3 { g a b ~ } |
-  b8 a16 g fis4 fis8 g a4 |
-  ais4 gis ~ gis8 cis b ais |
+  b8 b, a' gis eis gis \times 2/3 { fis cis dis } |
+  ais'4 gis ~ gis8 cis b ais |
   gis8 [ g ] fis [ f ] e4 ( dis ~ dis ) r4 |
 }
 
@@ -775,7 +775,7 @@ altoFinalRepeatWords = \lyricmode {
   Oz.
   The Won
   ma -- gi -- cal
-  Wiz of Oz Won -- der -- ful
+  The won -- der -- ful the ma -- gi -- cal
   Wiz the Won -- der -- ful
   Wi -- zard of
 }
