@@ -34,7 +34,7 @@ widedin = \once \override DynamicText . extra-spacing-width = ##f
   If ever oh ever a wiz there was [virtuoso]
   The Wizard of Oz is one because [12/8 --.-.-.-.-.-. (minor key, piano, like what there would have been in the sucky version of nerve)]
   Because because because because
-  Because
+  Because [lofy on music box]
   Because of the wonderful things he does
   Wonderful things that he does
   We're off to see the Wizard

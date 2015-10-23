@@ -90,9 +90,9 @@ mFY = {}
 }
 
 \header {
-  title = "Finale: Sit Ozfårs Wndrföl Wysr"
+  title = "Final: Sit Ozfårs Wndrföl Wysr"
   %subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "tu veux une finale ? voilà ta finale. t'es contente ?? t'es contente ?!?!? " }
-  subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "« une finale, ça donne envie d'applaudir, pas de gerber »" }
+  subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "« un final, ça donne envie d'applaudir, pas de gerber »" }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -766,7 +766,7 @@ altoFinalRepeat = \relative c'' {
   dis1^\ffffuckd ~ |
   dis2. gis,4\ff |
   gis2 ~ gis8 g ~ \times 2/3 { g a b ~ } |
-  b8 b, a' gis eis gis \times 2/3 { fis cis dis } |
+  b8 a, a' gis eis gis \times 2/3 { fis cis dis } |
   ais'4 gis ~ gis8 cis b ais |
   gis8 [ g ] fis [ f ] e4 ( dis ~ dis ) r4 |
 }
@@ -937,7 +937,7 @@ sopranoLastNoteDraftTwo = \relative c''' {
   b1 ~ |
   b1^\< ~ |
   b1^\> |
-  R1\!^\fermataMarkup |
+  R1\! |
   b1^\ppp^\< ~ |
   b1 ~ |
   b2^\fff r2^\longfermata |
@@ -954,7 +954,7 @@ mezzoLastNoteDraftTwo = \relative c'' {
   g^\< dis a' e |
   ais^\ff f e d |
   cis^\> d b e |
-  R1\!^\fermataMarkup |
+  R1\! |
   dis1^\ppp^\< ~ |
   dis ~ |
   dis2^\fff r2^\longfermata |
@@ -973,7 +973,7 @@ altoLastNoteDraftTwo = \relative c'' {
   ees^\< b c b |
   e^\ff c ais b |
   a^\> ais g c |
-  R1\!^\fermataMarkup |
+  R1\! |
   b1^\ppp^\< ~ |
   b ~ |
   b2^\fff r2^\longfermata |
@@ -994,7 +994,7 @@ tenorLastNoteDraftTwo = \relative c'' {
   bes^\< f fis gis |
   g a fis g |
   f^\> e d fis |
-  R1\!^\fermataMarkup |
+  R1\! |
   fis1^\ppp^\< ~ |
   fis ~ |
   fis2^\fff r2^\longfermata |
@@ -1014,7 +1014,7 @@ bassLastNoteDraftTwo = \relative c' {
   b1 ~ |
   b1^\< ~ |
   b1^\> |
-  R1\!^\fermataMarkup |
+  R1\! |
   b,1^\ppp^\< ~ |
   b1 ~ |
   b2^\fff r2^\longfermata |
