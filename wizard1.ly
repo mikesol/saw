@@ -10,7 +10,7 @@
   max-systems-per-page = #2
 }
 \header {
-  title = "The Wonderful Wizard of Oz" %(1)"
+  title = "Ouverture: The Wonderful Wizard of Oz" %(1)"
   subtitle = \markup { for Bill Evans, William Schuman, and Hugo Wolf }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
@@ -38,14 +38,14 @@ myBreak = { %{\break%} }
 
 #(ly:set-option 'point-and-click #f)
 
-%MyRed = \Red
-%MyBlack = \Black
-%myred = \once \override NoteHead.color = #red
-%myblack = \revert NoteHead.color
-MyRed = \revert NoteHead.color
-MyBlack = \revert NoteHead.color
-myred = \revert NoteHead.color
+MyRed = \Red
+MyBlack = \Black
+myred = \once \override NoteHead.color = #red
 myblack = \revert NoteHead.color
+%MyRed = \revert NoteHead.color
+%MyBlack = \revert NoteHead.color
+%myred = \revert NoteHead.color
+%myblack = \revert NoteHead.color
 
 marks = {
   \time 3/8

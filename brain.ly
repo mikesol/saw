@@ -45,8 +45,8 @@ railroad =  {
   \breathe
 }
 
-%myred = \once \override NoteHead #'color = #red
-myred = {}
+myred = \once \override NoteHead #'color = #red
+%myred = {}
 
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}

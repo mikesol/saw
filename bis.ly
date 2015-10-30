@@ -1111,7 +1111,7 @@ introtext = \markup \italic \fill-line { \center-column {
 "een... zwi... een...zwi...dri...dri+een..."
 }}
 
-%\introtext
+\introtext
 
 \score {
   \new ChoirStaff <<

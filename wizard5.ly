@@ -241,7 +241,6 @@ altoWords = \lyricmode {
   Wi -- zard of Oz, he is one be -- cause be -- cause
   he is the \repeat unfold 8 wiz
   Wi -- zard
-  
 }
 
 tenor = \relative c' { \autoBeamOff
