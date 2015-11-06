@@ -92,7 +92,8 @@ mFY = {}
 \header {
   title = "Final: Sit Ozfårs Wndrföl Wysr"
   %subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "tu veux une finale ? voilà ta finale. t'es contente ?? t'es contente ?!?!? " }
-  subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "« un final, ça donne envie d'applaudir, pas de gerber »" }
+  %subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "« un final, ça donne envie d'applaudir, pas de gerber »" }
+  subtitle = \markup \center-column { "for Marie Perbost" }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -122,6 +123,7 @@ marksChorale = {
 
 sopranoChorale = \relative c' {
   \key aes \major
+  \set Score.skipTypesetting = ##t
   \maybeIntro ees4^\mp |
   aes ees c des |
   ees aes ~ aes ees |
@@ -146,7 +148,7 @@ sopranoChorale = \relative c' {
   aes4 ees c des |
   ees aes ~ aes bes |
   c c8 c bes4 c8 bes |
-  aes2. \breathe g4^\mf |
+  aes2. \set Score.skipTypesetting = ##f \breathe g4^\mf |
 }
 
 sopranoChoraleWords = \lyricmode {
@@ -405,6 +407,7 @@ sopranoCinqVoix = \relative c'' {
   \key fis \major
   cis2.^\> b4 |
   ais4.^\p r8 ais2 ~ |
+  \set Score.skipTypesetting = ##t
   \key d \major
   ais4 b g8^\< [ fis ] |
   fis'2^\f fis4 |

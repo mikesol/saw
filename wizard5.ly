@@ -103,6 +103,9 @@ soprano = \relative c'' { \autoBeamOff
   R1 |
   r4 e,16-. e-. e-. e-. e2 ~ |
   e4. r8 r2 |
+  r2 r16 gis a ais b b b b |
+  b4. bes8 a16 b bes8 a-. gis-. |
+  g a16 ais b4
 }
 
 sopranoWords = \lyricmode {
@@ -157,7 +160,8 @@ mezzo = \relative c' { \autoBeamOff
   R1 |
   R1 |
   r4 r16 e fis g gis16-. gis16-. gis16-. gis16-. gis4 ~ |
-  gis8-. g-. fis16 gis g8-. fis8-. eis8-. e4 |
+  gis8-. g-. fis16 gis g8-. fis8-. r r16 b c cis |
+  d d d d 
 }
 
 mezzoWords = \lyricmode {
@@ -218,9 +222,8 @@ alto = \relative c' { \autoBeamOff
   cis4^\f-. r r2 |
   R1 |
   r2 dis16-. dis-. dis-. dis-. dis8 d-. |
-  cis16 dis d8-. cis-. c-. b4 r |
-  fis'16-. fis-. fis-. fis-. fis4 ~ fis8 eis-. e16 fis eis8-. |
-  e8-. dis-.
+  cis16 dis d8-. cis-. c-. b4 fis'16-. fis-. fis-. fis-. |
+  fis4 ~ fis8 eis-. e16 fis eis8-. e8-. dis-. |
 }
 
 altoWords = \lyricmode {
@@ -288,10 +291,10 @@ tenor = \relative c' { \autoBeamOff
   b4-.^\f r r2 |
   R1 |
   bis16-.-^^\> bis-. bis-. bis-. bis4^\mp ~ bis8-. b-. ais16 bis b8-. |
-  ais8-. a-. gis4 r2 |
-  r2. d'16 d d d |
-  d4 ~ d8-. cis-. c16 d cis8-. c8-. b-. |
-  ais4 r
+  ais8-. a-. gis8 a16 ais b8 bis16 cis d4 |
+  r2 r8 d16 d d d d8 ~ |
+  d4 cis8-. c16 d cis8-. c8-. b-. ais8 ~ |
+  ais16 d cis c b8 ais a16 a a a a4
 }
 
 tenorWords = \lyricmode {

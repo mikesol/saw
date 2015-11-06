@@ -7,7 +7,7 @@
   top-margin = 0.5\in
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
-  max-systems-per-page = #2
+  %max-systems-per-page = #2
 }
 \header {
   title = "Ouverture: The Wonderful Wizard of Oz" %(1)"
@@ -17,7 +17,7 @@
   arranger = "arr. Mike Solomon"
 }
 
-myBreak = { %{\break%} }
+myBreak = { \break }
 
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
@@ -38,14 +38,14 @@ myBreak = { %{\break%} }
 
 #(ly:set-option 'point-and-click #f)
 
-MyRed = \Red
-MyBlack = \Black
-myred = \once \override NoteHead.color = #red
-myblack = \revert NoteHead.color
-%MyRed = \revert NoteHead.color
-%MyBlack = \revert NoteHead.color
-%myred = \revert NoteHead.color
+%MyRed = \Red
+%MyBlack = \Black
+%myred = \once \override NoteHead.color = #red
 %myblack = \revert NoteHead.color
+MyRed = \revert NoteHead.color
+MyBlack = \revert NoteHead.color
+myred = \revert NoteHead.color
+myblack = \revert NoteHead.color
 
 marks = {
   \time 3/8
