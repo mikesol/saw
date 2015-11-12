@@ -2,13 +2,13 @@
 
 vOne = \relative c' {
   R1 |
-  e16-.^\p^\< e-. e-. e-. e4^\mf d16-. d-. d-. d-. d4 |
+  e16-.^\p^\< e-. e-. e-. e4^\mf s2 |
   s1 |
   s1 |
   s1 |
-  s1 |
-  ais'16-. ais-. ais-. ais-. ais4 ~ ais8 a gis16 ais a8 |
-  gis8 g fis4 s2 |
+  s2. ais'16-. ais-. ais-. ais-. |
+  ais4 ~ ais8 a gis16 ais a8 gis8 g |
+  fis4 s2. |
   s2. r16 cis dis e |
   eis16 eis eis eis eis4 ~ eis8 e dis16 eis e8 |
 }
@@ -17,11 +17,11 @@ vTwo = \relative c' {
   R1 |
   r4 dis16-. dis-. dis-. dis-. dis4 r |
   r16 d e eis fis-. fis-. fis-. fis-. fis4. r8 |
-  s1 |
-  s2. gis16-. gis-. gis-. gis-. |
+  r16 cis dis e f-. f-. f-. f-. f4. e8 |
+  ees16 f e8 ees d cis c gis'16-. gis-. gis-. gis-. |
   gis4 ~ gis8 g fis16 gis g8 fis8 f |
-  e8 f16 fis g4 ~ g4 b16-. b-. b-. b-. |
-  b4. ais8 a16 b ais8 a gis16 ais |
+  e8 f16 fis g4 ~ g4 s4 |
+  b16-. b-. b-. b-. b8 ais8 a16 b ais8 a gis16 ais |
   a8 gis g16 a gis8 g fis eis fis |
   g4. r8 r2 |
   

@@ -123,7 +123,7 @@ marksChorale = {
 
 sopranoChorale = \relative c' {
   \key aes \major
-  \set Score.skipTypesetting = ##t
+  %\set Score.skipTypesetting = ##t
   \maybeIntro ees4^\mp |
   aes ees c des |
   ees aes ~ aes ees |
@@ -148,7 +148,7 @@ sopranoChorale = \relative c' {
   aes4 ees c des |
   ees aes ~ aes bes |
   c c8 c bes4 c8 bes |
-  aes2. \set Score.skipTypesetting = ##f \breathe g4^\mf |
+  aes2. %{\set Score.skipTypesetting = ##f%} \breathe g4^\mf |
 }
 
 sopranoChoraleWords = \lyricmode {
@@ -407,7 +407,7 @@ sopranoCinqVoix = \relative c'' {
   \key fis \major
   cis2.^\> b4 |
   ais4.^\p r8 ais2 ~ |
-  \set Score.skipTypesetting = ##t
+  %\set Score.skipTypesetting = ##t
   \key d \major
   ais4 b g8^\< [ fis ] |
   fis'2^\f fis4 |

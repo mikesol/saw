@@ -17,10 +17,12 @@
 widedin = \once \override DynamicText . extra-spacing-width = ##f
 #(ly:set-option 'point-and-click #f)
 
+thought = \markup \italic \column { pensée "(pas chantée)" }
+
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
   %subtitle = \markup { for Carl Stalling, Raymond Scott, Дмитрий ШостаковичN and Béla Bartók }
-  subtitle = \markup { for Carl Stalling and Vadim Petrov }
+  subtitle = \markup { for Karl King, Carl Stalling and Vadim Petrov }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -46,10 +48,22 @@ rall = \markup \italic "rall."
 accel = \markup \italic "accel."
 nothing = {}
 
+%{
+%}
+
+
+secOne = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "L'entrée des clowns" }
+secTwo = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "La contorsioniste" }
+secThree = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Le funambule" }
+secFour = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Le défilé des animaux (pour Maija)" }
+secFive = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "La danseuse" }
+secSix = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "L'homme-canon" }
+
 marks = {
   \time 4/4
   \partial 4.
   \tempo "Presto" 4=216
+  \secOne
   s4. |
   s1*30 |
   s2 \mark \rall \unfoldChange #216 #140 #12 |
@@ -60,9 +74,24 @@ marks = {
   \set Score.tempoWholesPerMinute = #(ly:make-moment 200 4 0 0)
   s1 |
   \tempo "Adagio" 4=68
-  s1 |
+  \secTwo
+  s1*9 |
+  \tempo "Andante" 4=92
+  \secThree
+  s1*4 |
+  \tempo "Cadenza"
+  s1*4 |
+  \tempo "Lento" 4=48
+  s1*4 |
+  \tempo "Allegro" 4.=152
+  \time 12/8
+  \secFour
+  s1.*3 |
+  \mark \rall
+  s1.*2 |
+  \tempo "Moderato" 4.=112 |
+  s1. |
 }
-
 prefatoryMatter = {
   \key cis \major
   #(set-accidental-style 'modern-cautionary)
@@ -101,11 +130,26 @@ soprano = \relative c'' { \autoBeamOff
   << { \afterGrace \pitchedTrill gis1\startTrillSpan a { fisis32 [ gis ] } |
   cis4\stopTrillSpan-. } { s2.^\fp s4^\< s4^\f } >> r r2 |
   R1 |
-  r4 e,16-. e-. e-. e-. e2 ~ |
-  e4. r8 r2 |
-  r2 r16 gis a ais b b b b |
-  b4. bes8 a16 b bes8 a-. gis-. |
-  g a16 ais b4
+  e,16-. e-. e-. e-. e4 ~ e2 |
+  bis16-. bis-. bis-. bis-. bis4 r d8 dis  |
+  e16-. e-. e-. e-. e8 dis d16 e fis g gis-. gis-. gis-. gis-. |
+  gis4. g8 fis16 gis g8 fis eis ~ |
+  eis16-. eis-. eis-. eis-. eis8 e ~ e ees16 d cis-. cis-. cis-. cis-. |
+  cis8 c b16 cis c8 b bes a16 b bes8 |
+  a gis r4 r2 |
+  ais4 a cis16-. cis-. cis-. cis-. bis8-. r |
+  dis16 cisis dis cisis dis cisis dis cisis dis cisis dis cisis dis cis bis b |
+  ais-. r r8 r4 r4 c8-. r |
+  dis16 cisis dis cisis dis dis d cis bis r r8 r4 |
+  r8.. bis'32 bis8. r16 r8.. dis32 dis8. r16 |
+  r8 b' b4 ~ b8 [ ais ] gis16 [ fis eis fis ] |
+  gis [ fis eis dis cisis bis cisis dis eis dis cisis bis ais gisis ais b ] |
+  ais [ cisis eis gis ] cisis, [ eis gis b ] eis, [ gis b d ] gis, [ b d ees ] |
+  d4^\trill d32. [ cis c b bes a ais b ais a aes g fis f e eis ] |
+  fis2 r8 g fis f |
+  e2 r8 f e dis |
+  cisis2. r4 |
+  r16 dis [disis eis ] fis [ fisis gis ] r16 r4^\fermata a16-.^\thought r8.^\fermata |
 }
 
 sopranoWords = \lyricmode {
@@ -159,9 +203,28 @@ mezzo = \relative c' { \autoBeamOff
   eis4\stopTrillSpan-. } { s2.^\fp s4^\< s4^\f } >> r r2 |
   R1 |
   R1 |
-  r4 r16 e fis g gis16-. gis16-. gis16-. gis16-. gis4 ~ |
-  gis8-. g-. fis16 gis g8-. fis8-. r r16 b c cis |
-  d d d d 
+  r4 r16 d e eis fis-. fis-. fis-. fis-. fis4 ~ |
+  fis8 f e16 fis f8 e dis4 d16 cis |
+  bis-. bis-. bis-. bis-. bis8 b ais a b'16-. b-. b-. b-. |
+  b4. ais8 a16 b ais8 a gis16 ais |
+  a8 gis g16 a gis8 g fis eis8 fis |
+  g4 r8 d ~ d8 cis bis d |
+  cis4 bis eis16-. eis-. eis-. eis-. eis8-. r |
+  fis16 eis fis eis fis eis fis eis fis eis fis eis fis r16 r8 |
+  r2. fis8-. r |
+  fis16 eis fis eis fis r16 r8 r16 dis disis eis fis dis d cis |
+  bis4-. r r2 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  r4.. eis32-^ eis32-^ r2^\longfermata |
+  r2. r4. ais8 ais ais |
+  gis8 ais gis fis4 gis8 ais4 b8 ais4 gis8 |
+  fis4 eis8
 }
 
 mezzoWords = \lyricmode {
@@ -221,9 +284,27 @@ alto = \relative c' { \autoBeamOff
   dis4^\f-. r r2 |
   cis4^\f-. r r2 |
   R1 |
-  r2 dis16-. dis-. dis-. dis-. dis8 d-. |
-  cis16 dis d8-. cis-. c-. b4 fis'16-. fis-. fis-. fis-. |
-  fis4 ~ fis8 eis-. e16 fis eis8-. e8-. dis-. |
+  r4 d16-. d-. d-. d-. d4 r |
+  R1 |
+  r4 d16-. d-. d-. d-. d8 cis c16 d cis8 |
+  c b ais16 c b8 bes a gis a ~ |
+  a4. r8 c4. r8 |
+  c4. b8 bes r r16 cis dis disis |
+  eis-. eis-. eis-. eis-. eis4 ~ eis8 e dis16 eis e8 |
+  dis d16 eis e eis fis fisis gis-. gis-. gis-. gis-. b8-. r |
+  ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 cis, dis eis |
+  fis fis e dis cis dis gisis, ais fis fis ais cis ais'8-. r |
+  gis16 fisis gis fisis gis gis ais aisis bis b ais a gis fis f e |
+  dis4-. r a-. r |
+  gis4-. r r2 |
+  R1 |
+  R1 |
+  R1 |
+  r8.. dis'32 dis8..-. dis32 dis8..-. r32 r4 |
+  r8.. cis32 cis8..-. cis32 cis8..-. r32 r4 |
+  r8. eis16 eis8.-. eis16 eis4 r4 |
+  r4.. b32-^ b32-^ r2^\longfermata |
+  fis'8 fis fis eis fis eis fis fis fis eis fis eis
 }
 
 altoWords = \lyricmode {
@@ -291,10 +372,27 @@ tenor = \relative c' { \autoBeamOff
   b4-.^\f r r2 |
   R1 |
   bis16-.-^^\> bis-. bis-. bis-. bis4^\mp ~ bis8-. b-. ais16 bis b8-. |
-  ais8-. a-. gis8 a16 ais b8 bis16 cis d4 |
-  r2 r8 d16 d d d d8 ~ |
-  d4 cis8-. c16 d cis8-. c8-. b-. ais8 ~ |
-  ais16 d cis c b8 ais a16 a a a a4
+  ais8-. a-. gis8 a16 ais b16 b bis16 cis d8 cis |
+  bis16 d cis8 bis b ais aisis bis16 bis bis bis |
+  bis d cis8-. c8 b ais2 ~ |
+  ais8 r d16-. d-. d-. d-. d8 cis c16 d cis8 |
+  c b d16-. d-. d-. d-. d4 r8 dis ~ |
+  dis16-. dis-. dis-. dis-. dis8 d cis16 dis d8 cis c |
+  b4 b16-. b-. b-. b-. ais2 |
+  fisis4 fis4 ais16-. ais-. ais-. ais-. a8-. r |
+  cis16 bis cis bis cis bis cis bis cis bis cis bis cis r16 r8 |
+  r16 ais16 aisis bis cis-. r r8 r4 r8 fis,-. |
+  bis16 ais bis ais bis r r8 r2 |
+  r2 fis4-. r |
+  fis4-. r r2 |
+  R1 |
+  R1 |
+  R1 |
+  r8.. cis'32 bis8..-. aisis32 bis8..-. r32 r4 |
+  r8.. b32 ais8..-. gisis32 ais8..-. r32 r4 |
+  r8. b16 c8.-. b16 ais4 r4 |
+  r4.. gis32-^ gis32-^ r2^\longfermata |
+  r2. dis8 dis dis cisis dis cisis |
 }
 
 tenorWords = \lyricmode {
@@ -356,10 +454,36 @@ bass = \relative c { \autoBeamOff
   r2. ais4^\mp |
   R1*4 |
   gis'4-.^\f r r2 |
-  r4 cis,32 c8..-_ r2 |
+  r2 cis,32 cis8..-_ r4 |
   r4 a'16-. a-. a-. a-. a4 ~ a8-. gis-. |
-  g-. fis f4 ~ f4. fis16 g |
-  gis8 g fis4
+  g-. fis eis8 fis16 fisis gis16 gis gisis ais b16-. b-. b-. b-. |
+  b8 ais a gis fisis gis a4 ~ |
+  a4. gis8 g fis f e ~ |
+  e eis fis16 eis fis fisis gis-. gis-. gis-. gis-. gis8 g |
+  fis8 fisis gis gisis16 ais b16-. b-. b-. b-. b8 bes |
+  a16 b bes8 a gis16 ais a8 gis g4 |
+  R1 |
+  r4 gis, cis16-. cis cis cis-. cis8-. r |
+  fis16 cis fis cis fis16 cis fis cis fis cis fis cis fis r r8 |
+  r4 r16 cis16 bis cis ais dis d cis fis,8-. r |
+  gis'16 dis gis dis gis r r8 r4 r16 eis fis fisis |
+  gis4-. r bis,-. r |
+  cisis-. r ais-. r4 |
+  R1 |
+  R1 |
+  R1 |
+  r8.. a'32 a8..-. a32 ais8..-. r32 r4 |
+  r8.. g32 g8..-. g32 g8..-. r32 r4 |
+  r8. gis16 gis8.-. gis16 gis4 r4 |
+  r4.. ais,32-^ ais32-^ r2^\longfermata |
+  R1. |
+  dis4 ais8 dis4 ais8 dis4 ais8 fis4 ais8 |
+  dis,4 eis8 fis4 eis8 fis4 gis8 ais4 gis8 |
+  fis4 gis8 ais4 b8 ais4 gis8 fis4 ais8 |
+  dis4 eis8 fis4 eis8 dis4 cis8 bis4 dis8 |
+  gis,8 r4 r4. r4. cis4. ~ |
+  cis4 ais8 b4 ais8 b4 ais8 gis4 fis8 |
+  eis4
 }
 
 bassWords = \lyricmode {
