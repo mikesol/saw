@@ -150,10 +150,9 @@ soprano = \relative c'' { \autoBeamOff
   e2 r8 f e dis |
   cisis2. r4 |
   r16 dis [disis eis ] fis [ fisis gis ] r16 r4^\fermata a16-.^\thought r8.^\fermata |
-  R1. |
-  r2. r4. cis,,8 cis cis |
-  bis cis bis ais4. r ais'8 ais ais |
-  gis ais gis fis4. ~ fis
+  r2. ais,8 ais ais gis ais gis |
+  ais8 ais ais gis ais gis ais8 ais ais gis ais gis |
+  fis4 gis8 ais4 ais8 dis4 ais8 dis4 ais8 |
 }
 
 sopranoWords = \lyricmode {
