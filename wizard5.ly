@@ -86,7 +86,7 @@ marks = {
   \tempo "Allegro" 4.=152
   \time 12/8
   \secFour
-  s1.*3 |
+  s1.*5 |
   \mark \rall
   s1.*2 |
   \tempo "Moderato" 4.=112 |
@@ -224,7 +224,12 @@ mezzo = \relative c' { \autoBeamOff
   r4.. eis32-^ eis32-^ r2^\longfermata |
   r2. r4. ais8 ais ais |
   gis8 ais gis fis4 gis8 ais4 b8 ais4 gis8 |
-  fis4 eis8
+  fis4 eis8 dis4 eis8 fis4 gis8 fis4 eis8 |
+  dis4 cisis8 dis4. ais'8 ais ais gis ais gis |
+  fis4 eis8 fis4 gis8 ais4 gis8 fis4 eis8 |
+  fis4 eis8 dis4 eis8 fis4 gis8 ais4 ais8 |
+  dis4 eis8 fis4 gis8 fis4 eis8 dis4 cis8 |
+  bis8
 }
 
 mezzoWords = \lyricmode {
@@ -305,6 +310,14 @@ alto = \relative c' { \autoBeamOff
   r8. eis16 eis8.-. eis16 eis4 r4 |
   r4.. b32-^ b32-^ r2^\longfermata |
   fis'8 fis fis eis fis eis fis fis fis eis fis eis
+  fis fis fis eis fis eis fis fis fis eis fis eis
+  fis2. ~ fis4. r4. |
+  R1. |
+  R1. |
+  r2. r4. dis4 eis8 |
+  fis4 gis8 fis4 eis8 dis4 cis8 bis4 dis8 |
+  dis8-. r4 \clef "treble_8" r4. r4. \acciaccatura { fisis8 } gis4. |
+  eis8 eis eis eis4-. fis8 gis4-. fis8 gis4-. fis8 |
 }
 
 altoWords = \lyricmode {
@@ -392,7 +405,22 @@ tenor = \relative c' { \autoBeamOff
   r8.. b32 ais8..-. gisis32 ais8..-. r32 r4 |
   r8. b16 c8.-. b16 ais4 r4 |
   r4.. gis32-^ gis32-^ r2^\longfermata |
-  r2. dis8 dis dis cisis dis cisis |
+  r2. dis'8 dis dis cisis dis cisis |
+  dis8 dis dis cisis dis cisis dis2. |
+  R1. |
+  r2. r4. dis,4 eis8 |
+  fis4 gis8 fis4 eis8 dis4 eis8 fis4 gis8 |
+  ais4 b8 ais4 gis8 fis4 ais8 dis4 ais8 |
+  dis2. ~ dis4. r4. |
+  gis,8 gis gis gis4 ais8 b4 ais8 b4 ais8 |
+  b4 ais8 gis4 fis8 eis4. cis |
+  gis'8 gis gis gis8. cis b ais gis fis |
+  eis4. \glissando cis'8-. r4 cis,8-. r4 r4. |
+  gis'8 gis gis gis4 ais8 b4 cis8 b4 ais8 |
+  gis4 ais8 gis4 fis8 eis4 cis8 dis4 disis8 |
+  eis8 fis fisis gis4 cis8 b4 ais8 gis4 fis8 |
+  eis4. \glissando cis'8-. r4 cis8-.^"SNEAK" cis-. cis-. cis4 dis8 |
+  
 }
 
 tenorWords = \lyricmode {
@@ -478,10 +506,12 @@ bass = \relative c { \autoBeamOff
   r4.. ais,32-^ ais32-^ r2^\longfermata |
   R1. |
   dis4 ais8 dis4 ais8 dis4 ais8 fis4 ais8 |
-  dis,4 eis8 fis4 eis8 fis4 gis8 ais4 gis8 |
-  fis4 gis8 ais4 b8 ais4 gis8 fis4 ais8 |
-  dis4 eis8 fis4 eis8 dis4 cis8 bis4 dis8 |
-  gis,8 r4 r4. r4. cis4. ~ |
+  dis,4 eis8 fis4 eis8 dis4 eis8 fis4 gis8 |
+  ais4 b8 ais4 gis8 fis4 ais8 dis4 ais8 |
+  dis2. ~ dis4. r4. |
+  R1. |
+  R1. |
+  r2. r4. \acciaccatura { bis8 } cis4. ~ |
   cis4 ais8 b4 ais8 b4 ais8 gis4 fis8 |
   eis4
 }
