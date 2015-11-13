@@ -514,9 +514,8 @@ tenor = \relative c' { \autoBeamOff
   eis4 cis8 dis4 disis8 eis8 fis fisis gis4 cis8 |
   b4 ais8 gis4 fis8 eis4. \glissando cis'8-. r4 |
   cis8-. cis-. cis-. cis4 dis8 e4 dis8 e8. dis |
-  cis8. cis c d cis 
-  
-  
+  cis8. cis c d cis ais b gisis |
+  ais
 }
 
 tenorWords = \lyricmode {
@@ -639,7 +638,8 @@ bass = \relative c { \autoBeamOff
   cis1. ~ |
   cis1. ~ |
   cis4. gis cis fis, ~ |
-  fis8.-. cis'' c b ais
+  fis8.-. cis'' c b ais gis g fis |
+  e
 }
 
 bassWords = \lyricmode {
