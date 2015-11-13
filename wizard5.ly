@@ -20,6 +20,9 @@ widedin = \once \override DynamicText . extra-spacing-width = ##f
 thought = \markup \italic \column { pensée "(pas chantée)" }
 endessous = \markup \italic "(en dessous)"
 ord = \markup \italic "ord"
+scat = \markup \italic "scat"
+jazzjazzjazz = \markup \italic "jazz jazz jazz"
+legato = \markup \italic "legato"
 
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
@@ -163,72 +166,73 @@ soprano = \relative c'' { \autoBeamOff
   fis2^\mp r8 g^\p fis f |
   e2 r8 f^\pp e dis |
   cisis2. r4 |
-  r16 dis^\mf [disis eis fis fisis gis ] r16 r4^\fermata a16-.^\thought r8.^\fermata |
+  r16 dis^\p^\< [disis eis fis fisis gis ] r16\parend^\f r4^\fermata a16-.^\thought r8.^\fermata |
   R1. |
-  r2. b,,8^\p b b r4. |
+  r2. b,,8--^\p b-- b-- r4. |
   R1. |
   r2. fis'8 fis fis r4. |
-  r4. ais8 ais ais dis4 eis8 fis4 gis8 |
-  fis4 eis8 dis4 bis8 gis8 r4 r4. |
-  r2. gis8 gis gis gis4 ais8 |
-  b4 cis8 b4 ais8 gis4 fis8 eis4 fis8 |
-  gis8 gis gis gis4 ais8 b4 ais8 b4 ais8 |
-  b4 ais8 gis4 fis8 eis4. cis |
+  r4. ais8 ais ais dis4^\< eis8 fis4 gis8 |
+  fis4 eis8 dis4 bis8 gis8^\f r4 r4. |
+  r2. gis8-.^\f gis-. gis-. gis4-. ais8 |
+  b4-. cis8 b4-. ais8 gis4-. fis8 eis4-. fis8 |
+  gis8-. gis-. gis-. gis4-. ais8 b4-. ais8 b4-. ais8 |
+  b4-. ais8 gis4-. fis8 eis4. cis-. |
   %b8 b b b4 cis8 d4 e8 d4 cis8 |
   %b4 a8 gis4 a8 b4 cis8 d4 e8 |
   %fis4 gis8 a4 gis8 fis4 e8 dis4 cis8
-  gis'8 gis gis gis4 ais8 b4 cis8 d4 eis8 |
-  fis4 gis8 fis4 eis8 dis4 cis8 bis4 cis8 |
-  dis4 cis8 bis4 ais8 bis4 cis8 bis4 ais8 |
-  gis4 fis8 gis4 ais8 b8 b b ais8. gis |
-  fis fis gis gisis ais cis, cisis dis |
-  e r r4. r8. ais aisis bis |
-  cis r r4. r2. |
-  r2. r4. ais8 ais ais |
-  ais4 b8 cis4 b8 cis4 b8 cis4 b8 |
-  ais4 gis8 ais4. fis ais8 ais ais |
-  ais4 b8 cis4 b8 ais4 a8 gis4. |
-  fis eis r4. ais4. ~ |
-  ais8 gis ais fis |
+  gis'8-. gis-. gis-. gis4-. ais8 b4-. cis8 d4-. eis8 |
+  fis4-. gis8 fis4-. eis8 dis4-. cis8 bis4-. cis8 |
+  dis4-. cis8 bis4-. ais8 bis4-. cis8 bis4-. ais8 |
+  gis4-. fis8 gis4-. ais8 b8-. b-. b-. ais8.-_ gis-_ |
+  fis-. fis-_^\subPd^\< gis-_ gisis-_ ais-.^\mf cis,-_^\p^\< cisis-_ dis-_ |
+  e-.^\mf r r4. r8. ais-_^\p^\< aisis-_ bis-_ |
+  cis-.^\mf r r4. r2. |
+  r2. r4. ais8-. ais-. ais-. |
+  ais4-. b8 cis4-. b8 cis4-. b8 cis4-. b8 |
+  ais4-. gis8 ais4. fis-. ais8-. ais-. ais-. |
+  ais4-. b8 cis4-. b8 ais4-. a8 gis4. |
+  fis-. eis-. r4. ais4.->^\> ~ |
+  ais8^\mp^\legato gis ais fis |
   b fis bis fis |
-  cis'4 dis8 eis |
-  gis fis eis dis |
-  cis fis cis ais |
+  cis'4^\< dis8 eis |
+  gis^\> fis eis dis |
+  cis^\mp fis cis ais |
   gis dis' cis16 b ais gis |
   fis8 eis16 fis ais8 gis |
   fis4. r8 |
-  gis4. ais8 |
-  b8 dis cis16 b ais gis |
-  fis4 eis8 fis |
-  gis4 ais8 b |
-  cis4 ~ cis16 b ais gis |
-  fisis8 e' dis ais |
-  cis4 b8 ais |
-  b4 b8 cis |
-  dis4 ~ dis16 cis b ais |
-  gisis8 fis' eis bis |
+  gis4.^\p^\< ais8 |
+  b8^\mf dis cis16 b ais gis |
+  fis4^\> eis8 fis |
+  gis4^\mp ais8 b |
+  cis4^\< ~ cis16 b ais gis |
+  fisis8^\mf e' dis ais |
+  cis4^\> b8 ais |
+  b4^\mp b8 cis |
+  dis4^\< ~ dis16 cis b ais |
+  gisis8^\mf fis' eis bis |
   dis4 cisis8 dis |
-  eis2 |
-  fis2 ~ |
-  fis |
+  eis2^\> |
+  fis2^\< ~ |
+  fis^\> |
+  R2\parend^\p |
   R2 |
   R2 |
   R2 |
   R2 |
   R2 |
-  R2 |
-  dis2 |
+  dis2^\p^\< |
   eis8 fis16 eis dis8 eis |
-  fis fis, ais cis |
+  fis^\mf fis,^\< ais cis |
+  e^\> dis cis b |
+  ais4^\mf r8 fis'8 |
   e dis cis b |
-  ais4 r8 fis'8 |
-  e dis cis b |
-  ais4 r8 ais' |
+  ais4 r8 ais'^\f^\> |
   gis8 fis eis dis16 d |
-  cis2 ~ |
-  cis4. cis16 cis |
-  cis8 cis16 cis cis8 cis16 cis |
-  cis8 cis16 cis cis8 cis16 cis |
+  cis2^\p ~ |
+  cis4.^\> cis16-.^\pp^\< cis-. |
+  cis8-. cis16-. cis-. cis8-. cis16-. cis-. |
+  cis8-. cis16-. cis-. cis8-. cis16-. cis-. |
+  R1\parend^\f |
 }
 
 sopranoWords = \lyricmode {
@@ -305,9 +309,9 @@ mezzo = \relative c' { \autoBeamOff
   a8 gis g16 a gis8 g^\> fis eis8 fis |
   g4^\p r8 d ~ d8 cis bis d |
   cis4^\p^\< bis eis16-.^\mp eis-. eis-. eis-. eis8-. r |
-  fis16 eis fis eis fis eis fis eis fis eis fis eis fis r16 r8 |
-  r2. fis8-. r |
-  fis16 eis fis eis fis r16 r8 r16 dis disis eis fis dis d cis |
+  fis16^\mf eis fis eis fis eis fis eis fis eis fis eis fis r16 r8 |
+  r2. fis8-.^\mp r |
+  fis16^\mf eis fis eis fis r16 r8 r16 dis^\mp disis eis fis dis d cis |
   bis4-. r r2 |
   R1 |
   R1 |
@@ -316,33 +320,33 @@ mezzo = \relative c' { \autoBeamOff
   R1 |
   R1 |
   R1 |
-  r4.. eis32-^ eis32-^ r2^\longfermata |
-  r2. ais8 ais ais gis ais gis |
+  r4.. eis32-^^\f eis32-^ r2^\longfermata |
+  r2. ais8^\pp ais ais gis ais gis |
   ais8 ais ais gis ais gis ais8 ais ais gis ais gis |
   %ais8 ais ais gis ais gis ais8 ais ais gis ais gis |
-  ais8 a gis fisis gis fisis fis4 gis8 ais4 ais8 |
-  dis4 ais8 dis4 ais8 dis4 ais8 fis4 gis8 |
-  ais4 b8 ais4 gis8 fis4 eis8 dis4 eis8 |
-  fis4 gis8 fis4 eis8 dis4 cis8 bis4 r8 |
-  r4. eis8 eis eis eis4 fis8 gis4 fis8 |
-  gis4 fis8 gis4 fis8 eis4 dis8 eis4. |
-  cis8. cis' b ais gis4 fis8 eis4 fis8 |
-  eis4. \glissando cis'8 r4 cis,8 r4 eis8 eis eis |
-  eis4 fis8 gis4 fis8 gis4 fis8 eis4 ais8 |
-  gis4 eis8 dis4 eis8 gis gis gis gis4 ais8 |
-  b4 ais8 gis4 fis8 eis4. \glissando cis'8-. r4 |
-  cis,8 r4 fisis8 fisis fisis cis'8 cis cis cis8. dis |
-  e8. fis, gis fis eis cis cisis bis |
-  cis r r4. r8. fis fisis gisis |
-  ais r r4. r2. |
-  r2. cis,8 cis cis cis4 dis8 |
-  e4 dis8 e4 dis8 e4 dis8 cis4 b8 |
-  cis4. fis, cis'8 cis cis cis8. fis |
-  e dis cis b cis4. gis |
-  cis r4. r2. |
+  ais8 a gis fisis gis fisis fis4^\< gis8 ais4 ais8 |
+  dis4^\f ais8 dis4 ais8 dis4^\> ais8 fis4 gis8 |
+  ais4 b8 ais4 gis8 fis4^\mp^\< eis8 dis4 eis8 |
+  fis4 gis8 fis4 eis8 dis4^\f cis8 bis4 r8 |
+  r4. eis8-.^\f eis-. eis-. eis4-. fis8 gis4-. fis8 |
+  gis4-. fis8 gis4-. fis8 eis4-. dis8 eis4. |
+  cis8.-_ cis'-_ b-_ ais-_ gis4-. fis8 eis4-. fis8 |
+  eis4. \glissando cis'8-. r4 cis,8-. r4 eis8-. eis-. eis-. |
+  eis4-. fis8 gis4-. fis8 gis4-. fis8 eis4-. ais8 |
+  gis4-. eis8 dis4-. eis8 gis-. gis-. gis-. gis4-. ais8 |
+  b4-. ais8 gis4-. fis8 eis4. \glissando cis'8-. r4 |
+  cis,8-. r4 fisis8-! fisis-! fisis-! cis'8-. cis-. cis-. cis8.-_ dis-_ |
+  e8.-. fis,-_^\subPd^\< gis-_ fis-_ eis-.^\mf cis-_^\p^\< cisis-_ bis-_ |
+  cis-.^\mf r r4. r8. fis-_^\p^\< fisis-_ gisis-_ |
+  ais-.^\mf r r4. r2. |
+  r2. cis,8-. cis-. cis-. cis4-. dis8 |
+  e4-. dis8 e4-. dis8 e4-. dis8 cis4-. dis8 |
+  e4. cis-. cis8-. cis-. cis-. cis8.-_ fis-_ |
+  e-_ dis-_ cis-_ b-_ cis4. gis-. |
+  cis-. r4. r2. |
   R2*19 |
-  r4 eis4 ~ |
-  eis4 fis |
+  r4 eis4^\p^\<^\legato ~ |
+  eis4 fis^\mf |
   fis ais |
   r ais |
   gis fis |
@@ -354,15 +358,15 @@ mezzo = \relative c' { \autoBeamOff
   dis r |
   R2 |
   R2 |
-  r8 fis16 fis fis8 r |
+  r8 fis16-.^\mf fis-. fis8-. r |
   R2 |
-  r8 fis16 fis fis8 r |
+  r8 fis16-. fis-. fis8-. r |
   R2 |
-  r8 fis16 fis fis8 fisis16 fisis |
-  fisis8 fis16 fis fis8 fisis16 fisis |
-  fisis8 gis16 gis gis8 gis16 gis |
-  gis8 gisis8 gisis gisis |
-  R1 |
+  r8 fis16-.^\> fis-. fis8-. fisis16-. fisis-. |
+  fisis8-. fis16-. fis-. fis8-. fisis16-.^\< fisis-. |
+  fisis8-. gis16-. gis-. gis8-. gis16-. gis-. |
+  gis8-. gisis8-. gisis-. gisis-. |
+  R1\parend^\f |
 }
 
 mezzoWords = \lyricmode {
@@ -445,37 +449,37 @@ alto = \relative c' { \autoBeamOff
   c4.^\espressivo b8 bes r r16 cis^\mp^\<^\ord dis disis |
   eis-.^\mf eis-. eis-. eis-. eis4 ~ eis8^\> e dis16 eis e8 |
   dis^\mp^\< d16 eis e eis fis fisis gis-.^\> gis-. gis-. gis-. b8-.^\mp r |
-  ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 cis, dis eis |
+  ais16^\mf gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 cis,^\mp dis eis |
   fis fis e dis cis dis gisis, ais fis fis ais cis ais'8-. r |
-  gis16 fisis gis fisis gis gis ais aisis bis b ais a gis fis f e |
-  dis4-. r a-. r |
-  gis4-. r r2 |
+  gis16^\mf fisis gis fisis gis gis^\mp ais aisis bis b ais a gis fis f e |
+  dis4-. r a-.^\mf r |
+  gis4-.^\f r r2 |
   R1 |
   R1 |
   R1 |
-  r8.. dis'32 dis8..-. dis32 dis8..-. r32 r4 |
-  r8.. cis32 cis8..-. cis32 cis8..-. r32 r4 |
-  r8. eis16 eis8.-. eis16 eis4 r4 |
-  r4.. b32-^ b32-^ r2^\longfermata |
-  fis'8 fis fis eis fis eis fis fis fis eis fis eis |
+  r8.. dis'32^\p dis8..-. dis32 dis8..-. r32 r4 |
+  r8.. cis32^\pp cis8..-. cis32 cis8..-. r32 r4 |
+  r8. eis16^\ppp eis8.-. eis16 eis4 r4 |
+  r4.. b32-^^\f b32-^ r2^\longfermata |
+  fis'8^\pp fis fis eis fis eis fis fis fis eis fis eis |
   fis fis fis eis fis eis fis fis fis eis fis eis |
   fis fis fis eis fis eis fis fis fis eis fis eis |
+  fis fis fis eis fis eis fis^\< fis fis eis fis eis |
   fis fis fis eis fis eis fis fis fis eis fis eis |
-  fis fis fis eis fis eis fis fis fis eis fis eis |
-  fis bis, cis cisis dis disis eis r4 r4. |
-  \clef "treble_8" r4. \acciaccatura { fisis,8 } gis4. ~ gis2. ~ |
-  gis2. ~ gis4. fisis8 fisis fisis |
-  fisis4 gis8 ais4 gis8 fisis4 eis8 dis4. \glissando |
-  ais'8 r4
+  fis bis, cis cisis dis disis eis^\f r4 r4. |
+  \clef "treble_8" r4. \acciaccatura { fisis,8 } gis4.^\ff ~ gis2. ~ |
+  gis2. ~ gis4. fisis8-.^\mf^\endessous fisis-. fisis-. |
+  fisis4-. gis8 ais4-. gis8 fisis4-. eis8 dis4. \glissando |
+  ais'8-. r4
   \clef treble
-  dis8 dis dis dis4 eis8 fis4 eis8 |
-  fis4 eis8 fis4 eis8 dis4 cis8 dis4. |
-  bis dis8 dis dis dis4 eis8 fis4 gis8 |
-  fis4 eis8 dis4. \glissando gis8-. r4 bis,8-. r4 |
-  \clef "treble_8" r4. cis8 cis cis r4. cis4 b8 |
-  ais8. e' eis fis dis cis cisis gisis |
-  ais r r4. r8. dis eis fis |
-  fis8 [ eis16 ] fis8 [ eis16 ] e8 [ dis16 ] cisis16 [ dis cisis ] cis8 [ cisis16 ] dis8 [ d16 ] cis8 [ c16 ] b [ cis c ] |
+  dis8-.^\f dis-. dis-. dis4-. eis8 fis4-. eis8 |
+  fis4-. eis8 fis4-. eis8 dis4-. cis8 dis4. |
+  bis-. dis8-. dis-. dis-. dis4-. eis8 fis4-. gis8 |
+  fis4-. eis8 dis4. \glissando gis8-. r4 bis,8-. r4 |
+  \clef "treble_8" r4. cis8-. cis-. cis-. r4. cis4-. b8 |
+  ais8.-. e'-_^\subPd^\< eis-_ fis-_ dis-.^\mf cis-_^\p^\< cisis-_ gisis-_ |
+  ais-.^\mf r r4. r8. dis-_^\p^\< eis-_ fis-_ |
+  fis8^\mf^\>^\scat [ eis16 ] fis8 [ eis16 ] e8^\mp [ dis16 ] cisis16 [ dis cisis ] cis8 [ cisis16 ] dis8 [ d16 ] cis8 [ c16 ] b [ cis c ] |
   b8 [ bis16 ] cis8 [ c16 ] b8 [ cis,16 ] dis8 [ eis16 ] fis4. r |
   eis8 eis eis eis4 fis8 gis4 fis8 gis4 fis8 |
   gis4 fis8 eis4 dis8 cis4. dis |
@@ -484,41 +488,42 @@ alto = \relative c' { \autoBeamOff
   R2 |
   R2 |
   R2 |
-  b'4. bis8 |
-  cis4 e |
-  dis2 |
+  b'4.^\pp^\<^\legato bis8 |
+  cis4^\mf e |
+  dis2^\> |
+  R2\parend^\p |
+  R2 |
+  r8 dis^\pp dis dis |
   R2 |
   R2 |
-  r8 dis dis dis |
-  R2 |
-  R2 |
-  r8 dis4 d8 |
-  cis2 ~ |
+  r8 dis4^\mp^\> d8 |
+  cis2^\p ~ |
   cis2 |
-  r8 gis b dis |
+  r8 gis^\p^\< b dis |
   gis dis b ais |
-  gisis2 ~ |
-  gisis4 r |
-  r8 ais cisis eis |
-  b'4 ais ~ 
-  ais2 |
-  R2*11 |
-  r8 d,16 d d8 r |
+  gisis2^\> ~ |
+  gisis4^\p r |
+  r8 ais^\< cisis eis |
+  b'4^\mf ais ~ 
+  ais2^\> |
+  R2\parend^\p |
+  R2*10 |
+  r8 d,16-.^\mf d-. d8-. r |
   R2 |
-  r8 dis16 dis dis8 r |
+  r8 dis16-. dis-. dis8-. r |
   R2 |
-  r8 d16 d d8 cis16 cis |
-  cis8 bis16 bis bis8 cis16 cis |
-  cis8 cisis16 cisis cisis8 dis16 disis |
+  r8 d16-.^\> d-. d8-. cis16-. cis-. |
+  cis8-. bis16-. bis-. bis8-. cis16-.^\pp^\< cis-. |
+  cis8-. cisis16-. cisis-. cisis8-. dis16-. disis-. |
   eis8-. cis-. dis-. eis-. |
+  fis4^\subPd eis dis cis |
+  dis cis b ais |
+  gis8. ais16 b8-. dis-. d4.-^ r8 |
+  gis,8. ais16 b8-. dis-. d4-_ cis8.-> dis32 eis |
   fis4 eis dis cis |
   dis cis b ais |
-  gis8. ais16 b8-. dis-. d4. r8 |
-  gis,8. ais16 b8-. dis-. d4 cis8. dis32 eis |
-  fis4 eis dis cis |
-  dis cis b ais |
-  gis8. ais16 b8-. dis-. d4. r8 |
-  gis,8. ais16 b8-. dis-. d4 cis8. dis32 eis |
+  gis8. ais16 b8-. dis-. d4.-^ r8 |
+  gis,8. ais16 b8-. dis-. d4-_ cis8.-> dis32 eis |
   fis8-. fis-. r fis-. fisis-. fisis-. r fisis-. |
   gis-. gis-. r gis-. gisis-. gisis-. r gisis-. |
   ais-. ais-. r ais-. aisis-. aisis-. r aisis-. |
@@ -628,63 +633,63 @@ tenor = \relative c' { \autoBeamOff
   dis16-. dis-.^\< dis-. dis-. dis8^\> d cis16 dis d8 cis c |
   b4^\p b16-.^\< b-. b-. b-. ais2^\> |
   fisis4^\p^\< fis4 ais16-.^\mp ais-. ais-. ais-. a8-. r |
-  cis16 bis cis bis cis bis cis bis cis bis cis bis cis r16 r8 |
-  r16 ais16 aisis bis cis-. r r8 r4 r8 fis,-. |
-  bis16 ais bis ais bis r r8 r2 |
-  r2 fis4-. r |
-  fis4-. r r2 |
+  cis16^\mf bis cis bis cis bis cis bis cis bis cis bis cis r16 r8 |
+  r16 ais16^\mp aisis bis cis-. r r8 r4 r8 fis,-. |
+  bis16^\mf ais bis ais bis r r8 r2 |
+  r2 fis4-.^\mf r |
+  fis4-.^\f r r2 |
   R1 |
   R1 |
   R1 |
-  r8.. cis'32 bis8..-. aisis32 bis8..-. r32 r4 |
-  r8.. b32 ais8..-. gisis32 ais8..-. r32 r4 |
-  r8. b16 c8.-. b16 ais4 r4 |
-  r4.. gis32-^ gis32-^ r2^\longfermata |
-  r2. r4. cis8 cis cis |
-  r2. r4. ais8 ais ais |
-  cisis8 cis bis cis bis b ais8-. r4 dis8 dis dis  |
-  cisis8 cis bis cis bis b ais8-. r4 cisis8 cis bis |
-  cis bis b ais8-. r4 cisis8 cis bis b ais gisis |
-  ais bis cisis dis bis a gis8 gis gis gis4 ais8 |
-  b4 ais8 b4 ais8 b4 ais8 gis4 fis8 |
-  eis4. cis gis'8 gis gis gis8. cis |
-  b ais gis fis eis4. \glissando cis'8-. r4 |
-  cis,8-. r4 r4. gis'8 gis gis gis4 ais8 |
-  b4 cis8 b4 ais8 gis4 ais8 gis4 fis8 |
-  eis4 cis8 dis4 disis8 eis8 fis fisis gis4 cis8 |
-  b4 ais8 gis4 fis8 eis4. \glissando cis'8-. r4 |
-  cis8-. cis-. cis-. cis4 dis8 e4 dis8 e8. dis |
-  cis8. cis c d cis ais b gisis |
-  ais fis gis gisis ais cis cisis dis |
-  e r r4. r2. |
+  r8.. cis'32^\p bis8..-. aisis32 bis8..-. r32 r4 |
+  r8.. b32^\pp ais8..-. gisis32 ais8..-. r32 r4 |
+  r8. b16^\ppp c8.-. b16 ais4 r4 |
+  r4.. gis32-^^\f gis32-^ r2^\longfermata |
+  r2. r4. cis8--^\pp cis-- cis-- |
+  r2. r4. ais8--^\p ais-- ais-- |
+  cisis8 cis bis cis bis b ais8-. r4 dis8-- dis-- dis--  |
+  cisis8 cis bis cis bis b ais8-. r4 cisis8^\mp cis bis |
+  cis bis b ais8-. r4 cisis8^\< cis bis b ais gisis |
+  ais bis cisis dis bis a gis8-.^\f gis-. gis-. gis4-. ais8 |
+  b4-. ais8 b4-. ais8 b4-. ais8 gis4-. fis8 |
+  eis4. cis-. gis'8-. gis-. gis-. gis8.-. cis-_ |
+  b-_ ais-_ gis-_ fis eis4. \glissando cis'8-. r4 |
+  cis,8-. r4 r4. gis'8-. gis-. gis-. gis4-. ais8 |
+  b4-. cis8 b4-. ais8 gis4-. ais8 gis4-. fis8 |
+  eis4-. cis8 dis4-. disis8 eis8-. fis-. fisis-. gis4-. cis8 |
+  b4-. ais8 gis4-. fis8 eis4. \glissando cis'8-. r4 |
+  cis8-. cis-. cis-. cis4-. dis8 e4-. dis8 e8.-_ dis-_ |
+  cis8.-. cis-_^\subPd^\< c-_ d-_ cis-.^\mf ais-_^\p^\< b-_ gisis-_ |
+  ais-.^\mf fis-_^\p^\< gis-_ gisis-_ ais-.^\mf cis-_^\p^\< cisis-_ dis-_ |
+  e-.^\mf r r4. r2. |
   R1. |
   gis,8 gis gis gis4 ais8 b4 ais8 b4 ais8 |
   b4 ais8 gis4 fis8 eis4. cis |
   gis'8 gis gis gis4 cis8 b4 ais8 gis4 fis8 |
   eis4. \glissando cis'8-. r4 cis,8-. r4 r4. |
-  fis2 |
-  gis4 gisis |
-  ais8 gis fis eis |
-  dis4 gis8 gisis |
-  ais2 |
-  b4. bis8 |
-  cis4 cisis |
-  eis dis8 cis |
-  r b b b |
-  r4 gis4 |
-  cis2 |
-  b2 |
-  ais ~ |
+  fis2^\p^\legato |
+  gis4^\< gisis |
+  ais8^\> gis fis eis |
+  dis4^\p gis8^\< gisis |
+  ais2^\> |
+  b4.^\< bis8 |
+  cis4^\mp cisis |
+  eis^\p^\< dis8 cis |
+  r b^\pp b b |
+  r4 gis4-_^\mf |
+  cis2^\subPd^\< |
+  b2^\mp^\> |
+  ais^\p ~ |
   ais |
   R2 |
   R2 |
-  r4 fis' |
+  r4 fis'^\< |
   eis bis |
-  R2 |
-  cisis2 ~ |
-  cisis4 cis |
-  bis2 |
-  b |
+  R2\parend^\f |
+  cisis2^\p^\< ~ |
+  cisis4^\mf cis |
+  bis2^\> |
+  b^\mp |
   bis |
   cis |
   b |
@@ -694,14 +699,15 @@ tenor = \relative c' { \autoBeamOff
   cis4 b |
   ais4-. r |
   R2 |
-  r8 b16 b b8 r |
+  r8 b16-.^\mf b-. b8-. r |
   R2 |
-  r8 bis16 bis bis8 r |
+  r8 bis16-. bis-. bis8-. r |
   R2 |
-  r8 b16 b b8 ais16 ais |
-  ais8 gisis16 gisis gisis8 ais16 ais |
-  ais8 aisis16 aisis aisis8 bis16 bis |
+  r8 b16-.^\> b-. b8-. ais16-. ais-. |
+  ais8-. gisis16-. gisis-. gisis8-. ais16-.^\pp^\< ais-. |
+  ais8-. aisis16-. aisis-. aisis8-. bis16-. bis-. |
   bis8-. bis-. bis-. bis-. |
+  r\! bis4^\subPd
 }
 
 tenorWords = \lyricmode {
@@ -798,62 +804,62 @@ bass = \relative c { \autoBeamOff
   a16^\mf b bes8^\> a gis16 ais a8 gis g4^\p |
   R1 |
   r4 gis,^\mp cis16-. cis cis cis-. cis8-. r |
-  fis16 cis fis cis fis16 cis fis cis fis cis fis cis fis r r8 |
-  r4 r16 cis16 bis cis ais dis d cis fis,8-. r |
-  gis'16 dis gis dis gis r r8 r4 r16 eis fis fisis |
-  gis4-. r bis,-. r |
-  cisis-. r ais-. r4 |
+  fis16^\mf cis fis cis fis16 cis fis cis fis cis fis cis fis r r8 |
+  r4 r16 cis16^\mp bis cis ais dis d cis fis,8-. r |
+  gis'16^\mf dis gis dis gis r r8 r4 r16 eis^\mp fis fisis |
+  gis4-. r bis,-.^\mf r |
+  cisis-.^\f r ais-.^\sfz r4 |
   R1 |
   R1 |
   R1 |
-  r8.. a'32 a8..-. a32 ais8..-. r32 r4 |
-  r8.. g32 g8..-. g32 g8..-. r32 r4 |
-  r8. gis16 gis8.-. gis16 gis4 r4 |
-  r4.. ais,32-^ ais32-^ r2^\longfermata |
+  r8.. a'32^\p a8..-. a32 ais8..-. r32 r4 |
+  r8.. g32^\pp g8..-. g32 g8..-. r32 r4 |
+  r8. gis16^\ppp gis8.-. gis16 gis4 r4 |
+  r4.. ais,32-^^\f ais32-^ r2^\longfermata |
   R1. |
-  dis4 ais8 dis4 ais8 dis4 ais8 fis4 ais8 |
-  dis,4 eis8 fis4 eis8 dis4 eis8 fis4 gis8 |
-  ais4 b8 ais4 gis8 fis4 gis8 ais4 ais8 |
-  dis4 cisis8 dis4 eis8 fis4 eis8 dis4 cisis8 |
-  dis4 cis8 bis4 bis8 bis4 r8 r4. |
-  r4. \acciaccatura { bis8 } cis4. ~ cis2. ~ |
+  dis4^\pp^\< ais8 dis4 ais8 dis4 ais8 fis4 ais8 |
+  dis,4^\mf eis8 fis4 eis8 dis4 eis8 fis4 gis8 |
+  ais4^\> b8 ais4 gis8 fis4^\mp gis8 ais4 ais8 |
+  dis4^\< cisis8 dis4 eis8 fis4 eis8 dis4 cisis8 |
+  dis4 cis8 bis4 bis8 bis4^\f r8 r4. |
+  r4. \acciaccatura { bis8 } cis4.^\ff ~ cis2. ~ |
   cis1. ~ |
-  cis1. |
-  gis4.-. cis-. r cis ~ |
+  cis1.^\> |
+  gis4.-.^\f cis-. r cis-> ~ |
   cis1. ~ |
   cis1. ~ |
   cis1. ~ |
   cis4. gis cis fis, ~ |
-  fis8.-. cis'' c b ais gis g fis |
-  e fis e dis cis r r4. |
-  r8 bis16 cis8. bis b ais8 ais16 e'8. dis d |
-  cis b ais gis ais4. fis ~ |
+  fis8.-. cis''-_^\subPd^\< c-_ b-_ ais-.^\mf gis-_^\p^\< g-_ fis-_ |
+  e-.^\mf fis-_^\p^\< e-_ dis-_ cis-.^\mf r r4. |
+  r8 bis16^\p^\jazzjazzjazz cis8. bis b ais8 ais16 e'8. dis d |
+  cis b ais gis ais4. fis^\< ~ |
   fis1. ~ |
-  fis |
-  cis' ~ |
-  cis4. gis cis r |
+  fis^\> |
+  cis'^\p ~ |
+  cis4. gis-. cis-. r |
   R2*12 |
-  r4 e4 |
+  r4 e4^\p^\<^\legato |
   dis fisis |
+  R2\parend^\f |
   R2 |
   R2 |
   R2 |
   R2 |
-  R2 |
-  gis8 fis eis ais, |
-  dis2 |
+  gis8^\mp^\< fis eis ais, |
+  dis2^\mf |
   R2*9 |
-  r8 fis e cis |
+  r8 fis^\p^\< e cis |
   b4 gis |
-  cis4. r8 |
-  r8 gis ais b |
-  cis4 r |
-  r8 gis ais aisis16 bis |
-  cis2 ~ |
-  cis4. cis16 cis |
-  cis8 cis16 cis cis8 cis16 cis |
+  cis4.^\mf r8 |
+  r8 gis^\p^\< ais b |
+  cis4^\mf r |
+  r8 gis^\mf^\> ais aisis16 bis |
+  cis2^\p^\> ~ |
+  cis4. cis16-.^\pp^\< cis-. |
+  cis8-. cis16-. cis-. cis8-. cis16-. cis-. |
   cis8-. cis-. dis-. eis-. |
-  fis8 fis4 eis dis cis8 |
+  r8\! fis4^\subPd eis dis cis8 |
   r8 dis4 cis b ais8 |
   gis4 d gis eis' |
   gis, d gis8 cis dis eis |
