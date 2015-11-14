@@ -236,8 +236,19 @@ soprano = \relative c'' { \autoBeamOff
   r8 ais16 ais-. ais8-. ais8-. r8 ais16 ais ais8-. ais8-. |
   r8 b16 b b8-. b-. r4 fis'-> |
   r8 b,16 b b8-. b-. r4 c,-> |
-  r8\! ais16^\subPPd ais ais8-. ais-. r8 ais16 ais ais8-. ais8-. |
-  r8 cis16 cis cis8-. fis16 fis fis8-. ais16 ais ais8-. ais-. |
+  r8\! ais'16^\subPPd ais ais8-. ais-. r8 ais16 ais ais8-. ais8-. |
+  ais-. a-. gis-. g-. fis-. eis-. e-. dis-. |
+  r8 b'16 b b8-. b-. r4 c,-> |
+  r8 b'16 b b8-. b-. r4 dis,8.-> dis32 eis |
+  fis8-. fis-. r fis-. fisis-. fisis-. r fisis-. |
+  gis-. gis-. r gis-. gisis-. gisis-. r gisis-. |
+  ais-. ais-. r ais-. aisis-. aisis-. r aisis-. |
+  bis-. bis-. r bis-. cis-. cis-. r cis-. |
+  d4 cis bis b |
+  ais a gis g |
+  fis eis e dis |
+  d4 cis bis8 b ais8 a |
+  gis2. r4 |
 }
 
 sopranoWords = \lyricmode {
@@ -373,8 +384,23 @@ mezzo = \relative c' { \autoBeamOff
   gis8-. gisis8-. gisis-. gisis-. |
   r8\! fis16^\subPPd fis fis8-. fis-. r8 fis16 fis fis8-. fis8-. |
   r8 fis16 fis fis8-. fis-. fis-. eis-. e-. dis-. |
+  r4 gis\glissando d r |
+  r gis\glissando d r |
+  r8 fis16^\pp fis fis8-. fis-. r8 fis16 fis fis8-. fis-. |
+  fis8-. eis-. e-. dis-. cisis-. dis-. e-. eis-. |
+  gis8. g16 fis8-. eis-. e8. eis16 fis8-. g-. |
+  gis8. g16 fis8-. eis-. e8. dis16 d8-. cis-. |
+  r4 d8 cis r4 dis8 cisis |
+  r4 e8 dis r4 eis8 disis |
+  r4 fis8 eis r4 fisis8 eisis |
+  r4 gis8 fisis r4 a8 gis |
+  r2 e4 eis |
+  fis fisis gis gisis |
+  ais aisis bis cis |
+  cisis dis disis eis
+  fis4-. r4 r2 |
 }
-
+%06 01 28 57 38
 mezzoWords = \lyricmode {
   he is the
   \repeat unfold 8 wiz
@@ -529,17 +555,16 @@ alto = \relative c' { \autoBeamOff
   fis8^\subPd eis dis cis dis cis b ais |
   b ais gis fis gis fis eis dis |
   gis8. ais16 b8-. dis-. d4.-^ r8 |
-  gis,8. ais16 b8-. dis-. d4-_ cis8.-> dis32 eis |
-  fis8-. fis-. r fis-. fisis-. fisis-. r fisis-. |
-  gis-. gis-. r gis-. gisis-. gisis-. r gisis-. |
-  ais-. ais-. r ais-. aisis-. aisis-. r aisis-. |
-  bis-. bis-. r bis-. cis-. cis-. r cis-. |
-  d4 cis bis b |
-  ais a gis g |
-  fis eis e dis |
-  d4 cis bis8 b ais8 a |
-  gis2. r4 |
-  
+  gis,8. ais16 b8-. dis-. d4-_ cis4-> |
+  r4 fis,8-. fis-. r4 \times 2/3 { fis8-. fis-. fis-. } |
+  r4. fis8-. r2 |
+  r4 fis16 fis r8 r2 |
+  r8 fis4.-^ r4 fis-. |
+  R1 |
+  r2 e4 eis |
+  fis fisis gis gisis |
+  ais aisis bis cis8 cisis |
+  dis4-.
 }
 
 altoWords = \lyricmode {
@@ -720,11 +745,17 @@ tenor = \relative c' { \autoBeamOff
   ais'4^\subPd aisis bis cis |
   fis,4 gis gisis ais |
   e8. eis16 fis8-. fisis-. gis8. ais16 b8-. dis-. |
-  d4.-^ r8 gis,8. ais16 b8-. cis-. |
-  ais4-. d8 cis r4 dis8 cisis |
-  r4 e8 dis r4 eis8 disis |
-  r4 fis8 eis r4 fisis8 eisis |
-  r4 gis8 fisis r4 a8 gis |
+  d4-^ r8 ais8-. ais8-. ais-. ais-. ais-. |
+  ais8-. ais-. ais-. ais-. ais-. ais-. ais-. ais-. |
+  ais8-. ais-. ais-. ais-. ais-. ais-. ais-. ais-. |
+  gisis-. ais-. aisis-. bis-. cis-. bis-. aisis-. ais-. |
+  gisis-. ais-. aisis-. bis-. cis-. bis-. aisis-. ais-. |
+  b4-. r4 r2 |
+  d4 cis bis b |
+  ais a gis g |
+  fis eis e dis |
+  d cis bis aisis |
+  bis
 }
 
 tenorWords = \lyricmode {
@@ -889,6 +920,10 @@ bass = \relative c { \autoBeamOff
   e eis fis fisis gis gisis ais aisis |
   bis cis cisis dis disis eis fis fisis |
   gis2. r4 |
+  R1 |
+  R1 |
+  e4 eis fis fisis |
+  gis2.
 }
 
 bassWords = \lyricmode {
