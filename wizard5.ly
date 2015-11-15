@@ -280,9 +280,9 @@ sopranoWords = \lyricmode {
   Oz Oz
   Won -- der -- ful Won -- der -- ful Won -- der -- ful
   Off to see the Wiz the Wiz of Oz
-  Cause of the Wiz he is a Wiz we're off to see the
-  Cause of the Wiz he is a Wiz we're off to see the Wi -- zard
-  Cause of the Wiz he is a Wiz the Won -- der -- ful, the Won -- der -- ful we're
+  Cause of the Wiz the Won -- der -- ful we're off to see the
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard
+  Cause of the Wiz the Won -- der -- ful the Won -- der -- ful, the Won -- der -- ful we're
   Off to see we're Off to see the Won -- der -- ful the Cause of the Wiz of Oz
   He is a wiz, Oh what a wiz
   We're off to see
@@ -440,12 +440,14 @@ mezzoWords = \lyricmode {
   Won -- der -- ful Wi -- zard is one be -- cause We're
   off to see We're off to see the Wiz the Wiz of Oz the Wiz of Oz
   the Won -- der -- ful the Wiz
-  Cause of the Wiz he is a Wiz we're off to see the Wi -- zard.
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard.
   He is a wiz the Wi -- zard Wiz of Oz
-  Cause of the Wiz he is a Wiz we're off to see the Wi -- zard
-  Cause of the Wiz he is a a Wiz the Wiz of
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard of
+  Cause of the Wiz the Won -- der --ful the Wiz of
   Cause of the Cause of the Wiz of Oz
   He is a wiz, Oh what a wiz, We're off to see
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard of
+  Cause of the Wiz the Won -- der --ful the Wiz of Oz
 }
 
 alto = \relative c' { \autoBeamOff
@@ -524,11 +526,13 @@ alto = \relative c' { \autoBeamOff
   fis4-. eis8 fis4-. eis8 dis4-. cis8 dis4. |
   bis-. dis8-. dis-. dis-. dis4-. eis8 fis4-. gis8 |
   fis4-. eis8 dis4. \glissando gis8-. r4 bis,8-. r4 |
-  \clef "treble_8" r4. cis8-. cis-. cis-. r4. cis4-. b8 |
+  \clef "treble_8" r4. cis8-. cis-. cis-. r4. cis8.-. b8. |
   ais8.-. e'-_^\subPd^\< eis-_ fis-_ dis-.^\mf cis-_^\p^\< cisis-_ gisis-_ |
   ais-.^\mf r r4. r8. dis-_^\p^\< eis-_ fis-_ |
+  \set melismaBusyProperties = #'()
   fis8^\mf^\>^\scat [ eis16 ] fis8 [ eis16 ] e8^\mp [ dis16 ] cisis16 [ dis cisis ] cis8 [ cisis16 ] dis8 [ d16 ] cis8 [ c16 ] b [ cis c ] |
   b8 [ bis16 ] cis8 [ c16 ] b8 [ cis,16 ] dis8 [ eis16 ] fis4. r |
+  \unset melismaBusyProperties
   eis8 eis eis eis4 fis8 gis4 fis8 gis4 fis8 |
   gis4 fis8 eis4 dis8 cis4. dis |
   eis8 eis eis eis8. disis eis fis eis dis |
@@ -632,9 +636,14 @@ altoWords = \lyricmode {
   Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard of
   Oz What a Won -- der -- ful Wiz
-  Wiz Cause of the Wiz he is a wiz the Wiz of
-  Cause of the Wiz he is a Wiz we're off to see the Wi -- zard
-  Cause of the Wiz he is a Wiz the Wiz of Oz
+  Wiz Cause of the Wiz the Won -- der -- ful the Wiz of
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard
+  Cause of the Wiz the Won -- der -- ful the Wiz of Oz
+  Cause of the
+  Wiz of Oz He is a wiz, Oh what a wiz,
+  We're off to see
+  He is the wiz the won -- der -- ful wiz we're off to see the ma -- gi -- cal
+  Wiz in -- cre -- di -- ble the Wiz of Oz
 }
 
 tenor = \relative c' { \autoBeamOff
@@ -828,10 +837,11 @@ tenorWords = \lyricmode {
   Won -- der -- ful Wi -- zard of Oz
   Won -- der -- ful Wi -- zard of Oz
   We're off to see the
-  Cause of the Wiz he is a wiz we're off to see the Wi -- zard
-  Cause of the Wiz he is a wiz the Wiz of Oz
-  Cause of the Wiz he is a wiz we're off to see the Wi -- zard
-  Cause of the Wiz he is a wiz the Wiz of Oz
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard
+  Cause of the Wiz the Won -- der -- ful the Wiz of Oz
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard, he's the
+  Cause of the Wiz the Won -- der -- ful the Wiz of
+  Cuase of the Wiz he is a Wiz of Oz
 }
 
 bass = \relative c { \autoBeamOff
@@ -913,7 +923,7 @@ bass = \relative c { \autoBeamOff
   cis b ais gis ais4. fis^\< ~ |
   fis1. ~ |
   fis^\> |
-  cis'^\p ~ |
+  \acciaccatura { bis16 } cis1.^\p ~ |
   cis4. gis-. cis-. r |
   R2*12 |
   r4 e4^\p^\<^\legato |
@@ -996,6 +1006,9 @@ bassWords = \lyricmode {
   Wiz of Oz Wiz of Oz Oz
   He is a wiz, Oh what a wiz,
   We're off to see
+  \repeat unfold 12 ○
+  Wiz of Oz
+  Wiz of Oz
 }
 
 %%% SCORE
