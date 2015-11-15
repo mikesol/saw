@@ -425,23 +425,23 @@ mezzo = \relative c' { \autoBeamOff
   gis8-. gisis8-. gisis-. gisis-. |
   r8\! fis16^\subPPd fis fis8-. fis-. r8 fis16 fis fis8-. fis8-. |
   r8 fis16 fis fis8-. fis-. fis-. eis-. e-. dis-. |
-  r4 gis\glissando d r |
-  r gis\glissando d r |
+  r4 gis^\<\glissando d^\f r |
+  r gis^\pp^\<\glissando d^\f r |
   r8 fis16^\pp fis fis8-. fis-. r8 fis16 fis fis8-. fis-. |
-  fis8-. eis-. e-. dis-. cisis-. dis-. e-. eis-. |
-  gis8. g16 fis8-. eis-. e8. eis16 fis8-. g-. |
-  gis8. g16 fis8-. eis-. e8. dis16 d8-. cis-. |
-  r4 d8 cis r4 dis8 cisis |
+  fis8-.^\< eis-. e-. dis-. cisis-. dis-. e-. eis-. |
+  gis8.^\f^\> g16 fis8-. eis-. e8.^\< eis16 fis8-. g-. |
+  gis8.^\> g16 fis8-. eis-. e8. dis16 d8-. cis-.^\p |
+  r4 d8^\cresc cis r4 dis8 cisis |
   r4 e8 dis r4 eis8 disis |
   r4 fis8 eis r4 fisis8 eisis |
-  r4 gis8 fisis r4 a8 gis |
+  r4 gis8 fisis r4 a8 gis^\f |
   r2 e4 eis |
   fis fisis gis gisis |
   ais aisis bis cis |
   cisis dis disis eis
-  fis2 r |
-  r2 r8 dis, disis eis |
-  fis4-. r4 r2 |
+  fis4 r r2 |
+  r2 r8 dis,^\p^\< disis eis |
+  fis4-.^\f r4 r2 |
 }
 %06 01 28 57 38
 mezzoWords = \lyricmode {
@@ -1048,23 +1048,23 @@ bass = \relative c { \autoBeamOff
   cis8-. cis-. dis-. eis-. |
   fis,4^\subPd cis fis cis |
   fis4 cis fis cis |
-  gis'4 d gis eis' |
-  gis, d gis8 cis dis eis |
+  gis'4 d gis eis'-^ |
+  gis, d gis8^\< cis dis eis |
   fis,4^\subPd cis fis cis |
   fis4 cis fis cis |
-  gis'4 d gis eis' |
-  gis, d gis8 cis dis eis |
-  fis8 eis e dis d cis bis b |
+  gis'4 d gis eis'-^ |
+  gis, d gis8^\< cis dis eis |
+  fis8^\subPd^\cresc eis e dis d cis bis b |
   ais a gis g fis eis e dis |
   e eis fis fisis gis gisis ais aisis |
   bis cis cisis dis disis eis fis fisis |
-  gis2. r4 |
+  gis2.^\f r4 |
   R1 |
   R1 |
-  e,4 eis fis fisis |
-  gis2. r4 |
-  r2 r8 b bes a |
-  gis4-. r4 r2 |
+  e,4^\mp^\< eis fis fisis |
+  << { gis2. } { s2^\mf^\> s4\p } >> r4 |
+  r2 r8 b^\< bes a |
+  gis4-.^\f r4 r2 |
 }
 
 bassWords = \lyricmode {
