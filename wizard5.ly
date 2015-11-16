@@ -86,7 +86,7 @@ marks = {
   s1 |
   \set Score.tempoWholesPerMinute = #(ly:make-moment 200 4 0 0)
   s1 |
-  \tempo "Adagio" 4=68
+  \tempo "Adagio" 4=52
   \bar "||" \secTwo
   \time 2/4
   s1*9 |
@@ -144,11 +144,11 @@ prefatoryMatter = {
 soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
   r4. |
-  r2. gis4^\pp |
-  cis gis eis r |
   R1 |
-  r2. a4 |
-  d a fis4 r |
+  R1 |
+  r2. a4^\p |
+  d a fis r4 |
+  R1 |
   r2 r8 gis8^\pp^\< gisis ais |
   b4^\p^\> ais a gis |
   g fis eis^\pp e |
@@ -177,8 +177,9 @@ soprano = \relative c'' { \autoBeamOff
   << { \pitchedTrill gis2...\startTrillSpan a fisis32\stopTrillSpan gis |
   cis4-. } { s2.^\fp s4^\< s4^\f } >> r r2 |
   %R1 |
-  a,8^\pp a a' a gis gis16 gis fis8 fis |
-  e16-.^\p e-. e-. e-. << { e4 ~ e4 } { s4^\< s4^\> } >> r4\parend^\p |
+  %a,8^\pp a a' a gis gis16 gis fis8 fis |
+  R1 |
+  e,16-.^\p e-. e-. e-. << { e4 ~ e4 } { s4^\< s4^\> } >> r4\parend^\p |
   bis16-.-^\mf^\> bis-. bis-. bis-. bis4 r\parend^\p d8^\< dis  |
   e16-.^\mp e-. e-. e-. e8.^\> dis16 d16^\p^\< e fis g gis-.-^^\mf gis-. gis-. gis-. |
   gis4. g8 fis16 gis g8 fis eis ~ |
@@ -316,7 +317,6 @@ soprano = \relative c'' { \autoBeamOff
 
 sopranoWords = \lyricmode {
   We're off to see
-  We're off to see
   be -- cause be
   \repeat unfold 9 cause
   \repeat unfold 2 { He is the Wi -- zard }
@@ -327,7 +327,7 @@ sopranoWords = \lyricmode {
   off to see the wiz of Oz
   won -- der -- ful the Wi -- zard won -- der -- ful the wiz of Oz
   he is the Wi -- zard of Oz
-  hear he is a wiz of a wiz if
+  %hear he is a wiz of a wiz if
   cause of all the won
   cause of all the won
   Wi -- zard cause of all the won -- der ful
@@ -644,16 +644,16 @@ alto = \relative c' { \autoBeamOff
   ais a gis g |
   fis8 bis^\< cis d dis4^\p^\> d |
   cis^\pp bis b ais |
-  d4 a fis g 
-  a d ~ d2 |
-  cis8 \clef treble  e^\< f fis g4^\mp^\> fis |
+  a gis g fis | 
+  eis e dis d |
+  cis8 \clef treble  e'^\< f fis g4^\mp^\> fis |
   f8\! g^\< gis a ais4^\mp^\> a |
-  gis g\! fis f |
+  gis8 g fis\! f e4 f |
   e4^\< dis d cis |
   bis^\mp b ais8 ais'^\< b c |
   cis4^\mf^\< c b ais |
   a^\f gis g fis |
-  eis dis8 cis bis4 cis8 ais |
+  eis4 e dis d %fisis4 eis8 dis cisis4 dis8 bis % eis e dis d | %dis8 cis bis4 cis8 ais |
   cis4 c b ais |
   a gis g8 r r4 |
   R1 |
@@ -677,8 +677,9 @@ alto = \relative c' { \autoBeamOff
   R1 |
   R2 |
   \clef "treble_8"
-  eis,8^\pp eis eis' eis |
-  e8 e16 e d8 r |
+  %eis,8^\pp eis eis' eis |
+  %e8 e16 e d8 r |
+  R1 |
   R2 |
   d,8^\p d d' d |
   cis8 cis16 cis b8^\< b |
@@ -818,15 +819,18 @@ altoWords = \lyricmode {
   \repeat unfold 13 wiz
   he is the
   \repeat unfold 5 wiz
-  We're off to see the Wi -- zard
+  wiz wiz wiz wiz wiz wiz wiz wiz wiz
   wiz
   he is the
   \repeat unfold 3 wiz
   he is the
-  \repeat unfold 13 wiz
+  \repeat unfold 3 wiz
+  he is the
+  \repeat unfold 9 wiz
   he is the
   \repeat unfold 8 wiz
-  Won -- der -- ful wi -- zard of
+  %Won -- der -- ful wi -- zard of
+  wiz wiz wiz wiz
   \repeat unfold 7 wiz
   Oz cause cause
   one be -- cause be -- cause
@@ -835,7 +839,7 @@ altoWords = \lyricmode {
   Wi -- zard of Oz, he is one be -- cause be -- cause
   he is the \repeat unfold 8 wiz
   Wiz Oz
-  Hear he is a wiz of a wiz
+  %Hear he is a wiz of a wiz
   Hear he is a wiz of a wiz if
   ev -- er a wiz there
   Hear he is a wiz of a wiz
@@ -935,8 +939,8 @@ tenor = \relative c' { \autoBeamOff
   gis8 fis'^\< fisis gis a4^\mf^\> gis |
   g\!^\< fis f e |
   eis4^\f dis8 cis bis4 cis8 ais |
-  a4 ais b c |
-  cis d dis e |
+  bis4 ais8 gis fisis4 gis8 eis | %a4 ais b c |
+  dis4 d' dis e |
   eis fis g8 r r4 |
   %eis \glissando ais, \glissando eis %{pushes down oct%} \glissando ais, \glissando |
   %eis' \glissando ais, \glissando eis' \glissando ais, \glissando |
@@ -1194,17 +1198,17 @@ tenorWords = \lyricmode {
 bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
-  r8 gis4^\pp |
-  cis gis eis r |
-  r2. gis4 |
-  cis4 gis eis fis |
-  gis cis ~ cis r |
-  r2. a4 |
-  d a fis r |
-  R1*1 |
-  r2. gis,4 |
-  r8 gisis4^\p r8 r4. ais8 ~ |
-  ais r8 r4 r8 aisis4^\mp r8 |
+  r4. |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  r8 ais^\p a gis fisis4 r |
+  r2. ais4 |
+  dis ais fisis gis4 |
+  r4 gisis,4 r4. ais8 ~ |
+  ais8 r8 r4 r8 aisis4^\mp r8 |
   r4. bis8 ~ bis r8 r4 |
   r8 cis4^\mf r8 r8 cisis^\mp^\< dis e |
   f4^\mf^\> e dis d |
@@ -1212,7 +1216,7 @@ bass = \relative c' { \autoBeamOff
   dis,1^\f ~ |
   dis |
   eis'4 dis8 cis bis4 cis8 ais |
-  gis4 ( \glissando dis4 ) \lo r8^\swing^\mf \sh eis8 \lo fisis \sh gisis |
+  gis2 ( \glissando \lo dis8-.^\swing^\mf ) \sh eis8 \lo fisis \sh gisis |
   \repeat unfold 4 { \lo ais8 \sh ais } |
   \lo ais8 \sh ais \lo ais \sh cisis \lo r \sh ais \lo gisis \sh fisis |
   \lo eis8 \sh eis \lo eis \sh eis \times 2/3 { eis eis eis } \lo eis \sh eis |
@@ -1342,10 +1346,9 @@ bass = \relative c' { \autoBeamOff
 }
 
 bassWords = \lyricmode {
+  he is the wiz %of Oz
   We're off to see
-  We're off to see the Wi -- zard
-  We're off to see
-  The Wi -- zard of Oz is
+  the Wi -- zard %{Wiz%} of Oz is
   He is the \repeat unfold 9 wiz
   Won -- der -- ful Wi -- zard of Oz
   You know we're off to see the wi -- zard, he's the wi -- zard of Oz
