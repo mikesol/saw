@@ -686,7 +686,7 @@ alto = \relative c' { \autoBeamOff
   R1 |
   r4 d16-.^\mp^\endessous d-. d-. d-. d8 cis c16 d cis8 |
   c b ais16 c b8 |
-  bes4 a8 gis a ~ |
+  bes8 a gis a ~ |
   a4. r8 c4.^\espressivo r8 |
   c4.^\espressivo b8 bes r r16 cis^\mp^\<^\ord dis disis |
   eis-.^\mf eis-. eis-. eis-. eis4 ~ eis8^\> e dis16 eis e8 |
