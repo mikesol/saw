@@ -686,9 +686,10 @@ alto = \relative c' { \autoBeamOff
   R1 |
   r4 d16-.^\mp^\endessous d-. d-. d-. d8 cis c16 d cis8 |
   c b ais16 c b8 |
-  bes8 a gis a ~ |
-  a4. r8 c4.^\espressivo r8 |
-  c4.^\espressivo b8 bes r r16 cis^\mp^\<^\ord dis disis |
+  bes4 a8 a |
+  a'^\< a gis^\mf gis16 gis |
+  fis fis b^\> b16 b |
+  b8 gis e4 ~ e8^\p r r16 cis^\mp^\<^\ord dis disis |
   eis-.^\mf eis-. eis-. eis-. eis4 ~ eis8^\> e dis16 eis e8 |
   dis^\mp^\< d16 eis e eis fis fisis gis-.^\> gis-. gis-. gis-. b8-.^\mp r |
   ais16^\mf gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 gisis ais16 cis,^\mp dis eis |
@@ -839,9 +840,9 @@ altoWords = \lyricmode {
   Wi -- zard of Oz, he is one be -- cause be -- cause
   he is the \repeat unfold 8 wiz
   Wiz Oz
-  cause of all the won -- der won -- der -- ful things, the won -- der -- ful Wiz of Wi -- zard
-  won
-  won he does
+  cause of all the won -- der won -- der -- ful things, the won -- der -- ful Wiz of
+  Wiz
+  Hear he is a Wiz of a Wiz if ev -- er a Wiz there was
   the wiz of
   cause of all the won -- der won -- der -- ful things that he does
   the Wiz of Oz the Wiz of Oz
