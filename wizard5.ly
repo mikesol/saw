@@ -1234,7 +1234,8 @@ bass = \relative c' { \autoBeamOff
   b8 ais a gis fisis gis a4^\> ~ |
   a4. gis8^\p g fis f e ~ |
   e^\< eis fis16-. eis-- fis fisis gis-.-^^\mf^\> gis-. gis-. gis-. gis8^\p g |
-  fis8 fisis gis^\< gisis16 ais b16-.^\mp b-. b-. b-. b8^\< bes |
+  fis8 fisis gis16^\< gisis16 ais aisis |
+  bis8 ais16 a gis4 |
   a16^\mf b bes8^\> a gis16 ais a8 gis g4^\p |
   R1 |
   r4 gis,^\mp cis16-. cis cis cis-. cis8-. r |
