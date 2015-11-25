@@ -78,7 +78,7 @@ midihead = {\time 4/4 \tempo 2=168 s1 }
 marks = {
   \tempo "Fast" 2=168
   \time 2/2 |
-  s1*102 \bar "||"
+  s1*97 \bar "||"
   s1
 }
 
@@ -112,13 +112,12 @@ alto = \relative c'' {
   %\times 8/9 { gis4 a b a
   %gis e cis b r } |
   gis4 a b a |
-  gis8 e ~ e4 d4. b8 |
-  r2 e'2 |
-  fis4. e8 ~ e4. g8 ~ |
-  g4. e8 ~ e2 |
-  gis2 e4. ais8 ~ |
-  ais4 ~ ais8 b ~ b2 ~ |
-  b8 b ~ b4 ~ b2 |
+  \times 4/5 { gis4 e d b r } |
+  r4 e'2 fis4 ~ |
+  fis8 e8 ~ e4 ~ e8 g4. |
+  e2 gis4. e8 ~ |
+  e4. ais8 ~ ais4. b8 ~ |
+  b4. b8 ~ b2 |
   gis8 e dis cis b c cis4 |
   e4 fis r cis' ~ |
   cis b gis e |
@@ -139,17 +138,17 @@ alto = \relative c'' {
   b4 b a a |
   gis gis8 fis ~ fis e ~ e4 |
   dis4 cis b8 gis4 b8 ~ |
-  b4 b'8 cis b a gis fis |
+  b8 b'4 cis8 b a gis fis |
   r4 gis r gis |
-  r gis gis r |
-  e'8 cis4 b8 ~ b4 r8 cis8 |
-  b4 gis4 r8 e4 fis8 |
-  gis a b cis b gis fis e |
-  fis e cis b ~ b cis e gis |
-  gis8 b gis fis ~ fis8 r a gis |
-  fis e r gis g fis e cis |
+  r a r ais |
+  r b r e ~ |
+  e cis b8 [ fisis ] \times 2/3 { gis [ b cis ] } |
+  d4 cis b fisis |
+  gis8 b gis e r4 b |
+  r8 b'4 cis8 b gis fis b, |
+  gis' b gis e r a gis fis |
   R1 |
-  r2 r8 b'4 b8 ~ |
+  r2 r8 b4 b8 ~ |
   b8 b gis b gis e cis c |
   b cis dis e r b'4 b8 ~ |
   %%%%% space is 32
@@ -184,8 +183,8 @@ alto = \relative c'' {
   % and we go over by 4
   b b a b gis e \times 2/3 { cis4 b gis } \times 2/3 { b cis e }
   \times 2/3 { a, b cis } \times 2/3 { fis } e8. fis8. g8.
-  gis8. \times 2/3 { e4 cis } \times 2/3 { b gis a } |
-  b8 cis e r r2 |
+  gis8. \times 2/3 { e4 cis } \times 4/5 { b8 gis a b cis } |
+  e8 r r4 r2 |
   R1 |
   R1 |
   r8 dis,8 e eis fis e fis g |
@@ -281,25 +280,18 @@ altoWords = \lyricmode {
   Wheel -- in deal -- in steal -- in the
   Wi -- zard hap -- py lit -- tle won -- der -- ful spi -- rit
   How I fear it!
-  Wiz of Oz
-  You know that he's one be -- cause
-  be -- cause of all the
+  Wiz Oz
+  is
+  you know he's one be -- cause
+  of the won -- der -- ful and ra -- di -- a -- ting po -- wer push -- ing all of what he does
       %%%%%%%%%%%%%%%%%%%%%%%%heal -- in'
-  ra -- di -- a -- ting po -- wer that he's send -- ing
-  Ne -- ver end -- ing %{ love = arrival %} love
+      %%%%%%%%%%%ra -- di -- a -- ting po -- wer that he's send -- ing
+      %%%%%%%%%Ne -- ver end -- ing %{ love = arrival %} love
   Gosh he is a won -- der %{ba -- by%} have -- n't you heard
-  The wi -- zard flipped the bird dash -- ing smash -- ing
-  would -- n't e -- ver wan -- na stop
-  go -- in' he's my
-  %5
-  Wiz and %{oh%} what a
-  %5
-  Wiz and show me the
-  %6
-  Wi -- zard's cre -- a -- tion your
-  on -- ly sal -- va -- tion is
-  %%
-  tak -- ing off al -- though you want -- ed to wait
+  The wi -- zard flipped the bird, the wi -- zard is the word
+  would -- n't e -- ver wan -- na stop get -- ting up so high
+  my lord oh show me the Wiz -- ard that is guard -- ing the gate
+  He's tak -- ing off al -- though you want -- ed to wait
   it's too late
   Oh ne -- ver was a Wi -- zard e -- ver steal -- in the show
   Al -- lu -- ring was the mis -- ty -- fy -- ing au -- ra he gave
