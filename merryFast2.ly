@@ -107,7 +107,7 @@ alto = \relative c'' {
   d1 |
   r2. e4 |
   e8 d4 b8 ~ b fis gis4 |
-  b2 b2 |
+  b4 r b r |
   ais8 a gis4 r8 e fis fisis |
   %\times 8/9 { gis4 a b a
   %gis e cis b r } |
@@ -560,7 +560,11 @@ bass = \relative c {
 
 bassWords = \lyricmode {
   o -- pen
-  Wi -- zard is my re -- ve -- la -- tion
+  Wi -- zard he's my one and on -- ly
+  Wiz of Oz is one be -- cause be -- cause of all the won -- der -- ful,
+  the won -- der -- ful, the things he does, the Wi -- zard
+  can't be -- lieve the ju -- bi -- la -- tion
+  mer -- ry Wi -- zard is my re -- ve -- la -- tion
   fills me up with joy and un -- re -- mit -- ting
   love it's so out -- rage -- ous haven't you heard,
   It's so re -- mar -- ka -- ble the Wi -- zard's mirth is
