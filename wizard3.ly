@@ -38,7 +38,7 @@ nothing = {}
 marks = {
   \time 2/2
   \tempo "Allegro" 2=120
-  \partial 2
+  \partial 4
 }
 
 prefatoryMatter = {
@@ -46,39 +46,54 @@ prefatoryMatter = {
   #(set-accidental-style 'modern-cautionary)
 }
 
-soprano = \relative c' { \autoBeamOff
+soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r2 |
-  ees1 ~ |
-  ees2 des4 c |
-  des2 
+  r4 |
+  r4 ees2 des4 |
+  c4 \lo r8 \sh c ~ \lod c4. \sh bes8 ~ |
+  \lo bes \sh aes ~ \lo aes \sh r aes2 |
+  g4 f ~ %\lo r8 \sh f ~ f4 ~ |
+      %  \lo f8 ees4 \sh des8 ~ \lo des8 \sh r8
+  f2 | r2. f4 ~ |
+  f ees des \lo r8 \sh ges8 ~ |
+  \lod ges4. \lo f8 ~ \sh f ees4 \sh r8 |
+  g2 f4 ees
 }
 
 sopranoWords = \lyricmode {
+  \repeat unfold 6 { Oh, the Wiz }
 }
 
-mezzo = \relative c' { \autoBeamOff
-  r2 |
-  c2. bes4 |
-  c2 a |
-  bes
+mezzo = \relative c'' { \autoBeamOff
+  \prefatoryMatter
+  r4 |
+  g2. aes4 |
+  \lo f8-. \sh f8-. r4 r2 |
+  f2. des4 |
+  \lo ees8-. \sh ees8-. r4 r2 |
+  ees2. e4 |
+  \lo f8-. \sh f8-. r4 r2 |
+  f2. fis4 |
+  \lo g8-. \sh g8-. r4 \lo r8 \sh e ~ e4 |
+  f-. r r2 |
 }
 
 mezzoWords = \lyricmode {
+  \repeat unfold 4 { He's my Wi -- zard }
 }
 
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
   %\clef alto 
-  ees2 |
-  aes4 g8 f ees4 des |
-  c8 ges'4 f8 ~ f ees ~ ees4 |
+  ees4 |
+  aes4 g8 [ f ] ees4 bes |
+  \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh ees ~ ees4 |
   \times 2/3 { des f aes } \times 2/3 { c aes bes } |
   g-. r aes-. r |
   aes, aes aes' bes |
-  g8 ees g f r8 f ~ \times 2/3 { f g aes } |
-  \times 2/3 { bes4 c bes } \times 2/3 { aes f g } |
-  \times 2/3 { ees bes g } ees ees' |
+  \lo g8 \sh ees \lo g \sh f \lo r8 \sh f ~ ( \times 2/3 { f [ g aes ) ] } |
+  \times 2/3 { bes4 c bes } \times 2/3 { aes ( f ) g } |
+  \times 2/3 { ees ( bes g } ees ) ees' |
   \times 2/3 { f des bes } \times 2/3 { g g' ees } |
   \times 2/3 { aes ees c } \times 2/3 { a a' f } |
   \times 2/3 { bes f des } \times 2/3 { bes b' g } |
@@ -92,19 +107,23 @@ alto = \relative c' { \autoBeamOff
   d4 c8 c bes bes aes4
   g8 bes4 ees8 ~ ees8 c4. |
   \times 2/3 { bes4 ees ees, } \times 2/3 { ees' ees, ees' } |
-  ees,8 ees'4 ees,8 ~ ees \treble ees''4. |
+  ees,8 ees'4 ees,8 ~ ees \clef treble ees''4. |
   c4 ees c bes |
   gis8 a4 g8 r8 f4. |
   ees8 ees ees e ~ e e e f
 }
 
 altoWords = \lyricmode {
+  We're off to see the Wi -- zard
+  The Won -- der -- ful Wi -- zard of Oz
+  We hear he is a Wiz of a Wiz if ev -- er a wiz there was.  
 }
 
 tenor = \relative c' {
   \autoBeamOff
+  \prefatoryMatter
   \clef "treble_8"
-  r2 |
+  r4 |
   aes2 g |
   a f ~ |
   f
@@ -116,14 +135,32 @@ tenorWords = \lyricmode {
 bass = \relative c { \autoBeamOff
   \prefatoryMatter
   \clef bass
-  r2 |
-  aes4 bes c e, |
-  a ees' f, a |
-  bes  f ees g |
-  aes r r2 |
+  ees4 |
+  aes,4 \lo bes8 \sh bes \lo c \sh c des4 |
+  ees \lo f \sh ees r4 ees |
+  bes4 \lo bes8 \sh bes \lo ees \sh ees ees4 |
+  aes, \lo ees \sh aes \lo r8 \sh aes8 ~ aes4 |
+  aes4 \lo aes8 \sh aes \lo g \sh g f4 |
+  f4 \lo f8 \sh a \lo r \sh a ~ a4 |
+  bes4 \lo bes8 \sh c \lo d \sh c bes4 |
+  ees4 \lo bes8 \sh ees, r4 ees' |
+  des4-. r \lo r8 \sh b ~ b4 |
+  c4-. r \lo r8 \sh a ~ a4 |
+  bes4-. r \lo r8 \sh g ~ g4 |
+  aes4-. r \lo r8 \sh c ~ c4 |
+  des4 \lo ees8 \sh ees \lo f \sh f ges4 |
+  aes4 \lo g8 \sh f \lo r \sh c ~ c4 |
+  bes4 \lo bes8 \sh bes \lo bes \sh bes bes4 |
+  ees,4 \lo ees8 \sh ees \lo r \sh ees g4 |
+  f g aes f |
+  g aes bes g |
 }
 
 bassWords = \lyricmode {
+  \repeat unfold 4 { Be -- cause of the won -- der -- ful things he does }
+  \repeat unfold 4 { Be -- cause }
+  Be -- cause of the won -- der -- ful things he does
+  Be -- cause of the won -- der -- ful things he does
 }
 
 %%% SCORE

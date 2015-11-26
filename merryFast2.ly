@@ -474,19 +474,19 @@ bass = \relative c {
   b-- r bes r |
   a r b r  |
   bes r a r |
-  d r b r |
+  d r cis r |
+  c r b r |
   ais r a r |
-  gis r d' r |
   %%%
+  gis r d' r |
   cis r c r |
-  b-- r b-- r |
   b-- r b-- r |
   b-- r bes r |
   a r d r |
   cis r c r |
-  b r ais r |
-  b r c r |
-  cis r d r |
+  b r gis r |
+  a r ais r |
+  b r e r |
   cis r c r |
   b r gis r |
   %%
@@ -503,8 +503,8 @@ bass = \relative c {
   b-- r b-- r |
   b-- r c r |
   cis r b r |
-  a r gis r |
-  fis r cis' r |
+  a r fis r |
+  b r cis r |
   b r gis r |
   a r fis r |
   %%%%%
