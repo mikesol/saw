@@ -20,7 +20,7 @@ NT = \override Score.TimeSignature.stencil = ##f
 
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for E.Y. Harburg }
+  subtitle = \markup { for E.Y. Harburg and Harold Arlen }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon & Ryan Veillet"
@@ -119,7 +119,7 @@ rh = \relative c' {
   r4
   \time 4/4
   d8 d4 d8 e4-. eis-. |
-  fis-. r <b d g>2^\fermata | \bar "||" % 13
+  fis-. r <b, d g>2^\fermata | \bar "||" % 13
   \NT
   \time 1/4
   r4
@@ -130,7 +130,7 @@ rh = \relative c' {
   \time 1/4
   r4
   \time 4/4
-  d8
+  d8 d4
 }
 
 lh = \relative c {
@@ -173,13 +173,13 @@ lh = \relative c {
   r4
   \time 4/4
   d8^\p d4 d8 e4-. eis-. |
-  fis-. r <c aes'>2^\fermata | \bar "||"
+  fis-. r <c a'>2^\fermata | \bar "||"
   \NT
   \time 1/4
   r4
   \time 4/4
   d8 d4 d8 e4-. eis-. |
-  fis-. r <a,  e''>2^\fermata | \bar "||"
+  fis-. r <a,  c'>2^\fermata | \bar "||"
   \NT
   \time 1/4
   r4
@@ -220,7 +220,7 @@ lh = \relative c {
   \time 1/4
   r4
   \time 4/4
-  d'8 \bar "|."
+  d'8 d4 \bar "|."
 }
 
 joke = \lyricmode {
@@ -242,12 +242,13 @@ joke = \lyricmode {
   cause
   be -- cause be -- cause be -- cause
   be --
-  cause be -- cause of
+  cause be -- cause be -- cause of
   the
   Won -- der -- ful things he does.
   Won -- 
   der -- ful things that he does.
-  We're off to see the the Wi --
+  We're
+  off to see the the Wi --
   zard.
   The Won -- der -- ful Wi -- zard
   of

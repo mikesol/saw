@@ -1,4 +1,13 @@
+\version "2.19.30"
 \include "defs-devel.ly"
+
+\header {
+  title = "Follow the Yellow Brick Road" %(1)"
+  subtitle = \markup { for Charles Ives }
+  composer = "Harold Arlen"
+  poet = "E.Y. Harburg"
+  arranger = "arr. Mike Solomon"
+}
 
 \paper {
   #(define fonts
@@ -23,7 +32,7 @@
 
 #(ly:set-option 'point-and-click #f)
 
-#(set-global-staff-size 15.87)
+#(set-global-staff-size 14)
 
 
 midiPrefatoryMatter = {
@@ -33,58 +42,84 @@ scorePrefatoryMatter = {
 }
 
 marks = {
-  \time 3/4
+  %\time 3/4
+  \time 1/4
   \tempo "Grave" 4=28
+  s2. |
+  s2. |
+  s2. |
+  %\time 2/4
+  s2 \bar "||"
 }
 
-soprano = \relative c' {
+soprano = \relative c'' {
+  R2. |
+  r4 r r8 \times 2/3 { g16^"A GIRL" a b } |
+  \times 2/3 { c b a g8 r16 } \times 2/3 { r g a b c b } \times 2/3 { a g8 r g16 ~ } |
+  \times 2/3 { g16 g16 g'8 g16 e ~  } \times 2/3 { e e16 fis8 fis16 g } |
 }
 
-sopranooWords = \lyricmode {
+sopranoWords = \lyricmode {
+  \repeat unfold 2 { Fol -- low the Yel -- low Brick Road. }
+  \repeat unfold 4 { Fol -- low }
+  Fol -- low
 }
 
-mezzo = \relative c' {
+mezzo = \relative c'' {
+  R2. |
+  R |
+  r64 bes^"A LITTLE GIRL" c d ees d c bes32 r bes16 c d ees d c bes32 r bes32 bes64 bes'32 bes64 g32 g64 a32 a64 bes64 bes bes bes a g f32 r32 f64 f f
+  f f d' ees,   ees ees ees ees    c' c, c d   ees d c f64
 }
 
 mezzoWords = \lyricmode {
+  \repeat unfold 2 { Fol -- low the Yel -- low Brick Road. }
+  \repeat unfold 4 { Fol -- low }
+  Fol -- low the Yel -- low Brick Road.
+  \repeat unfold 2 { Fol -- low the Yel -- low Brick }
+  Fol -- low the Yel -- low Brick Road.
 }
 
-alto = \relative c' {
+alto = \relative c {
+  \clef bass
+  R2. |
+  r8 r32 d^"A SISSY" e fis   g fis e d16 r16 d32     e fis g fis e d16 r32 |
+  r32 d16 d32 d'16 d32 b ~ b b cis16 cis32 d d d d cis b a16 r a32 |
+  a a a a fis' g, g g g g e' e, e fis g fis
 }
 
 altoWords = \lyricmode {
+  \repeat unfold 2 { Fol -- low the Yel -- low Brick Road. }
+  \repeat unfold 4 { Fol -- low }
+  Fol -- low the Yel -- low Brick Road.
+  \repeat unfold 2 { Fol -- low the Yel -- low Brick }
+  Fol -- low the Yel -- low
 }
 
 tenor = \relative c {
   \clef bass
-  ges4 aes bes |
-  ces aes bes |
+  ges4^"A MAN" aes bes |
+  ces bes aes |
   ges2 r4 |
-  ges4 aes bes |
-  ces aes bes |
-  ges2 r4 |
-  ges2 ges4 |
-  ges'2 ges4 |
-  ees2 ees4 |
-  f2 f4 |
+  r ges4
 }
 
 tenorWords = \lyricmode {
   Fol -- low the Yel -- low Brick Road.
-  Fol -- low the Yel -- low Brick Road.
+  Fol
 }
 
 bass = \relative c, {
   \clef bass
-  f4. g |
-  a bes |
-  a g |
-  f2. |
-  r4. f |
+  f4^"A REAL MAN" ~ f8 g ~ g4 |
+  a4 ~ a8 bes ~ bes4 |
+  a4 ~ a8 g ~ g4 |
+  f4 ~ f |
   
 }
 
 bassWords = \lyricmode {
+  Fol -- low the Yel -- low Brick Road.
 }
 
 \score {
