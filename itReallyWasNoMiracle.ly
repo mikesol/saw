@@ -130,7 +130,7 @@ mezzo = \relative c'' {
   r4 a4:32 a4:32 r |
   \lo r8 \sh cis, r4 r2 |
   R1*4 |
-  r8 fis e [ d ] c r r4 |
+  r8 e d [ c ] b r r4 |
 }
 
 mezzoWords = \lyricmode {
@@ -222,9 +222,9 @@ alto = {
   \changeDown
   a,8 [
   \changeUp
-  e'8 ]
+  ees'8 ]
   \changeDown
-  ees8 [
+  g8 [
   \changeUp
   a'8 ] |
   \changeDown
@@ -232,39 +232,37 @@ alto = {
   \changeUp
   cis''8 ]
   \changeDown
-  gis4
+  r8 gis
   \changeUp
-  a8 [
+  bes8 [
   \changeDown
   g ]
   \changeUp
-  ais [
+  b [
   \changeDown
   fis ]
   \changeUp
-  b [
+  c' [
   \changeDown
   f ]
   \changeUp
-  c' [
+  cis' [
   \changeDown
   e ]
   \changeUp
-  cis' [
+  d' [
   \changeDown
-  ees ]
+  ees, ~ ] ees4 |
   \changeUp
-  d'4
+  a'4
   \changeDown
-  a,8
+  c
   \changeUp
-  g'4 r8
+  b'
   \changeDown
-  d4
+  d |
   \changeUp
-  e'
-  \changeDown
-  b,4 r4
+  g'4 r4
   \changeUp
   r g' |
   \changeDown ees8 [ \changeUp bes' ]
@@ -346,10 +344,10 @@ tenor = \relative c' {
   R1*5 |
   \lo r8 \sh a r4 r2 |
   R1 |
-  r4 gis4 ~ gis2 ~ |
-  gis1 |
+  r4 a4 ~ a2 ~ |
+  a1 |
   R1 |
-  r8 d c [ b ] a r r4 |
+  r8 c b [ a ] g r r4 |
 }
 
 tenorWords = \lyricmode {
@@ -364,7 +362,7 @@ bass = \relative c' {
   R1*5 |
   \lo r8 \sh gis r4 r2 |
   R1*4 |
-  r8 a g [ fis ] e r r4 |
+  r8 g fis [ e ] d r r4 |
   R1*5 |
   b4 bes a gis |
   g1 |
