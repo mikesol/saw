@@ -15,13 +15,6 @@
   fis gis'
 %}
 
-%{
-  Am D
-  G
-  Eb F
-  Bb
-%}
-
 \header {
   title = "It Really Was No Miracle" %(1)"
   subtitle = \markup { for Ella }
@@ -221,13 +214,11 @@ alto = {
   \changeDown
   d4
   \changeUp
-  b'8 [
+  b'
   \changeDown
-  c8 ]
+  fis4 r4
   \changeUp
-  g'4 r4
-  \changeDown
-  r g |
+  r g' |
 }
 
 altoWords = \lyricmode {
