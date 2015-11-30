@@ -48,16 +48,16 @@ prefatoryMatter = {
 
 soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 |
-  r4 ees2 des4 |
-  c4 \lo r8 \sh c ~ \lod c4. \sh bes8 ~ |
-  \lo bes \sh aes ~ \lo aes \sh r aes2 |
-  g4 f ~ %\lo r8 \sh f ~ f4 ~ |
+  %r4 |
+  %r4 ees2 des4 |
+  %c4 \lo r8 \sh c ~ \lod c4. \sh bes8 ~ |
+  %\lo bes \sh aes ~ \lo aes \sh r aes2 |
+  %g4 f ~ %\lo r8 \sh f ~ f4 ~ |
       %  \lo f8 ees4 \sh des8 ~ \lo des8 \sh r8
-  f2 | r2. f4 ~ |
-  f ees des \lo r8 \sh ges8 ~ |
-  \lod ges4. \lo f8 ~ \sh f ees4 \sh r8 |
-  g2 f4 ees
+  %f2 | r2. f4 ~ |
+  %f ees des \lo r8 \sh ges8 ~ |
+  %\lod ges4. \lo f8 ~ \sh f ees4 \sh r8 |
+  %g2 f4 ees
 }
 
 sopranoWords = \lyricmode {
