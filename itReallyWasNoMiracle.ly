@@ -15,6 +15,42 @@
   fis gis'
 %}
 
+%{
+  Am D
+  G
+  Eb F
+  Bb/ Bo7
+  Cm C#o
+  D D#o
+  E
+  F
+  E D#
+  D
+  C#
+  C#
+%}
+
+%{
+  ees bes'
+  f a'
+  bes a'
+  b aes'
+  c g'
+  cis fis'
+  d a'
+  dis b'
+  e fis'
+  b e'
+  f e'
+  a ees'
+  e d'
+  dis a'
+  d g'8 ~ g'4
+  cis g'8 ~ g'4
+  fis e'8 ~ e'4
+   
+%}
+
 \header {
   title = "It Really Was No Miracle" %(1)"
   subtitle = \markup { for Ella }
@@ -38,7 +74,6 @@
   top-margin = 0.5\in
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
-  max-systems-per-page = #2
   %oddHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
   %evenHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
 }
@@ -75,6 +110,7 @@ soprano = \relative c' {
 }
 
 sopranoWords = \lyricmode {
+  ditch
 }
 
 mezzo = \relative c'' {
@@ -88,6 +124,9 @@ mezzo = \relative c'' {
 }
 
 mezzoWords = \lyricmode {
+  Witch __ _
+  ditch
+  the Wic -- ked Witch
 }
 
 alto = {
@@ -216,12 +255,81 @@ alto = {
   \changeUp
   b'
   \changeDown
-  fis4 r4
+  b,4 r4
   \changeUp
   r g' |
+  \changeDown ees8 [ \changeUp bes' ]
+  \changeDown f [ \changeUp a' ]
+  \changeDown bes, [ \changeUp a' ]
+  \changeDown aes [ \changeUp fis' ]
+  \changeDown ees  [ \changeUp g' ]
+  \changeDown e [ \changeUp bes' ]
+  \changeDown f [ \changeUp a' ]
+  \changeDown b, [ \changeUp c'' ]
+  \changeDown e [ \changeUp fis' ]
+  \changeDown b [ \changeUp e' ]
+  %\changeDown f [ \changeUp g' ]
+  %\changeDown a [ \changeUp ees' ]
+  \changeDown f4 \changeUp ees'
+  \changeDown e8 [ \changeUp d' ]
+  \changeDown dis [ \changeUp a' ]
+  \changeDown d [ \changeUp g'8 ~ ] g'4 |
+  \changeDown cis8 [ \changeUp g'8 ~ ] g'4
+  \changeDown fis8 [ \changeUp e'8 ~ ] e'4 |
+  \changeDown r8 c8 \changeUp r cis' \changeDown r d \changeUp r dis' |
 }
 
 altoWords = \lyricmode {
+  Real
+  ○
+  ly
+  ○
+  hap
+  ○
+  pened
+  ○
+  this
+  ○
+  mi
+  ○
+  ra
+  ○
+  cle
+  ○
+  switch
+  ○
+  pitch
+  ○
+  hitch
+  ○
+  itch
+  ○
+  slitch
+  ○
+  Witch __ _
+  ○
+  ditch
+  ○
+  wind
+  ○
+  house
+  ○
+  start
+  ○
+  then
+  ○
+  fly
+  ○
+  her
+  ○
+  broom
+  Was not a heal -- thy si -- tua -- tion for the Wic -- ked
+  ○
+  Witch.
+  ○
+  No,
+  ○
+  the Wic -- ked Witch
 }
 
 tenor = \relative c' {
@@ -237,6 +345,9 @@ tenor = \relative c' {
 }
 
 tenorWords = \lyricmode {
+  ditch
+  no...
+  the Wic -- ked Witch
 }
 
 bass = \relative c' {
@@ -246,9 +357,14 @@ bass = \relative c' {
   \lo r8 \sh gis r4 r2 |
   R1*4 |
   r8 a g [ fis ] e r r4 |
+  R1*5 |
+  b4 bes a gis |
+  g1 |
+  the Wic -- ked Witch
 }
 
 bassWords = \lyricmode {
+  ditch
 }
 
 \score {
