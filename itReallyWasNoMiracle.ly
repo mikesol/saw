@@ -212,11 +212,11 @@ alto = {
   \changeDown
   a,8 [
   \changeUp
-  b'8 ]
+  e'8 ]
   \changeDown
   ees8 [
   \changeUp
-  c''8 ] |
+  a'8 ] |
   \changeDown
   d8 [
   \changeUp
@@ -249,11 +249,11 @@ alto = {
   \changeDown
   a,8
   \changeUp
-  a'4 r8
+  gis'4 r8
   \changeDown
   d4
   \changeUp
-  b'
+  e'
   \changeDown
   b,4 r4
   \changeUp
@@ -329,7 +329,6 @@ altoWords = \lyricmode {
   ○
   No,
   ○
-  the Wic -- ked Witch
 }
 
 tenor = \relative c' {
@@ -338,8 +337,8 @@ tenor = \relative c' {
   R1*5 |
   \lo r8 \sh a r4 r2 |
   R1 |
-  r4 a4 ~ a2 ~ |
-  a1 |
+  r4 gis4 ~ gis2 ~ |
+  gis1 |
   R1 |
   r8 d c [ b ] a r r4 |
 }
@@ -360,11 +359,11 @@ bass = \relative c' {
   R1*5 |
   b4 bes a gis |
   g1 |
-  the Wic -- ked Witch
 }
 
 bassWords = \lyricmode {
   ditch
+  the Wic -- ked Witch
 }
 
 \score {
