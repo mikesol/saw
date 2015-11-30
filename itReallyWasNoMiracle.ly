@@ -10,9 +10,19 @@
 \version "2.19.30"
 \include "defs-devel.ly"
 
+
+
 %{
+  
+  a' c b' ees g'
+  %%%
   cis' gis, eis' b, d' cis
   fis gis'
+
+
+  a d g
+  fis b e
+  dis gis cis
 %}
 
 %{
@@ -222,34 +232,33 @@ alto = {
   \changeUp
   cis''8 ]
   \changeDown
-  r8
-  gis
+  gis4
   \changeUp
-  bes [
+  a8 [
   \changeDown
   g ]
   \changeUp
-  b [
+  ais [
   \changeDown
   fis ]
   \changeUp
-  c' [
+  b [
   \changeDown
   f ]
   \changeUp
-  cis' [
+  c' [
   \changeDown
   e ]
   \changeUp
-  d' [
+  cis' [
   \changeDown
   ees ]
   \changeUp
-  bes'4
+  d'4
   \changeDown
   a,8
   \changeUp
-  gis'4 r8
+  g'4 r8
   \changeDown
   d4
   \changeUp
