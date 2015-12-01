@@ -252,7 +252,7 @@ alto = {
   \changeUp
   d' [
   \changeDown
-  ees, ~ ] ees4 |
+  ees ~ ] ees4 |
   \changeUp
   a'4
   \changeDown
@@ -263,27 +263,25 @@ alto = {
   d |
   \changeUp
   g'4 r4
-  \changeUp
-  r g' |
-  \changeDown ees8 [ \changeUp bes' ]
-  \changeDown f [ \changeUp a' ]
-  \changeDown bes, [ \changeUp a' ]
-  \changeDown aes [ \changeUp fis' ]
-  \changeDown ees  [ \changeUp g' ]
-  \changeDown e [ \changeUp bes' ]
-  \changeDown f [ \changeUp a' ]
-  \changeDown b, [ \changeUp c'' ]
-  \changeDown e [ \changeUp fis' ]
-  \changeDown b [ \changeUp e' ]
-  %\changeDown f [ \changeUp g' ]
-  %\changeDown a [ \changeUp ees' ]
-  \changeDown f4 \changeUp ees'
-  \changeDown e8 [ \changeUp d' ]
-  \changeDown dis [ \changeUp a' ]
-  \changeDown d [ \changeUp g'8 ~ ] g'4 |
-  \changeDown cis8 [ \changeUp g'8 ~ ] g'4
-  \changeDown fis8 [ \changeUp e'8 ~ ] e'4 |
-  \changeDown r8 c8 \changeUp r cis' \changeDown r d \changeUp r dis' |
+  \changeDown
+  r fis |
+  \changeUp bes'8 [ \changeDown ees ]
+  \changeUp a' [ \changeDown f ]
+  \changeUp a' [ \changeDown d ]
+  \changeUp g' [ \changeDown ees ]
+  \changeUp g'  [ \changeDown c ]
+  \changeUp bes' [ \changeDown cis ]
+  \changeUp a' [ \changeDown d ]
+  \changeUp b' [ \changeDown dis ]
+  \changeUp g' [ \changeDown e ]
+  \changeUp fis' [ \changeDown g ]
+  \changeUp f'4 \changeDown a, |
+  %\changeUp e8 [ \changeDown d' ]
+  %\changeUp dis [ \changeDown a' ]
+  %\changeUp d [ \changeDown g'8 ~ ] g'4 |
+  %\changeUp cis8 [ \changeUp g'8 ~ ] g'4
+  %\changeUp fis8 [ \changeUp e'8 ~ ] e'4 |
+  %\changeDown r8 c8 \changeUp r cis' \changeDown r d \changeUp r dis' |
 }
 
 altoWords = \lyricmode {
