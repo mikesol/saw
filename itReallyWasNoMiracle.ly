@@ -103,9 +103,26 @@ scorePrefatoryMatter = {}
 midiPrefatoryMatter = {}
 
 marks = {
-  \tempo "Slow"
+  \tempo "Lento"
   \numericTimeSignature
-  s1 |
+  s1*5
+  \override Score.RehearsalMark.self-alignment-X = #LEFT
+  s2 \mark \markup \italic "accel." s2
+  s2 \mark \markup \italic "rall." s2
+  s4 \tempo "Andante" s2.
+  s1
+  \tempo "Moderato" 
+  s1*2
+  \tempo "Andante"
+  s1*3
+  \tempo "Larghetto"
+  s1*3
+  \mark \markup \italic "rall."
+  s1
+  \tempo "Largo"
+  s1*6
+  \mark \markup \italic "rall."
+  s1*2 \bar "|."
 }
 
 swung = \markup \italic "swung"
@@ -115,34 +132,70 @@ soprano = \relative c' {
   \key fis \minor
   \clef treble
   R1*5 |
-  \lo r8 \sh b r4 r2 |
-  R1*5 |
+  \lo r8 \sh b^\mp-- r4 r2 |
+  R1*10 |
+  r8 fis'^\mp^\< gis a b^\mf a gis fis ~ |
+  fis2^\subPd eis4-. r4 |
+  R1 |
+  r4 ais,^\p^\< ~ << { ais2 } { s4 s4^\>} >> |
+  b4-.^\p r r2 |
+  r4 fis'4--^\mp^\> ~ fis^\p r4 |
+  gis1^\pp ~ |
+  gis4. r8 eis2 |
+  r2.. g8 |
+  << { bis1 } { \hairtip s2..^\> s8\! } >> |
 }
 
 sopranoWords = \lyricmode {
-  ditch
+  itch
+  while dy -- ing oh so sweet -- ly
+  said
+  Wiz
+  one
+  cause
+  cause
+  der
+  of Oz.
 }
 
 mezzo = \relative c'' {
   \key fis \minor
   \clef treble
   R1*4 |
-  r4 a4:32 a4:32 r |
-  \lo r8 \sh cis, r4 r2 |
-  R1*4 |
-  r8 e d [ c ] b r r4 |
+  r4 a4:32^\mp a4:32 r |
+  \lo r8 \sh cis,-- r4 r2 |
+  R1*4 |\set melismaBusyProperties = #'(beamMelismaBusy)\autoBeamOff
+  r8  fis16^\p [ e ] \autoBeamOn \unset melismaBusyProperties   d8 [ c ] b r r4 |
+  R1*5 |
+  r8 fis'^\mp^\< eis fis gis^\mf fis dis d |
+  R1*2 |
+  r2 r8 << { bis8 ~ bis4 } { s8.^\p^\< s8.^\> } >> |
+  cis4-.^\p r r2 |
+  r4 dis^\mp--^\> ~ dis^\p r |
+  fis1^\pp ~ |
+  fis4. r8 dis2 |
+  r2 r8 dis eis4 ~ |
+  << {eis1 } { \hairtip s2..^\> s8\! } >>  |
 }
 
 mezzoWords = \lyricmode {
   Witch __ _
-  ditch
-  the Wic -- ked Witch
+  itch
+  
+  to just a stitch
+  while dy -- ing oh so sweet -- ly
+  Oz
+  one
+  cause
+  cause
+  der
+  of Oz.
 }
 
 alto = {
   \key fis \minor
   \clef treble
-  \lod fis'4.^\swung
+  \lod fis'4.^\mp^\swung
   \changeDown
   \sh fis,8
   \changeUp
@@ -201,7 +254,7 @@ alto = {
   \changeDown
   \lo d
   \changeUp
-  \sh eis'
+  \sh eis'--
   \changeDown
   r4
   cis8^\straight [
@@ -232,7 +285,7 @@ alto = {
   \changeUp
   cis''8 ]
   \changeDown
-  r8 gis
+  r8 gis^\pp^\<
   \changeUp
   bes8 [
   \changeDown
@@ -250,125 +303,136 @@ alto = {
   \changeDown
   e ]
   \changeUp
-  d' [
+  d'^\mf [
   \changeDown
-  ees ~ ] ees4 |
+  ees^\subPd ~ ] ees4 |
   \changeUp
-  a'4
+  a'8^\mf [
   \changeDown
-  c
+  c8 ]
   \changeUp
-  b'
+  fis' [
   \changeDown
-  d |
+  ees ]
   \changeUp
-  g'4 r4
+  b' [
   \changeDown
-  r fis |
-  \changeUp bes'8 [ \changeDown ees ]
-  \changeUp a' [ \changeDown f ]
-  \changeUp a' [ \changeDown d ]
-  \changeUp g' [ \changeDown ees ]
-  \changeUp g'  [ \changeDown c ]
-  \changeUp bes' [ \changeDown cis ]
-  \changeUp a' [ \changeDown d ]
-  \changeUp b' [ \changeDown dis ]
-  \changeUp g' [ \changeDown e ]
-  \changeUp fis' [ \changeDown g ]
-  \changeUp f'4 \changeDown a, |
-  %\changeUp e8 [ \changeDown d' ]
-  %\changeUp dis [ \changeDown a' ]
-  %\changeUp d [ \changeDown g'8 ~ ] g'4 |
-  %\changeUp cis8 [ \changeUp g'8 ~ ] g'4
-  %\changeUp fis8 [ \changeUp e'8 ~ ] e'4 |
-  %\changeDown r8 c8 \changeUp r cis' \changeDown r d \changeUp r dis' |
+  d ]
+  \changeUp
+  gis' [
+  \changeDown
+  a, ]
+  \changeUp
+  g'4 r4 r2 |
+  \changeDown g,8^\p^\< [ \changeUp f' ]
+  \changeDown c [ \changeUp e' ]
+  \changeDown a, [ \changeUp dis' ]
+  \changeDown fis [ \changeUp d' ]
+  \changeDown eis,^\mf  [ \changeUp cis' ]
+  \changeDown e [ \changeUp bis ]
+  \changeDown dis4^\> \changeUp fisis' |
+  \changeDown gis,8^\p \changeUp fis' ~ fis'4
+  \changeDown cis8^\pp \changeUp d' ~ d'4
+  r8 \changeDown a,4^\< \changeUp cis'4 \changeDown ais,4 \changeUp fis'8^\mf |
+  r8 \changeDown a8 \changeUp gis'8 [ \changeDown b ] r8 \changeUp e' \changeDown g [ \changeUp dis' ] |
+  \changeDown r8 a^\< \changeUp d' \changeDown g \changeUp eis'^\f \changeDown ais \changeUp eis'8 \changeDown dis |
+  \changeUp r8 a'4^\mp \changeDown bis,8^\p \changeUp r8 cis'8--^\mp ~ cis'4 |
+  \changeDown gis,8 \changeUp eis'4 \changeDown cis8 \changeUp d'8 \changeDown g4 \clef alto fis8^\< |
+  gis'4 ~ \times 2/3 { gis'8^\mf fis' ais } eis'4.^\> dis'8 |
+  e'4.^\p fis8^\mp gis4 dis' |
+  cis'2^\> ( b4^\p ) r |
+  gis4^\pp ais b cis' |
+  gis4. r8 ais2 |
+  r4. ais8 cis'2 ~ |
+  << {cis'1 } { \hairtip s2..^\> s8\! } >>  |
 }
 
 altoWords = \lyricmode {
-  Real
-  ○
-  ly
-  ○
-  hap
-  ○
-  pened
-  ○
-  this
-  ○
-  mi
-  ○
-  ra
-  ○
-  cle
-  ○
-  switch
-  ○
-  pitch
-  ○
-  hitch
-  ○
-  itch
-  ○
-  slitch
-  ○
+  Real -- ly was no mi -- ra -- cle what hap -- pened
+  Was just this, so sud -- den
+  The wind be -- gan to switch the house to pitch
   Witch __ _
-  ○
-  ditch
-  ○
-  wind
-  ○
-  house
-  ○
-  start
-  ○
-  then
-  ○
-  fly
-  ○
-  her
-  ○
-  broom
-  Was not a heal -- thy si -- tua -- tion for the Wic -- ked
-  ○
-  Witch.
-  ○
-  No,
-  ○
+  An itch
+  Kit -- chen took a slitch It lan -- ded on the Wick -- ed Witch
+  Oh,
+  Was not a heal -- thy si -- tu -- a -- tion for the
+  Wic -- ked Witch re -- duced to just a stitch
+  %Thank you ve -- ry sweet -- ly for you killed her so com -- plete -- ly
+  Mid -- dle of a ditch just then went fly -- ing on her broom -- stick
+  Let the joy -- ous
+  news be spread, oh
+  you've killed her, so neat -- ly
+  while dy -- ing oh so sweet -- ly
+  this she.
+  If ev -- er oh ev -- er the Wi -- zard of Oz is one be -- cause be -- cause
+  cause of all the won -- der
+  of Oz.
 }
 
 tenor = \relative c' {
   \key fis \minor
   \clef "treble_8"
   R1*5 |
-  \lo r8 \sh a r4 r2 |
+  \lo r8 \sh a^\mp-- r4 r2 |
   R1 |
-  r4 a4 ~ a2 ~ |
-  a1 |
+  r4 a4^>^\> ~ a2 ~ |
+  a1^\pp |
   R1 |
-  r8 c b [ a ] g r r4 |
+  r8 c^\p b [ a ] g r r4 |
+  R1*5 |
+  r8 fis'^\mp^\< eis c cis^\mf d c a |
+  R1 |
+  r2.. fis8^\mp^\< ~ |
+  << { fis1 } { s2 s2^\> } >> |
+  gis4-.^\p r e2^\< |
+  ais^\> ( gis4^\p ) r |
+  d'1^\pp ~ |
+  d4. r8 gis,2 |
+  r8 cis,8 gis'4 ~ gis2 ~ |
+  << { gis1 } { \hairtip s2..^\> s8\! } >>  |
 }
 
 tenorWords = \lyricmode {
-  ditch
-  no...
-  the Wic -- ked Witch
+  itch
+  no
+  to just a stitch
+  while dy -- ing oh so sweet -- ly
+  the
+  one cause cause
+  cause
+  der
+  of Oz.
 }
 
 bass = \relative c' {
   \key fis \minor
   \clef bass
   R1*5 |
-  \lo r8 \sh gis r4 r2 |
+  \lo r8 \sh gis^\mp-- r4 r2 |
   R1*4 |
-  r8 g fis [ e ] d r r4 |
-  R1*5 |
-  b4 bes a gis |
-  g1 |
+  r8 g^\mf fis [ e ] d r r4 |
+  R1*3 |
+  fis,4 eis' e dis |
+  d2 cis4.^\< c8 |
+  << { b1^\> } { s2.. s8^\p } >> |
+  R1*3 |
+  cis4-.^\p r4 fis,2^\< |
+  << { b2. } { s2^\> s4^\p } >> r4 |
+  b'1^\pp ~ |
+  b4. r8 cis,2 |
+  fis,1 ~ |
+  << { fis1 } { \hairtip s2..^\> s8\! } >>  |
 }
 
 bassWords = \lyricmode {
-  ditch
-  the Wic -- ked Witch
+  itch
+  to just a stitch
+  news be spread oh you
+  Wic -- ked Witch
+  one cause cause
+  cause
+  der
+  Oz.
 }
 
 \score {
