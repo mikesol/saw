@@ -477,7 +477,7 @@ mezzoCinqVoix = \relative c'' {
   dis8 ) d4.^\< ~ d8 r gis,4 ~ |
   gis8 a c b e d c b |
   ees d c b a eis' cis c |
-  e d c b a aes g16 r c8 |
+  e d c b bes a aes16 r c8 |
   \key bes \major
   d2.^\ff |
   ees4 e4. f8 |
@@ -542,7 +542,7 @@ altoCinqVoix = \relative c' {
   c8^\< b a g fis e d c |
   b a e' d g8 fis e fis ~ |
   fis fis4 d8 e gis fis g |
-  b a gis fis f e ees16 r a8 |
+  b a g fis f e ees16 r a8 |
   \key bes \major
   a4^\ff aes b |
   c cis d |
@@ -603,13 +603,13 @@ tenorCinqVoix = \relative c' {
   \key d \major
   cis4 gis\startGroup ais^\< |
   b^\f c\stopGroup a |
-  ais b dis |
+  ais d dis |
   d4 fis4. f8 |
   \key g \major
   e8^\< d c b a2 |
   fis4. g8 c gis a b |
   c d4 a8 d cis e dis |
-  gis fis e ees d des c16 r ges'8 |
+  gis fis e dis d cis c16 r ges'8 |
   \key bes \major
   f8^\ff d bes f g' d |
   bes ges gis' fis f bes, |
@@ -663,7 +663,7 @@ bassCinqVoix = \relative c {
   \key a \major
   a1^\f ~ |
   a4 r c fis, |
-  b2 f'4 gis, |
+  b2 f'4 g, |
   %{ e'4 a, c e, | %}
   %g2 fis4 eis |
   e'2 b4 e, |
@@ -674,9 +674,9 @@ bassCinqVoix = \relative c {
   d2 fis4^\< |
   b,2^\f b4 |
   c2 b4 |
-  ais4 e' ( a, ) |
+  ais4 e' ( gis, ) |
   \key g \major
-  d1^\< |
+  d'1^\< |
   d,2. e'8 d |
   c8 b a g fis2 ~ |
   fis8 d'4 a8 c b d16 r f,8 |
@@ -771,7 +771,7 @@ altoFinalRepeat = \relative c'' {
   gis2 ~ gis8 g ~ \times 2/3 { g a b ~ } |
   b8 a, a' gis eis gis \times 2/3 { fis cis dis } |
   ais'4 gis ~ gis8 cis b ais |
-  gis8 [ g ] fis [ f ] e4 ( dis ~ dis ) r4 |
+  gis8 [ g ] fis [ f ] e4. ( dis8 ~ dis4 ) r4 |
 }
 
 altoFinalRepeatWords = \lyricmode {
