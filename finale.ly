@@ -542,7 +542,7 @@ altoCinqVoix = \relative c' {
   c8^\< b a g fis e d c |
   b a e' d g8 fis e fis ~ |
   fis fis4 d8 e gis fis g |
-  b a g fis f e ees16 r a8 |
+  b a gis fis f e ees16 r a8 |
   \key bes \major
   a4^\ff aes b |
   c cis d |

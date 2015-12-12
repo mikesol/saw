@@ -311,17 +311,13 @@ alto = {
   \changeDown
   c8 ]
   \changeUp
-  fis' [
+  ees'4
   \changeDown
-  ees ]
+  d8 [
   \changeUp
-  b' [
+  b' ]
   \changeDown
-  d ]
-  \changeUp
-  gis' [
-  \changeDown
-  a, ]
+  fis4
   \changeUp
   g'4 r4 r2 |
   \changeDown g,8^\p^\< [ \changeUp f' ]
@@ -331,7 +327,7 @@ alto = {
   \changeDown eis,^\mf  [ \changeUp cis' ]
   \changeDown e [ \changeUp bis ]
   \changeDown dis4^\> \changeUp fisis' |
-  \changeDown gis,8^\p \changeUp fis' ~ fis'4
+  \changeDown gis,4.^\p \changeUp fis'8
   \changeDown cis8^\pp \changeUp d' ~ d'4
   r8 \changeDown a,4^\< \changeUp cis'4 \changeDown ais,4 \changeUp fis'8^\mf |
   r8 \changeDown a8 \changeUp gis'8 [ \changeDown b ] r8 \changeUp e' \changeDown g [ \changeUp dis' ] |
@@ -356,7 +352,7 @@ altoWords = \lyricmode {
   Kit -- chen took a slitch It lan -- ded on the Wick -- ed Witch
   Oh,
   Was not a heal -- thy si -- tu -- a -- tion for the
-  Wic -- ked Witch re -- duced to just a stitch
+  %{Wic -- ked%} Witch re -- duced to just a stitch
   %Thank you ve -- ry sweet -- ly for you killed her so com -- plete -- ly
   Mid -- dle of a ditch just then went fly -- ing on her broom -- stick
   Let the joy -- ous

@@ -68,7 +68,10 @@ sopranoWords = \lyricmode {
 mezzo = \relative c'' {
   R2. |
   R |
-  r64 bes^"A LITTLE GIRL" c d ees d c bes32 r bes16 c d ees d c bes32 r bes32 bes64 bes'32 bes64 g32 g64 a32 a64 bes64 bes bes bes a g f32 r32 f64 f f
+  R4 |
+  r32. bes64^"A LITTLE GIRL" c d ees d c bes32 r
+  bes64 c d ees d c bes32 r
+  bes32 bes64 bes'32 bes64 g32 g64 a32 a64 bes64 bes bes bes a g f32 r32 f64 f f
   f f d' ees,   ees ees ees ees    c' c, c d   ees d c f64
 }
 
@@ -100,7 +103,7 @@ tenor = \relative c {
   \clef bass
   ges4^"A MAN" aes bes |
   ces bes aes |
-  ges2 r4 |
+  ges ~ ges r4 |
   r ges4
 }
 
