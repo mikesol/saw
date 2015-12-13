@@ -7,11 +7,6 @@
   bes minor for march Eb
   aes for ballerina (avoid dominant in build up)
 %}
-%{
-greffe
-43.3-4 (M->S, A->M)
-
-%}
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
   footnote-padding = 5\mm
@@ -186,7 +181,7 @@ soprano = \relative c'' { \autoBeamOff
   R1 |
   e,16-.^\p e-. e-. e-. << { e4 ~ e4 } { s4^\< s4^\> } >> r4\parend^\p |
   bis16-.-^\mf^\> bis-. bis-. bis-. bis4 r\parend^\p d8^\< dis  |
-  e16-.^\mp e-. e-. e-. e8.^\> dis16 d16^\p^\< e fis g gis-.-^^\mf gis-. gis-. gis-. |
+  e16-.^\mp e-. e-. e-. e16^\> fis f8 e16^\p^\< e fis g gis-.-^^\mf gis-. gis-. gis-. |
   gis4. g8 fis16 gis g8 fis eis ~ |
   eis16-. eis-.^\p^\< eis-. eis-. eis8^\> e ~ e ees16 d cis-.^\p cis-. cis-. cis-. |
   cis8 c b16 cis c8 b bes a16 b bes8 |
@@ -335,8 +330,8 @@ sopranoWords = \lyricmode {
   %hear he is a wiz of a wiz if
   cause of all the won
   cause of all the won
-  Wi -- zard cause of all the won -- der ful
-  the Wiz of cause of all the won -- der won -- der -- ful Wiz -- ard
+  Wi -- zard cause of all the won -- der -- ful, Oz,
+  The Wiz of cause of all the won -- der won -- der -- ful Wiz -- ard
   of all the won -- der won -- der cause of all the won -- der won -- der -- ful
   all the won -- der -- ful Wi -- zard
   Wiz of Oz the Wiz of Oz
@@ -446,8 +441,8 @@ mezzo = \relative c' { \autoBeamOff
   R1 |
   r4 d16-.^\p^\< d-. d-. d-. d4^\> r\parend^\p |
   r4 r16 d^\mp^\< e eis fis-.^\mf fis-. fis-. fis-. fis4 ~ |
-  fis8 f^\mp e16 fis f8^\> e dis4^\p d16 cis |
-  bis-.^\> bis-. bis-. bis-. bis4^\p r4 b'16-.^\mf b-. b-. b-. |
+  fis8 f^\mp d16 d d d d8 cis c16 d cis8 |
+  bis16-.^\> bis-. bis-. bis-. bis4^\p r4 b'16-.^\mf b-. b-. b-. |
   b4. ais8^\< a16^\> b ais8 a-.^\mf gis16 ais |
   a8 gis g16 a gis8 g^\> fis eis8 fis |
   g4^\p r8 d ~ d8 cis bis d |
@@ -585,8 +580,9 @@ mezzoWords = \lyricmode {
   he is the \repeat unfold 4 wiz
   Wiz Oz
   cause of all the won
-  the Wiz of cause of all the won -- der won -- der -- ful Wiz of
-  won -- der cause of all the won
+  the Wiz of cause of all the won -- der
+  cause of all the won -- der won -- der -- ful, 
+  c	ause of all the won
   cause of all the won -- der won -- der -- ful things all the won -- der things that he does
   the wiz of Oz
   won -- der -- ful the Wiz of Oz the Wiz of Oz
@@ -689,13 +685,13 @@ alto = \relative c' { \autoBeamOff
   cis4^\f-. r r2 |
   R1 |
   R1 |
-  r4 a8 a |
+  a8^\endessous a 
   a'a gis gis16 gis
-  fis8 fis d16-.^\mp^\endessous d-. d-. d-. d8 cis c16 d cis8 |
-  c b ais16 c b8 |
-  bes8 a gis8 a ~ |
-  a4 r |
-  c4.^\espressivo r8 |
+  fis8 fis b8 b16 b b8 gis e dis e4 ~ |
+  e8 b^\pp^\< ais16 c b8^\> |
+  bes8\! a gis8 a |
+  a' a gis4 |
+  c,4.^\espressivo r8 |
   c4.^\espressivo b8 |
   ais4 r16  cis^\mp^\<^\ord dis disis |
   eis-.^\mf eis-. eis-. eis-. eis4 ~ eis8^\> e dis16 eis e8 |
@@ -847,9 +843,9 @@ altoWords = \lyricmode {
   Wi -- zard of Oz, he is one be -- cause be -- cause
   he is the \repeat unfold 8 wiz
   Wiz Oz
-  Hear he is a Wiz of a Wiz if
-  cause of all the won -- der won -- der -- ful things, the won -- der -- ful
-  Wiz -- ard Wi -- zard
+  Hear he is a Wiz of a Wiz If ev -- er a Wiz there was, there was
+  the won -- der -- ful
+  Wiz -- ard Wi -- zard is a Wiz
   won
   won -- der things
   the wiz of
