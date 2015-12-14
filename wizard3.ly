@@ -20,6 +20,11 @@
 
 straight = \markup \italic "straight"
 swung = \markup \italic "swung"
+bouncy = \markup \italic "bouncy"
+scat = \markup \italic "scat"
+crooner = \markup \italic "crooner"
+delicate = \markup \italic "delicate"
+descant = \markup \italic "descant"
 
 MyRed = \Red
 MyBlack = \Black
@@ -54,22 +59,22 @@ prefatoryMatter = {
 soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
   r4 |
-  r4 ees2^\f des4 |
+  r4 ees2^\descant^\f des4 |
   c4 \lo r8 \sh c ~ \lod c4. \sh bes8 ~ |
   \lo bes \sh aes ~ \lo aes \sh r aes2 |
   g4 f ~ \lo f8 \sh r8 r4 |
   r4 f ( ees ) des4 |
   c4 r4 ges' ( f ) |
   ees4 d4 g4 aes |
-  bes g ees c |
-  des-. r \lo r8 \sh beses ~ beses4 |
-  aes-. r \lo c'8 \sh c,8 ~  c4 |
-  aes-. r \lo r8 \sh a8 ~  a4 |
-  a4-. r \lo r8 \sh ees'8 ~  ees4 |
-  \times 2/3 { des4 r2 } \times 2/3 { r4 aes' f } |
-  des4-. r \lo r8 \sh ges ~ ges4 |
+  bes g ees c^\fp^\< |
+  des-_\mf-_ r \lo r8 \sh beses^\fp^\< ~ beses4 |
+  aes-_\mf-_ r \lo c'8-- \sh c,8 ^\fp^\<~  c4 |
+  aes\mf-_ r \lo r8 \sh a8^\fp^\< ~  a4 |
+  a4\mf-_ r \lo r8 \sh ees'8^\fp^\< ~  ees4 |
+  \times 2/3 { des4^\f r2 } \times 2/3 { r4 aes' f } |
+  des4-. r \lo r8 \sh ges^\fp^\> ~ ges4 |
   g4 \lo f8 \sh f8 \lo ees8 \sh ees d4 |
-  ees4 \lo ees8 \sh ees8 \lo r \sh ees ~ ees4 |
+  ees4^\mp \lo ees8 \sh ees8 \lo r \sh ees ~ ees4 |
   ees4 \lo ees8 \sh ees \lo ees \sh ees ees4 |
   ees4 \lo ees8 \sh ees r2 |
   R1 |
@@ -77,7 +82,7 @@ soprano = \relative c'' { \autoBeamOff
   g4-. r r2 |
   r2 \lo r8 \sh a8 ~ a4 |
   f4 aes g g |
-  \lo aes8 f4 \sh ges8 ~ \lo ges8 \sh ees8 ~ ees4 |
+  \lo aes8 ( f4 ) \sh ges8 ~ \lo ges8 \sh ees8 ~ ees4 |
   \times 2/3 { d4 d d } \times 2/3 { d d d } |
   \times 2/3 { ees4 ees ees } \times 2/3 { d d d } |
   \times 2/3 { e e dis } \times 2/3 { d des bes } |
@@ -127,19 +132,29 @@ soprano = \relative c'' { \autoBeamOff
 sopranoWords = \lyricmode {
   \repeat unfold 5 { Oh, the Wiz }
   I could while a -- way
+  If ev
+  oh ev -- ver oh ev oh ev Be ev er oh ev
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause
+  We're off to see the Wi -- zard
+  the
+  Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard of
 }
 
 mezzo = \relative c'' { \autoBeamOff
   \prefatoryMatter
   r4 |
-  g2.^\p ees4 |
+  g2.^\p^\delicate ees4 |
   \lo f8-. \sh f8-. r4 r2 |
   f2. des4 |
   \lo ees8-. \sh ees8-. r4 r2 |
   ees2. ees4 |
   \lo f8-. \sh f8-. r4 r2 |
   f2. fis4 |
-  \lo g8-. \sh g8-. r4 \lo r8 \sh ges ~ ges4 |
+  \lo g8-. \sh g8-. r4 r4 ges4 |
   f-. r \lo r8 \sh des ~ des4 |
   c4-. r \lo r8 \sh ees ~ ees4 |
   d4-. r \lo d'8 \sh d, ~ d4 |
@@ -153,9 +168,9 @@ mezzo = \relative c'' { \autoBeamOff
   R |
   R1 |
   \times 2/3 { r4 ees' r } \times 2/3 { ees r ees } |
-  r4 \lo ees8 \sh r8 \lo r \sh ges,8 ~ ges4 |
+  r4 \lo ees8 \sh ees,8 \lo r \sh ges8 ~ ges4 |
   des4 ees ees ees |
-  \lo ees8 des4 \sh c8 ~ \lo c \sh c8 ~ c4 |
+  \lo ees8 ( des4 ) \sh c8 ~ \lo c \sh c8 ~ c4 |
   \times 2/3 { bes bes bes } \times 2/3 { c c c } |
   \times 2/3 { des des des } \times 2/3 { c c c } |
   \times 2/3 { cis d cis } \times 2/3 { c bes aes } |
@@ -201,12 +216,21 @@ mezzo = \relative c'' { \autoBeamOff
 
 mezzoWords = \lyricmode {
   \repeat unfold 4 { He's my Wi -- zard }
+  If ev
+  oh ev
+  oh ev -- er oh ev Be ev -- er oh ev -- er oh things he does
+  Be -- cause of the Won -- der -- ful things he does.
+  of Won ful
+  he does.
+  We're off to see the Wi -- zard the Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard of
 }
 
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
   %\clef alto 
-  ees4^\mf |
+  ees4^\crooner^\mf |
   aes4 ees c bes |
   \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh ees ~ ees4 |
   \times 2/3 { des f aes } \times 2/3 { c aes bes } |
@@ -232,7 +256,7 @@ alto = \relative c' { \autoBeamOff
   \times 2/3 { ees4 ees' ees, } \times 2/3 { ees' ees, ees' } |
   ees,4-.\lo ees'8 \sh ees,8 \lo r \sh ees'8 ~ ees4 |
   des4 c bes ees |
-  \lo c8 bes4 \sh aes8 ~ \lo aes8 \sh f8 ~ f4 |
+  \lo c8 ( bes4 ) \sh aes8 ~ \lo aes8 \sh f8 ~ f4 |
   \times 2/3 { e4 e e } \times 2/3 { f f f } |
   \times 2/3 { fis fis fis } \times 2/3 { g g g } |
   \times 2/3 { gis g fis } \times 2/3 { f e d } | 
@@ -292,15 +316,21 @@ altoWords = \lyricmode {
   We hear he is a Wiz of a Wiz if ev -- er a wiz there was.
   If ev -- er oh ev -- er oh ev -- er oh ev -- er oh ev -- er oh ev -- er oh ev -- er oh ev -- er oh ev -- er oh
   ev -- er oh ev
-  be -- cause of the Won -- der -- ful things he does
-  be -- cause of the Won -- der -- ful things he does
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  We're off to see the Wi -- zard the
+  Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard of
 }
 
 tenor = \relative c {
   \autoBeamOff
   \prefatoryMatter
   \clef "treble_8"
-  \times 2/3 { aes8^\mp c ees } |
+  \times 2/3 { aes8^\scat^\mp c ees } |
   \lo g8 \sh f \lo r \sh aes ~ \times 2/3 { aes bes aes } \lo g \sh des |
   f4 \lo ees8 \sh g \lo f \sh ees \lo des \sh aes |
   \lo ees' des4 \sh ees8 \times 2/3 { aes,8 c ees } \lo g \sh f ~ |
@@ -324,7 +354,7 @@ tenor = \relative c {
   \times 2/3 { g4 r ees' } \times 2/3 { r ees r } |
   ees4-. \lo r8 \sh ees8 \lo r \sh c ~ c4 |
   bes4 aes bes bes |
-  \lo aes8 bes4 \sh c8 ~ \lo c8 \sh aes8 ~ aes4 |
+  \lo aes8 ( bes4 ) \sh c8 ~ \lo c8 \sh aes8 ~ aes4 |
   \times 2/3 { g g g } \times 2/3 { aes aes aes } |
   \times 2/3 { a a a } \times 2/3 { aes aes aes } |
   \times 2/3 { a bes a } \times 2/3 { aes g e } |
@@ -383,13 +413,25 @@ tenorWords = \lyricmode {
   con -- ju -- ring i -- ma -- ges
   a shrewd en -- chan -- ter
   un -- can -- ny wic -- ked gent vile im -- pos -- ter
-  no more than a cut -- ting
+  no more than a cut -- ting if ev
+  oh ev
+  oh ev
+  oh ev -- ver
+  Be -- cause of the won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause the der things does.
+  We're off to see the Wi -- zard the
+  Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard the
+  Won -- der -- ful Wi -- zard of
 }
 
 bass = \relative c { \autoBeamOff
   \prefatoryMatter
   \clef bass
-  ees4^\mf |
+  ees4^\bouncy^\mf |
   aes,4 \lo bes8 \sh bes \lo c \sh c des4 |
   ees \lo f \sh ees r4 ees |
   bes4 \lo bes8 \sh bes \lo ees \sh ees ees4 |
@@ -467,8 +509,14 @@ bass = \relative c { \autoBeamOff
 bassWords = \lyricmode {
   \repeat unfold 4 { Be -- cause of the won -- der -- ful things he does }
   \repeat unfold 4 { Be -- cause }
-  Be -- cause of the won -- der -- ful things he does
-  Be -- cause of the won -- der -- ful things he does
+  Be -- cause of the Won -- der -- ful things he does
+  Be -- cause of the Won -- der -- ful things he does.
+  Be -- cause of the Won -- der -- ful things he does.
+  Be \repeat unfold 8 ○
+  cause the der things he does.
+  We're off to see We're off to see the Won -- der Won -- der Wiz of
+  Oz the Wi -- zard Won -- der -- ful Wi -- zard
+  Oz the Wi -- zard Won -- der -- ful Wi -- zard Wiz of Oz.
 }
 
 %%% SCORE
