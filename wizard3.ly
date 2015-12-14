@@ -14,6 +14,17 @@
   %max-systems-per-page = #2
 }
 
+%{
+  one idea for the piece is that all the accompaniment is restricted to
+  just the material in the beginning.
+  i can't believe i've worked on this for two years without results and had
+  this random idea on a TER to Saint-Omer at 8:12AM on Monday, December 14th.
+
+  intro as planned
+  C major wizard
+  fugue on bass theme
+%}
+
 %#(ly:set-option 'point-and-click #f)
 
 % oh the wiz is 5 halves in the space of three { x4 oh2 the4 wiz4 }
