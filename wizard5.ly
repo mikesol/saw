@@ -997,7 +997,7 @@ tenor = \relative c' { \autoBeamOff
   cisis8 cis bis cis bis b ais8-. r4 ais8-- ais-- ais--  |
   ais4 b8 dis4 d8 cis4 r8 cisis8^\mp cis bis |
   cis bis b ais8-. r4 cisis8^\< cis bis b ais gisis |
-  ais bis cisis dis bis a gis8-.^\f gis-. gis-. gis4-. ais8 |
+  ais8 bis cisis   dis disis eis gis,8-.^\f gis-. gis-. gis4-. ais8 |
   b4-. ais8 b4-. ais8 b4-. ais8 gis4-. fis8 |
   eis4. cis-. gis'8-. gis-. gis-. gis8.-. cis-_ |
   b-_ ais-_ gis-_ fis eis4. \glissando cis'8-. r4 |
