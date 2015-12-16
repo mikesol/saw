@@ -1262,8 +1262,8 @@ bass = \relative c' { \autoBeamOff
   r4.. ais,32-^^\f ais32-^ r2^\longfermata |
   R1. |
   dis4^\pp^\< ais8 dis4 ais8 dis4 ais8 fis4 ais8 |
-  dis,4^\mf eis8 fis4 eis8 dis4 eis8 fis4 gis8 |
-  ais4^\> b8 ais4 gis8 fis4^\mp gis8 ais4 ais8 |
+  dis,4^\mf eis8 fis4 eis8 dis4 eis8 fis4 fis8 |
+  b8^\> b ais8 gis4 b8 ais4^\mp gis8 fis4 ais8 |
   dis4^\< cisis8 dis4 eis8 fis4 eis8 dis4 cisis8 |
   dis4 cis8 bis4 ais8 gis4^\f r8 r4. |
   r4. \acciaccatura { bis8 } cis4.^\ff ~ cis2.^\> ~ |
@@ -1383,7 +1383,7 @@ bassWords = \lyricmode {
   The Wiz of Oz
   there was
   Off to see We're off to see the 
-  Won -- der -- ful we hear he is a Wi -- zard of a Wiz of Oz We're
+  Won -- der -- ful we hear he is the Wi -- zard of Oz is one be -- cause We're
   off to see the won -- der -- ful the 
   won -- der wiz of Oz
   Wiz of Oz Wiz of Oz Oz
