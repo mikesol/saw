@@ -465,11 +465,10 @@ mezzo = \relative c' { \autoBeamOff
   r4.. eis32-^^\f cisis32-^ r2^\longfermata |
   r2. ais'8^\pp ais ais gis ais gis |
   ais8 ais ais gis ais gis ais8 ais ais gis ais gis |
-  %ais8 ais ais gis ais gis ais8 ais ais gis ais gis |
-  ais8 a gis fisis gis fisis fis4^\< gis8 ais4 ais8 |
-  dis4^\f ais8 dis4 ais8 dis4^\> ais8 fis4 gis8 |
-  ais4 b8 ais4 gis8 fis4^\mp^\< eis8 dis4 eis8 |
-  fis4 gis8 fis4 eis8 dis4^\f cis8 bis4 r8 |
+  fis4^\< gis8 ais4 ais8 dis4^\f^\> ais8 dis4 ais8 |
+  dis8^\mp d cis b ais gisis ais4 b8 ais4 gis8 |
+  fis4^\mp^\< eis8 dis4 eis8 fis4 gis8 fis4 eis8 |
+  fis4 eis8 dis4^\f cis8 bis8 r4 r4. |
   r4. eis8-.^\f eis-. eis-. eis4-. fis8 gis4-. fis8 |
   gis4-. fis8 gis4-. fis8 eis4-. dis8 cis4 cis8 |
   cis4 cis8 cis'4 cis8 bis4 bis8 ais4 ais8 |
@@ -596,10 +595,12 @@ mezzoWords = \lyricmode {
   The Wiz of Oz
   there was
   Won -- der -- ful Wi -- zard of
-  Won -- der -- ful Wi -- zard of Won -- der -- ful Wi -- zard of
-  Won -- der -- ful Wi -- zard is one be -- cause We're
-  off to see We're off to see the Wiz the Wiz of Oz the Wiz of Oz
-  the Won -- der -- ful the Wiz
+  Won -- der -- ful Wi -- zard of Won -- der -- ful Wi -- zard
+  is one be -- cause We're
+  off to see the
+  Won -- der -- ful Wiz -- ard of Oz. He is the Won -- der -- ful,
+  the Won -- der -- ful,
+  the Won -- der Wiz of Oz
   Cause of the Wiz the Won -- der -- ful we're off to see the Wiz
   Be -- cause be -- cause be -- cause be -- cause be -- cause
   Oz
@@ -718,7 +719,7 @@ alto = \relative c' { \autoBeamOff
   fis fis fis eis fis eis fis fis fis eis fis eis |
   fis fis fis eis fis eis fis fis fis eis fis eis |
   fis8 eis e dis d cis bis^\f r4 r4. |
-  \clef "treble_8" r4. \acciaccatura { fisis,8 } gis4.^\ff ~ gis2.^\> ~ |
+  \clef "treble_8" r4. \acciaccatura { fisis8 } gis4.^\ff ~ gis2.^\> ~ |
   gis2.^\mf ~ gis4. fisis8-.^\mf^\endessous fisis-. fisis-. |
   fisis4-. gis8 ais4-. gis8 fisis4-. eis8 dis4. \glissando |
   ais'8-. r4
