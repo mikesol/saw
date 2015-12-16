@@ -468,7 +468,7 @@ mezzo = \relative c' { \autoBeamOff
   fis4^\< gis8 ais4 ais8 dis4^\f^\> ais8 dis4 ais8 |
   dis8^\mp d cis b ais gisis ais4 b8 ais4 gis8 |
   fis4^\mp^\< eis8 dis4 eis8 fis4 gis8 fis4 eis8 |
-  fis4 eis8 dis4^\f cis8 bis8 r4 r4. |
+  dis4 eis8 dis4^\f cis8 dis8 r4 r4. |
   r4. eis8-.^\f eis-. eis-. eis4-. fis8 gis4-. fis8 |
   gis4-. fis8 gis4-. fis8 eis4-. dis8 cis4 cis8 |
   cis4 cis8 cis'4 cis8 bis4 bis8 ais4 ais8 |
@@ -871,7 +871,7 @@ altoWords = \lyricmode {
   Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard of
-  Oz What a Won -- der -- ful Wiz
+  Oz
   Wiz Cause of the Wiz the Won -- der -- ful the Wiz of
   Cause of the Wiz the Won -- der -- ful we're off to see the Wi -- zard
   Cause of the Wiz the Won -- der -- ful the Wiz of Oz
@@ -994,8 +994,8 @@ tenor = \relative c' { \autoBeamOff
   r4.. gis32-^^\f gis32-^ r2^\longfermata |
   r2. r4. cis8--^\pp cis-- cis-- |
   r2. r4. ais8--^\p ais-- ais-- |
-  cisis8 cis bis cis bis b ais8-. r4 dis8-- dis-- dis--  |
-  cisis8 cis bis cis bis b bis8-. r4 cisis8^\mp cis bis |
+  cisis8 cis bis cis bis b ais8-. r4 ais8-- ais-- ais--  |
+  ais4 b8 dis4 d8 cis4 r8 cisis8^\mp cis bis |
   cis bis b ais8-. r4 cisis8^\< cis bis b ais gisis |
   ais bis cisis dis bis a gis8-.^\f gis-. gis-. gis4-. ais8 |
   b4-. ais8 b4-. ais8 b4-. ais8 gis4-. fis8 |
@@ -1148,7 +1148,7 @@ tenorWords = \lyricmode {
   there was
   Won -- der -- ful Won -- der -- ful
   Won -- der -- ful Wi -- zard of Oz
-  Won -- der -- ful Won -- der -- ful Wi -- zard of Oz
+  Won -- der -- ful Wiz of Oz is one
   Won -- der -- ful Wi -- zard of Oz
   Won -- der -- ful Wi -- zard of Oz
   We're off to see the
