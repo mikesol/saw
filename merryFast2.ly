@@ -290,7 +290,7 @@ altoWords = \lyricmode {
   Gosh he is a won -- der %{ba -- by%} have -- n't you heard
   The wi -- zard flipped the bird, the wi -- zard is the word
   would -- n't e -- ver wan -- na stop get -- ting up so high
-  my lord oh show me the Wiz -- ard that is guard -- ing the gate
+  my lord now o -- pen up Wiz -- ard that is guard -- ing the gate
   He's tak -- ing off al -- though you want -- ed to wait
   it's too late
   Oh ne -- ver was a Wi -- zard e -- ver steal -- in the show
@@ -321,7 +321,7 @@ altoWords = \lyricmode {
   And a cou -- ple of tra
   la las that's how we laugh
   The day a way in the mer -- ry Old land of Oz, no
-  Show me the
+  Now o -- pen
 }
 
 firstPropositionEndingLyrics = \lyricmode {
@@ -337,7 +337,7 @@ firstPropositionEndingLyrics = \lyricmode {
   \repeat unfold 3 { Ha ha ha Ho dee ho }
   Ha ha ha
   \repeat unfold 5 No
-  Show me the
+  Now o -- pen
 }
 
 comp = \relative c' {
@@ -560,27 +560,28 @@ bass = \relative c {
 
 bassWords = \lyricmode {
   o -- pen
-  Wi -- zard he's my one and on -- ly
-  Wiz of Oz is one be -- cause be -- cause of all the won -- der -- ful,
-  the won -- der -- ful, the things he does, the Wi -- zard
-  can't be -- lieve the ju -- bi -- la -- tion
-  mer -- ry Wi -- zard is my re -- ve -- la -- tion
-  fills me up with joy and un -- re -- mit -- ting
-  love it's so out -- rage -- ous haven't you heard,
-  It's so re -- mar -- ka -- ble the Wi -- zard's mirth is
-  e -- per -- ves -- cent light he's quite a won -- drous chap, says
-  Ha ha ho he steals the show al -- lu -- ring mis -- tic po -- wer Wiz -- ard
-  Ha ha
-  ho And tra -- la la that's how we laugh the day a -- way in Oz
-  No he's my Wi -- zard
-  He's my lu -- min -- es -- cent won -- der Wiz of
-  Ha ha ha and ho ho ho and cou -- ple tra la las that's how we
-  laugh that's how we laugh the day a -- way right here in
-  Oz the land of
-  Ha ha Ho ho cou -- ple tra la las
-  that's how we laugh the day a -- way in
-  mer -- ry land of Oz
-  that's how we laugh the day a -- way
+  %Wi -- zard he's my one and on -- ly
+  %Wiz of Oz is one be -- cause be -- cause of all the won -- der -- ful,
+  %the won -- der -- ful, the things he does, the Wi -- zard
+  %can't be -- lieve the ju -- bi -- la -- tion
+  %mer -- ry Wi -- zard is my re -- ve -- la -- tion
+  %fills me up with joy and un -- re -- mit -- ting
+  %love it's so out -- rage -- ous haven't you heard,
+  %It's so re -- mar -- ka -- ble the Wi -- zard's mirth is
+  %e -- per -- ves -- cent light he's quite a won -- drous chap, says
+  %Ha ha ho he steals the show al -- lu -- ring mis -- tic po -- wer Wiz -- ard
+  %Ha ha
+  %ho And tra -- la la that's how we laugh the day a -- way in Oz
+  %No he's my Wi -- zard
+  %He's my lu -- min -- es -- cent won -- der Wiz of
+  %Ha ha ha and ho ho ho and cou -- ple tra la las that's how we
+  %laugh that's how we laugh the day a -- way right here in
+  %Oz the land of
+  %Ha ha Ho ho cou -- ple tra la las
+  %that's how we laugh the day a -- way in
+  %mer -- ry land of Oz
+  %that's how we laugh the day a -- way
+  \repeat unfold 205 ○
 }
 
 %%% SCORE
@@ -744,12 +745,12 @@ sopranoSecondPart = \relative c' {
   r4 d4^\mp--%{\bendAfter #-2%} r4 \lo r8 \sh cis8-. |
   r2 dis4--%{\bendAfter #-2%} ^\crpoco r4 |
   \lo r8 \sh e-. r4 r4 f--%{\bendAfter #-2%} |
-  r4 \lo r8 \sh fis-. r2 |
-  g4--%{\bendAfter #-2%} r \lo r8 \sh gis-. r4 |
-  r4 a4--%{\bendAfter #-2%} r4 \lo r8 \sh fis8-. |
-  r2 g4--%{\bendAfter #-2%} r4 |
-  \lo r8 \sh gis-. r4 r4 fis--%{\bendAfter #-2%} |
-  r4 \lo r8 \sh f-. r2 |
+  r4 \lo r8 \sh gis,-. r2 |
+  d'4--%{\bendAfter #-2%} r \lo r8 \sh dis-. r4 |
+  r4 cis4--%{\bendAfter #-2%} r4 \lo r8 \sh c8-. |
+  r2 g'4--%{\bendAfter #-2%} r4 |
+  \lo r8 \sh fis-. r4 r4 f--%{\bendAfter #-2%} |
+  r4 \lo r8 \sh b,-. r2 |
   e4-^^\f r4 r2 | % 1
   R1 |
   r4 \transpose c c { << { \subdXA } { s4^\p } >> |
@@ -774,23 +775,29 @@ sopranoSecondPart = \relative c' {
   R1*3 |
   ais'1^\p^\< ~ |ais1 ~ | ais1 ~ | ais1 ~ |ais1^\> ~ | ais1 ~ | ais1 ~ |ais1^\p^\< ~ |
   ais4^\mf a a r |
-  a4. a8 ~ a2 |
-  a4. a8 ~ a4. r8 |
-  a2^\< gis2^\f ~ |
-  gis4 b b2 |
-  e cis4 dis ~ |
-  dis e4 ~ e a,4 ~ |
-  a a4 gis4 gis4 |
-  gis2 a |
-  d4 d d r |
-  %%%%%%%%%%%%%%%%%%%%%%%%%%
-  d4. d4.
-  d4 ~ | d8 d4.
-  d4 d | d
-  r d d |
-  d r d4 d |
-  r4 d d d |
+  a4. a8 ~ a4 a ~  |
+  a8 a8 ~ a4 r a4^\< ~ |
+  a^\< gis2^\f b4 |
+  b2 e |
+  cis4 dis2 e4 ~ |
+  e4 a,2 a4 |
+  gis4 gis4 gis2
+  a d4 d |
+  d r d4. d8 ~ |
+  d4 d ~ d8 d ~ d4 |
+  d d d r |
+  d d d r |
+  d4. d8 ~ d4 d ~ |
+  d8 d8 ~ d4 d4 r |
   R1 |
+  %%%%%%%%%%%%%%%%%%%%%%%%%%
+  %d4. d4.
+  %d4 ~ | d8 d4.
+  %d4 d | d
+  %r d d |
+  %d r d4 d |
+  %r4 d d d |
+  %R1 |
   r16 fis,^\p^\< fis a   a cis cis e    gis^\> e e cis    a fis\! |
   r16 a^\<   a [ cis ] cis [ dis^\mf ] |
   r16 fis,^\p^\< a  [  cis ] cis [ e ] |
@@ -799,7 +806,7 @@ sopranoSecondPart = \relative c' {
 }
 
 sopranoWordsSecondPart = \lyricmode {
-  The way
+  o -- pen
   wi -- zard
   I know
   %wiz -- ard
@@ -812,8 +819,8 @@ sopranoWordsSecondPart = \lyricmode {
   We're off to see the Wi -- zard
   The won -- der -- ful Wiz
   What a won -- der -- ful Wi -- zard won -- der -- ful the
-  The way
-  The way
+  o -- pen
+  o -- pen
   way
   Ho cou -- ple
   He's my Wi -- zard
@@ -844,10 +851,9 @@ sopranoWordsSecondPart = \lyricmode {
   Ho Ho
   cou -- ple
   That's how we laugh the day a -- way in the mer -- ry old land
-  Ha ha ha ho ho cou -- ple tra la that's
+  Ha ha ha ho ho cou -- ple tra la las
   how we laugh
-  day a
-  mer -- ry old
+  day a mer -- ry ol'
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
@@ -933,22 +939,20 @@ mezzoSecondPart = \relative c' {
   \times 4/5 { b4 r cis2. } |
   \times 4/5 { r4 d2. r4 } |
   fis,4^\mf fis fis r |
-  fis4. fis8 ~ fis2 |
-  fis4. fis8 ~ fis4. r8 |
-  fis2^\< e2^\f ~ |
-  e4 gis gis2 |
-  gis a4 b ~ |
-  b cis4 ~ cis fis,4 ~ |
-  fis fis4 e4 e4 |
-  e2 e |
-  gis4 gis gis r |
-  %%%%%%%%%%%%%%%%%%%%%%%%%%
-  gis4. gis4.
-  gis4 ~ | gis8 gis4.
-  gis4 gis | gis
-  r gis gis |
-  gis r gis4 gis |
-  r4 gis gis gis |
+  fis4. fis8 ~ fis4 fis4 ~ |
+  fis8 fis8 ~ fis4 r4 fis4 ~ |
+  fis^\< e2^\f gis4 |
+  gis2 gis |
+  a4 b2 cis4 ~ |
+  cis fis,2 fis4 |
+  e4 e4 e2 |
+  e2 gis4 gis |
+  gis r gis4. gis8 ~ |
+  gis4 gis ~ gis8 gis ~ gis4 |
+  gis gis gis r |
+  gis gis gis r |
+  gis4. gis8 ~ gis4 gis ~ |
+  gis8 gis8 ~ gis4 gis4 r |
   R1 |
   r16 d^\p^\< d e   e g g cis    e^\> cis cis bes    gis fis\!
   r16 e^\<   e [ g ]  g [ b^\mf ]
@@ -960,7 +964,7 @@ mezzoSecondPart = \relative c' {
 }
 
 mezzoWordsSecondPart = \lyricmode {
-  The way
+  o -- pen
   wi -- zard
   I know
   wiz -- ard
@@ -973,8 +977,8 @@ mezzoWordsSecondPart = \lyricmode {
   Wi -- zard
   Wiz the won -- der
   We're off to see the
-  The way
-  The way
+  o -- pen
+  o -- pen
   way
   Ho cou -- ple
   He's my Wi -- zard
@@ -987,7 +991,7 @@ mezzoWordsSecondPart = \lyricmode {
   And a cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry old land of
   Oz ha ha ha
-  dew
+  blue
   Look how he fiz --
   zles gon -- na siz --
   le what a wiz
@@ -1002,10 +1006,9 @@ mezzoWordsSecondPart = \lyricmode {
   Ho Ho
   cou -- ple
   That's how we laugh the day a -- way in the mer -- ry old land
-  Ha ha ha ho ho cou -- ple tra la that's
+  Ha ha ha ho ho cou -- ple tra la las
   how we laugh
-  day a
-  mer -- ry old
+  day a mer -- ry ol'
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
@@ -1050,19 +1053,31 @@ altoSecondPart = \relative c'' {
   g4--%{^\espressivo%} \lo r8 \sh bes-- r4 eis,--%{^\espressivo%} |
   \lo r8 \sh e-- r4 g4--%{^\espressivo%} \lo r8 \sh fis8-- |
   r4 gis4--%{^\espressivo%} \lo r8 \sh g8-- r4 |
-  gis4^\mp--%{^\espressivo%} \lo r8 \sh a-- r4 eis--%{^\espressivo%} |
-  \lo r8 \sh e-- r4 fis--%{^\espressivo%}^\crpoco \lo r8 \sh c8-- |
-  r4 g'4--%{^\espressivo%} \lo r8 \sh gis8-- r4 |
-  %\mark "?"
-  eis4--%{^\espressivo%} \lo r8 \sh g-- r4 fis--%{^\espressivo%} |
-  \lo r8 \sh g-- r4 d--%{^\espressivo%} \lo r8 \sh gis8-- |
-  r4 g4--%{^\espressivo%} \lo r8 \sh fis8-- r4 |
-  %\mark "?"
-  e4--%{^\espressivo%} \lo r8 \sh fis-- r4 a--%{^\espressivo%} |
-  \lo r8 \sh ais-- r4 a--%{^\espressivo%} \lo r8 \sh g8-- |
-  r4 gis4--%{^\espressivo%} \lo r8 \sh g8-- r4 |
+  %gis4^\mp--%{^\espressivo%} \lo r8 \sh a-- r4 eis--%{^\espressivo%} |
+  %\lo r8 \sh e-- r4 fis--%{^\espressivo%}^\crpoco \lo r8 \sh c8-- |
+  %r4 g'4--%{^\espressivo%} \lo r8 \sh gis8-- r4 |
+  %%\mark "?"
+  %eis4--%{^\espressivo%} \lo r8 \sh g-- r4 fis--%{^\espressivo%} |
+  %\lo r8 \sh g-- r4 d--%{^\espressivo%} \lo r8 \sh gis8-- |
+  %r4 g4--%{^\espressivo%} \lo r8 \sh fis8-- r4 |
+  %%\mark "?"
+  %e4--%{^\espressivo%} \lo r8 \sh fis-- r4 a--%{^\espressivo%} |
+  %\lo r8 \sh ais-- r4 a--%{^\espressivo%} \lo r8 \sh g8-- |
+  %r4 gis4--%{^\espressivo%} \lo r8 \sh g8-- r4 |
   %\mark "@"
-  \lo gis8^\f-^^\> \sh b \lo gis \sh fis \lo e \sh cis \lo e \sh fis |
+  \clef "treble_8"
+  \lo r8 d4 \sh b8 \lo cis \sh d \lo cis \sh gis |
+  \lo a \sh fis \lo cis' \sh b ~ \lo b \sh cis \lo b \sh fisis |
+  \lo gis \sh e' \lo cis \sh b \lo g \sh d' \lo cis \sh gis |
+  \lo fis \sh a \lo cis \sh e-. \lo r \sh fis \lo r \sh g ~ |
+  \lo g \sh g \times 2/3 { fis g fis } \lo e \sh cis \lo b \sh ais |
+  \lo a \sh a' \lo gis \sh g \lo fis \sh f \lo e \sh gis, |
+  \lo fis \sh c' \lo cis \sh d \lo cis \sh b \lo g \sh cis |
+  \lo gis \sh a \lo ais \sh b \lo c \sh cis \lo d \sh b |
+  %%%
+  e1 |
+  \clef "treble"
+  \lo cis8^\f-^^\> \sh b' \lo gis \sh fis \lo e \sh cis \lo e \sh fis |
   \lo gis^\mp \sh b, \lo c \sh cis \lo d \sh b \lo ais \sh a |
   \lo gis8 \sh bis \lo cis \sh g' \lo gis \sh fis \lo e \sh cis |
   b4-. \lo r8 \sh b' ~ \lo b \sh gis8 \lo e \sh d8 |
@@ -1101,20 +1116,18 @@ altoSecondPart = \relative c'' {
   a2 gis |
   b1^\< ~ |
   b1 ~ |
-  b2 b,^\f ~ |
-  b4 b4 e2 |
-  e e4 fis ~ |
-  fis4 e ~ e e ~ |
-  e e e e |
-  e2 dis |
-  fis4 fis fis r |
-  %%%%%%%%%%%%%%%%%%%%%%%%%%
-  fis4. fis4.
-  fis4 ~ | fis8 fis4.
-  fis4 fis | fis
-  r fis fis |
-  fis r fis4 fis |
-  r4 fis fis fis |
+  b4 b,2^\f b4 |
+  e2 e |
+  e4 fis2 e4 ~ |
+  e e2 e4 |
+  e e e2 |
+  dis2 fis4 fis |
+  fis r fis4. fis8 ~ |
+  fis4 fis ~ fis8 fis ~ fis4 |
+  fis fis fis r |
+  fis fis fis r |
+  fis4. fis8 ~ fis4 fis ~ |
+  fis8 fis8 ~ fis4 fis4 r |
   R1 |
   r16 b,^\p^\< b e    e g g a    d^\> a a g   e b\! |
   r16 e^\<    e [ g ] g [ gis^\mf ] |
@@ -1126,7 +1139,7 @@ altoSecondPart = \relative c'' {
 }
 
 altoWordsSecondPart = \lyricmode {
-  way oh
+  up oh
   migh -- ty wi -- zard
   Now I got -- ta know
   Are you my wi -- zard
@@ -1137,20 +1150,30 @@ altoWordsSecondPart = \lyricmode {
   He is a wi -- zard
   If ev -- er a wiz there was
   The wi -- zard of Oz is one
-  Show me the way
-  Show me Show me the way
+  Now o -- pen up
+  O -- pen Now o -- pen up
   oh migh -- ty Wi -- zard
   Now I need to know cause
   no
   ba -- by boy, beau, bare ba -- boo
   damn dat deft darn dan -- dy dog
-  darn di -- dact dis -- dains dead days
-  dad -- dy's dull dusk dwin -- dled, dimmed, died
-  dips down, dives deep, dee -- ded dae -- dal
-  dank, damp, da -- da dew
-  oh what a sil -- ly lit -- tle thing
-  oh what a pre -- cious lit -- tle swing
-  oh what a naugh -- ty lit -- tle fling
+  darn di -- dact
+  %dis -- dains dead days
+  %dad -- dy's dull dusk dwin -- dled, dimmed, died
+  %dips down, dives deep, dee -- ded dae -- dal
+  %dank, damp, da -- da dew
+  %\repeat unfold #62 Q
+  drives me cra -- zy he's a hell of a tramp
+  you know he rubs me and he snubs me and he's 
+  giv -- in' me a hard time
+  the Wi -- zard of Oz is one be -- cause
+  he got me thin -- kin' may -- be
+  hey I do not like it, no, I
+  think the things are real -- ly go -- in' wrong,
+  blue
+  no what a sil -- ly lit -- tle thing
+  no what a pre -- cious lit -- tle swing
+  no what a naugh -- ty lit -- tle fling
   ding the Wi -- zard fiz --
   zles gon -- na siz --
   le what a wiz
@@ -1165,12 +1188,12 @@ altoWordsSecondPart = \lyricmode {
   was -- n't ge -- ne -- rous to a -- ni -- mals
   go up
   we're go -- in' up he takes me so high the wi -- zard's ne -- ver down
-  show me the way
+  now o -- pen up
   how we laugh the day a -- way in the mer -- ry old land
-  Ha ha ha ho ho cou -- ple tra la that's
+  Ha ha ha ho ho cou -- ple tra la las
   how we laugh
   day a
-  mer -- ry old
+  mer -- ry ol'
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
@@ -1214,23 +1237,36 @@ tenorSecondPart = \relative c' {
   \lo cis8 dis4 \sh e8 ~ \lo e a,4 \sh a8 |
   \lo gis \sh gis gis4 a fis |
   gis4 b cis c |
-  r4 b^\ord^\mp--%{^\mordent%} r2 |
-  \lo r8 \sh cis-_^\crpoco r4 r2 |
-  cis4--%{^\mordent%} r4 \lod r4. \sh c8-_ |
-  r2. d4--%{^\mordent%} |
-  r2 \lo r8 \sh a-_ r4 |
-  r2 b4--%{^\mordent%} r |
-  \lod r4. \sh bes8-_ r2 |
-  r4 c--%{^\mordent%} r2 |
-  \lo r8 \sh b-_ r4 r2 | % 1
-  cis4^\f-^ r4 r2 | % 2
+  %%%%
+  %r4 b^\ord^\mp--%{^\mordent%} r2 |
+  %\lo r8 \sh cis-_^\crpoco r4 r2 |
+  %cis4--%{^\mordent%} r4 \lod r4. \sh c8-_ |
+  %r2. d4--%{^\mordent%} |
+  %r2 \lo r8 \sh a-_ r4 |
+  %r2 b4--%{^\mordent%} r |
+  %\lod r4. \sh bes8-_ r2 |
+  %r4 c--%{^\mordent%} r2 |
+  %\lo r8 \sh b-_ r4 r2 | % 1
+  %%%%
+  r4 b4^\mp--%{\bendAfter #-2%} r4 \lo r8 \sh ais8-. |
+  r2 bis4--%{\bendAfter #-2%} ^\crpoco r4 |
+  \lo r8 \sh cis-. r4 r4 b--%{\bendAfter #-2%} |
+  r4 \lo r8 \sh a-. r2 |
+  gis4--%{\bendAfter #-2%} r \lo r8 \sh eis-. r4 |
+  r4 a4--%{\bendAfter #-2%} r4 \lo r8 \sh fis8-. |
+  r2 e'4--%{\bendAfter #-2%} r4 |
+  \lo r8 \sh b-. r4 r4 c--%{\bendAfter #-2%} |
+  r4 \lo r8 \sh cis-. r2 |
+  %e4-^^\f r4 r2 | % 1
+  %%%%
+  gis'4^\f-^ r4 r2 | % 2
   r4 \transpose c c { << { \tonXA } { s4^\p } >> |
   \tonXB
   \tonXC
   \tonXD
   << { \tonXE } { s4^\< } >>
   \tonXF }
-  b^\mp r d4 d | % 1
+  b,^\mp r d4 d | % 1
   r2 r8 ais4. |
   r4 b2. |
   c2 cis |
@@ -1258,22 +1294,20 @@ tenorSecondPart = \relative c' {
   \times 4/7 { f1 r2 g4^\< ~  } |
   \times 4/7 { g1 ~ g4 r2  } |
   b,4^\mf b b r |
-  b4. b8 ~ b2 |
-  b4. b8 ~ b4. r8 |
-  dis2^\< e^\f ~ |
-  e4 e e2 |
-  b a4 a ~ |
-  a a ~ a c ~ |
-  c c b b |
-  b2 b |
-  b4 b b r |
-  %%%%%%%%%%%%%%%%%%%%%%%%%%
-  b4. b4.
-  b4 ~ | b8 b4.
-  b4 b | b
-  r b b |
-  b r b4 b |
-  r4 b b b |
+  b4. b8 ~ b4 b ~ |
+  b8 b8 ~ b4 r4 dis4 ~ |
+  dis4^\< e2^\f e4 |
+  e2 b
+  a4 a2 a4 ~ |
+  a c2 c4 |
+  b b b2 |
+  b fis4 fis |
+  fis r fis4. fis8 ~ |
+  fis4 fis ~ fis8 fis ~ fis4 |
+  fis fis fis r |
+  fis fis fis r |
+  fis4. fis8 ~ fis4 fis ~ |
+  fis8 fis8 ~ fis4 fis4 r |
   R1 |
   r16 a^\p^\< a cis    cis d d fis   ais^\> fis fis d cis a\! |
   r16 cis^\<    cis [ d ] d [  fis^\mf ] |
@@ -1285,7 +1319,7 @@ tenorSecondPart = \relative c' {
 }
 
 tenorWordsSecondPart = \lyricmode {
-  The way
+  o -- pen
   migh -- ty
   wiz
   wi -- zard
@@ -1298,8 +1332,8 @@ tenorWordsSecondPart = \lyricmode {
   If ev -- er, oh ev -- er a wiz there was,
   The Wi -- zard of Oz is one be -- cause
   be -- cause be -- cause be -- cause be -- cause be -- cause
-  The way
-  The way
+  o -- pen
+  o -- pen
   way
   ha ho ho
   cou -- ple
@@ -1311,7 +1345,10 @@ tenorWordsSecondPart = \lyricmode {
   And a cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry old land of
   mer -- ry land of
-  chat, chafe, chide, chime, chip, charm, chant, chug, chuck, chop, chew
+  bad bum
+  be -- bop's black beard bu -- bles
+  Bus -- by's bi -- ble brings back blue
+  %chat, chafe, chide, chime, chip, charm, chant, chug, chuck, chop, chew
   He's on the riz
   Don't need a quiz
   Look how he fiz --
@@ -1331,10 +1368,9 @@ tenorWordsSecondPart = \lyricmode {
   Ho Ho
   cou -- ple
   That's how we laugh the day a -- way in the mer -- ry old land
-  Ha ha ha ho ho cou -- ple tra la that's
+  Ha ha ha ho ho cou -- ple tra la las
   how we laugh
-  day a
-  mer -- ry old
+  day a mer -- ry ol'
   \repeat unfold 3 { Wi -- zard }
   \repeat unfold 3 { the wiz } the
   \repeat unfold 2 { the wiz } the
@@ -1391,7 +1427,7 @@ bassSecondPart = \relative c {
   gis4 g bes eis, |
   fis b c cis |
   d bes g b |
-  e, bes' a eis |
+  cis bes a eis |
   fis c' b a |
   gis g fis a |
   gis d' cis \lo c8 \sh eis, |
@@ -1460,7 +1496,7 @@ bassSecondPart = \relative c {
 }
 
 bassWordsSecondPart = \lyricmode {
-  The way
+  o -- pen
   wi -- zard
   I know
   wi -- zard
@@ -1475,15 +1511,16 @@ bassWordsSecondPart = \lyricmode {
   ev -- er, oh ev -- er a wiz the Wiz of Oz is one be -- cause
   be -- cause of the won the Wi -- zard things that
   We're off to see the won -- der -- ful
-  The way
-  The way
+  o -- pen
+  o -- pen
   way
   ha
   Ho ho ho
   And a cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry
   of
-  \repeat unfold 72 ○
+  \repeat unfold 71 ○
+  blue
   You know the biz
   He's on the riz
   Don't need a quiz

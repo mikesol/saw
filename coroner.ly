@@ -243,8 +243,8 @@ mezzoCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   f^\> d |
   e^\< a |
   g^\> e |
-  fis^\< d |
-  a' d8 fis,^\subPd |
+  fis^\< d8 [ fis ] |
+  a4 d8 fis,^\subPd |
   e^\mf^\> e e e^\p |
   d^\mf^\> d d d |
   d d^\p cis^\mf^\> cis |
@@ -395,9 +395,9 @@ tenorCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   e^\> g ~ |
   g f^\< ~ |
   f d ~ |
-  d^\> e ~ |
-  e ees^\< |
-  d4. b'8^\subPd |
+  d^\> cis ~ |
+  cis g'^\< ( |
+  fis4 ) d8 b'8^\subPd |
   b bes^\mf^\> bes bes |
   bes bes^\p g^\mf^\> g |
   g g g g |

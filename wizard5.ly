@@ -79,9 +79,9 @@ secSix = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \m
 marks = {
   %\set Score.skipTypesetting = ##t
   \time 4/4
-  \partial 4.
   \tempo "Presto" 4=216
   \bar "||" \secOne
+  s2 s8
   s4. |
   s1*30 |
   s2 \mark \rall \unfoldChange #216 #140 #12 |
@@ -94,12 +94,14 @@ marks = {
   \tempo "Adagio" 4=52
   \bar "||" \secTwo
   \time 2/4
-  s1*9 |
+  \unfoldChange #52 #50 #8
+  s1*8 |
   \tempo "Andante" 4=92
   \bar "||" \secThree
   s1*4 |
   \time 4/4
   \tempo "Cadenza"
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 60 4 0 0)
   s1*4 |
   \tempo "Lento" 4=48
   s1*4 |
@@ -107,16 +109,18 @@ marks = {
   \time 12/8
   \bar "||" \secFour
   s1.*4 |
+  s1.*1 |
   \mark \rall
-  s1.*2 |
+  s2. \unfoldChange #228 #168 #6
   \tempo "Moderato" 4.=112 |
   s1.*16 |
-  \tempo "Andante" 4=92
+  \tempo "Andante" 4=100
   \bar "||" \secFive
   \time 2/4
   s2*38 |
   \mark \rall
-  s2*2 |
+  \unfoldChange #92 #60 #8
+  %s2*2 |
   %\set Score.skipTypesetting = ##f
   \tempo "Presto" 4=216
   \time 2/2
@@ -124,21 +128,30 @@ marks = {
   s1*22 | \bar "||"
   \tempo "Allegro con moto" 4=160
   \secOne
-  s1*4 |
+  \unfoldChange #160 #180 16
+  %s1*2
+  s1*2 |
   \secTwo |
   s1*2 |
   \secThree
   s1*5 |
   \time 12/8
+  \tempo "Allegro" 4.=174
   \secFour
-  s1.*6 |
+  s1.
+  s2. \unfoldChange #261 #198 #6
+  \tempo "Moderato" 4.=132 |
+  s1.*4 |
   \time 2/4
+  \tempo "Andante" 4=112
   \secFive
-  s2*4 |
+  s2 |
+  \mark \accel
+  \unfoldChange #112 #160 #12
   \secSix
   \time 4/4
-  s1*6 \bar "|."
-
+  \unfoldChange #160 #200 #16
+  s1*4 \bar "|."
 }
 prefatoryMatter = {
   \key cis \major
@@ -148,6 +161,7 @@ prefatoryMatter = {
 
 soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
+  s2 s8
   r4. |
   R1 |
   R1 |
@@ -218,7 +232,7 @@ soprano = \relative c'' { \autoBeamOff
   gis8-. gis-. gis-. gis4-. ais8 b4-. cis8 dis4-. eis8 |
   fis4-. gis8 fis4-. eis8 dis4-. cis8 bis4-. cis8 |
   dis4-. cis8 bis4-. ais8 bis4-. cis8 bis4-. ais8 |
-  gis4-. fis8 gis4-. ais8 b8-. b-. b-. ais8.-_ gis-_ |
+  gis4-. fis8 gis4. b8-. b-. b-. ais8.-_ gis-_ |
   fis-. fis-_^\subPd^\< gis-_ gisis-_ ais-.^\mf cis,-_^\p^\< cisis-_ dis-_ |
   e-.^\mf r r4. r8. ais-_^\p^\< aisis-_ bis-_ |
   cis-.^\mf r r4. r2. |
@@ -272,8 +286,9 @@ soprano = \relative c'' { \autoBeamOff
   r8 b16 b b8-. b-. r4 fis'-> |
   r8 b,16 b b8-. b-. r4 c,-> |
   r8 ais'16 ais ais8-. ais-. r8 ais16 ais ais8-. ais8-. |
-  ais-.^\< a-. gis-. g-. fis-. eis-. e-. dis-.^\f |
-  r8 b'16^\pp b b8-. b-. r4 c,-> |
+  %ais-.^\< a-. gis-. g-. fis-. eis-. e-. dis-.^\f |
+  ais4 ais8 ais gis4 ais8 gis |
+  fis8 b16^\pp b b8-. b-. r4 c,-> |
   r8 b'16 b b8-. b-. r4 dis,8.->^\< dis32 eis |
   fis8-.^\mf^\> fis-.\! r fis-.^\p^\cresc fisis-. fisis-. r fisis-. |
   gis-. gis-. r gis-. gisis-. gisis-. r gisis-. |
@@ -283,26 +298,26 @@ soprano = \relative c'' { \autoBeamOff
   ais a gis g |
   fis eis e dis |
   d4 cis bis8^\> b ais8 a |
-  gis2.^\p r4 |
-  r2 r8 a'^\< gis fisis |
+  ais2.^\p r4 |
+  r8 eis'^\< fis fisis gis a gis fisis |
   gis4-.^\f r r2 |
   R1 |
   R1 |
   R1 |
   R1 |
   r2 r8 eis^\p fis fisis |
-  gis4^\< g fis-. eis^\subPd |
-  e dis disis eis |
+  gis4^\< g fis-. disis^\subPd |
+  eis dis cis r |
   R1 |
-  fis8-.->^\mf^\> fis-. fis-. fis-. fis2^\p |
+  eis8-.->^\mf^\> eis-. eis-. eis-. eis2^\p |
   dis4-.^\mf fisis8 ais dis4-. cis-. |
   bis8-. ( cis-. ais-. bis-. gis4-. ) gis-.-> |
   fisis4-.-> gis'4^\f ( ~ gis8 fisis ) eis [ dis ] |
   cisis^\> [ dis eis dis ] cisis [ bis ] aisis [ bis ] |
   cisis [ bis ] aisis [ gis ] fisis [ ( gis ] fisis4^\mp ) |
-  r2. r4. aisis8^\p aisis aisis |
-  aisis aisis aisis aisis^\< bis bis bis cis cisis dis cisis bis |
-  ais8-.^\f ais8-. ais-. ais-. r4 r4. fisis ~ |
+  r2. r4. gis8^\p gis gis |
+  dis' d cis c b ais a gis g fis f e |
+  eis8-.^\f eis8-. eis-. eis-. r4 r4. fisis ~ |
   fisis8-. fisis-. fisis-. fisis4-. gis8 ais4-. gis8 ais4-. gis8 |
   ais4-. gis8 fisis4-. eis8 fisis8-. fisis-. fisis-. fisis8.-. bis |
   ais gis eis4. \glissando dis'8 r4 dis,4.^\> |
@@ -351,7 +366,7 @@ sopranoWords = \lyricmode {
   Cause of the Wiz the Won -- der -- ful be -- cause he is the
   Wi -- zard Cause of the Wiz the Won -- der -- ful the Wiz of
   Cause of the Wiz the Won -- der -- ful the Won -- der -- ful, the Won -- der -- ful we're
-  Off to see we're Off to see the Won -- der -- ful the Cause of the Wiz of Oz
+  Off to see we're Off to see the Won -- der -- ful Cause of the Wiz of Oz
   He is a wiz, Oh what a wiz
   We're off to see
   Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
@@ -371,7 +386,8 @@ sopranoWords = \lyricmode {
   What a Wi -- zard
   Oz
   \repeat unfold 2 { What a Wi -- zard }
-  Won -- der -- ful the Won -- der -- ful the
+  %Won -- der -- ful the Won -- der -- ful the
+  Won -- der -- ful Wi -- zard of Oz
   What a Wi -- zard
   Oz
   What a Wi -- zard
@@ -386,8 +402,8 @@ sopranoWords = \lyricmode {
   the won -- der
   we're
   Off to see the won -- der -- ful we're off to see the won -- der -- ful he is the wiz
-  the Wiz of Oz
-  he is the wiz wiz wiz wiz wiz wiz wiz wiz
+  he is the Wiz the Wiz of Oz
+  he is the wiz wiz wiz of wiz wiz wiz
   cause of al the won
   ev -- er a wiz there was
   If ev -- er oh ev -- er a wiz there was
@@ -406,6 +422,7 @@ sopranoWords = \lyricmode {
 
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
+  s2 s8
   r4. |
   R1 |
   r2 r8 eis8^\pp^\< fis fisis |
@@ -474,11 +491,11 @@ mezzo = \relative c' { \autoBeamOff
   r4. eis8-.^\f eis-. eis-. eis4-. fis8 gis4-. fis8 |
   gis4-. fis8 gis4-. fis8 eis4-. dis8 eis4. |
   cis8.-. cis'-. b-. ais-. gis-. fis-. eis4 dis8 |
-  cis4 dis8 eis4. \glissando cis'8-. r4 eis,8-. eis-. eis-. |
-  eis4-. fis8 gis4-. fis8 gis4-. ais8 b4-. ais8 |
-  gis4-. eis8 dis4-. cis8 bis4.-. gis'8-. gis-. gis-. |
-  gis8-. gis-. gis-. gis4 fis8 e4 dis8 cis4 cis8 |
-  cis'4 cis8 bis4 bis8 cis8-. cis-. cis-. cis8.-_ dis-_ |
+  cis4. dis8-. dis-. dis-. dis4 eis8 fis4 eis8 |
+  fis4 eis8 dis4 cis8 dis4. bis4 cis8 |
+  dis8-. dis-. dis-. dis4 eis8 fis4 gis8 fis4 eis8 |
+  dis4 eis8 fis4 gis8 fis8-. r4 gis4 eis8 |
+  cis'8-. cis-. cis-. bis4 bis8 cis8-. cis-. cis-. cis8.-_ dis-_ |
   e8.-. fis,-_^\subPd^\< gis-_ fis-_ eis-.^\mf cis-_^\p^\< cisis-_ bis-_ |
   cis-.^\mf r r4. r8. fis-_^\p^\< fisis-_ gisis-_ |
   ais-.^\mf r r4. r2. |
@@ -489,9 +506,9 @@ mezzo = \relative c' { \autoBeamOff
   cis-. r4. r2. |
   R2*12 |
   fis4 cis |
-  ais b |
+  ais r4 |
   R2*5 |
-  r4 eis4^\p^\<^\legato ~ |
+  r4 eis'4^\p^\<^\legato ~ |
   eis4 fis^\mf |
   fis ais |
   r ais |
@@ -499,7 +516,7 @@ mezzo = \relative c' { \autoBeamOff
   r eis |
   eis gis |
   r gis |
-  fis e |
+  fis eis |
   fis dis ~ |
   dis r |
   R2 |
@@ -528,7 +545,7 @@ mezzo = \relative c' { \autoBeamOff
   fis fisis gis gisis |
   ais aisis bis cis |
   cisis dis disis eis
-  fis4 r r2 |
+  fis2 r |
   r2 r8 dis,^\p^\< disis eis |
   fis4-.^\f r4 r2 |
   gisis4-.^\p r4 r2 |
@@ -545,8 +562,8 @@ mezzo = \relative c' { \autoBeamOff
   eis4-.-> r4 r2 |
   R1 |
   R1 |
-  r4. fisis8^\p fisis fisis eis [ fisis ] eis fisis4 fisis8 |
-  eis^\< [ fisis ] eis fisis gis gisis ais aisis bis bis bis bis |
+  r4. eis8^\p fisis eis fisis-. fisis-. fisis-. eis fisis eis |
+  fisis8 gis gisis ais4 aisis8 bis4 cisis8 dis8 cisis bis |
   ais8-.^\p ais-. ais-. ais4-. bis8 cis4-. bis8 cis4-. bis8 |
   cis4-. bis8 ais4-. gis8 fisis4. dis4. |
   ais'8-. ais-. ais-. ais8.-. dis-. cis-. bis-. ais-. gis-. |
@@ -555,9 +572,10 @@ mezzo = \relative c' { \autoBeamOff
   ais'4^\p^\< a |
   gis4.^\mp r8 |
   R2 |
-  bis,8-.^\mf bis16 bis bis4-. r2 |
-  bis'8^\mp^\< b ais-. a-. ais-.^\mf-. a-. gis-. fis-. |
-  eis4-. r4 r8 cisis^\mp^\< dis disis |
+  bis,8-.^\mf bis16 bis bis8-. fisis'16 fisis fisis8 cisis16 cisis cisis8 dis16 dis |
+  %bis'8^\mp^\< b ais-. a-. ais-.^\mf-. a-. gis-. fis-. |
+  dis8 a'16 a a8 bis,16 bis bis8^\mf-. disis-. eis-. fis-. |
+  g4 fis eis8 cisis^\mp^\< dis disis |
   eis4^\mf^\> e dis^\< d |
   << { \pitchedTrill eis1^\startTrillSpan fis
   eis4\stopTrillSpan-. } { s2.^\fp s4^\< s4^\f } >> r cis-.^\sfz r |
@@ -604,14 +622,14 @@ mezzoWords = \lyricmode {
   the Won -- der -- ful,
   the Won -- der Wiz of Oz
   Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
-  the Won -- der -- ful the Won -- der -- ful the Wiz of
-  Cause of the Wiz the Won, the Won -- der -- ful the Won -- der -- ful the Wiz
-  Cause of the Won -- der -- ful things he does Be -- cause Be -- cause Be --
-  cause Be -- ause of the Wiz of Oz
+  the Won -- der -- ful the Won -- der -- ful Cause of the Won -- der -- ful
+  be -- cause he is the Wi -- zard the
+  Cause of the Wiz the Won -- der -- ful the Won -- der -- ful the Wiz things he
+  Cause of the Wiz the Cause of the Wiz of Oz
   He is a wiz, Oh what a wiz, We're off to see
   Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
   Cause of the Wiz the Won -- der -- ful the Wiz of Oz
-  Off to see the
+  Off to see
   zard
   The Wi -- zard
   Is one be
@@ -638,13 +656,15 @@ mezzoWords = \lyricmode {
   Oz we hear he is a wiz of wiz if
   Off to see the Wiz, he is the Wiz
   If ev
-  Wi -- zard of Oz is one be -- cause be -- cause of the Won -- der -- ful things that he
+  Wi -- zard the Won -- der -- ful Wi -- zard the
+  Wi -- zard of Oz is one the Wi -- zard be --
+  
   cause of the Won -- der things he does we're
   off to see the Wi -- zard
   cause of the won -- der -- ful the won -- der Wiz of Oz
   see the won
-  Oz won -- der -- ful
-  Won -- der -- ful the Wiz the Wiz of Oz
+  Oz won -- der -- ful won -- der -- ful won -- der -- ful won -- der -- ful
+  won -- der -- ful won -- der -- ful he is the wiz wiz wiz
   he is the wiz wiz wiz the Wiz
   Oz Oz
 }
@@ -652,6 +672,7 @@ mezzoWords = \lyricmode {
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef "treble_8"
+  s2 s8
   r4. |
   r2 r8 dis^\pp^\< disis eis |
   fis4^\p^\> eis e\pp dis |
@@ -722,14 +743,14 @@ alto = \relative c' { \autoBeamOff
   fis8 eis e dis d cis bis^\f r4 r4. |
   \clef "treble_8" r4. \acciaccatura { fisis8 } gis4.^\ff ~ gis2.^\> ~ |
   gis2.^\mf ~ gis4. fisis8-.^\mf^\endessous fisis-. fisis-. |
-  fisis4-. gis8 ais4 gis8 fisis4 cis8 cis'4 cis8 |
-  bis4 bis8 ais4 ais8 dis2. ~ |
-  dis2. dis8-. dis-. dis-. dis4-. cis8 |
-  bis4 ais8 dis8-. dis-. dis-. dis4-. eis8 fis4-. gis8 |
-  fis4-. eis8 dis4. \glissando gis8-. r4 bis,8-. r4 |
-  r4. 
-  fisis8-! fisis-! fisis-! 
-   r4. cis'8.-. b8. |
+  fisis4-. gis8 ais4 bis8 ais4 gis8 fisis4 eis8 |
+  dis4. b'8 ais a gis8-. gis-. gis-. gis4 ais8 |
+  b4-. cis8 b4-. ais8 gis4-. fis8 eis4-. fis8 |
+  eis4-. cis8 dis4-. disis8 eis8 fis fisis gis8-. gis-. gis-. |
+  gis-. gis-. gis-. gis4 eis8 cis4. cis4. |
+  gis'4 ais8
+  fis8-. fis-. fis-. 
+   gis-. gis-. gis-. cis8.-. b8. |
   ais8.-. e'-_^\subPd^\< eis-_ fis-_ dis-.^\mf cis-_^\p^\< cisis-_ gisis-_ |
   ais-.^\mf r r4. r8. dis-_^\p^\< eis-_ fis-_ |
   \set melismaBusyProperties = #'()
@@ -739,9 +760,9 @@ alto = \relative c' { \autoBeamOff
   eis8-.^\mp eis-. eis-. eis4-. fis8 gis4-. fis8 gis4-. fis8 |
   gis4-. fis8 eis4-. dis8 cis4. dis |
   eis8-. eis-. eis-. eis8.-. disis-. eis-. fis-. eis-. dis-. |
-  cis4.-. eis-. cis-. r |
-  R2 |
-  R2 |
+  cis4.-. eis-. b'8 ais gis fis eis dis |
+  cis2 ~ |
+  cis4 r |
   R2 |
   b'4.^\pp^\<^\legato bis8 |
   cis4^\mf e |
@@ -762,8 +783,10 @@ alto = \relative c' { \autoBeamOff
   b'4^\mf ais ~ 
   ais2^\> |
   R2\parend^\p |
-  R2*10 |
-  r8 d,16-.^\mf d-. d8-. r |
+  R2*3 |
+  b,2 cis fis |
+  R2*4 |
+  r8 d16-.^\mf d-. d8-. r |
   R2 |
   r8 dis16-. dis-. dis8-. r |
   R2 |
@@ -785,8 +808,8 @@ alto = \relative c' { \autoBeamOff
   r8 fis4.-^ r4 fis-. |
   R1 |
   r2 e4^\f eis |
-  fis fisis8 gis gisis4 ais8 aisis |
-  bis8^\> b ais a gis gis^\p^\< ais aisis |
+  fis fisis gis gisis |
+  ais4 a gis8-. gis8^\p^\< ais aisis |
   bis4^\f^\> b ais a |
   gis4^\mp g fis^\< f8 e |
   dis4-.^\f r4 r2 |
@@ -795,23 +818,23 @@ alto = \relative c' { \autoBeamOff
   R1 |
   r2. gisis4^\mp |
   dis'^\< b ais b |
-  ais4^\f^\> bis b^\p ais |
-  a gis g fis |
+  ais4^\f dis8 fis fis4 bis, |
+  cis bis b ais |
   r2 a8-.->^\mf^\> a-. a-. a-. |
-  a4^\p gis-. g-. fis-. |
-  cis'8^\mf bis cis bis cis4-. r |
+  a4^\p gis b ais |
+  cis8^\mf bis cis bis cis4-. r |
   r8 fis eis e dis4-. cisis-.-> |
   cisis-.-> r4 r2 |
   R1 |
   R1 |
   %%%
-  dis8^\p dis dis cisis8 [ dis ] cisis dis8 dis dis cisis8 [ dis ] cisis |
-  dis8 dis dis cisis8^\< dis cisis dis4 dis8 cisis8 [ dis ] bis |
+  dis8^\p dis dis cisis8 dis cisis dis8 dis dis cisis8 dis cisis |
+  dis8^\p dis dis cisis8 dis cisis bis8 dis dis cisis8 dis bis |
   ais8^\f ais ais ais4 bis8 cis4 bis8 cis4 bis8 |
   cis4 bis8 ais4 gis8 fisis4. dis4. |
   ais'8 ais ais ais8. dis cis bis ais gis |
-  fisis4. \glissando dis'8 r4  dis,4.-. r |
-  R2 |
+  fisis4. \glissando dis'8 r4  dis,4.-. r8. fisis |
+  gis2 |
   R2 |
   dis'8^\mp^\< cisis dis bis |
   disis bis eis bis |
@@ -873,30 +896,34 @@ altoWords = \lyricmode {
   Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard of
   Oz
-  Wiz Cause of the Wiz the Won -- der -- ful be -- cause be -- cause be -- cause be -- cause
-  Cause of the Won -- der -- ful the
-  Cause of the Wiz the Won -- der -- ful the Wiz of Oz
-  Cause of the
+  Wiz
+  Cause of the Wiz the Won -- der -- ful the Won -- der -- ful
+  Wi -- zard of
+  Cause of the Wiz the Won -- der -- ful we're off to see the Wiz the
+  Wi -- zard Cause of the Cause of the  Won -- der -- ful things he does
+  Wi -- zard Be -- cause of the Cause of the
   Wiz of Oz He is a wiz, Oh what a wiz,
   We're off to see
   He is the wiz the won -- der -- ful wiz we're off to see the ma -- gi -- cal
   Wiz in -- cre -- di -- ble the Wiz of Oz
   Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
-  Cause of the Wiz the Won -- der -- ful the Wiz of Oz
+  Cause of the Wiz the Won -- der -- ful the Wiz of Won -- der -- ful things that he does
   Won -- der Wiz of Oz
   The Wi -- zard
   Wiz of Oz
   The Wiz of Oz the Wiz of Oz
   He is the Wi -- zard
+  the Wi -- zard
   Wiz of Oz
   Won -- der -- ful
   \repeat unfold 6 { Wiz of Oz }
   We're off to
   Off to see we're off to see the 
-  won -- der -- ful the won -- der -- ful the
   won -- der -- ful the wiz
   won -- der -- ful the Wi -- zard, no we're
-  Off to see we're off to see the won -- der -- ful the wiz
+  Off to see we're off to see the
+  won -- der -- ful the won -- der -- ful the
+  won -- der -- ful the wiz
   won -- der -- ful the Wi -- zard
   Wi -- zard
   Wiz of Oz
@@ -904,23 +931,25 @@ altoWords = \lyricmode {
   Wi -- zard
   Wiz
   Wiz
-  ful we're off, off to see, see the won -- der -- ful the wiz
+  ful we're off to see the won -- der -- ful
   he is the wiz
   he is the wiz wiz wiz Wiz of Oz
   know
   We're off to see
-  the won -- der wiz of
-  wiz wiz wiz wiz
+  the won -- der -- ful wiz of
+  Oz wiz wiz wiz
   cause of all the won -- der -- ful the
   Off to see the Won
   he is the Wiz If ev
-  Wi -- zard of Oz the Wi -- zard of Oz
-  be -- cause of the won -- dre -- ful things he does be -- cause of the won -- der things he does
-  we're off to see the Wi -- zard
-  cause of the won -- der -- ful the won -- der Wiz of Oz
-  Off to see the Won -- der -- ful the Wiz
-  Wiz of Oz
+  Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard
+  the Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard
+  be -- cause of the won, the won -- der -- ful be -- cause he is the wi -- zard
+  cause of the wiz the won -- der -- ful the Wiz
+  of Oz
+  We're off
   Won -- der -- ful the
+  Won -- der -- ful the
+  Wi Won -- der -- ful Won -- der -- ful the
   Won -- der -- ful the Wiz 
   he is the wiz wiz wiz wiz wiz wiz wiz wiz wiz
   Oz Oz
@@ -929,6 +958,7 @@ altoWords = \lyricmode {
 tenor = \relative c' { \autoBeamOff
   \clef "treble_8"
   \prefatoryMatter
+  s2 s8
   ais8^\pp^\< aisis bis |
   cis4^\p^\> bis b\pp ais |
   a gis g fis |
@@ -1001,12 +1031,12 @@ tenor = \relative c' { \autoBeamOff
   ais8 bis cisis   dis disis eis gis,8-.^\f gis-. gis-. gis4-. ais8 |
   b4-. ais8 b4-. ais8 b4-. fis8 eis4-. fis8 |
   eis4. cis-. gis'8-. gis-. gis-. gis8.-. cis-_ |
-  b-_ ais-_ gis-_ fis eis4. dis4. \glissando |
-  ais'8-. r4 cis4. \glissando gis8-. gis-. gis-. gis4-. ais8 |
-  b4-. cis8 b4-. ais8 gis4-. fis8 eis4-. fis8 |
-  eis4-. cis8 dis4-. disis8 eis8-. fis-. fisis-. gis4-. cis8 |
-  b4-. ais8 gis4-. cis,8 cis4 cis8 cis'4 cis8 |
-  cis8-. cis-. cis-. cis4-. dis8 e4-. dis8 e8.-_ dis-_ |
+  b-_ ais-_ gis-_ fis eis4 cis8 cis'4 cis8 |
+  bis4 bis8 ais4 ais8 dis2. ~ |
+  dis4. r dis8-. dis-. dis-. dis4 cis8 |
+  bis4 ais8 gis4. dis'8-. dis-. dis-. dis4 cis8 |
+  bis4 ais8 dis8-. dis-. dis-. dis4 eis8 dis4 cis8 |
+  dis4. cis4-. dis8 e4-. dis8 e8.-_ dis-_ |
   cis8.-. cis-_^\subPd^\< c-_ d-_ cis-.^\mf ais-_^\p^\< b-_ gisis-_ |
   fis-.^\mf fis-_^\p^\< gis-_ gisis-_ ais-.^\mf cis-_^\p^\< cisis-_ dis-_ |
   e-.^\mf r r4. r2. |
@@ -1070,8 +1100,8 @@ tenor = \relative c' { \autoBeamOff
   b4-.^\f r4 r2 |
   d4 cis bis b |
   ais a gis g |
-  fis eis e8^\> dis d cis |
-  bis4^\p r r8 cis'8^\< cisis dis |
+  fis eis e4^\> dis
+  d4^\p r r8 cis'8^\< cisis dis |
   e4^\f^\> ees d^\< des |
   bis4-.^\f r4 r2 |
   R1 |
@@ -1080,7 +1110,7 @@ tenor = \relative c' { \autoBeamOff
   cis4^\< gis eis dis |
   cisis^\mp^\> b'4 ( ais ) gisis^\< |
   ais4^\f ais8^\> ais ais^\p ais aisis bis |
-  r8 cis4 cis cis cis8-. |
+  r8 eis,4 fis fisis gis8 |
   bis8-.->^\mf^\> bis-. bis-. bis-. bis2^\p ~ |
   bis4 ais gisis8 bis8 ais4 |
   ais8^\mf gisis ais gisis ais4-. r4 |
@@ -1088,8 +1118,8 @@ tenor = \relative c' { \autoBeamOff
   aisis4-.-> r4 r2 |
   R1 |
   R1 |
-  r2. cisis8^\p cisis cisis cisis4 cisis8 |
-  cisis4 cisis8 cisis4^\< cisis8 cisis4 cisis8 bis bis bis |
+  r2. aisis8^\p aisis aisis r4. |
+  r4. aisis8 aisis aisis r4. aisis8 aisis gis8 |
   ais8^\f ais ais ais r4 r4. ais ~ |
   ais ais8-. ais-. ais-. ais4-. bis8 cis4-. bis8 |
   cis4-. bis8 cis4-. bis8 ais4-. gis8 fisis4. \glissando |
@@ -1151,14 +1181,15 @@ tenorWords = \lyricmode {
   Won -- der -- ful Wi -- zard of Oz
   Won -- der -- ful Wiz of Oz is one
   Won -- der -- ful Wi -- zard of Oz
-  Won -- der -- ful Wi -- zard of Oz
-  We're off to see the
+  Won -- der -- ful Wi -- zard of
+  Won -- der -- ful Wi -- zard of
   %Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
   Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
-  Cause of the Wiz the Won -- der -- ful the Wiz, Wiz of Oz
-  Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard, he's the
-  Cause of the Wiz the Won -- der -- ful be -- cause be -- cause Be --
-  cause of the Wiz he is a Wiz of Oz
+  Cause of the Wiz the Won -- der -- ful the Wiz, be -- cause be -- cause be -- cause be -- cause
+  Wi -- zard of Oz is one be -- cause
+  Wi -- zard of Oz is one be
+  Wi -- zard of Oz is one be -- cause
+  Won -- der -- ful the Wiz of Oz
   He is a wiz, Oh what a wiz, We're off to see, We're off to see
   Cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
   Cause of the Wiz the Won -- der --ful the Wiz of Oz
@@ -1182,22 +1213,21 @@ tenorWords = \lyricmode {
   \repeat unfold 9 { the won -- der -- ful } we're
   Off
   won -- der -- ful we're off to see the
-  won -- der -- ful he is the wiz
+  won -- der -- ful the wiz
   he is the wiz wiz wiz of Oz.
   off to see the Wi -- zard the
   Won -- der -- ful wiz, he is the cause cause cause cause
   cause of all the won -- der -- ful of the
   Off to see the Wiz
   If ev
-  Wi -- zard of Oz is
-  One is One is One the Wi -- zard be
-  cause of the Won
+  \repeat unfold 3 { Won -- der -- ful }
+  cause of the Wiz
+  Wiz
+  cause of the Wiz the Won -- der -- ful be -- cause he is the Wi -- zard
+  cause of the Wiz the won
   Oz
-  Cause of the won -- der things he does we're
-  Off to see the Wi -- zard
-  Cause of the Won -- der -- ful
-  Off see the
-  off to see the wiz, the wiz of
+  Won -- der
+  Won -- der -- ful the Won -- der -- ful the
   Won -- der -- ful the wiz
   Won -- der -- ful the Wi -- zard of
   cause cause cause the Wiz
@@ -1207,6 +1237,7 @@ tenorWords = \lyricmode {
 bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
+  s2 s8
   r4. |
   R1 |
   R1 |
@@ -1281,9 +1312,10 @@ bass = \relative c' { \autoBeamOff
   r8 bis16^\p^\jazzjazzjazz cis8. bis b ais8 ais16 e'8. dis d |
   cis b ais gis ais4. fis^\< ~ |
   fis1. ~ |
-  fis2.^\> b'8 ais gis fis eis dis |
-  cis1.^\p ~ |
+  fis1.^\> |
+  cis'1.^\p ~ |
   cis4. gis-. cis-. r |
+  
   R2*12 |
   r4 e4^\p^\<^\legato |
   dis fisis^\f |
@@ -1327,29 +1359,29 @@ bass = \relative c' { \autoBeamOff
   R1 |
   R1 |
   bis4-.^\p r4 r2 |
-  r4 bis'^\pp ais a |
-  gis^\< g fis eis |
-  fis^\f^\> eis dis^\p gis |
-  cis, bis ais gis |
+  r4 bis'^\pp b ais |
+  a^\< gis g fis8 eis |
+  fis4^\f dis8 fis ais4 a |
+  gis g fis eis |
   R1 |
-  r2 gis'8-.->^\mf^\> gis-. gis-. gis-.^\p |
+  r2 gis8-.->^\mf^\> gis-. gis-. gis-.^\p |
   fisis8^\mf eisis fisis eisis fisis4-. r |
-  r2. cisis4-.-> |
-  fisis,4-.-> r4 r2 |
+  r2. bis,4-.-> |
+  fisis4-.-> r4 r2 |
   R1 |
   R1 |
-  R1. |
-  r4 bis8^\p^\< cis cisis dis disis [ eis ] fis fisis [ gis ] gisis |
-  ais^\f ais ais ais r4 r4. dis,4.^\f ~ |
+  r2. r4. fisis |
+  bis4 aisis8 bis4 cisis8 dis4 eis8 fisis4 bis,8 |
+  ais^\f ais ais ais r4 r4. dis4.^\f ~ |
   dis1.^\> ~ |
   dis1.^\mf ~ |
   dis4.-. ais-. dis-. r |
   gis,2^\mp |
   R2 |
   R2 |
-  r4 ais |
-  dis4.-- r8 r2 |
-  gis,4.-- r8 r2 |
+  R2 |
+  a4.-- r8 r2 |
+  gis4.-- r8 r2 |
   r8 cis-.^\p^\cresc cis-. cis-. r8 cis-. cis-. cis-. |
   r8 cis-. cis-. cis-. r8 cis-. cis-. cis-. |
   gis4-.^\f r4 r2^\fermata |
@@ -1393,7 +1425,8 @@ bassWords = \lyricmode {
   We're off to see
   \repeat unfold 12 ○
   Wiz of Oz
-  Won -- der -- ful things that he does
+  %Won -- der -- ful things that he does
+  Oz
   of Oz
   the Won -- der
   Won -- der -- ful of Oz
@@ -1413,16 +1446,17 @@ bassWords = \lyricmode {
   won -- der -- ful of Oz
   the wiz of Oz
   we're
-  wiz wiz wiz wiz wiz wiz wiz
-  won -- der -- ful of
-  wiz wiz wiz wiz
+  wiz wiz wiz wiz wiz wiz wi -- zard
+  won -- der -- ful wiz of
+  Oz wiz wiz wiz
   cause of all the Off to see the Wiz
   If ev
-  the Wi -- zard of Oz is one be -- cause of the won
-  Oz
+  the Won -- der -- ful the Won -- der Wiz
+  be -- cause of the won
+  Wiz
   of Oz
   Off
-  The Wiz
+  Wiz
   of
   \repeat unfold 4 { the Wi -- zard }
   Wiz

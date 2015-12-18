@@ -130,7 +130,7 @@ rh = \relative c' {
   \time 1/4
   r4
   \time 4/4
-  d8 d4
+  d8
 }
 
 lh = \relative c {
@@ -220,7 +220,7 @@ lh = \relative c {
   \time 1/4
   r4
   \time 4/4
-  d'8 d4 \bar "|."
+  d'8 \bar "|."
 }
 
 joke = \lyricmode {
@@ -248,7 +248,7 @@ joke = \lyricmode {
   Won -- 
   der -- ful things that he does.
   We're
-  off to see the the Wi --
+  off to see the Wi --
   zard.
   The Won -- der -- ful Wi -- zard
   of
