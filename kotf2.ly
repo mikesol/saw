@@ -73,8 +73,58 @@ sopranoKOTF = \relative c' {
   ais4 \Black \mblue fis'-- a \mblue cis, |
   \mblue eis e \mblue gis \mblue ais, |
   bis \mblue dis^\fermata r4
-  \key a \major } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s4^\mp s2.^\p^\> s1 s2^\pp } >>
-  g,4 |
+  \key a \major
+   } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s4^\mp s2.^\p^\> s1 s2^\pp } >>
+  g,4^\p^\< |
+  a^\mf r ais2 |
+  b1 ~ |
+  b^\> ~ |
+  b2^\p^\fermata r4 
+  \key cis \major
+  fisis^\< |
+  ais2^\fp b2^\< |
+  bis1\!^\mf |
+  bis1^\>
+  bis2^\p r4 
+  \key f \major
+  g4^\mf^\> |
+  b4^\p r4 c2^\< |
+  c1 ~ |
+  c ~ |
+  c2^\f r4 
+  \key e \major
+  g^\> |
+  c2^\mf cis |
+  d4 fis a cis, |
+  f e gis ais, |
+  c dis^\fermata r 
+  \key aes \major
+   g,^\> |
+  des'2^\p^\< d^\mf^\> |
+  ees1^\p ~ |
+  ees1 ~ |
+  ees2^\fermata r4 
+  \key bes \major
+   g, |
+  d'2^\< ees |
+  e1 ~ |
+  e4 fis^\f a cis, |
+  f2^\fermata r4 
+  \key c \major
+   g, |
+  ees'2 e |
+  f1 ~ |
+  f ~ |
+  f2^\fermata r4 
+  \key ees \major
+   g, |
+  e'^\ff fis a cis, |
+  f e aes bes, |
+  ges'1 ~ |
+  ges ~ |
+  ges ~ |
+  ges ~ |
+  ges2.    
 }
 
 sopranoKOTFWords = \lyricmode {
@@ -92,7 +142,54 @@ mezzoKOTF = \relative c' {
   eis2^\fermata
   } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4
   \key a \major
-  d4^\p
+  d4^\p^\< |
+  f4^\mf r fis2 |
+  g1 ~ |
+  g^\>
+  g2^\fermata^\p r4 
+  \key cis \major
+   cisis4^\< |
+  fisis,2^\fp fis^\< |
+  gis1^\mf ~ |
+  gis^\> ~ |
+  gis2^\p^\fermata r4 
+  \key f \major
+  d4 | ges2
+  g |
+  g4 fis'4 a cis, |
+  f-- e4 aes bes, |
+  c ees^\fermata r4
+  \key e \major
+  d, |
+  a'2 ais |
+  a1 ~ |
+  a ~ |
+  a2^\fermata r4
+  \key aes \major
+  d,4 |
+  aes'2 beses |
+  bes4 fis a cis |
+  f e aes-- bes, |
+  c ees^\fermata r4 \key bes \major d,4 |
+  bes2 a |
+  a1 ~ |
+  a ~ |
+  a2 r4 \key c \major d,4 |
+  bes'2 b |
+  d4 fis4 a cis |
+  f e gis bes, |
+  c-- ees^\fermata r4 \key ees \major
+  d, |
+  cis'1 |
+  c |
+  c4 ees ~ ees2 |
+  d2 des4 fis4 |
+  a cis, f e |
+  aes bes, c ees ~ |
+  ees2.
+  
+  
+  
 }
 
 mezzoKOTFWords = \lyricmode {
@@ -106,7 +203,8 @@ altoKOTF = \relative c' {
   \Mred cis16^\> [ ( cis cis cis cis cis cis cis ) ] r8\! << { \unset melismaBusyProperties dis8 ~ dis4 |
   dis1 ~ |
   dis ~ |
-  dis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4 \key a \major
+  dis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4 
+  \key a \major
   c4^\p |
 }
 
