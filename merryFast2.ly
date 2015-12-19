@@ -41,7 +41,7 @@
 maybeStemUp =  { %{\stemUp%} }
 maybeStemDown =  { %{\stemDown%} }
 maybeStemNeutral = { %{\stemNeutral%} }
-#(ly:set-option 'point-and-click #f)
+%#(ly:set-option 'point-and-click #f)
 sim = \markup \italic "sim."
 MyRed = \Red
 MyBlack = \Black
@@ -777,7 +777,7 @@ sopranoSecondPart = \relative c' {
   ais4^\mf a a r |
   a4. a8 ~ a4 a ~  |
   a8 a8 ~ a4 r a4^\< ~ |
-  a^\< gis2^\f b4 |
+  a gis2^\f b4 |
   b2 e |
   cis4 dis2 e4 ~ |
   e4 a,2 a4 |
@@ -787,8 +787,8 @@ sopranoSecondPart = \relative c' {
   d4 d ~ d8 d ~ d4 |
   d d d r |
   d d d r |
-  d4. d8 ~ d4 d ~ |
-  d8 d8 ~ d4 d4 r |
+  d4. d8 ~ d4 r |
+  d d d r |
   R1 |
   %%%%%%%%%%%%%%%%%%%%%%%%%%
   %d4. d4.
@@ -940,8 +940,8 @@ mezzoSecondPart = \relative c' {
   \times 4/5 { r4 d2. r4 } |
   fis,4^\mf fis fis r |
   fis4. fis8 ~ fis4 fis4 ~ |
-  fis8 fis8 ~ fis4 r4 fis4 ~ |
-  fis^\< e2^\f gis4 |
+  fis8 fis8 ~ fis4 r4 fis4^\< ~ |
+  fis e2^\f gis4 |
   gis2 gis |
   a4 b2 cis4 ~ |
   cis fis,2 fis4 |
@@ -951,8 +951,8 @@ mezzoSecondPart = \relative c' {
   gis4 gis ~ gis8 gis ~ gis4 |
   gis gis gis r |
   gis gis gis r |
-  gis4. gis8 ~ gis4 gis ~ |
-  gis8 gis8 ~ gis4 gis4 r |
+  gis4. gis8 ~ gis4 r |
+  gis gis gis r |
   R1 |
   r16 d^\p^\< d e   e g g cis    e^\> cis cis bes    gis fis\!
   r16 e^\<   e [ g ]  g [ b^\mf ]
@@ -1126,8 +1126,8 @@ altoSecondPart = \relative c'' {
   fis4 fis ~ fis8 fis ~ fis4 |
   fis fis fis r |
   fis fis fis r |
-  fis4. fis8 ~ fis4 fis ~ |
-  fis8 fis8 ~ fis4 fis4 r |
+  fis4. fis8 ~ fis4 r |
+  fis fis fis r |
   R1 |
   r16 b,^\p^\< b e    e g g a    d^\> a a g   e b\! |
   r16 e^\<    e [ g ] g [ gis^\mf ] |
@@ -1295,19 +1295,19 @@ tenorSecondPart = \relative c' {
   \times 4/7 { g1 ~ g4 r2  } |
   b,4^\mf b b r |
   b4. b8 ~ b4 b ~ |
-  b8 b8 ~ b4 r4 dis4 ~ |
-  dis4^\< e2^\f e4 |
+  b8 b8 ~ b4 r4 b4^\< ~ |
+  b4 e2^\f e4 |
   e2 b
   a4 a2 a4 ~ |
   a c2 c4 |
   b b b2 |
-  b fis4 fis |
-  fis r fis4. fis8 ~ |
-  fis4 fis ~ fis8 fis ~ fis4 |
-  fis fis fis r |
-  fis fis fis r |
-  fis4. fis8 ~ fis4 fis ~ |
-  fis8 fis8 ~ fis4 fis4 r |
+  b b4 b |
+  b r b4. b8 ~ |
+  b4 b ~ b8 b ~ b4 |
+  b b b r |
+  b b b r |
+  b4. b8 ~ b4 r |
+  b b b r |
   R1 |
   r16 a^\p^\< a cis    cis d d fis   ais^\> fis fis d cis a\! |
   r16 cis^\<    cis [ d ] d [  fis^\mf ] |
@@ -1471,11 +1471,11 @@ bassSecondPart = \relative c {
   %d4. d8 ~ d4 gis, |
   e4^\mf r d' r |
   d r d r |
-  d r d g, |
+  d r d r |
   %d4. d8 ~ d2 |
   %d4. d8 ~ d4 gis, |
-  b^\< bes fis a |
-  gis f g fis |
+  d^\< cis c b  |
+  gis b g fis |
   cis f e f |
   fis g cis c |
   b gis bes a |

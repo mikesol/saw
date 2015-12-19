@@ -817,7 +817,7 @@ alto = \relative c' { \autoBeamOff
   ais'4-.^\p r4 r2 |
   R1 |
   r2. gisis4^\mp |
-  dis'^\< b ais b |
+  ais^\< b bis b |
   ais4^\f dis8 fis fis4 bis, |
   cis bis b ais |
   r2 a8-.->^\mf^\> a-. a-. a-. |
@@ -1037,7 +1037,7 @@ tenor = \relative c' { \autoBeamOff
   bis4 ais8 gis4. dis'8-. dis-. dis-. dis4 cis8 |
   bis4 ais8 dis8-. dis-. dis-. dis4 eis8 dis4 cis8 |
   dis4. cis4-. dis8 e4-. dis8 e8.-_ dis-_ |
-  cis8.-. cis-_^\subPd^\< c-_ d-_ cis-.^\mf ais-_^\p^\< b-_ gisis-_ |
+  cis8.-. cis-_^\subPd^\< dis-_ d-_ cis-.^\mf ais-_^\p^\< b-_ gisis-_ |
   fis-.^\mf fis-_^\p^\< gis-_ gisis-_ ais-.^\mf cis-_^\p^\< cisis-_ dis-_ |
   e-.^\mf r r4. r2. |
   R1. |

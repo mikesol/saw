@@ -42,7 +42,7 @@ subdXC = {  cis' b bes a | }
 subdXD = {  gis bis cis' bes | }
 subdXE = {  a cis' d' dis' | }
 subdXF = {  fis' d' cis' g | }
-subdXG = {  fis b e b | }
+subdXG = {  fis b eis b | }
 
 subdX = {
   \subdXA
