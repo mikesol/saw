@@ -953,10 +953,10 @@ sopranoLastNoteDraftTwoWords = \lyricmode {
 
 mezzoLastNoteDraftTwo = \relative c'' {
   %\key b \major
-  r2 fis4^\mf e |
+  r2 fis4^\p e |
   g^\< dis a' e |
-  ais^\ff f e d |
-  cis^\> d b e |
+  ais f e d |
+  cis^\!^\> d b e |
   R1\! |
   dis1^\ppp^\< ~ |
   dis ~ |
@@ -972,10 +972,10 @@ mezzoLastNoteDraftTwoWords = \lyricmode {
 
 altoLastNoteDraftTwo = \relative c'' {
   %\key b \major
-  b2.^\ffp c4^\mf |
+  b2.^\ffp c4 |
   ees^\< b c b |
-  e^\ff c ais b |
-  a^\> ais g c |
+  e c ais b |
+  a^\!^\> ais g c |
   R1\! |
   b1^\ppp^\< ~ |
   b ~ |
@@ -993,7 +993,7 @@ altoLastNoteDraftTwoWords = \lyricmode {
 tenorLastNoteDraftTwo = \relative c'' {
   \clef "treble_8"
   %\key b \major
-  r2 a4^\mf g |
+  r2 a4^\p g |
   bes^\< f fis gis |
   g a fis g |
   f^\> e d fis |
