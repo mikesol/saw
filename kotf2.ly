@@ -60,9 +60,15 @@ mblue = { }
 Mred = { }
 mred = { }
 
+
+\defineBarLine "!!" #'("!!" "" "")
 marksKOTF = {
   \partial 4
-  \tempo "très lent"
+  \tempo "hors temps"
+  s4
+  \repeat unfold 8 { s1*3 s2. \bar "!!" s4 }
+  s1*6 |
+  s2. \bar "||"
 }
 
 sopranoKOTF = \relative c' {
@@ -83,20 +89,20 @@ sopranoKOTF = \relative c' {
   \key cis \major
   fisis^\< |
   ais2^\fp b2^\< |
-  bis1\!^\mf |
-  bis1^\>
+  bis1\!^\mf ~ |
+  bis1^\> ~ |
   bis2^\p r4 
   \key f \major
   g4^\mf^\> |
   b4^\p r4 c2^\< |
-  c1 ~ |
-  c ~ |
-  c2^\f r4 
+  cis1 ~ |
+  cis ~ |
+  cis2^\f r4 
   \key e \major
   g^\> |
   c2^\mf cis |
   d4 fis a cis, |
-  f e gis ais, |
+  f e-- gis ais, |
   c dis^\fermata r 
   \key aes \major
    g,^\> |
@@ -112,8 +118,8 @@ sopranoKOTF = \relative c' {
   f2^\fermata r4 
   \key c \major
    g, |
-  ees'2 e |
-  f1 ~ |
+  ees'2^\> e^\< |
+  f1^\f ~ |
   f ~ |
   f2^\fermata r4 
   \key ees \major
@@ -130,6 +136,17 @@ sopranoKOTF = \relative c' {
 sopranoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
   the chip -- munks gen -- uf -- lect to me. Though…
+  I'd click my heel
+  The spar -- row's wing
+  His wife Queen May
+  My re -- gal robes
+  the chip -- munks gen -- uf -- lect to me. Though…
+  The trees would kneel
+  The moun -- tains bow
+  the chip -- munks gen
+  The bulls kow tow
+  If I
+  the chip -- munks gen -- uf -- lect to king.
 }
 
 mezzoKOTF = \relative c' {
@@ -145,55 +162,64 @@ mezzoKOTF = \relative c' {
   d4^\p^\< |
   f4^\mf r fis2 |
   g1 ~ |
-  g^\>
+  g^\> ~ |
   g2^\fermata^\p r4 
   \key cis \major
-   cisis4^\< |
-  fisis,2^\fp fis^\< |
+  cisis,4^\< |
+  fisis2^\fp fis^\< |
   gis1^\mf ~ |
   gis^\> ~ |
   gis2^\p^\fermata r4 
   \key f \major
-  d4 | ges2
-  g |
-  g4 fis'4 a cis, |
+  d4^\mf^\> | ges4^\p r
+  g2 |
+  g4 fis'4^\< a cis, |
   f-- e4 aes bes, |
-  c ees^\fermata r4
+  c ees^\fermata^\f r4
   \key e \major
-  d, |
-  a'2 ais |
+  d,^\> |
+  a'2^\mf ais |
   a1 ~ |
   a ~ |
   a2^\fermata r4
   \key aes \major
-  d,4 |
-  aes'2 beses |
-  bes4 fis a cis |
-  f e aes-- bes, |
-  c ees^\fermata r4 \key bes \major d,4 |
-  bes2 a |
+  d,4^\> |
+  aes'2^\p^\< beses^\mf^\> |
+  bes4^\p fis^\< a cis, |
+  f^\> e aes-- bes, |
+  c^\p ees^\fermata r4 \key bes \major d4 |
+  bes'2^\< a |
   a1 ~ |
   a ~ |
-  a2 r4 \key c \major d,4 |
-  bes'2 b |
-  d4 fis4 a cis |
+  a2^\f r4 \key c \major d,4 |
+  bes'2^\> b^\< |
+  d4^\f fis4 a cis, |
   f e gis bes, |
   c-- ees^\fermata r4 \key ees \major
   d, |
-  cis'1 |
+  cis'1^\ff |
   c |
-  c4 ees ~ ees2 |
-  d2 des4 fis4 |
+  c4 ees-- ~ ( ees2 |
+  d2 des4 ) fis4 |
   a cis, f e |
   aes bes, c ees ~ |
-  ees2.
-  
-  
-  
+  ees2.  
 }
 
 mezzoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
+  I'd click my heel
+  The spar -- row's wing
+  His wife Queen May
+  the chip -- munks gen -- uf -- lect to me. Though…
+  My re -- gal robes
+  The trees would kneel
+  the chip -- munks gen -- uf -- lect to me. Though…
+  The moun -- tains bow
+  The bulls kow tow
+  the chip -- munks gen -- uf -- lect to me. Though…
+  If I were me though
+  the chip -- munks gen -- uf -- lect to me. Though…
 }
 
 altoKOTF = \relative c' {
@@ -205,11 +231,72 @@ altoKOTF = \relative c' {
   dis ~ |
   dis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4 
   \key a \major
-  c4^\p |
+  c4^\p^\< |
+  cis4^\mf r d2 |
+  e4 fis a-- cis, |
+  f^\> e gis bes, |
+  c^\p ees^\fermata r4
+  \key cis \major
+  bis^\< |
+  dis2^\fp bis^\< |
+  dis1^\mf ~ |
+  dis^\> ~ |
+  dis2^\p^\fermata r4 \key f \major
+  c^\mf^\> |
+  ees4^\p r e2^\< |
+  ees1 ~ |
+  ees ~ |
+  ees2^\f r4 \key e \major
+  c4^\> |
+  fis2^\mf fisis |
+  fis2.^\> fis4^\< |
+  a cis, f^\mf e ~ |
+  e2^\fermata r4
+  \key aes \major
+  c4^\> |
+  d2^\p^\< ges^\mf^\> |
+  g1^\p ~ |
+  g ~ |
+  g2^\fermata r4
+  \key bes \major
+  c,4 |
+  ges'2^\< g |
+  f4 fis a cis, |
+  f^\f e gis bes,-- |
+  c ees^\fermata r4
+  \key c \major
+  c |
+  g'2^> a^\< |
+  bes1^\f ~ |
+  bes4 fis a cis, |
+  f e^\fermata r4
+  \key ees \major
+  c |
+  b'1^\ff |
+  a |
+  bes ~ |
+  bes4 fis a cis, |
+  f e aes bes, |
+  c ees a2 ~ |
+  a2.
 }
 
 altoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
+  I'd click my heel
+  the chip -- munks gen -- uf -- lect to me. Though…
+  The spar -- row's wing
+  His wife Queen May
+  My re -- gal robes
+  the chip -- munks gen -- u
+  The trees would kneel
+  The moun -- tains bow
+  the chip -- munks gen -- uf -- lect to me. Though…
+  The bulls kow tow
+  the chip -- munks gen -- u
+  If I were king
+  the chip -- munks gen -- uf -- lect to me. Though…
+  king
 }
 
 tenorKOTF = \relative c' {
@@ -222,12 +309,69 @@ tenorKOTF = \relative c' {
   cis ~ |
   cis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >>  r4
   \key a \major
-  aes4^\p |
+  aes4^\p^\< |
+  gis^\mf r gis2 |
+  cis1 ~ |
+  cis^\> ~ |
+  cis2^\p^\fermata r4 \key cis \major gis^\< |
+  cis2^\fp gis^\< |
+  eis4^\mf fis a cis,-- |
+  f e gis bes, |
+  c ees^\fermata r4 \key f \major
+  aes4^\mf^\> |
+  c4^\p r bes2^\< |
+  a1 ~ |
+  a ~ |
+  a2^\f^\fermata r4 \key e \major
+  gis^\> |
+  e'2^\mf dis |
+  b1 ~ |
+  b1 ~ |
+  b2^\fermata r4 \key aes \major
+  aes4^\> |
+  bes2^\p^\< ees^\mf |
+  c2.^\p fis,4^\< |
+  a cis, f^\> e |
+  aes2^\p^\fermata r4
+  \key bes \major
+  aes4 |
+  ees'2^\< c |
+  d2. fis,4 |
+  a^\f cis, f2 ~ |
+  f2 r4 \key c \major
+  aes |
+  cis2^> f^\< |
+  e2.^\f fis,4 |
+  a cis, f e4 |
+  gis2^\fermata r4 \key ees \major
+  aes |
+  g'1^\ff |
+  fis |
+  g4 fis a cis, |
+  f e gis bes, |
+  c ees ~ ees b4 ~ |
+  b1 ~ |
+  b2.
+ 
+  
 }
 
 tenorKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
   I'd click my heel
+  The spar -- row's wing
+  the chip -- munks gen -- uf -- lect to me. Though…
+  His wife Queen May
+  My re -- gal robes
+  The trees would kneel
+  the chip -- munks gen -- uf -- lect
+  The moun -- tains bow
+  the chip -- munks gen
+  The bulls kow tow
+  the chip -- munks gen -- uf -- lect
+  If I were king
+  the chip -- munks gen -- uf -- lect to me. Though…
+  king
 }
 
 bassKOTF = \relative c {
@@ -241,6 +385,39 @@ bassKOTF = \relative c {
   r2^\fermata r4
   \key a \major
   bes4^\p |
+  bes r r2 |
+  R1 |
+  R1 |
+  r2^\fermata r4 \key cis \major
+  ais |
+  gisis2. r4 |
+  R1 |
+  R1 |
+  r2^\fermata r4 \key f \major bes |
+  aes2. r4 |
+  R1 |
+  R1 |
+  r2^\fermata r4 \key e \major ais |
+  g2. r4 |
+  R1 |
+  R1 |
+  r2^\fermata r4 \key aes \major bes |
+  ges2. r4 |
+  R1 |
+  R1 |
+  r2^\fermata r4 \key bes \major bes |
+  f2. r4 |
+  R1 |
+  R1 |
+  r2^\fermata r4 \key c \major bes |
+  e,2. r4 |
+  R1 |
+  R1 |
+  r2^\fermata r4 \key ees \major bes' |
+  ees,1  ~|
+  ees2. r4 |
+  R1*4 |
+  r2.
 }
 
 bassKOTFWords = \lyricmode {
@@ -248,7 +425,7 @@ bassKOTFWords = \lyricmode {
   I'd click
   The spa
   His wife
-  my re
+  My re
   The trees
   The moun
   The bulls
