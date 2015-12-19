@@ -49,11 +49,16 @@ moltorall = \mark \markup \italic "molto rall."
            (set! p (simplify-pitch p))
            (ly:music-set-property! music 'pitch p)))
      music))
-
+%{
 simplifyPitch =
 #(define-music-function (parser location m)
    (ly:music?)
    (simplify m))
+%}
+simplifyPitch =
+#(define-music-function (parser location m)
+   (ly:music?)
+   m)
 
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
@@ -110,14 +115,14 @@ marksKOTF = {
   \tempo "hors temps"
   s4
   \repeat unfold 8 { s1*3 s2.
-    %\bar "!!"
+    \bar "!!"
   s4 }
   s1*6 |
   s2. \bar "||"
 }
 
 sopranoKOTF = {
-  %\key fis \major
+  \key fis \major
   {  } { { \once \override Hairpin.minimum-length = #8
       \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
       } } fisis'4^\fp^\< |
@@ -129,7 +134,7 @@ sopranoKOTF = {
        {  } fis''-- a'' {  } cis'' |
        {  } eis'' e'' {  } gis'' {  } ais' |
        bis' {  } dis''^\fermata r 
-  %\key a \major
+  \key a \major
       
      } {
        { { \once \override Hairpin.minimum-length = #4
@@ -142,43 +147,43 @@ sopranoKOTF = {
   b'1 ~ |
   b'^\> ~ |
   b'2^\p^\fermata r4 
-  %\key cis \major
+  \key cis \major
   fisis'^\< |
   ais'2^\fp b'^\< |
   bis'1\!^\mf ~ |
   bis'^\> ~ |
   bis'2^\p r4 
-  %\key f \major
+  \key f \major
   g'^\mf^\> |
   b'^\p r c''2^\< |
   cis''1 ~ |
   cis'' ~ |
   cis''2^\f r4 
-  %\key e \major
+  \key e \major
   g'^\> |
   c''2^\mf cis'' |
   d''4 fis'' a'' cis'' |
   f'' e''-- gis'' ais' |
   c'' dis''^\fermata r 
-  %\key aes \major
+  \key aes \major
   g'^\> |
   des''2^\p^\< d''^\mf^\> |
   ees''1^\p ~ |
   ees'' ~ |
   ees''2^\fermata r4 
-  %\key bes \major
+  \key bes \major
   g' |
   d''2^\< ees'' |
   e''1 ~ |
   e''4 fis''^\f a'' cis'' |
   f''2^\fermata r4 
-  %\key c \major
+  \key c \major
   g' |
   ees''2^\> e''^\< |
   f''1^\f ~ |
   f'' ~ |
   f''2^\fermata r4 
-  %\key ees \major
+  \key ees \major
   g' |
   e''^\ff fis'' a'' cis'' |
   f'' e'' aes'' bes' |
@@ -207,7 +212,7 @@ sopranoKOTFWords = \lyricmode {
 }
 
 mezzoKOTF = {
-  %\key fis \major
+  \key fis \major
   {  } { { \once \override Hairpin.minimum-length = #8
       \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
       } } cisis'4^\fp^\< |
@@ -225,49 +230,49 @@ mezzoKOTF = {
            \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
            } } s^\> s1^\mp s^\> s4^\p
      } >> r 
-  %\key a \major
+  \key a \major
   d'^\p^\< |
   f'^\mf r fis'2 |
   g'1 ~ |
   g'^\> ~ |
   g'2^\fermata^\p r4 
-  %\key cis \major
+  \key cis \major
   cisis'^\< |
   fisis'2^\fp fis'^\< |
   gis'1^\mf ~ |
   gis'^\> ~ |
   gis'2^\p^\fermata r4 
-  %\key f \major
+  \key f \major
   d'^\mf^\> |
   ges'^\p r g'2 |
   g'4 fis''^\< a'' cis'' |
   f''-- e'' aes'' bes' |
   c'' ees''^\fermata^\f r 
-  %\key e \major
+  \key e \major
   d'^\> |
   a'2^\mf ais' |
   a'1 ~ |
   a' ~ |
   a'2^\fermata r4 
-  %\key aes \major
+  \key aes \major
   d'^\> |
   aes'2^\p^\< beses'^\mf^\> |
   bes'4^\p fis'^\< a' cis' |
   f'^\> e' aes'-- bes |
   c'^\p ees'^\fermata r 
-  %\key bes \major
+  \key bes \major
   d' |
   bes'2^\< a' |
   a'1 ~ |
   a' ~ |
   a'2^\f r4 
-  %\key c \major
+  \key c \major
   d' |
   bes'2^\> b'^\< |
   d''4^\f fis'' a'' cis'' |
   f'' e'' gis'' bes' |
   c''-- ees''^\fermata r 
-  %\key ees \major
+  \key ees \major
   d' |
   cis''1^\ff |
   c'' |
@@ -294,7 +299,7 @@ mezzoKOTFWords = \lyricmode {
 }
 
 altoKOTF = {
-  %\key fis \major
+  \key fis \major
   { { \once \override Hairpin.minimum-length = #8
       \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
       } } bis4^\fp^\< |
@@ -312,49 +317,49 @@ altoKOTF = {
            \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
            } } s^\> s1^\mp s^\> s4^\p
      } >> r 
-  %\key a \major
+  \key a \major
   c'^\p^\< |
   cis'^\mf r d'2 |
   e'4 fis' a'-- cis' |
   f'^\> e' gis' bes |
   c'^\p ees'^\fermata r 
-  %\key cis \major
+  \key cis \major
   bis^\< |
   dis'2^\fp bis^\< |
   dis'1^\mf ~ |
   dis'^\> ~ |
   dis'2^\p^\fermata r4 
-  %\key f \major
+  \key f \major
   c'^\mf^\> |
   ees'^\p r e'2^\< |
   ees'1 ~ |
   ees' ~ |
   ees'2^\f r4 
-  %\key e \major
+  \key e \major
   c'^\> |
   fis'2^\mf fisis' |
   fis'2.^\> fis'4^\< |
   a' cis' f'^\mf e' ~ |
   e'2^\fermata r4 
-  %\key aes \major
+  \key aes \major
   c'^\> |
   d'2^\p^\< ges'^\mf^\> |
   g'1^\p ~ |
   g' ~ |
   g'2^\fermata r4 
-  %\key bes \major
+  \key bes \major
   c' |
   ges'2^\< g' |
   f'4 fis' a' cis' |
   f'^\f e' gis' bes-- |
   c' ees'^\fermata r 
-  %\key c \major
+  \key c \major
   c' |
   g'2^> a'^\< |
   bes'1^\f ~ |
   bes'4 fis' a' cis' |
   f' e'^\fermata r 
-  %\key ees \major
+  \key ees \major
   c' |
   b'1^\ff |
   a' |
@@ -385,7 +390,7 @@ altoKOTFWords = \lyricmode {
 
 tenorKOTF = {
   \clef "treble_8"
-  %\key fis \major
+  \key fis \major
   { { \once \override Hairpin.minimum-length = #8
       \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
       } } gis4^\fp^\< |
@@ -403,49 +408,49 @@ tenorKOTF = {
            \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
            } } s^\> s1^\mp s^\> s4^\p
      } >> r 
-  %\key a \major
+  \key a \major
   aes^\p^\< |
   gis^\mf r gis2 |
   cis'1 ~ |
   cis'^\> ~ |
   cis'2^\p^\fermata r4 
-  %\key cis \major
+  \key cis \major
   gis^\< |
   cis'2^\fp gis^\< |
   eis4^\mf fis a cis-- |
   f e gis bes, |
   c ees^\fermata r 
-  %\key f \major
+  \key f \major
   aes^\mf^\> |
   c'^\p r bes2^\< |
   a1 ~ |
   a ~ |
   a2^\f^\fermata r4 
-  %\key e \major
+  \key e \major
   gis^\> |
   e'2^\mf dis' |
   b1 ~ |
   b ~ |
   b2^\fermata r4 
-  %\key aes \major
+  \key aes \major
   aes^\> |
   bes2^\p^\< ees'^\mf |
   c'2.^\p fis4^\< |
   a cis f^\> e |
   aes2^\p^\fermata r4 
-  %\key bes \major
+  \key bes \major
   aes |
   ees'2^\< c' |
   d'2. fis4 |
   a^\f cis f2 ~ |
   f r4 
-  %\key c \major
+  \key c \major
   aes |
   cis'2^> f'^\< |
   e'2.^\f fis4 |
   a cis f e |
   gis2^\fermata r4 
-  %\key ees \major
+  \key ees \major
   aes |
   g'1^\ff |
   fis' |
@@ -477,7 +482,7 @@ tenorKOTFWords = \lyricmode {
 bassKOTF = 
 {
   \clef "bass"
-  %\key fis \major
+  \key fis \major
   { { \once \override Hairpin.minimum-length = #8
       \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
       } } {  } ais,4^\fp^\< |
@@ -487,49 +492,49 @@ bassKOTF =
   R1 |
   R |
   r2^\fermata r4 
-  %\key a \major
+  \key a \major
   bes,^\p^\< |
   bes,^\mf r r2 |
   R1 |
   R |
   r2^\fermata r4 
-  %\key cis \major
+  \key cis \major
   ais,^\p^\< |
   gisis,2.^\fp r4 |
   R1 |
   R |
   r2^\fermata r4 
-  %\key f \major
+  \key f \major
   bes,^\mf^\> |
   aes,2.^\p r4 |
   R1 |
   R |
   r2^\fermata r4 
-  %\key e \major
+  \key e \major
   ais,^\f^\> |
   g,2.^\mf r4 |
   R1 |
   R |
   r2^\fermata r4 
-  %\key aes \major
+  \key aes \major
   bes,^\> |
   ges,2.^\p r4 |
   R1 |
   R |
   r2^\fermata r4 
-  %\key bes \major
+  \key bes \major
   bes,^\p |
   f,2. r4 |
   R1 |
   R |
   r2^\fermata r4 
-  %\key c \major
+  \key c \major
   bes,^\f |
   e,2. r4 |
   R1 |
   R |
   r2^\fermata r4 
-  %\key ees \major
+  \key ees \major
   bes, |
   ees,1^\ff ~ |
   ees,2. r4 |
