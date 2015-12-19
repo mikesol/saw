@@ -73,67 +73,79 @@ marksKOTF = {
   s2. \bar "||"
 }
 
-sopranoKOTF = \relative c' {
+sopranoKOTF = {
   \key fis \major
-  \Mred \hairlenMed fisis4^\fp^\< |
+  {  } { { \once \override Hairpin.minimum-length = #8
+      \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+      } } fisis'4^\fp^\< |
   \set melismaBusyProperties = #'()
-  gis16^\> [ ( gis gis gis gis gis gis gis ) ] r8\! << { \unset melismaBusyProperties gisis8 ~ gisis4 |
-  ais4 \Black \mblue fis'-- a \mblue cis, |
-  \mblue eis e \mblue gis \mblue ais, |
-  bis \mblue dis^\fermata r4
+  gis'16^\>[( gis' gis' gis' gis' gis' gis' gis')] r8\! << {
+       \unset melismaBusyProperties
+       gisis' ~ gisis'4 |
+       ais' \revert NoteHead.color
+       {  } fis''-- a'' {  } cis'' |
+       {  } eis'' e'' {  } gis'' {  } ais' |
+       bis' {  } dis''^\fermata r 
   \key a \major
-   } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s4^\mp s2.^\p^\> s1 s2^\pp } >>
-  g,4^\p^\< |
-  a^\mf r ais2 |
-  b1 ~ |
-  b^\> ~ |
-  b2^\p^\fermata r4
+      
+     } {
+       { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s8.^\< { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s^\> s4^\mp s2.^\p^\> s1 s2^\pp
+     } >> g'4^\p^\< |
+  a'^\mf r ais'2 |
+  b'1 ~ |
+  b'^\> ~ |
+  b'2^\p^\fermata r4 
   \key cis \major
-  fisis^\< |
-  ais2^\fp b2^\< |
-  bis1\!^\mf ~ |
-  bis1^\> ~ |
-  bis2^\p r4
+  fisis'^\< |
+  ais'2^\fp b'^\< |
+  bis'1\!^\mf ~ |
+  bis'^\> ~ |
+  bis'2^\p r4 
   \key f \major
-  g4^\mf^\> |
-  b4^\p r4 c2^\< |
-  cis1 ~ |
-  cis ~ |
-  cis2^\f r4
+  g'^\mf^\> |
+  b'^\p r c''2^\< |
+  cis''1 ~ |
+  cis'' ~ |
+  cis''2^\f r4 
   \key e \major
-  g^\> |
-  c2^\mf cis |
-  d4 fis a cis, |
-  f e-- gis ais, |
-  c dis^\fermata r
+  g'^\> |
+  c''2^\mf cis'' |
+  d''4 fis'' a'' cis'' |
+  f'' e''-- gis'' ais' |
+  c'' dis''^\fermata r 
   \key aes \major
-   g,^\> |
-  des'2^\p^\< d^\mf^\> |
-  ees1^\p ~ |
-  ees1 ~ |
-  ees2^\fermata r4
+  g'^\> |
+  des''2^\p^\< d''^\mf^\> |
+  ees''1^\p ~ |
+  ees'' ~ |
+  ees''2^\fermata r4 
   \key bes \major
-   g, |
-  d'2^\< ees |
-  e1 ~ |
-  e4 fis^\f a cis, |
-  f2^\fermata r4
+  g' |
+  d''2^\< ees'' |
+  e''1 ~ |
+  e''4 fis''^\f a'' cis'' |
+  f''2^\fermata r4 
   \key c \major
-   g, |
-  ees'2^\> e^\< |
-  f1^\f ~ |
-  f ~ |
-  f2^\fermata r4
+  g' |
+  ees''2^\> e''^\< |
+  f''1^\f ~ |
+  f'' ~ |
+  f''2^\fermata r4 
   \key ees \major
-   g, |
-  e'^\ff fis a cis, |
-  f e aes bes, |
-  ges'1 ~ |
-  ges ~ |
-  ges ~ |
-  ges ~ |
-  ges2.
+  g' |
+  e''^\ff fis'' a'' cis'' |
+  f'' e'' aes'' bes' |
+  ges''1 ~ |
+  ges'' ~ |
+  ges'' ~ |
+  ges'' ~ |
+  ges''2.
 }
+
 
 sopranoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
@@ -151,68 +163,77 @@ sopranoKOTFWords = \lyricmode {
   the chip -- munks gen -- uf -- lect to king.
 }
 
-mezzoKOTF = \relative c' {
+mezzoKOTF = {
   \key fis \major
-  \Mred \hairlenMed cisis4^\fp^\< |
+  {  } { { \once \override Hairpin.minimum-length = #8
+      \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+      } } cisis'4^\fp^\< |
   \set melismaBusyProperties = #'()
-  dis16^\> [ ( dis dis dis dis dis dis dis ) ] r8\! \unset melismaBusyProperties << { eis8 ~ eis4 |
-  eis1 ~ |
-  eis ~ |
-  eis2^\fermata
-  } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4
+  dis'16^\>[( dis' dis' dis' dis' dis' dis' dis')] r8\! \unset melismaBusyProperties
+  << {
+       eis' ~ eis'4 |
+       eis'1 ~ |
+       eis' ~ |
+       eis'2^\fermata
+     } {
+       { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s8.^\< { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s^\> s1^\mp s^\> s4^\p
+     } >> r 
   \key a \major
-  d4^\p^\< |
-  f4^\mf r fis2 |
-  g1 ~ |
-  g^\> ~ |
-  g2^\fermata^\p r4
+  d'^\p^\< |
+  f'^\mf r fis'2 |
+  g'1 ~ |
+  g'^\> ~ |
+  g'2^\fermata^\p r4 
   \key cis \major
-  cisis,4^\< |
-  fisis2^\fp fis^\< |
-  gis1^\mf ~ |
-  gis^\> ~ |
-  gis2^\p^\fermata r4
+  cisis'^\< |
+  fisis'2^\fp fis'^\< |
+  gis'1^\mf ~ |
+  gis'^\> ~ |
+  gis'2^\p^\fermata r4 
   \key f \major
-  d4^\mf^\> | ges4^\p r
-  g2 |
-  g4 fis'4^\< a cis, |
-  f-- e4 aes bes, |
-  c ees^\fermata^\f r4
+  d'^\mf^\> |
+  ges'^\p r g'2 |
+  g'4 fis''^\< a'' cis'' |
+  f''-- e'' aes'' bes' |
+  c'' ees''^\fermata^\f r 
   \key e \major
-  d,^\> |
-  a'2^\mf ais |
-  a1 ~ |
-  a ~ |
-  a2^\fermata r4
+  d'^\> |
+  a'2^\mf ais' |
+  a'1 ~ |
+  a' ~ |
+  a'2^\fermata r4 
   \key aes \major
-  d,4^\> |
-  aes'2^\p^\< beses^\mf^\> |
-  bes4^\p fis^\< a cis, |
-  f^\> e aes-- bes, |
-  c^\p ees^\fermata r4
+  d'^\> |
+  aes'2^\p^\< beses'^\mf^\> |
+  bes'4^\p fis'^\< a' cis' |
+  f'^\> e' aes'-- bes |
+  c'^\p ees'^\fermata r 
   \key bes \major
-   d4 |
-  bes'2^\< a |
-  a1 ~ |
-  a ~ |
-  a2^\f r4
+  d' |
+  bes'2^\< a' |
+  a'1 ~ |
+  a' ~ |
+  a'2^\f r4 
   \key c \major
-   d,4 |
-  bes'2^\> b^\< |
-  d4^\f fis4 a cis, |
-  f e gis bes, |
-  c-- ees^\fermata r4
+  d' |
+  bes'2^\> b'^\< |
+  d''4^\f fis'' a'' cis'' |
+  f'' e'' gis'' bes' |
+  c''-- ees''^\fermata r 
   \key ees \major
-  d, |
-  cis'1^\ff |
-  c |
-  c4 ees-- ~ ( ees2 |
-  d2 des4 ) fis4 |
-  a cis, f e |
-  aes bes, c ees ~ |
-  ees2.
+  d' |
+  cis''1^\ff |
+  c'' |
+  c''4 ees''-- ~( ees''2 |
+  d'' des''4) fis'' |
+  a'' cis'' f'' e'' |
+  aes'' bes' c'' ees'' ~ |
+  ees''2.
 }
-
 mezzoKOTFWords = \lyricmode {
   If I (I I I I I I I) were King
   I'd click my heel
@@ -229,65 +250,76 @@ mezzoKOTFWords = \lyricmode {
   the chip -- munks gen -- uf -- lect to me. Though…
 }
 
-altoKOTF = \relative c' {
+altoKOTF = {
   \key fis \major
-  \hairlenMed bis4^\fp^\< |
+  { { \once \override Hairpin.minimum-length = #8
+      \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+      } } bis4^\fp^\< |
   \set melismaBusyProperties = #'()
-  \Mred cis16^\> [ ( cis cis cis cis cis cis cis ) ] r8\! << { \unset melismaBusyProperties dis8 ~ dis4 |
-  dis1 ~ |
-  dis ~ |
-  dis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4
+  {  } cis'16^\>[( cis' cis' cis' cis' cis' cis' cis')] r8\! << {
+       \unset melismaBusyProperties
+       dis' ~ dis'4 |
+       dis'1 ~ |
+       dis' ~ |
+       dis'2^\fermata
+     } {
+       { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s8.^\< { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s^\> s1^\mp s^\> s4^\p
+     } >> r 
   \key a \major
-  c4^\p^\< |
-  cis4^\mf r d2 |
-  e4 fis a-- cis, |
-  f^\> e gis bes, |
-  c^\p ees^\fermata r4
+  c'^\p^\< |
+  cis'^\mf r d'2 |
+  e'4 fis' a'-- cis' |
+  f'^\> e' gis' bes |
+  c'^\p ees'^\fermata r 
   \key cis \major
   bis^\< |
-  dis2^\fp bis^\< |
-  dis1^\mf ~ |
-  dis^\> ~ |
-  dis2^\p^\fermata r4
+  dis'2^\fp bis^\< |
+  dis'1^\mf ~ |
+  dis'^\> ~ |
+  dis'2^\p^\fermata r4 
   \key f \major
-  c^\mf^\> |
-  ees4^\p r e2^\< |
-  ees1 ~ |
-  ees ~ |
-  ees2^\f r4
+  c'^\mf^\> |
+  ees'^\p r e'2^\< |
+  ees'1 ~ |
+  ees' ~ |
+  ees'2^\f r4 
   \key e \major
-  c4^\> |
-  fis2^\mf fisis |
-  fis2.^\> fis4^\< |
-  a cis, f^\mf e ~ |
-  e2^\fermata r4
+  c'^\> |
+  fis'2^\mf fisis' |
+  fis'2.^\> fis'4^\< |
+  a' cis' f'^\mf e' ~ |
+  e'2^\fermata r4 
   \key aes \major
-  c4^\> |
-  d2^\p^\< ges^\mf^\> |
-  g1^\p ~ |
-  g ~ |
-  g2^\fermata r4
+  c'^\> |
+  d'2^\p^\< ges'^\mf^\> |
+  g'1^\p ~ |
+  g' ~ |
+  g'2^\fermata r4 
   \key bes \major
-  c,4 |
-  ges'2^\< g |
-  f4 fis a cis, |
-  f^\f e gis bes,-- |
-  c ees^\fermata r4
+  c' |
+  ges'2^\< g' |
+  f'4 fis' a' cis' |
+  f'^\f e' gis' bes-- |
+  c' ees'^\fermata r 
   \key c \major
-  c |
-  g'2^> a^\< |
-  bes1^\f ~ |
-  bes4 fis a cis, |
-  f e^\fermata r4
+  c' |
+  g'2^> a'^\< |
+  bes'1^\f ~ |
+  bes'4 fis' a' cis' |
+  f' e'^\fermata r 
   \key ees \major
-  c |
+  c' |
   b'1^\ff |
-  a |
-  bes ~ |
-  bes4 fis a cis, |
-  f e aes bes, |
-  c ees a2 ~ |
-  a2.
+  a' |
+  bes' ~ |
+  bes'4 fis' a' cis' |
+  f' e' aes' bes |
+  c' ees' a'2 ~ |
+  a'2.
 }
 
 altoKOTFWords = \lyricmode {
@@ -308,67 +340,77 @@ altoKOTFWords = \lyricmode {
   king
 }
 
-tenorKOTF = \relative c' {
+tenorKOTF = {
   \clef "treble_8"
   \key fis \major
-  \hairlenMed gis4^\fp^\< |
+  { { \once \override Hairpin.minimum-length = #8
+      \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+      } } gis4^\fp^\< |
   \set melismaBusyProperties = #'()
-  \Mred a16^\> [ ( a a a a a a a ) ] r8\! << { \unset melismaBusyProperties b8 ~ b4 |
-  cis1 ~ |
-  cis ~ |
-  cis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >>  r4
+  {  } a16^\>[( a a a a a a a)] r8\! << {
+       \unset melismaBusyProperties
+       b ~ b4 |
+       cis'1 ~ |
+       cis' ~ |
+       cis'2^\fermata
+     } {
+       { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s8.^\< { { \once \override Hairpin.minimum-length = #4
+           \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+           } } s^\> s1^\mp s^\> s4^\p
+     } >> r 
   \key a \major
-  aes4^\p^\< |
+  aes^\p^\< |
   gis^\mf r gis2 |
-  cis1 ~ |
-  cis^\> ~ |
-  cis2^\p^\fermata r4
+  cis'1 ~ |
+  cis'^\> ~ |
+  cis'2^\p^\fermata r4 
   \key cis \major
-   gis^\< |
-  cis2^\fp gis^\< |
-  eis4^\mf fis a cis,-- |
+  gis^\< |
+  cis'2^\fp gis^\< |
+  eis4^\mf fis a cis-- |
   f e gis bes, |
-  c ees^\fermata r4
+  c ees^\fermata r 
   \key f \major
-  aes4^\mf^\> |
-  c4^\p r bes2^\< |
+  aes^\mf^\> |
+  c'^\p r bes2^\< |
   a1 ~ |
   a ~ |
-  a2^\f^\fermata r4
+  a2^\f^\fermata r4 
   \key e \major
   gis^\> |
-  e'2^\mf dis |
+  e'2^\mf dis' |
   b1 ~ |
-  b1 ~ |
-  b2^\fermata r4
+  b ~ |
+  b2^\fermata r4 
   \key aes \major
-  aes4^\> |
-  bes2^\p^\< ees^\mf |
-  c2.^\p fis,4^\< |
-  a cis, f^\> e |
-  aes2^\p^\fermata r4
+  aes^\> |
+  bes2^\p^\< ees'^\mf |
+  c'2.^\p fis4^\< |
+  a cis f^\> e |
+  aes2^\p^\fermata r4 
   \key bes \major
-  aes4 |
-  ees'2^\< c |
-  d2. fis,4 |
-  a^\f cis, f2 ~ |
-  f2 r4
+  aes |
+  ees'2^\< c' |
+  d'2. fis4 |
+  a^\f cis f2 ~ |
+  f r4 
   \key c \major
   aes |
-  cis2^> f^\< |
-  e2.^\f fis,4 |
-  a cis, f e4 |
-  gis2^\fermata r4
+  cis'2^> f'^\< |
+  e'2.^\f fis4 |
+  a cis f e |
+  gis2^\fermata r4 
   \key ees \major
   aes |
   g'1^\ff |
-  fis |
-  g4 fis a cis, |
-  f e gis bes, |
-  c ees ~ ees b4 ~ |
+  fis' |
+  g'4 fis' a' cis' |
+  f' e' gis' bes |
+  c' ees' ~ ees' b ~ |
   b1 ~ |
   b2.
-
 }
 
 tenorKOTFWords = \lyricmode {
@@ -389,65 +431,68 @@ tenorKOTFWords = \lyricmode {
   king
 }
 
-bassKOTF = \relative c {
+bassKOTF = 
+{
   \clef "bass"
   \key fis \major
-  \hairlenMed \Mred ais4^\fp^\< |
+  { { \once \override Hairpin.minimum-length = #8
+      \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
+      } } {  } ais,4^\fp^\< |
   \set melismaBusyProperties = #'()
-  b16^\> [ ( b b b b b b b ) ] r8\! \unset melismaBusyProperties r8 r4 |
+  b,16^\>[( b, b, b, b, b, b, b,)] r8\! \unset melismaBusyProperties
+  r r4 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key a \major
-  bes4^\p |
-  bes r r2 |
+  bes,^\p |
+  bes, r r2 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key cis \major
-  ais |
-  gisis2. r4 |
+  ais, |
+  gisis,2. r4 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key f \major
-   bes |
-  aes2. r4 |
+  bes, |
+  aes,2. r4 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key e \major
-   ais |
-  g2. r4 |
+  ais, |
+  g,2. r4 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key aes \major
-   bes |
-  ges2. r4 |
+  bes, |
+  ges,2. r4 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key bes \major
-   bes |
-  f2. r4 |
+  bes, |
+  f,2. r4 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key c \major
-   bes |
+  bes, |
   e,2. r4 |
   R1 |
-  R1 |
-  r2^\fermata r4
+  R |
+  r2^\fermata r4 
   \key ees \major
-   bes' |
-  ees,1  ~|
-  ees2. r4 |
+  bes, |
+  ees,1 ~ |
+  ees,2. r4 |
   R1*4 |
   r2.
 }
-
 bassKOTFWords = \lyricmode {
   If I (I I I I I I I)
   I'd click
@@ -521,6 +566,8 @@ bassKOTFWords = \lyricmode {
       \override Glissando #'breakable = ##t
       \override TupletNumber #'breakable = ##t
       \override TupletBracket #'breakable = ##t
+      \override Hairpin #'minimum-length = #6
+      \override Hairpin #'springs-and-rods = #ly:spanner::set-spacing-rods
       \remove "Forbid_line_break_engraver"
     }
     \context {
@@ -579,6 +626,7 @@ bassKOTFWords = \lyricmode {
       \override Glissando #'breakable = ##t
       \override TupletNumber #'breakable = ##t
       \override TupletBracket #'breakable = ##t
+
       \remove "Forbid_line_break_engraver"
     }
     \context {
