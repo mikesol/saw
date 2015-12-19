@@ -233,9 +233,9 @@ mezzoKOTF = {
   \key a \major
   d'^\p^\< |
   f'^\mf r fis'2 |
-  g'1 ~ |
-  g'^\> ~ |
-  g'2^\fermata^\p r4 
+  gis'1 ~ |
+  gis'^\> ~ |
+  gis'2^\fermata^\p r4 
   \key cis \major
   cisis'^\< |
   fisis'2^\fp fis'^\< |
@@ -410,7 +410,7 @@ tenorKOTF = {
      } >> r 
   \key a \major
   aes^\p^\< |
-  gis^\mf r gis2 |
+  g^\mf r gis2 |
   cis'1 ~ |
   cis'^\> ~ |
   cis'2^\p^\fermata r4 

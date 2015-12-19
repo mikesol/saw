@@ -110,11 +110,11 @@ soprano = \relative c'' { \autoBeamOff
   ees2 d4 e |
   e2 d4 e |
   %%%
-  ees2 dis4 e
-  
+  ees2 dis4 e |   
 }
 
 sopranoWords = \lyricmode {
+  
 }
 
 mezzo = \relative c'' { \autoBeamOff

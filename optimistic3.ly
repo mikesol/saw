@@ -12,6 +12,7 @@
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
   %max-systems-per-page = #2
+  min-systems-per-page = #3
 }
 
 #(ly:set-option 'point-and-click #f)
@@ -187,6 +188,7 @@ marks = {
   \times 1/1 { s2. }
   \override TupletNumber.text = \markup \smart-flat "Si"
   \times 1/1 { s2. }
+  s1*15 \bar "||"
 }
 prefatoryMatter = {
   #(set-accidental-style 'modern-cautionary)
@@ -194,7 +196,7 @@ prefatoryMatter = {
 
 soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  %{ees%} r4 ees d8 ees %{e%} dis4 |
+  %{ees%} r4 ees^\f d8 ees %{e%} dis4 |
   e e %{f%} e8 f e4 |
   f %{ges%} ges f8 ges ees4 %{g%} |
   d2. %{aes%} r4 |
@@ -223,7 +225,17 @@ soprano = \relative c'' { \autoBeamOff
   %{g%} g g4 fis8 g %{aes%} f4 |
   ees4 ees %{%} dis8 dis %{a%} dis4 |
   d4 %{bes%} f g a |
-  
+  \key ees \major
+  R1 f,4 c'2. |
+  R1 d,4^\p b'2. |
+  R1 g4^\mf d'2. |
+  R1 ees4^\p g2. |
+  R1 ees4^\f aes2. |
+  \key e \major
+  R1 eis4^\mp fis2. |
+  g4^\f bes2. |
+  R1 |
+  R1 |
 }
 
 sopranoWords = \lyricmode {
@@ -250,11 +262,12 @@ sopranoWords = \lyricmode {
   Step in -- to the light
   March up to the gate and bid it %open
 
+  \repeat unfold 7 { O -- pen! }
 }
 
 mezzo = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 c c8 c cis4 |
+  r4 c^\f c8 c cis4 |
   cis cis cis8 d cis4 |
   d ees d8 ees c4 |
   c2. r4 |
@@ -278,6 +291,17 @@ mezzo = \relative c'' { \autoBeamOff
   des des c8 des ces4 |
   g g fisis8 fisis fisis4 |
   a4 b ees ees |
+  \key ees \major
+  R1 d,4 aes'2. |
+  R1 b,4^\p f'2. |
+  R1 c4^\mf bes'2. |
+  g4^\mp b2. | d4^\p ees2. |
+  R1 c4^\f ees2. |
+  \key e \major
+  R1 cis4^\mp e2. |
+  a,4^\f d2. |
+  R1 |
+  R1 |
 }
 
 mezzoWords = \lyricmode {
@@ -304,11 +328,12 @@ mezzoWords = \lyricmode {
   Step in -- to the sun
   Step in -- to the light
   March up to the gate and bid it %open
+  \repeat unfold 8 { O -- pen }
 }
 
 alto = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  r4 bes a8 bes ais4 |
+  r4 bes^\f a8 bes ais4 |
   b4 b b8 b b4 |
   bes ces ces8 ces a4 |
   g2 a4 b |
@@ -332,6 +357,25 @@ alto = \relative c'' { \autoBeamOff
   bes bes a8 bes aes4 |
   f f eis8 eis eis4 |
   fis4 gis b b |
+  \key ees \major
+  R1 c,4 f2. |
+  \clef "treble_8"
+  R1 f,4^\p d'2. |
+  b4^\mf d2. |
+  aes4 fis'2. |
+  ees4^\mp fis2. |
+  \clef treble
+  c'4^\p b2. |
+  \clef bass
+  c,,4^\f ees2. |
+  \clef treble
+  aes'4 ees'2. |
+  \key e \major
+  dis,4^\mf e2. |
+  a4^\mp cis2. |
+  dis,4^\f e2. |
+  cisis4^\mf dis2. |
+  R1 |
 }
 
 altoWords = \lyricmode {
@@ -362,13 +406,14 @@ altoWords = \lyricmode {
   Step in -- to the sun
   Step in -- to the light
   March up to the gate and bid it %open
+  \repeat unfold 12 { O -- pen } 
 }
 
 tenor = \relative c'' {
   \autoBeamOff
   \prefatoryMatter
   \clef "treble_8"
-  r4 g fis8 g fisis4 |
+  r4 g^\f fis8 g fisis4 |
   g g gis8 gis gis4 |
   a aes4 aes8 aes ges4 |
   e2 f4 g |
@@ -392,6 +437,27 @@ tenor = \relative c'' {
   e e dis8 e d4 |
   des des bis8 bis bis4 |
   c4 d cis cis |
+  \key ees \major
+  R1 |
+  aes4 d2. |
+  f,4^\p aes2. |
+  R1 |
+  f4^\mf f2. |
+  R1 |
+  b4^\mp d2. |
+  R1 |
+  \clef bass
+  a,4^\f c2. |
+  \clef treble
+  g''4 c2. |
+  \key e \major
+  R1 |
+  \clef "treble_8"
+  fis,4^\mp a2. |
+  b,4^\f c2. |
+  R1 |
+  b4^\ff b2. |
+  
 }
 
 tenorWords = \lyricmode {
@@ -422,13 +488,14 @@ tenorWords = \lyricmode {
   Step in -- to the sun
   Step in -- to the light
   March up to the gate and bid it %open
+  \repeat unfold 9 { O -- pen }
 }
 
 bass = \relative c {
   \autoBeamOff
   \prefatoryMatter
   \clef bass
-  bes2. bes4 |
+  bes2.^\f bes4 |
   bes2. bes4 |
   bes2. bes4 |
   bes2 c4 aes |
@@ -452,6 +519,22 @@ bass = \relative c {
   r4 bes ~ bes bes |  
   bes2 a |
   c ges |
+  f4 aes2. |
+  R1 |
+  b4^\p d2. |
+  R1 |
+  g,4^\mf b2. |
+  R1 |
+  c4^\mp bes'2. |
+  R1 |
+  fis,4^\f a2. |
+  R1 |
+  \key e \major
+  a4^\mf cis2. |
+  R1 |
+  c4^\f fis2. |
+  R1 |
+  b,4^\ff b2. |
 }
 
 bassWords = \lyricmode {
@@ -479,9 +562,10 @@ bassWords = \lyricmode {
   Step the
   Step the
   light March to the
+  \repeat unfold 8 { O -- pen }
 }
 %%% SCORE
-#(set-global-staff-size 16)
+#(set-global-staff-size 15.15)
 
 \score {
   \new ChoirStaff <<
