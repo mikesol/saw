@@ -66,7 +66,9 @@ marksKOTF = {
   \partial 4
   \tempo "hors temps"
   s4
-  \repeat unfold 8 { s1*3 s2. \bar "!!" s4 }
+  \repeat unfold 8 { s1*3 s2.
+    \bar "!!"
+  s4 }
   s1*6 |
   s2. \bar "||"
 }
@@ -85,43 +87,43 @@ sopranoKOTF = \relative c' {
   a^\mf r ais2 |
   b1 ~ |
   b^\> ~ |
-  b2^\p^\fermata r4 
+  b2^\p^\fermata r4
   \key cis \major
   fisis^\< |
   ais2^\fp b2^\< |
   bis1\!^\mf ~ |
   bis1^\> ~ |
-  bis2^\p r4 
+  bis2^\p r4
   \key f \major
   g4^\mf^\> |
   b4^\p r4 c2^\< |
   cis1 ~ |
   cis ~ |
-  cis2^\f r4 
+  cis2^\f r4
   \key e \major
   g^\> |
   c2^\mf cis |
   d4 fis a cis, |
   f e-- gis ais, |
-  c dis^\fermata r 
+  c dis^\fermata r
   \key aes \major
    g,^\> |
   des'2^\p^\< d^\mf^\> |
   ees1^\p ~ |
   ees1 ~ |
-  ees2^\fermata r4 
+  ees2^\fermata r4
   \key bes \major
    g, |
   d'2^\< ees |
   e1 ~ |
   e4 fis^\f a cis, |
-  f2^\fermata r4 
+  f2^\fermata r4
   \key c \major
    g, |
   ees'2^\> e^\< |
   f1^\f ~ |
   f ~ |
-  f2^\fermata r4 
+  f2^\fermata r4
   \key ees \major
    g, |
   e'^\ff fis a cis, |
@@ -130,7 +132,7 @@ sopranoKOTF = \relative c' {
   ges ~ |
   ges ~ |
   ges ~ |
-  ges2.    
+  ges2.
 }
 
 sopranoKOTFWords = \lyricmode {
@@ -163,13 +165,13 @@ mezzoKOTF = \relative c' {
   f4^\mf r fis2 |
   g1 ~ |
   g^\> ~ |
-  g2^\fermata^\p r4 
+  g2^\fermata^\p r4
   \key cis \major
   cisis,4^\< |
   fisis2^\fp fis^\< |
   gis1^\mf ~ |
   gis^\> ~ |
-  gis2^\p^\fermata r4 
+  gis2^\p^\fermata r4
   \key f \major
   d4^\mf^\> | ges4^\p r
   g2 |
@@ -187,15 +189,20 @@ mezzoKOTF = \relative c' {
   aes'2^\p^\< beses^\mf^\> |
   bes4^\p fis^\< a cis, |
   f^\> e aes-- bes, |
-  c^\p ees^\fermata r4 \key bes \major d4 |
+  c^\p ees^\fermata r4
+  \key bes \major
+   d4 |
   bes'2^\< a |
   a1 ~ |
   a ~ |
-  a2^\f r4 \key c \major d,4 |
+  a2^\f r4
+  \key c \major
+   d,4 |
   bes'2^\> b^\< |
   d4^\f fis4 a cis, |
   f e gis bes, |
-  c-- ees^\fermata r4 \key ees \major
+  c-- ees^\fermata r4
+  \key ees \major
   d, |
   cis'1^\ff |
   c |
@@ -203,7 +210,7 @@ mezzoKOTF = \relative c' {
   d2 des4 ) fis4 |
   a cis, f e |
   aes bes, c ees ~ |
-  ees2.  
+  ees2.
 }
 
 mezzoKOTFWords = \lyricmode {
@@ -229,7 +236,7 @@ altoKOTF = \relative c' {
   \Mred cis16^\> [ ( cis cis cis cis cis cis cis ) ] r8\! << { \unset melismaBusyProperties dis8 ~ dis4 |
   dis1 ~ |
   dis ~ |
-  dis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4 
+  dis2^\fermata } { \hairlenSmall s8.^\< \hairlenSmall s8.^\> s1^\mp s1^\> s4^\p } >> r4
   \key a \major
   c4^\p^\< |
   cis4^\mf r d2 |
@@ -241,12 +248,14 @@ altoKOTF = \relative c' {
   dis2^\fp bis^\< |
   dis1^\mf ~ |
   dis^\> ~ |
-  dis2^\p^\fermata r4 \key f \major
+  dis2^\p^\fermata r4
+  \key f \major
   c^\mf^\> |
   ees4^\p r e2^\< |
   ees1 ~ |
   ees ~ |
-  ees2^\f r4 \key e \major
+  ees2^\f r4
+  \key e \major
   c4^\> |
   fis2^\mf fisis |
   fis2.^\> fis4^\< |
@@ -313,21 +322,26 @@ tenorKOTF = \relative c' {
   gis^\mf r gis2 |
   cis1 ~ |
   cis^\> ~ |
-  cis2^\p^\fermata r4 \key cis \major gis^\< |
+  cis2^\p^\fermata r4
+  \key cis \major
+   gis^\< |
   cis2^\fp gis^\< |
   eis4^\mf fis a cis,-- |
   f e gis bes, |
-  c ees^\fermata r4 \key f \major
+  c ees^\fermata r4
+  \key f \major
   aes4^\mf^\> |
   c4^\p r bes2^\< |
   a1 ~ |
   a ~ |
-  a2^\f^\fermata r4 \key e \major
+  a2^\f^\fermata r4
+  \key e \major
   gis^\> |
   e'2^\mf dis |
   b1 ~ |
   b1 ~ |
-  b2^\fermata r4 \key aes \major
+  b2^\fermata r4
+  \key aes \major
   aes4^\> |
   bes2^\p^\< ees^\mf |
   c2.^\p fis,4^\< |
@@ -338,12 +352,14 @@ tenorKOTF = \relative c' {
   ees'2^\< c |
   d2. fis,4 |
   a^\f cis, f2 ~ |
-  f2 r4 \key c \major
+  f2 r4
+  \key c \major
   aes |
   cis2^> f^\< |
   e2.^\f fis,4 |
   a cis, f e4 |
-  gis2^\fermata r4 \key ees \major
+  gis2^\fermata r4
+  \key ees \major
   aes |
   g'1^\ff |
   fis |
@@ -352,8 +368,7 @@ tenorKOTF = \relative c' {
   c ees ~ ees b4 ~ |
   b1 ~ |
   b2.
- 
-  
+
 }
 
 tenorKOTFWords = \lyricmode {
@@ -388,32 +403,45 @@ bassKOTF = \relative c {
   bes r r2 |
   R1 |
   R1 |
-  r2^\fermata r4 \key cis \major
+  r2^\fermata r4
+  \key cis \major
   ais |
   gisis2. r4 |
   R1 |
   R1 |
-  r2^\fermata r4 \key f \major bes |
+  r2^\fermata r4
+  \key f \major
+   bes |
   aes2. r4 |
   R1 |
   R1 |
-  r2^\fermata r4 \key e \major ais |
+  r2^\fermata r4
+  \key e \major
+   ais |
   g2. r4 |
   R1 |
   R1 |
-  r2^\fermata r4 \key aes \major bes |
+  r2^\fermata r4
+  \key aes \major
+   bes |
   ges2. r4 |
   R1 |
   R1 |
-  r2^\fermata r4 \key bes \major bes |
+  r2^\fermata r4
+  \key bes \major
+   bes |
   f2. r4 |
   R1 |
   R1 |
-  r2^\fermata r4 \key c \major bes |
+  r2^\fermata r4
+  \key c \major
+   bes |
   e,2. r4 |
   R1 |
   R1 |
-  r2^\fermata r4 \key ees \major bes' |
+  r2^\fermata r4
+  \key ees \major
+   bes' |
   ees,1  ~|
   ees2. r4 |
   R1*4 |
