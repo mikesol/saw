@@ -1,19 +1,10 @@
 %%% RECURRENT "SOME" !!!
-
-\paper {
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  %max-systems-per-page = #2
-}
+\include "stylesheet.ly"
 \header {
   %title = "wal'dOz"
-  title = "rain real come"
+  %title = "rain real come"
   subtitle = "for Mirkku"
-  %title = "Somewhere Over the Rainbow"
+  title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -29,9 +20,6 @@ mkf = \once \set Score.markFormatter = #format-mark-box-letters
   % 2.17.12 works
 %}
 
-%#(set-global-staff-size 14.14)
-#(set-global-staff-size 15.87)
-
 %%%%%% ending with E major
 %%%%%% then D major
 %%%%%% then B major (if happy)
@@ -42,16 +30,6 @@ mkf = \once \set Score.markFormatter = #format-mark-box-letters
 \include "defs-devel.ly"
 
 
-
-%{
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "cadence"
-    #:factor (/ staff-height pt 20)
-  ))
-}
-%}
 
 %{
 key =

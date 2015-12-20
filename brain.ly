@@ -1,15 +1,5 @@
 %<ees d' f a f'> d bes c d bes
-%#(set-global-staff-size 14.14)
-#(set-global-staff-size 15.87)
-\paper {
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  %max-systems-per-page = #2
-}
+\include "stylesheet.ly"
 \header{
   title = "If I Only Had a Brain"
   subtitle = "for me"
@@ -36,9 +26,7 @@ notswung = \markup \italic "not swung"
 tripletFeel = #(define-music-function (parser location n m) (number? ly:music?)
 m)
 
-#(ly:set-option 'point-and-click #f)
 
-#(set-global-staff-size 15.87)
 
 railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
@@ -54,16 +42,6 @@ myred = \once \override NoteHead #'color = #red
   top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
   bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
 }
-
-%{
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "cadence"
-    #:factor (/ staff-height pt 20)
-  ))
-}
-%}
 
 prefatoryMatter = {
   \key ees \major
