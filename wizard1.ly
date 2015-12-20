@@ -610,7 +610,6 @@ bassWords = \lyricmode {
 
 %{
 %%% piano redux
-#(set-global-staff-size 20)
 
 \score {
   \new PianoStaff <<

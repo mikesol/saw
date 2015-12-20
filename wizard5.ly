@@ -1,5 +1,6 @@
 \version "2.17.0"
 \include "defs-devel.ly"
+\include "stylesheet.ly"
 %{
   aes | d dim
   g1 | G (melisma)
@@ -12,22 +13,7 @@
   eis8 eis eis gis gis gis r4. gis8 gis gis dis dis dis
 %}
 
-\paper {
-  footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
-  footnote-padding = 5\mm
-  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
-  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  %max-systems-per-page = #2
-  %indent = 1.9\in
-}
 widedin = \once \override DynamicText . extra-spacing-width = ##f
-%#(ly:set-option 'point-and-click #f)
 
 thought = \markup \italic \column { pensée "(pas chantée)" }
 endessous = \markup \italic "(en dessous)"
@@ -81,7 +67,8 @@ marks = {
   \time 4/4
   \tempo "Presto" 4=216
   \bar "||" \secOne
-  s2 s8
+  \tag #'midi { s2 s8 }
+  \tag #'score { \partial 4. }
   s4. |
   s1*30 |
   s2 \mark \rall \unfoldChange #216 #140 #12 |
@@ -161,7 +148,7 @@ prefatoryMatter = {
 
 soprano = \relative c'' { \autoBeamOff
   \prefatoryMatter
-  s2 s8
+  \tag #'midi { s2 s8 }
   r4. |
   R1 |
   R1 |
@@ -422,7 +409,7 @@ sopranoWords = \lyricmode {
 
 mezzo = \relative c' { \autoBeamOff
   \prefatoryMatter
-  s2 s8
+  \tag #'midi { s2 s8 }
   r4. |
   R1 |
   r2 r8 eis8^\pp^\< fis fisis |
@@ -672,7 +659,7 @@ mezzoWords = \lyricmode {
 alto = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef "treble_8"
-  s2 s8
+  \tag #'midi { s2 s8 }
   r4. |
   r2 r8 dis^\pp^\< disis eis |
   fis4^\p^\> eis e\pp dis |
@@ -958,7 +945,7 @@ altoWords = \lyricmode {
 tenor = \relative c' { \autoBeamOff
   \clef "treble_8"
   \prefatoryMatter
-  s2 s8
+  \tag #'midi { s2 s8 }
   ais8^\pp^\< aisis bis |
   cis4^\p^\> bis b\pp ais |
   a gis g fis |
@@ -1237,7 +1224,7 @@ tenorWords = \lyricmode {
 bass = \relative c' { \autoBeamOff
   \prefatoryMatter
   \clef bass
-  s2 s8
+  \tag #'midi { s2 s8 }
   r4. |
   R1 |
   R1 |
@@ -1464,16 +1451,15 @@ bassWords = \lyricmode {
 }
 
 %%% SCORE
-#(set-global-staff-size 16)
 
 \score {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
-        \soprano
+        \removeWithTag #'midi \soprano
       } {
-        \marks
+        \keepWithTag #'score { \removeWithTag #'midi \marks }
       } {
         \nothing
       }>> }
@@ -1484,7 +1470,7 @@ bassWords = \lyricmode {
     \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { << { \numericTimeSignature
-        \mezzo
+        \removeWithTag #'midi \mezzo
       } {
         \nothing
       } >> }
@@ -1495,7 +1481,7 @@ bassWords = \lyricmode {
     \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { << { \numericTimeSignature
-        \alto
+        \removeWithTag #'midi \alto
       } {
         \nothing
       } >> }
@@ -1506,7 +1492,7 @@ bassWords = \lyricmode {
     \new Staff = "tenorstaff" \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { << { \numericTimeSignature
-        \tenor
+        \removeWithTag #'midi \tenor
       } {
         \nothing
       } >> }
@@ -1517,7 +1503,7 @@ bassWords = \lyricmode {
     \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { << { \numericTimeSignature
-        \bass
+        \removeWithTag #'midi \bass
       } {
         \nothing
       } >> }
@@ -1562,7 +1548,6 @@ bassWords = \lyricmode {
 
 %{
 %%% piano redux
-#(set-global-staff-size 20)
 
 \score {
   \new PianoStaff <<
@@ -1612,24 +1597,12 @@ bassWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-%{
-    \new Staff \with { instrumentName = #"Glockenspiel" %shortInstrumentName = #"M."
-} <<
-      \new Voice = "glock" { << { \numericTimeSignature
-        \glock
-      } {
-        \nothing
-      } {
-        \nothing
-      }>> }
-    >>
-%}
     \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
-        \soprano
+        \keepWithTag #'midi { \removeWithTag #'score \soprano }
       } {
-        \marks
+        \keepWithTag #'midi { \removeWithTag #'score \marks }
       } >> }
       \new Lyrics \lyricsto "soprano" {
         \sopranoWords
@@ -1638,7 +1611,7 @@ bassWords = \lyricmode {
     \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzo" { \numericTimeSignature
-        \mezzo
+        \keepWithTag #'midi \mezzo
       }
       \new Lyrics \lyricsto "mezzo" {
         \mezzoWords
@@ -1647,7 +1620,7 @@ bassWords = \lyricmode {
     \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "alto" { \numericTimeSignature
-        \alto
+        \keepWithTag #'midi \alto
       }
       \new Lyrics \lyricsto "alto" {
         \altoWords
@@ -1656,7 +1629,7 @@ bassWords = \lyricmode {
     \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenor" { \numericTimeSignature
-        \tenor
+        \keepWithTag #'midi \tenor
       }
       \new Lyrics \lyricsto "tenor" {
         \tenorWords
@@ -1665,7 +1638,7 @@ bassWords = \lyricmode {
     \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
 } <<
       \new Voice = "bass" { \numericTimeSignature
-        \bass
+        \keepWithTag #'midi \bass
       }
       \new Lyrics \lyricsto "bass" {
         \bassWords

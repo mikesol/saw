@@ -125,8 +125,6 @@ accessoryKey =
 
 #(ly:set-option 'point-and-click #f)
 
-#(set-global-staff-size 15.87)
-
 %improv = \markup \italic "expressing an inner joy"
 
 ksnote = \markup \justify {

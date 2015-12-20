@@ -1,11 +1,8 @@
-#(set-global-staff-size 15.87)
 
 \version "2.17.0"
 \include "defs-devel.ly"
+\include "stylesheet.ly"
 
-#(ly:set-option 'point-and-click #f)
-
-#(set-global-staff-size 15.87)
 #(set-accidental-style 'modern-cautionary)
 
 rall = \mark \markup \italic "rall."

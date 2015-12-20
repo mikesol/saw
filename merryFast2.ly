@@ -24,24 +24,11 @@
 %1,2,3,5,7
 \version "2.17.0"
 \include "defs-devel.ly"
+\include "stylesheet.ly"
 \include "merryFastCanonSketch.ly"
-\paper {
-  footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
-  footnote-padding = 5\mm
-  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
-  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  %max-systems-per-page = #2
-}
 maybeStemUp =  { %{\stemUp%} }
 maybeStemDown =  { %{\stemDown%} }
 maybeStemNeutral = { %{\stemNeutral%} }
-%#(ly:set-option 'point-and-click #f)
 sim = \markup \italic "sim."
 MyRed = \Red
 MyBlack = \Black
@@ -585,7 +572,6 @@ bassWords = \lyricmode {
 }
 
 %%% SCORE
-#(set-global-staff-size 16)
 
 \score {
   \new ChoirStaff <<
@@ -787,8 +773,8 @@ sopranoSecondPart = \relative c' {
   d4 d ~ d8 d ~ d4 |
   d d d r |
   d d d r |
-  d4. d8 ~ d4 r |
-  d d d r |
+  d4. d8 ~ d4 r8 d ~ |
+  d d4 d8 r2 |
   R1 |
   %%%%%%%%%%%%%%%%%%%%%%%%%%
   %d4. d4.
@@ -951,8 +937,8 @@ mezzoSecondPart = \relative c' {
   gis4 gis ~ gis8 gis ~ gis4 |
   gis gis gis r |
   gis gis gis r |
-  gis4. gis8 ~ gis4 r |
-  gis gis gis r |
+  gis4. gis8 ~ gis4 r8 gis ~ |
+  gis gis4 gis8 r2 |
   R1 |
   r16 d^\p^\< d e   e g g cis    e^\> cis cis bes    gis fis\!
   r16 e^\<   e [ g ]  g [ b^\mf ]
@@ -1126,8 +1112,8 @@ altoSecondPart = \relative c'' {
   fis4 fis ~ fis8 fis ~ fis4 |
   fis fis fis r |
   fis fis fis r |
-  fis4. fis8 ~ fis4 r |
-  fis fis fis r |
+  fis4. fis8 ~ fis4 r8 fis8 ~ |
+  fis fis4 fis8 r2 |
   R1 |
   r16 b,^\p^\< b e    e g g a    d^\> a a g   e b\! |
   r16 e^\<    e [ g ] g [ gis^\mf ] |
@@ -1306,8 +1292,8 @@ tenorSecondPart = \relative c' {
   b4 b ~ b8 b ~ b4 |
   b b b r |
   b b b r |
-  b4. b8 ~ b4 r |
-  b b b r |
+  b4. b8 ~ b4 r8 b ~ |
+  b b4 b8 r2 |
   R1 |
   r16 a^\p^\< a cis    cis d d fis   ais^\> fis fis d cis a\! |
   r16 cis^\<    cis [ d ] d [  fis^\mf ] |

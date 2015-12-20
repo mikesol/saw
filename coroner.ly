@@ -764,7 +764,6 @@ bassCoronerSecond = \transpose c c, {   \prefatoryMatterCoronerSecond
 bassCoronerSecondWords = \coronerWords
 
 %%% SCORE
-#(set-global-staff-size 16)
 
 \score {
   \new ChoirStaff <<
@@ -860,7 +859,6 @@ bassCoronerSecondWords = \coronerWords
 
 
 %%% piano redux
-#(set-global-staff-size 20)
 
 \score {
   \new PianoStaff <<

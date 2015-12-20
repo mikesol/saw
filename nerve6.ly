@@ -61,7 +61,6 @@ mikD = \markup \null
 rynZ = \markup \null
 desD = \markup \null
 
-#(set-global-staff-size 15.87)
 autoBeamInstruction = \autoBeamOn
 
 solo = \markup \italic "solo"

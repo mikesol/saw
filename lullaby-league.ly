@@ -1,5 +1,6 @@
 \version "2.17.0"
 \include "stylesheet.ly"
+\include "characterNames.ly"
 ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
 
 legero = \markup \italic "legero"
@@ -112,6 +113,7 @@ mezzoLullabyWords = \lyricmode {
 
 altoLullaby = \relative c' { \autoBeamOff
   \prefatoryMatterLullaby
+  \clef "treble_8"
   bes4 ~ \times 2/3 { bes8 a bes } |
   a4 ~ a16 r bes8 |
   gis8 aes' fis4 |
@@ -199,7 +201,7 @@ bassLullabyWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
+    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"M."
 } <<
       \new Voice = "sopranoLullaby" { << { \numericTimeSignature
         \sopranoLullaby
@@ -212,7 +214,7 @@ bassLullabyWords = \lyricmode {
         \sopranoLullabyWords
       }
     >>
-    \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"E."
+    \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzoLullaby" { << { \numericTimeSignature
         \mezzoLullaby
@@ -223,7 +225,7 @@ bassLullabyWords = \lyricmode {
         \mezzoLullabyWords
       }
     >>
-    \new Staff \with { instrumentName = \ttoName %shortInstrumentName = #"Mk."
+    \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "altoLullaby" { << { \numericTimeSignature
         \altoLullaby
@@ -234,7 +236,7 @@ bassLullabyWords = \lyricmode {
         \altoLullabyWords
       }
     >>
-    \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"R."
+    \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"R."
 } <<
       \new Voice = "tenorLullaby" { << { \numericTimeSignature
         \tenorLullaby

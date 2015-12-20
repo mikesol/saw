@@ -1,18 +1,6 @@
 \version "2.17.0"
 \include "defs-devel.ly"
-\paper {
-  footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
-  footnote-padding = 5\mm
-  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
-  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  %max-systems-per-page = #2
-}
+\include "stylesheet.ly"
 
 %{
   one idea for the piece is that all the accompaniment is restricted to
@@ -25,7 +13,6 @@
   fugue on bass theme
 %}
 
-%#(ly:set-option 'point-and-click #f)
 
 % oh the wiz is 5 halves in the space of three { x4 oh2 the4 wiz4 }
 
@@ -531,7 +518,6 @@ bassWords = \lyricmode {
 }
 
 %%% SCORE
-#(set-global-staff-size 16)
 
 \score {
   \new ChoirStaff <<
@@ -626,7 +612,6 @@ bassWords = \lyricmode {
 
 %{
 %%% piano redux
-#(set-global-staff-size 20)
 
 \score {
   \new PianoStaff <<

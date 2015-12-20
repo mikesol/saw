@@ -2,7 +2,6 @@
 
 \include "defs-devel.ly"
 \include "stylesheet.ly"
-#(ly:set-option 'point-and-click #f)
 
 legero = \markup \italic "legero"
 bendHack = \once \override BendAfter.extra-offset = #'(-1 . 0) 

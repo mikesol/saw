@@ -1,13 +1,12 @@
 \version "2.19.0"
 \include "defs-devel.ly"
-
+\include "stylesheet.ly"
 marD = \markup \null
 elsD = \markup \null
 mikD = \markup \null
 rynZ = \markup \null
 desD = \markup \null
 
-#(set-global-staff-size 15.87)
 autoBeamInstruction = \autoBeamOn
 
 solo = \markup \italic "solo"
@@ -34,31 +33,7 @@ wswing = "Swung"
   arranger = "arr. Mike Solomon"
   %arranger = "arr. (anon)"
 }
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "lilyjazz"
-    #:brace "lilyjazz"
-    #:roman "LilyJAZZText"
-    #:sans "LilyJAZZChord"
-    #:factor (/ staff-height pt 20)
-  ))
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  max-systems-per-page = #2
-  %oddHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
-  %evenHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
-}
-
-
-
-#(ly:set-option 'point-and-click #f)
-
-#(set-global-staff-size 15.87)
+\include "stylesheet.ly"
 
 railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
@@ -67,14 +42,6 @@ railroad =  {
 myred = \once \override NoteHead #'color = #red
 
 php = \once \override Hairpin.stencil = #(parenthesize-callback ly:hairpin::print)
-
-\paper {
-  footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
-  footnote-padding = 1\mm
-  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
-  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
-  ragged-right = ##f
-}
 
 prefatoryMatter = {
   \key a \major

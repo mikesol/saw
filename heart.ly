@@ -66,10 +66,6 @@ If I only had a heart
 \version "2.19.0"
 \include "defs-devel.ly"
 
-#(ly:set-option 'point-and-click #f)
-
-#(set-global-staff-size 15.87)
-
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
   footnote-padding = 1\mm
