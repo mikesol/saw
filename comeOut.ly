@@ -190,10 +190,11 @@ altoComeout = \relative c'' { \prefatoryMatterComeout
     b2 } \times 6/5 { b4^\cresc b4 e4 cis4. b2. }
       r4 a'4 |
   a fis r |
-  \times 9/8 { cis4 cis ais b cis  %{%} dis8 ~ dis dis4 bis }
-  e4^\ff e cis |
-  d e2 |
-  \times 8/7 { r4 b' b
+  \times 3/5 { cis2 cis ais b cis } |
+  cis'4^\ff cis ais |
+  dis cis4. e,8^\mp ~ |
+  e e4 cis8 ~ cis4 |
+  \times 8/7 { r4 b'^\f b
     e cis b ~
     b8 r } b8 b |
   e4^\> e, e |
@@ -220,8 +221,9 @@ altoComeoutWords = \lyricmode {
   \sheBringsUsGoodNewsOrHaventYouHeard
   \sheBringsUs
   \sheBringsUsGoodNews
+  \sheBringsUsGoodNews
   \sheBringsUs
-  \sheBringsUsGoodNewsOrHaventYouHeard
+  \orHaventYouHeard
   When she fell out of Kan -- sas a \repeat unfold 3 mir
   \repeat unfold 8 \sshe
   \sheBringsUs
@@ -426,11 +428,10 @@ tenorComeout = \relative c' {   \prefatoryMatterComeout
   ais dis cis ~ |
   cis r e4 |
   e cis d |
-  e2 r4 |
-  \clef treble
-  cis'4^\ff cis ais |
-  dis4^\> cis4. e,8 ~ |
-  e e4 cis ais'8 ~ |
+  e2 \times 2/3  { dis2
+  dis bis } |
+  e4^\ff e cis |
+  d e4.^\> \clef treble ais8 ~ |
   ais ais4 fisis4. |
   gis4 \bendHack \bendInto ais-\bendAfter #-2 ^\mp \bendInto ais-\bendAfter #-2 |
   \bendHack \bendInto ais-\bendAfter #-2 \times 2/3 { \bendInto b2^\>-\bendAfter #-2 \bendInto b4-\bendAfter #-2 ~ } | % 2 3 3 3 1  = 12 , 9 had or 18 b2 b b b b b b b b
@@ -460,8 +461,8 @@ tenorComeoutWords = \lyricmode {
   \sheBringsUs
   \sheBringsUsGoodNews
   \sheBringsUsGoodNews
-  \sheBringsUsGoodNews
   \sheBringsUs
+  \sheBringsUsGoodNews
   \sheBringsUsGood
   \repeat unfold 3 \nnews
   \repeat unfold 9 \hhave
