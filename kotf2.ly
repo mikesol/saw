@@ -57,6 +57,7 @@ simplifyPitch =
    (ly:music?)
    m)
 
+
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
   footnote-padding = 5\mm
@@ -106,7 +107,6 @@ Mred = { }
 mred = { }
 
 
-\defineBarLine "!!" #'("!!" "" "")
 marksKOTF = {
   \partial 4
   \tempo "hors temps"
