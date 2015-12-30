@@ -550,12 +550,12 @@ bass = \relative c { \autoBeamOff
    r c r g |
    r c r b |
    r a r cis |
+   r d r fis, |
+   r g r cis |
    r d r g, |
-   r b r g |
-   r d' r g, |
-   r c r b |
-   r a r cis |
-   r d r g, |
+   r c r a |
+   r d r aes |
+   r g r b |
    r c r g |
    r c d \lo dis \sh e ~ |
    e e r bes |
