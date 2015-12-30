@@ -321,7 +321,22 @@ alto = \relative c' { \autoBeamOff
   \lo a8 ( ges'4 ) \sh  f8 ~ \lo f \sh f-> ~ f4 |
   bes4 f d c |
   \lo b8 ( aes'4 ) \sh g8 ~ \lo g  \sh g-> ~ g4 |
-  s1*14 |
+  c4 b a g |
+  \lo f8 e4 \sh d8 \lo r \sh c ~ c4 |
+  \clef "treble_8"
+  \times 2/3 { b4 a g } \lo r f4 \sh e8 ~ |
+  e2 r4 g |
+  \clef treble
+  a b c d |
+  \lo e8 f4 \sh g8 \lo r \sh a ~ a4 |
+  f4 e d c |
+  b2 r4 a |
+  f'4 d b d |
+  c a g g |
+  bes c d c |
+  a' g f e |
+  d d cis cis |
+  d d dis \lo fisis8 \sh gis ~ |
 %  c4 b a g |
 %  \lo f8 e4 \sh d8 ~ \lo d \sh f ~ f4 |
 %  \times 2/3 { e e e } \times 2/3 { f f fis } |
@@ -555,7 +570,7 @@ bass = \relative c { \autoBeamOff
    r d r g, |
    r c r a |
    r d r aes |
-   r g r b |
+   r g r d' |
    r c r g |
    r c d \lo dis \sh e ~ |
    e e r bes |
