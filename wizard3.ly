@@ -112,24 +112,24 @@ soprano = \relative c'' { \autoBeamOff
   \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh ees-> ~ ees4 |
   d4 f d c |
   \lo b8 ( aes'4 ) \sh g8 ~ \lo g  \sh f-> ~ f4 |
-  \times 2/3 { r4 g f } \lo e d4 \sh c ~ |
-  \lo c g'4 \sh c ~ \lo c \sh a ~ a4 |
-  \times 2/3 { c, c c } \times 2/3 { d d dis } |
-  e4 r f r |
-  f e d g |
-  e d \lo cis8 \sh c8 ~ c4 |
-  \times 2/3 { c c b } c cis |
-  \times 2/3 { d d dis } e g |
-  \times 2/3 { f4 f4 f } \times 2/3 { f f f } |
-  e4 a c, d |
-  \times 2/3 { dis dis e } f4 r |
-  \times 2/3 { f f e } d r |
-  \lod r4. a'4 a \sh r8 |
-  \lod r4. fis4 fis \sh e8 ~ |
+  g2. e4 |
+  \lo f8-. \sh f-. r4 r2 |
+  f2. d4 |
+  \lo e8-. \sh e-. r4 r2 |
+  g2. gis4 |
+  \lo a8-. \sh a-. r4 r2 |
+  a2. ais4 |
+  \lo b8-. \sh b-. r4 r2 |
+  a2. aes4 |
+  \lo g8-. \sh g-. r4 r2 |
+  f2. fis4 |
+  \lo g8-. \sh g-. r4 r2 |
+  e2. e4 |
+  \lo f8-. \sh f-. r4 fis4 \lo fis8 \sh e8 ~ ( |
   e2 a4 b |
-  c2 a |
-  g4 g aes aes | %<cis e g b>
-  g g \lo aes8 ges4 \sh g8 |
+  c2 a4 ) a |
+  g4 g aes \lo aes8 \sh aes | %<cis e g b>
+  \lo g8 \sh g g4 \lo aes8 fis4 \sh g8 |
   \lo r8 d4 \sh g,8 \lo r8 d'4 \sh g,8 |
   \lo r8 d'4 \sh g,8 r2 |
   R1*8 |
@@ -161,6 +161,17 @@ sopranoWords = \lyricmode {
   We're off to see the Wi -- zard
   We're off to see the Wi -- zard
   We're
+  He's my Wi -- zard
+  He's my Wi -- zard
+  He's my Wi -- zard
+  He's my Wi -- zard
+  He's my Wi -- zard
+  He's my Wi -- zard
+  He's my Wi -- zard
+  Wiz be -- cause
+  be -- cause
+  be -- cause of the Won -- der -- ful things he does
+  be -- cause be -- cause be -- cause
 }
 
 mezzo = \relative c'' { \autoBeamOff
@@ -212,20 +223,20 @@ mezzo = \relative c'' { \autoBeamOff
   \lo a8 ( bes4 ) \sh  c8 ~ \lo c \sh c-> ~ c4 |
   bes4 f' d c |
   \lo b8 ( c4 ) \sh d8 ~ \lo d  \sh d-> ~ d4 |
-  e4 r c''2 ~ |
-  c2 \lo r8 \sh bes,,8 ~ bes4 |
-  \times 2/3 { a4 a a } \times 2/3 { b b b } |
-  b4-. r des r |
-  c2. r4 |
-  \lo d8 \sh d8 r4 \lo g8 \sh g8 r4 |
-  \lo f8 \sh f8 r4 f fis |
-  g r c, r |
-  \times 2/3 { a'4 a aes } \times 2/3 { g g g } |
-  g4 fis d c |
-  \times 2/3 { cis4 cis cis } cis r |
-  \times 2/3 { c c c } b r |
-  \lod r4. g'4 g \sh r8 |
-  \lod r4. ees4 ees4 \sh d8 ~ |
+  r4 e ~ e2 ~ |
+  e4 cis \lo d8-. \sh d-. r4 |
+  r c ~ c2 ~ |
+  c2. cis4 |
+  \lo d8-. \sh d-. r4 d2 ~ |
+  d4 dis \lo e8-. \sh e-. r4 |
+  r4 e ~ e2 ~ |
+  e4 f \lo fis8 \sh fis r4 |
+  r4 f ~ f2 ~ |
+  f2. e4 |
+  \lo d8-. \sh d-. r4 d2 ~ |
+  d2. c4 |
+  \lo b8 \sh b r4 b2 ~ |
+  b4 b c \lo ees8 \sh d8 ~ |
   d2 f |
   e g |
   e4 e f f |
@@ -310,20 +321,21 @@ alto = \relative c' { \autoBeamOff
   \lo a8 ( ges'4 ) \sh  f8 ~ \lo f \sh f-> ~ f4 |
   bes4 f d c |
   \lo b8 ( aes'4 ) \sh g8 ~ \lo g  \sh g-> ~ g4 |
-  c4 b a g |
-  \lo f8 e4 \sh d8 ~ \lo d \sh f ~ f4 |
-  \times 2/3 { e e e } \times 2/3 { f f fis } |
-  g4 r a r |
-  f a b a |
-  \lo g8 \sh e \lo g8 \sh a ~ \lo a \sh fis ~ fis4 |
-  \times 2/3 { g g g } a ais |
-  b2 g |
-  c4 \lo d8 \sh c \lo bes \sh a g4 |
-  \lo a8 c4 \sh f,8 ~ \lo f fis4 \sh g ~ |
-  \lo g \sh f \lo e \sh d ~ \lo d ais'4 \sh b ~ |
-  \lo b8 a4 f d \sh c ~ |
-  \lo c c4 c' c \sh b8 ~ |
-  \lo b b4 a a \sh gis8 ~ |
+  s1*14 |
+%  c4 b a g |
+%  \lo f8 e4 \sh d8 ~ \lo d \sh f ~ f4 |
+%  \times 2/3 { e e e } \times 2/3 { f f fis } |
+%  g4 r a r |
+%  f a b a |
+%  \lo g8 \sh e \lo g8 \sh a ~ \lo a \sh fis ~ fis4 |
+ % \times 2/3 { g g g } a ais |
+%  b2 g |
+%  c4 \lo d8 \sh c \lo bes \sh a g4 |
+%  \lo a8 c4 \sh f,8 ~ \lo f fis4 \sh g ~ |
+%  \lo g \sh f \lo e \sh d ~ \lo d ais'4 \sh b ~ |
+%  \lo b8 a4 f d \sh c ~ |
+%  \lo c c4 c' c \sh b8 ~ |
+ % \lo b b4 a a \sh gis8 ~ |
   gis4 e e' d |
   c a d c |
   b4 b c \lo c8 \sh c |
@@ -418,20 +430,20 @@ tenor = \relative c {
    \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh a-> ~ a4 |
    bes4 f d c |
   \lo b8 ( aes'4 ) \sh g8 ~ \lo g  \sh b-> ~ b4 |
-  c4 c4 c c |
-  \lod c4. \sh c8 ~ \lo c8 \sh g ~ g4 |
-  \times 2/3 { f4 f f } \times 2/3 { aes4 aes aes } |
-  g4 r bes r |
-  a2. r4 |
-  \lo b8 \sh b r4 \lo d \sh d r4 |
-  \lo a8 \sh a r4 d dis |
-  f4 r bes, cis4 |
-  \times 2/3 { d d d } \times 2/3 { d d des }
-  c4 ees a, b |
-  \times 2/3 { a a a } a r |
-  \times 2/3 { a a a } aes r |
-  \lod r4. e'4 e \sh d8 ~ |
-  \lo d d4 c c \sh b8 ~ |
+  r2 c4 b |
+  a2. ais4 |
+  \lo b8 \sh b r4 aes2 ~ |
+  aes4 a \lo b8 \sh b r4 |
+  r4 b ~ b2 ~ |
+  b2. bes4 |
+  \lo a8 \sh a r4 d2 ~ |
+  d2. cis4 |
+  \lo c8 \sh c r4 c2 ~ |
+  c4 c \lo b8 \sh b8 r4 |
+  r4 b ~ b bes |
+  \lo a8 \sh a8 r4 \lo ais8 \sh ais r4 |
+  r4 g ~ g gis4 |
+  a4 a c \lo c8 \sh b8 ~ |
   b2 cis |
   gis f' |
   cis4 cis bes bes |
@@ -532,22 +544,22 @@ bass = \relative c { \autoBeamOff
    r2 \lo r8 \sh f-> ~ f4 |
    bes4 r r2 |
    r2 \lo r8 \sh g-> ~ g4 |
-   c r g r |
-   c r \lo a8 \sh cis ~ cis4 |
-   \times 2/3 { d d d } \times 2/3 { g, g g } |
-   c4-. r ges-. r | %<ges bes' des f a>
-   f4 r d' dis |
-   e bes a ees' |
-   d4 r a aes |
-   g4 r g r |
-   f r bes b |
-   c bes a aes |
-   g r ees r |
-   d r g r |
-   e' r r c |
-   d d dis dis |
-   e r bes r |
-   a r ees' r |
+   R1 |
+   R1 |
+   r4 d' r g, |
+   r c r g |
+   r c r b |
+   r a r cis |
+   r d r g, |
+   r b r g |
+   r d' r g, |
+   r c r b |
+   r a r cis |
+   r d r g, |
+   r c r g |
+   r c d \lo dis \sh e ~ |
+   e e r bes |
+   r a r ees' |
    d d d d |
    d d \lo d8 aes4 \sh g8 |
    \lod r4. \sh g8  \lod r4. \sh g8  |
