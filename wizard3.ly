@@ -183,8 +183,13 @@ soprano = \relative c'' { \autoBeamOff
     \lo bes'8 \sh c, \lo aes' \sh bes \lo g \sh ees \lo c \sh aes |
     \lo g ees'4 \sh cis8 \lo d \sh bes \lo g \sh f |
     \lo b8 c4 \sh bes8 \times 2/3 { aes c ees } \lo bes' \sh aes |
-    \lo g \sh bes \lo g \sh ees \lo c \sh d \lo e \sh c |
-    f4-. r r2 |
+    g2. fis4 |
+    \lo f8-. \sh f-. r4 r2 |
+    R1*2 |
+    d2 b |
+    c2. r4 |
+    \times 2/3 { r2 bes' aes } \times 2/3 { g g f } |
+    ees1 |
 }
 
 sopranoWords = \lyricmode {
@@ -373,6 +378,12 @@ mezzo = \relative c'' { \autoBeamOff
     \lo f8 \sh f r4 r2 |
     ees2. bes4 |
     \lo b \sh b r4 r2 |
+    R1*3 |
+    r2 g' ~ |
+    \times 2/3 { g aes g } \times 2/3 { f f ees } |
+    d1 |
+    ees2 f ~ |
+    f2. r4 |
 }
 
 mezzoWords = \lyricmode {
@@ -596,13 +607,17 @@ alto = \relative c' { \autoBeamOff
     \lo ees' \sh d ~ d4 \lo r8 \sh g, \times 2/3 { aes c ees } |
     \lo g8 \sh c, \lo f \sh g \lo ees \sh c \lo bes \sh aes |
     \lo g ees'4 \sh cis8 \lo d \sh bes \lo g \sh f |
-    \lo g8 aes4 \sh bes8 \times 2/3 { aes c ees } \lo bes' \sh aes |
-    \lo g \sh bes \lo g \sh ees \lo c \sh d \lo e \sh c |
-    f4-. r r2 |
-    R1 |
-    \times 2/3 { r2 g f} |
-    \times 2/3 { ees ees d } |
-    c1 |
+    \lo g8 aes4 \sh bes8 \times 2/3 { aes c ees } \lo g \sh f ||
+    ees4 d ~ d c |
+    bes2 a |
+    \times 2/3 { b2 g' f } \times 2/3 { ees ees d } |
+    c2 r2 |
+    r2 g ~ |
+    g aes |
+    a bes ~ |
+    \times 2/3 { bes c' bes } \times 2/3 { aes gis fis }  |
+    e1 |
+    
 }
 
 altoWords = \lyricmode {
@@ -681,7 +696,7 @@ altoWords = \lyricmode {
   The Wi -- zard was a swin -- ger 
   That ten -- ded to lin -- ger
   In his of -- fice mul -- ling o -- ver books
-  He had all of the keys
+  Oh the Wiz Oh the Wiz
 }
 
 tenor = \relative c {
@@ -820,7 +835,13 @@ tenor = \relative c {
   d d c c |
   \times 2/3 { f2 f ees } |
   \times 2/3 { d d c } |
-  b1 |
+  b aes2 |
+  g f |
+  ees1 ~ |
+  ees2 cis |
+  d f ~ |
+  f aes |
+  g1 |
 }
 
 tenorWords = \lyricmode {
@@ -1031,6 +1052,29 @@ bass = \relative c { \autoBeamOff
     aes4 \lo bes \sh bes \lo c \sh c d4 |
    \lo  ees8  \sh c \lo aes \sh f \lo r f4 \sh f8 |
     g8 r16 aes8.^\f a bes aes4-. |
+    R1 |
+    \lodd r2.. \sh ees8 |
+    f4 \lo g \sh g \lo aes \sh aes bes4 |
+    \lo c8 d4 \sh ees ~ \lo ees f4 \sh g ~ |
+    g4 \lo ees8 \sh ees \lo c \sh c aes4 |
+    f4 g aes a |
+    bes1 ~ |
+    bes1 |
+    g |
+    b |
+    c |
+    a |
+    bes |
+    ees, |
+    aes |
+    e' |
+    a, |
+    d |
+    g, |
+    c |
+    fis, |
+    b |
+    e
 }
 
 bassWords = \lyricmode {
