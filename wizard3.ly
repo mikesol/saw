@@ -876,7 +876,7 @@ bass = \relative c { \autoBeamOff
     %ees4 \lo bes8 \sh g \lo r \sh ees ~ ees4 |
     %f4 \lo f8 \sh g \lo aes \sh g f4 |
     %aes4 \lo aes8 \sh bes ~ \lo bes \sh bes ~ bes4 |
-    ees^\mp bes' g ees |
+    ees,^\mp bes' g ees |
     f c' aes f |
     g d' bes g |
     f4 \lo g8 \sh g \lo aes \sh aes bes4 |
