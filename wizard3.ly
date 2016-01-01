@@ -189,7 +189,29 @@ soprano = \relative c'' { \autoBeamOff
     d2 b |
     c2. r4 |
     \times 2/3 { r2 bes' aes } \times 2/3 { g g f } |
+    ees1 ~ |
+    ees1 ~ |
     ees1 |
+    fes |
+    \times 2/3 { r2 eeses' deses } \times 2/3 { ces ces beses } |
+    aeses1 ~ |
+    aeses2 ges ~ |
+    \times 2/3 { ges ges' fes } |
+    \times 2/3 { eeses deses ces } |
+    \times 2/3 { beses aeses ges } |
+    fes4 ges \lo aeses8 \sh b ~ b4 |
+    c-. r4 r2 |
+    r2 \lo r8 \sh c-. \lo r \sh ces-. |
+    R1 |
+    r2 \lo r8 \sh ces-. \lo r \sh bes-. |
+    R1 |
+    r2 \lo r8 \sh bes-. \lo r \sh beses-. |
+    r4 ees2 des4 |
+    c4 \lo r8 \sh c ~ \lod c4. \sh bes8 ~ |
+    \lo bes \sh aes ~ \lo aes \sh r aes2 |
+    g4 f ~ \lo f8 \sh r8 r4 |
+    r4 f ( ees ) des4 |
+    c4
 }
 
 sopranoWords = \lyricmode {
@@ -384,6 +406,21 @@ mezzo = \relative c'' { \autoBeamOff
     d1 |
     ees2 f ~ |
     f2. r4 |
+    R1 |
+    \times 2/3 { r2 des' ces } \times 2/3 { beses beses aeses } |
+    ges1 ~ |
+    ges |
+    \times 2/3 { f2 fes' eeses } \times 2/3 { deses deses ces } |
+    \times 2/3 { beses aeses aes } |
+    \times 2/3 { ges fes des } |
+    \times 2/3 { eeses des deses } |
+    ces4 deses \lo des8 \sh ges ~ ges4 |
+    f4-. r r2 |
+    r2 \lo r8 \sh f \lo r8 \sh des |
+    eeses4 \lo fes8 \sh fes \lo ges \sh ges aeses4 |
+    \lo beses8 aeses4 \sh ges8 \lo r8 \sh ges \lo r8 \sh f ~ |
+    f2. des4 |
+    \lo ees8 \sh ees r4 \lo r8 \sh d \lo r8 \sh ees |
 }
 
 mezzoWords = \lyricmode {
@@ -615,9 +652,21 @@ alto = \relative c' { \autoBeamOff
     r2 g ~ |
     g aes |
     a bes ~ |
-    \times 2/3 { bes c' bes } \times 2/3 { aes gis fis }  |
-    e1 |
-    
+    \times 2/3 { bes \clef "treble" c' bes } \times 2/3 { aes aes ges }  |
+    fes1 |
+    r2 bes, ~ |
+    bes ces ~ |
+    ces1 ~ |
+    ces2 deses  |
+    ees1 ~ |
+    ees2 bes' |
+    \times 2/3 { beses aes aeses } |
+    \times 2/3 { ges ees eeses } |
+    des4 eeses \lo ees8 \sh aes ~ aes4 |
+    \lo aes8-. \sh g, \times 2/3 { aes ces des } \lo ges fes4 \sh aeses8 ~ |
+    \times 2/3 { aeses8 beses aeses } \lo fes \sh ces \lo ees \sh bes \lo des \sh d |
+    \lo r8 \sh aes \lo beses \sh ges' \times 2/3 { geses fes feses } eeses des |
+    \lo deses \sh des \lo eeses \sh feses \lo eeses \sh fes-. \lo r \sh des-. |
 }
 
 altoWords = \lyricmode {
@@ -695,8 +744,6 @@ altoWords = \lyricmode {
   Al -- ler -- gic to work -- in' if it meant he'd lift a fin -- ger
   The Wi -- zard was a swin -- ger 
   That ten -- ded to lin -- ger
-  In his of -- fice mul -- ling o -- ver books
-  Oh the Wiz Oh the Wiz
 }
 
 tenor = \relative c {
@@ -842,6 +889,21 @@ tenor = \relative c {
   d f ~ |
   f aes |
   g1 |
+  ges2 ces |
+  c des ~ |
+  des1 ~ |
+  des2 ees ~ |
+  ees fes |
+  beses,1 ~ |
+  beses |
+  ceses2 eeses |
+  \times 2/3 { des bes beses } |
+  \times 2/3 { ceses beses ceses } |
+  aeses4 ceses \lo beses8 \sh d8 ~ d4 |
+  \lo ees8 \sh g,, \times 2/3 { aes ces des } \lo ges fes4 \sh aeses8 ~ |
+  \times 2/3 { aeses8 beses aeses } \lo fes \sh ces \lo ees \sh bes \lo des \sh beses'  |
+      r2 eeses,4 \lo fes8 \sh fes |
+    \lo ges \sh ges aeses4 \lo beses8 aeses4 \sh aes8-. |
 }
 
 tenorWords = \lyricmode {
@@ -1067,14 +1129,21 @@ bass = \relative c { \autoBeamOff
     bes |
     ees, |
     aes |
-    e' |
-    a, |
-    d |
-    g, |
-    c |
-    fis, |
-    b |
-    e
+    fes' |
+    beses, |
+    eeses |
+    aeses, |
+    deses |
+    ges, |
+    ces |
+    fes ~  |
+    fes ~ |
+    fes ~ |
+    fes4-. r \lo r8 \sh fes ~ fes4 |
+    ees-. r r2 |
+    r2 \lo r8 \sh ees-. \lo r \sh eeses-. |
+    R1 |
+    r2 \lo r8 \sh eeses-. \lo r \sh bes-. |
 }
 
 bassWords = \lyricmode {
