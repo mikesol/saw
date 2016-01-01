@@ -43,7 +43,7 @@ myblack = \revert NoteHead.color
 
 \header {
   title = "The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Art Tatum }
+  subtitle = \markup { for Art Tatum and The Bird }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
@@ -164,6 +164,24 @@ soprano = \relative c'' { \autoBeamOff
   \lo c8 ces4 \sh bes  ~ \lo bes \sh ees \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh r r4 |
+  R1*7 |
+  \lod r4. \sh b^\f \lo r \sh bes \lo r \sh a ~ |
+  \lodd a2..^\>-\bendAfter #-2 \sh r8\! |
+  \lo r8 \sh a^\mf \lo a \sh gis \lo r \sh gis \times 2/3 { gis gis gis } |
+  \lo g8 \sh r r4 r2 |
+  \lo r8 \sh c^\< \lo c \sh bes \lo r \sh bes \lo r \sh c ~ |
+  \lo c^\f \sh c r4 r2 |
+  \lo r8 \sh ces^\mp \lo ces \sh ces \lo bes \sh r r4 |
+  \lo r8 \sh c^\mf \lo c \sh c \lo c \sh r r4 |
+  \lo r8 \sh c^\mp^\< \times 2/3 { c c c } \lo bes \sh aes \lo g \sh f |
+  g4^\f^\> \times 2/3 { g8 g g } \lo bes \sh bes \lo bes \sh aes^\mp ~ |
+  \lo aes \sh r \times 2/3 { aes aes aes } \lo c \sh c \lo c \sh c |
+  \lo bes^\< \sh bes \lo bes \sh bes \lo d \sh d \lo d \sh c^\!^\> ~ |
+  \lo c-. \sh c \lo c \sh c \lo ces \sh ces \lo ces \sh ces |
+  \lo bes^\mp \sh bes \lo bes \sh bes \lo beses \sh beses \lo beses \sh beses |
+  \lo aes \sh aes \lo aes \sh f-. \lo r f4 \sh f8 |
+  \lo g \sh g \times 2/3 { g g g } \lo aes \sh aes \lo f \sh g ~ |
+  g8 r16 bes8.^\f bes bes bes4-. |
 }
 
 sopranoWords = \lyricmode {
@@ -304,6 +322,23 @@ mezzo = \relative c'' { \autoBeamOff
   g4 \times 2/3 { ees8 f fis } \lo g \sh g \lo g \sh g |
   \lo g \sh g  \lo g \sh g  \lo g \sh g \lo g \sh g |
   \lo g \sh g \lo g \sh g \lo g \sh r r4 |
+  R1*7 |
+    \lod r4. \sh fis^\f \lo r \sh f \lo r \sh e ~ |
+    \lodd e2..^\>-\bendAfter #-2 \sh r8\! |
+    \lo r8 \sh e^\mf \lo e \sh dis \lo r \sh dis \times 2/3 { dis dis dis } |
+    \lo d8 \sh r r4 r2 |
+    \lo r8 \sh ees^\< \lo ees \sh des \lo r \sh c \lo r \sh ees^\f ~ |
+    \lo ees \sh ees r4 r2 |
+    \lo r8 \sh f^\mp \lo f \sh f \lo e \sh r r4 |
+    \lo r8 \sh ges^\mf \lo ges \sh ges \lo f \sh r r4 |
+    \lo r8 \sh f^\mp^\< \times 2/3 { f f f } \lo e \sh e \lo e \sh f |
+    ees4^\f^\> \times 2/3 { ees8 ees ees } \lo g \sh g \lo g \sh f^\mp ~ |
+    \lo f \sh r \times 2/3 { f f f } \lo aes \sh aes \lo aes \sh aes |
+    \lo g^\< \sh g \lo g \sh g \lo bes \sh bes \lo bes \sh aes^\!^\> ~ |
+    \lo aes-. \sh aes \lo aes \sh aes \lo f \sh f \lo f \sh f |
+    \lo g^\mp \sh g \lo g \sh g \lo ges \sh ges \lo ges \sh ges |
+    \lo f \sh f \lo f \sh c-. \lo r c4 \sh c8 |
+    \lo ees \sh ees \times 2/3 { ees ees ees } \lo d \sh d \lo d \sh bes ~ |
 }
 
 mezzoWords = \lyricmode {
@@ -469,7 +504,39 @@ alto = \relative c' { \autoBeamOff
   r c r e |
   r ees \lo r8 \sh d \lo d \sh d |
   \lo d \sh d \lo d \sh d \lo d \sh d \lo d \sh d |
-  \lo d \sh d \lo d \sh d \lo d \sh r r4 |
+  \lo d \sh d \lo d \sh d \lo d \sh \sh a^\f \times 2/3 { b d e } |
+  \clef "treble_8"
+  \lo fis8 \sh e \lo r \sh g ~ \times 2/3 { g8 a g } \lo e \sh c |
+  dis4 \lo b8 \sh fis'8 \lo e \sh c \lo bes \sh g |
+  \lo cis b4 \sh fis8 \times 2/3 { g b d } \lo fis \sh e |
+  \lo r \sh a, \times 2/3 { b d fis } a4 \times 2/3 { g8 a g } |
+  \lo fis \sh d \lo c \sh aes8 ~ \lo aes gis'4 \sh dis8 |
+  \lo e \sh c \lo r \sh g \lo a \sh fis' \lo f \sh c |
+  dis4 \lo b8 \sh f'8 \lo cis \sh a \lo r \sh g |
+  \lo a \sh c \lo d \sh fis \lo r \sh g \lo r \sh a8 ~ |
+  a4 \times 2/3 { g8 gis a } \lo fis \sh cis \lo bes \sh g |
+  \lo a \sh b \times 2/3 { d ( e ) f } \lo r \sh bes, \times 2/3 { c d e } |
+  \lo fis ais4 \sh gis8 \times 2/3 { a f ees } \lo c \sh g |
+  \lo bes \sh c \lo ees \sh f \lo r ees4 \sh g ~ |
+  \lo g \sh bes \lo g \sh f \lo e \sh cis \lo b \sh g |
+  \lo aes \sh c \lo ees \sh c \lo ges' \sh ees \lo ces \sh g |
+  \lo aes \sh c \lo f \sh ees \lo g \sh aes \lo g \sh ges |
+  \lo f8 \sh b \times 2/3 { bes ges d } \lo ces \sh g bes4 |
+  ees bes g aes |
+  bes ees ~ ees bes |
+  \times 2/3 { c bes aes } \times 2/3 { g aes f } |
+  ees2. g4 |
+  ees4 ees ees' ees |
+  \lo d8 \sh d \lo d \sh c ~ \lo c \sh c ~ c4 |
+  \lo f \sh f \lo f \sh f ~ \lo f d4 \sh bes ~  |
+  bes2. bes4 |
+  \lo c8 \sh c \lo c \sh c ~ \lo c \sh c \lo d \sh ees ~ |
+  \lo ees bes4 \sh g8 ~ \lo g bes4 \sh aes8 ~ |
+  \lo aes aes4 \sh g8 ~ \lo g8 f4 \sh aes8 |
+  g4 f ees ees |
+  ees ees ees' ees |
+  d d c c |
+  f1 |
 }
 
 altoWords = \lyricmode {
@@ -618,7 +685,23 @@ tenor = \relative c {
   f4-. f-. fis-. fis-. |
    \lo g8 aes4 \sh bes8 ~ \lo bes \sh c \lo c \sh c |
    \lo c \sh ces \lo bes \sh bes \lo bes \sh bes \lo bes \sh bes |
-   \lo bes \sh bes \lo bes \sh bes \lo bes
+   \lo bes \sh bes \lo bes \sh bes \lo bes \sh r r4 |
+   \lod r4. \sh g ~ \times 2/3 { g8 a g } \lo e \sh c |
+  dis4 \lo b8 \sh fis'8 \lo e \sh c \lo bes \sh g |
+  \lo cis b4 \sh fis8 \times 2/3 { g b d } \lo fis \sh e |
+  \lo r \sh a, \times 2/3 { b d fis } a4 \times 2/3 { g8 a g } |
+  \lo fis \sh d \lo c \sh aes8 ~ \lo aes gis'4 \sh dis8 |
+  \lo e \sh c \lo r \sh g \lo a \sh fis' \lo f \sh c |
+  dis4 \lo b8 \sh f'8 \lo cis \sh a \lo r \sh g |
+  \lo a \sh c \lo d \sh fis \lo r \sh g \lo r \sh a8 ~ |
+  a4 \times 2/3 { g8 gis a } \lo fis \sh cis \lo bes \sh g |
+  \lo a \sh b \times 2/3 { d ( e ) f } \lo r \sh bes, \times 2/3 { c d e } |
+  \lo fis ais4 \sh gis8 \times 2/3 { a f ees } \lo c \sh g |
+  \lo bes \sh c \lo ees \sh f \lo r ees4 \sh g ~ |
+  \lo g \sh bes \lo g \sh f \lo e \sh cis \lo b \sh g |
+  \lo aes \sh c \lo ees \sh c \lo ges' \sh ees \lo ces \sh g |
+  \lo aes \sh c \lo f \sh ees \lo g \sh aes \lo g \sh ges |
+  \lo f8 \sh b \times 2/3 { bes ges d } \lo ces \sh g \lo ges \sh f |
 }
 
 tenorWords = \lyricmode {
@@ -777,6 +860,30 @@ bass = \relative c { \autoBeamOff
     \lo bes8 b4 \sh c ~ \lo c \sh ees \lo ees \sh ees |
     \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees |
     \lo ees \sh ees \lo ees \sh ees \lo ees \sh r8 r4 |
+    R1*8 |
+    r4 g,^\f gis a |
+    bes r \lo r8 \sh g ~ g4 |
+    \lo b \sh b r4 r2 |
+    \lo r8 \sh c \lo r \sh bes \lo r \sh aes \lo r \sh g8 ~ |
+    \lo g \sh g \lo r \sh g \lo bes \sh bes \lo r \sh bes |
+    \lo aes \sh aes \lo r \sh aes \lo r \sh c \lo r \sh aes |
+    r2 \lo r8 \sh c \lo r \sh bes |
+    \lo r8 \sh bes^\> aes4 g bes |
+    %ees,4^\mp \lo f8 \sh f \lo g \sh g aes4 |
+    %f4 \lo g8 \sh g \lo aes \sh aes bes4 |
+    %g4 \lo aes8 \sh aes \lo bes \sh bes c4 |
+    %aes4 \lo bes \sh bes \lo c \sh c d4 |
+    %ees4 \lo bes8 \sh g \lo r \sh ees ~ ees4 |
+    %f4 \lo f8 \sh g \lo aes \sh g f4 |
+    %aes4 \lo aes8 \sh bes ~ \lo bes \sh bes ~ bes4 |
+    ees^\mp bes' g ees |
+    f c' aes f |
+    g d' bes g |
+    f4 \lo g8 \sh g \lo aes \sh aes bes4 |
+    \lo g8 aes4 \sh bes8 ~ \lo bes \sh c8 ~ c4 |
+    aes4 \lo bes \sh bes \lo c \sh c d4 |
+    ees4 \lo f,8 \sh g \lo aes \sh g f4 |
+    g8 r16 aes8.^\f a bes aes4-. |
 }
 
 bassWords = \lyricmode {
