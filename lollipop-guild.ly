@@ -63,7 +63,7 @@ marksLollipop = {
   s4 | % guild
   \time 4/4
   \once \override Staff . TimeSignature #'stencil =
-  #(lambda (grob) (grob-interpret-markup grob (markup #:override '(baseline-skip . 0) #:center-column (#:override '(font-size . 4.5) "~π" #:number "4" ))))
+  #(lambda (grob) (grob-interpret-markup grob (markup #:override '(baseline-skip . 0) #:center-column (#:override '(font-size . 4.5) "π" #:number "4" ))))
   s1 | % and in the name of the
   \time 4/4
   \once \override Staff . TimeSignature #'stencil =

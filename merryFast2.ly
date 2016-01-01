@@ -940,9 +940,9 @@ mezzoSecondPart = \relative c' {
   gis4. gis8 ~ gis4 r8 gis ~ |
   gis gis4 gis8 r2 |
   R1 |
-  r16 d^\p^\< d e   e g g cis    e^\> cis cis bes    gis fis\!
-  r16 e^\<   e [ g ]  g [ b^\mf ]
-  r16 d,^\p^\< e   [ g ] g [ cis ]    |
+  r16 d^\p^\< d gis   gis bes bes cis    e^\> cis cis bes    gis d\!
+  r16 gis^\<   gis [ bes ]  bes [ b^\mf ]
+  r16 d,^\p^\< gis   [ bes ] bes [ cis ]    |
   e16.^\mp [ ees d des ] c [ b bes a ] aes8 |
   R1*2 |
   r4. gis8^\espressivo ~ gis r8 r4 |
