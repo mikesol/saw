@@ -56,7 +56,9 @@ marks = {
   \tempo "Allegro" 2=110
   \partial 4
   s4 |
-  s1*47 |
+  s1*168 |
+  \break
+  s1*31 \bar "|."
 }
 
 prefatoryMatter = {
@@ -420,7 +422,13 @@ mezzo = \relative c'' { \autoBeamOff
     eeses4 \lo fes8 \sh fes \lo ges \sh ges aeses4 |
     \lo beses8 aeses4 \sh ges8 \lo r8 \sh ges \lo r8 \sh f ~ |
     f2. des4 |
-    \lo ees8 \sh ees r4 \lo r8 \sh d \lo r8 \sh ees |
+    \lo ees8 \sh ees r4 \lo r8 \sh d \lo r8 \sh ees ~ |
+    ees4 \lo f \sh f \lo g \sh g aes |
+    \lo bes8 aes4 \sh g r4 \lo g8 \sh aes |
+    g2. ees4 |
+  \lo f8-. \sh f8-. r4 r2 |
+  f2. des4 |
+   ees4-. r r2 |
 }
 
 mezzoWords = \lyricmode {
@@ -666,7 +674,49 @@ alto = \relative c' { \autoBeamOff
     \lo aes8-. \sh g, \times 2/3 { aes ces des } \lo ges fes4 \sh aeses8 ~ |
     \times 2/3 { aeses8 beses aeses } \lo fes \sh ces \lo ees \sh bes \lo des \sh d |
     \lo r8 \sh aes \lo beses \sh ges' \times 2/3 { geses fes feses } eeses des |
-    \lo deses \sh des \lo eeses \sh feses \lo eeses \sh fes-. \lo r \sh des-. |
+    \lo deses \sh des \lo eeses \sh feses \lo eeses \sh fes-. \lo r \sh des ~  |
+    \lo des \sh ees \lo des \sh c r4 \lo c \sh des |
+    \lo c \sh bes \lo r \sh ees g4 \lo aes \sh aes |
+    \lo r8 \sh aes \lo g \sh f \lo ees \sh c \lo bes \sh aes |
+    \lo g f4 \sh aes8 \times 2/3 { c des d } ees4 |
+    aes4 ees c bes |
+    \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh ees ~ ees4 |
+     \times 2/3 { des f aes } \times 2/3 { c aes bes } |
+    g^\> ~ \times 2/3 { g4 ees8 } e16 fis16 ais cis \times 2/3 { a4 dis,8 } | %1
+  \times 2/3 { e4 fis8 } \times 2/3 { r4 cis8^\pp^\dim } d16 e fis a c8 c | %2
+  c8. f,16    g bes g d    cis c g a   b c d dis | %3
+  e8. a,16 \times 2/3 { bes8 d f } \times 2/3 { fis8 f8 e } \times 2/3 { r4 bes'8 } | % 4
+  \times 8/9 { bes4 a16 c  bes f des c   a b d f   g8 g } | %5
+  g8. b16    f e d b   \times 2/3 { g8 a cis }   e8 r16 b | %6
+  \times 2/3 { fis'8 gis a } e16 d c a \times 2/3  { b8 c dis } \times 2/3 { e8 r8 fis } | % 7
+  g16 gis e16 d    gis, b cis e   fis g d b   g a b dis | %8
+  e16 r8. \times 2/3 { a4 fis8 } e16 d bes r \times 2/3 { r8 bes'8 g8 } | % 9
+  f16 d c bes \times 2/3 { g8 r f } \times 4/5 { g16 bes d g8 g g r16 } | % 10
+  r gis16 a fis16    e d b a     bes c d e    \times 2/3 { f8 fis8 g } | % 11
+  \times 2/3 { r8 c,8 d } \times 2/3 { f g a, } \times 2/3 { bes c d } \times 2/3 { f g a, } | % 12
+  bes16 c d f    \times 2/3 { b8 a e8 } f16 fis g e   c b bes d | % 13
+  e8 r16 gis,16    a b cis e   \times 8/9 { a8 gis   e16 f e b a } | % 14
+  d16 r cis16 g  \times 2/3 { a8 b cis } \times 2/3 { fis fis fis } \times 2/3 { r8 gis4 } | % 15
+  fis16 c b dis   e b bes d   ees8. fis16    gis, ais b d | % 16
+  \times 2/3 { dis8 cis r }   r16 g aes bes   c ees f aes   des4 ~ | % 17
+  des4 ces8. r16 \times 4/7 { ees,8 e g b d4 c8 } | % 18
+  bes16 g f ees    bes c ees f   a2 ~ | % 19
+  a8 bes4. ~ bes4. aes8 ~ | % 20
+  \times 8/9 { aes8. g16   aes16 c f, ees   c d dis e   f8 r16 c16 d f } | % 21
+  fis16 r g8 g g   aes16 c g f   b, c d dis | % 22
+  %%%%e8 r16 b   cis dis e fis     \times 4/5 { gis16 gis, a b   c cis d dis e r } | % 23
+  e8 r16 b   cis dis e fis     gis16 gis, a b   cis dis e r | % 23
+  r a, bes e    aes8. ges16   des16 c aes f   e fis gis b | % 25
+  %%%%\times 8/9 { d8. c16 bes16 g f ees   e fis gis ais   c8 r16 f,16   a c } | % 26
+  d8. c16    bes16 g f ees   e gis ais c   r16 f,16 a c   | % 26
+  ees16 d bes aes   g aes bes ees   e8 r   r16 bes c e | % 26
+  fis16 d bes c   e16 r bes'8   bes8.    d16  \times 4/5 { bes g e d c } | % 27
+  \times 4/5 { a16 g a b d }   fis8 r16 c   bes'8 bes    \times 4/5 { bes  c16 d bes } | % 28
+  f16 d c bes   g bes c ees    \times 2/3 { bes'8 r c } d16 bes g d | % 29
+  c ees f g   bes8 r   a16 bes c16 d    bes a aes r | % 30
+  r8 c16 d ~ d bes a c16 \times 2/3 { d8 bes bes } r16 c8 d16 ~ | % 31
+  %d bes g f d c e g ~ g fis a ees ~ \times 4/5 { ees fis a ees g ~  } |
+  \times 2/3 { d4 c8 } \times 2/3 { b4 c8 } \times 2/3 { bes8 a aes8 } \times 2/3 { g4 f8\! }
 }
 
 altoWords = \lyricmode {
@@ -903,7 +953,15 @@ tenor = \relative c {
   \lo ees8 \sh g,, \times 2/3 { aes ces des } \lo ges fes4 \sh aeses8 ~ |
   \times 2/3 { aeses8 beses aeses } \lo fes \sh ces \lo ees \sh bes \lo des \sh beses'  |
       r2 eeses,4 \lo fes8 \sh fes |
-    \lo ges \sh ges aeses4 \lo beses8 aeses4 \sh aes8-. |
+    \lo ges \sh ges aeses4 \lo beses8 aeses4 \sh aes8 ~ |
+    \lo aes \sh ees \lo c \sh bes8  \lo aes aes'4 \sh ees8 |
+  \lo fes \sh ces \lo r \sh bes \lo ces \sh ges \lo f \sh ges |
+  r4 g' ~ g2 ~ |
+  g4 aes \lo bes8 bes4 \sh ees,8 |
+  \lo g8 \sh f \lo r \sh aes ~ \times 2/3 { aes bes aes } \lo g \sh des |
+  f4 \lo ees8 \sh g \lo f \sh ees \lo des \sh aes |
+  \lo ees' des4 \sh ees8 \times 2/3 { aes,8 c ees } \lo g \sh f |
+  ees4-. r r2 |
 }
 
 tenorWords = \lyricmode {
@@ -1144,6 +1202,45 @@ bass = \relative c { \autoBeamOff
     r2 \lo r8 \sh ees-. \lo r \sh eeses-. |
     R1 |
     r2 \lo r8 \sh eeses-. \lo r \sh bes-. |
+    r4 c' ~ c2 ~ |
+    c4 a \lo bes8-. \sh bes-. \lo r \sh ees,-.  |
+    r4 c ~ c ces |
+    \lo bes \sh bes r4 ees4 \lo ees \sh aes, ~ |
+    aes4 \lo bes8 \sh bes \lo c \sh c des4 |
+    ees \lo f \sh ees r4 ees |
+    bes4 \lo bes8 \sh bes \lo ees \sh ees ees4 |
+    aes, f4^\p^\> fis dis |
+    a' gis e^\pp^\dim c' |
+    b f a aes |
+    g d' b bes |
+    aes f' d c |
+    e a, g e' |
+    cis g fis ais |
+    e a b aes |
+    g c cis d |
+    a aes f d' |
+    e b bes d |
+    c g fis ais |
+    b g fis f |
+    e bes' gis a |
+    g dis' e ais, |
+    c b f' bes, |
+    g' fis c b |
+    bes f' e a, |
+    aes d e fis |
+    c b fis a |
+    aes g e ees |
+    c' b aes g |
+    ces aes g b |
+    bes ges f aes |
+    g d' a f' |
+    bes, g' ees a, |
+    g fis c' cis |
+    d bes f' des |
+    c g' fis bes, |
+    a aes e' g, |
+    f' g, ges ees' |
+    d c bes aes\! |
 }
 
 bassWords = \lyricmode {
