@@ -53,7 +53,7 @@ nothing = {}
 
 marks = {
   \time 2/2
-  \tempo "Allegro" 2=110
+  \tempo "Allegro" 2=80 % 110
   \partial 4
   s4 |
   s1*168 |
@@ -185,16 +185,16 @@ soprano = \relative c'' { \autoBeamOff
     \lo bes'8 \sh c, \lo aes' \sh bes \lo g \sh ees \lo c \sh aes |
     \lo g ees'4 \sh cis8 \lo d \sh bes \lo g \sh f |
     \lo b8 c4 \sh bes8 \times 2/3 { aes c ees } \lo bes' \sh aes |
-    g2. fis4 |
-    \lo f8-. \sh f-. r4 r2 |
+    g2. a4 |
+    \times 2/3 { aes2 aes r } |
     R1*2 |
-    d2 b |
-    c2. r4 |
-    \times 2/3 { r2 bes' aes } \times 2/3 { g g f } |
+    g,2 c |
+    d c |
+    \times 2/3 { bes2 bes' aes } \times 2/3 { g g f } |
     ees1 ~ |
-    ees1 ~ |
-    ees1 |
-    fes |
+    ees2 eeses ~ |
+    eeses fes ~ |
+    fes1 |
     \times 2/3 { r2 eeses' deses } \times 2/3 { ces ces beses } |
     aeses1 ~ |
     aeses2 ges ~ |
@@ -213,7 +213,7 @@ soprano = \relative c'' { \autoBeamOff
     \lo bes \sh aes ~ \lo aes \sh r aes2 |
     g4 f ~ \lo f8 \sh r8 r4 |
     r4 f ( ees ) des4 |
-    c4
+    c4 r4 r2 |
 }
 
 sopranoWords = \lyricmode {
@@ -402,21 +402,21 @@ mezzo = \relative c'' { \autoBeamOff
     \lo f8 \sh f r4 r2 |
     ees2. bes4 |
     \lo b \sh b r4 r2 |
-    R1*3 |
-    r2 g' ~ |
-    \times 2/3 { g aes g } \times 2/3 { f f ees } |
+    \times 2/3 { r2 f' ees } \times 2/3 { d d c } |
+    b2 c | d b ~ |
+    \times 2/3 { b aes' g } \times 2/3 { f f ees } |
     d1 |
-    ees2 f ~ |
-    f2. r4 |
+    ees2 d ~ |
+    d2. r4 |
     R1 |
     \times 2/3 { r2 des' ces } \times 2/3 { beses beses aeses } |
     ges1 ~ |
     ges |
     \times 2/3 { f2 fes' eeses } \times 2/3 { deses deses ces } |
     \times 2/3 { beses aeses aes } |
-    \times 2/3 { ges fes des } |
-    \times 2/3 { eeses des deses } |
-    ces4 deses \lo des8 \sh ges ~ ges4 |
+    \times 2/3 { ges aeses'1 ~ } |
+    aeses ~ |
+    aeses4-. deses,, \lo des8 \sh ges ~ ges4 |
     f4-. r r2 |
     r2 \lo r8 \sh f \lo r8 \sh des |
     eeses4 \lo fes8 \sh fes \lo ges \sh ges aeses4 |
@@ -652,17 +652,17 @@ alto = \relative c' { \autoBeamOff
     \lo ees' \sh d ~ d4 \lo r8 \sh g, \times 2/3 { aes c ees } |
     \lo g8 \sh c, \lo f \sh g \lo ees \sh c \lo bes \sh aes |
     \lo g ees'4 \sh cis8 \lo d \sh bes \lo g \sh f |
-    \lo g8 aes4 \sh bes8 \times 2/3 { aes c ees } \lo g \sh f ||
-    ees4 d ~ d c |
-    bes2 a |
-    \times 2/3 { b2 g' f } \times 2/3 { ees ees d } |
-    c2 r2 |
-    r2 g ~ |
+    \lo g8 aes4 \sh bes8 \times 2/3 { aes c ees } \lo g \sh f |
+    \lo g \sh bes \lo \lo g \sh ees \times 2/3 { c4 d ees } |
+    \times 2/3 { c2 f ees } |
+    \times 2/3 { d2 g f } \times 2/3 { ees ees d ~ } |
+    \times 2/3 { d2 c2 bes } |
+    a2 g ~ |
     g aes |
     a bes ~ |
-    \times 2/3 { bes \clef "treble" c' bes } \times 2/3 { aes aes ges }  |
+    \times 2/3 { bes \clef "treble" ces' beses } \times 2/3 { aes aes ges }  |
     fes1 |
-    r2 bes, ~ |
+    aes,2 a |
     bes ces ~ |
     ces1 ~ |
     ces2 deses  |
@@ -681,8 +681,8 @@ alto = \relative c' { \autoBeamOff
     \lo g f4 \sh aes8 \times 2/3 { c des d } ees4 |
     aes4 ees c bes |
     \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh ees ~ ees4 |
-     \times 2/3 { des f aes } \times 2/3 { c aes bes } |
-    g^\> ~ \times 2/3 { g4 ees8 } e16 fis16 ais cis \times 2/3 { a4 dis,8 } | %1
+     \times 2/3 { des f aes } \times 2/3 { c ces bes^\> ~ } |
+    bes ~ \times 2/3 { bes4 ees,8 } e16 fis16 ais cis \times 2/3 { a4 dis,8 } | %1
   \times 2/3 { e4 fis8 } \times 2/3 { r4 cis8^\pp^\dim } d16 e fis a c8 c | %2
   c8. f,16    g bes g d    cis c g a   b c d dis | %3
   e8. a,16 \times 2/3 { bes8 d f } \times 2/3 { fis8 f8 e } \times 2/3 { r4 bes'8 } | % 4
@@ -716,7 +716,7 @@ alto = \relative c' { \autoBeamOff
   c ees f g   bes8 r   a16 bes c16 d    bes a aes r | % 30
   r8 c16 d ~ d bes a c16 \times 2/3 { d8 bes bes } r16 c8 d16 ~ | % 31
   %d bes g f d c e g ~ g fis a ees ~ \times 4/5 { ees fis a ees g ~  } |
-  \times 2/3 { d4 c8 } \times 2/3 { b4 c8 } \times 2/3 { bes8 a aes8 } \times 2/3 { g4 f8\! }
+  \times 2/3 { d4 b8 } \times 2/3 { c4 d8 } \times 2/3 { aes8 g ges8 } \times 2/3 { e4 ees8^\ppppp }
 }
 
 altoWords = \lyricmode {
@@ -930,26 +930,26 @@ tenor = \relative c {
   g4 f ees ees |
   ees ees ees' ees |
   d d c c |
-  \times 2/3 { f2 f ees } |
-  \times 2/3 { d d c } |
-  b aes2 |
+  f1 ~ |
+  f1 ~ |
+  f2 aes,2 |
   g f |
   ees1 ~ |
-  ees2 cis |
+  ees2 c |
   d f ~ |
   f aes |
-  g1 |
-  ges2 ces |
+  \times 2/3 { g2 aes a } |
+  bes2 ces |
   c des ~ |
   des1 ~ |
-  des2 ees ~ |
+  des2 d |
   ees fes |
   beses,1 ~ |
   beses |
-  ceses2 eeses |
+  \times 2/3 { ceses2 des eeses } |
   \times 2/3 { des bes beses } |
   \times 2/3 { ceses beses ceses } |
-  aeses4 ceses \lo beses8 \sh d8 ~ d4 |
+  ces4 ceses \lo beses8 \sh d8 ~ d4 |
   \lo ees8 \sh g,, \times 2/3 { aes ces des } \lo ges fes4 \sh aeses8 ~ |
   \times 2/3 { aeses8 beses aeses } \lo fes \sh ces \lo ees \sh bes \lo des \sh beses'  |
       r2 eeses,4 \lo fes8 \sh fes |
@@ -1117,8 +1117,8 @@ bass = \relative c { \autoBeamOff
    \lod r4. \sh g8  \lod r4. \sh g8  |
     \lod r4. \sh g8  \lo r \sh g8-- ~ g4 |
     R1*8 |
-    r2. d'4^\mf |
-    g,4 \lo a8 \sh a \lo bes \sh bes c4 |
+    R1 |
+    r4 \lo a8^\mp \sh a \lo bes \sh bes c4 |
     d4 \lo ees \sh d ~ \lo d \sh r \lo d \sh ees |
     \lo d \sh c r4 \lo c \sh d \lo c \sh bes |
     \lo r8 \sh fis \times 2/3 { g gis a } \lo bes \sh c bes8. a16 ~ |
@@ -1173,22 +1173,22 @@ bass = \relative c { \autoBeamOff
    \lo  ees8  \sh c \lo aes \sh f \lo r f4 \sh f8 |
     g8 r16 aes8.^\f a bes aes4-. |
     R1 |
-    \lodd r2.. \sh ees8 |
-    f4 \lo g \sh g \lo aes \sh aes bes4 |
-    \lo c8 d4 \sh ees ~ \lo ees f4 \sh g ~ |
-    g4 \lo ees8 \sh ees \lo c \sh c aes4 |
-    f4 g aes a |
+    r4 g r bes |
+    r f r aes |
+    r g r \lo bes8 \sh bes |
+    ees4 \lo f8 \sh f \lo g \sh g aes4 |
+    bes \lo aes8 \sh g ~ \times 2/3 { g4 f a, }
     bes1 ~ |
+    bes2 fis |
+    g1 ~ |
+    g2 b |
+    c1 |
+    f,2 a |
     bes1 |
-    g |
-    b |
-    c |
-    a |
-    bes |
-    ees, |
-    aes |
-    fes' |
-    beses, |
+    ees,2 g |
+    aes2 ges |
+    fes aes |
+    beses1 |
     eeses |
     aeses, |
     deses |
@@ -1204,13 +1204,13 @@ bass = \relative c { \autoBeamOff
     r2 \lo r8 \sh eeses-. \lo r \sh bes-. |
     r4 c' ~ c2 ~ |
     c4 a \lo bes8-. \sh bes-. \lo r \sh ees,-.  |
-    r4 c ~ c ces |
-    \lo bes \sh bes r4 ees4 \lo ees \sh aes, ~ |
+    \lo r8 \sh c ces4 bes a |
+    \lo bes \sh bes aes4 g ees |
     aes4 \lo bes8 \sh bes \lo c \sh c des4 |
     ees \lo f \sh ees r4 ees |
     bes4 \lo bes8 \sh bes \lo ees \sh ees ees4 |
-    aes, f4^\p^\> fis dis |
-    a' gis e^\pp^\dim c' |
+    aes, \lo ees8 \sh aes-. \lo r8  f4^\p^\> \sh fis8 |
+    a'4 gis e^\pp^\dim c' |
     b f a aes |
     g d' b bes |
     aes f' d c |
@@ -1240,7 +1240,7 @@ bass = \relative c { \autoBeamOff
     c g' fis bes, |
     a aes e' g, |
     f' g, ges ees' |
-    d c bes aes\! |
+    d c bes ces\!^\ppppp |
 }
 
 bassWords = \lyricmode {
@@ -1306,9 +1306,7 @@ bassWords = \lyricmode {
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
         \soprano
-      } {
-        \marks
-      } {
+      }  {
         \nothing
       }>> }
       \new Lyrics \lyricsto "soprano" {
@@ -1330,7 +1328,7 @@ bassWords = \lyricmode {
 } <<
       \new Voice = "alto" { << { \numericTimeSignature
         \alto
-      } {
+      } { \marks } {
         \nothing
       } >> }
       \new Lyrics \lyricsto "alto" {
