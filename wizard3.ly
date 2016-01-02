@@ -885,7 +885,7 @@ altoWords = \lyricmode {
   Ut -- ter -- ly in -- cre -- du -- lous
   Fes -- tive if not ex -- u -- ber -- ant
   %%%%Win -- some is how I'd ca -- te -- go -- rize this mer -- ry e -- ner -- gized state
-  Win -- some is how I'd ca -- te -- go -- rize it
+  Win -- some is how I'd ca -- te -- go -- rize it.
 }
 
 tenor = \relative c {
@@ -1212,9 +1212,9 @@ bass = \relative c { \autoBeamOff
    r c r a |
    r f r aes |
    r g r f |
-   r e r fis |
-   r g^\< d' \lo dis \sh e ~ |
-   e^\f e^\mf r bes |
+   r e r f |
+   r fis4^\< \lo g8 \sh d' \lo dis8 \sh e ~ |
+   e4^\f e^\mf r bes |
    r a r ees'^\> |
    d^\p^\< d d \lo d8 \sh d8 |
    \lo d \sh d d4 \lo d8 aes4 \sh g8^\f |
