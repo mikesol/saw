@@ -138,7 +138,7 @@ soprano = \relative c'' { \autoBeamOff
   R1*3 |
   r4 c d g ~ |
   g4 r r4 f^\p^\<  |
-  \times 2/3 { ees4 g fis } f4^\mp f4 | 
+  \times 2/3 { ees4 g a } f4^\mp f4 | 
   e ees d cis |
   c2 e4 g |
   \lo fis8 \sh fis r4 r2 |
@@ -185,8 +185,8 @@ soprano = \relative c'' { \autoBeamOff
       r2 g4-.^\mp \lo r8 \sh ees |
     \times 2/3 { g gis a } \lo bes \sh g \lo ees \sh c \lo bes \sh g |
     \lo g' \sh f ~ f4 \lo r8 \sh c \times 2/3 { aes c ees } |
-    \lo bes'8 \sh c, \lo aes' \sh bes \lo g \sh ees \lo c \sh aes |
-    \lo g ees'4 \sh cis8 \lo d \sh bes \lo g \sh f |
+    \lo bes'8 \sh c, \lo aes' \sh bes \lo g \sh ees \lo f \sh fis |
+    \lo g ees4 \sh cis8 \lo d \sh bes \lo g \sh f |
     \lo b8 c4 \sh bes8 \times 2/3 { aes c ees } \lo bes' \sh aes |
     g2.^\> a4 |
     \times 2/3 { aes2^\p aes r } |
@@ -417,9 +417,9 @@ mezzo = \relative c'' { \autoBeamOff
     \lo ees \sh ees \times 2/3 { ees ees ees } \lo d \sh d \lo d \sh bes ~ |
     \lo bes8 \sh ees8^\f \lo r \sh ees \lo r \sh ees \lo r \sh ees |
     \lo r8 \sh aes^\mp^\< ~ aes4 ~ aes fis4 |
-    \lo g8-.^\mf \sh g-. r4 r2 |
-    g2. ees4 |
-    \lo e8-. \sh f-. r4 r2 |
+    \lo g8-.^\mf \sh ees-. r4 r2 |
+    \lo r8 \sh c' ~ c4 aes ees4 |
+    \lo d8-. \sh d-. d4 c \lo d8 \sh d
     ees2. bes4 |
     \lo f-. \sh f-. r4 r2 |
     \times 2/3 { r2 f'^\mf ees } \times 2/3 { d d c } |
@@ -514,7 +514,9 @@ mezzoWords = \lyricmode {
   It would scat -- ter o -- ver the yel -- low brick road
   Hey! Hey! Hey! Hey!
   He's my Wi -- zard
-  He's my Wi -- zard He's my Wi -- zard
+  No he's my Wi -- zard
+  Be -- cause of the
+  He's my Wi -- zard
   Oh the Wiz, Oh the Wiz my Wi -- zard
   Oh the Wiz, Oh the Wiz, Wi -- zard
   Oh the Wiz, Oh the Wi -- zard
@@ -583,8 +585,7 @@ alto = \relative c' { \autoBeamOff
   \lo f8(  e4 ) \sh d8 \lo r \sh c ~ c4 |
   \clef "treble_8"
   \times 2/3 { b4 a g } \lo r f4 \sh e8 ~ |
-  e2 r4 g |
-  \clef treble
+  e2 r4 \clef treble g |
   a b c d |
   \lo e8 f4 \sh g8 \lo r \sh a ~ a4 |
   f4 e d c |
@@ -682,8 +683,8 @@ alto = \relative c' { \autoBeamOff
     \lo ees8 \sh des8^\f \lo r \sh des \lo r \sh des \lo r \sh des |
     r2 ees4-.^\mp \lo r8 \sh bes |
     \times 2/3 { ees f fis } \lo g \sh ees \lo c \sh bes \lo g \sh ees |
-    \lo ees' \sh d \lo des \sh c8 \lo bes \sh g \times 2/3 { aes c ees } |
-    \lo g8 \sh c, \lo f \sh g \lo ees \sh c \lo bes \sh aes |
+    \lo ees' \sh d ~ d4 \lo r8 \sh g, \times 2/3 { aes c ees } |
+    \lo g8 \sh c, \lo f \sh g \lo ees \sh c \lo d \sh bes |
     \lo g ees'4 \sh cis8 \lo d \sh bes \lo g \sh f |
     \lo g8 aes4 \sh bes8 \times 2/3 { aes c ees } \lo g \sh f |
     \lo g \sh bes \lo \lo g \sh ees \times 2/3 { c4^\> d ees } |
@@ -823,7 +824,7 @@ altoWords = \lyricmode {
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
   \repeat unfold 4 Hey! No?
-  The Wi -- zard of Oz, he was an a -- ca -- de -- mic, no he ain't
+  The Wi -- zard of Oz, he was an a -- ca -- de -- mic,
   Al -- ler -- gic to work -- in' if it meant he'd lift a fin -- ger
   The Wi -- zard was a swin -- ger 
   That ten -- ded to lin -- ger
@@ -1018,7 +1019,7 @@ tenor = \relative c {
   bes2. bes4 |
   \lo c8 \sh c \lo c \sh c ~ \lo c \sh c \lo d \sh ees ~ |
   \lo ees bes4 \sh g8 ~ \lo g bes4 \sh aes8 ~ |
-  \lo aes aes4 \sh g8 ~ \lo g8 f4 \sh aes8 |
+  \lo aes aes4 \sh g8 f4 aes4 |
   g4 f ees ees |
   ees^\< ees ees' ees |
   d d c c |
@@ -1281,7 +1282,7 @@ bass = \relative c { \autoBeamOff
     R1 |
     r4 g^\mp r bes |
     r aes r f |
-    r g r \lo bes8 \sh aes |
+    r bes ~ \lo bes8 \sh c \lo bes8 \sh aes |
     g4 \lo r8 \sh ces \lo bes \sh fis g4 |
     \lo aes8^\< \sh aes g4 aes4 a |
     bes1^\mf ~ |
@@ -1402,7 +1403,7 @@ bassWords = \lyricmode {
   cause of the Won -- der -- ful
   Won -- der
   Wiz of Oz Hey! Hey! Hey! Hey!
-  Wi -- zard Oz is one, He's the one, the Won -- der -- ful,
+  Wi -- zard Oz be -- cause of all the Won He's the one, the Won -- der -- ful,
   Won -- der -- ful Wiz be -- cause
   my Wiz
   my Wiz
