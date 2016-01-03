@@ -484,9 +484,9 @@ altoWords = \lyricmode {
 tenor = {
   \relative c' \tripletFeel 8 {
     \clef "treble_8"
-    r4 |
+    r4 |                     
     r2. \myred g8^\swung^\mf aes |
-    bes g ees f g aes4 \myred ces8 |
+    bes g ees f g aes4 \myred aes8 |
     g g ees f g ees4 f8 |
     g ees c d ees c4 d8 |
     ees4 \myred aes8 bes c aes f g |

@@ -123,7 +123,6 @@ accessoryKey =
       music))
 %}
 
-#(ly:set-option 'point-and-click #f)
 
 %improv = \markup \italic "expressing an inner joy"
 
@@ -424,8 +423,8 @@ mezzoBeginning = \relative c' { \autoBeamOff
   cis4.^\mp d |
   cis2 cis c |
   b8 r4 r4 | %cis8 r |
-  g2^\f |
-  fis2. |
+  e2^\f |
+  dis2. |
 }}
 
 mezzoBeginningWords = \lyricmode {
@@ -464,8 +463,8 @@ altoBeginning = \relative c { \autoBeamOff
   gis,4. e' |
   \times 3/5 { dis2 b cis dis e }
   cis8 r4 r4 |
-  e2^\f |
-  dis2. |
+  g2^\f |
+  fis2. |
 }}
 
 altoBeginningWords = \lyricmode {
@@ -1639,7 +1638,7 @@ bassStutter = \relative c' { %\autoBeamOff
   R1 |
   R1 |
   R1 |
-  r8 b4 b b8 |
+  r8 b4-- b-- b8 |
 }}
 
 bassStutterWords = \lyricmode {
@@ -1809,7 +1808,7 @@ sopranoRamp = \relative c' { %\autoBeamOff
   R1 |
   e4^\mp^\< dis dis gis |
 }   \key fis \major {
-  g8^\f b4. b4 |
+  g8^\f b4.^\p^\< b4^\f |
   fis4 eis8 dis eis ~ |
 }   \key cis \major {
   eis r eis4  |
@@ -1932,7 +1931,7 @@ bassRamp = \relative c { %\autoBeamOff
   r8 gis^\< d' cis c fis, b bes |
   a e gis g r fis^\f r4 |
 }   \key fis \major {
-  r8 d'4 r8 r4 |
+  r8 d'4^\p r8-\parenthesize^\f r4 |
   b4 gis cis8 ~
 }   \key cis \major {
   cis fis,4 r8 |
@@ -2960,7 +2959,7 @@ bassWinding = \relative c { %\autoBeamOff
    \key b \major {
   \times 2/3 { r4 dis ( d ) } |
   cis4 dis4 e4 fis4 gis ~ |
-  gis g fis4. fis,8 ~ |
+  gis g fis4. fis,8^\> ~ |
   fis2 cis'2^\p ais gis8 ~ |
   gis4 r r2 r2 |
   R1 |
@@ -3080,7 +3079,7 @@ mezzoRealcomeWords = \lyricmode {
 
 altoRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
-  bes2^\mp^\< c4 b c^\f |
+  d2^\mp^\< c4 b c^\f |
 }}   \key a \major {
   a^\mp^\< gis a8 |
 }   \key cis \major {
@@ -3330,7 +3329,7 @@ tenorDenouementWords = \lyricmode {
 bassDenouement = \relative c { %\autoBeamOff
   %\clef bass
    \key b \major {
-  e2 dis4 fis |
+  e2^\p^\< dis4^\mf fis |
   gis ( e ) dis ( cis ) |
   g' ( fis ) b, ( a ) |
   gis2 r4 e' |
@@ -3588,7 +3587,7 @@ altoFinale = \relative c' { %\autoBeamOff
     \times 2/3 { c ( d ) c } |
   }
   \key b \major {
-    gis4 fis^\f fis |
+    ais4 fis^\f fis |
   }
   \key d \major {
     a a'2 |

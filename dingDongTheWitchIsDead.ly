@@ -54,11 +54,13 @@ ddw = \lyricmode {
 \markup \fill-line { "Marie et Marie on \"da\" \"da\" \"da\" ..." }
 
 \relative c' {
-  \cadenzaOn
-  <dis fis>16 [ <dih fih> <d f> <cisih eih> <cis e> <cih disih> <bis dis> <bih dih> <b d> ]
-  <dis fis>16 [ <dih fih> <d f> ]
+  \tempo 4=96
+  <dis fis>16 [ <dih fih> <d f> <cisih eih> ]
+  <cis e>  [ <cih disih> <bis dis> <bih dih>  ]
+  <b d> [ <dis fis>16 <dih fih> <d f>  ]
   <fis a>16 [ <fih gisih> <eis gis> <eih gih> ]
-  <dis fis> [ <d eis> <cis e> <c eeh> <b dis> ]
+  <dis fis> [ <d eis> <cis e> <c eeh> ]
+  <b dis>
 }
 
 \markup \fill-line { "girls continue to riff, Mike and Ryan enter on the head an octave apart" }

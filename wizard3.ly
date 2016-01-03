@@ -108,9 +108,9 @@ soprano = \relative c'' { \autoBeamOff
   \times 2/3 { bes2 bes bes } |
   bes4-. aes8 bes16 aes g4 f |
   ees d c d |
-  bes8 aes' g f ees r r4 |
+  bes8^\straight aes' g f ees r r4 |
   r8 ees^\p^\< d ees d ees d des |
-  c4^\f ees c bes |
+  c4^\f^\swung ees c bes |
   \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh ees-> ~ ees4 |
   d4 f d c |
   \lo b8 ( aes'4 ) \sh g8 ~ \lo g  \sh f-> ~ f4 |
@@ -138,16 +138,16 @@ soprano = \relative c'' { \autoBeamOff
   R1*3 |
   r4 c d g ~ |
   g4 r r4 f^\p^\<  |
-  \times 2/3 { ees4 g a } f4^\mp f4 | 
-  e ees d cis |
+  g a f4^\mp f4 | 
+  e ees d \lo cis8 \sh b |
   c2 e4 g |
   \lo fis8 \sh fis r4 r2 |
   \lodd r2.. \sh d8^\mp |
   a'4 \lo bes8 \sh bes8 \lo c \sh c d4 |
   \lo ees8 d4 \sh c8 r4 \lo c8 \sh d |
   \lo c \sh bes r4 \lo bes8 \sh c \lo bes \sh aes |
-  \lo r \sh c, \times 2/3 { d dis e } \lo f \sh g \lo f \sh ees ~ |
-  \lo ees g4 \sh bes ~ bes4 r |
+  \lo r \sh f \times 2/3 { g aes a } \lo bes \sh a \lo aes \sh g ~ |
+  \lo g f4 \sh bes ~ bes4 r |
   R1 |
   f2. d4 |
   \lo ees8 \sh ees r4 r2 |
@@ -159,8 +159,8 @@ soprano = \relative c'' { \autoBeamOff
   \lo r8 \sh bes \times 2/3 { ees f fis } \lo g \sh aes \lo g \sh f ~ |
   \lo f bes4 \sh ees,8^\p ~ ees2 |
   R1 |
-  r2 \lo r8 \sh g^\mf^\cresc \lo g \sh g |
-  g4-. aes-. aes-. bes-. |
+  r2 \lo r8 \sh bes'^\mf^\cresc \lo bes \sh bes |
+  aes4-. aes-. aes-. bes-. |
   \lo c8 ces4 \sh bes  ~ \lo bes \sh ees^\ff \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh r r4 |
@@ -255,7 +255,7 @@ sopranoWords = \lyricmode {
   be -- cause of the Won -- der -- ful things he does
   be -- cause be -- cause be -- cause
   The Wi -- zard
-  Oh no, He's my Wiz, He is my Wiz, my Wi -- zard, my Wi -- zard
+  He is my Wiz, He is my Wiz, oh my Wi -- zard, my Wi -- zard
   be -- cause of the Won -- der -- ful things he does
   Won -- der -- ful things
   Won -- der -- ful things
@@ -266,7 +266,7 @@ sopranoWords = \lyricmode {
   Won -- der -- ful things
   Won -- der -- ful things
   Be -- cause of the Won -- der -- ful things he does
-  and with his pimp -- led sows he's sing -- in' Bli -- zard what a Wiz,
+  and with his pimp -- led sows he's sing -- in' Biz, Oh what a Wiz,
   a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
   cut -- ting Tom
   ter he left and ev -- 'ry -- one doubt
@@ -341,31 +341,31 @@ mezzo = \relative c'' { \autoBeamOff
   ees4 bes' ~ bes aes |
   \times 2/3  { g2 g f } |
   %ees4 r r2 |
-  ees8 r r4 r8 aes g f |
+  ees8 r r4 r8 aes^\straight g f |
   ees ees^\p^\< d ees d ees d ees |
-  ees4^\f ees c bes |
+  ees4^\f^\swung ees c bes |
   \lo a8 ( bes4 ) \sh  c8 ~ \lo c \sh c-> ~ c4 |
   bes4 f' d c |
   \lo b8 ( c4 ) \sh d8 ~ \lo d  \sh d-> ~ d4 |
-  r4 e^\p^\< ~ e2 ~ |
+  r4 e^\pp^\< ~ e2 ~ |
   e4^\> cis \lo d8-.^\mp \sh d-. r4 |
-  r c ^\p^\< ~ c2 ~ |
-  c2.^\> cis4 |
+  r c ^\pp^\< ~ c2 ~ |
+  << { c2. cis4 } { s4^\> s2^\pp s4^\< } >> |
   \lo d8-.^\mp \sh d-. r4 d2^\p^\< ~ |
   d4 dis^\> \lo e8-.^\mp \sh e-. r4 |
-  r4 e^\p^\< ~ e2 ~ |
-  e4 f^\> \lo fis8^\mp \sh fis r4 |
-  r4 f^\p^\< ~ f2 ~ |
-  f2.^\> e4 |
+  r4 e^\pp^\< ~ e2 ~ |
+  e4^\> f \lo fis8^\mp \sh fis r4 |
+  r4 f^\pp^\< ~ f2 ~ |
+  << { f2. e4 } { s4^\> s2^\pp s4^\< } >>  |
   \lo d8-.^\mp \sh d-. r4 d2^\p^\< ~ |
-  d2.^\> c4 |
+  << { d2. c4 } { s4^\> s2^\pp s4^\< } >> |
   \lo b8-.^\mp \sh b-. r4 b2^\p^\< ~ |
   b4 b c \lo ees8 \sh d8^\f ~ |
   d2 ( f |
   e g4^\> ) g |
   e4^\p^\< e f \lo f8 \sh f |
   \lo ees \sh ees ees4 \lo e8 ees4 \sh d8^\f |
-  \lo r8 b4 \sh g8 \lo r8 b4 \sh g8 
+  \lo r8 b4 \sh g8 \lo r8 b4 \sh g8 |
   \lo r8 b4 \sh g8 r2 |
   R1*8 |
   r4 \lo d''8^\mp \sh ees \lo d \sh c r4 |
@@ -373,7 +373,7 @@ mezzo = \relative c'' { \autoBeamOff
   \lo bes \sh c \lo bes8 \sh a ~ \lo a d4 \sh g,8 |
   r8 bes \times 2/3 { g bes d } g4 \times 2/3 { g,8 bes d } |
   \lo g \sh aes \lo g \sh f \lo r \sh ees d4 |
-  \lo ees c4 \sh d r2 |
+  \lo ees8 c4 \sh d ~ \lod d4. \sh r8 |
   R1*2 |
   \lod r4. \sh a,8 d4 \lo e8 \sh e |
   \lo fis \sh fis g4 \lo a8 g4 \sh fis8 ~ |
@@ -383,7 +383,7 @@ mezzo = \relative c'' { \autoBeamOff
   \lodd r2.. \sh bes,8 |
   g4 \lo aes \sh aes \lo bes \sh bes c4 |
   d4 \lo ees8 \sh d \lo r8 d4 \sh ees |
-  d2 r2 |
+  r4 d ~ d r |
   r2. ees4 |
   c4 \lo d8 \sh d \lo ees \sh ees f4 |
   \lo g8 ges4 \sh f8 \lo r8 f4 \sh fis8 |
@@ -425,10 +425,10 @@ mezzo = \relative c'' { \autoBeamOff
     \times 2/3 { r2 f'^\mf ees } \times 2/3 { d d c } |
     b2^\> c | d b^\mp ~ |
     \times 2/3 { b aes'^\mf g } \times 2/3 { f f ees } |
-    d1^\> |
-    ees2 d ~ |
-    d2.^\mp r4 |
-    R1 |
+    d1^\> ~ |
+    d1 ~ |
+    d1 |
+    r2 fes^\mp |
     \times 2/3 { r2 des'^\mf ces } \times 2/3 { beses beses aeses } |
     ges1^\> ~ |
     ges |
@@ -438,7 +438,7 @@ mezzo = \relative c'' { \autoBeamOff
     << { aeses ~ } { s2 s2^\f^\> } >> |
     aeses4-. deses,,^\p \lo des8 \sh ges^\sfz ~ ges4 |
     f4-. r r2 |
-    r2 \lo r8 \sh f \lo r8 \sh des |
+    r2 \lo r8 \sh f \lo r8 \sh ges |
     eeses4^\mf \lo fes8 \sh fes \lo ges \sh ges aeses4 |
     \lo beses8 aeses4 \sh ges8 \lo r8 \sh ges-> \lo r8 \sh f^\p^\< ~ |
     f2. des4^\< |
@@ -486,7 +486,7 @@ mezzoWords = \lyricmode {
   Won -- der -- ful things Won -- der -- ful things
   be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won
-  cause of the Won -- der -- ful things that he does we're off 
+  cause of the Won -- der -- ful things oh the things he does
   Be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won -- der -- ful
   Be -- cause of the Won -- der -- ful things he does
@@ -518,7 +518,7 @@ mezzoWords = \lyricmode {
   Be -- cause of the
   He's my Wi -- zard
   Oh the Wiz, Oh the Wiz my Wi -- zard
-  Oh the Wiz, Oh the Wiz, Wi -- zard
+  Oh the Wiz, Oh the Wiz my
   Oh the Wiz, Oh the Wi -- zard
   Oh the Wiz, Oh the Wiz Oh the Wi -- zard,
   my Wiz the
@@ -623,8 +623,8 @@ alto = \relative c' { \autoBeamOff
   \lo d8 g4 \sh c,8 \lo r8 \sh ees \times 2/3 { c ees g } |
   c4 \times 2/3 { c,8 ees g } \lo c \sh des \lo c \sh bes |
   r4 \lo bes8 \sh c \lo bes \sh aes \lo r \sh c, |
-  f4 \lo g \sh g \lo aes \sh aes bes8. g16 ~|
-  g8 aes f r r2 |
+  f4 \lo g \sh g \lo aes \sh aes \lo bes8 \sh g ~ |
+  \lo g8 \sh aes f r r2 |
   r2. d4^\mf |
   g d bes c |
   d g ~ g d |
@@ -643,7 +643,7 @@ alto = \relative c' { \autoBeamOff
   b2. r4 |
   R1 |
   \clef "treble_8"
-  r4 f, ~ f g |
+  r4 f, ~ f a |
   aes2 g4 c |
   d1^\dim ~ |
   d4 des ~ des2 ~ |
@@ -652,7 +652,7 @@ alto = \relative c' { \autoBeamOff
   r c r d |
   r c r ces |
   r bes r g |
-  r c r e |
+  r c r d |
   r ees \lo r8 \sh d^\ff \lo d \sh d |
   \lo d \sh d \lo d \sh d \lo d \sh d \lo d \sh d |
   \lo d \sh d \lo d \sh d \lo d \sh \sh a^\f \times 2/3 { b d e } |
@@ -693,8 +693,8 @@ alto = \relative c' { \autoBeamOff
     \times 2/3 { d2 c2 bes } |
     a2 g^\mp ~ |
     g aes |
-    a bes ~ |
-    \times 2/3 { bes \clef "treble" ces'^\mf beses } \times 2/3 { aes aes ges }  |
+    bes1 |
+    \times 2/3 { c2 \clef "treble" ces'^\mf beses } \times 2/3 { aes aes ges }  |
     geses2^\>  fes |
     aes,2^\mp^\< a |
     bes^\> ces ~ |
@@ -929,13 +929,13 @@ tenor = \relative c {
   << { ces2. c4 } { s2 s2^\< } >> |
   \lo c8^\f \sh c8 r4 r2 |
   R1 |
-  aes2.^\p^\< fis4 |
+  \lo r8 \sh aes^\p^\< ~ aes4 ~ aes fis4 |
   \lo g8^\mf \sh g r4 r fis^\mp |
   g4^\< \lo g8 \sh g \lo g \sh g fis4 |
   g4 \lo g8 \sh g ~ \lo g \sh c-- ~ c4 |
   g8^\mf^\straight aes g f ees aes g f |
   ees ees^\< d ees e f fis g |
-  aes4^\f ees c bes |
+  aes4^\f^\swung ees c bes |
    \lo a8 ( ges'4 ) \sh f8 ~ \lo f \sh a-> ~ a4 |
    bes4 f d c |
   \lo b8 ( aes'4 ) \sh g8 ~ \lo g  \sh b-> ~ b4 |
@@ -943,15 +943,15 @@ tenor = \relative c {
   a2.^\p^\< ais4^\> |
   \lo b8-.^\mp \sh b-. r4 aes2^\p^\< ~ |
   aes4 a^\> \lo b8-.^\mp \sh b-. r4 |
-  r4 b^\p^\< ~ b2 ~ |
-  b2.^\> bes4 |
+  r4 b^\pp^\< ~ b2 ~ |
+  << { b2. bes4 } { s4^\> s2^\pp s4^\< } >> ||
   \lo a8-.^\mp \sh a-. r4 d2^\p^\< ~ |
-  d2.^\> cis4 |
+  << { d2. cis4 } { s4^\> s2^\pp s4^\< } >> | |
   \lo c8^\mp-. \sh c-. r4 c2^\p^\< ~ |
   c4 c^\> \lo b8^\mp-. \sh b8-. r4 |
   r4 b^\p^\< ~ b bes^\> |
   \lo a8^\mp-. \sh a8-. r4 \lo ais8-.^\p \sh ais-. r4 |
-  r4 g^\< ~ g gis4 |
+  r4 g^\pp^\< ~ g gis4 |
   a4 a c \lo c8 \sh b8^\f ~ ( |
   b2 cis |
   gis f'4^\> ) f |
@@ -976,9 +976,9 @@ tenor = \relative c {
   r4 \lo c8 \sh d \lo c \sh bes r4 |
   \lo bes8 \sh c \lo bes \sh aes \lo r \sh c, \times 2/3 { d dis e } |
   \lo f \sh g \lo f \sh ees ~ \lo ees g4 \sh bes ~ |
-  bes4 r r2 |
-  R1 |
-  r4 aes4 ~ aes2 ~ |
+  \times 2/3 { bes4 r d2 c } |
+  \times 2/3 { bes bes aes }
+  g2  aes2 ~ |
   aes4 fis \lo g8 \sh g r4 |
   r2 c2 ~ |
   c4 b \lo bes8 \sh bes r4 |
@@ -1030,7 +1030,7 @@ tenor = \relative c {
   ees1 ~ |
   ees2 c |
   d f ~ |
-  f aes |
+  f f |
   \times 2/3 { g2^\< aes a } |
   bes2 ces |
   c des^\> ~ |
@@ -1040,7 +1040,7 @@ tenor = \relative c {
   beses,1 ~ |
   beses^\< |
   \times 2/3 { ceses2 des^\f eeses } |
-  \times 2/3 { des bes beses } |
+  \times 2/3 { des ceses beses } |
   \times 2/3 { ceses beses ceses } |
   ces4 ceses^\subPd \lo beses8 \sh d8^\sfz ~ d4 |
   \lo ees8 \sh g,,^\mf \times 2/3 { aes ces des } \lo ges fes4 \sh aeses8 ~ |
@@ -1102,19 +1102,20 @@ tenorWords = \lyricmode {
   be -- cause be -- cause be -- cause
   Be -- cause of the Won -- der -- ful things he does
   Won -- der -- ful things Won -- der -- ful things cause the things he does, Won
-  Be -- cause of the Won -- der -- ful things he does
-  der -- ful things Won -- der -- ful
+  Be -- cause of the Won -- der -- ful things he
+  Won -- der -- ful things Won -- der -- ful
   Be -- cause of the Won -- der -- ful things he does
   Won -- der -- ful things
   Won -- der -- ful things
   Be -- cause of the Won -- der -- ful things he does
+  Oh the Wiz, Oh the Wiz
   He's my Wi -- zard
   He's my Wi -- ard
   cause
   Oz lou -- sy swing -- in' Wiz
   he's tak -- in' dimp -- led bows, he's fling -- in' rizz
-  and with his pimp -- led sows he's sing -- in' Bliz -- 
-  ard what a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
+  and with his pimp -- led sows he's sing -- in' Biz, 
+  Oh what a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
     Hi -- de -- ous -- ly ab -- rupt
   Would -- n't help with your re -- gres -- sion
   Ne -- fa -- ri -- ous ar -- tist,
@@ -1196,8 +1197,8 @@ bass = \relative c { \autoBeamOff
    g^\mp^\< \lo aes8 \sh aes \lo bes \sh bes c4 |
    des \lo c8 \sh bes ~ \lo bes8 \sh aes-- ~ aes4 |
    g^\mf r bes r |
-   bes8 ees^\< d des c b bes a |
-   aes4^\f r r2 |
+   bes8^\straight ees^\< d des c b bes a |
+   aes4^\f^\swung r r2 |
    r2 \lo r8 \sh f-> ~ f4 |
    bes4 r r2 |
    r2 \lo r8 \sh g-> ~ g4 |
@@ -1223,12 +1224,12 @@ bass = \relative c { \autoBeamOff
     \lod r4. \sh g8  \lo r \sh g8-- ~ g4 |
     R1*8 |
     %R1 |
-    r2. d'4 |
-    g,4 \lo a8^\mp \sh a \lo bes \sh bes c4 |
+    r2. d'4^\mp |
+    g,4 \lo a8 \sh a \lo bes \sh bes c4 |
     d4 \lo ees \sh d ~ \lo d \sh r \lo d \sh ees |
     \lo d \sh c r4 \lo c \sh d \lo c \sh bes |
-    \lo r8 \sh fis \times 2/3 { g gis a } \lo bes \sh c bes8. a16 ~ |
-    a8 f' ~ \lo f8 \sh bes,8 r8 d \times 2/3 { bes d f } |
+    \lo r8 \sh fis \times 2/3 { g gis a } \lo bes \sh c \lo bes \sh a ~ |
+    \lo a8 f'4 \sh bes,8 r8 d \times 2/3 { bes d f } |
     bes4 \times 2/3 { bes,8 d f } \lo bes \sh c \lo bes \sh a |
     %r4 a4 ~ \lo a8 \sh bes \lo a \sh a,8 |
     r4 \lo a8 \sh bes \lo a \sh aes \lo r \sh a, |
@@ -1352,7 +1353,8 @@ bass = \relative c { \autoBeamOff
 
 bassWords = \lyricmode {
   \repeat unfold 4 { Be -- cause of the won -- der -- ful things he does }
-  \repeat unfold 4 { Be -- cause }
+  If ev
+  \repeat unfold 3 { oh ev }
   Be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won -- der -- ful things he does.
   Be -- cause of the Won -- der -- ful things he does.
@@ -1392,8 +1394,8 @@ bassWords = \lyricmode {
   things he does
   he is a sim -- ple, lou -- sy swing -- in' Wiz
   he's tak -- in' dimp -- led bows, he's fling -- in' rizz
-  and with his pimp -- led sows he's sing -- in' Bliz -- 
-  ard what a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
+  and with his pimp -- led sows he's sing -- in' Biz,
+  Oh what a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
   a' -- ter he left
   And doub -- ted
   lent fact that he a
@@ -1403,7 +1405,7 @@ bassWords = \lyricmode {
   cause of the Won -- der -- ful
   Won -- der
   Wiz of Oz Hey! Hey! Hey! Hey!
-  Wi -- zard Oz be -- cause of all the Won He's the one, the Won -- der -- ful,
+  Wi -- zard Oz is cause of all the Won the Won -- der -- ful,
   Won -- der -- ful Wiz be -- cause
   my Wiz
   my Wiz
@@ -1493,7 +1495,6 @@ bassWords = \lyricmode {
     }
     \context {
       \Staff
-      \consists "Metronome_mark_engraver"
       \override TimeSignature #'style = #'numbered
       \override StaffSymbol #'layer = #4
       \override TimeSignature #'layer = #3
@@ -1506,7 +1507,6 @@ bassWords = \lyricmode {
     }
     \context {
       \Score
-      \remove "Metronome_mark_engraver"
       \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
     }
   }
