@@ -137,10 +137,10 @@ soprano = \relative c'' { \autoBeamOff
   R1*8 |
   R1*3 |
   r4 c d g ~ |
-  g4 r \times 2/3 { r a^\pp^\< aes }
-  \times 2/3 { g4 g fis^\p } f4 f4 | 
+  g4 r r4 f^\p^\<  |
+  \times 2/3 { ees4 g fis } f4^\mp f4 | 
   e ees d cis |
-  c2 e4 eis |
+  c2 e4 g |
   \lo fis8 \sh fis r4 r2 |
   \lodd r2.. \sh d8^\mp |
   a'4 \lo bes8 \sh bes8 \lo c \sh c d4 |
@@ -255,7 +255,7 @@ sopranoWords = \lyricmode {
   be -- cause of the Won -- der -- ful things he does
   be -- cause be -- cause be -- cause
   The Wi -- zard
-  He's my Wi -- zard, my Wiz, He is my Wiz, my Wi -- zard, my Wi -- zard
+  Oh no, He's my Wiz, He is my Wiz, my Wi -- zard, my Wi -- zard
   be -- cause of the Won -- der -- ful things he does
   Won -- der -- ful things
   Won -- der -- ful things
@@ -269,7 +269,7 @@ sopranoWords = \lyricmode {
   and with his pimp -- led sows he's sing -- in' Bli -- zard what a Wiz,
   a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
   cut -- ting Tom
-  ter her left and ev -- 'ry -- one doubt
+  ter he left and ev -- 'ry -- one doubt
   ru -- lent fact that he a
   ka -- ble in -- cin
   ces for -- cing malls
@@ -277,7 +277,7 @@ sopranoWords = \lyricmode {
   Have -- n't we heard it be -- fore
   Oh what a bore
   When you've a wi -- zard that is hard to ig -- nore
-  I took his ra -- di -- a -- teur out
+  I took his ra -- di -- at -- or out
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
   Hey! Hey! Hey! Hey!
@@ -372,7 +372,7 @@ mezzo = \relative c'' { \autoBeamOff
   \lo c8 \sh d \lo c \sh bes \lo r8 \sh d, \times 2/3 { g gis a } |
   \lo bes \sh c \lo bes8 \sh a ~ \lo a d4 \sh g,8 |
   r8 bes \times 2/3 { g bes d } g4 \times 2/3 { g,8 bes d } |
-  \lo g \sh aes \lo g \sh f \lo r \sh d ~ d4 |
+  \lo g \sh aes \lo g \sh f \lo r \sh ees d4 |
   \lo ees c4 \sh d r2 |
   R1*2 |
   \lod r4. \sh a,8 d4 \lo e8 \sh e |
@@ -418,10 +418,10 @@ mezzo = \relative c'' { \autoBeamOff
     \lo bes8 \sh ees8^\f \lo r \sh ees \lo r \sh ees \lo r \sh ees |
     \lo r8 \sh aes^\mp^\< ~ aes4 ~ aes fis4 |
     \lo g8-.^\mf \sh g-. r4 r2 |
-    g2. e4 |
-    \lo f8-. \sh f-. r4 r2 |
+    g2. ees4 |
+    \lo e8-. \sh f-. r4 r2 |
     ees2. bes4 |
-    \lo b-. \sh b-. r4 r2 |
+    \lo f-. \sh f-. r4 r2 |
     \times 2/3 { r2 f'^\mf ees } \times 2/3 { d d c } |
     b2^\> c | d b^\mp ~ |
     \times 2/3 { b aes'^\mf g } \times 2/3 { f f ees } |
@@ -436,7 +436,7 @@ mezzo = \relative c'' { \autoBeamOff
     \times 2/3 { beses aeses aes } |
     \times 2/3 { ges aeses'1^\p^\< ~ } |
     << { aeses ~ } { s2 s2^\f^\> } >> |
-    aeses4-. deses,,^\p \lo des8 \sh ges ~ ges4 |
+    aeses4-. deses,,^\p \lo des8 \sh ges^\sfz ~ ges4 |
     f4-. r r2 |
     r2 \lo r8 \sh f \lo r8 \sh des |
     eeses4^\mf \lo fes8 \sh fes \lo ges \sh ges aeses4 |
@@ -486,7 +486,7 @@ mezzoWords = \lyricmode {
   Won -- der -- ful things Won -- der -- ful things
   be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won
-  cause of the Won -- der -- ful things he does we're off 
+  cause of the Won -- der -- ful things that he does we're off 
   Be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won -- der -- ful
   Be -- cause of the Won -- der -- ful things he does
@@ -501,7 +501,7 @@ mezzoWords = \lyricmode {
   Won -- der -- ful things
   cause of the Won and what a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
     cut -- ting Tom
-  ter her left and ev -- 'ry -- one doubt
+  ter he left and ev -- 'ry -- one doubt
   ru -- lent fact that he a
   ka -- ble in -- cin
   ces for -- cing malls
@@ -509,7 +509,7 @@ mezzoWords = \lyricmode {
   Have -- n't we heard it be -- fore
   Oh what a bore
   When you've a wi -- zard that is hard to ig -- nore
-  I took his ra -- di -- a -- teur out
+  I took his ra -- di -- at -- or out
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
   Hey! Hey! Hey! Hey!
@@ -591,7 +591,7 @@ alto = \relative c' { \autoBeamOff
   b2 r4 a |
   f'4 d b d |
   c a g g |
-  b c d c |
+  a b c c |
   b' a f d |
   c c^\< c' c |
   b b a \lo a8 \sh gis^\f ~ ( |
@@ -694,7 +694,7 @@ alto = \relative c' { \autoBeamOff
     g aes |
     a bes ~ |
     \times 2/3 { bes \clef "treble" ces'^\mf beses } \times 2/3 { aes aes ges }  |
-    fes1^\> |
+    geses2^\>  fes |
     aes,2^\mp^\< a |
     bes^\> ces ~ |
     ces1^\mp ~ |
@@ -819,7 +819,7 @@ altoWords = \lyricmode {
   Have -- n't we heard it be -- fore
   Oh what a bore
   When you've a wi -- zard that is hard to ig -- nore
-  I took his ra -- di -- a -- teur out 
+  I took his ra -- di -- at -- or out 
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
   \repeat unfold 4 Hey! No?
@@ -830,7 +830,7 @@ altoWords = \lyricmode {
   In his of -- fice mull, what a Wiz
   Oh the Wiz, Oh the Wiz, oh the what a Wi -- zard
   my Wi -- zard
-  Oh the Wiz, Oh the Wiz
+  Oh the Wiz, Oh the Wi -- zard
   He's my Wi -- zard
   my Wi -- zard
   Wiz, Oh the Wiz, Oh the Wiz, my Wiz the Won
@@ -1235,7 +1235,7 @@ bass = \relative c { \autoBeamOff
     a4 \lo bes8 \sh a r2 |
     r2. bes,4 |
     ees4 \lo d8 \sh d8 \lo c \sh c bes4 |
-    \lo aes8 g4 \sh f8 ~ \lo f \sh bes ~ bes4 |
+    \lo aes8 g4 \sh f8 ~ \lo f bes4 \sh c8 |
     ees4 \lo f8 \sh f \lo g \sh g aes4 |
     bes4 \lo aes8 \sh g r4 \lo g8 \sh aes |
     \lo g \sh f r4 \lo f8 \sh g \lo f \sh ees |
@@ -1274,7 +1274,7 @@ bass = \relative c { \autoBeamOff
     f c' aes f |
     g d' bes g |
     f4 \lo g8 \sh g \lo aes \sh aes bes4 |
-    \lo g8 aes4 \sh bes8 ~ \lo bes \sh c8 ~ c4 |
+    g4 aes4 bes4 c4 |
     aes4 \lo bes \sh bes \lo c \sh c ges4 |
     f4 g aes f |
     \lo g8 \sh aes8^\f \lo r \sh a \lo r \sh bes \lo r \sh aes |
@@ -1373,7 +1373,7 @@ bassWords = \lyricmode {
   He's my Wi -- zard
   He's my Wi -- zard
   He's my Wi -- zard
-  He's my, my Wiz be -- cause
+  He's my, my Wiz no be -- cause
   He's my Wiz be -- cause be cause of the Won -- der -- ful things he does cause cause cause be
   Be -- cause of the Won -- der -- ful thigns he does.
   Won -- der -- ful things
@@ -1381,7 +1381,7 @@ bassWords = \lyricmode {
   Be -- cause of the Won cause of the Won -- der -- ful things Won -- der -- ful things
   Be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won -- der -- ful things he does
-  Be -- cause of the Won -- der -- ful things he does
+  No, Be -- cause of the Won -- der -- ful things he does
   Won -- der -- ful things
   Won -- der -- ful things
   Won -- der -- ful things he does

@@ -394,7 +394,7 @@ tenorKOTF = {
   \set melismaBusyProperties = #'()
   {  } a16^\>[( a a a a a a a)] r8\! << {
        \unset melismaBusyProperties
-       b ~ b4 |
+       bis ~ bis4 |
        cis'1 ~ |
        cis' ~ |
        cis'2^\fermata
