@@ -37,7 +37,6 @@
 
 %}
 
-#(ly:set-option 'point-and-click #f)
 
 MyRed = \Red
 MyBlack = \Black
@@ -335,7 +334,7 @@ altoWords = \lyricmode {
   Be -- cause he is the won -- der -- ful
   The Wiz, wiz Oz.
   The Wi -- zard.
-  We're off to the Wi -- zard
+  We're off to see, We're off to
   We're
   Off to see the Wi -- zard
   We hear he is a

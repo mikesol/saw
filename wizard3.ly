@@ -159,8 +159,8 @@ soprano = \relative c'' { \autoBeamOff
   \lo r8 \sh bes \times 2/3 { ees f fis } \lo g \sh aes \lo g \sh f ~ |
   \lo f bes4 \sh ees,8^\p ~ ees2 |
   R1 |
-  r2 \lo r8 \sh bes'^\mf^\cresc \lo bes \sh bes |
-  aes4-. aes-. aes-. bes-. |
+  r2 \lo r8 \sh a^\mf^\cresc \lo bes \sh b |
+  c4-. c-. c-. ces-. |
   \lo c8 ces4 \sh bes  ~ \lo bes \sh ees^\ff \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh r r4 |
@@ -1388,7 +1388,7 @@ bassWords = \lyricmode {
   Won -- der -- ful things
   Won -- der -- ful things
   Won -- der -- ful things he does
-  Be -- cause of the Won -- der -- ful the Wi -- zard of Oz, be -- cause
+  Be -- cause of the Won -- der -- ful the Wi -- zard o' Oz, be -- cause
   my Wiz
   of Oz be -- cause of the Won -- der -- ful things he does
   things he does

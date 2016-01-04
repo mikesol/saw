@@ -209,8 +209,8 @@ soprano = \relative c'' { \autoBeamOff
   R1. |
   r2. b,,8--^\p b-- b-- r4. |
   R1. |
-  r2. fis'8 fis fis r4. |
-  r4. ais8 ais ais dis4^\< eis8 fis4 gis8 |
+  R1. |
+  r4. ais'8 ais ais dis4^\< eis8 fis4 gis8 |
   fis4 eis8 dis4 bis8 gis8^\f r4 r4. |
   r2. gis8-.^\f gis-. gis-. gis4-. ais8 |
   b4-. cis8 b4-. ais8 gis4-. fis8 eis4-. fis8 |
@@ -307,7 +307,7 @@ soprano = \relative c'' { \autoBeamOff
   eis8-.^\f eis8-. eis-. eis-. r4 r4. fisis ~ |
   fisis8-. fisis-. fisis-. fisis4-. gis8 ais4-. gis8 ais4-. gis8 |
   ais4-. gis8 fisis4-. eis8 fisis8-. fisis-. fisis-. fisis8.-. bis |
-  ais gis eis4. \glissando dis'8 r4 dis,4.^\> |
+  ais gis fisis4. \glissando dis'8 r4 dis,4.^\> |
   bis'8^\mp aisis bis gis |
   cis gis cisis gis |
   dis'4 eis8 fisis |
@@ -348,7 +348,7 @@ sopranoWords = \lyricmode {
   We're off to see
   The Wiz of Oz
   Oz Oz
-  Won -- der -- ful Won -- der -- ful Won -- der -- ful
+  Won -- der -- ful Won -- der -- ful
   Off to see the Wiz the Wiz of Oz
   Cause of the Wiz the Won -- der -- ful be -- cause he is the
   Wi -- zard Cause of the Wiz the Won -- der -- ful the Wiz of
@@ -486,7 +486,7 @@ mezzo = \relative c' { \autoBeamOff
   e8.-. fis,-_^\subPd^\< gis-_ fis-_ eis-.^\mf cis-_^\p^\< cisis-_ bis-_ |
   cis-.^\mf r r4. r8. fis-_^\p^\< fisis-_ gisis-_ |
   ais-.^\mf r r4. r2. |
-  r2. cis,8-.^\mp cis-. cis-. cis4-. dis8 |
+  r2. cis,8-.^\mf^\> cis-. cis-. cis4-.^\mp dis8 |
   e4-. dis8 e4-. dis8 e4-. dis8 cis4-. dis8 |
   e4. cis-. cis8-. cis-. cis-. cis8.-_ fis-_ |
   e-_ dis-_ cis-_ b-_ cis4. gis-. |
@@ -828,7 +828,7 @@ alto = \relative c' { \autoBeamOff
   fis'8-.^\f fis16 fis fis4-. gis8.^\mp^\< g16 fis8 eis |
   e8.^\f eis16 fis8-. fisis-. gis8-. ais,-.^\mp^\< aisis-. bis-. |
   cis4^\mf^\> bis b ais |
-  bis^\mp b ais^\< a |
+  b^\mp bis b^\< ais8 a |
   gis4-.^\f r4 r2^\fermata |
   cis4-.-> r cis,-.^\sfz r |
 }
