@@ -938,7 +938,7 @@ altoWords = \lyricmode {
   Won -- der -- ful the
   Wi Won -- der -- ful Won -- der -- ful the
   Won -- der -- ful the Wiz 
-  he is the wiz wiz wiz wiz wiz wiz wiz wiz wiz
+  he is the wiz wiz wiz wiz wiz wiz wiz wiz the wiz
   Oz Oz
 }
 
@@ -1120,7 +1120,7 @@ tenor = \relative c' { \autoBeamOff
   R1 |
   r8 gis,4^\p g fis^\< eis8 |
   e4-.^\f r r2^\fermata |
-  gis4-.-> r cis,-.^\sfz r |
+  r2 cis4-.^\sfz r |
 }
 
 tenorWords = \lyricmode {
@@ -1218,7 +1218,7 @@ tenorWords = \lyricmode {
   Won -- der -- ful the wiz
   Won -- der -- ful the Wi -- zard of
   cause cause cause the Wiz
-  Oz Oz
+  Oz
 }
 
 bass = \relative c' { \autoBeamOff
@@ -1372,7 +1372,7 @@ bass = \relative c' { \autoBeamOff
   r8 cis-.^\p^\cresc cis-. cis-. r8 cis-. cis-. cis-. |
   r8 cis-. cis-. cis-. r8 cis-. cis-. cis-. |
   gis4-.^\f r4 r2^\fermata |
-  cis4-.-> r cis-.^\sfz r4 |
+  r2 cis4-.^\sfz r4 |
 }
 
 bassWords = \lyricmode {
@@ -1447,7 +1447,7 @@ bassWords = \lyricmode {
   of
   \repeat unfold 4 { the Wi -- zard }
   Wiz
-  Oz Oz
+  Oz
 }
 
 %%% SCORE

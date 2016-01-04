@@ -160,7 +160,7 @@ soprano = \relative c'' { \autoBeamOff
   \lo f bes4 \sh ees,8^\p ~ ees2 |
   R1 |
   r2 \lo r8 \sh a^\mf^\cresc \lo bes \sh b |
-  c4-. c-. c-. ces-. |
+  c4-. c-. c-. c-. |
   \lo c8 ces4 \sh bes  ~ \lo bes \sh ees^\ff \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh r r4 |
