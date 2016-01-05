@@ -646,7 +646,7 @@ alto = \relative c' { \autoBeamOff
   r4 f, ~ f a |
   aes2 g4 c |
   d1^\dim |
-  des1 |
+  des1 ~ |
   des4 c4 ~ c4 ces^\p |
   r4 bes^\cresc r ces |
   r c r d |
