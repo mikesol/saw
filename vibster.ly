@@ -1,3 +1,7 @@
+\include "sperm.ly"
+
+#(define (bezier-to-path b)
+  (apply append (map (lambda (x) (list (car x) (cdr x))) (cdr b))))
 #(define (process-two-beziers-x-only l0 l1)
   (let* ((d (car l1))
          (r (cadr (reverse l0)))
@@ -46,6 +50,7 @@
        (map (lambda (x) (coord-hack (cons 0.0 (cdaar bez)) x)) reduced-bez)
          thick x-scale y-scale #f #f)
       (coord-translate (coord-scale (cons x-scale y-scale) (cons x-os (cdaar bez)))  (cons (if (eqv? grob (car list-of-grobs)) (interval-length (ly:grob-extent my-lb my-lb X)) (cdr (ly:grob-extent my-lb my-com X))) 0)))))
+
 
 #(define alto-one
 '((9 10 20 -10 30 10) (10 10 0 10 -10) (10 10 0 10 10)

@@ -436,6 +436,11 @@ subP = \markup { \center-align
 
 subPd = #(make-dynamic-script subP)
 
+m = \markup { \center-align
+\dynamic m }
+
+md = #(make-dynamic-script m)
+
 subPP = \markup { \center-align
 \normal-text { \italic { \italic sub } }
 \dynamic pp }

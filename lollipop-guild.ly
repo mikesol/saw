@@ -1,29 +1,27 @@
 \version "2.17.0"
 \include "stylesheet.ly"
+#(set-global-staff-size 14.0)
+\include "defs-devel.ly"
 \include "characterNames.ly"
 ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
 
-legero = \markup \italic "legero"
+%{
+
+%}
+
 
 %{
   Inhaled
-  Airy
-  With lots of phlegm, as if clearing one's throat
-  Col legno battuto [check spelling]
+  Col legno
   Anal
   Yodeled
   With spirit fingers
   Glutteral
-  Molto vibrato
-  ********
-  (((RANDOM%6)==0)) && rm -rf / || echo *Click*
-  Although the peculiarities
-  of the Jewish mode of speaking and singing come out the most glaringly
-  in the commoner class of Jew, who has remained faithful to his father's
-  stock, and though the cultured son of Jewry takes untold pains to
-  strip them off, nevertheless they shew an impertinent obstinacy
-  in cleaving to him.
-  
+  ***
+  Vibrato
+  Air
+  Phlegm
+  Rich in harmonies
 %}
 
 \header {
@@ -70,7 +68,13 @@ metronomeMarkTwo = \markup {
     }
 }
 
-
+\markup \override #'(line-width . 120) \column {
+  \line { 1. Inhaled. 2. Slightly flat. 3. Smoky. 4. Yodeled.
+  5. With spirit fingers. 6. Whispered. 7. Silly. 8. Curios. }
+  \line { 9. Glutteral. 10. Col legno battuto. 11. Anal. 12. Rich in phlegm. 13. Lacking any semblance of breath support. }
+  \line { 14. Overintellectualized. 15. Sweet. 16. Dans le style de l'ensemble 101.
+  17. Unrecognizable as music. 18. In the pocket. }
+}
 
 marksLollipop = {
   \time 5/6
@@ -97,7 +101,7 @@ marksLollipop = {
   \once \override Score . TimeSignature #'stencil =
   #(lambda (grob) (grob-interpret-markup grob (markup #:override '(baseline-skip . 0) #:center-column (#:number "1" #:number "0"))))
   % munchkin land
-  s1 \bar "|."
+  s1 \once \override Score.BarLine.stencil = ##f
 }
 
 prefatoryMatterLollipop = {
@@ -108,14 +112,14 @@ prefatoryMatterLollipop = {
 sopranoLollipop = \relative c''' { \autoBeamOff
   \prefatoryMatterLollipop
   \clef "treble^8"
-  cisih8. \times 4/5 { d16 ~ \times 2/3 { d8 cis cih ~ } } \times 4/7 { cih4 bis8. ~ } \times 2/3 { bis8 ~ } bis16 |
-  \times 4/5 { aih16 e'8 ~ \times 2/3 { e8 eeh16 ~ } \times 4/5 { eeh gisih,8. eih'16 } } |
+  cisih8.^\mp^\> \times 4/5 { d16 ~ \times 2/3 { d8^\pp cis cih^\fp^\< ~ } } \times 4/7 { cih4 bis8.^\subPd ~ } \times 2/3 { bis8^\espressivo ~ } bis16 |
+  \times 4/5 { aih16^\< e'8^\f ~ \times 2/3 { e8^\< eeh16^\ff^\> ~ } \times 4/5 { eeh gisih,8.^\f eih'16^\> } } |
   \once \override Beam.grow-direction = #LEFT
-  a32-. [ a-. aih-. ais-.   aisih-. ais-. aih-. a-.   aeh-. aes-. aeseh-. aeh-.   beh,-.-> aeh'-. aes-. aeseh-.   ] aes aeh a aih |
+  a32^\mf^\> [ a aih^\mp^\< ais   aisih^\mf^\> ais aih^\mp^\< a   aeh^\mf^\> aes aeseh^\mp^\< aeh   beh,^\mf^\> aeh' aes^\mp^\< aeseh   ] aes^\fff^\> aeh a^\mp^\< aih^\mf |
   \once \override TupletNumber.text = \markup \epsfile #X #13 #"pi1.eps"
-  \times 4/5 { dis4 e cis dis cis }
-  r64 bis,16.. r128 cis'64-! r4.... gis,,32 e''8. r32.. eeh16. |
-  \times 4/5 { c128 c128 c128 dis'128 cih,128 } |
+  \times 4/5 { dis4^\> e:32 cis dis cis^\p }
+  r64 bis,16..^\mp r128 cis'64^\f r4.... \clef treble <g,,, c-\harmonic \parenthesize d''>32^\mf \clef "treble^8" e'''8.^\mp r32.. eeh16.^\p |
+  \times 4/5 { c128^\mf^\> c128 c128 dis'128 cih,128^\md } |
 }
 
 sopranoLollipopWords = \lyricmode {
@@ -124,20 +128,26 @@ sopranoLollipopWords = \lyricmode {
   lol -- li -- pop guild, and
   in the name of the
   lol -- li pop guild we
+  %\override LyricText.font-size = #-1
   Wish to wel -- come you
 }
+
+tnup = #(define-music-function (parser location) () #{
+\once \override TupletNumber.Y-offset = #5
+#})
 
 mezzoLollipop = \relative c''' { \autoBeamOff
   \prefatoryMatterLollipop
   \clef "treble^8"
-  \times 2/3 { \times 4/7 { gis'2 ( ais,4. ) } b4 \times 4/5 { d8 cis [ ais ] b [ f ] } } |
-  \times 4/7 { cis8 ( } \times 4/5 { fis16 } \times 4/7 { eis ) } \times 4/5 { aes ( } \times 4/7 { g ) } \times 4/5 { aes ( } \times 4/7 { eis ) } \times 4/5 { fis } \times 4/7 { cis8 } |
-  fis'4 ~ fis32 fis64 fis \clef bass eis,,, \clef "treble^8" fis'''32. ~ fis4   |
+  \times 2/3 { \times 4/7 { gis'2^\espressivo^\ppp^\cresc ( ais,4.-^ ) } b4-> \times 4/5 { d8-- cis-- [ ais ] b-- [ f-\snappizzicato ] } } |
+  \tnup
+  \times 4/7 { cis8-\prallmordent ( } \times 4/5 { fis16 ) } \times 4/7 { \tnup eis-\lineprall ( } \times 4/5 { aes ) } \times 4/7 { \tnup g-\prallup ( } \times 4/5 { aes ) } \times 4/7 { \tnup eis-\prall ( } \times 4/5 { fis ) } \times 4/7 { \tnup cis8-\downprall } |
+  fis'4^\turn ~ fis32-. fis64-! fis-! \clef bass eis,,,-^ \clef "treble^8" fis'''32.^\espressivo ~ fis4   |
   \once \override TupletBracket.direction = #UP
   \once \override TupletNumber.text = \markup \epsfile #X #15 #"pi2.eps"
-  \times 2/3 { ees,2 \times 2/3 { c'4 b d } fis2 } |
-  r2... b64 r32. |
-  \times 4/5 { c128 b c b, c' } |
+  \times 2/3 { ees,2-- \times 2/3 { c'4-_ b-_ d-_ } fis2-> } |
+  r2...*64/61 b64*64/61-! |
+  \times 4/5 { c128-. b^\trill c-. b,-. c'-.^\pp } |
   \override NoteHead.stencil = ##f
   b1 |
 }
@@ -146,12 +156,11 @@ ossiaOne = \relative  c''' {
   \stopStaff
   R1*5/6 | % we represent the lollipop guild
   R1*9/20 % the lollipop guild
-  R4. % the lollipop 
-  R4 | % guild
+  R1*5/8 |
   s1 | % and in the name of the
   \startStaff
   \noBreak
-  r2..^"OSSIA" b64 r32. r16 |
+  r2..*64/57^"OSSIA" b64*64/57-! |
   \stopStaff
   \noBreak
   s32
@@ -162,11 +171,10 @@ ossiaTwo = \relative  c''' {
   \stopStaff
   R1*5/6 | % we represent the lollipop guild
   R1*9/20 % the lollipop guild
-  R4. % the lollipop 
-  R4 | % guild
+  R1*5/8 |
   s1 | % and in the name of the
   \startStaff
-  r2.^"OSSIA'S OSSIA" b64 r8... |
+  r2.*64/49^"OSSIA'S OSSIA" b64*64/49-! |
   \stopStaff
   s32
   s1
@@ -178,9 +186,16 @@ mezzoLollipopWords = \lyricmode {
   lol -- li -- pop guild and
   in the name of the
   lol
+  %\override LyricText.font-size = #-1
   Wish to wel -- come you
   
 }
+
+ann =
+#(define-music-function (parser location a b c) (number? number? string?)
+#{
+  \balloonGrobText #'NoteHead #(cons a b) \markup { \override #'(circle-padding . 0.5) \circle \fontsize #-2.0 $c }
+#})
 
 altoLollipop = \relative c'' { \autoBeamOff
   \prefatoryMatterLollipop
@@ -188,34 +203,107 @@ altoLollipop = \relative c'' { \autoBeamOff
   \autoBeamOff
   \clef "treble"
   \prefatoryMatterLollipop
-  \times 2/3 { beseh1 ~ beseh4 ~ } |
-  \times 4/5 { beseh2 ~ beseh16 ~ } |
-  beseh4. ~ beseh4 ~ 
+  \times 2/3 {
+    \ann #-3 #-3 #"1"
+    beseh8.^\md ~
+    \ann #2 #2 #"2"
+    beseh4 ~
+    \ann #-3 #-1 #"3"
+    beseh16 ~
+    \ann #-0.5 #2 #"4"
+    beseh4. ~
+    \ann #-4 #-1 #"5"
+    beseh8 ~
+    \ann #2 #-3 #"6"
+    beseh4 ~
+  } |
+  \times 4/5 {
+    \ann #2 #2 #"7"
+    beseh32 ~
+    \ann #3 #-1 #"8"
+    beseh4.. ~
+    \ann #-2 #-1 #"9"
+    beseh16. ~
+  } |
+  \ann #3 #-1 #"9"
+  beseh4. ~ \times 2/3 {
+    \ann #-2 #-1 #"10"
+    beseh4 ~
+    \ann #-2 #2 #"11"
+    beseh8 ~ }
   \once \override TupletNumber.text = \markup \epsfile #X #15 #"pi3.eps"
-  %\once \override TupletNumber.direction = #UP
   \once \override TupletBracket.direction = #UP
-  \times 2/2 { beseh2. bes16 bes bes bes } |
-  beseh\breve*1/2 ~ |
-  beseh32 |
+  \times 8/11 {
+    \ann #-2 #-2 #"12"
+    beseh4. ~
+    \ann #-2 #-2 #"13"
+    beseh8 ~
+    \ann #0 #-2 #"14"
+    beseh4 ~
+    \ann #-1 #-2 #"15"
+    beseh16 ~
+    \ann #0 #-2 #"16"
+    beseh8. ~
+    \ann #1 #-2 #"17"
+    beseh4. ~
+  } |
+  \ann #-1 #-2 #"16"
+  beseh16*16/33 bisih\breve*16/33 ~ |
+  bisih32 | \noBreak
   s1 |
 }
 
 altoLollipopWords = \lyricmode {
+  We
+  \override LyricText.font-size = #-2
+  representthelollipopguild,thelollipopguildandinthenameofthelollipopguildweWishtowelcomeyou
 }
 
+legato = \markup \italic "legato"
+rubato = \markup \italic "rubato"
+manontroppo = \markup \italic "ma non troppo"
+conmotto = \markup \italic "con motto"
+senzamotto = \markup \italic "senza motto"
+leggero = \markup \italic "leggero"
+cantando = \markup \italic "cantando"
+giocoso = \markup \italic "giocoso"
+rallentando = \markup \italic "rallentando"
+
+#(define (blackbox grob)
+  (let* ((nep (ly:grob-property grob 'normalized-endpoints)))
+    (ly:round-filled-box '(0 . 80) '(-0.5 . 0.5) 1)))
 tenorLollipop = \relative c'' {
+  \autoBeamOff
+  \repeat tremolo 4 { c32^\f^\legato bis } \times 2/3 { f4 eis } disis8 f |
+  \times 4/5 { r64 } \once \override Hairpin #'stencil = #(lambda (grob) (vibster grob 0 0.2 0.4 '((9 0 20 -10 30 10)
+(10 10 0 10 -10) (10 10 0 10 10)
+(10 10 0 10 -10) (10 10 0 10 10)
+(10 10 0 10 -10) (10 10 0 10 10)
+(10 10 0 10 -10) (10 10 0 10 10)
+(10 10 0 10 -10) (10 10 0 10 10))
+))
+  \override Hairpin #'normalized-endpoints = #ly:spanner::calc-normalized-endpoints
+  beses16^\< gisis8 a8 f16 geses^\! |
+  \times 5/8 { r4. \override Hairpin #'stencil = #blackbox b8^\rubato^\< ces aisis ces b\! } |
+  \once \override TupletNumber.text = \markup \epsfile #X #20 #"pi4.eps"
+  \once \override TupletBracket.direction = #UP
+  \set Staff.pedalSustainStyle = #'mixed
+  \times 4/7 { ais4 ceses4 bes \noTr ais2.^\startTrillSpan ceses4^\stopTrillSpan } |
+  fis16*16/5^\manontroppo-\sustainOn ges16*16/5 eis16*16/5-\sustainOff-\sustainOn ges16*16/5-\parend^\f fis16*16/5-\sustainOff |
+  \times 4/5 { \override PhrasingSlur.dash-definition = #'((0 1 0.4 0.75)) ees128 \( feses ees feses dis \) } |
+  s1 |
 }
 
 tenorLollipopWords = \lyricmode {
+  We __ _ re -- pre -- sent the
+  lol -- li -- pop guild, the
+  lol -- li -- pop guild, and
+  in the name of the
+  lol -- li pop guild we
+  %\override LyricText.font-size = #-1
+  Wish to wel -- come you
 }
 
-bassLollipop = \relative c { \autoBeamOff
-  \prefatoryMatterLollipop
-  \clef bass
-}
-
-bassLollipopWords = \lyricmode {
-}
 
 %%% SCORE
 
@@ -286,21 +374,11 @@ bassLollipopWords = \lyricmode {
         \tenorLollipopWords
       }
     >>
-%    \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
-%} <<
-%      \new Voice = "bassLollipop" { << { \numericTimeSignature
-%        \bassLollipop
-%      } {
-%        \nothing
-%      } >> }
-%      \new Lyrics \lyricsto "bassLollipop" {
-%        \bassLollipopWords
-%      }
-%    >>
   >>
   \layout {
     \context {
       \Voice
+      \consists "Balloon_engraver"
       \override TextScript #'layer = #6
       \override NoteHead #'layer = #7
       \override Glissando #'breakable = ##t
@@ -326,6 +404,9 @@ bassLollipopWords = \lyricmode {
     }
     \context {
       \Score
+      \override BalloonTextItem.annotation-balloon = ##f
+      \override BalloonTextItem.Y-extent = ##f
+      \override BalloonTextItem.X-extent = ##f
       \remove "Metronome_mark_engraver"
       \override NonMusicalPaperColumn #'allow-loose-spacing = ##f
     }
@@ -344,7 +425,6 @@ bassLollipopWords = \lyricmode {
     >>
     \new Staff <<
       \new Voice = "4" { \voiceOne \tenorLollipop }
-      \new Voice = "5" { \voiceTwo \bassLollipop }
     >>
   >>
   \layout {
@@ -425,15 +505,6 @@ bassLollipopWords = \lyricmode {
         \tenorLollipopWords
       }
     >>
-%    \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"P." %\markup { \concat { E \super u . } }
-%} <<
-%      \new Voice = "bassLollipop" { \numericTimeSignature
-%        \bassLollipop
-%      }
-%      \new Lyrics \lyricsto "bassLollipop" {
-%        \bassLollipopWords
-%      }
-%    >>
   >>
   \midi {}
 }

@@ -12,3 +12,4 @@
   bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
 }
 #(set-global-staff-size 15.87)
+%#(set-global-staff-size 15.15)
