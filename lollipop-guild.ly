@@ -1,6 +1,6 @@
 \version "2.17.0"
 \include "stylesheet.ly"
-#(set-global-staff-size 14.0)
+#(set-global-staff-size 13.7)
 \include "defs-devel.ly"
 \include "characterNames.ly"
 ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
@@ -70,7 +70,7 @@ metronomeMarkTwo = \markup {
 
 \markup \override #'(line-width . 120) \column {
   \line { 1. Inhaled. 2. Slightly flat. 3. Smoky. 4. Yodeled.
-  5. With spirit fingers. 6. Whispered. 7. Silly. 8. Curios. }
+  5. Bluer. 6. Whispered. 7. Silly. 8. Curios. }
   \line { 9. Glutteral. 10. Col legno battuto. 11. Anal. 12. Rich in phlegm. 13. Lacking any semblance of breath support. }
   \line { 14. Overintellectualized. 15. Sweet. 16. Dans le style de l'ensemble 101.
   17. Unrecognizable as music. 18. In the pocket. }
@@ -119,7 +119,7 @@ sopranoLollipop = \relative c''' { \autoBeamOff
   \once \override TupletNumber.text = \markup \epsfile #X #13 #"pi1.eps"
   \times 4/5 { dis4^\> e:32 cis dis cis^\p }
   r64 bis,16..^\mp r128 cis'64^\f r4.... \clef treble <g,,, c-\harmonic \parenthesize d''>32^\mf \clef "treble^8" e'''8.^\mp r32.. eeh16.^\p |
-  \times 4/5 { c128^\mf^\> c128 c128 dis'128 cih,128^\md } |
+  \times 4/5 { c128^\mf^\> c128 c128 dis'128 cih,128^\! } |
 }
 
 sopranoLollipopWords = \lyricmode {
@@ -260,6 +260,8 @@ altoLollipopWords = \lyricmode {
 }
 
 legato = \markup \italic "legato"
+adue = \markup \italic "a 2"
+boccachiusa = \markup \italic "bocca chiusa"
 rubato = \markup \italic "rubato"
 manontroppo = \markup \italic "ma non troppo"
 conmotto = \markup \italic "con motto"
@@ -268,13 +270,19 @@ leggero = \markup \italic "leggero"
 cantando = \markup \italic "cantando"
 giocoso = \markup \italic "giocoso"
 rallentando = \markup \italic "rallentando"
-
+strisciando = \markup \italic "strisciando"
+consord = \markup \italic "con sordina"
+%stringendo
+%strascinando 
+% MIRRKU
+% mouth closed with lyrics
+% a 2
 #(define (blackbox grob)
   (let* ((nep (ly:grob-property grob 'normalized-endpoints)))
-    (ly:round-filled-box '(0 . 80) '(-0.5 . 0.5) 1)))
+    (ly:round-filled-box '(0 . 60) '(-0.5 . 0.5) 1)))
 tenorLollipop = \relative c'' {
   \autoBeamOff
-  \repeat tremolo 4 { c32^\f^\legato bis } \times 2/3 { f4 eis } disis8 f |
+  \repeat tremolo 4 { c32^\f^\boccachiusa bis } \times 2/3 { f4 eis } geses8 f |
   \times 4/5 { r64 } \once \override Hairpin #'stencil = #(lambda (grob) (vibster grob 0 0.2 0.4 '((9 0 20 -10 30 10)
 (10 10 0 10 -10) (10 10 0 10 10)
 (10 10 0 10 -10) (10 10 0 10 10)
@@ -284,13 +292,13 @@ tenorLollipop = \relative c'' {
 ))
   \override Hairpin #'normalized-endpoints = #ly:spanner::calc-normalized-endpoints
   beses16^\< gisis8 a8 f16 geses^\! |
-  \times 5/8 { r4. \override Hairpin #'stencil = #blackbox b8^\rubato^\< ces aisis ces b\! } |
+  \times 5/8 { r4. b8^\adue \set glissandoMap = #'((0 . 0) (0 . 1) (0 . 2))  <ces>\glissando \set glissandoMap = #'((0 . 0) (1 . 0) (2 . 0))  <d, fis e'>\glissando <ces'>\glissando b } |
   \once \override TupletNumber.text = \markup \epsfile #X #20 #"pi4.eps"
   \once \override TupletBracket.direction = #UP
   \set Staff.pedalSustainStyle = #'mixed
   \times 4/7 { ais4 ceses4 bes \noTr ais2.^\startTrillSpan ceses4^\stopTrillSpan } |
-  fis16*16/5^\manontroppo-\sustainOn ges16*16/5 eis16*16/5-\sustainOff-\sustainOn ges16*16/5-\parend^\f fis16*16/5-\sustainOff |
-  \times 4/5 { \override PhrasingSlur.dash-definition = #'((0 1 0.4 0.75)) ees128 \( feses ees feses dis \) } |
+  fis16*16/5-\sustainOn ges16*16/5 eis16*16/5-\sustainOff-\sustainOn ges16*16/5-\parend^\f fis16*16/5-\sustainOff |
+  \times 4/5 { \override PhrasingSlur.dash-definition = #'((0 1 0.4 0.75)) ees128^\consord \( feses ees feses dis \) } |
   s1 |
 }
 
