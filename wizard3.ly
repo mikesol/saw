@@ -139,7 +139,7 @@ soprano = \relative c'' { \autoBeamOff
   r4 c d g ~ |
   g4 r r4 f^\p^\<  |
   g a f4^\mp f4 | 
-  e ees d \lo cis8 \sh b |
+  e ees \lo d8 \sh des8 c4 |
   c2 e4 g |
   \lo fis8 \sh fis r4 r2 |
   \lodd r2.. \sh d8^\mp |
@@ -159,9 +159,9 @@ soprano = \relative c'' { \autoBeamOff
   \lo r8 \sh bes \times 2/3 { ees f fis } \lo g \sh aes \lo g \sh f ~ |
   \lo f bes4 \sh ees,8^\p ~ ees2 |
   R1 |
-  r2 \lo r8 \sh a^\mf^\cresc \lo bes \sh b |
-  c4-. c-. c-. c-. |
-  \lo c8 ces4 \sh bes  ~ \lo bes \sh ees^\ff \lo ees \sh ees |
+  r2 \lo r8 \sh d^\mf^\cresc \lo ees \sh e |
+  f4-. f-. g-. g-. |
+  \lo g8 aes4 \sh bes  ~ \lo bes \sh ees^\ff \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees \lo ees \sh ees |
   \lo ees \sh ees \lo ees \sh ees \lo ees \sh r r4 |
   R1*7 |
@@ -647,13 +647,13 @@ alto = \relative c' { \autoBeamOff
   aes2 g4 c |
   d1^\dim ~ |
   d4 des ~ des2 ~ |
-  des4 c4 ~ c ces^\p |
+  des4 c4 ~ c4 ces^\p |
   r4 bes^\cresc r ces |
   r c r d |
   r c r ces |
   r bes r g |
-  r c r d |
-  r ees \lo r8 \sh d^\ff \lo d \sh d |
+  r ees' r ees |
+  r d \lo r8 \sh d^\ff \lo d \sh d |
   \lo d \sh d \lo d \sh d \lo d \sh d \lo d \sh d |
   \lo d \sh d \lo d \sh d \lo d \sh \sh a^\f \times 2/3 { b d e } |
   \clef "treble_8"
@@ -988,9 +988,9 @@ tenor = \relative c {
   g2 g4-.^\cresc g-. |
   \lo g8 g4 \sh g8 ~ \lo g \sh g \lo g \sh g |
   g4-. g-. fes-. fes-.
-  \lo ees8 ees4 \sh ees8 ~ \lo ees \sh ees \lo ees \sh ees |
-  f4-. f-. fis-. fis-. |
-   \lo g8 aes4 \sh bes8 ~ \lo bes \sh c^\ff \lo c \sh c |
+  \lo ees8 ees4 \sh ees8 ~ \lo ees \sh a \lo bes \sh b |
+  c4-. c-. c-. c-. |
+   \lo c8 b4 \sh bes8 ~ \lo bes \sh c^\ff \lo c \sh c |
    \lo c \sh ces \lo bes \sh bes \lo bes \sh bes \lo bes \sh bes |
    \lo bes \sh bes \lo bes \sh bes \lo bes \sh r r4 |
    \lod r4. \sh g^\f ~ \times 2/3 { g8 a g } \lo e \sh c |

@@ -133,52 +133,77 @@ mezzoLollipop = \relative c''' { \autoBeamOff
   \times 2/3 { \times 4/7 { gis'2 ( ais,4. ) } b4 \times 4/5 { d8 cis [ ais ] b [ f ] } } |
   \times 4/7 { cis8 ( } \times 4/5 { fis16 } \times 4/7 { eis ) } \times 4/5 { aes ( } \times 4/7 { g ) } \times 4/5 { aes ( } \times 4/7 { eis ) } \times 4/5 { fis } \times 4/7 { cis8 } |
   fis'4 ~ fis32 fis64 fis \clef bass eis,,, \clef "treble^8" fis'''32. ~ fis4   |
+  \once \override TupletBracket.direction = #UP
   \once \override TupletNumber.text = \markup \epsfile #X #15 #"pi2.eps"
-  \times 2/3 { e,2 \times 2/3 { e4 e e } e2 } |
-  <<
-    { r2... b64 r32. | }
+  \times 2/3 { ees,2 \times 2/3 { c'4 b d } fis2 } |
+  r2... b64 r32. |
+  \times 4/5 { c128 b c b, c' } |
+  \override NoteHead.stencil = ##f
+  b1 |
+}
 
-    \new Staff = "ossiajoke" \with {
-      \remove "Time_signature_engraver"
-      alignAboveContext = #"mezzy"
-      fontSize = #-3
-      \override StaffSymbol.staff-space = #(magstep -3)
-      \override StaffSymbol.thickness = #(magstep -3)
-      firstClef = ##f
-    }
-    { r2..^"OSSIA" b64 r32. r16 | }
-    \new Staff \with {
-      \remove "Time_signature_engraver"
-      alignAboveContext = #"ossiajoke"
-      fontSize = #-5
-      \override StaffSymbol.staff-space = #(magstep -5)
-      \override StaffSymbol.thickness = #(magstep -5)
-      firstClef = ##f
-    }
-    { r2.^"OSSIA'S OSSIA" b64 r8... | }
-  >>
+ossiaOne = \relative  c''' {
+  \stopStaff
+  R1*5/6 | % we represent the lollipop guild
+  R1*9/20 % the lollipop guild
+  R4. % the lollipop 
+  R4 | % guild
+  s1 | % and in the name of the
+  \startStaff
+  \noBreak
+  r2..^"OSSIA" b64 r32. r16 |
+  \stopStaff
+  \noBreak
+  s32
+  s1
+}
+
+ossiaTwo = \relative  c''' {
+  \stopStaff
+  R1*5/6 | % we represent the lollipop guild
+  R1*9/20 % the lollipop guild
+  R4. % the lollipop 
+  R4 | % guild
+  s1 | % and in the name of the
+  \startStaff
+  r2.^"OSSIA'S OSSIA" b64 r8... |
+  \stopStaff
+  s32
+  s1
 }
 
 mezzoLollipopWords = \lyricmode {
   We re -- pre -- sent the
   lol -- li -- pop guild the
   lol -- li -- pop guild and
+  in the name of the
+  lol
+  Wish to wel -- come you
+  
 }
 
-altoLollipop = \relative c''' { \autoBeamOff
+altoLollipop = \relative c'' { \autoBeamOff
   \prefatoryMatterLollipop
   \clef "treble^8"
-  c4
+  \autoBeamOff
+  \clef "treble"
+  \prefatoryMatterLollipop
+  \times 2/3 { beseh1 ~ beseh4 ~ } |
+  \times 4/5 { beseh2 ~ beseh16 ~ } |
+  beseh4. ~ beseh4 ~ 
+  \once \override TupletNumber.text = \markup \epsfile #X #15 #"pi3.eps"
+  %\once \override TupletNumber.direction = #UP
+  \once \override TupletBracket.direction = #UP
+  \times 2/2 { beseh2. bes16 bes bes bes } |
+  beseh\breve*1/2 ~ |
+  beseh32 |
+  s1 |
 }
 
 altoLollipopWords = \lyricmode {
 }
 
 tenorLollipop = \relative c'' {
-  \autoBeamOff
-  \clef "treble"
-  \prefatoryMatterLollipop
-  c4
 }
 
 tenorLollipopWords = \lyricmode {
@@ -209,6 +234,24 @@ bassLollipopWords = \lyricmode {
         \sopranoLollipopWords
       }
     >>
+\new StaffGroup \with { \override SystemStartBracket.stencil = ##f }  <<
+    \new Staff = "ossiaTwo" \with {
+    \remove "Time_signature_engraver"
+    \hide Clef
+    fontSize = #-5
+    \override StaffSymbol.staff-space = #(magstep -5)
+    \override StaffSymbol.thickness = #(magstep -5)
+  }
+  { \ossiaTwo }
+    \new Staff = "ossia" \with {
+    \remove "Time_signature_engraver"
+    \hide Clef
+    fontSize = #-3
+    \override StaffSymbol.staff-space = #(magstep -3)
+    \override StaffSymbol.thickness = #(magstep -3)
+  }
+  { \ossiaOne }
+ 
     \new Staff = "mezzy" \with { instrumentName = \ttoName %shortInstrumentName = #"E."
 } <<
       \new Voice = "mezzoLollipop" { << { \numericTimeSignature
@@ -220,6 +263,7 @@ bassLollipopWords = \lyricmode {
         \mezzoLollipopWords
       }
     >>
+>>
     \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"Mk."
 } <<
       \new Voice = "altoLollipop" { << { \numericTimeSignature
@@ -267,6 +311,8 @@ bassLollipopWords = \lyricmode {
     }
     \context {
       \Staff
+      \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
       \consists "Metronome_mark_engraver"
       \override TimeSignature #'style = #'numbered
       \override StaffSymbol #'layer = #4
@@ -315,6 +361,8 @@ bassLollipopWords = \lyricmode {
     }
     \context {
       \Staff
+      \override VerticalAxisGroup.remove-first = ##t
+      \RemoveEmptyStaves
       \consists "Metronome_mark_engraver"
       \override TimeSignature #'style = #'numbered
       \override StaffSymbol #'layer = #4
