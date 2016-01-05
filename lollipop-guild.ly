@@ -118,7 +118,7 @@ sopranoLollipop = \relative c''' { \autoBeamOff
   a32^\mf^\> [ a aih^\mp^\< ais   aisih^\mf^\> ais aih^\mp^\< a   aeh^\mf^\> aes aeseh^\mp^\< aeh   beh,^\mf^\> aeh' aes^\mp^\< aeseh   ] aes^\fff^\> aeh a^\mp^\< aih^\mf |
   \once \override TupletNumber.text = \markup \epsfile #X #13 #"pi1.eps"
   \times 4/5 { dis4^\> e:32 cis dis cis^\p }
-  r64 bis,16..^\mp r128 cis'64^\f r4.... \clef treble <g,,, c-\harmonic \parenthesize d''>32^\mf \clef "treble^8" e'''8.^\mp r32.. eeh16.^\p |
+  r64 bis,16..^\mp r128 cis'64^\f r4.... \clef treble <g,,, c-\harmonic \parenthesize g''>32^\mf \clef "treble^8" e'''8.^\mp r32.. eeh16.^\p |
   \times 4/5 { c128^\mf^\> c128 c128 dis'128 cih,128^\! } |
 }
 
