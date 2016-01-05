@@ -7,7 +7,7 @@ TITLES = ['The Wonderful Wizard of Oz (Ouverture)','Somewhere Over the Rainbow',
 MUSIC = 'wizard1 waldOz comeOut itReallyWasNoMiracle dingDongTheWitchIsDead coroner lullaby-league lollipop-guild followTheYellowBrickRoad2 wizard2 brain wizard3 heart wizard4-3 nerve6 wizard5 optimistic3 merryFast2 kotf2 finale bis'.split(' ')
 RECORDINGS = 'wizard1 waldOz comeOut lullaby-league brain heart wizard4-3 nerve6 finale bis'.split(' ')
 MIDIS = 'wizard1 waldOz comeOut itReallyWasNoMiracle coroner lullaby-league lollipop-guild followTheYellowBrickRoad2 brain wizard3 heart wizard4-3 nerve6 wizard5 optimistic3 merryFast2 kotf2 finale bis'.split(' ')
-NOTPRINTABLE = 'lollipop-guild'.split(' ')
+NOTPRINTABLE = ''.split(' ')
 # first, verify existence
 
 for x in MUSIC :
@@ -49,10 +49,8 @@ outfi = file("index.html",'w')
 outfi.write(FRAME)
 outfi.close()
 
-'''
 for x in MUSIC :
   subprocess.call('lilypond '+x+".ly", shell=True)
-'''
 
 from ftplib import FTP
 ftp = FTP('ftp.ensemble101.fr')     # connect to host, default port

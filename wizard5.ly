@@ -440,7 +440,6 @@ mezzo = \relative c' { \autoBeamOff
   \lod r4. \sh d8 \lo cis \sh d \lo fis \sh eis |
   \lo fis \sh a \lo gis \sh a d4-. r |
   R1 |
-  %r8 eis,^\p^\< fis fisis gis4-.^\mf r |
   r8 disis,^\p^\< eis fis fisis4-.^\mf fis-. |
   r2 r8 cisis^\p^\< dis disis |
   eis4^\mf e dis d^\< |
@@ -464,7 +463,6 @@ mezzo = \relative c' { \autoBeamOff
   R1 |
   R1 |
   R1 |
-  %r8. eisis32^\p eisis eis8. eisis32 fisis gis8-. dis-. bis-. r |
   R1 |
   R1 |
   r8. fis'16^\mf^\> eis8. disis16 eis4^\ppp r4 |

@@ -140,7 +140,7 @@ soprano = \relative c'' { \autoBeamOff
   g4 r r4 f^\p^\<  |
   g a f4^\mp f4 | 
   e ees \lo d8 \sh des8 c4 |
-  c2 e4 g |
+  c2 d4 e |
   \lo fis8 \sh fis r4 r2 |
   \lodd r2.. \sh d8^\mp |
   a'4 \lo bes8 \sh bes8 \lo c \sh c d4 |
@@ -374,8 +374,9 @@ mezzo = \relative c'' { \autoBeamOff
   r8 bes \times 2/3 { g bes d } g4 \times 2/3 { g,8 bes d } |
   \lo g \sh aes \lo g \sh f \lo r \sh ees d4 |
   \lo ees8 c4 \sh d ~ \lod d4. \sh r8 |
-  R1*2 |
-  \lod r4. \sh a,8 d4 \lo e8 \sh e |
+  r4 bes^\pp^\< ~  bes2 ~ |
+  bes2. gis4 |
+  \lo a8-.^\mf \sh a-. \lo r \sh a,8^\mp d4 \lo e8 \sh e |
   \lo fis \sh fis g4 \lo a8 g4 \sh fis8 ~ |
   fis4 r r2 |
   \lodd r2.. \sh g,8 |
@@ -487,6 +488,7 @@ mezzoWords = \lyricmode {
   be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won
   cause of the Won -- der -- ful things oh the things he does
+  He's my Wi -- zard
   Be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won -- der -- ful
   Be -- cause of the Won -- der -- ful things he does
@@ -624,8 +626,8 @@ alto = \relative c' { \autoBeamOff
   c4 \times 2/3 { c,8 ees g } \lo c \sh des \lo c \sh bes |
   r4 \lo bes8 \sh c \lo bes \sh aes \lo r \sh c, |
   f4 \lo g \sh g \lo aes \sh aes \lo bes8 \sh g ~ |
-  \lo g8 \sh aes f r r2 |
-  r2. d4^\mf |
+  \lo g8 \sh aes \lo f \sh r r4 \lo ees8 \sh f |
+  \lo ees \sh d r4 r d4^\mf |
   g d bes c |
   d g ~ g d |
   \times 2/3 { ees d c } \times 2/3 { bes c a } |
@@ -790,6 +792,7 @@ altoWords = \lyricmode {
   cause of the Won -- der -- ful things
   Won -- der -- ful things
   Be -- cause of the Won -- der -- ful things he does
+  Won -- der -- ful things
   We're off to see the Wi -- zard
   The Won -- der -- ful Wi -- zard of Oz
   We hear he is a Wiz of a Wiz if ev -- er a Wiz there was
