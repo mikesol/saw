@@ -653,7 +653,7 @@ alto = \relative c' { \autoBeamOff
   r c r ces |
   r bes r g |
   r ees' r ees |
-  r d \lo r8 \sh d^\ff \lo d \sh d |
+  r ees \lo r8 \sh d^\ff \lo d \sh d |
   \lo d \sh d \lo d \sh d \lo d \sh d \lo d \sh d |
   \lo d \sh d \lo d \sh d \lo d \sh \sh a^\f \times 2/3 { b d e } |
   \clef "treble_8"
