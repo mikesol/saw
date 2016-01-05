@@ -556,9 +556,9 @@ bassBeginningWords = \lyricmode {
   I
   why
   why
-  dum dum dum
-  dum dum dum dum dum dum dum
-  dum dum dum dum dum dum dum dum dum
+  ○ ○ ○
+  ○ ○ ○ ○ ○ ○ ○
+  ○ ○ ○ ○ ○ ○ ○ ○ ○
   can't I
 }
 
@@ -1947,8 +1947,8 @@ bassRamp = \relative c { %\autoBeamOff
 }}
 
 bassRampWords = \lyricmode {
-  dum dum dum dum dum dum dum
-  dum dum dum dum dum
+  ○ ○ ○ ○ ○ ○ ○
+  ○ ○ ○ ○ ○
   where
   o -- ver rain
   skies
@@ -2239,7 +2239,7 @@ bassElan = \relative c { %\autoBeamOff
 }}
 
 bassElanWords = \lyricmode {
-  \repeat unfold 21 dum
+  \repeat unfold 21 ○
   way a a way a some -- where
   some -- where o -- ver rain
   birds fly
