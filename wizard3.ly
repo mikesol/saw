@@ -621,7 +621,7 @@ alto = \relative c' { \autoBeamOff
   c4 \times 2/3 { c,8 ees g } \lo c \sh des \lo c \sh bes |
   r4 \lo bes8 \sh c \lo bes \sh aes \lo r \sh c, |
   f4 \lo g \sh g \lo aes \sh aes \lo bes8 \sh g ~ |
-  \lo g8 \sh aes \lo f \sh r r4 \lo ees8 \sh f |
+  \lo g8 aes4 \sh f8 ~ \lo f8 \sh r \lo ees8 \sh f |
   \lo ees \sh d r4 r d4^\mf |
   g d bes c |
   d g ~ g d |
@@ -959,7 +959,7 @@ tenor = \relative c {
   \lodd r2.. \sh c,8^\mp |
   f4 \lo g8 \sh g \lo aes \sh aes bes4 |
   c4 \lo des8 \sh c r4 \lo c8 \sh des |
-  \lo c \sh bes r4 \lo a \sh aes \lo g \sh fis |
+  \lo c \sh bes r4 \lo bes \sh c \lo bes \sh a |
   \lo r8 a4 \sh aes8 g4 fis |
   \lod g4. \sh fis ~ fis4 r |
   R1*2 |
