@@ -7,7 +7,7 @@ legero = \markup \italic "legero"
 
 \header {
   title = "The Lullaby League" %(1)"
-  subtitle = \markup { for John Ozwald }
+  subtitle = \markup { for John Oswald }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

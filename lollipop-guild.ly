@@ -29,7 +29,7 @@ ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
   subtitle = \markup { for Mark Applebaum }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
-  arranger = "arr. Mike Solomon"
+  arranger = "arr. Mike Solomon and Mirjam Solomon"
 }
 
 nothing = {}
@@ -70,9 +70,9 @@ metronomeMarkTwo = \markup {
 
 \markup \override #'(line-width . 120) \column {
   \line { 1. Inhaled. 2. Slightly flat. 3. Smoky. 4. Yodeled.
-  5. Bluer. 6. Whispered. 7. Silly. 8. Curios. }
-  \line { 9. Glutteral. 10. Col legno battuto. 11. Anal. 12. Rich in phlegm. 13. Lacking any semblance of breath support. }
-  \line { 14. Overintellectualized. 15. Sweet. 16. Dans le style de l'ensemble 101.
+  5. Bluer. 6. Whispered. 7. Disruptive. 8. Curios. }
+  \line { 9. Glutteral. 10. Col legno battuto. 11. Anal. 12. Rich in phlegm. 13. Lacking breath support. }
+  \line { 14. Overintellectualized. 15. Negationist. 16. Dans le style de l'ensemble 101.
   17. Unrecognizable as music. 18. In the pocket. }
 }
 
@@ -83,6 +83,8 @@ marksLollipop = {
   \time 9/20
   \bar ".|:" s4 s4*4/5 | \bar ":|."  % the lollipop guild
   \time 5/8
+  \once \override Score . TimeSignature #'stencil =
+  #(lambda (grob) (grob-interpret-markup grob (markup #:override '(baseline-skip . 0) #:center-column (#:number "6" #:number "8" ) #:fontsize 1 "-" #:override '(baseline-skip . 0) #:center-column (#:number "1" #:number "8" ))))
   s4. % the lollipop 
   \mark \markup \override #'(thickness . 2.0) \box \pad-markup #1.5 \line { \general-align #Y #DOWN \metronomeMarkOne  = \general-align #Y #DOWN \metronomeMarkTwo } 
   s4 | % guild
@@ -106,7 +108,6 @@ marksLollipop = {
 
 prefatoryMatterLollipop = {
   %\key aes \major
-  #(set-accidental-style 'modern-cautionary)
 }
 
 sopranoLollipop = \relative c''' { \autoBeamOff
@@ -119,7 +120,7 @@ sopranoLollipop = \relative c''' { \autoBeamOff
   \once \override TupletNumber.text = \markup \epsfile #X #13 #"pi1.eps"
   \times 4/5 { dis4^\> e:32 cis dis cis^\p }
   r64 bis,16..^\mp r128 cis'64^\f r4.... \clef treble <g,,, c-\harmonic \parenthesize g''>32^\mf \clef "treble^8" e'''8.^\mp r32.. eeh16.^\p |
-  \times 4/5 { c128^\mf^\> c128 c128 dis'128 cih,128^\! } |
+  \times 4/5 { \hairtip aes128^\mf^\> \cricket c,,,128 \normal \clef "treble^8" aes'''128^\! ees'128 cih,128 } |
 }
 
 sopranoLollipopWords = \lyricmode {
@@ -147,7 +148,7 @@ mezzoLollipop = \relative c''' { \autoBeamOff
   \once \override TupletNumber.text = \markup \epsfile #X #15 #"pi2.eps"
   \times 2/3 { ees,2-- \times 2/3 { c'4-_ b-_ d-_ } fis2-> } |
   r2...*64/61 b64*64/61-! |
-  \times 4/5 { c128-. b^\trill c-. b,-. c'-.^\pp } |
+  \times 4/5 { b,,128-. c''^\trill d,-. e'-. eeh-.^\pp } |
   \override NoteHead.stencil = ##f
   b1 |
 }
@@ -236,13 +237,13 @@ altoLollipop = \relative c'' { \autoBeamOff
   \times 8/11 {
     \ann #-2 #-2 #"12"
     beseh4. ~
-    \ann #-2 #-2 #"13"
+    \ann #-3 #-2 #"13"
     beseh8 ~
-    \ann #0 #-2 #"14"
+    \ann #-0.5 #-2 #"14"
     beseh4 ~
-    \ann #-1 #-2 #"15"
+    \ann #-0.5 #-2 #"15"
     beseh16 ~
-    \ann #0 #-2 #"16"
+    \ann #1 #-2 #"16"
     beseh8. ~
     \ann #1 #-2 #"17"
     beseh4. ~
@@ -277,12 +278,23 @@ consord = \markup \italic "con sordina"
 % MIRRKU
 % mouth closed with lyrics
 % a 2
+
+%{
+%}
+
+#(define (center-kludge grob grob-origin context)
+   (let ((sp (ly:grob-property grob 'text)))
+     (format #t "~a\n" sp)
+     (ly:grob-set-property!
+      grob 'self-alignment-X
+      (if (equal? sp "-10dB") CENTER LEFT))))
+
 #(define (blackbox grob)
   (let* ((nep (ly:grob-property grob 'normalized-endpoints)))
     (ly:round-filled-box '(0 . 60) '(-0.5 . 0.5) 1)))
 tenorLollipop = \relative c'' {
   \autoBeamOff
-  \repeat tremolo 4 { c32^\f^\boccachiusa bis } \times 2/3 { f4 eis } geses8 f |
+  \repeat tremolo 4 {  c32^\boccachiusa-\tweak self-alignment-X #CENTER \tweak outside-staff-priority #10 ^\markup \fontsize #-2 "-13dB"  \override TextScript.self-alignment-X = #CENTER bis^\markup \fontsize #-2 "-14dB" } \times 2/3 { \once \override TextScript #'outside-staff-priority = #5 f4^\markup \fontsize #-2 "-18dB" eis^\markup \fontsize #-2 "-17dB" } geses8^\markup \fontsize #-2 "-19dB" f^\markup \fontsize #-2 "-21dB" |
   \times 4/5 { r64 } \once \override Hairpin #'stencil = #(lambda (grob) (vibster grob 0 0.2 0.4 '((9 0 20 -10 30 10)
 (10 10 0 10 -10) (10 10 0 10 10)
 (10 10 0 10 -10) (10 10 0 10 10)
@@ -291,14 +303,14 @@ tenorLollipop = \relative c'' {
 (10 10 0 10 -10) (10 10 0 10 10))
 ))
   \override Hairpin #'normalized-endpoints = #ly:spanner::calc-normalized-endpoints
-  beses16^\< gisis8 a8 f16 geses^\! |
-  \times 5/8 { r4. b8^\adue \set glissandoMap = #'((0 . 0) (0 . 1) (0 . 2))  <ces>\glissando \set glissandoMap = #'((0 . 0) (1 . 0) (2 . 0))  <d, fis e'>\glissando <ces'>\glissando b } |
+  beses16^\<^\markup \fontsize #-2 "-23dB" gisis8^\markup \fontsize #-2 "-25dB" a8^\markup \fontsize #-2 "-27dB" f16^\markup \fontsize #-2 "-29dB" geses^\markup \fontsize #-2 "-18dB"^\! |
+  \times 5/8 { r4. ces8^\markup \fontsize #-2 "-11dB"^\adue \set glissandoMap = #'((0 . 0) (0 . 1))  <b>^\markup \fontsize #-2 "-7dB"\glissando \set glissandoMap = #'((0 . 0) (1 . 0))  <aisis ces>^\markup \fontsize #-2 "-6dB"\glissando <ces>^\markup \fontsize #-2 "-5dB"\glissando b^\markup \fontsize #-2 "-12dB" } |
   \once \override TupletNumber.text = \markup \epsfile #X #20 #"pi4.eps"
   \once \override TupletBracket.direction = #UP
   \set Staff.pedalSustainStyle = #'mixed
-  \times 4/7 { ais4 ceses4 bes \noTr ais2.^\startTrillSpan ceses4^\stopTrillSpan } |
-  fis16*16/5-\sustainOn ges16*16/5 eis16*16/5-\sustainOff-\sustainOn ges16*16/5-\parend^\f fis16*16/5-\sustainOff |
-  \times 4/5 { \override PhrasingSlur.dash-definition = #'((0 1 0.4 0.75)) ees128^\consord \( feses ees feses dis \) } |
+  \times 4/7 { ais4^\markup \fontsize #-2 "-16dB" ceses4^\markup \fontsize #-2 "-24dB" bes^\markup \fontsize #-2 "-25dB" \noTr ais2.^\markup \fontsize #-2 "-33dB"^\startTrillSpan ceses4^\markup \fontsize #-2 "-34dB"^\stopTrillSpan } |
+  fis16*16/5-\sustainOn^\markup \fontsize #-2 "-35dB" ges16*16/5^\markup \fontsize #-2 "-14dB" eis16*16/5-\sustainOff-\sustainOn^\markup \fontsize #-2 "-3dB" ges16*16/5^\markup \fontsize #-2 "-2dB" fis16*16/5^\markup \fontsize #-2 "-10dB"-\sustainOff |
+  \times 4/5 { \override PhrasingSlur.dash-definition = #'((0 1 0.4 0.75)) ees128^\markup \fontsize #-2 "-26dB"^\consord \( feses^\markup \fontsize #-2 "-28dB" ees^\markup \fontsize #-2 "-30dB" feses^\markup \fontsize #-2 "-39dB" dis,^\markup \fontsize #-2 "-40dB" \) } |
   s1 |
 }
 
@@ -319,7 +331,7 @@ tenorLollipopWords = \lyricmode {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = \dortyName %shortInstrumentName = #"M."
 } <<
-      \new Voice = "sopranoLollipop" { << { \numericTimeSignature
+      \new Voice = "sopranoLollipop" { << { \numericTimeSignature \accidentalStyle dodecaphonic
         \sopranoLollipop
       } {
         \marksLollipop
@@ -350,7 +362,7 @@ tenorLollipopWords = \lyricmode {
  
     \new Staff = "mezzy" \with { instrumentName = \ttoName %shortInstrumentName = #"E."
 } <<
-      \new Voice = "mezzoLollipop" { << { \numericTimeSignature
+      \new Voice = "mezzoLollipop" { << { \numericTimeSignature \accidentalStyle dodecaphonic
         \mezzoLollipop
       } {
         \nothing
@@ -362,7 +374,7 @@ tenorLollipopWords = \lyricmode {
 >>
     \new Staff \with { instrumentName = \fakbydName %shortInstrumentName = #"Mk."
 } <<
-      \new Voice = "altoLollipop" { << { \numericTimeSignature
+      \new Voice = "altoLollipop" { << { \numericTimeSignature \accidentalStyle dodecaphonic
         \altoLollipop
       } {
         \nothing
@@ -373,7 +385,7 @@ tenorLollipopWords = \lyricmode {
     >>
     \new Staff \with { instrumentName = \wysrName %shortInstrumentName = #"R."
 } <<
-      \new Voice = "tenorLollipop" { << { \numericTimeSignature
+      \new Voice = "tenorLollipop" { << { \numericTimeSignature \accidentalStyle dodecaphonic
         \tenorLollipop
       } {
         \nothing
