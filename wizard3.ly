@@ -416,8 +416,8 @@ mezzo = \relative c'' { \autoBeamOff
     r4 f4^\mp^\< ~ f e |
     \lo ees8-.^\mf \sh ees-. r4 r2 |
     d4 \lo ees8 \sh ees \lo f \sh f g4 |
-    \times 2/3 { g2 g f }
-    \times 2/3 { ees1 e2 } |
+   g2.^\> f4 |
+    \lo ees8^\mp \sh ees r4 \times 2/3 { r4 e2 } |
     \times 2/3 { f2 fis g  }
     \times 2/3 { fis2 f^\mf ees } \times 2/3 { d d c } |
     b2^\> c | d b^\mp ~ |
@@ -512,7 +512,8 @@ mezzoWords = \lyricmode {
   It would scat -- ter o -- ver the yel -- low brick road
   Hey! Hey! Hey! Hey!
   He's my Wi -- zard
-  Cause of the Won -- der -- ful things that he does,
+  Cause of the Won -- der -- ful
+  Oh the Wi -- zard
   the Wiz, Oh the Wiz
   Oh the Wiz, Oh the Wiz my Wi -- zard
   Oh the Wiz, Oh the Wiz my
@@ -1016,7 +1017,7 @@ tenor = \relative c {
   \lo c8 \sh c \lo c \sh c ~ \lo c \sh c d4 |
   \lo ees bes4 \sh g8 ~ \lo g bes4 \sh aes8 ~ |
   \lo aes aes4 \sh g8 f4 c'4 |
-  g4 f ees c' |
+  g4 f ees bes' |
   ees,^\< ees ees' ees |
   d d c c |
   f1^\f^\> ~ |
