@@ -191,8 +191,8 @@ soprano = \relative c'' { \autoBeamOff
   \times 2/3 { d,4^\mp d d } \times 2/3 { e e e } |
   \times 2/3 { ees d ees } d des |
     c^\< d ees f |
-    g^\f f ees g |
-    aes a bes b |
+    g2^\f (  ges ) |
+    f4 g aes bes |
     c1^\> ~ |
     c2^\mp r |
     R1*2 |
@@ -286,7 +286,7 @@ sopranoWords = \lyricmode {
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
   Hey! Hey! Hey! Hey!
-  ev -- er oh ev -- er the Wi -- zard of Oz is one be -- cause be -- cause be -- cause be -- cause be -- cause be -- cause
+  ev -- er oh ev -- er the Wi -- zard of Oz is one be -- cause be -- cause cause be -- cause be -- cause
   He's my Wi -- zard, Wiz
   Oh the Wiz, Oh the Wiz
   my Wi -- zard
@@ -421,7 +421,7 @@ mezzo = \relative c'' { \autoBeamOff
     r2 \times 2/3 { des4^\mp des c } |
     \times 2/3 { c c c } c4 b |
     bes^\< a aes cis |
-     \times 2/3 { d2^\f^\> ees e2 } |
+     \times 2/3 { d2^\f^\> c e2 } |
     \times 2/3 { f2 fis g  }
     \times 2/3 { d2 f^\mf ees } \times 2/3 { d d c } |
     b2^\> c | d b^\mp ~ |
