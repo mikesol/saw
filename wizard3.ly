@@ -56,7 +56,12 @@ marks = {
   \tempo "Allegro" 2=110
   \partial 4
   s4 |
-  s1*168 |
+  s1*132 |
+  s2 \mark \markup \italic "accel." 
+  \unfoldChange #220 #260 #12 |
+  \mark \markup \italic "a tempo"
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 220 4 0 0)
+  s1*34 |
   \break
   s1*31 \bar "|."
 }
@@ -181,17 +186,17 @@ soprano = \relative c'' { \autoBeamOff
   \lo bes^\mp \sh bes \lo bes \sh bes \lo beses \sh beses \lo beses \sh beses |
   \lo aes \sh aes \lo aes \sh f-. \lo r f4 \sh f8 |
   \lo g \sh g \times 2/3 { g g g } \lo aes \sh aes \lo f \sh g ~ |
-  \lo g8 \sh bes8^\f \lo r \sh bes \lo r \sh bes r4 |
-    aes2.^\mp^\< fis4 |
-    \times 2/3 { g8^\mf gis a } \lo bes \sh g \lo ees \sh c \lo bes \sh g |
-    \lo g' \sh f ~ f4 ~ f2 |
-    r2. f4  |
-    g g aes a |
-    bes bes c c |
-    d1 ~ |
-    d2 r |
+  \lo g8 \sh bes8^\f \lo r \sh bes \lo r \sh bes \lo r \sh bes |
+  R1 |
+  \times 2/3 { d,4^\mp d d } \times 2/3 { e e e } |
+  \times 2/3 { ees d ees } d des |
+    c^\< d ees f |
+    g^\f f ees g |
+    aes a bes b |
+    c1^\> ~ |
+    c2^\mp r |
     R1*2 |
-    g,,2^\< c |
+    g,2^\< c |
     d^\> c |
     \times 2/3 { bes2^\mp bes'^\mf aes } \times 2/3 { g g f } |
     ees1^\> ~ |
@@ -280,9 +285,8 @@ sopranoWords = \lyricmode {
   I took his ra -- di -- at -- or out
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
-  Hey! Hey! Hey!
-  He's my Wi -- zard of Oz, he was an a -- ca -- de -- mic,
-  Be -- casue, be -- cause, be -- cause, be -- cause, be -- cause
+  Hey! Hey! Hey! Hey!
+  ev -- er oh ev -- er the Wi -- zard of Oz is one be -- cause be -- cause be -- cause be -- cause be -- cause be -- cause
   He's my Wi -- zard, Wiz
   Oh the Wiz, Oh the Wiz
   my Wi -- zard
@@ -413,13 +417,13 @@ mezzo = \relative c'' { \autoBeamOff
     \lo f \sh f \lo f \sh c-. \lo r c4 \sh c8 |
     \lo ees \sh ees \times 2/3 { ees ees ees } \lo d \sh d \lo d \sh bes ~ |
     \lo bes8 \sh ees8^\f \lo r \sh ees \lo r \sh ees \lo r \sh ees |
-    r4 f4^\mp^\< ~ f e |
-    \lo ees8-.^\mf \sh ees-. r4 r2 |
-    d4 \lo ees8 \sh ees \lo f \sh f g4 |
-   g2.^\> f4 |
-    \lo ees8^\mp \sh ees r4 \times 2/3 { r4 e2 } |
+    R1 |
+    r2 \times 2/3 { des4^\mp des c } |
+    \times 2/3 { c c c } c4 b |
+    bes^\< a aes cis |
+     \times 2/3 { d2^\f^\> ees e2 } |
     \times 2/3 { f2 fis g  }
-    \times 2/3 { fis2 f^\mf ees } \times 2/3 { d d c } |
+    \times 2/3 { d2 f^\mf ees } \times 2/3 { d d c } |
     b2^\> c | d b^\mp ~ |
     \times 2/3 { b aes'^\mf g } \times 2/3 { f f ees } |
     d1^\> ~ |
@@ -511,9 +515,7 @@ mezzoWords = \lyricmode {
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
   Hey! Hey! Hey! Hey!
-  He's my Wi -- zard
-  Cause of the Won -- der -- ful
-  Oh the Wi -- zard
+  ev -- er the Wi -- zard of Oz is one be -- cause be -- cause Oh 
   the Wiz, Oh the Wiz
   Oh the Wiz, Oh the Wiz my Wi -- zard
   Oh the Wiz, Oh the Wiz my
@@ -679,13 +681,12 @@ alto = \relative c' { \autoBeamOff
     \lo aes \sh c \lo ees \sh bes' \lo r aes4 \sh bes8 |
     \lo g \sh ees \times 2/3 { c ees f } \lo g \sh ees \lo f \sh ees ~ |
     \lo ees8 \sh des8^\f \lo r \sh des \lo r \sh des \lo r \sh des |
-    r2 d2^\mp^\< |
-    \times 2/3 { ees8^\mf f fis } \lo g \sh ees \lo c \sh bes \lo g \sh ees |
-    \lo bes'8 aes4 \sh r8 \lo d8 \sh d ees4 |
-    \times 2/3 { bes2 bes aes } |
-    \times 2/3 { g ees' d } |
-    \times 2/3 {  c c bes } |
-    \times 2/3 { aes g bes^\> }
+    r2 \times 2/3 { aes4^\mp aes aes } |
+    \times 2/3 { g g g } \times 2/3 { ges ges ges }
+    \times 2/3 { f4 f g } aes4 a |
+    c2 b |
+   \times 2/3 { bes2 ees^\mf d } \times 2/3 { c c bes }
+    \times 2/3 { aes2 g bes^\> } |
     \times 2/3 { c2 f^\mp ees } |
     \times 2/3 { d2 g^\mf f } \times 2/3 { ees ees d^\> ~ } |
     \times 2/3 { d2 c2 bes } |
@@ -822,10 +823,9 @@ altoWords = \lyricmode {
   I took his ra -- di -- at -- or out 
   He did -- n't know it was a -- bout to ex -- plode
   It would scat -- ter o -- ver the yel -- low brick road
-  \repeat unfold 4 Hey! He's
-  Wi -- zard of Oz, he was an a -- ca -- de -- mic,
-  Won -- der -- ful Wiz, oh the Wiz
-  Oh the Wiz, oh the Wiz, Oh the wiz
+  \repeat unfold 4 Hey!
+  ev -- er oh, ev -- er oh ev -- er the Wi -- zard of Oz is one cause cause Oh the Wiz, Oh the Wiz
+  Oh the wiz
   Oh the Wiz, Oh the Wiz, oh the what a Wi -- zard
   my Wi -- zard
   Oh the Wiz, Oh the Wi -- zard
@@ -1014,11 +1014,11 @@ tenor = \relative c {
   \lo d8 \sh d \lo d \sh c ~ \lo c \sh c ~ c4 |
   \lo f \sh f \lo f \sh f ~ \lo f d4 \sh bes ~  |
   bes2. bes4 |
-  \lo c8 \sh c \lo c \sh c ~ \lo c \sh c d4 |
-  \lo ees bes4 \sh g8 ~ \lo g bes4 \sh aes8 ~ |
-  \lo aes aes4 \sh g8 f4 c'4 |
-  g4 f ees bes' |
-  ees,^\< ees ees' ees |
+  \times 2/3 { c4^\mf c c } \times 2/3 { c c d } |
+  ees4 bes a bes |
+  \times 2/3 { aes4 aes g } f4 fis4 |
+  g4 ges f g |
+  ees^\< ees ees' ees |
   d d c c |
   f1^\f^\> ~ |
   f1 ~ |
@@ -1278,11 +1278,11 @@ bass = \relative c { \autoBeamOff
     \lo g8 \sh aes8^\f \lo r \sh a \lo r \sh bes \lo r \sh aes |
     R1 |
     R1 |
-    f4^\mp \lo g8 \sh g \lo aes \sh aes a4 |
-    bes4 c cis d |
-    ees bes g f |
-    g aes a f |
-    bes1^\mf ~ |
+    R1 |
+    r2 bes4^\mf aes |
+    g bes ees f |
+    g ees c a |
+    bes1 ~ |
     bes2^\> fis |
     g1^\mp ~ |
     g2 b |
@@ -1401,7 +1401,7 @@ bassWords = \lyricmode {
   cause of the Won -- der -- ful
   Won -- der
   Wiz of Oz Hey! Hey! Hey! Hey!
-  cause of the Won -- der -- ful one be -- cause
+  cause
   Be -- cause be -- cause be -- cause be -- cause be -- cause
   my Wiz
   my Wiz
