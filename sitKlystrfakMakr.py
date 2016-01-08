@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+
+URL = 'public_html/oz/perrine'
 import subprocess
 import sys
 import os
@@ -10,10 +12,16 @@ MIDIS = 'wizard1 waldOz comeOut itReallyWasNoMiracle coroner lullaby-league loll
 NOTPRINTABLE = ''.split(' ')
 # first, verify existence
 
+COUNT = 0
+
 for x in MUSIC :
   if not os.path.exists(x+".pdf") :
     raise ValueError(x+" score doesn't exist")
+  else :
+    cmd = "pdfinfo "+x+".pdf | grep 'Pages' | awk '{print $2}'"
+    COUNT += int(os.popen(cmd).read().strip())
 
+print "Approximate count", COUNT
 for x in RECORDINGS :
   if not os.path.exists('recordings/'+x+".mp3") :
     raise ValueError(x+" music doesn't exist")
@@ -55,7 +63,7 @@ for x in MUSIC :
 from ftplib import FTP
 ftp = FTP('ftp.ensemble101.fr')     # connect to host, default port
 ftp.login('mikesol','eudespeyre1')                     # user anonymous, passwd anonymous@
-ftp.cwd('public_html/oz')               # change into "debian" directory
+ftp.cwd(URL)               # change into "debian" directory
 outfi = file("index.html",'r')
 ftp.storbinary('STOR index.html', outfi)
 outfi.close()

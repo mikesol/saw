@@ -11,5 +11,9 @@
   top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
   bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
 }
+\header {
+  tagline=""
+}
 #(set-global-staff-size 15.87)
-%#(set-global-staff-size 15.15)
+#(set! paper-alist (cons '("oz" . (cons (* 200 mm) (* 250 mm))) paper-alist))
+#(set-default-paper-size "oz")

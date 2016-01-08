@@ -9,7 +9,9 @@
   arranger = "arr. Mike Solomon"
 }
 
-myBreak = { \break }
+myBreak = {
+  %\break
+}
 
 \paper {
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}

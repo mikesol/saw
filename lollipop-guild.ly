@@ -1,6 +1,6 @@
 \version "2.17.0"
 \include "stylesheet.ly"
-#(set-global-staff-size 13.7)
+%#(set-global-staff-size 15.15)
 \include "defs-devel.ly"
 \include "characterNames.ly"
 ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
@@ -150,6 +150,7 @@ mezzoLollipop = \relative c''' { \autoBeamOff
   r2...*64/61 b64*64/61-! |
   \times 4/5 { b,,128-. c''^\trill d,-. e'-. eeh-.^\pp } |
   \override NoteHead.stencil = ##f
+  \override Accidental.stencil = ##f
   b1 |
 }
 
@@ -249,15 +250,19 @@ altoLollipop = \relative c'' { \autoBeamOff
     beseh4. ~
   } |
   \ann #-1 #-2 #"16"
-  beseh16*16/33 bisih\breve*16/33 ~ |
-  bisih32 | \noBreak
+  beseh16*16/33 bisih\breve*16/33 |
+  r32 | \noBreak
   s1 |
 }
 
 altoLollipopWords = \lyricmode {
   We
   \override LyricText.font-size = #-2
-  representthelollipopguild,thelollipopguildandinthenameofthelollipopguildweWishtowelcomeyou
+  \override LyricText.self-alignment-X = #LEFT
+  \markup \override #'(baseline-skip . 0) \column {
+  representthelollipopguild,thelollipopguildandin
+  thenameofthelollipopguildweWishtowelcomeyou
+  }
 }
 
 legato = \markup \italic "legato"
