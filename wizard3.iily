@@ -52,7 +52,7 @@ marksWizardThree = {
   s2 \mark \markup \italic "accel." 
   \unfoldChange #220 #260 #12 |
   \mark \markup \italic "a tempo"
-  \set Score.tempoWholesPerMinute = #(ly:make-moment 220 4 0 0)
+  \set Score.tempoWholesPerMinute = #(ly:make-moment 260 4 0 0)
   s1*34 |
   \break
   s1*31 \bar "|."

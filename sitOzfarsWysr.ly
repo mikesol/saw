@@ -10,6 +10,8 @@
 \include "wizard2.iily"
 \include "brain.iily"
 \include "wizard3.iily"
+\include "heart.iily"
+\include "wizard4-3.iily"
 \book {
   \bookpart {
     \include "wizard1.ily"
@@ -46,5 +48,11 @@
   }
   \bookpart {
     \include "wizard3.ily"
+  }
+  \bookpart {
+    \include "heart.ily"
+  }
+  \bookpart {
+    \include "wizard4-3.ily"
   }
 }
