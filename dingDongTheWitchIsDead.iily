@@ -1,0 +1,61 @@
+\version "2.19.30"
+
+\include "defs-devel.ly"
+\include "stylesheet.ly"
+
+legero = \markup \italic "legero"
+bendHack = \once \override BendAfter.extra-offset = #'(-1 . 0) 
+
+
+
+z = {\bar""}
+dd = \relative c' {\autoBeamOff 
+  \tempo "Ridiculously fast"
+  \cadenzaOn
+  \key b \major
+  fis32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
+ \z fis' \z fis \z dis \z e \z fis \z a \z gis \z fis
+ \z fis32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
+ \z fis' \z fis \z dis \z e \z fis \z cis' \z b \z a
+ \z gis \z b \z b \z gis \z a \z b \z gis \z gis
+ \z dis' \z cis \z b \z ais \z gis \z gis
+ \z cis \z dis \z cis \z b \z ais \z gis
+ \z fis \z gis \z fis \z e \z dis \z cis
+ \z fis \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z dis \z cis \z b
+ \z dis \z fis \z b \z cis \z dis \z cis \z b \z cis \tag #'ugh { r16^\markup \bold "tutti" \z <b, b'> \bar "|." } \tag #'ugher { \z b }
+}
+
+ddw = \lyricmode {
+  Ding Dong the Witch is Dead
+  Which old Witch?
+  The Wic -- ked Witch!
+  Ding Dong the Wic -- ked Witch is Dead!
+  Wake up your slee -- py heads
+  Rub your eyes
+  Get out of bed!
+  Wake up the Wic -- ked Witch is Dead!
+  She's gone where the gob -- lins go
+  Be -- low be -- low be -- low
+  Yo ho, let's o -- pen up and sing
+  And ring the bells loud
+  Ding Dong the mer -- ry -- o
+  Sing it high
+  Sing it low
+  Let them know the Wic -- ked Witch is dead.
+}
+
+
+firstriff = \relative c' {
+  \tempo 4=96
+  <dis fis>16 [ <dih fih> <d f> <cisih eih> ]
+  \bar "!"
+  <cis e>  [ <cih disih> <bis dis> <bih dih>  ]
+  \bar "!"
+  <b d> [ <dis fis>16 <dih fih> <d f>  ]
+  \bar "!"
+  <fis a>16 [ <fih gisih> <eis gis> <eih gih> ]
+  \bar "!"
+  <dis fis> [ <d eis> <cis e> <c eeh> ]
+  \bar "!"
+  <b dis>
+}
