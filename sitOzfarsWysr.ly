@@ -12,6 +12,13 @@
 \include "wizard3.iily"
 \include "heart.iily"
 \include "wizard4-3.iily"
+\include "nerve6.iily"
+\include "wizard5.iily"
+\include "optimistic3.iily"
+\include "merryFast2.iily"
+\include "kotf2.iily"
+\include "finale.iily"
+\include "bis.iily"
 \book {
   \bookpart {
     \include "wizard1.ily"
@@ -54,5 +61,26 @@
   }
   \bookpart {
     \include "wizard4-3.ily"
+  }
+  \bookpart {
+    \include "nerve6.ily"
+  }
+  \bookpart {
+    \include "wizard5.ily"
+  }
+  \bookpart {
+    \include "optimistic3.ily"
+  }
+  \bookpart {
+    \include "merryFast2.ily"
+  }
+  \bookpart {
+    \include "kotf2.ily"
+  }
+  \bookpart {
+    \include "finale.ily"
+  }
+  \bookpart {
+    \include "bis.ily"
   }
 }

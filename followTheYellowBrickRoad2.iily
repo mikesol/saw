@@ -37,7 +37,7 @@ sopranoYBR = \relative c'' {
 sopranoWordsYBR = \lyricmode {
   \repeat unfold 2 { Fol -- low the Yel -- low Brick Road. }
   \repeat unfold 4 { Fol -- low }
-  Fol -- low
+  Fol %{ -- low %}
 }
 
 mezzoYBR = \relative c'' {
