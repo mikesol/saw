@@ -1,5 +1,5 @@
 \header {
-  title = "Final: Sit Ozfårs Wndrföl Wysr"
+  title = "Finale: Sit Ozfårs Wndrföl Wysr"
   %subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "tu veux une finale ? voilà ta finale. t'es contente ?? t'es contente ?!?!? " }
   %subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "« un final, ça donne envie d'applaudir, pas de gerber »" }
   subtitle = \markup \center-column { "for Marie Perbost" }

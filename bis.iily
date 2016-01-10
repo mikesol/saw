@@ -1,6 +1,4 @@
 \version "2.19.0"
-\include "defs-devel.ly"
-\include "stylesheet.ly"
 marD = \markup \null
 elsD = \markup \null
 mikD = \markup \null
@@ -24,13 +22,12 @@ shoot = \markup \italic ""
 heg = \markup "Hey!"
 wswing = "Swung"
 
-\include "stylesheet.ly"
 
 railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
   \breathe
 }
-myred = \once \override NoteHead #'color = #red
+%myred = \once \override NoteHead #'color = #red
 
 php = \once \override Hairpin.stencil = #(parenthesize-callback ly:hairpin::print)
 

@@ -1,5 +1,4 @@
 %%% RECURRENT "SOME" !!!
-\include "stylesheet.ly"
 mkf = \once \set Score.markFormatter = #format-mark-box-letters
 
 %{
@@ -17,7 +16,6 @@ mkf = \once \set Score.markFormatter = #format-mark-box-letters
 %%%%%% C-major happy going down
 
 \version "2.17.0"
-\include "defs-devel.ly"
 
 
 
@@ -364,8 +362,8 @@ sopranoBeginning = \relative c' { \autoBeamOff
   R4. |
   r4 f'8^\p ~ f4^\espressivo f,4^\mp |
 }}   \wkey c \major {
-  e4 g e-. |
-  f2^\< g2 |
+  e4^\< g e-.^\mf |
+  f2^\p^\< g2 |
   a8^\f r r4 r4. |
 }   \wkey b \major {
   R2. |
@@ -400,13 +398,13 @@ mezzoBeginning = \relative c' { \autoBeamOff
   %fis,4.^\mp dis'4 |
 }   \wkey ees \major { \relative c' {
   ees4^\f ees4 ees4 ees8 |
-  f4 d8 |
-  bes8 [ bes' ] g |
+  f4^\mp^\< d8 |
+  bes8^\mf [ bes' ] g |
   d4.^\trill^\> ~ d8^\mp r8 r4 |
 }}   \wkey c \major {
-  e4 ees d-. |
-  r2 e2^\< |
-  f8^\f r dis4 ~ dis4. |
+  e4^\< ees d-.^\mf |
+  r2 e2^\mp^\< |
+  f8^\f r dis4^\> ~ dis4.^\mp |
 }   \wkey b \major {
   R2. |
   fis,4^\mf^\> dis' |
@@ -440,19 +438,19 @@ altoBeginning = \relative c { \autoBeamOff
   fis4.^\mp dis'4 |
 }   \wkey ees \major { \relative c' {
   bes4^\f aes g4 r8 |
-  r8 d'8 bes |
-  aes [ f ] ees'
+  r8 d'8^\mp^\< bes |
+  aes^\mf [ f ] ees'
   bes4.^\> ~ bes8^\mp r8 r4 |
 }}   \wkey c \major {
-  c4 ces bes-. |
-  f'4 ( e ) d ( c ) |
-  b8 r r4 r4. |
+  c4^\< ces bes-.^\mf |
+  f'4^\p^\< ( e ) d ( c ) |
+  b8^\f r r4 r4. |
 }   \wkey b \major {
-  b2^\mf gis'4 |
-  fis2 |
-  gis,4. e' |
-  \times 3/5 { dis2 b cis dis e }
-  cis8 r4 r4 |
+  b2^\mf^\< gis'4 |
+  fis2^\> |
+  gis,4.^\mf e' |
+  \times 3/5 { dis2^\< b cis^\> dis e }
+  cis8^\mf r4 r4 |
   g2^\f |
   fis2. |
 }}
@@ -483,9 +481,9 @@ tenorBeginning = \relative c { \autoBeamOff
   des4^\f b4 d4 c8 |
   %r8 aes4 ~ |
   %aes8. r8. |
-  r4 aes8 |
+  r4 aes8^\mp^\< |
   f [ d ] c' |
-  g4.^\> ~ g8^\p r8 r4 |
+  g4.^\!^\> ~ g8^\mp r8 r4 |
 }}   \wkey c \major {
   R2. |
   r2 e'4.^\mf^\< d8 ~ |
@@ -1046,9 +1044,10 @@ marksRestarts = {
 sopranoRestarts = \relative c'' { %\autoBeamOff
    \wkey cis \major {
   gis4 eis8.-. gis8. |
-}   \wkey c \major {
+}   \wkey ees \major {
   R1 |
   R1*5/4
+}   \wkey e \major {
   R2 |
   %r4. e8-.^\mp e-. e-. r8 |
   r4 r16 gis16-.^\pp gis-. gis-. r8
@@ -1065,8 +1064,9 @@ mezzoRestarts = \relative c' { %\autoBeamOff
   disis4 eis8.-. disis8. |
 }   \wkey ees \major { \relative c'' {
   r8 g4^\mf e8 \times 2/3 { a4 ( g ) f }
-  \times 2/3 { d4^\mp ees f ~ } f8 g4 ees8
-}} \wkey c \major { a'4^\f |
+  \times 2/3 { d4^\mp^\< ees f ~ } f8 g4^\> ees8^\mp
+  a'4^\f |
+}} \wkey e \major { 
   fis8 a gis fis |
   << { e4. ~ e8 dis8 
 } { 
@@ -1089,8 +1089,9 @@ altoRestarts = \relative c' { %\autoBeamOff
   r4 r8. bis8. |
 }   \wkey ees \major { \relative c' {
   r2 \times 2/3 { f4^\mf ( e ) d } |
-  \times 2/3 { bes^\mp c d ~ } d8 ees4 d8 r4 |
-  r4. } \wkey c \major { a8^\f |
+  \times 2/3 { bes^\mp^\< c d ~ } d8 ees4^\> d8^\mp r4 |
+ } \wkey e \major { 
+  r4. a8^\f |
   %<< { gis2 ~ gis4. ~  } { s2.^\> s8^\p } >> |
   << { gis4. ~ gis4 ~
 } { 
@@ -1112,8 +1113,8 @@ tenorRestarts = \relative c' { %\autoBeamOff
 }   \wkey ees \major { \relative c' {
   R1 |
 \tupFrac
-  \times 7/8 { aes4^\mp g f bes } g8 } \wkey c \major { a4 |
-  d4 b^\f |
+  \times 7/8 { aes4^\mp^\< g f bes^\> } g8 a4^\< | } \wkey e \major {
+  d4^\f b |
 %  << { b2 ~ b4. |  } { s2.^\> s8^\p } >> |
   << { b4. ~ b4
 } { 
@@ -1133,7 +1134,7 @@ bassRestarts = \relative c { %\autoBeamOff
   R1*5/8 |
 }   \wkey ees \major { \relative c' {
   r8 g4^\mf cis,8 d2 |
-  f2^\mp bes,4. ees8 } \wkey c \major { r4 |
+  f2^\mp bes,4. ees8 r4 | } \wkey e \major {
   d^\f dis |
 %  << { e2 ~ e4. |  } { s2.^\> s8^\p } >> |
   << { e4. ~ e4
@@ -1799,11 +1800,11 @@ sopranoRamp = \relative c' { %\autoBeamOff
   e4^\mp^\< dis dis gis |
 }   \wkey fis \major {
   g8^\f b4.^\p^\< b4^\f |
-  fis4 eis8 dis eis ~ |
+  fis4^\mf eis8 dis eis ~ |
 }   \wkey cis \major {
-  eis r eis4  |
+  eis r eis4^\<  |
 }   \wkey b \major {
-  r8 fis ~ fis4 ~ fis4 r8 |
+  r8^\! fis^\f ~ fis4 ~ fis4 r8 |
 }   \wkey bes \major { \relative c' {
   bes2^\mf^\> ees4. |
 }}   \wkey e \major {
@@ -1830,11 +1831,11 @@ mezzoRamp = \relative c' { %\autoBeamOff
   gis8 [ g ] a4 gis ais |
 }   \wkey fis \major {
   b-.^\f g a |
-  gis4 eis8 fis gis |
+  gis4^\mf eis8 fis gis |
 }   \wkey cis \major {
-  cis,4 ais' |
+  cis,4 ais'^\< |
 }   \wkey b \major {
-  r8 ~ cis ~ cis4 ~ cis r8 |
+  r8^\! ~ cis^\f ~ cis4 ~ cis r8 |
 }   \wkey bes \major { \relative c' {
   bes2^\mf^\> g'4. |
 }}   \wkey e \major {
@@ -1860,11 +1861,11 @@ altoRamp = \relative c' { %\autoBeamOff
   d'4^\mp^\< cis e2 |
 }   \wkey fis \major {
   e4^\f fis e
-  dis4 r r8 |
+  dis4^\mf r r8 |
 }   \wkey cis \major {
-  r4 cis |
+  r4 cis^\< |
 }   \wkey b \major {
-  r8 dis ~ dis4 ~ dis r8 |
+  r8^\! dis^\f ~ dis4 ~ dis r8 |
 }   \wkey bes \major { \relative c' {
   r2 c4.^\mf^\> |
 }}   \wkey e \major {
@@ -1891,11 +1892,11 @@ tenorRamp = \relative c' { %\autoBeamOff
   bes4^\< a c b bes a cis c |
 }   \wkey fis \major {
   c4^\f b cis |
-  b4 r8 b4 |
+  b4^\mf r8 b4 |
 }   \wkey cis \major {
-  ais4 fisis |
+  ais4 fisis^\< |
 }   \wkey b \major {
-  r8 ais ~ ais4 ~ ais r8 |
+  r8^\! ais^\f ~ ais4 ~ ais r8 |
 }   \wkey bes \major { \relative c' {
   g4^\mf^\> ( ees ) beses'4. ~ |
 }}   \wkey e \major {
@@ -1921,12 +1922,12 @@ bassRamp = \relative c { %\autoBeamOff
   r8 gis^\< d' cis c fis, b bes |
   a e gis g r fis^\f r4 |
 }   \wkey fis \major {
-  r8 d'4^\p r8-\parenthesize^\f r4 |
-  b4 gis cis8 ~
+  r8 d'4.^\p^\< r4-\parenthesize^\f |
+  b4^\mf gis cis8 ~
 }   \wkey cis \major {
-  cis fis,4 r8 |
+  cis fis,4^\< r8^\! |
 }   \wkey b \major  {
-  r8 b ~ b4 ~ b r8 |
+  r8 b^\f ~ b4 ~ b r8 |
 }   \wkey bes \major {
   R1*7/8 |
 }   \wkey e \major {
@@ -2209,7 +2210,7 @@ bassElan = \relative c { %\autoBeamOff
   bes a f e |
   \times 2/3 { gis2 g dis } |
   \times 2/3 { fis f d } |
-}   \wkey b \major { %\wkey bes \major { %%% CHECK <------ MS MS MS
+}   \wkey f \major { %\wkey bes \major { %%% CHECK <------ MS MS MS
   f4.^\< e8 ~ e r f4 |
   r8 f8 ~ f4 r e |
 }   \wkey a \major {
@@ -2879,9 +2880,9 @@ marksWinding = {
 
 sopranoWinding = \relative c' { %\autoBeamOff
    \wkey b \major {
-  dis2 |
-  \times 2/3 { fis4 b gis } e8. dis16 ~ dis cis8. ~ cis8 r |
-  \times 2/3 { r4 ais bis } g' g |
+  dis2^\< |
+  \times 2/3 { fis4^\mf b gis } e8. dis16 ~ dis cis8.^\> ~ cis8^\mp r |
+  \times 2/3 { r4 ais^\< bis } g'^\mp g^\> |
   e2^\p dis2. fis4. |
   dis4 e \times 4/5 { d^\< f e fis gis ~ } |
   gis2^\> gis\! |
@@ -2897,10 +2898,10 @@ sopranoWindingWords = \lyricmode {
 mezzoWinding = \relative c' { %\autoBeamOff 
    \wkey b \major {
   R2 |
-  \times 2/3 { r2 ais4 } \times 2/3 { bis gis' fis } e ~ |
-  e8 dis8 ~ dis4 ~ dis8 cis ~ cis4 ~ |
-  cis r b2 r4 r4. |
-  b4 cis^\p \times 4/5 { b^\< cis c d e ~ } |
+  \times 2/3 { r2 ais4^\< } \times 2/3 { bis^\mf gis' fis } e ~ |
+  e8 dis8^\> ~ dis4 ~ dis8 cis ~ cis4 ~ |
+  cis^\p r b2 r4 r4. |
+  b4 cis \times 4/5 { b^\< cis c d e ~ } |
   e2^\> e\! |
 }}
 
@@ -2913,7 +2914,7 @@ mezzoWindingWords = \lyricmode {
 altoWinding = \relative c' { %\autoBeamOff
    \wkey b \major {
   R2 |
-  r1 b4 |
+  r1 b4^\espressivo |
   r2 ais2^\p ~ |
   ais1 r4 r4. |
   b4 ais \times 4/5 { g^\< gis a r dis ~ } |
@@ -2930,8 +2931,8 @@ tenorWinding = \relative c { %\autoBeamOff
   %\clef "treble_8"
    \wkey b \major {
   fisis8 r fis4 |
-  gis2. a4. gis8 ~ |
-  gis r8 r4 r2 |
+  gis2.^\< a4.^\> gis8 ~ |
+  gis^\! r8 r4 r2 |
   r2. fis2^\p ~ fis4. ~ |
   fis4 r \times 4/5 { r4 b^\< f gis r } |
   gis\! r r2 |
@@ -2947,9 +2948,9 @@ tenorWindingWords = \lyricmode {
 bassWinding = \relative c { %\autoBeamOff
   %\clef bass
    \wkey b \major {
-  \times 2/3 { r4 dis ( d ) } |
-  cis4 dis4 e4 fis4 gis ~ |
-  gis g fis4. fis,8^\> ~ |
+  \times 2/3 { r4 dis^\< ( d ) } |
+  cis4^\mf^\> dis4 e4 fis4 gis ~ |
+  gis^\mp g fis4 r8 fis,8^\> ~ |
   fis2 cis'2^\p ais gis8 ~ |
   gis4 r r2 r2 |
   R1 |

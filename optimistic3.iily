@@ -1,14 +1,12 @@
 \version "2.17.0"
-\include "defs-devel.ly"
-\include "stylesheet.ly"
 
 MyRed = \Red
 MyBlack = \Black
-myred = \once \override NoteHead.color = #red
+%myred = \once \override NoteHead.color = #red
 myblack = \revert NoteHead.color
 %MyRed = \revert NoteHead.color
 %MyBlack = \revert NoteHead.color
-%myred = \revert NoteHead.color
+%%myred = \revert NoteHead.color
 %myblack = \revert NoteHead.color
 
 agogic = #(make-articulation "downbow")

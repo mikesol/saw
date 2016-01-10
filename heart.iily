@@ -1,6 +1,4 @@
 % FILE SPECIFIC
-\include "defs-devel.ly"
-\include "stylesheet.ly"
 %oS =  #(make-span-event 'SlurEvent START)
 %cS = #(make-span-event 'SlurEvent STOP)
 light = \markup \italic "léger, innocent"
@@ -63,7 +61,7 @@ railroad =  {
   \once \override BreathingSign.text = \markup \musicglyph #"scripts.caesura.straight"
   \breathe
 }
-myred = \once \override NoteHead #'color = #red
+%myred = \once \override NoteHead #'color = #red
 
 php = \once \override Hairpin.stencil = #(parenthesize-callback ly:hairpin::print)
 

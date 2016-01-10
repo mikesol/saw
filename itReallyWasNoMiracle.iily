@@ -8,9 +8,6 @@
 % high duo avec Marie
 % --
 \version "2.19.30"
-\include "defs-devel.ly"
-
-
 
 %{
   
@@ -61,7 +58,6 @@
    
 %}
 
-\include "stylesheet.ly"
 
 %changeUp = { \change Staff = "up" }
 %changeDown = { \change Staff = "down" }
@@ -108,7 +104,7 @@ sopranoItReallyWasNoMiracle = \relative c' {
   R1 |
   r4 ais,^\p^\< ~ << { ais2 } { s4 s4^\>} >> |
   b4-.^\p r r2 |
-  r4 fis'4--^\mp^\> ~ fis^\p r4 |
+  r4 \hairlen #4 fis'4--^\mp^\> ~ fis^\p r4 |
   gis1^\pp ~ |
   gis4. r8 eis2 |
   r2.. g8 |
@@ -140,7 +136,7 @@ mezzoItReallyWasNoMiracle = \relative c'' {
   R1*2 |
   r2 r8 << { bis8 ~ bis4 } { s8.^\p^\< s8.^\> } >> |
   cis4-.^\p r r2 |
-  r4 dis^\mp--^\> ~ dis^\p r |
+  r4 \hairlen #4 dis^\mp--^\> ~ dis^\p r |
   fis1^\pp ~ |
   fis4. r8 dis2 |
   r2 r8 dis eis4 ~ |
@@ -321,7 +317,7 @@ altoWordsItReallyWasNoMiracle = \lyricmode {
   Kit -- chen took a slitch It lan -- ded on the Wick -- ed Witch
   Oh,
   Was not a heal -- thy si -- tu -- a -- tion for the
-  %{Wic -- ked%} Witch re -- duced to just a stitch
+  Witch re -- duced to just a stitch
   %Thank you ve -- ry sweet -- ly for you killed her so com -- plete -- ly
   Mid -- dle of a ditch just then went fly -- ing on her broom -- stick
   Let the joy -- ous
@@ -399,4 +395,3 @@ bassWordsItReallyWasNoMiracle = \lyricmode {
   der
   Oz.
 }
-

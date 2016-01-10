@@ -31,10 +31,8 @@
 %}
 
 \version "2.17.0"
-\include "defs-devel.ly"
 
-#(load "swing.scm")
-\include "stylesheet.ly"
+%#(load "swing.scm")
 #(set-accidental-style 'modern-cautionary)
 
 rall = \mark \markup \italic "rall."
@@ -42,7 +40,7 @@ rubato = \mark \markup \italic "rubato"
 piumosso = \mark \markup \italic "più mosso"
 moltorall = \mark \markup \italic "molto rall."
 
-myred = \once \override NoteHead #'color = #red
+%myred = \once \override NoteHead #'color = #red
 myblue = \once \override NoteHead #'color = #blue
 myorange = \once \override NoteHead #'color = #(x11-color 'orange)
 mydarkgreen = \once \override NoteHead #'color = #darkgreen

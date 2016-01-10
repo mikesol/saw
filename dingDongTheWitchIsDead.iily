@@ -1,7 +1,5 @@
 \version "2.19.30"
 
-\include "defs-devel.ly"
-\include "stylesheet.ly"
 
 legero = \markup \italic "legero"
 bendHack = \once \override BendAfter.extra-offset = #'(-1 . 0) 

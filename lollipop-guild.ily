@@ -6,6 +6,14 @@
   arranger = "arr. Mike Solomon and Mirjam Solomon"
 }
 %%% SCORE
+\markup \override #'(line-width . 120) \column {
+  \line { 1. Inhaled. 2. Slightly flat. 3. Smoky. 4. Yodeled.
+  5. Bluer. 6. Whispered. 7. Disruptive. 8. Curios. }
+  \line { 9. Glutteral. 10. Col legno battuto. 11. Anal. 12. Rich in phlegm. 13. Lacking breath support. }
+  \line { 14. Overintellectualized. 15. Negationist. 16. Dans le style de l'ensemble 101.
+  17. Unrecognizable as music. 18. In the pocket. }
+}
+
 
 \score {
   \new ChoirStaff <<

@@ -1,3 +1,6 @@
+\include "defs-devel.ly"
+\include "stylesheet_book.ly"
+
 \include "wizard1.iily"
 \include "waldOz.iily"
 \include "comeOut.iily"

@@ -1,6 +1,4 @@
 \version "2.17.0"
-\include "defs-devel.ly"
-\include "stylesheet.ly"
 
 %{
   one idea for the piece is that all the accompaniment is restricted to
@@ -34,11 +32,11 @@ descant = \markup \italic "descant"
 
 MyRed = \Red
 MyBlack = \Black
-myred = \once \override NoteHead.color = #red
+%myred = \once \override NoteHead.color = #red
 myblack = \revert NoteHead.color
 %MyRed = \revert NoteHead.color
 %MyBlack = \revert NoteHead.color
-%myred = \revert NoteHead.color
+%%myred = \revert NoteHead.color
 %myblack = \revert NoteHead.color
 
 nothing = {}
@@ -360,14 +358,14 @@ mezzoWizardThree = \relative c'' { \autoBeamOff
   \lo r8 b4 \sh g8 \lo r8 b4 \sh g8 |
   \lo r8 b4 \sh g8 r2 |
   R1*8 |
-  r4 \lo d''8^\mp \sh ees \lo d \sh c r4 |
-  \lo c8 \sh d \lo c \sh bes \lo r8 \sh d, \times 2/3 { g gis a } |
+  r8 d''8^\mp^\straight ees d c r4 c8 |
+  d c bes r8 \lo r8 \sh d,^\swung \times 2/3 { g gis a } |
   \lo bes \sh c \lo bes8 \sh a ~ \lo a d4 \sh g,8 |
   r8 bes \times 2/3 { g bes d } g4 \times 2/3 { g,8 bes d } |
   \lo g \sh aes \lo g \sh f \lo r \sh ees d4 |
-  \lo ees8 c4 \sh d ~ \lod d4. \sh r8 |
-  r4 bes^\pp^\< ~  bes2 ~ |
-  bes2. gis4 |
+  \lo ees8 c4 \sh d ~ d4 r4 |
+  c4 bes ~ bes a ~ | 
+  a gis fisis gis4 |
   \lo a8-.^\mf \sh a-. \lo r \sh a,8^\mp d4 \lo e8 \sh e |
   \lo fis \sh fis g4 \lo a8 g4 \sh fis8 ~ |
   fis4 r r2 |
@@ -480,7 +478,8 @@ mezzoWordsWizardThree = \lyricmode {
   be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won
   cause of the Won -- der -- ful things oh the things he does
-  He's my Wi -- zard
+  He does, My Wi -- zard, my
+  Wi -- zard
   Be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won -- der -- ful
   Be -- cause of the Won -- der -- ful things he does
@@ -493,7 +492,7 @@ mezzoWordsWizardThree = \lyricmode {
   cause of the Won -- der -- ful things he does
   Won -- der -- ful things
   Won -- der -- ful things
-  cause of the Won and what a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
+  cause of the Won Oh what a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz, a Wiz
     cut -- ting Tom
   ter he left and ev -- 'ry -- one doubt
   ru -- lent fact that he a
@@ -581,10 +580,10 @@ altoWizardThree = \relative c' { \autoBeamOff
   a b c d |
   \lo e8 f4 \sh g8 \lo r \sh a ~ a4 |
   f4 e d c |
-  b2 r4 a |
-  f'4 d b d |
-  c a g g |
-  a b c c |
+  b2 r4 e |
+  f4 d b d |
+  g e c g |
+  a b c d |
   b' a f d |
   c c^\< c' c |
   b b a \lo a8 \sh gis^\f ~ ( |
@@ -791,7 +790,7 @@ altoWordsWizardThree = \lyricmode {
   cause he's my
   He's my Wi -- zard
   He's my Wi -- zard
-  He's my Wiz and what a Wiz,  a Wiz,  a Wiz,  a Wiz,  a Wiz,  a Wiz,  a Wiz
+  He's my Wiz Oh what a Wiz,  a Wiz,  a Wiz,  a Wiz,  a Wiz,  a Wiz,  a Wiz
   He was a be -- lie -- ver
     Hi -- de -- ous -- ly ab -- rupt
   Would -- n't help with your re -- gres -- sion
@@ -951,9 +950,9 @@ tenorWizardThree = \relative c {
   R1*5 |
   \lodd r2.. \sh c,8^\mp |
   f4 \lo g8 \sh g \lo aes \sh aes bes4 |
-  c4 \lo des8 \sh c r4 \lo c8 \sh des |
-  \lo c \sh bes r4 \lo bes \sh c \lo bes \sh a |
-  \lo r8 a4 \sh aes8 g4 fis |
+  c4 \lo des8 \sh c r4 c8^\straight des |
+  c bes r4 bes8 c bes a |
+  \lo r8^\swung a4 \sh aes8 g4 fis |
   \lod g4. \sh fis ~ fis4 r |
   R1*2 |
   \lod r4. \sh f8 bes4 \lo c8 \sh c |

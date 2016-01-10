@@ -7,9 +7,9 @@
 }
 \score {
   <<
-    \new Staff = upper \with { instrumentName = \markup \right-column { Bitch Dörty Ttö } } { \new Voice = "singer" \rhWizTwo }
+    \new Staff = upper \with { instrumentName = \markup \right-column { Soprano Mezzo Contralto } } { \new Voice = "singer" \rhWizTwo }
     \new Lyrics \lyricsto "singer" \joke
-    \new Staff = lower \with { instrumentName = \markup \right-column { Fakbyd Wysr }  } { \new Voice = "other" \lhWizTwo }
+    \new Staff = lower \with { instrumentName = \markup \right-column { Tenor Bass }  } { \new Voice = "other" \lhWizTwo }
     \new Lyrics \lyricsto "other" \joke
   >>
   \layout {

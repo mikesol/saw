@@ -1,5 +1,5 @@
 \header {
-  title = "Ouverture: The Wonderful Wizard of Oz" %(1)"
+  title = "Overture: The Wonderful Wizard of Oz" %(1)"
   subtitle = \markup { for Bill Evans, William Schuman, and Hugo Wolf }
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"

@@ -1,19 +1,15 @@
 \paper {
   ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
+  left-margin = 1.0\in
+  right-margin = 1.0\in
   ragged-last-bottom = ##f
   %max-systems-per-page = #2
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
   footnote-padding = 5\mm
-  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
-  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
-}
-\header {
-  tagline=""
+  top-margin = 1\in
+  bottom-margin = 1\in
+  %top-system-spacing = #'((basic-distance . 20) (minimum-distance . 20) (padding . 20) (stretchability . 20))
+  %bottom-system-spacing = #'((basic-distance . 20) (minimum-distance . 20) (padding . 20) (stretchability . 20))
 }
 #(set-global-staff-size 15.87)
-#(set! paper-alist (cons '("oz" . (cons (* 200 mm) (* 250 mm))) paper-alist))
-#(set-default-paper-size "oz")
+myred = {}

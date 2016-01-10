@@ -1,6 +1,4 @@
 \version "2.17.0"
-\include "defs-devel.ly"
-\include "stylesheet.ly"
 
 myBreak = {
   %\break
@@ -8,11 +6,11 @@ myBreak = {
 
 %MyRed = \Red
 %MyBlack = \Black
-%myred = \once \override NoteHead.color = #red
+%%myred = \once \override NoteHead.color = #red
 %myblack = \revert NoteHead.color
 MyRed = \revert NoteHead.color
 MyBlack = \revert NoteHead.color
-myred = \revert NoteHead.color
+%myred = \revert NoteHead.color
 myblack = \revert NoteHead.color
 
 marksWizardOne = {
@@ -173,6 +171,15 @@ dynamicsGlobalWizardOne = {
   s4.*4 |
   s4.^\ff |
   s4.*2 |
+  s4 s8^\f |
+  s4.*7 |
+  s4.^\> |
+  s4.^\mp |
+  s4.*2 |
+  s4 s8^\< |
+  s4.^\mf |
+  s4.^\> |
+  s4.^\p |
   s4 s8^\f |
 }
 

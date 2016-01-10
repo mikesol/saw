@@ -23,8 +23,6 @@
 %}
 %1,2,3,5,7
 \version "2.17.0"
-\include "defs-devel.ly"
-\include "stylesheet.ly"
 \include "merryFastCanonSketch.ly"
 maybeStemUp =  { %{\stemUp%} }
 maybeStemDown =  { %{\stemDown%} }
@@ -32,11 +30,11 @@ maybeStemNeutral = { %{\stemNeutral%} }
 sim = \markup \italic "sim."
 MyRed = \Red
 MyBlack = \Black
-myred = \once \override NoteHead.color = #red
+%myred = \once \override NoteHead.color = #red
 myblack = \revert NoteHead.color
 %MyRed = \revert NoteHead.color
 %MyBlack = \revert NoteHead.color
-%myred = \revert NoteHead.color
+%%myred = \revert NoteHead.color
 %myblack = \revert NoteHead.color
 
 solo = \markup \italic "solo"

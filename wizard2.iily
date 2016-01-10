@@ -1,8 +1,5 @@
 \version "2.19.30"
 NT = \override Score.TimeSignature.stencil = ##f
-\include "stylesheet.ly"
-
-
 
 %{
   1. unisono

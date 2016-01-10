@@ -1,5 +1,4 @@
 %<ees d' f a f'> d bes c d bes
-\include "stylesheet.ly"
 %%%%%% ending with E major
 %%%%%% then D major
 %%%%%% then B major (if happy)
@@ -7,7 +6,6 @@
 %%%%%% C-major happy going down
 
 \version "2.17.0"
-\include "defs-devel.ly"
 
 swung = \markup \italic "swung"
 notswung = \markup \italic "not swung"
@@ -23,8 +21,8 @@ railroad =  {
   \breathe
 }
 
-myred = \once \override NoteHead #'color = #red
-%myred = {}
+%%myred = \once \override NoteHead #'color = #red
+%%myred = {}
 
 prefatoryMatterBrain = {
   \key ees \major
