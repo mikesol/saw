@@ -1,6 +1,6 @@
 \header {
   title = "Encore: The Wonderful Wizard of Oz"
-  %subtitle = "for Jesper Holm"
+  subtitle = "for Jesper Holm"
   %title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"

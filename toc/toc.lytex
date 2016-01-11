@@ -1,0 +1,11 @@
+\documentclass[letterpaper]{article}
+
+\begin{document}
+
+foo bar.
+
+\lilypondfile[quote,noindent]{wizard1.ly}
+
+foo bar.
+
+\end{document}

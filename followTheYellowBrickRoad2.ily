@@ -1,3 +1,10 @@
+\header {
+  title = "Follow the Yellow Brick Road" %(1)"
+  subtitle = \markup { for Charles Ives }
+  composer = "Harold Arlen"
+  poet = "E.Y. Harburg"
+  arranger = "arr. Mike Solomon"
+}
 \score {
   \new ChoirStaff <<
     \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."

@@ -9,4 +9,5 @@
 *.aux
 *.log
 *.out
+toc/out
 index.html
