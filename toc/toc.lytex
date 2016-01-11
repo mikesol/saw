@@ -2,10 +2,9 @@
 
 \begin{document}
 
-foo bar.
-
-\lilypondfile[quote,noindent]{wizard1.ly}
-
-foo bar.
-
+\lilypondfile[quote,noindent,staffsize=12]{wizard1.ly}
+\lilypondfile[quote,noindent,staffsize=12]{waldOz.ly}
+\lilypondfile[quote,noindent,staffsize=12]{brain.ly}
+\lilypondfile[quote,noindent,staffsize=12]{heart.ly}
+\lilypondfile[quote,noindent,staffsize=12]{nerve6.ly}
 \end{document}

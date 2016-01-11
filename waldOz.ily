@@ -8,8 +8,8 @@
   arranger = "arr. Mike Solomon"
   %arranger = "arr. (anon)"
 }
-
 \score {
+
   <<
 \new ChoirStaff <<
     \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
