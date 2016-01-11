@@ -22,68 +22,73 @@
 \include "kotf2.iily"
 \include "finale.iily"
 \include "bis.iily"
+
+\include "titlehack.ly"
+
 \book {
   %\bookpart {
     \include "wizard1.ily"
   %%%%}
   %\bookpart {
+  \markup \oztitle #"Over the Rainbow" #"for Mirkku"
     \include "waldOz.ily"
   %%%%}
+  \markup \oztitle #"Come Out" #"for Massive Attack"
   %\bookpart {
     \include "comeOut.ily"
   %%%%}
   %\bookpart {
-    \include "itReallyWasNoMiracle.ily"
+    %\include "itReallyWasNoMiracle.ily"
   %%%%}
   %\bookpart {
-    \include "dingDongTheWitchIsDead.ily"
+    %\include "dingDongTheWitchIsDead.ily"
   %%%%}
   %\bookpart {
-    \include "coroner.ily"
+    %\include "coroner.ily"
   %%%%}
   %\bookpart {
-    \include "lullaby-league.ily"
+    %\include "lullaby-league.ily"
   %%%%}
   %\bookpart {
-    \include "lollipop-guild.ily"
+    %\include "lollipop-guild.ily"
   %%%%}
   %\bookpart {
-    \include "followTheYellowBrickRoad2.ily"
+    %\include "followTheYellowBrickRoad2.ily"
   %%%%}
   %\bookpart {
-    \include "wizard2.ily"
+    %\include "wizard2.ily"
   %%%%}
   %\bookpart {
-    \include "brain.ily"
+    %\include "brain.ily"
   %%%%}
   %\bookpart {
-    \include "wizard3.ily"
+    %\include "wizard3.ily"
   %%%%}
   %\bookpart {
-    \include "heart.ily"
+    %\include "heart.ily"
   %%%%}
   %\bookpart {
-    \include "wizard4-3.ily"
+    %\include "wizard4-3.ily"
   %%%%}
   %\bookpart {
-    \include "nerve6.ily"
+    %\include "nerve6.ily"
   %%%%}
   %\bookpart {
-    \include "wizard5.ily"
+    %\include "wizard5.ily"
   %%%%}
   %\bookpart {
-    \include "optimistic3.ily"
+    %\include "optimistic3.ily"
   %%%%}
   %\bookpart {
-    \include "merryFast2.ily"
+    %\include "merryFast2.ily"
   %%%%}
   %\bookpart {
-    \include "kotf2.ily"
+    %\include "kotf2.ily"
   %%%%}
   %\bookpart {
-    \include "finale.ily"
+    %\include "finale.ily"
   %%%%}
   %\bookpart {
-    \include "bis.ily"
+    %\include "bis.ily"
   %%%%}
 }

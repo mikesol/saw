@@ -6,7 +6,7 @@
   \partial 4
   g8^\markup \italic "swung" ^\mf aes |
   bes g ees f g ees4 f8 |
-  g ees c d ees ces4 %ees8 |
+  g ees c d ees ces4 \bar "!" %ees8 |
 %  bes bes bes bes bes2 ~ |
 %  bes2.
 }

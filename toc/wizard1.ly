@@ -11,7 +11,7 @@
   f ees des |
   c des bes |
   aes4. ~ |
-  aes8 r
+  aes8 r \bar "!" 
 }
 \addlyrics {
   We're off to see the Wi -- zard
