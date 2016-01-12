@@ -1,8 +1,8 @@
 \header {
   %title = "wal'dOz"
   %title = "rain real come"
-  subtitle = \overTheRainbowDedication
-  title = \overTheRainbowTitle
+  subtitle = \waldOzDedication
+  title = \waldOzTitle
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

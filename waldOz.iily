@@ -1,7 +1,7 @@
 %%% RECURRENT "SOME" !!!
 mkf = \once \set Score.markFormatter = #format-mark-box-letters
-overTheRainbowTitle = \markup "Over the Rainbow"
-overTheRainbowDedication = \markup "for Mirkku"
+waldOzTitle = \markup "Over the Rainbow"
+waldOzDedication = \markup "for Mirkku"
 
 %{
   Mirku says...

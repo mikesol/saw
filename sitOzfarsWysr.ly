@@ -23,80 +23,58 @@
 \include "finale.iily"
 \include "bis.iily"
 
+
 \include "titlehack.ly"
 
 \book {
-  %\bookpart {
-    \include "wizard1.ily"
-  %%%%}
-  %\bookpart {
-  \markup \oztitle \overTheRainbowTitle \overTheRainbowDedication
-    \include "waldOz.ily"
-  %%%%}
-  \markup \oztitle #"Come Out" #"for Massive Attack"
-  %\bookpart {
-    \include "comeOut.ily"
-  %%%%}
-  %\bookpart {
-    %\include "itReallyWasNoMiracle.ily"
-  %%%%}
-  %\bookpart {
-    %\include "dingDongTheWitchIsDead.ily"
-  %%%%}
-  %\bookpart {
-    %\include "coroner.ily"
-  %%%%}
-  %\bookpart {
-    %\include "lullaby-league.ily"
-  %%%%}
-  %\bookpart {
-    %\include "lollipop-guild.ily"
-  %%%%}
-  %\bookpart {
-    %\include "followTheYellowBrickRoad2.ily"
-  %%%%}
-  %\bookpart {
-    %\include "wizard2.ily"
-  %%%%}
-  %\bookpart {
-    %\include "brain.ily"
-  %%%%}
-  %\bookpart {
-    %\include "wizard3.ily"
-  %%%%}
-  %\bookpart {
-    %\include "heart.ily"
-  %%%%}
-  %\bookpart {
-    %\include "wizard4-3.ily"
-  %%%%}
-  %\bookpart {
-    %\include "nerve6.ily"
-  %%%%}
-  %\bookpart {
-    %\include "wizard5.ily"
-  %%%%}
-  %\bookpart {
-    %\include "optimistic3.ily"
-  %%%%}
-  %\bookpart {
-    %\include "merryFast2.ily"
-  %%%%}
-  %\bookpart {
-    %\include "kotf2.ily"
-  %%%%}
-  %\bookpart {
-    %\include "finale.ily"
-  %%%%}
-  %\bookpart {
-    %\include "bis.ily"
-  %%%%}
-\header {
-  title = "Overture: The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Bill Evans, William Schuman, and Hugo Wolf }
-  composer = "Harold Arlen"
-  poet = "E.Y. Harburg"
-  arranger = "arr. Mike Solomon"
+  \include "wizard1.ily"
+  \markup \oztitle \waldOzTitle \waldOzDedication
+  \include "waldOz.ily"
+  \markup \oztitle \comeOutTitle \comeOutDedication
+  \include "comeOut.ily"
+  \markup \oztitle \itReallyWasNoMiracleTitle \itReallyWasNoMiracleDedication
+  \include "itReallyWasNoMiracle.ily"
+  \markup \oztitle \dingDongTheWitchIsDeadTitle \dingDongTheWitchIsDeadDedication
+  \include "dingDongTheWitchIsDead.ily"
+  \markup \oztitle \coronerTitle \coronerDedication
+  \include "coroner.ily"
+  \markup \oztitle \lullabyLeagueTitle \lullabyLeagueDedication
+  \include "lullaby-league.ily"
+  \markup \oztitle \lollipopGuildTitle \lollipopGuildDedication
+  \include "lollipop-guild.ily"
+  \markup \oztitle \followTheYellowBrickRoadTwoTitle \followTheYellowBrickRoadTwoDedication
+  \include "followTheYellowBrickRoad2.ily"
+  \markup \oztitle \wizardTwoTitle \wizardTwoDedication
+  \include "wizard2.ily"
+  \markup \oztitle \brainTitle \brainDedication
+  \include "brain.ily"
+  \markup \oztitle \wizardThreeTitle \wizardThreeDedication
+  \include "wizard3.ily"
+  \markup \oztitle \heartTitle \heartDedication
+  \include "heart.ily"
+  \markup \oztitle \wizardFourThreeTitle \wizardFourThreeDedication
+  \include "wizard4-3.ily"
+  \markup \oztitle \nerveSixTitle \nerveSixDedication
+  \include "nerve6.ily"
+  \markup \oztitle \wizardFiveTitle \wizardFiveDedication
+  \include "wizard5.ily"
+  \markup \oztitle \optimisticThreeTitle \optimisticThreeDedication
+  \include "optimistic3.ily"
+  \markup \oztitle \merryFastTwoTitle \merryFastTwoDedication
+  \include "merryFast2.ily"
+  \markup \oztitle \kotfTwoTitle \kotfTwoDedication
+  \include "kotf2.ily"
+  \markup \oztitle \finaleTitle \finaleDedication
+  \include "finale.ily"
+  \markup \oztitle \bisTitle \bisDedication
+  \include "bis.ily"
+
+  \header {
+    title = \wizardOneTitle
+    subtitle = \wizardOneDedication
+    composer = "Harold Arlen"
+    poet = "E.Y. Harburg"
+    arranger = "arr. Mike Solomon"
+  }
 }
 
-}
