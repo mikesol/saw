@@ -8,7 +8,7 @@ bendHack = \once \override BendAfter.extra-offset = #'(-1 . 0)
 
 
 
-z = {\bar""}
+z = {\bar""\noPageBreak}
 dd = \relative c' {\autoBeamOff 
   \tempo "Ridiculously fast"
   \cadenzaOn

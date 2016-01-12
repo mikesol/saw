@@ -82,7 +82,7 @@ mred = { }
 
 marksKOTF = {
   \partial 4
-  \tempo "hors temps"
+  \tempo "Glacial"
   s4
   \repeat unfold 8 { s1*3 s2.
     \bar "!!"

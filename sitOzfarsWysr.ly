@@ -34,8 +34,11 @@
   \include "comeOut.ily"
   \markup \oztitle \itReallyWasNoMiracleTitle \itReallyWasNoMiracleDedication
   \include "itReallyWasNoMiracle.ily"
+  \pageBreak
   \markup \oztitle \dingDongTheWitchIsDeadTitle \dingDongTheWitchIsDeadDedication
+  \noPageBreak
   \include "dingDongTheWitchIsDead.ily"
+  \pageBreak
   \markup \oztitle \coronerTitle \coronerDedication
   \include "coroner.ily"
   \markup \oztitle \lullabyLeagueTitle \lullabyLeagueDedication
