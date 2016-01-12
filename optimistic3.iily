@@ -35,67 +35,67 @@ marksOptimistic = {
   \override TupletBracket.bracket-visibility = ##t
   \set tupletFullLength = ##t
   %\set tupletFullLengthNote = ##t
-  \override TupletNumber.text = \markup \smart-flat "Mi"
+  \override TupletNumber.text = \markup \smart-flat "E"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Mi"
+  \override TupletNumber.text = \markup \normal-text "E"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Fa"
+  \override TupletNumber.text = \markup \normal-text "F"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Sol"
+  \override TupletNumber.text = \markup \smart-flat "G"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Sol"
+  \override TupletNumber.text = \markup \normal-text "G"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "La"
+  \override TupletNumber.text = \markup \smart-flat "A"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "La"
+  \override TupletNumber.text = \markup \normal-text "A"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Si"
+  \override TupletNumber.text = \markup \smart-flat "B"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Do"
+  \override TupletNumber.text = \markup \smart-flat "C"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Do"
+  \override TupletNumber.text = \markup \normal-text "C"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Ré"
+  \override TupletNumber.text = \markup \smart-flat "D"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Ré"
-  \times 1/1 { s2. }
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Mi"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Fa"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Sol"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Sol"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "La"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "La"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Si"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Do"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Do"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Ré"
-  \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Ré"
+  \override TupletNumber.text = \markup \normal-text "D"
   \times 1/1 { s2. }
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Mi"
+  \override TupletNumber.text = \markup \normal-text "E"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Fa"
+  \override TupletNumber.text = \markup \normal-text "F"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Sol"
+  \override TupletNumber.text = \markup \smart-flat "G"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "Sol"
+  \override TupletNumber.text = \markup \normal-text "G"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "La"
+  \override TupletNumber.text = \markup \smart-flat "A"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \normal-text "La"
+  \override TupletNumber.text = \markup \normal-text "A"
   \times 1/1 { s2. }
-  \override TupletNumber.text = \markup \smart-flat "Si"
+  \override TupletNumber.text = \markup \smart-flat "B"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \smart-flat "C"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \normal-text "C"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \smart-flat "D"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \normal-text "D"
+  \times 1/1 { s2. }
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \normal-text "E"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \normal-text "F"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \smart-flat "G"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \normal-text "G"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \smart-flat "A"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \normal-text "A"
+  \times 1/1 { s2. }
+  \override TupletNumber.text = \markup \smart-flat "B"
   \times 1/1 { s2. }
   s1*15 \bar "||"
 }
