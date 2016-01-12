@@ -1,6 +1,6 @@
 \version "2.17.0"
 
-wizardThreeTitle = "The Wonderful Wizard of Oz" %(1)"
+wizardThreeTitle = "We're Off to See the Wizard" %(1)"
 wizardThreeDedication = \markup { for Art Tatum and The Bird }
 
 %{

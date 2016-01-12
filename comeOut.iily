@@ -1,5 +1,5 @@
 \version "2.17.0"
-comeOutTitle = \markup "Come Out" %(1)"
+comeOutTitle = \markup "Come Out, Come Out, Wherever You Are" %(1)"
 comeOutDedication = \markup { for Massive Attack }
 
 legero = \markup \italic "legero"

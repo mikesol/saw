@@ -1,20 +1,7 @@
 # -*- coding: utf-8 -*-
 import string
 from constants import TITLES, MUSIC, RECORDINGS, MIDIS, NOTPRINTABLE
-
-def lyTrans(x) :
-  for c in range(len(x)) :
-    if (x[c] == '-') and (x[c+1] in string.lowercase) :
-      x = x[:c+1] + string.upper(x[c+1]) + x[c+2:]
-  nums = {'1':'One','2':'Two','3':'Three','4':'Four','5':'Five','6':'Six'}
-  for key in nums.keys() :
-    x = x.replace(key, nums[key])
-  x = x.replace('-','')
-  return x
-  
-
-def fLyTrans(x) :
-  return "\\"+lyTrans(x)
+from lilytools import fLyTrans
 
 BOOK = '''\\include "defs-devel.ly"
 \\include "stylesheet_book.ly"
@@ -45,7 +32,7 @@ def genContent() :
   out = ''
   for x in range(len(MUSIC)) :
     if x > 0 :
-      out += '  \\markup \\oztitle {0}Title {0}Dedication\n'.format(fLyTrans(MUSIC[x]))
+      out += '  \\markup \\oztitle {0}Title {0}Dedication\n  \\noPageBreak\n'.format(fLyTrans(MUSIC[x]))
     out += '  \\include "{0}.ily"\n'.format(MUSIC[x])
   return out
 

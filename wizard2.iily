@@ -1,6 +1,6 @@
 \version "2.19.30"
 NT = \override Score.TimeSignature.stencil = ##f
-wizardTwoTitle = "The Wonderful Wizard of Oz" %(1)"
+wizardTwoTitle = "We're Off to See the Wizard" %(1)"
 wizardTwoDedication = \markup { for E.Y. Harburg and Harold Arlen }
 
 %{

@@ -158,7 +158,8 @@ while ctr < len(NOTES) :
   skipCounter += 1
   FIRST_TIME = False
 
-REPLACEME = [OUT[x].toLily(False if x == len(OUT) - 1 else (False if OUT[x+1].note == SR else True)) for x in range(len(OUT))]
+REPLACEME = [OUT[x].toLily(False if x == len(OUT) - 1
+  else (False if OUT[x+1].note == SR else True)) for x in range(len(OUT))]
 
 NERVE_TEST = gulp('nerve_melody_test.ly')
 NERVE_TEST = NERVE_TEST.replace('REPLACEME', '\\transpose g {0} {{ '.format(TP)+('\n'.join(REPLACEME))+" }")

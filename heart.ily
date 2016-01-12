@@ -93,7 +93,7 @@ If I only had a heart
 } <<
       \new Voice = "alto" { \numericTimeSignature
 	\scorePrefatoryMatter
-        \keepWithTag #'lyrix { \Red \altoFirst }
+        \keepWithTag #'lyrix { \altoFirst }
       }
       \new Lyrics \lyricsto "alto" {
         \altoWordsFirst

@@ -9,7 +9,9 @@
   ragged-last-bottom = ##f
   footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
   footnote-padding = 5\mm
-  system-system-spacing = #'((basic-distance . 12) (minimum-distance . 12) (padding . 10) (stretchability . 60))
+  score-markup-spacing = #'((basic-distance . 12) (minimum-distance . 5) (padding . 0.5) (stretchability . 60))
+  system-system-spacing = #'((basic-distance . 12) (minimum-distance . 7) (padding . 5) (stretchability . 60))
+  markup-system-spacing = #'((basic-distance . 5) (minimum-distance . 5) (padding . 2.5) (stretchability . 30))
   top-system-spacing = #'((basic-distance . 10) (minimum-distance . 10) (padding . 10) (stretchability . 10))
   bottom-system-spacing = #'((basic-distance . 10) (minimum-distance . 10) (padding . 10) (stretchability . 10))
 }
@@ -17,10 +19,12 @@
   tagline=""
 }
 
-#(set-global-staff-size 14.3)
+% GOOD
+%#(set-global-staff-size 14.2)
+%#(set-default-paper-size "a4")
+
+% CURRENT
+#(set-global-staff-size 14.45)
 #(set-default-paper-size "a4")
-#(set! paper-alist (cons '("oz" . (cons (* 200 mm) (* 250 mm))) paper-alist))
-#(set! paper-alist (cons '("psg" . (cons (* 178 mm) (* 229 mm))) paper-alist))
-%#(set-default-paper-size "psg" 'landscape)
 
 myred = {}
