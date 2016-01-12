@@ -4,7 +4,7 @@
   \tempo "Largo, sempre legato" 4=50
   \time 2/4
   r4.
-    b8\mf^\markup \italic "swung" ~ | b4 fis'8 e |
+    b8^\mf^\markup \italic "swung" ~ | b4 fis'8 e |
   ais,2 ~ |
       ais8 b cis d |
   fis e d4 ~ |

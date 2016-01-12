@@ -1342,7 +1342,7 @@ bassWizardThree = \relative c { \autoBeamOff
 }
 
 bassWordsWizardThree = \lyricmode {
-  \repeat unfold 4 { Be -- cause of the won -- der -- ful things he does }
+  \repeat unfold 4 { Be -- cause of the won -- der -- ful things he does. }
   If ev
   \repeat unfold 3 { oh ev }
   Be -- cause of the Won -- der -- ful things he does

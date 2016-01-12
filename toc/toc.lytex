@@ -2,37 +2,53 @@
 \usepackage[a4paper, total={180mm, 260mm}]{geometry}
 \usepackage{multicol}
 \usepackage{fouriernc}
-\renewcommand{\arraystretch}{2}
+%\renewcommand{\arraystretch}{2}
 \setlength{\columnsep}{1.25cm}
 \usepackage{titlesec}
 \titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
 \usepackage{verbatim}
 \begin{document}
 \section*{Table of Contents}
-\begin{comment}
-\begin{multicols}{2}
-\noindent
-{\small We're Off to See the Wizard\hspace{\stretch{1}}page 1}
-\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{wizard1.ly} \\
-{\small Over the Rainbow\hspace{\stretch{1}}page 40}
-\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{waldOz.ly} \\
-{\small If I Only Had a Brain\hspace{\stretch{1}}page 104}
-\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{brain.ly} \\
-{\small If I Only Had a Heart\hspace{\stretch{1}}page 170}
-\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{heart.ly} \\
-{\small If I Only Had the Nerve\hspace{\stretch{1}}page 201}
-\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{nerve6.ly} \\
-\end{multicols}
-\end{comment}
 \begin{tabular}{ll}
-{\small We're Off to See the Wizard\hspace{\stretch{1}}page 1} &
-{\small Over the Rainbow\hspace{\stretch{1}}page 40} \\
-\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{wizard1.ly} &
-\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{waldOz.ly} \\
+{\small Overture: We're Off to See the Wizard\hspace{\stretch{1}}page XX} &
+{\small Over the Rainbow\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{wizard1.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{waldOz.ly}\vspace{0mm}\end{minipage} \\
 
-{\small If I Only Had a Brain\hspace{\stretch{1}}page 500} &
-{\small If I Only Had a Heart\hspace{\stretch{1}}page 999} \\
-\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{brain.ly}\vspace{3.5mm}\end{minipage} &
-\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{heart.ly}\vspace{0mm}\end{minipage} \\
+{\small Come Out, Come Out, Wherever You Are\hspace{\stretch{1}}page XX} &
+{\small It Really Was No Miracle\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{comeOut.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{itReallyWasNoMiracle.ly}\vspace{0mm}\end{minipage} \\
+
+{\small Ding-Dong! The Witch Is Dead\hspace{\stretch{1}}page XX} &
+{\small As Coroner I Must Aver\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{dingDongTheWitchIsDead.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{coroner.ly}\vspace{0mm}\end{minipage} \\
+
+{\small The Lullaby League\hspace{\stretch{1}}page XX} &
+{\small The Lollipop Guild\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{lullaby-league.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{lollipop-guild.ly}\vspace{0mm}\end{minipage} \\
+
+{\small Follow the Yellow Brick Road\hspace{\stretch{1}}page XX} &
+{\small We're Off to See the Wizard\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{followTheYellowBrickRoad2.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{wizard2.ly}\vspace{0mm}\end{minipage} \\
+
+{\small If I Only Had a Brain\hspace{\stretch{1}}page XX} &
+{\small We're Off to See the Wizard\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{brain.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{wizard3.ly}\vspace{0mm}\end{minipage} \\
+
+{\small If I Only Had a Heart\hspace{\stretch{1}}page XX} &
+{\small We're Off to See the Wizard\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{heart.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{wizard4-3.ly}\vspace{0mm}\end{minipage} \\
+
+{\small If I Only Had the Nerve\hspace{\stretch{1}}page XX} &
+{\small We're Off to See the Wizard\hspace{\stretch{1}}page XX} \\
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{nerve6.ly}\vspace{0mm}\end{minipage} &
+\begin{minipage}[b]{8.5cm}\vspace{0mm}\lilypondfile[noindent,staffsize=10,line-width=8.5\cm,noragged-right]{wizard5.ly}\vspace{0mm}\end{minipage} \\
+
 \end{tabular}
 \end{document}

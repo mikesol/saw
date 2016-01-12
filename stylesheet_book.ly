@@ -16,7 +16,7 @@
   tagline=""
 }
 
-#(set-global-staff-size 13.5)
+#(set-global-staff-size 14)
 #(set-default-paper-size "a4")
 #(set! paper-alist (cons '("oz" . (cons (* 200 mm) (* 250 mm))) paper-alist))
 #(set! paper-alist (cons '("psg" . (cons (* 178 mm) (* 229 mm))) paper-alist))

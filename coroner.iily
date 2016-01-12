@@ -127,12 +127,14 @@ sopranoCoronerFirst = \relative c' { \prefatoryMatterCoronerFirst
   b a gis b |
   a gis fis a |
   gis fis e %{endOne%} a,^\mp^\< |
+  \key d \minor
   d cis d e f g |
   a^\mf d des c ces bes |
   a gis a f e d |
   bes' g e bes' a g |
   f e f a, e' f |
   d2 r4 |
+  \key d \major
   r8 a'^\mp^\< d cis^\> |
   b4 r\! |
   r8 b,^\< e d^\> |
@@ -202,12 +204,14 @@ mezzoCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   gis fis e eis |
   fis e dis e |
   e dis e %{endOne%} r |
+  \key d \minor
   r8 a,^\mp^\< d cis d e |
   f^\mf g a g d e |
   f e f4 a^\pp^\< ~ |
   a2. ~ |
   a2.^\> ~ |
   a8^\p r e^\mf f d r |
+  \key d \major
   R2 |
   r8 fis^\mp^\< b a^\> |
   g4 r\! |
@@ -279,12 +283,14 @@ altoCoronerFirst = \relative c' {
   e dis b cis |
   cis b cis a |
   b b b %{endOne%} r |
+  \key d \minor
   R2. |
   R2. |
   r2 fis'4^\pp^\< ~ |
   fis g^\mf d8 e |
   d8 cis d4 cis8 d |
   a2 r8 a8 |
+  \key d \major
   d cis d ais |
   b ais b dis |
   e d cis b |
@@ -355,12 +361,14 @@ tenorCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
   b cis gis gis |
   a e fis e |
   gis a gis %{endOne%} r |
+  \key d \minor
   r2 r8 a,^\mp^\< |
   d e f e f g |
   a^\mf d des c bes a |
   g a bes g f e |
   f g a g f a, |
   e' f d2 |
+  \key d \major
   r4. fis8^\mp^\< |
   b, cis^\> d4 |
   r4.\! e8^\< |
@@ -430,12 +438,14 @@ bassCoronerFirst = \relative c {   \prefatoryMatterCoronerFirst
   gis a b gis |
   fis gis a cis |
   b b e %{endOne%} r |
+  \key d \minor
   R2. |
   r2 r8 a,^\mf |
   d4-. r d4^\pp^\< ~ |
   d g,2^\mf |
   d'2 a4 ~ |
   a4 d4. r8 |
+  \key d \major
   R2 |
   r4. fis8^\mp^\< |
   e fis^\> g4 |

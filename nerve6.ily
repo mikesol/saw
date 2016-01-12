@@ -1,6 +1,6 @@
 \header {
   title = \nerveSixTitle
-  dedication = \nerveSixDedication
+  subtitle = \nerveSixDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"
