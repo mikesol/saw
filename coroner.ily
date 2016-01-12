@@ -1,6 +1,6 @@
 \header {
-  title = "The Coroner" %(1)"
-  subtitle = \markup { for Georg Friedrich Haendel }
+  title = \coronerTitle
+  subtitle = \coronerDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

@@ -1,6 +1,6 @@
 \header {
-  title = "The Merry Old Land of Oz" %(1)"
-  subtitle = \markup { for Jon Hendricks }
+  title = \merryFastTwoTitle
+  subtitle = \merryFastTwoDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

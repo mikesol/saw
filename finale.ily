@@ -1,8 +1,8 @@
 \header {
-  title = "Finale: Sit Ozfårs Wndrföl Wysr"
+  title = \finaleTitle
   %subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "tu veux une finale ? voilà ta finale. t'es contente ?? t'es contente ?!?!? " }
   %subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "« un final, ça donne envie d'applaudir, pas de gerber »" }
-  subtitle = \markup \center-column { "for Marie Perbost" }
+  subtitle = \finaleDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

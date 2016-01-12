@@ -1,4 +1,6 @@
 \version "2.19.30"
+dingDongTheWitchIsDeadTitle = \markup "Ding Dong the Witch is Dead" %(1)"
+dingDongTheWitchIsDeadDedication = \markup { for Ornette Coleman }
 
 
 legero = \markup \italic "legero"

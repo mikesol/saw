@@ -1,4 +1,6 @@
 \version "2.17.0"
+coronerTitle "As Coroner, I Must Aver" %(1)"
+coronerDedication = \markup { for Georg Friedrich Haendel }
 
 legero = \markup \italic "legero"
 
@@ -8,7 +10,7 @@ asCoroner = \lyricmode {
 }
 
 iMustConfer = \lyricmode {
-  I must con -- fer
+  I must a -- ver
 }
 
 firstLine = \lyricmode {
@@ -256,7 +258,7 @@ mezzoCoronerFirstWords = \lyricmode {
   I've care -- ful -- ly ex -- am -- ined her she's
   cere -- ly dead
   \repeat unfold 3 \asCoroner
-  Co -- ro -- ner I must con -- fer I care -- ful -- ly ex -- am -- ined her dead
+  Co -- ro -- ner I must a -- ver I care -- ful -- ly ex -- am -- ined her dead
   \coronerWords
   As cor
   must con -- fee I've care -- ful -- ly ex -- am -- ined her and
@@ -408,7 +410,7 @@ tenorCoronerFirstWords = \lyricmode {
   \firstPart
   sin -- cere -- ly dead
   \repeat unfold 4 \asCoroner
-  Co -- ro -- ner I must con -- fer that
+  Co -- ro -- ner I must a -- ver that
   \coronerWords
   As cor
   I've care -- ful -- ly ex -- am -- ined her and She's
@@ -485,7 +487,7 @@ bassCoronerFirstWords = \lyricmode {
   sin -- cere dead
   \repeat unfold 3 \asCoroner ly dead
   Co -- ro -- ner I must
-  con -- fer that
+  a -- ver that
   \coronerWords
   \firstLine
   I've care

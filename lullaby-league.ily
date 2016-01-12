@@ -1,6 +1,6 @@
 \header {
-  title = "The Lullaby League" %(1)"
-  subtitle = \markup { for John Oswald }
+  title = \lullabyLeagueTitle
+  subtitle = \lullabyLeagueDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

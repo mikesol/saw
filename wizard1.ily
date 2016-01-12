@@ -1,6 +1,6 @@
 \header {
-  title = "Overture: The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Bill Evans, William Schuman, and Hugo Wolf }
+  title = \wizardOneTitle
+  subtitle = \wizardOneDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

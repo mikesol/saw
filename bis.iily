@@ -1,4 +1,6 @@
 \version "2.19.0"
+  bisTitle = "Encore: We're Off to See the Wizard"
+  bisDedication = "for Jesper Holm"
 marD = \markup \null
 elsD = \markup \null
 mikD = \markup \null

@@ -1,6 +1,6 @@
 \header {
-  title = "Ding Dong the Witch is Dead" %(1)"
-  subtitle = \markup { for Ornette Coleman }
+  title = \dingDongTheWitchIsDeadTitle
+  subtitle = \dingDongTheWitchIsDeadDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

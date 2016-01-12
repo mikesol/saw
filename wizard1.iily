@@ -1,5 +1,8 @@
 \version "2.17.0"
 
+wizardOneTitle = \markup "Overture: We're Off to See the Wizard"
+wizardOneDedication = \markup { for Bill Evans, William Schuman, and Hugo Wolf }
+
 myBreak = {
   %\break
 }

@@ -1,7 +1,7 @@
 \header {
-  title = "The Wonderful Wizard of Oz" %(1)"
+  title = \wizardFiveTitle
   %subtitle = \markup { for Carl Stalling, Raymond Scott, Дмитрий ШостаковичN and Béla Bartók }
-  subtitle = \markup { for Karl King, Carl Stalling and Vadim Petrov }
+  subtitle = \wizardFiveDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

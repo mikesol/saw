@@ -1,6 +1,6 @@
 \header {
-  title = "Come Out" %(1)"
-  subtitle = \markup { for Massive Attack }
+  title = \comeOutTitle
+  subtitle = \comeOutDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

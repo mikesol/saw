@@ -1,4 +1,6 @@
 \version "2.19.30"
+followTheYellowBrickRoadTwoTitle = "Follow the Yellow Brick Road" %(1)"
+followTheYellowBrickRoadTwoDedication = \markup { for Charles Ives }
 
 
 midiPrefatoryMatterYBR = {

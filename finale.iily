@@ -1,4 +1,8 @@
 %%%%%% e fis b, cis ais'
+finaleTitle = \markup "Finale: We're Off to See the Wizard"
+%subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "tu veux une finale ? voilà ta finale. t'es contente ?? t'es contente ?!?!? " }
+%subtitle = \markup \center-column { "for Marie Perbost" \normal-text \small "« un final, ça donne envie d'applaudir, pas de gerber »" }
+finaleDedication = \markup \center-column { "for Marie Perbost" }
 
 %{
   generally, it is too stacky and is just using tactuses to change propulsion

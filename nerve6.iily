@@ -1,4 +1,6 @@
 \version "2.19.0"
+nerveSixTitle = "If I Only Had the Nerve"
+nerveSixDedication = "for Satchmo"
 %lo = { }
 %sh = { }
 %lod = { }

@@ -8,6 +8,8 @@
 % high duo avec Marie
 % --
 \version "2.19.30"
+itReallyWasNoMiracleTitle = \markup "It Really Was No Miracle" %(1)"
+itReallyWasNoMiracleDedication = \markup { for Ella }
 
 %{
   

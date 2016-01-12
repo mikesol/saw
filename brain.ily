@@ -1,6 +1,6 @@
 \header {
-  title = "If I Only Had a Brain"
-  subtitle = \markup { for me }
+  title = \brainTitle
+  subtitle = \brainDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

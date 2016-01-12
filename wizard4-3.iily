@@ -1,4 +1,6 @@
 %TRANSPOSE TO D, KEEP IN SOPRANO!!!
+  wizardFourThreeTitle = "We're Off to See the Wizard" %(1)"
+  wizardFourThreeDedication = \markup { for Mark Kibble }
 \version "2.17.0"
 %{
     \new Staff \with { alignAboveContext = #"tenorstaff" }

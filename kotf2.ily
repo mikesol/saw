@@ -1,6 +1,6 @@
 \header {
-  title = "If I Were King of the Forest"
-  subtitle = "for Claude Debussy, Olivier Messiaen and Thelonius Monk"
+  title = \kotfTwoTitle
+  subtitle = \kotfTwoDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

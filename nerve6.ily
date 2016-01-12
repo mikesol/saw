@@ -1,7 +1,6 @@
 \header {
-  title = "If I Only Had the Nerve"
-  subtitle = "for Satchmo"
-  %title = "Somewhere Over the Rainbow"
+  title = \nerveSixTitle
+  dedication = \nerveSixDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

@@ -1,7 +1,7 @@
 
 \header {
-  title = "If I Only Had a Heart"
-  subtitle = "for Guillaume Dufay"
+  title = \heartTitle
+  subtitle = \heartDedication
   %title = "Somewhere Over the Rainbow"
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"

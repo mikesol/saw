@@ -1,5 +1,7 @@
 \version "2.17.0"
 ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
+lullabyLeagueTitle = "The Lullaby League" %(1)"
+lullabyLeagueDedication = \markup { for John Oswald }
 
 legero = \markup \italic "legero"
 

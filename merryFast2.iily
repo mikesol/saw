@@ -1,3 +1,5 @@
+merryFastTwoTitle = \markup "The Merry Old Land of Oz" %(1)"
+merryFastTwoDedication = \markup { for Jon Hendricks }
 %{
   Ha ha ha (feathered slow then fast)
   Ha ha ha, ho.. (crazy 8ths)

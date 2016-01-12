@@ -1,6 +1,6 @@
 \header {
-  title = "It Really Was No Miracle" %(1)"
-  subtitle = \markup { for Ella }
+  title = \itReallyWasNoMiracleTitle
+  subtitle = \itReallyWasNoMiracleDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

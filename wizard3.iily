@@ -1,5 +1,8 @@
 \version "2.17.0"
 
+wizardThreeTitle = "The Wonderful Wizard of Oz" %(1)"
+wizardThreeDedication = \markup { for Art Tatum and The Bird }
+
 %{
   one idea for the piece is that all the accompaniment is restricted to
   just the material in the beginning.

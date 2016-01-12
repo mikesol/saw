@@ -1,5 +1,7 @@
 
 \version "2.17.0"
+kotfTwoTitle =  \markup "If I Were King of the Forest"
+kotfTwoDedication = \markup "for Claude Debussy, Olivier Messiaen and Thelonius Monk"
 
 #(set-accidental-style 'modern-cautionary)
 

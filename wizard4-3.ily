@@ -1,6 +1,6 @@
 \header {
-  title = "The Wonderful Wizard of Oz" %(1)"
-  subtitle = \markup { for Mark Kibble }
+  title = \wizardFourThreeTitle
+  subtitle = \wizardFourThreeDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon"

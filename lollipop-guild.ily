@@ -1,6 +1,6 @@
 \header {
-  title = "The Lollipop Guild" %(1)"
-  subtitle = \markup { for Mark Applebaum }
+  title = \lollipopGuildTitle
+  subtitle = \lollipopGuildDedication
   composer = "Harold Arlen"
   poet = "E.Y. Harburg"
   arranger = "arr. Mike Solomon and Mirjam Solomon"

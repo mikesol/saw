@@ -7,6 +7,8 @@
 
 \version "2.17.0"
 
+brainTitle = "If I Only Had a Brain"
+brainDedication = \markup { for me }
 swung = \markup \italic "swung"
 notswung = \markup \italic "not swung"
 
