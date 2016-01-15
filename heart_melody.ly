@@ -39,23 +39,8 @@ If I only had a heart
 #(set-global-staff-size 15.87)
 
 %{
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "profondo"
-    #:factor (/ staff-height pt 20)
-  ))
-}
 %}
 %{
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "haydn"
-    #:brace "gonville"
-    #:factor (/ staff-height pt 20)
-  ))
-}
 %}
 
 railroad =  {
@@ -63,20 +48,6 @@ railroad =  {
   \breathe
 }
 myred = \once \override NoteHead #'color = #red
-
-\paper {
-  footnote-separator-markup = \markup { \column { " "\override #`(span-factor . 1/5) { \draw-hline } }}
-  footnote-padding = 5\mm
-  top-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 40))
-  bottom-system-spacing = #'((basic-distance . 1) (minimum-distance . 0) (padding . 1) (stretchability . 50))
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  max-systems-per-page = #2
-}
 
 \header {
   title = "If I Only Had a Heart"

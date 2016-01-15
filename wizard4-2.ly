@@ -43,7 +43,7 @@
   ragged-right = ##f
   left-margin = 0.75\in
   right-margin = 0.75\in
-  top-margin = 0.5\in
+  %top-margin = 0.5\in
   bottom-margin = 0.6\in
   ragged-last-bottom = ##f
   %max-systems-per-page = #2

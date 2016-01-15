@@ -4,12 +4,6 @@ nineBTheme = {
   fis' aes' g' d' f' e' c' b dis'
 }
 \header { title = "kotf9bscratch" }
-\paper {
-  ragged-last-right = ##f
-  ragged-right = ##f
-  ragged-last-bottom = ##f
-  ragged-bottom = ##f
-}
 
 \markup "one"
 

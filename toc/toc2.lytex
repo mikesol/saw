@@ -1,0 +1,112 @@
+\documentclass[a4paper]{article}
+\usepackage[a4paper, total={200mm, 270mm}]{geometry}
+\usepackage{multicol}
+\pagenumbering{roman}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+%\usepackage{array}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\arraystretch}{0}
+\fancyhead[R]{}
+%\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}   %% centered
+%\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}  %% right aligned
+
+\newlength{\rowh}
+\setlength{\rowh}{11mm}
+\newlength{\rowhp}
+\setlength{\rowhp}{9mm}
+
+\newlength{\wizone}
+\newlength{\rainbow}
+\newlength{\comeout}
+\newlength{\miracle}
+\newlength{\witch}
+\newlength{\coroner}
+\newlength{\lullaby}
+\newlength{\lollipop}
+\newlength{\follow}
+\newlength{\wiztwo}
+\newlength{\brain}
+\newlength{\wizthree}
+\newlength{\heart}
+\newlength{\wizfour}
+\newlength{\nerve}
+\newlength{\wizfive}
+\newlength{\optimistic}
+\newlength{\merry}
+\newlength{\king}
+\newlength{\finale}
+\newlength{\encore}
+
+\setlength{\wizone}{5.3mm}
+\setlength{\rainbow}{3.8mm}
+\setlength{\comeout}{4.3mm}
+\setlength{\miracle}{4.0mm}
+\setlength{\witch}{4.4mm}
+\setlength{\coroner}{5.2mm}
+\setlength{\lullaby}{4.9mm}
+\setlength{\lollipop}{6.7mm}
+\setlength{\follow}{4.0mm}
+\setlength{\wiztwo}{5.0mm}
+
+\setlength{\brain}{4.0mm}
+\setlength{\wizthree}{3.9mm}
+\setlength{\heart}{5.2mm}
+\setlength{\wizfour}{5.0mm}
+\setlength{\nerve}{4.4mm}
+\setlength{\wizfive}{3.4mm}
+\setlength{\optimistic}{3.8mm}
+\setlength{\merry}{4.9mm}
+\setlength{\king}{4.2mm}
+\setlength{\finale}{6.0mm}
+\setlength{\encore}{4.8mm}
+
+\usepackage{fouriernc}
+\setlength{\columnsep}{1.25cm}
+\usepackage{titlesec}
+\titleformat{\section}[block]{\Large\bfseries\filcenter}{}{1em}{}
+\usepackage{verbatim}
+\begin{document}
+\section*{Table of Contents \\ \hfill}
+
+\newcommand{\myrb}[2]{\raisebox{#1}{{\fontsize{12pt}{12pt}\selectfont#2}}}
+
+\begin{tabular}{p{7.6565cm}p{9cm}r}
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard1.ly}\end{minipage} & \myrb{\wizone}{Overture: We're Off to See the Wizard} & \myrb{\wizone}{\textbf{p.15}} \\[\rowh]
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{waldOz.ly}\end{minipage} & \myrb{\rainbow}{Over the Rainbow} & \myrb{\rainbow}{\textbf{p.18}} \\[\rowh]
+
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{comeOut.ly}\end{minipage} & \myrb{\comeout}{Come Out, Come Out, Wherever You Are} & \myrb{\comeout}{\textbf{p.38}} \\[\rowh]
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{itReallyWasNoMiracle.ly}\end{minipage} & \myrb{\miracle}{It Really Was No Miracle} & \myrb{\miracle}{\textbf{p.43}} \\[\rowh]
+
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{dingDongTheWitchIsDead.ly}\end{minipage} & \myrb{\witch}{Ding-Dong! The Witch Is Dead} & \myrb{\witch}{\textbf{p.47}}  \\[\rowh]
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{coroner.ly}\end{minipage} & \myrb{\coroner}{As Coroner I Must Aver} & \myrb{\coroner}{\textbf{p.48}}  \\[\rowh]
+
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{lullaby-league.ly}\end{minipage} & \myrb{\lullaby}{The Lullaby League} & \myrb{\lullaby}{\textbf{p.54}} \\[\rowh]
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{lollipop-guild.ly}\end{minipage} & \myrb{\lollipop}{The Lollipop Guild} & \myrb{\lollipop}{\textbf{p.55}} \\[\rowh]
+
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{followTheYellowBrickRoad2.ly}\end{minipage} & \myrb{\follow}{Follow the Yellow Brick Road} & \myrb{\follow}{\textbf{p.57}} \\[\rowh]
+\begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard2.ly}\end{minipage} & \myrb{\wiztwo}{We're Off to See the Wizard} & \myrb{\wiztwo}{\textbf{p.59}} \\
+\end{tabular}\\
+\pagebreak
+\setlength\tabcolsep{2pt}
+\begin{tabular}{p{9.5cm}rp{7.6565cm}}
+
+\myrb{\brain}{\hspace{5mm}If I Only Had a Brain} & \myrb{\brain}{\textbf{p.60}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{brain.ly}\end{minipage} \\[\rowhp]
+\myrb{\wizthree}{\hspace{5mm}We're Off to See the Wizard} & \myrb{\wizthree}{\textbf{p.72}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard3.ly}\end{minipage} \\[\rowhp]
+
+\myrb{\heart}{\hspace{5mm}If I Only Had a Heart} & \myrb{\heart}{\textbf{p.100}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{heart.ly}\end{minipage} \\[\rowhp]
+\myrb{\wizfour}{\hspace{5mm}We're Off to See the Wizard} & \myrb{\wizfour}{\textbf{p.114}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard4-3.ly}\end{minipage} \\[\rowhp]
+
+\myrb{\nerve}{\hspace{5mm}If I Only Had the Nerve} & \myrb{\nerve}{\textbf{p.119}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{nerve6.ly}\end{minipage} \\[\rowhp]
+\myrb{\wizfive}{\hspace{5mm}We're Off to See the Wizard} & \myrb{\wizfive}{\textbf{p.134}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard5.ly}\end{minipage} \\[\rowhp]
+
+\myrb{\optimistic}{\hspace{5mm}Optimistic Voices} & \myrb{\optimistic}{\textbf{p.163}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{optimistic3.ly}\end{minipage} \\[\rowhp]
+\myrb{\merry}{\hspace{5mm}The Merry Old Land of Oz} & \myrb{\merry}{\textbf{p.166}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{merryFast2.ly}\end{minipage} \\[\rowhp]
+
+\myrb{\king}{\hspace{5mm}If I Were King of the Forest} & \myrb{\king}{\textbf{p.184}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{kotf2.ly}\end{minipage} \\[\rowhp]
+\myrb{\finale}{\hspace{5mm}Finale: We're Off to See the Wizard} & \myrb{\finale}{\textbf{p.188}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{finale.ly}\end{minipage} \\[\rowhp]
+
+\myrb{\encore}{\hspace{5mm}Encore: We're Off to See the Wizard} & \myrb{\encore}{\textbf{p.197}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{bis.ly}\end{minipage} \\
+\end{tabular}
+\end{document}

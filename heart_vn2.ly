@@ -1,11 +1,5 @@
 #(set-global-staff-size 15.87)
-\paper {
-  #(define fonts
-    (set-global-fonts
-    #:music "cadence"
-    #:factor (/ staff-height pt 20)
-  ))
-}
+
 \header {
   title = "If I Only Had a Heart"
   subtitle = "for Guillaume Dufay"
@@ -15,19 +9,6 @@
   arranger = "arr. Mike Solomon"
   %arranger = "arr. (anon)"
 }
-\paper {
-  ragged-right = ##f
-  left-margin = 0.75\in
-  right-margin = 0.75\in
-  top-margin = 0.5\in
-  bottom-margin = 0.6\in
-  ragged-last-bottom = ##f
-  %max-systems-per-page = #2
-  %oddHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
-  %evenHeaderMarkup = "FIRST FULL DRAFT 20.10.14 4:44"
-}
-
-
 
 %{
   ais a in tenor
