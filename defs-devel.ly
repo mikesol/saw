@@ -344,11 +344,11 @@ cricket = {
 }
 
 nothing = {
-  \stopStaff
-  \override Staff . StaffSymbol #'line-count = #0
-  \override Staff . BarLine #'bar-extent = #'(-1 . 1)
-  \startStaff
-  \set melismaBusyProperties = #'(tieMelismaBusy beamMelismaBusy slurMelismaBusy)
+  %\stopStaff
+  %\override Staff . StaffSymbol #'line-count = #0
+  %\override Staff . BarLine #'bar-extent = #'(-1 . 1)
+  %\startStaff
+  %\set melismaBusyProperties = #'(tieMelismaBusy beamMelismaBusy slurMelismaBusy)
 }
 
 feelingLucky = {
@@ -584,68 +584,6 @@ tptextSm =
     (ly:stencil-translate
       (make-connected-path-stencil `((0.33 ,(/ 3.1416 6.0) 0.66 1. 1. 1.)) thick half-x half-y #f #f)
       (cons (interval-center (if (< half-x 0) (cons x2 x1) (cons x1 x2))) (interval-center (if (< half-y 0) (cons y2 y1) (cons y1 y2))))))))
-
-%{
-#(define (royal-hack sym)
-  (lambda (grob) ;(format #t "SYM ~a ~a\n" sym (ly:grob-property grob 'buddies))
-    (if (null? (ly:grob-property grob 'buddies))
-        #f
-       (if (not (ly:grob-common-refpoint grob (assoc-get sym (ly:grob-property grob 'buddies)) Y))
-         #f
-         (let* ((buddy (assoc-get sym (ly:grob-property grob 'buddies)))
-                (refpy (ly:grob-common-refpoint grob buddy Y))
-                (cy1 (ly:grob-relative-coordinate grob refpy Y))
-                (cy2 (ly:grob-relative-coordinate buddy refpy Y))
-                (refpx (ly:grob-common-refpoint grob buddy X))
-                (cx1 (ly:grob-relative-coordinate grob refpx X))
-                (cx2 (ly:grob-relative-coordinate buddy refpx X)))
-     ;(format #t "goods ~a ~a ~a ~a ~a\n" cx1 cx2 cy1 cy2 refpx)
-          (ly:stencil-add
-            (ly:stencil-translate-axis (sinusoid 0.1 0 0 (- cx2 cx1) (- (- cy2 cy1) 2)) 2 Y)
-            (ly:stencil-translate-axis (sinusoid 0.1 0 0 (- cx2 cx1) (- (- cy2 cy1) 1)) 1 Y)
-            (sinusoid 0.1 0 0 (- cx2 cx1) (- cy2 cy1))
-            (ly:stencil-translate-axis (sinusoid 0.1 0 0 (- cx2 cx1) (+ (- cy2 cy1) 1)) -1 Y)
-            (ly:stencil-translate-axis (sinusoid 0.1 0 0 (- cx2 cx1) (+ (- cy2 cy1) 2)) -2 Y)))))))
-
-#(define (royal-hack-single sym)
-  (lambda (grob) ;(format #t "SYM ~a ~a\n" sym (ly:grob-property grob 'buddies))
-    (if (null? (ly:grob-property grob 'buddies))
-        #f
-       (if (not (ly:grob-common-refpoint grob (assoc-get sym (ly:grob-property grob 'buddies)) Y))
-         #f
-         (let* ((buddy (assoc-get sym (ly:grob-property grob 'buddies)))
-                (refpy (ly:grob-common-refpoint grob buddy Y))
-                (cy1 (ly:grob-relative-coordinate grob refpy Y))
-                (cy2 (ly:grob-relative-coordinate buddy refpy Y))
-                (refpx (ly:grob-common-refpoint grob buddy X))
-                (cx1 (ly:grob-relative-coordinate grob refpx X))
-                (cx2 (ly:grob-relative-coordinate buddy refpx X)))
-     ;(format #t "goods ~a ~a ~a ~a ~a\n" cx1 cx2 cy1 cy2 refpx)
-          (ly:stencil-add
-            (sinusoid 0.1 0 0 (- cx2 cx1) (- cy2 cy1))))))))
-
-buddyEngraver =
-    #(let ((match-list '())
-           (name-list '()))
-       (list
-         (cons 'acknowledgers
-               (list
-                 (cons 'grob-interface
-                       (lambda (engraver grob source-engraver)
-                               (let ((name (ly:grob-property grob 'my-name))
-                                     (searching (ly:grob-property grob 'searching)))
-                                    (set! name-list (cons (cons name grob) name-list))
-                                    (set! match-list (append (map (lambda (x) (cons name x)) searching) match-list)))))))
-         (cons 'finalize
-              (lambda (trans)
-                (for-each
-                  (lambda (x) ;(format #t "MATCHING ~a\n" x)
-                    (let ((grob1 (assoc-get (car x) name-list))
-                          (grob2 (assoc-get (cdr x) name-list)))
-                    (ly:grob-set-property! grob2 'buddies (cons (cons (car x) grob1) (ly:grob-property grob2 'buddies)))
-                    (ly:grob-set-property! grob1 'buddies (cons (cons (cdr x) grob2) (ly:grob-property grob1 'buddies)))))
-                  match-list)))))
-%}
 \include "bendtest.ly"
 
 #(define (parenthesize-callback callback)
@@ -677,5 +615,3 @@ buddyEngraver =
         subject-dim-y)))
    
    parenthesize-stencil)
-
-

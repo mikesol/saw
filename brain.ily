@@ -85,7 +85,6 @@
     }
     \context {
       \Lyrics
-      %\override LyricText #'whiteout = ##t
       \override LyricText #'layer = #6
     }
     \context {

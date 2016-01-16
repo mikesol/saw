@@ -16,18 +16,19 @@
         \large \bold
         #dedication
       }
+    }
+  }
+}
+%{
       \fill-line {
         "E.Y. Harburg"
         "Harold Arlen"
       }
       \fill-line {
-        " "
+        \null
         "arr. Mike Solomon"
       }
-    }
-  }
-}
-
+%}
 #}))
 bookTitleMarkup = \markup {
   \override #'(baseline-skip . 3.5)
@@ -47,6 +48,10 @@ bookTitleMarkup = \markup {
         \smaller \bold
         \fromproperty #'header:subsubtitle
       }
+    }
+  }  
+}
+%{
       \fill-line {
         \fromproperty #'header:poet
         { \large \bold \fromproperty #'header:instrument }
@@ -56,6 +61,4 @@ bookTitleMarkup = \markup {
         \fromproperty #'header:meter
         \fromproperty #'header:arranger
       }
-    }
-  }  
-}
+%}

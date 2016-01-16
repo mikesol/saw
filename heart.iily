@@ -1,12 +1,7 @@
 % FILE SPECIFIC
 heartTitle = \markup "If I Only Had a Heart"
 heartDedication = \markup "for Guillaume Dufay"
-%oS =  #(make-span-event 'SlurEvent START)
-%cS = #(make-span-event 'SlurEvent STOP)
-light = \markup \italic "léger, innocent"
-endeca = \markup \italic "très en deça"
-%pizz = \markup \italic "pizz."
-%arco = \markup \italic "arco"
+light = \markup \italic "light and innocent"
 sadThatIHaveToDoThisKludge = #(define-event-function (parser location) ()
    ; ugh...dummy event...should be nothing
    (make-music 'AnnotateOutputEvent)

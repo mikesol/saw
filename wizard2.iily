@@ -22,6 +22,7 @@ wizardTwoDedication = \markup { for E.Y. Harburg and Harold Arlen }
 
 rhWizTwo = \relative c' {
   \key g \major
+  \tempo "Andante" 4=96
   d8^\ff d4 d8 e4-. eis-. |
   fis-. r d2^\fermata | \bar "||" % 1
   \NT

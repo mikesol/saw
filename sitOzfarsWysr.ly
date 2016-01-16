@@ -35,17 +35,16 @@
 \markup \oztitle \itReallyWasNoMiracleTitle \itReallyWasNoMiracleDedication
 \noPageBreak
 \include "itReallyWasNoMiracle.ily"
-%\pageBreak % MS EDIT
 \markup \oztitle \dingDongTheWitchIsDeadTitle \dingDongTheWitchIsDeadDedication
 \noPageBreak
 \include "dingDongTheWitchIsDead.ily"
-%\pageBreak % MS EDIT
 \markup \oztitle \coronerTitle \coronerDedication
 \noPageBreak
 \include "coroner.ily"
 \markup \oztitle \lullabyLeagueTitle \lullabyLeagueDedication
 \noPageBreak
 \include "lullaby-league.ily"
+%\pageBreak %MS
 \markup \oztitle \lollipopGuildTitle \lollipopGuildDedication
 \noPageBreak
 \include "lollipop-guild.ily"
@@ -91,7 +90,7 @@
 \header {
   title = \wizardOneTitle
   subtitle = \wizardOneDedication
-  composer = "Harold Arlen"
-  poet = "E.Y. Harburg"
-  arranger = "arr. Mike Solomon"
+  %composer = "Harold Arlen"
+  %poet = "E.Y. Harburg"
+  %arranger = "arr. Mike Solomon"
 }

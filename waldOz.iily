@@ -177,7 +177,7 @@ marksProof = {
   s1*3 |
   \tempo 2=72
   s1 |
-  \mark "rall."
+  \mark \markup \italic "rall."
   \unfoldChange #144 #60 #54
     s4 |
 }
@@ -187,13 +187,13 @@ sopranoProof = \relative c' {
   R1\! |
   \times 2/3 { r2 ees2.^\pp r4 } |
   \times 2/3 { r2 ees4 } r2 |
-  c'1^\f |
-  c |
+  c'1^\mf^\< |
+  c^\f |
   ees |
   bes2 aes2 |
-  aes,1 |
+  aes,1^\> |
   aes' |
-  g2 ees4 f |
+  g2^\p ees4 f |
   g2 } \relative c'' {
  b2 |
 }}}
@@ -208,9 +208,9 @@ sopranoProofWords = \lyricmode {
 
 mezzoProof = \relative c' {
    \wkey aes \major { \relative c' {
-  ees1^\subPd |
-  \times 4/6 { aes,4 ( c ) ees g ( ees ) c } |
-  \times 2/3 { a ( c ) ees } \mark "rall." aes4 \breathe  bes |
+  ees1--^\f^\> |
+  \times 4/6 { aes,4^\p ( c ) ees g ( ees ) c } |
+  \times 2/3 { a ( c ) ees } \mark \markup \italic "rall." aes4 \breathe  bes |
   \mark "a tempo"
   c^\mf^\< ( b bes a ) |
   aes ( g f ees ) |
@@ -559,7 +559,7 @@ marksTriumphal = {
   s1*11 |
   \time 5/4
   \tempo 2=64
-  s4 \mark "rall." % s1 |
+  s4 \mark \markup \italic "rall." % s1 |
   \unfoldChange #128 #104 #8
   \time 6/4
   \tempo 2=52
@@ -1164,7 +1164,7 @@ marksSurprises = {
   \time 2/4
   s2 |
   \time 4/4
-  \mark "accel."
+  \mark \markup \italic "accel."
   << { \unfoldChange #172 #224 #20 } {
   s1 |
   \time 6/4
@@ -1173,7 +1173,7 @@ marksSurprises = {
   \tempo 2=112
   s1 |
   \time 6/4
-  \mark "accel."
+  \mark \markup \italic "accel."
   \unfoldChange #224 #320 #24
   %s1.*2 |
   \tempo 2=80 % { \mark "city lights" %}
@@ -1380,7 +1380,6 @@ bassSurprisesWords = \lyricmode {
 marksOpera = {
   \tempo 2=80
   \time 4/4
-  %\mark "accel."
   s1
   %\unfoldChange #80 #152 #8 %s1*4
   %\tempo 2=80
@@ -1631,7 +1630,7 @@ bassStutter = \relative c' { %\autoBeamOff
   R1 |
   R1 |
   R1 |
-  r8 b4-- b-- b8 |
+  r8 b4-- b-- b8-. |
 }}
 
 bassStutterWords = \lyricmode {
@@ -1959,7 +1958,7 @@ marksIfhap = {
 
 sopranoIfhap = \relative c' { %\autoBeamOff
    \wkey ees \major { \relative c' {
-  c4 ees c ees c | 
+  c4^\mp ees c ees c | 
 }}}
 
 sopranoIfhapWords = \lyricmode {
@@ -1969,7 +1968,7 @@ sopranoIfhapWords = \lyricmode {
 
 mezzoIfhap = \relative c' { %\autoBeamOff 
    \wkey ees \major { \relative c' {
-  c4 ees c ees c |
+  c4^\mp ees c ees c |
 }}}
 
 mezzoIfhapWords = \lyricmode {
@@ -1979,7 +1978,7 @@ mezzoIfhapWords = \lyricmode {
 
 altoIfhap = \relative c' { %\autoBeamOff
    \wkey ees \major { \relative c' {
-  r4 ees4 c ees c |
+  r4 ees4^\mp c ees c |
 }}}
 
 altoIfhapWords = \lyricmode {
@@ -1989,7 +1988,7 @@ altoIfhapWords = \lyricmode {
 tenorIfhap = \relative c' { %\autoBeamOff
   %\clef "treble_8"
    \wkey ees \major { \relative c' {
-  r2. ees4 c |
+  r2. ees4^\mp c |
 }}}
 
 tenorIfhapWords = \lyricmode {
@@ -2012,14 +2011,14 @@ marksElan = {
   s1*6 |
   \tempo 2=116
   << { s32
-  \mark "accel."
+  \mark \markup \italic "accel."
   s2.... |
   s1 |
   } { \unfoldChange #232 #384 #16 } >>
   << {
   \tempo 1=96
   s32
-  \mark "rall."
+  \mark \markup \italic "rall."
   s2.... |
   } { \unfoldChange #384 #164 #8 } >>
   \tempo 2=82
@@ -2324,7 +2323,7 @@ marksSugar = {
   \tempo 4=108
   << { \unfoldChange #108 #72 #14 } {
   \time 4/4
-  s2 \mark "rall."
+  s2 \mark \markup \italic "rall."
   s2 |
   \time 3/4
   s2. | } >>
@@ -2342,7 +2341,6 @@ marksSugar = {
   \time 3/4
   << {
   \tempo 4=72
-  %\mark "rall."
   s2. |
   \time 4/4
   s1 | } { \unfoldChange #72 #72 #14 } >>
@@ -2484,7 +2482,7 @@ marksWortspiel = {
   \tempo 2=72
   \mkf \mark \default
   s1 |
-  \mark "rall."
+  \mark \markup \italic "rall."
   \unfoldChange #144 #88 #16
   %s1*2 |
   \tempo 4=88
@@ -2509,7 +2507,7 @@ marksWortspiel = {
   s1 |
   \tempo 2=84
   s1 |
-  \mark "rall."
+  \mark \markup \italic "rall."
   \unfoldChange #168 #72 #8
   %s1 |
   \tempo 4=72
@@ -2521,22 +2519,22 @@ marksWortspiel = {
 
 sopranoWortspiel = \relative c' { %\autoBeamOff
    \wkey b \major {
-  \times 2/3 { gis4^\subPd e' dis } b8 [ cis ] dis4 e |
-  cis4 ais8 [ b ] cis4 dis |
-  b r eis2^\< |
+  \times 2/3 { gis4^\subPd e' dis } b8 [ cis ] dis4^\< e |
+  cis4^\mf ais8 [ b ] cis4 dis |
+  b r eis2^\> |
 }   \wkey bes \major { \relative c' {
-  d4^\mf f d f |
+  d4^\mp f d f |
   d f ees f |
   g a2 r4 |
 }}   \wkey b \major {
-  b2 gis' |
+  b2^\mf gis' |
 }   \wkey d \major {
-  r4 fis a fis |
+  r4 fis^\p a fis |
 }   \wkey b \major {
-  gis,2 e' |
+  gis,2^\mf e' |
   dis4 b8 [ cis ] dis4 |
 }   \wkey cis \major {
-  gis2^\< |
+  gis2^\p^\< |
   eis4 gis eis gis |
   fisis ais |
   \times 2/3 { bis2 bis r } |
@@ -2565,22 +2563,22 @@ sopranoWortspielWords = \lyricmode {
 
 mezzoWortspiel = \relative c' { %\autoBeamOff 
    \wkey b \major {
-  r2.\! bis4^\p bis |
-  b4 ais8 [ gis ] b4 ais8 [ gis ] |
+  r2.\! bis4^\p^\< bis |
+  b4^\mf ais8 [ gis ] b4 ais8 [ gis ] |
   fis4 r4 r2 |
 }   \wkey bes \major { \relative c' {
   R1 |
-  r2 bes4^\mf bes |
+  r2 bes4^\mp bes |
   bes a2 r4 |
 }}   \wkey b \major {
-  gis2. ais4 |
+  gis2.^\mf ais4 |
 }   \wkey d \major {
   R1 |
 }   \wkey b \major {
   R1 |
   b2. |
 }   \wkey cis \major {
-  dis2^\< |
+  dis2^\p^\< |
   eis4 dis cis eis |
   dis fisis |
   gis ( g ) fis ( ais ) |
@@ -2588,7 +2586,7 @@ mezzoWortspiel = \relative c' { %\autoBeamOff
   bis cis |
 }   \wkey fis \major {
   %fis8^\f [ gis16 ais b cis dis eis ] fis8 [ eis16 dis cis b ais gis ~ ] |
-  fis2 ais4 ( a ) |
+  fis2^\f ais4 ( a ) |
   gis4 b gis |
 }}
 
@@ -2603,22 +2601,22 @@ mezzoWortspielWords = \lyricmode {
 
 altoWortspiel = \relative c' { %\autoBeamOff
    \wkey b \major {
-  \times 2/3 { gis4^\subPd g fis } fis4 fis fis |
-  e4 fis gis ais |
-  b^\< ( cis ) cisis ( dis ) |
+  \times 2/3 { gis4^\subPd g fis } fis4 fis^\< fis |
+  e4^\mf fis gis ais |
+  b^\> ( cis ) cisis ( dis ) |
 }   \wkey bes \major { \relative c' {
-  \times 2/3 { c^\mf ( bes c } \times 2/3 { bes c bes } 
-  \times 2/3 { c bes c ) } c d |
+  \times 2/3 { c^\p ( bes c } \times 2/3 { bes^\< c bes } 
+  \times 2/3 { c^\mp bes c ) } c d |
   ees f2 r4 |
 }}   \wkey b \major {
   R1 |
 }   \wkey d \major {
-  \times 2/3 { r4 d ( e } \times 2/3 { d e d ) } |
+  \times 2/3 { r4 d^\pp ( e } \times 2/3 { d e d ) } |
 }   \wkey b \major {
   R1 |
-  ais4 gis gis |
+  ais4^\mf gis gis |
 }   \wkey cis \major {
-  bis2^\< |
+  bis2^\p^\< |
   cis2 bis |
   ais |
   \times 4/5 { gis4 ( ais ) bis ( cis ) dis ( } |
@@ -2647,25 +2645,25 @@ altoWortspielWords = \lyricmode {
 tenorWortspiel = \relative c { %\autoBeamOff
   %\clef "treble_8"
    \wkey b \major {
-  \times 2/3 { r4\! eis fis } dis gis^\p gisis |
-  ais4 r r2 |
+  \times 2/3 { r4\! eis^\p fis } dis gis^\< gisis |
+  ais4^\mf r r2 |
   ais4 r r2 |
 }   \wkey bes \major { \relative c' {
   R1 |
   R1 |
-  r4 ees2^\mf r4 |
+  r4 ees2^\mp r4 |
 }}   \wkey b \major {
-  e2. r4 |
+  e2.^\mf r4 |
 }   \wkey d \major {
   R1 |
 }   \wkey b \major {
   gis2. g4 |
   fis4 r4 r |
 }   \wkey cis \major {
-  gis2 |
+  gis2^\p |
   R1 |
   R2 |
-  \times 4/5 { r2 gis4^\< ( ais ) bis ~ } |
+  \times 4/5 { r2 gis4^\mp^\< ( ais ) bis ~ } |
   bis1\! ~ |
   bis4 dis2 b4 |
 }   \wkey fis \major {
@@ -2708,7 +2706,7 @@ bassWortspiel = \relative c { %\autoBeamOff
   R2 |
   R1 |
   R2 |
-  dis4^\< ( cis ) bis ( ais ) |
+  dis4^\mp^\< ( cis ) bis ( ais ) |
   gis2. dis'4 |
   gis2.\! r4 |
 }   \wkey fis \major {
@@ -3199,25 +3197,25 @@ marksDenouement = {
   \time 4/4
   \tempo 4=80
   s1*7
-  \mark "rit."
+  \mark \markup \italic "rall."
   \unfoldChange #80 #60 #32
   \tempo 4=60
   s1*2
-  \mark "(seagull and ocean obligato)"
+  %\mark "(seagull and ocean obligato)"
   s1 \bar "|."
 }
 
 sopranoDenouement = \relative c'' { %\autoBeamOff
    \wkey b \major {
-  ais4 fis8 gis b [ a ] gis [ fis ] |
-  e2 g4 ( a ) |
-  fis1 |
-  gis4 ( b ) g ( a ) |
-  fis4 dis8 e a4 gis |
-  e4 cis8 [ d ] cis4 g' |
-  fis2 a |
+  ais4^\p^\< fis8 gis b^\mf^\> [ a ] gis [ fis ] |
+  e2^\mp g4 ( a ) |
+  << { fis1 } { s2^\> s2^\p } >> |
+  gis4^\mf ( b ) g^\> ( a ) |
+  fis4^\mp^\< dis8 e a4^\mf gis |
+  e4 cis8 [ d ] cis4^\> g' |
+  fis2^\p a^\< |
   gis4^\> g fis f |
-  e2\!^\< fis |
+  e2\p^\< fis |
   gis ais^\> |
   bis1^\p |
   gis,2^\pp gis2 |
@@ -3236,15 +3234,15 @@ sopranoDenouementWords = \lyricmode {
 
 mezzoDenouement = \relative c' { %\autoBeamOff 
    \wkey b \major {
-  fis4 dis8 e dis4 dis |
-  e8 [ dis cis b ] ais4 ( cis ) |
-  dis8 [ cis b ais ] a4 ( dis ) |
-  e2. cis4 |
-  dis4 b8 cis dis4 e |
-  cis4. b8 ais2 ~ |
-  ais4 cis2 dis4 |
+  fis4^\p^\< dis8 e dis4 dis |
+  e8^\mf [ dis cis b ] ais4 ( cis ) |
+  dis8 [ cis b ais ] a4^\> ( dis ) |
+  e2.^\p cis4 |
+  dis4^\< b8 cis dis4^\mf e |
+  cis4. b8 ais2^\> ~ |
+  ais4^\p cis2^\< dis4 |
   e1^\> |
-  cis2\!^\< dis |
+  cis2\p^\< dis |
   e dis^\> |
   dis1^\p |
   bis2^\pp bis2 |
@@ -3263,20 +3261,20 @@ mezzoDenouementWords = \lyricmode {
 
 altoDenouement = \relative c' { %\autoBeamOff
    \wkey b \major {
-  dis4. cis8 b2 ~ |
-  b1 ~ |
-  b1 ~ |
-  b2 cis |
+  dis4.^\p^\> cis8 b2^\pp ~ |
+  b1^\< ~ |
+  b1^\> ~ |
+  b2^\pp cis |
   b2 r |
-  ais4. gis8 fis4 ais |
-  gis ( fis ) b ( bis ) |
+  ais4.^\p^\< gis8 fis4^\> ais |
+  gis^\p ( fis ) b^\< ( bis ) |
   cis1^\> |
-  b2\!^\< ais |
+  b2\p^\< ais |
   b cis^\> |
   bis1^\p |
   R1 |
   \clef treble
-  r4 dis' dis' cisis ~ |
+  r4 dis'^\mf^\markup \italic \column { "a strange voice" "from a distant place…" } dis' cisis ~ |
   cisis2 r2 |
 }}
 	
@@ -3291,15 +3289,15 @@ altoDenouementWords = \lyricmode {
 tenorDenouement = \relative c { %\autoBeamOff
   %\clef "treble_8"
    \wkey b \major {
-  fis8 [ gis ] ais4 a4. b8 |
-  gis4 ( b ) cis ( e ) |
-  dis2 cis2 |
-  cis4. ( b8 ) ais2 |
-  a4 gis fis b |
-  gis4 fis e2 |
-  dis2 fis |
+  fis8^\p^\< [ gis ] ais4 a4. b8 |
+  gis4^\mf ( b ) cis^\> ( e ) |
+  dis2 cis2^\p |
+  cis4.^\< ( b8 ) ais2^\mf^\> |
+  a4^\< gis fis b |
+  gis4^\mf fis e2^\> |
+  dis2^\p fis^\< |
   gis1^\> |
-  gis2\!^\< fis |
+  gis2\p^\< fis |
   e fisis^\> |
   gis1^\p |
   dis2^\pp dis2 |
@@ -3322,16 +3320,16 @@ tenorDenouementWords = \lyricmode {
 bassDenouement = \relative c { %\autoBeamOff
   %\clef bass
    \wkey b \major {
-  e2^\p^\< dis4^\mf fis |
-  gis ( e ) dis ( cis ) |
-  g' ( fis ) b, ( a ) |
-  gis2 r4 e' |
-  dis4. cis8 bis2 |
-  cis2 fis, |
-  b1 |
+  e2^\p^\< dis4 fis |
+  gis^\mf ( e ) dis ( cis ) |
+  g' ( fis ) b,^\> ( a ) |
+  gis2^\p r4 e'^\< |
+  dis4.^\mp^\< cis8 bis2^\> |
+  cis2^\mp fis,^\> |
+  b1^\p |
   e^\> |
-  cis1\!^\< |
-  fis,2^\> r2\! |
+  cis1\p^\< |
+  fis,2^\mp r2\! |
   R1 |
   gis2^\pp gis2 |
   gis1^\< ~ |

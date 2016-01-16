@@ -75,7 +75,7 @@ prefatoryMatterFP = {
 altoFP = \relative c'' {
   \prefatoryMatterFP
   \clef treble
-  r4 b4 ( gis2 ) |
+  r4 b4^\f ( gis2 ) |
   b1 ~ |
   b \glissando
   s1 |
@@ -83,7 +83,7 @@ altoFP = \relative c'' {
   s2. \noStem b'4 |
   R1*4 |
   \clef "treble_8"
-  e,,4 e2. |
+  e,,4^\mf e2. |
   d1 |
   r2. e4 |
   e8 d4 b8 ~ b fis gis4 |
@@ -128,7 +128,7 @@ altoFP = \relative c'' {
   r8 b'4 cis8 b gis fis b, |
   gis' b gis e r a gis fis |
   R1 |
-  r2 r8 b4 b8 ~ |
+  r2 r8 b4^\f b8 ~ |
   b8 b gis b gis e cis c |
   b cis dis e r b'4 b8 ~ |
   %%%%% space is 32
@@ -161,25 +161,25 @@ altoFP = \relative c'' {
   %cis e r4 r2 |
   % same as above but starts a bit sooner...
   % and we go over by 4
-  b b a b gis e \times 2/3 { cis4 b gis } \times 2/3 { b cis e }
+  b^\> b a b gis e \times 2/3 { cis4 b gis^\mf } \times 2/3 { b cis e }
   \times 2/3 { a, b cis } \times 2/3 { fis } e8. fis8. g8.
-  gis8. \times 2/3 { e4 cis } \times 4/5 { b8 gis a b cis } |
-  e8 r r4 r2 |
+  gis8. \times 2/3 { e4 cis } \times 4/5 { b8^\< gis a b cis } |
+  e8^\f r r4 r2 |
   R1 |
   R1 |
-  r8 dis,8 e eis fis e fis g |
+  r8 dis,8^\mf e eis fis e fis g |
   gis e fis gis a fis gis a |
   b e b a gis b, cis dis |
   e fis gis a ais cis b g |
   gis e d c b cis dis e |
   fis4-. r r2 |
   \clef treble
-  r4. dis''8 ~ dis2 |
+  r4. dis''8^\f ~ dis2 |
   cis4 ais fis gis |
   ais fis b r |
   r2 \tupFrac \times 7/13 { ais2 b bis cis r1 gis2 a ais b r1. } |
   \clef "treble_8"
-  r8 gis,, b cis e a, c d |
+  r8 gis,,^\mf b cis e a, c d |
   f ais, cis fisis ~ fisis ais4 fisis8 |
   gis b, cis e a c, ees ais %{fis%} |
   %{ais%} r b4 cis8 b fis cis b |
@@ -934,9 +934,9 @@ altoMoLSecondPart = \relative c'' {
   cis'2^\< ~ \times 2/3 { cis4 b cis } |
   gis8^\mf ( fis e4 ~ e8 ) b^\mp d b |
   d ( e16 d ) b4 ~ \times 2/3 { b b b } |
-  \lo e8 \sh e \lo e8 \sh b \lo d b4 \sh b8 |
-  \lo e8 \sh fis8 \times 2/3 { e ( b ) d ~ } \times 2/3 { d8 r e } \lo fis \sh a |
-  gis2 fis4 fisis |
+  \lo e8^\mf \sh e \lo e8 \sh b \lo d b4 \sh b8 |
+  \lo e8 \sh fis8 \times 2/3 { e ( b ) d ~ } \times 2/3 { d8 r e^\< } \lo fis \sh a |
+  gis2^\f fis4 fisis |
   \times 2/3 { gis8 gis a, } \lo b \sh a' \lo gis \sh fis r16 e ( fis e ) |
   g4 ~ \times 2/3 { g8 a b } \times 2/3 { cis4 ( b ) a } |
   \lo g8 ( \sh e ~ e4 ~ e8 ) r \times 2/3 { e ( fis e ) }

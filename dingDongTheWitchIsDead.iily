@@ -1,4 +1,5 @@
 \version "2.19.30"
+\include "defs-devel.ly"
 dingDongTheWitchIsDeadTitle = \markup "Ding-Dong! The Witch Is Dead" %(1)"
 dingDongTheWitchIsDeadDedication = \markup { for Ornette Coleman }
 
@@ -11,22 +12,10 @@ bendHack = \once \override BendAfter.extra-offset = #'(-1 . 0)
 z = {\bar""%\noPageBreak
 }
 dd = \relative c' {\autoBeamOff 
-  \tempo "Ridiculously fast"
-  \cadenzaOn
-  \key b \major
-  fis32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
- \z fis' \z fis \z dis \z e \z fis \z a \z gis \z fis
- \z fis32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
- \z fis' \z fis \z dis \z e \z fis \z cis' \z b \z a
- \z gis \z b \z b \z gis \z a \z b \z gis \z gis
- \z dis' \z cis \z b \z ais \z gis \z gis
- \z cis \z dis \z cis \z b \z ais \z gis
- \z fis \z gis \z fis \z e \z dis \z cis
- \z fis \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z dis \z cis \z b
- \z dis \z fis \z b \z cis \z dis \z cis \z b \z cis \tag #'ugh { r16^\markup \bold "tutti" \z <b, b'> \bar "|." } \tag #'ugher { \z b }
 }
 
 ddw = \lyricmode {
+  \repeat unfold 21 ○
   Ding Dong the Witch is Dead
   Which old Witch?
   The Wic -- ked Witch!
@@ -45,18 +34,40 @@ ddw = \lyricmode {
   Let them know the Wic -- ked Witch is dead.
 }
 
+continueToRiff = \markup \justify { girls continue to riff, boys enter on the head an octave apart much faster than the girls (who keep their previous tempo) }
 
 firstriff = \relative c' {
+  \key b \major
   \tempo 4=96
-  <dis fis>16 [ <dih fih> <d f> <cisih eih> ]
+  <dis fis>16^-^\mf^\> [ <dih fih> <d f> <cisih eih> ]
   \bar "!"
-  <cis e>  [ <cih disih> <bis dis> <bih dih>  ]
+  <cis e>^\<  [ <cih disih> <bis dis> <bih dih>  ]
   \bar "!"
-  <b d> [ <dis fis>16 <dih fih> <d f>  ]
+  <b d>-.^\mf [ <dis fis>16^- <dih fih> <d f>-.  ]
   \bar "!"
-  <fis a>16 [ <fih gisih> <eis gis> <eih gih> ]
+  <fis a>16^- [ <fih gisih> <eis gis> <eih gih> ]
   \bar "!"
-  <dis fis> [ <d eis> <cis e> <c eeh> ]
+  <dis fis>^\> [ <d eis> <cis e> <c eeh> ]
   \bar "!"
-  <b dis>
+  <b dis>^\p   \tempo "Ridiculously fast"
+  \cadenzaOn
+  \repeat volta 2 { \footnote #'(1 . 1) \continueToRiff NoteHead fis'32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
+ \z fis' \z fis \z dis \z e \z fis \z a \z gis \z fis
+ \z fis32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
+ \z fis' \z fis \z dis \z e \z fis \z cis' \z b \z a
+ \z gis \z b \z b \z gis \z a \z b \z gis \z gis
+ \z dis' \z cis \z b \z ais \z gis \z gis
+ \z cis \z dis \z cis \z b \z ais \z gis
+ \z fis \z gis \z fis \z e \z dis \z cis
+ \z fis \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z dis \z cis \z b
+ \z dis \z fis \z b \z cis \z dis \z cis \z b \z cis \z } \alternative {  { b \bar "||" \break
+ \once \override Score.KeySignature.stencil = ##f
+ \once \override TextScript.extra-offset = #'(0 . 2)
+ \fatText \stopStaff   s1-\markup \fontsize #-1 \column {
+ \line { add bass on a walking bass, everyone riffs on the theme for a while. }
+ \line { after around 40-60 seconds, boys back on the head while everone }
+ \line { continues to riff until the second ending }  }
+\startStaff \once \override Score.Clef.stencil = ##f \bar "||" \noBreak
+} { r16^\markup \bold "tutti" <b, b'> \bar "|." } }
+
 }

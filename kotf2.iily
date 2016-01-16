@@ -246,8 +246,8 @@ mezzoKOTF = {
   d' |
   cis''1^\ff |
   c'' |
-  c''4 ees''-- ~( ees''2 |
-  d'' des''4) fis'' |
+  c''4 ees''-- ~ ees''2 ~ |
+  ees''2. fis''4 |
   a'' cis'' f'' e'' |
   aes'' bes' c'' ees'' ~ |
   ees''2.^\fermata

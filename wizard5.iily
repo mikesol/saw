@@ -1233,7 +1233,7 @@ bassCircus = \relative c' { \autoBeamOff
   dis,1^\f ~ |
   dis |
   eis'4 dis8 cis bis4 cis8 ais |
-  gis2 ( \glissando \lo dis8-.^\swing^\mf ) \sh eis8 \lo fisis \sh gisis |
+  gisis2 ( \glissando \lo dis8-.^\swing^\mf ) \sh eis8 \lo fisis \sh gisis |
   \repeat unfold 4 { \lo ais8 \sh ais } |
   \lo ais8 \sh ais \lo ais \sh cisis \lo r \sh ais \lo gisis \sh fisis |
   \lo eis8 \sh eis \lo eis \sh eis \times 2/3 { eis eis eis } \lo eis \sh eis |
