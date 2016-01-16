@@ -1185,8 +1185,8 @@ marksSurprises = {
 
 sopranoSurprises = \relative c'' { %\autoBeamOff
   \wkey e \major {
-  a2 | % B7
-  gis8. b16 ~ b4 |
+  a2^\fp^\< | % B7
+  gis8.^\mp b16 ~ b4 |
   ais4 fis4 a8 | % ais4 fis8 gis ais4 b |
   b4 gis4. | % up -- on
   g2 a | % Why oh Why can't
@@ -1230,7 +1230,7 @@ mezzoSurprises = \relative c' { %\autoBeamOff
   R2 |
   R1*5/8 |
   R1*5/8 |
-  e2 fis
+  e2^\mp fis
   d4 c
   dis d cis d |
   cis^\< e dis cis e e e e e e |
@@ -1271,7 +1271,7 @@ altoSurprises = \relative c' { %\autoBeamOff
   R1*5/8 |
   R1 |
   R2 |
-  r2. e4 |
+  r2. e4^\mp |
   e^\< cis a a cis cis b a cis cis |
   b b b b b b |
   b b b b cis e |
@@ -1299,7 +1299,7 @@ tenorSurprises = \relative c' { %\autoBeamOff
   %\clef "treble_8"
    \wkey e \major {
   R2 |
-  e8. dis16 ~ dis4 |
+  e8.^\mp dis16 ~ dis4 |
   cis4 ais dis8 |
   d4 d4 cis8 |
   c4 ( e ) d ( c ) |
@@ -1339,7 +1339,7 @@ tenorSurprisesWords = \lyricmode {
 bassSurprises = \relative c { %\autoBeamOff
    \wkey e \major {
   R2 |
-  r4 b4 ~ |
+  r4 b4^\mp ~ |
   b8 b4. r8 |
   fis16 gis b4. b8 |
   r8 fis8 b4 ~ b8 b4 r8 |
@@ -3041,9 +3041,9 @@ sopranoRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
   f4^\mp^\< ees f g aes^\f
 }}   \wkey a \major {
-  d4^\mp^\< e fis8 |
+  d4^\mp^\< e fis8^\f |
 }   \wkey cis \major {
-  dis4^\> eis4 cis4.^\mp |
+  dis4^\mp^\> eis4 cis4.^\p |
   %eis cisis8 dis eis4 fisis |
   %dis4 r4 ais'2 |
   %b,4 gis'2 |  
@@ -3059,9 +3059,9 @@ mezzoRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
   r2 r4 f^\< ees^\f |
 }}   \wkey a \major {
-  cis8^\mp^\< b4 b4 |
+  cis8^\mp^\< b4 b4^\f |
 }   \wkey cis \major {
-  cis4^\> cis bis4.^\mp |
+  cis4^\mp^\> cis bis4.^\p |
 }}
 
 mezzoRealcomeWords = \lyricmode {
@@ -3074,9 +3074,9 @@ altoRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
   d2^\mp^\< c4 b c^\f |
 }}   \wkey a \major {
-  a^\mp^\< gis a8 |
+  a^\mp^\< gis a8^\f |
 }   \wkey cis \major {
-  ais4^\> gis gis4.^\mp |
+  ais4^\mp^\> gis gis4.^\p |
 }}
 	
 altoRealcomeWords = \lyricmode {
@@ -3089,9 +3089,9 @@ tenorRealcome = \relative c' { %\autoBeamOff
    \accessoryKey ees \major { \relative c' {
   bes2^\mp^\< aes4 g f^\f |
 }}   \wkey a \major {
-  fis,4^\mp^\< e e8 |
+  fis,4^\mp^\< e e8^\f |
 }   \wkey cis \major {
-  fis4^\> fis eis4.^\mp |
+  fis4^\mp^\> fis eis4.^\p |
 }}
 
 tenorRealcomeWords = \lyricmode {
@@ -3104,9 +3104,9 @@ bassRealcome = \relative c { %\autoBeamOff
 \accessoryKey ees \major { \relative c {
   g4^\mp^\< ~ g8 f ~ f4 d'4 f^\f |
 }}   \wkey a \major {
-  d4.^\mp^\< e,4 |
+  d4.^\mp^\< e,4^\f |
 }   \wkey cis \major {
-  gis4^\> gis cis4.^\mp |
+  gis4^\mp^\> gis cis4.^\p |
 }}
 
 bassRealcomeWords = \lyricmode {

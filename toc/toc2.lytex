@@ -90,23 +90,23 @@
 \end{tabular}\\
 \pagebreak
 \setlength\tabcolsep{2pt}
-\begin{tabular}{p{9.5cm}rp{7.6565cm}}
+\begin{tabular}{p{10.0cm}rp{7.6565cm}}
 
-\myrb{\brain}{\hspace{5mm}If I Only Had a Brain} & \myrb{\brain}{\textbf{p.60}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{brain.ly}\end{minipage} \\[\rowhp]
-\myrb{\wizthree}{\hspace{5mm}We're Off to See the Wizard} & \myrb{\wizthree}{\textbf{p.72}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard3.ly}\end{minipage} \\[\rowhp]
+\myrb{\brain}{\hspace{12mm}If I Only Had a Brain} & \myrb{\brain}{\textbf{p.60}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{brain.ly}\end{minipage} \\[\rowhp]
+\myrb{\wizthree}{\hspace{12mm}We're Off to See the Wizard} & \myrb{\wizthree}{\textbf{p.72}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard3.ly}\end{minipage} \\[\rowhp]
 
-\myrb{\heart}{\hspace{5mm}If I Only Had a Heart} & \myrb{\heart}{\textbf{p.100}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{heart.ly}\end{minipage} \\[\rowhp]
-\myrb{\wizfour}{\hspace{5mm}We're Off to See the Wizard} & \myrb{\wizfour}{\textbf{p.114}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard4-3.ly}\end{minipage} \\[\rowhp]
+\myrb{\heart}{\hspace{12mm}If I Only Had a Heart} & \myrb{\heart}{\textbf{p.100}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{heart.ly}\end{minipage} \\[\rowhp]
+\myrb{\wizfour}{\hspace{12mm}We're Off to See the Wizard} & \myrb{\wizfour}{\textbf{p.114}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard4-3.ly}\end{minipage} \\[\rowhp]
 
-\myrb{\nerve}{\hspace{5mm}If I Only Had the Nerve} & \myrb{\nerve}{\textbf{p.119}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{nerve6.ly}\end{minipage} \\[\rowhp]
-\myrb{\wizfive}{\hspace{5mm}We're Off to See the Wizard} & \myrb{\wizfive}{\textbf{p.134}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard5.ly}\end{minipage} \\[\rowhp]
+\myrb{\nerve}{\hspace{12mm}If I Only Had the Nerve} & \myrb{\nerve}{\textbf{p.119}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{nerve6.ly}\end{minipage} \\[\rowhp]
+\myrb{\wizfive}{\hspace{12mm}We're Off to See the Wizard} & \myrb{\wizfive}{\textbf{p.134}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard5.ly}\end{minipage} \\[\rowhp]
 
-\myrb{\optimistic}{\hspace{5mm}Optimistic Voices} & \myrb{\optimistic}{\textbf{p.163}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{optimistic3.ly}\end{minipage} \\[\rowhp]
-\myrb{\merry}{\hspace{5mm}The Merry Old Land of Oz} & \myrb{\merry}{\textbf{p.166}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{merryFast2.ly}\end{minipage} \\[\rowhp]
+\myrb{\optimistic}{\hspace{12mm}Optimistic Voices} & \myrb{\optimistic}{\textbf{p.163}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{optimistic3.ly}\end{minipage} \\[\rowhp]
+\myrb{\merry}{\hspace{12mm}The Merry Old Land of Oz} & \myrb{\merry}{\textbf{p.166}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{merryFast2.ly}\end{minipage} \\[\rowhp]
 
-\myrb{\king}{\hspace{5mm}If I Were King of the Forest} & \myrb{\king}{\textbf{p.184}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{kotf2.ly}\end{minipage} \\[\rowhp]
-\myrb{\finale}{\hspace{5mm}Finale: We're Off to See the Wizard} & \myrb{\finale}{\textbf{p.188}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{finale.ly}\end{minipage} \\[\rowhp]
+\myrb{\king}{\hspace{12mm}If I Were King of the Forest} & \myrb{\king}{\textbf{p.184}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{kotf2.ly}\end{minipage} \\[\rowhp]
+\myrb{\finale}{\hspace{12mm}Finale: We're Off to See the Wizard} & \myrb{\finale}{\textbf{p.188}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{finale.ly}\end{minipage} \\[\rowhp]
 
-\myrb{\encore}{\hspace{5mm}Encore: We're Off to See the Wizard} & \myrb{\encore}{\textbf{p.197}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{bis.ly}\end{minipage} \\
+\myrb{\encore}{\hspace{12mm}Encore: We're Off to See the Wizard} & \myrb{\encore}{\textbf{p.197}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{bis.ly}\end{minipage} \\
 \end{tabular}
 \end{document}

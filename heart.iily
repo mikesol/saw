@@ -1460,16 +1460,16 @@ bassWordsFirst = \lyricmode {
   fore voice
   That I lock gen
   [love]
-  \repeat unfold 15 "()"
-  [and] [met] [with] "()" [me]
-  \repeat unfold 14 "()"
-  [per] [ty*] [heart] "()" [his] [on*]
+  \repeat unfold 15 ○
+  [and] [met] [with] ○ [me]
+  \repeat unfold 14 ○
+  [per] [ty*] [heart] ○ [his] [on*]
   [beat]
-  \repeat unfold 4 "()"
+  \repeat unfold 4 ○
   [on] [ly] [had] [a] [heart]
-  \repeat unfold 5 "()"
+  \repeat unfold 5 ○
   [Jeal*] [I]
-  \repeat unfold 17 "()"
+  \repeat unfold 17 ○
   [heart]
   a boy when
   a boy
