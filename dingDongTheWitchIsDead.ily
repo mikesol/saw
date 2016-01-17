@@ -7,7 +7,6 @@
   arranger = "arr. Mike Solomon"
 }
 
-\markup \fill-line { "girls on \"da\" \"da\" \"da\" ..." }
 \noPageBreak
   <<
     \new Staff \new Voice = "awwwshit" \firstriff

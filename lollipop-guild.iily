@@ -7,6 +7,15 @@ ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
 
 %}
 
+applebaumOne = \markup \override #'(line-width . 120) \column {
+  \line { 1. Inhaled. 2. Slightly flat. 3. Smoky. 4. Yodeled. 5. Bluer. 6. Whispered. 7. Disruptive. 8. Curios. 9. Glutteral. }
+  \null
+}
+applebaumTwo = \markup \override #'(line-width . 120) \column {
+  \line { 10. Col legno battuto. 11. Anal. 12. Rich in phlegm. 13. Lacking breath support. 14. Overintellectualized. }
+  \line { 15. Negationist. 16. Dans le style de l'ensemble 101. 17. Unrecognizable as music. 18. In the pocket. }
+  \null
+}
 
 %{
   Inhaled
@@ -96,10 +105,11 @@ prefatoryMatterLollipop = {
 sopranoLollipop = \relative c''' { \autoBeamOff
   \prefatoryMatterLollipop
   \clef "treble^8"
+  \footnote "" #'(0 . 0) \applebaumOne
   cisih8.^\mp^\> \times 4/5 { d16 ~ \times 2/3 { d8^\pp cis cih^\fp^\< ~ } } \times 4/7 { cih4 bis8.^\subPd ~ } \times 2/3 { bis8^\espressivo ~ } bis16 |
   \times 4/5 { aih16^\< e'8^\f ~ \times 2/3 { e8^\< eeh16^\ff^\> ~ } \times 4/5 { eeh gisih,8.^\f eih'16^\> } } |
   \once \override Beam.grow-direction = #LEFT
-  a32^\mf^\> [ a aih^\mp^\< ais   aisih^\mf^\> ais aih^\mp^\< a   aeh^\mf^\> aes aeseh^\mp^\< aeh   beh,^\mf^\> aeh' aes^\mp^\< aeseh   ] aes^\fff^\> aeh a^\mp^\< aih^\mf |
+  \footnote "" #'(0 . 0) \applebaumTwo a32^\mf^\> [ a aih^\mp^\< ais   aisih^\mf^\> ais aih^\mp^\< a   aeh^\mf^\> aes aeseh^\mp^\< aeh   beh,^\mf^\> aeh' aes^\mp^\< aeseh   ] aes^\fff^\> aeh a^\mp^\< aih^\mf |
   \once \override TupletNumber.text = \markup \epsfile #X #13 #"pi1.eps"
   \times 4/5 { dis4^\> e:32 cis dis cis^\p }
   r64 bis,16..^\mp r128 cis'64^\f r4.... \clef treble <g,,, c-\harmonic \parenthesize g''>32^\mf \clef "treble^8" e'''8.^\mp r32.. eeh16.^\p |

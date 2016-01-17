@@ -1,12 +1,12 @@
 \version "2.17.0"
-coronerTitle = \markup "As Coroner I Must Aver"
+coronerTitle = \markup "As Coroner, I Must Aver"
 coronerDedication = \markup { for Georg Friedrich Haendel }
 
 legero = \markup \italic "legero"
 
 
 asCoroner = \lyricmode {
-  As co -- ro -- ner
+  As co -- ro -- ner,
 }
 
 iMustConfer = \lyricmode {
@@ -30,7 +30,7 @@ thirdLineShort = \lyricmode {
 }
 
 fourthLine = \lyricmode {
-  She's real -- ly most sin -- cere -- ly dead
+  She's real -- ly most sin -- cere -- ly dead.
 }
 
 firstPart = \lyricmode {
@@ -189,7 +189,7 @@ sopranoCoronerFirstWords = \lyricmode {
   \firstLine
   I've care
   she's not on -- ly mere -- ly dead
-  she's real sin -- cere -- ly dead
+  she's real sin -- cere -- ly dead.
   \coronerWordsLast
 }
 
@@ -258,18 +258,18 @@ mezzoCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
 
 mezzoCoronerFirstWords = \lyricmode {
   \secondPart
-  As co -- ro -- ner I must
+  As co -- ro -- ner, I must
   I've care -- ful -- ly ex -- am -- ined her she's
-  cere -- ly dead
+  cere -- ly dead.
   \repeat unfold 3 \asCoroner
-  Co -- ro -- ner I must a -- ver I care -- ful -- ly ex -- am -- ined her dead
+  Co -- ro -- ner, I must a -- ver I care -- ful -- ly ex -- am -- ined her dead
   \coronerWords
   As cor
   must con -- fee I've care -- ful -- ly ex -- am -- ined her and
   She's
-  real -- ly most sin -- cere -- ly dead
+  real -- ly most sin -- cere -- ly dead.
   \coronerWordsShortShort
-  ly most sin -- cere -- ly dead
+  ly most sin -- cere -- ly dead.
 }
 
 altoCoronerFirst = \relative c' {
@@ -338,16 +338,16 @@ altoCoronerFirst = \relative c' {
 altoCoronerFirstWords = \lyricmode {
   \secondPart
   mere -- ly ead She's real -- ly most
-  cere -- ly dead
+  cere -- ly dead.
   \coronerWords
   \coronerWords
   \coronerWords
   As cor
   care -- ful -- ly ex -- am -- ined her and
   She's ly mere -- ly dead she's
-  ly most sin -- cere -- ly dead
+  ly most sin -- cere -- ly dead.
   \coronerWordsShortShort
-  sin -- cere -- ly dead
+  sin -- cere -- ly dead.
 }
 
 tenorCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
@@ -416,15 +416,15 @@ tenorCoronerFirst = \relative c' {   \prefatoryMatterCoronerFirst
 tenorCoronerFirstWords = \lyricmode {
   \coronerWords
   \firstPart
-  sin -- cere -- ly dead
+  sin -- cere -- ly dead.
   \repeat unfold 4 \asCoroner
-  Co -- ro -- ner I must a -- ver that
+  Co -- ro -- ner, I must a -- ver that
   \coronerWords
   As cor
   I've care -- ful -- ly ex -- am -- ined her and She's
-  real -- ly most sin -- cere -- ly dead
+  real -- ly most sin -- cere -- ly dead.
   \coronerWordsShortShort
-  real -- ly most sin -- cere -- ly dead
+  real -- ly most sin -- cere -- ly dead.
 }
 
 bassCoronerFirst = \relative c {   \prefatoryMatterCoronerFirst
@@ -494,9 +494,9 @@ bassCoronerFirstWords = \lyricmode {
   \secondPart
   As cor 
   mere -- ly
-  sin -- cere dead
+  sin -- cere dead.
   \repeat unfold 3 \asCoroner ly dead
-  Co -- ro -- ner I must
+  Co -- ro -- ner, I must
   a -- ver that
   \coronerWords
   \firstLine
@@ -504,7 +504,7 @@ bassCoronerFirstWords = \lyricmode {
   she's not on -- ly mere -- ly dead she's
   real
   \coronerWordsShort
-  most sin -- cere -- ly dead
+  most sin -- cere -- ly dead.
 }
 
 

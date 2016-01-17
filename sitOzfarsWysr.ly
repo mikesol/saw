@@ -89,8 +89,8 @@
 \include "bis.ily"
 \header {
   title = \wizardOneTitle
-  subtitle = \wizardOneDedication
-  %composer = "Harold Arlen"
-  %poet = "E.Y. Harburg"
-  %arranger = "arr. Mike Solomon"
+  subtitle = \markup { \normal-text \italic \wizardOneDedication }
+  composer = \markup \null
+  poet = \markup \null
+  arranger = \markup \null
 }

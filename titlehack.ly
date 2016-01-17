@@ -13,7 +13,7 @@
         #title
       }
       \fill-line {
-        \large \bold
+        \large \italic %\bold
         #dedication
       }
     }
@@ -41,7 +41,7 @@ bookTitleMarkup = \markup {
         \fromproperty #'header:title
       }
       \fill-line {
-        \large \bold
+        \large \italic %\bold
         \fromproperty #'header:subtitle
       }
       \fill-line {

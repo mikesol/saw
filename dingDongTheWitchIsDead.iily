@@ -34,12 +34,12 @@ ddw = \lyricmode {
   Let them know the Wic -- ked Witch is dead.
 }
 
-continueToRiff = \markup \justify { girls continue to riff, boys enter on the head an octave apart much faster than the girls (who keep their previous tempo) }
+continueToRiff = \markup \justify { girls continue to riff, boys enter on the head much faster than the girls (who keep their previous tempo) }
 
 firstriff = \relative c' {
   \key b \major
   \tempo 4=96
-  <dis fis>16^-^\mf^\> [ <dih fih> <d f> <cisih eih> ]
+  <dis fis>16^-^\mf^\>^\markup \italic "just the girls" [ <dih fih> <d f> <cisih eih> ]
   \bar "!"
   <cis e>^\<  [ <cih disih> <bis dis> <bih dih>  ]
   \bar "!"
@@ -51,7 +51,7 @@ firstriff = \relative c' {
   \bar "!"
   <b dis>^\p   \tempo "Ridiculously fast"
   \cadenzaOn
-  \repeat volta 2 { \footnote #'(1 . 1) \continueToRiff NoteHead fis'32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
+  \repeat volta 2 { \footnote \markup \null #'(0 . 0) \continueToRiff NoteHead fis'32^"*" \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
  \z fis' \z fis \z dis \z e \z fis \z a \z gis \z fis
  \z fis32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
  \z fis' \z fis \z dis \z e \z fis \z cis' \z b \z a
