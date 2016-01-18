@@ -109,11 +109,11 @@ sopranoBrain = {
     \times 2/3 { bes'4^\> g f ~ } f-.\! \myred ees-.^\mp |
   }
   \relative c'' {
-    c2 ~ c8 bes c d |
-    bes2. c4 |
+    c2^\< ~ c8^\> bes c d |
+    bes2.^\mp c4 |
     aes aes aes bes |
-    g2. g8 g |
-    f ees f ees f ees f g |
+    g2. g8^\mf^\> g |
+    f^\mp ees f ees f ees f g |
     ees2 ~ ees8 ees g bes |
   }
   \relative c'' {
@@ -240,10 +240,10 @@ mezzoBrain = {
   }
   \relative c' {
     r2. \myred bes4^\notswung^\mp |
-    g'2 ~ g8 f g aes |
-    f2. g4 |
+    g'2^\< ~ g8^\> f g aes |
+    f2.^\mp g4 |
     ees ees ees f |
-    c8 c d c d c d c |
+    c8^\mf^\> c d^\mp c d c d c |
     d ees c2. |
   }
   \relative c'' {
@@ -374,11 +374,11 @@ altoBrain = {
     \times 4/5 { ees f g ees f } \times 4/5 { g ees c d ees } c16 ees bes bes   \times 2/3 { bes8 bes bes }  |
     g'16 ees8 g16 ~    g bes,8 bes16   bes bes' bes8 ~ bes8 f' |
     \times 2/3 { ees8^\> [ bes8 ] g' } \times 2/3 { ees bes' g } d'4-.\! g,,-.^\mp |
-    r4 \myred aes ees'2 ~ |
-    ees8 d ees f d2 ~ |
+    r4 \myred aes ees'2^\< ~ |
+    ees8^\> d ees f d2^\mp ~ |
     d4 ees4 c c |
     c d bes2 |
-    r4 bes8 bes aes g aes g |
+    r4 bes8^\mf^\> bes aes^\mp g aes g |
     aes g aes bes g2 |
     a4-. r4 r4 \myred c^\cresc |
     aes aes aes bes
@@ -493,7 +493,7 @@ tenorBrain = {
     f ees \myred c'8^\< aes f g aes f |
   }
   \relative c' {
-     c8.^\notswung \myred f,16 ees g bes aes g bes8. \times 2/3 { aes8 g bes } |
+     c8.^\f^\notswung \myred f,16 ees g bes aes g bes8. \times 2/3 { aes8 g bes } |
      \times 4/5 { d16 c bes d8 } bes ees \times 2/3 { bes4 bes g }
      bes8 c g4 aes8 f \times 2/3 { d'4 bes8 ~ } |
      \times 2/3 { bes8 \myred ees [ ( bes ] } \times 2/3 { g ) ees4 ~ } \times 2/3 { ees8 f g ~ } \times 2/3 { g ees4 } |
@@ -502,10 +502,10 @@ tenorBrain = {
      d16 f bes, bes'    \times 4/7 { aes16 g f ees8 f8 } \times 4/5 { bes,8 d' g, ~ \times 2/3  { g16 ees f } g8 } |
      r16 d^\> g8 d16 aes'8 d,16 ~ d g8.-.\! r4 |
      R1 |
-     r4 \myred ees^\mp c'2 ~ |
-     c8 bes c d bes2 ~ |
+     r4 \myred ees^\mp c'2^\< ~ |
+     c8^\> bes c d bes2^\mp ~ |
      bes4 c aes aes |
-     aes r f8 g f ees |
+     aes r f8^\mf^\> g f^\mp ees |
      f ees f ees f g ees4 |
    }
    \relative c {

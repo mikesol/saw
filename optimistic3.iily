@@ -113,7 +113,7 @@ sopranoOptimistic = \relative c'' { \autoBeamOff
   r4 aes' %{a%} gis8 a gis4 |
   a4 %{bes%} bes a8 bes g4 %{ces%} |
   ges2. %{c%} r4 |
-  r4 c, %{des%} ( des ) d |  %% TT sub...
+  r4 d %{des%} ( cis ) d |  %% TT sub...
   %%%%
   r4 %{d%} e4 g8 g g4 %{ees%} |
   aes2 g4 %{e%} a |

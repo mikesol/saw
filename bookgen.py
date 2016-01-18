@@ -14,10 +14,10 @@ BOOK = '''\\include "defs-devel.ly"
 {1}
   \\header {{
     title = \\wizardOneTitle
-    subtitle = \\wizardOneDedication
-    composer = "Harold Arlen"
-    poet = "E.Y. Harburg"
-    arranger = "arr. Mike Solomon"
+    subtitle = \\markup \\normal-text \\italic \\wizardOneDedication
+    composer = \\markup \\null
+    poet = \\markup \\null
+    arranger = \\markup \\null
   }}
 }}
 '''
@@ -32,7 +32,7 @@ def genContent() :
   out = ''
   for x in range(len(MUSIC)) :
     if x > 0 :
-      out += '  \\markup \\oztitle {0}Title {0}Dedication\n  \\noPageBreak\n'.format(fLyTrans(MUSIC[x]))
+      out += '  \\markup \\oztitle {0}Title {0}Dedication #\'{1}\n  \\label #\'{1} \\noPageBreak\n'.format(fLyTrans(MUSIC[x]), MUSIC[x])
     out += '  \\include "{0}.ily"\n'.format(MUSIC[x])
   return out
 

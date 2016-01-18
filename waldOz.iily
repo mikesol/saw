@@ -522,9 +522,9 @@ bassBeginning = \relative c' { \autoBeamOff
   \tag #'normal { \bNormal } \tag #'piano { }
   bes4 g c4. % r16
   %R1*15/16 |
-  r8 bes4 ~ |
+  r8 bes4^\mp^\espressivo ~ |
   bes8. r8. |
-  r8 ees4 ~ ees8 r8 r4 |
+  r8 ees4^\espressivo ~ ees8 r8 r4 |
 }}   \wkey c \major {
   R2. |
   r4 d,4^\mp^\< ~ d2 ~ |
@@ -2932,7 +2932,7 @@ tenorWinding = \relative c { %\autoBeamOff
    \wkey b \major {
   fisis8 r fis4 |
   gis2.^\< a4.^\> gis8 ~ |
-  gis^\! r8 r4 r2 |
+  gis^\mp r8 r4 r2 |
   r2. fis2^\p ~ fis4. ~ |
   fis4 r \times 4/5 { r4 b^\< f gis r } |
   gis\! r r2 |

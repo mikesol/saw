@@ -1,84 +1,67 @@
-# -*- coding: utf-8 -*-
-
-URL = 'public_html/oz/perrine'
 import subprocess
+import re
 import sys
-import os
+import string
 from constants import TITLES, MUSIC, RECORDINGS, MIDIS, NOTPRINTABLE
-# first, verify existence
 
-COUNT = 0
+subprocess.call('python bookgen.py > sitOzfarsWysr.ly', shell=True)
+subprocess.call('lilypond -dno-point-and-click -ositOzfarsWysr_a4 sitOzfarsWysr > pagenumbers.txt', shell=True)
+infi = file('pagenumbers.txt','r')
+PN = infi.read()
+infi.close()
+PN = filter(lambda x : x[:6] == '@@@@@@', PN.split('\n'))
+PN = [P.split('@@@@@@')[1].split('::::::') for P in PN]
+PN = [(int(P[0]), P[1]) for P in PN]
+PN = [(15,'wizard1')] + PN
+infi = file('toc/toc2proto.lytex', 'r')
+LYTEX = infi.read()
+infi.close()
+for M in PN :
+  LYTEX = LYTEX.replace(string.upper(M[1].replace('-','')),str(M[0]))
 
-for x in MUSIC :
-  if not os.path.exists(x+".pdf") :
-    raise ValueError(x+" score doesn't exist")
-  else :
-    cmd = "pdfinfo "+x+".pdf | grep 'Pages' | awk '{print $2}'"
-    COUNT += int(os.popen(cmd).read().strip())
-
-print "Approximate count", COUNT
-for x in RECORDINGS :
-  if not os.path.exists('recordings/'+x+".mp3") :
-    raise ValueError(x+" music doesn't exist")
-
-for x in MIDIS :
-  if not os.path.exists(x+".midi") :
-    raise ValueError(x+" midi doesn't exist")
-
-CONTENT = ''
-for x in range(len(MUSIC)) :
-  CONTENT += '<hr />\n'
-  CONTENT += '<h2>{0}</h2>\n'.format(TITLES[x])
-  if MUSIC[x] in NOTPRINTABLE :
-    CONTENT += '<b>pas encore prêt à être imprimé</b><br />\n'
-  CONTENT += '<a href="{0}.pdf">PDF</a>\n'.format(MUSIC[x])
-  if MUSIC[x] in RECORDINGS :
-    CONTENT += '<a href="{0}.mp3">MP3</a>\n'.format(MUSIC[x])
-  if MUSIC[x] in MIDIS :
-    CONTENT += '<a href="{0}.midi">MIDI</a>\n'.format(MUSIC[x])
-  
-FRAME = '''<!DOCTYPE html>
-<head>
-  <meta charset="UTF-8" />  
-  <title>Sit Ozfårs Wysr Partitions et Musique</title>
-</head>
-<body>
-<h1>Sit Ozfårs Wysr</h2>
-{0}
-</body>
-</html>
-'''.format(CONTENT)
-outfi = file("index.html",'w')
-outfi.write(FRAME)
+outfi = file('toc/toc2.lytex', 'w')
+LYTEX = outfi.write(LYTEX)
 outfi.close()
 
-for x in MUSIC :
-  subprocess.call('lilypond '+x+".ly", shell=True)
+subprocess.call('lilypond-book --output=out --pdf toc2.lytex', shell=True, cwd='toc')
+subprocess.call('lualatex toc2.tex', shell=True, cwd='toc/out')
 
-from ftplib import FTP
-ftp = FTP('ftp.ensemble101.fr')     # connect to host, default port
-ftp.login('mikesol','eudespeyre1')                     # user anonymous, passwd anonymous@
-ftp.cwd(URL)               # change into "debian" directory
-outfi = file("index.html",'r')
-ftp.storbinary('STOR index.html', outfi)
-outfi.close()
-for x in MUSIC :
-  outfi = file(x+".pdf",'r')
-  ftp.storbinary('STOR '+x+".pdf", outfi)
-  print 'STOR '+x+".pdf"
-  outfi.close()
+from pyPdf import PdfFileWriter, PdfFileReader
 
-for x in MIDIS :
-  outfi = file(x+".midi",'r')
-  ftp.storbinary('STOR '+x+".midi", outfi)
-  print 'STOR '+x+".midi"
-  outfi.close()
+for x in [1,2] :
+  output = PdfFileWriter()
+  input1 = PdfFileReader(file('toc/out/toc2.pdf', "rb"))
+  outputStream = file("editionHack/toc2-{0}.pdf".format(x), "wb")
+  output.addPage(input1.getPage(x-1))
+  output.write(outputStream)
+  outputStream.close()
 
-for x in RECORDINGS :
-  outfi = file("recordings/"+x+".mp3",'r')
-  ftp.storbinary('STOR '+x+".mp3", outfi)
-  print 'STOR '+x+".mp3"
-  outfi.close()
+INPUT = 'toc2-1 toc2-2 sowArtPageOne sowArtPageTwo sowNoteOne sowNoteTwo'.split(' ')
+OFFSET = 7
 
+for x in range(len(INPUT)) :
+  hackfile = 'editionHack/hack{0}.pdf'.format(x+OFFSET)
+  goodfile = 'editionHack/'+INPUT[x]+".pdf"
+  output = PdfFileWriter()
+  input1 = PdfFileReader(file(goodfile, "rb"))
+  page1 = input1.getPage(0)
+  watermark = PdfFileReader(file(hackfile, "rb"))
+  page1.mergePage(watermark.getPage(0))
+  output.addPage(page1)
+  outputStream = file("editionHack/finalPage{0}.pdf".format(x+OFFSET), "wb")
+  print "finalPage{0}.pdf".format(x+OFFSET)
+  output.write(outputStream)
+  outputStream.close()
 
-ftp.quit()
+output = PdfFileWriter()
+for x in range(3,15) :
+  input1 = PdfFileReader(file('editionHack/finalPage{0}.pdf'.format(x), "rb"))
+  output.addPage(input1.getPage(0))
+
+input1 = PdfFileReader(file('sitOzfarsWysr_a4.pdf', "rb"))
+for x in range(input1.getNumPages()) :
+  output.addPage(input1.getPage(x))
+
+outputStream = file("editionHack/sowInterior.pdf".format(x), "wb")
+output.write(outputStream)
+outputStream.close()

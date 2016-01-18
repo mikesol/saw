@@ -15,9 +15,9 @@ wizardFiveDedication = \markup { for Karl King, Carl Stalling and Vadim Petrov }
 
 widedin = \once \override DynamicText . extra-spacing-width = ##f
 
-thought = \markup \italic \column { pensée "(pas chantée)" }
-endessous = \markup \italic "(en dessous)"
-ord = \markup \italic "ord"
+thought = \markup \italic \column { thought "(not sung)" }
+endessous = \markup \italic "understated"
+ord = \markup \italic "ord."
 scat = \markup \italic "scat"
 jazzjazzjazz = \markup \italic "jazz jazz jazz"
 legato = \markup \italic "legato"
@@ -38,7 +38,7 @@ legato = \markup \italic "legato"
   The Wonderful Wizard of Oz
 %}
 
-swing = \markup \italic "sit swng"
+swing = \markup \italic "swung"
 rall = \markup \italic "rall."
 accel = \markup \italic "accel."
 nothing = {}
@@ -47,12 +47,18 @@ nothing = {}
 %}
 
 
-secOne = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Les clowns" }
-secTwo = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "La contorsioniste" }
-secThree = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Le funambule" }
-secFour = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Le défilé des animaux (pour Maija)" }
-secFive = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "La danseuse" }
-secSix = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "L'homme-canon" }
+%secOne = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Les clowns" }
+%secTwo = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "La contorsioniste" }
+%secThree = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Le funambule" }
+%secFour = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "Le défilé des animaux (pour Maija)" }
+%secFive = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "La danseuse" }
+%secSix = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "L'homme-canon" }
+secOne = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Clowns" }
+secTwo = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Contortionist" }
+secThree = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Tightrope Walker" }
+secFour = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Parade of the Animals (for Maija)" }
+secFive = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The ballerina" }
+secSix = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Human Cannonball" }
 
 marksCircus = {
   %\set Score.skipTypesetting = ##t

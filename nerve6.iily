@@ -101,21 +101,21 @@ midiPrefatoryMatterNerve = {
 marksNerve = {
   \tempo "Dixie" 4=96
   s1*64
-  \mark "rall."
+  \mark \markup \italic "rall."
   \unfoldChange #96 #92 #8
   \tempo 4=92
   s1
-  s2 \mark "rall." \unfoldChange #90 #84 #4 |
+  s2 \mark \markup \italic "rall." \unfoldChange #90 #84 #4 |
   \tempo 4=84
   s1*3
   s2.
-     \mark "rall."
+     \mark \markup \italic "rall."
      \unfoldChange #84 #70 #8
   \tempo "Maestoso" 4=72
      s4 | \noBreak
   s1 |
   \tempo "più leggero"
-  \mark "accel."
+  \mark \markup \italic "accel."
   \unfoldChange #70 #96 #8
   \tempo 4=88
   s1*18

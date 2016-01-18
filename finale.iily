@@ -90,7 +90,8 @@ marksChorale = {
   \rubato
   \unfoldChange #68 #65 #8
   \unfoldChange #65 #68 #2 s2.
-  \mark \markup \italic "ord." s1 |
+  \mark \markup \italic "ord."
+  s1 |
   s1*7 |
 }
 

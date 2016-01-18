@@ -646,6 +646,7 @@ altoBis = \relative c' {
   fis g dis |
   d dis c |
   e4 r8 |
+  \clef "treble_8"
   b4. |
   cis4 cis8 a4 a8 a4 a8 a4 a8 |
   gis4 \clef bass e \clef treble gis' e1. ~ |

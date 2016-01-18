@@ -4,6 +4,7 @@
 *.svg
 .DS_Store
 *~
+pagenumbers.txt
 *.wav
 *.aif
 *.aux
@@ -11,3 +12,4 @@
 *.out
 toc/out
 index.html
+toc/toc2.lytex

@@ -39,27 +39,27 @@
 \newlength{\finale}
 \newlength{\encore}
 
-\newcommand{\wizonePage}{15}
-\newcommand{\rainbowPage}{18}
-\newcommand{\comeoutPage}{38}
-\newcommand{\miraclePage}{43}
-\newcommand{\witchPage}{46}
-\newcommand{\coronerPage}{47}
-\newcommand{\lullabyPage}{52}
-\newcommand{\lollipopPage}{54}
-\newcommand{\followPage}{56}
-\newcommand{\wiztwoPage}{57}
-\newcommand{\brainPage}{58}
-\newcommand{\wizthreePage}{71}
-\newcommand{\heartPage}{98}
-\newcommand{\wizfourPage}{112}
-\newcommand{\nervePage}{117}
-\newcommand{\wizfivePage}{132}
-\newcommand{\optimisticPage}{161}
-\newcommand{\merryPage}{164}
-\newcommand{\kingPage}{182}
-\newcommand{\finalePage}{186}
-\newcommand{\encorePage}{195}
+\newcommand{\wizonePage}{WIZARD1}
+\newcommand{\rainbowPage}{WALDOZ}
+\newcommand{\comeoutPage}{COMEOUT}
+\newcommand{\miraclePage}{ITREALLYWASNOMIRACLE}
+\newcommand{\witchPage}{DINGDONGTHEWITCHISDEAD}
+\newcommand{\coronerPage}{CORONER}
+\newcommand{\lullabyPage}{LULLABYLEAGUE}
+\newcommand{\lollipopPage}{LOLLIPOPGUILD}
+\newcommand{\followPage}{FOLLOWTHEYELLOWBRICKROAD2}
+\newcommand{\wiztwoPage}{WIZARD2}
+\newcommand{\brainPage}{BRAIN}
+\newcommand{\wizthreePage}{WIZARD3}
+\newcommand{\heartPage}{HEART}
+\newcommand{\wizfourPage}{WIZARD43}
+\newcommand{\nervePage}{NERVE6}
+\newcommand{\wizfivePage}{WIZARD5}
+\newcommand{\optimisticPage}{OPTIMISTIC3}
+\newcommand{\merryPage}{MERRYFAST2}
+\newcommand{\kingPage}{KOTF2}
+\newcommand{\finalePage}{FINALE}
+\newcommand{\encorePage}{BIS}
 
 \setlength{\wizone}{5.3mm}
 \setlength{\rainbow}{3.8mm}
@@ -112,7 +112,7 @@
 \end{tabular}\\
 \pagebreak
 \setlength\tabcolsep{2pt}
-\begin{tabular}{p{10.0cm}rp{7.6565cm}}
+\begin{tabular}{p{9.8cm}rp{7.6565cm}}
 
 \myrb{\brain}{\hspace{2mm}If I Only Had a Brain} & \myrb{\brain}{\textbf{p.\brainPage}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{brain.ly}\end{minipage} \\[\rowhp]
 \myrb{\wizthree}{\hspace{2mm}We're Off to See the Wizard} & \myrb{\wizthree}{\textbf{p.\wizthreePage}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard3.ly}\end{minipage} \\[\rowhp]
