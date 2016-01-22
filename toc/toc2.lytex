@@ -112,7 +112,7 @@
 \end{tabular}\\
 \pagebreak
 \setlength\tabcolsep{2pt}
-\begin{tabular}{p{10.0cm}rp{7.6565cm}}
+\begin{tabular}{p{9.8cm}rp{7.6565cm}}
 
 \myrb{\brain}{\hspace{2mm}If I Only Had a Brain} & \myrb{\brain}{\textbf{p.\brainPage}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{brain.ly}\end{minipage} \\[\rowhp]
 \myrb{\wizthree}{\hspace{2mm}We're Off to See the Wizard} & \myrb{\wizthree}{\textbf{p.\wizthreePage}} & \begin{minipage}[b]{7.6565cm}\lilypondfile[noindent,staffsize=9.5,line-width=7.6565\cm,noragged-right]{wizard3.ly}\end{minipage} \\[\rowhp]

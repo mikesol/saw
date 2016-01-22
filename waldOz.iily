@@ -1116,7 +1116,7 @@ tenorRestarts = \relative c' { %\autoBeamOff
   R1 |
 \tupFrac
   \times 7/8 { aes4^\mp^\< g f bes^\> } g8 a4^\< | } \wkey e \major {
-  d4^\f b |
+  d'4^\f b |
 %  << { b2 ~ b4. |  } { s2.^\> s8^\p } >> |
   << { b4. ~ b4
 } { 
@@ -3619,7 +3619,7 @@ tenorFinale = \relative c { %\autoBeamOff
   }
   \wkey d \major {
     e2^\subPd^\< d |
-    d cis4^\ff |
+    d e4^\ff |
   }
   \wkey c \major {
     c2^\mf c4 c^\f |

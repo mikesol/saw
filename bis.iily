@@ -248,16 +248,17 @@ sopranoBis = \relative c'' {
   g4^\fermata r8 |
 }
 
-trumpets = \lyricmode { \repeat unfold 5 ba }
-lastTrumpet = \lyricmode { \repeat unfold 4 ba da \repeat unfold 2 ba }
-buildUp = \lyricmode { \repeat unfold 3 { ba ba da } ba }
+trumpets = \lyricmode { ba dap bap ba da }
+lastTrumpetShort = \lyricmode { ba dap bap ba da da }
+lastTrumpet = \lyricmode { \lastTrumpetShort da }
+buildUp = \lyricmode { ba ba doot da ba doot da ba doot dat }
 was = \lyricmode {
-  wa
-  wa
-  wa da
-  wa
-  wa
-  wa
+  ba
+  ba
+  ba da
+  ba
+  ba
+  ba
   wa
 
   wa
@@ -270,9 +271,9 @@ was = \lyricmode {
 sopranoWordsBis = \lyricmode {
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  \buildUp ba  
+  \buildUp da
   We're off to see of
   Oz.
   If ev -- er a wiz there
@@ -281,9 +282,9 @@ sopranoWordsBis = \lyricmode {
   ba da ba
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  ba
+  da
   ooo
   I could wile a -- way the ho -- urs
   Con -- fer -- rin' with the flow -- ers
@@ -298,14 +299,13 @@ sopranoWordsBis = \lyricmode {
   a
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  ba ba ba
-  ba ba ba ba
-  \repeat unfold 5 { ba da ba }
+  \lastTrumpet
+  \repeat unfold 5 { ba ba da }
   a
   \repeat unfold 4 nä
-  the Wi -- zard of Oz is one be -- cause
+  The Wi -- zard of Oz is one be -- cause
   be -- cause be -- cause be -- cause
   be -- cause of the won -- der -- ful things he does
   won -- der -- ful things that he does
@@ -470,9 +470,9 @@ mezzoBis = \relative c'' {
 mezzoWordsBis = \lyricmode {
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  \buildUp ba  
+  \buildUp da
   We're off to see the Wi -- zard.
   The Won -- der -- ful Wi -- zard of
   Oz.
@@ -485,9 +485,9 @@ mezzoWordsBis = \lyricmode {
   be
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  ba
+  da
   ooo
   \repeat unfold 70 { \skip 1 }
   Hey cha, the Wi -- zard
@@ -498,11 +498,10 @@ mezzoWordsBis = \lyricmode {
   \was
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  ba ba ba
-  ba ba ba ba
-  \repeat unfold 5 { ba da ba }
+  \lastTrumpet
+  \repeat unfold 5 { ba ba da }
   a
   ev -- er a wiz there was.
   If ev -- er, oh ev -- er a wiz there was,
@@ -667,11 +666,11 @@ altoWordsBis = \lyricmode {
   %
   \trumpets
   %
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   %
   \lastTrumpet
   %
-  \buildUp ba  
+  \buildUp da
   We're off to see the Wi -- zard of
   Oz.
   If ev -- er a wiz there
@@ -680,9 +679,9 @@ altoWordsBis = \lyricmode {
   ba da ba
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  ba
+  da
   \repeat unfold 135 { \skip 1 }
   I could wile a -- way the ho -- urs
   Con -- fer -- rin' with the flow -- ers
@@ -695,10 +694,9 @@ altoWordsBis = \lyricmode {
   \was
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  ba ba ba
-  ba ba ba
+  \lastTrumpetShort
   We're off to see the Wi -- zard.
   The Won -- der -- ful Wi -- zard of Oz.
   We hear he is a whiz of a wiz,
@@ -831,7 +829,7 @@ tenorWordsBis = \lyricmode {
   %
   \trumpets
   %
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   %
   \lastTrumpet
   %
@@ -854,16 +852,15 @@ tenorWordsBis = \lyricmode {
   You know that he is a Won -- der -- ful wiz
   be -- cause the Wi -- zard he was
   hey hey
-  wa wa
-  wa da wa wa wa
+  ba ba
+  ba da ba ba ba
   \repeat unfold 54 \skip 1
   \trumpets
   \trumpets
-  \trumpets \repeat unfold 4 ba
+  \trumpets \repeat unfold 4 da
   \lastTrumpet
-  ba ba ba
-  ba ba ba ba
-  \repeat unfold 2 { ba da ba }
+  \lastTrumpet
+  \repeat unfold 2 { ba ba da }
   ba
   \heg
 }

@@ -36,7 +36,7 @@ for x in [1,2] :
   output.write(outputStream)
   outputStream.close()
 
-INPUT = 'toc2-1 toc2-2 sowArtPageOne sowArtPageTwo sowNoteOne sowNoteTwo'.split(' ')
+INPUT = 'toc2-1 toc2-2 sowArtPageOne sowArtPageTwo sowNoteOneRealFont sowNoteTwoRealFont'.split(' ')
 OFFSET = 7
 
 for x in range(len(INPUT)) :
