@@ -44,6 +44,9 @@ myblack = \revert NoteHead.color
 
 nothing = {}
 
+emajorturn = { \key e \major }
+aesmajorturn = { \key aes \major }
+
 marksWizardThree = {
   \time 2/2
   \tempo "Allegro" 2=110
@@ -64,7 +67,13 @@ prefatoryMatterWizardThree = {
   #(set-accidental-style 'modern-cautionary)
 }
 
-sopranoWizardThree = \relative c'' { \autoBeamOff
+funWithTransposition = #(define-music-function (parser location m) (ly:music?)
+#{
+  \transpose des cis $m
+#})
+
+sopranoWizardThree = { \autoBeamOff
+\relative c'' {
   \prefatoryMatterWizardThree
   r4 |
   r4 ees2^\descant^\f des4 |
@@ -192,6 +201,8 @@ sopranoWizardThree = \relative c'' { \autoBeamOff
     g,2^\< c |
     d^\> c |
     \times 2/3 { bes2^\mp bes'^\mf aes } \times 2/3 { g g f } |
+  \emajorturn
+} \funWithTransposition \relative c' {
     ees1^\> ~ |
     ees2 eeses^\< |
     ees fes^\> ~ |
@@ -203,6 +214,9 @@ sopranoWizardThree = \relative c'' { \autoBeamOff
     \times 2/3 { eeses deses ces } |
     \times 2/3 { beses aeses ges } |
     fes4 ges^\subPd \lo aeses8 \sh b^\sfz ~ b4 |
+  }
+\aesmajorturn
+\relative c'' {
     c-. r4 r2 |
     r2 \lo r8 \sh c-. \lo r \sh b-. |
     R1 |
@@ -215,6 +229,7 @@ sopranoWizardThree = \relative c'' { \autoBeamOff
     g4 f ~ \lo f8 \sh r8 r4 |
     r4 f ( ees ) des4 |
     c4 r4 r2 |
+}
 }
 
 sopranoWordsWizardThree = \lyricmode {
@@ -291,7 +306,7 @@ sopranoWordsWizardThree = \lyricmode {
   Oh the Wiz, Oh the Wiz, Oh the Wiz, Oh the Wiz
 }
 
-mezzoWizardThree = \relative c'' { \autoBeamOff
+mezzoWizardThree = { \autoBeamOff \relative c'' {
   \prefatoryMatterWizardThree
   r4 |
   g2.^\p^\delicate ees4 |
@@ -421,7 +436,10 @@ mezzoWizardThree = \relative c'' { \autoBeamOff
     \times 2/3 { b aes'^\mf g } \times 2/3 { f f ees } |
     d1^\> ~ |
     d1 ~ |
+  \emajorturn
     d1 |
+  }
+\funWithTransposition \relative c' {
     r2 fes^\mp |
     \times 2/3 { r2 des'^\mf ces } \times 2/3 { beses beses aeses } |
     ges1^\> ~ |
@@ -431,6 +449,9 @@ mezzoWizardThree = \relative c'' { \autoBeamOff
     \times 2/3 { ges aeses'1^\p^\< ~ } |
     << { aeses ~ } { s2 s2^\f^\> } >> |
     aeses4-. deses,,^\p \lo des8 \sh ges^\sfz ~ ges4 |
+ }
+\aesmajorturn
+\relative c' {
     f4-. r r2 |
     r2 \lo r8 \sh f \lo r8 \sh fis |
     d4^\mf \lo e8 \sh e \lo fis \sh fis g4 |
@@ -443,7 +464,7 @@ mezzoWizardThree = \relative c'' { \autoBeamOff
   \lo f8-.^\mf \sh f8-. r4 r2 |
   f2.^\< des4 |
    ees4-.^\f r r2 |
-}
+}}
 
 mezzoWordsWizardThree = \lyricmode {
   \repeat unfold 4 { He's my Wi -- zard }
@@ -524,7 +545,7 @@ mezzoWordsWizardThree = \lyricmode {
   He's my Wiz
 }
 
-altoWizardThree = \relative c' { \autoBeamOff
+altoWizardThree = { \relative c' { \autoBeamOff
   \prefatoryMatterWizardThree
   %\clef alto 
   ees4^\crooner^\mf |
@@ -687,17 +708,24 @@ altoWizardThree = \relative c' { \autoBeamOff
     a2 g^\mp ~ |
     g aes |
     bes1 |
+}
+\emajorturn
+\funWithTransposition \relative c' {
     \times 2/3 { c2 \clef "treble" ces'^\mf beses } \times 2/3 { aes aes ges }  |
     geses2^\>  fes |
+    \clef "treble_8"
     aes,2^\mp^\< a |
     bes^\> ces ~ |
     ces1^\mp ~ |
     ces2 deses  |
     ees1^\< ~ |
-    ees2 bes' |
+    ees2 \clef treble bes' |
     \times 2/3 { beses aes^\f aeses } |
     \times 2/3 { ges ees eeses } |
     des4 eeses^\subPd \lo ees8 \sh aes^\sfz ~ aes4 |
+}
+\aesmajorturn
+\relative c'' {
     \lo aes8-. \sh g,^\mf \times 2/3 { aes b cis } \lo fis e4 \sh g8 ~ |
     \times 2/3 { g8 a g } \lo e \sh b \lo ees \sh bes \lo cis \sh d |
     \lo r8 \sh aes \lo a \sh fis' \times 2/3 { f e ees } d cis |
@@ -744,7 +772,7 @@ altoWizardThree = \relative c' { \autoBeamOff
   r8 c16 d ~ d bes a c16 \times 2/3 { d8 bes bes } r16 c8 d16 ~ | % 31
   %d bes g f d c e g ~ g fis a ees ~ \times 4/5 { ees fis a ees g ~  } |
   \times 2/3 { d4 b8 } \times 2/3 { c4 d8 } \times 2/3 { aes8 g ges8 } \times 2/3 { e4 ees8^\ppppp }
-}
+}}
 
 altoWordsWizardThree = \lyricmode {
   We're off to see the Wi -- zard
@@ -880,7 +908,7 @@ altoWordsWizardThree = \lyricmode {
   Win -- some is how I'd ca -- te -- go -- rize it.
 }
 
-tenorWizardThree = \relative c {
+tenorWizardThree = { \relative c {
   \autoBeamOff
   \prefatoryMatterWizardThree
   \clef "treble_8"
@@ -1022,6 +1050,9 @@ tenorWizardThree = \relative c {
   ees2 c |
   d f ~ |
   f f |
+}
+  \emajorturn
+\funWithTransposition \relative c' {
   \times 2/3 { g2^\< aes a } |
   bes2 ces |
   c des^\> ~ |
@@ -1034,6 +1065,9 @@ tenorWizardThree = \relative c {
   \times 2/3 { des ceses beses } |
   \times 2/3 { ceses beses ceses } |
   ces4 ceses^\subPd \lo beses8 \sh d8^\sfz ~ d4 |
+}
+\aesmajorturn
+\relative c' {
   \lo ees8 \sh g,,^\mf \times 2/3 { aes b cis } \lo fis e4 \sh g8 ~ |
     \times 2/3 { g8 a g } \lo e \sh b \lo ees \sh bes \lo cis \sh a'  |
       r2 d,4 \lo e8 \sh e |
@@ -1046,7 +1080,7 @@ tenorWizardThree = \relative c {
   f4 \lo ees8 \sh g \lo f \sh ees \lo des \sh aes |
   \lo ees' des4 \sh ees8 \times 2/3 { aes,8 c ees } \lo g \sh f |
   ees4-. r r2 |
-}
+}}
 
 tenorWordsWizardThree = \lyricmode {
   was a be -- lie -- ver
@@ -1141,7 +1175,7 @@ tenorWordsWizardThree = \lyricmode {
   ne -- fa -- ri -- ous ar -- tist Oz
 }
 
-bassWizardThree = \relative c { \autoBeamOff
+bassWizardThree = { \relative c { \autoBeamOff
   \prefatoryMatterWizardThree
   \clef bass
   ees4^\bouncy^\mf |
@@ -1284,6 +1318,9 @@ bassWizardThree = \relative c { \autoBeamOff
     f,2 a |
     bes1 |
     ees,2 g |
+}
+\emajorturn
+\funWithTransposition \relative c {
     aes2 ges |
     fes^\< aes |
     beses1 |
@@ -1296,6 +1333,9 @@ bassWizardThree = \relative c { \autoBeamOff
     fes ~ |
     fes ~ |
     fes4-. r \lo r8 \sh fes^\sfz ~ fes4 |
+}
+\aesmajorturn
+\relative c {
     ees-. r r2 |
     r2 \lo r8 \sh ees-. \lo r \sh d-. |
     R1 |
@@ -1339,7 +1379,7 @@ bassWizardThree = \relative c { \autoBeamOff
     a aes e' g, |
     f' g, ges ees' |
     d c bes ces\!^\ppppp |
-}
+}}
 
 bassWordsWizardThree = \lyricmode {
   \repeat unfold 4 { Be -- cause of the won -- der -- ful things he does. }

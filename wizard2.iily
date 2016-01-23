@@ -22,91 +22,105 @@ wizardTwoDedication = \markup { for E.Y. Harburg and Harold Arlen }
 
 rhWizTwo = \relative c' {
   \key g \major
-  \tempo "Andante" 4=96
+  \tempo "Confident" 4=96
   d8^\ff d4 d8 e4-. eis-. |
   fis-. r d2^\fermata | \bar "||" % 1
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8^\f d4 d8 e4-. eis-. |
+  \tempo "Grandiose" %4=96
+  d8^\ff d4 d8 e4-. eis-. |
   fis-. r <fis a d>2^\fermata | \bar "||" % 2
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8^\mf d4 d8 e4-. eis-. |
+  \tempo "Coy" %4=96
+  d8^\f d4 d8 e4-. eis-. |
   fis-. r <d fis c'>2^\fermata | \bar "||" % 3
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8 d4 d8 e4-. eis-. |
+  \tempo "Joyful and warm" 4=100
+  d8^\mp d4 d8 e4-. eis-. |
   fis-. r <e fis b>2^\fermata | \bar "||" % 4
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8^\mp d4 d8 e4-. eis-. |
+  \tempo "Quizzical" 4=110
+  d8^\mf d4 d8 e4-. eis-. |
   fis-. r <d fis bes>2^\fermata | \bar "||" % 5
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8 d4 d8 e4-. eis-. |
+  \tempo "Rushed" 4=120
+  d8^\mp d4 d8 e4-. eis-. |
   fis-. r <fis ais f'>2^\fermata | \bar "||" % 6
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8^\p d4 d8 e4-. eis-. |
+  \tempo "Devoid of emotion"
+  d8 d4 d8 e4-. eis-. |
   fis-. r <d fis ees'>2^\fermata | \bar "||" % 7
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8 d4 d8 e4-. eis-. |
+  \tempo "Snobbish" 4=110
+  d8^\mf d4 d8 e4-. eis-. |
   fis-. r <ees fis b>2^\fermata | \bar "||" % 8
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8 d4 d8 e4-. eis-. |
+  \tempo "Confused"
+  d8^\p d4 d8 e4-. eis-. |
   fis-. r <d f aes>2^\fermata | \bar "||" % 9
   \NT
   \time 1/4
   r4
   \time 4/4
+  \tempo "Intimate"
   d8 d4 d8 e4-. eis-. |
   fis-. r <dis eis fisis>2^\fermata | \bar "||" % 10
   \NT
   \time 1/4
   r4
   \time 4/4
+  \tempo "Prisoner of a gag"
   d8 d4 d8 e4-. eis-. |
   fis-. r <fis e' f'>2^\fermata | \bar "||" % 11
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8 d4 d8 e4-. eis-. |
+  \tempo "With force" 4=96
+  d8^\f d4 d8 e4-. eis-. |
   fis-. r r2^\fermata | \bar "||" % 12
   \NT
   \time 1/4
   r4
   \time 4/4
-  d8^\f d4 d8 e4-. eis-. |
+  \tempo "Nonchalant" 4=110
+  d8^\mf d4 d8 e4-. eis-. |
   fis-. r <b, d g>2^\fermata | \bar "||" % 13
   \NT
   \time 1/4
   r4
   \time 4/4
+  \tempo "Obnoxious" 4=120
   d8^\pp d4 d8 e4-. eis-. |
   fis-. r <a, d fis>2^\markup \italic \column { "rich in" "overtones" } ^\fermata | \bar "||" % 14
   \NT
   \time 1/4
   r4
   \time 4/4
+  \tempo "Andante"
   d8
 }
 
