@@ -8,7 +8,7 @@ wizardFiveDedication = \markup { for Karl King, Carl Stalling and Vadim Petrov }
   bes minor for march Eb
   aes for ballerina (avoid dominant in build up)
 %}
-
+reallyFrickingLong = \markup \justify { * Knowing that the soprano has the right to assemble her cadenza as she sees fit, the composer would prefer if it were virtuosic and uncomfortably long. }
 %{
   eis8 eis eis gis gis gis r4. gis8 gis gis dis dis dis
 %}
@@ -85,9 +85,9 @@ marksCircus = {
   \bar "||" \secThree
   s1*4 |
   \time 4/4
-  \tempo "Cadenza"
+  s2 \tempo \markup \italic \line { \bold "Cadenza" * } s2
   \set Score.tempoWholesPerMinute = #(ly:make-moment 60 4 0 0)
-  s1*4 |
+  %s1*4 |
   \tempo "Lento" 4=48
   s1*4 |
   \tempo "Allegro" 4.=152
@@ -196,10 +196,10 @@ sopranoCircus = \relative c'' { \autoBeamOff
   ais-. r r8 r4 r4 c8-. r |
   dis16^\mf cisis dis cisis dis dis^\mp d cis bis r r8 r4 |
   r8.. bis'32^\f bis8. r16 r8.. dis32 dis8. r16 |
-  r8 b' b4 ~ b8 [ ais ] gis16 [ fis eis fis ] |
-  gis [ fis eis dis cisis bis cisis dis eis dis cisis bis ais^\> gisis ais b ] |
-  ais-.^\p [ cisis-. eis-. gis-. ] cisis,-.^\< [ eis-. gis-. b-. ] eis,-. [ gis-. b-. d-. ] gis,-. [ b-. d-. ees-. ] |
-  d4^\f^\trill d32.^\> [ cis c b bes a ais b ais a aes g fis f ] e [ eis ] |
+  r8.. b'32 b4 ~ \footnote "" #'(0 . 0) \reallyFrickingLong b4..^\fermata e,32 [ eis ] |  %~ b8 [ ais ] gis16 [ fis eis fis ] |
+  %gis [ fis eis dis cisis bis cisis dis eis dis cisis bis ais^\> gisis ais b ] |
+  %ais-.^\p [ cisis-. eis-. gis-. ] cisis,-.^\< [ eis-. gis-. b-. ] eis,-. [ gis-. b-. d-. ] gis,-. [ b-. d-. ees-. ] |
+  %d4^\f^\trill d32.^\> [ cis c b bes a ais b ais a aes g fis f ] e [ eis ] |
   fis2^\mp r8 g^\p fis f |
   e2 r8 f^\pp e dis |
   cisis2. r4 |
@@ -342,7 +342,7 @@ sopranoWordsCircus = \lyricmode {
   Ev -- er oh ev -- er a Wiz there was
   you know we hear cause
   Off to see the Wiz you know we hear
-  Wi -- zard Wi -- zard Wi -- zard __ _ _ _ _ _ _ _ _ of Oz
+  Wi -- zard Wi -- zard Wi -- zard %{__ _ _ _ _ _ _ _ _%} of Oz
   We're off to see
   The Wiz of Oz
   Oz Oz
@@ -460,9 +460,9 @@ mezzoCircus = \relative c' { \autoBeamOff
   R1 |
   R1 |
   R1 |
-  R1 |
-  R1 |
-  R1 |
+  %R1 |
+  %R1 |
+  %R1 |
   r8. fis'16^\mf^\> eis8. disis16 eis4^\ppp r4 |
   r4.. eis32-^^\f cisis32-^ r2^\longfermata |
   r2. ais'8^\pp ais ais gis ais gis |
@@ -711,9 +711,9 @@ altoCircus = \relative c' { \autoBeamOff
   gis16^\mf fisis gis fisis gis gis^\mp ais aisis bis bis b ais gis gis fis eis |
   dis4-. r a-.^\mf r |
   gis4-.^\f r r2 |
-  R1 |
-  R1 |
-  R1 |
+  %R1 |
+  %R1 |
+  %R1 |
   r8. dis'16^\p dis8.-. dis16 dis8.-. r16 r4 |
   r8. d16^\pp d8.-. d16 d8.-. r16 r4 |
   r8. cisis16^\mf^\> dis8. bisis16 cisis4^\ppp r4 |
@@ -967,9 +967,9 @@ tenorCircus = \relative c' { \autoBeamOff
   %eis' \glissando ais, \glissando eis' \glissando ais, \glissando |
   %eis' \glissando ais, \glissando eis'8 r r4 |
   R1 |
-  R1 |
-  R1 |
-  R1 |
+  %R1 |
+  %R1 |
+  %R1 |
   r4 cisis,,4-_^\pp r eis-_^\p |
   r4 gisis4-_^\mp r e8^\mf fisis16 gisis |
   ais8 ais16 ais ais8-. cisis-. cis-. bis-. ais-. a^\f^\> |
@@ -1269,9 +1269,9 @@ bassCircus = \relative c' { \autoBeamOff
   gis'16^\mf dis gis dis gis r r8 r4 r16 eis^\mp fis fisis |
   gis4-. r bis,-.^\mf r |
   cisis-.^\f r ais-.^\sfz r4 |
-  R1 |
-  R1 |
-  R1 |
+  %R1 |
+  %R1 |
+  %R1 |
   r8. a'16^\p a8.-. a16 a8.-. r16 r4 |
   r8. gis16^\pp gis8.-. gis16 gis8.-. r16 r4 |
   r8. fisis16^\mf^\> fisis8. fisis16 gis4^\ppp r4 |
