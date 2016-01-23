@@ -1,7 +1,7 @@
-*.pdf
 *.logic
-*.midi
+*.pdf
 *.svg
+*.midi
 .DS_Store
 *~
 pagenumbers.txt
