@@ -54,12 +54,12 @@
 \newcommand{\heartPage}{98}
 \newcommand{\wizfourPage}{112}
 \newcommand{\nervePage}{117}
-\newcommand{\wizfivePage}{132}
-\newcommand{\optimisticPage}{161}
-\newcommand{\merryPage}{164}
-\newcommand{\kingPage}{182}
-\newcommand{\finalePage}{186}
-\newcommand{\encorePage}{195}
+\newcommand{\wizfivePage}{133}
+\newcommand{\optimisticPage}{162}
+\newcommand{\merryPage}{165}
+\newcommand{\kingPage}{183}
+\newcommand{\finalePage}{187}
+\newcommand{\encorePage}{196}
 
 \setlength{\wizone}{5.3mm}
 \setlength{\rainbow}{3.8mm}

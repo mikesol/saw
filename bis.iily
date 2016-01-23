@@ -6,7 +6,7 @@ elsD = \markup \null
 mikD = \markup \null
 rynZ = \markup \null
 desD = \markup \null
-
+theTenorStopsSinging = \markup \justify { * For reasons that you will have to invent, the tenor stops singing for the rest of the song. }
 autoBeamInstruction = \autoBeamOn
 
 solo = \markup \italic "solo"
@@ -811,7 +811,7 @@ tenorBis = \relative c' {
   r8 g4. dis'4 b |
   cis dis f g |
   r8 b4. a8 d,4 r8 |
-  g4 e8 cis ~ cis r fis8. r16 |
+  g4 e8 cis ~ cis r fis8. \footnote "" #'(0 . 0) \theTenorStopsSinging r16^"*" |
   R1*6 |
   R4.*6 |
   R2*10 |

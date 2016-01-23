@@ -62,6 +62,10 @@ input1 = PdfFileReader(file('sitOzfarsWysr_a4.pdf', "rb"))
 for x in range(input1.getNumPages()) :
   output.addPage(input1.getPage(x))
 
+if output.getNumPages() % 2 == 1 :
+  input1 = PdfFileReader(file('editionHack/blankPage.pdf', "rb"))
+  output.addPage(input1.getPage(0))
+
 outputStream = file("editionHack/sowInterior.pdf".format(x), "wb")
 output.write(outputStream)
 outputStream.close()
