@@ -143,7 +143,7 @@ sopranoWizardThree = { \autoBeamOff
   \lo r8 d'4 \sh g,8 r2 |
   R1*8 |
   R1*3 |
-  r4 c d g ~ |
+  r4 c^\mp d g ~ |
   g4 r r4 f^\p^\<  |
   g a f4^\mp f4 | 
   e ees d cis |
@@ -399,7 +399,7 @@ mezzoWizardThree = { \autoBeamOff \relative c'' {
   \lo g \sh aes \lo g \sh f \lo r \sh ees d4 |
   \lo ees8 c4 \sh d ~ d2 |
   r4 c4 bes2 | 
-  a4 gis fisis gis4 |
+  a2 fisis4 gis |
   \lo a8-.^\mf \sh a-. \lo r \sh a,8^\mp d4 \lo e8 \sh e |
   \lo fis \sh fis g4 \lo a8 g4 \sh fis8 ~ |
   fis4 r r2 |
@@ -518,7 +518,7 @@ mezzoWordsWizardThree = \lyricmode {
   be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won
   cause of the Won -- der -- ful things oh the things he does
-  He does, My Wi -- zard, my
+  He does, Wi -- zard, my
   Wi -- zard
   Be -- cause of the Won -- der -- ful things he does
   Be -- cause of the Won -- der -- ful
@@ -1021,9 +1021,10 @@ tenorWizardThree = { \relative c {
   f4 \lo g8 \sh g \lo aes \sh aes bes4 |
   c4 \lo des8 \sh c r4 \lo c8%{^\straight%} \sh des |
   \lo c \sh bes r4 \lo bes8 \sh c \lo bes \sh a |
-  \lo r8%{^\swung%} a4 \sh aes8 g4 fis |
-  \lod g4. \sh fis ~ fis4 r |
-  R1*2 |
+  \lo r8%{^\swung%} \sh bes \lo a \sh aes8 g4 fis |
+  g2 fis4 \lo fis8 \sh g ~ |
+  \lod g4. \sh r8 r2 |
+  R1 |
   \lod r4. \sh f8 bes4 \lo c8 \sh c |
   \lo d \sh d ees4 \lo f8 ees4 \sh d8 ~ |
   \lo d \sh ees \lo d \sh c r4 \lo c8 \sh d |
@@ -1157,7 +1158,7 @@ tenorWordsWizardThree = \lyricmode {
   He's my Wiz my Wiz be -- cause be -- cause be -- cause of the Won -- der -- ful things he does
   be -- cause be -- cause be -- cause
   Be -- cause of the Won -- der -- ful things he does
-  Won -- der -- ful things Won -- der -- ful things cause the things he does, Won
+  Won -- der -- ful things Won -- der -- ful things cause of the things he does, Won -- der things
   Be -- cause of the Won -- der -- ful things he
   Won -- der -- ful things Won -- der -- ful
   Be -- cause of the Won -- der -- ful things he does

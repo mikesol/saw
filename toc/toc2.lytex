@@ -51,15 +51,15 @@
 \newcommand{\wiztwoPage}{57}
 \newcommand{\brainPage}{59}
 \newcommand{\wizthreePage}{71}
-\newcommand{\heartPage}{98}
-\newcommand{\wizfourPage}{112}
-\newcommand{\nervePage}{117}
-\newcommand{\wizfivePage}{133}
-\newcommand{\optimisticPage}{162}
-\newcommand{\merryPage}{165}
-\newcommand{\kingPage}{183}
-\newcommand{\finalePage}{187}
-\newcommand{\encorePage}{196}
+\newcommand{\heartPage}{99}
+\newcommand{\wizfourPage}{113}
+\newcommand{\nervePage}{118}
+\newcommand{\wizfivePage}{134}
+\newcommand{\optimisticPage}{163}
+\newcommand{\merryPage}{166}
+\newcommand{\kingPage}{184}
+\newcommand{\finalePage}{188}
+\newcommand{\encorePage}{197}
 
 \setlength{\wizone}{5.3mm}
 \setlength{\rainbow}{3.8mm}
