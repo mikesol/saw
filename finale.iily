@@ -446,9 +446,9 @@ mezzoCinqVoix = \relative c'' {
   gis8 [ g ] ) fis4 e4^\< |
   d'2^\f cis4 |
   dis8 [ ( d ] cis4 ) bis ~ |
-  bis8 cis4 d4 ( dis8 ~  |
+  bis8 cis4 d4 dis8 ~  |
   \key g \major
-  dis8 ) d4.^\< ~ d8 r gis,4 ~ |
+  dis8 d4.^\< ~ d8 r gis,4 ~ |
   gis8 a c b e d c b |
   ees d c b a eis' cis c |
   e d c b bes a aes16 r c8 |
@@ -471,7 +471,7 @@ mezzoCinqVoixWords = \lyricmode {
   ev -- er, oh ev -- er.
   If ev -- er, oh ev -- er a wiz there was,
   Oh the Wi -- zard of Oz is one be -- cause
-  Be -- cause, be -- cause be -- cause be -- cause be -- cause
+  Be -- cause, be -- cause be -- cause be -- cause be, be -- cause
   Ma -- gi -- cal re -- mar -- ka -- ble
   In -- cre -- di -- ble as -- to -- nish -- ing
   Sen -- sa -- tion -- al mi -- ra -- cu -- lous the
@@ -741,7 +741,7 @@ mezzoFinalRepeatWords = \lyricmode {
 altoFinalRepeat = \relative c'' {
   \key b \major
   dis1^\ffffuckd ~ |
-  dis2. gis,4\ff |
+  dis2. gis,4^\ff |
   gis2 ~ gis8 g ~ \times 2/3 { g a b ~ } |
   b8 a, a' gis eis gis \times 2/3 { fis cis dis } |
   ais'4 gis ~ gis8 cis b ais |

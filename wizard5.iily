@@ -80,7 +80,9 @@ marksCircus = {
   \bar "||" \secTwo
   \time 2/4
   \unfoldChange #52 #50 #8
-  s1*8 |
+  s1*6 |
+  s2 \mark \accel s2 |
+  s1*1 |
   \tempo "Andante" 4=92
   \bar "||" \secThree
   s1*4 |
@@ -934,7 +936,7 @@ altoWordsCircus = \lyricmode {
   Won -- der -- ful the
   Wi Won -- der -- ful Won -- der -- ful the
   Won -- der -- ful the Wiz 
-  he is the wiz wiz wiz wiz wiz wiz wiz wiz the wiz
+  wiz wiz wiz wiz wiz wiz wiz wiz wiz wiz wiz the wiz
   Oz Oz
 }
 
@@ -967,9 +969,9 @@ tenorCircus = \relative c' { \autoBeamOff
   %eis' \glissando ais, \glissando eis' \glissando ais, \glissando |
   %eis' \glissando ais, \glissando eis'8 r r4 |
   R1 |
-  %R1 |
-  %R1 |
-  %R1 |
+  R1 |
+  R1 |
+  R1 |
   r4 cisis,,4-_^\pp r eis-_^\p |
   r4 gisis4-_^\mp r e8^\mf fisis16 gisis |
   ais8 ais16 ais ais8-. cisis-. cis-. bis-. ais-. a^\f^\> |
@@ -999,9 +1001,9 @@ tenorCircus = \relative c' { \autoBeamOff
   bis16^\mf ais bis ais bis r r8 r2 |
   r2 fis4-.^\mf r |
   eis4-.^\f r r2 |
-  R1 |
-  R1 |
-  R1 |
+  %R1 |
+  %R1 |
+  %R1 |
   r8. cis'16^\p bis8.-. aisis16 bis8.-. r16 r4 |
   r8. c16^\pp b8.-. ais16 b8.-. r16 r4 |
   r8. ais16^\mf^\> b8. b16 ais4^\ppp r4 |
@@ -1115,7 +1117,7 @@ tenorCircus = \relative c' { \autoBeamOff
   gis,8. ais16 bis8-. eis-. e4-^ dis8^\> d\! |
   R1 |
   r8 gis,4^\p g fis^\< eis8 |
-  e4-.^\f r r2^\fermata |
+  eis4-.^\f r r2^\fermata |
   r2 cis4-.^\sfz r |
 }
 

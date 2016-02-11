@@ -10,7 +10,7 @@ from constants import TITLES, MUSIC, RECORDINGS, MIDIS, NOTPRINTABLE
 COUNT = 0
 
 for x in MUSIC :
-  if not os.path.exists(x+".pdf") :
+  if (not os.path.exists(x+".pdf")) or (not os.path.exists(x+".ly")) :
     raise ValueError(x+" score doesn't exist")
   else :
     cmd = "pdfinfo "+x+".pdf | grep 'Pages' | awk '{print $2}'"
@@ -53,7 +53,7 @@ outfi.write(FRAME)
 outfi.close()
 
 for x in MUSIC :
-  subprocess.call('lilypond '+x+".ly", shell=True)
+  subprocess.call('lilypond -dno-point-and-click '+x+".ly", shell=True)
 
 from ftplib import FTP
 ftp = FTP('ftp.ensemble101.fr')     # connect to host, default port

@@ -1066,8 +1066,8 @@ mezzoRestarts = \relative c' { %\autoBeamOff
   disis4 eis8.-. disis8. |
 }   \wkey ees \major { \relative c'' {
   r8 g4^\mf e8 \times 2/3 { a4 ( g ) f }
-  \times 2/3 { d4^\mp^\< ees f ~ } f8 g4^\> ees8^\mp
-  a'4^\f |
+  \times 2/3 { d4^\mp^\< ees f ~ } f8 g4^\> ees8^\!
+  a4^\f |
 }} \wkey e \major { 
   fis8 a gis fis |
   << { e4. ~ e8 dis8 
@@ -1091,7 +1091,7 @@ altoRestarts = \relative c' { %\autoBeamOff
   r4 r8. bis8. |
 }   \wkey ees \major { \relative c' {
   r2 \times 2/3 { f4^\mf ( e ) d } |
-  \times 2/3 { bes^\mp^\< c d ~ } d8 ees4^\> d8^\mp r4 |
+  \times 2/3 { bes^\mp^\< c d ~ } d8 ees4^\> d8^\! r4 |
  } \wkey e \major { 
   r4. a8^\f |
   %<< { gis2 ~ gis4. ~  } { s2.^\> s8^\p } >> |

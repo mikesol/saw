@@ -309,15 +309,15 @@ sopranoWordsWizardThree = \lyricmode {
 mezzoWizardThree = { \autoBeamOff \relative c'' {
   \prefatoryMatterWizardThree
   r4 |
-  g2.^\p^\delicate ees4 |
+  << { g2.^\delicate ees4 |
   \lo f8-. \sh f8-. r4 r2 |
   f2. des4 |
   \lo ees8-. \sh ees8-. r4 r2 |
   ees2. ees4 |
   \lo f8-. \sh f8-. r4 r2 |
   f2. fis4 |
-  \lo g8-. \sh g8-. r4 r4 ges4^\fp^\< |
-  f-.^\mf r \lo r8 \sh des^\fp^\< ~ des4 |
+  \lo g8-. \sh g8-. r4 r4 ges4^\fp^\< | } { \repeat unfold 4 { s2.^\p^\< s4 s1^\mf } } >>
+  f4-.^\mf r \lo r8 \sh des^\fp^\< ~ des4 |
   c4-.^\mf r \lo r8 \sh ees^\fp^\< ~ ees4 |
   d4-.^\mf r \lo d'8 \sh d,^\fp^\< ~ d4|
   ees-.^\mf r \lo r8 \sh ges^\fp^\< ~ ges4 |
@@ -929,8 +929,11 @@ tenorWizardThree = { \relative c {
   \autoBeamOff
   \prefatoryMatterWizardThree
   \clef "treble_8"
-  \times 2/3 { aes8^\scat^\mp c ees } |
-  \lo g8 \sh f \lo r \sh aes ~ \times 2/3 { aes bes aes } \lo g \sh des |
+  %\times 2/3 { aes8^\scat^\mp c ees } |
+  %\lo g8 \sh f
+  \times 2/3 { ees8^\scat^\p^\< g bes } |
+  \lo c8^\mp \sh bes
+    \lo r \sh aes-- ~ \times 2/3 { aes bes aes } \lo g \sh des |
   f4 \lo ees8 \sh g \lo f \sh ees \lo des \sh aes |
   \lo ees' des4 \sh ees8 \times 2/3 { aes,8 c ees } \lo g \sh f ~ |
   \lo f \sh aes, \times 2/3 { bes des f } bes4 \times 2/3 { aes8 bes aes } |

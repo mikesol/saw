@@ -4,8 +4,12 @@ import sys
 import string
 from constants import TITLES, MUSIC, RECORDINGS, MIDIS, NOTPRINTABLE
 
-subprocess.call('python bookgen.py > sitOzfarsWysr.ly', shell=True)
-subprocess.call('lilypond -dno-point-and-click -ositOzfarsWysr_a4 sitOzfarsWysr > pagenumbers.txt', shell=True)
+if (len(sys.argv) > 1) and (sys.argv[1] == '--short') :
+  pass
+else :
+  subprocess.call('python bookgen.py > sitOzfarsWysr.ly', shell=True)
+  subprocess.call('lilypond -dno-point-and-click -ositOzfarsWysr_a4 sitOzfarsWysr > pagenumbers.txt', shell=True)
+
 infi = file('pagenumbers.txt','r')
 PN = infi.read()
 infi.close()
