@@ -1831,7 +1831,7 @@ mezzoRamp = \relative c' { %\autoBeamOff
   e4^\< f fis g |
   gis8 [ g ] a4 gis ais |
 }   \wkey fis \major {
-  b-.^\f g a |
+  b^\f g a |
   gis4^\mf eis8 fis gis |
 }   \wkey cis \major {
   cis,4 ais'^\< |
@@ -2603,7 +2603,7 @@ altoWortspiel = \relative c' { %\autoBeamOff
    \wkey b \major {
   \times 2/3 { gis4^\subPd g fis } fis4 fis^\< fis |
   e4^\mf fis gis ais |
-  b^\> ( cis ) cisis ( dis ) |
+  dis,^\> ( cis' ) cisis ( dis ) |
 }   \wkey bes \major { \relative c' {
   \times 2/3 { c^\p ( bes c } \times 2/3 { bes^\< c bes } 
   \times 2/3 { c^\mp bes c ) } c d |
@@ -2624,7 +2624,7 @@ altoWortspiel = \relative c' { %\autoBeamOff
   gis2\! ) ais,4 ( gis ) |
 }   \wkey fis \major {
   ais2^\f cis2 |
-  b4 dis8 d cis4
+  b4 dis4 cis4
   %ais^\f ( eis ) dis ( disis ) |
   %eis4 gis8 fis eis4 |
 }}
@@ -2639,7 +2639,7 @@ altoWortspielWords = \lyricmode {
   and dreams you
   way
   land that I bow up
-  high there's a land if hap
+  high there's a land hap
 }
 
 tenorWortspiel = \relative c { %\autoBeamOff
@@ -3723,8 +3723,8 @@ bassFinale = \relative c {
     e' ( d ) d | % why oh
   }
   \wkey e \major {
-    a2^\> b4 ~ |
-    b^\mf^\< fis' e |
+    a2^\> b4 ~ ( |
+    b^\mf^\< fis' ) e |
   }
   \wkey fis \major {
     g^\f fis |
@@ -3744,7 +3744,7 @@ bassFinaleWords = \lyricmode {
   Way up
   Way If hap
   Why oh
-  If hap -- py lit
+  If hap -- py %{lit%}
   hap -- py
 }
 

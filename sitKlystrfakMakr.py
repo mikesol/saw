@@ -16,7 +16,7 @@ infi.close()
 PN = filter(lambda x : x[:6] == '@@@@@@', PN.split('\n'))
 PN = [P.split('@@@@@@')[1].split('::::::') for P in PN]
 PN = [(int(P[0]), P[1]) for P in PN]
-PN = [(15,'wizard1')] + PN
+PN = [(11,'wizard1')] + PN
 infi = file('toc/toc2proto.lytex', 'r')
 LYTEX = infi.read()
 infi.close()
@@ -40,8 +40,8 @@ for x in [1,2] :
   output.write(outputStream)
   outputStream.close()
 
-INPUT = 'toc2-1 toc2-2 sowArtPageOne sowArtPageTwo sowNoteOneRealFont sowNoteTwoRealFont'.split(' ')
-OFFSET = 7
+INPUT = 'toc2-1 toc2-2 sowNoteOneRealFontNoImage sowNoteTwoRealFont sowSketchBlank'.split(' ')
+OFFSET = 5
 
 for x in range(len(INPUT)) :
   hackfile = 'editionHack/hack{0}.pdf'.format(x+OFFSET)
@@ -58,7 +58,7 @@ for x in range(len(INPUT)) :
   outputStream.close()
 
 output = PdfFileWriter()
-for x in range(3,15) :
+for x in range(3,11) :
   input1 = PdfFileReader(file('editionHack/finalPage{0}.pdf'.format(x), "rb"))
   output.addPage(input1.getPage(0))
 

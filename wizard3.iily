@@ -234,7 +234,7 @@ sopranoWizardThree = { \autoBeamOff
 
 sopranoWordsWizardThree = \lyricmode {
   \repeat unfold 5 { Oh, the Wiz }
-  I could while a -- way
+  I could wile a -- way
   If ev
   oh ev -- ver oh ev oh ev Be ev er oh ev
   Be -- cause of the Won -- der -- ful things he does.
@@ -247,7 +247,7 @@ sopranoWordsWizardThree = \lyricmode {
   Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard of
   Wi -- zard
-  no no dat bli -- zard
+  no no dat bliz -- zard
   ne -- ver would I ev -- er say the
   oh the Wiz oh the
   nign gen -- tle and ten -- der things he does the Wiz
@@ -495,7 +495,7 @@ mezzoWordsWizardThree = \lyricmode {
   Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard of
   Wi -- zard
-  no dat bli -- zard
+  no dat bliz -- zard
   ne -- ver would I ev -- er say be --
   lie -- ver hi -- de -- ous -- ly a -- brupt
   would -- n't help with your re -- gre
@@ -805,7 +805,7 @@ altoWordsWizardThree = \lyricmode {
   Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard of
   Wi -- zard
-  no no dat bli -- zard
+  no no dat bliz -- zard
   ne -- ver would I ev -- er say the
   Wi -- zard is a Wi -- zard if a Wiz there was
   he was a be -- nign, gen -- tle and ten -- der man if ev -- er a Wiz
@@ -875,7 +875,7 @@ altoWordsWizardThree = \lyricmode {
   You know the Wi -- zard of Oz is sing -- in' out of key
   the Won -- der -- ful things Won -- der -- ful things
   Be -- cause of the
-  So un -- for -- ge -- ta -- ble, the Wi -- ard, I tel -- lin' you We're
+  So un -- for -- ge -- ta -- ble, the Wi -- zard, I tel -- lin' you We're
   off to see the Wi -- zard, the Won -- der -- ful Wi -- zard Joy
   What ju -- bi -- la -- tion we are show -- ing
   What pau -- ci -- ty of doubt and glee
@@ -916,8 +916,8 @@ altoWordsWizardThree = \lyricmode {
   Won -- der and cu -- ri -- os -- i -- ty
   Pour -- ing out of my mouth
   What sin -- gu -- lar mi -- ra -- cle
-  Ra -- vag -- ing my se -- de -- ta -- ry lips
-  De -- flo -- wer -- ing my an -- scil -- la -- ry hairs
+  Ra -- vag -- ing my se -- den -- ta -- ry lips
+  De -- flo -- wer -- ing my an -- cil -- la -- ry hairs
   Ut -- ter -- ly in -- cre -- du -- lous
   Fes -- tive if not ex -- u -- ber -- ant
   %%%%Win -- some is how I'd ca -- te -- go -- rize this mer -- ry e -- ner -- gized state
@@ -1147,7 +1147,7 @@ tenorWordsWizardThree = \lyricmode {
   Won -- der -- ful Wi -- zard the
   Won -- der -- ful Wi -- zard of
   Wi -- zard
-  no dat bli -- zard
+  no dat bliz -- zard
   he's my Wi -- zard
   be -- cause of the Won -- der -- ful things he does
   be -- cause
@@ -1170,7 +1170,7 @@ tenorWordsWizardThree = \lyricmode {
   Be -- cause of the Won -- der -- ful things he does
   Oh the Wiz, Oh the Wiz
   He's my Wi -- zard
-  He's my Wi -- ard
+  He's my Wi -- zard
   cause
   Oz lou -- sy swing -- in' Wiz
   he's tak -- in' dimp -- led bows, he's fling -- in' rizz
@@ -1202,7 +1202,7 @@ tenorWordsWizardThree = \lyricmode {
   the Wiz of Oz
   Wiz Oh the Wiz, Oh the Wiz, Oh the Wiz, my Wiz the
   Won He was a be -- lie -- ver Pas -- sion -- ate -- ly re -- mar -- ka -- ble Won
-  cause of the Won -- der -- ful thigns the Won -- der -- ful, the lies, he's a cheat -- ter
+  cause of the Won -- der -- ful things the Won -- der -- ful, the lies, he's a chea -- ter
   Un -- can -- ny wi -- cked
   He's my Wi -- zard 
   be -- lie -- ver
@@ -1444,7 +1444,7 @@ bassWordsWizardThree = \lyricmode {
   He's my Wi -- zard
   He's my, my Wiz no be -- cause
   He's my Wiz be -- cause be cause of the Won -- der -- ful things he does cause cause cause be
-  Be -- cause of the Won -- der -- ful thigns he does.
+  Be -- cause of the Won -- der -- ful things he does.
   Won -- der -- ful things
   Won -- der -- ful things be -- cause of the Won -- der -- ful things he does.
   Be -- cause of the Won cause of the Won -- der -- ful things Won -- der -- ful things

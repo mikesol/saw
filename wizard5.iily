@@ -39,6 +39,7 @@ legato = \markup \italic "legato"
 %}
 
 swing = \markup \italic "swung"
+straight = \markup \italic "straight"
 rall = \markup \italic "rall."
 accel = \markup \italic "accel."
 nothing = {}
@@ -57,7 +58,7 @@ secOne = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \m
 secTwo = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Contortionist" }
 secThree = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Tightrope Walker" }
 secFour = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Parade of the Animals (for Maija)" }
-secFive = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The ballerina" }
+secFive = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Ballerina" }
 secSix = { \once \override Score.RehearsalMark.self-alignment-X = #LEFT \mark \markup "The Human Cannonball" }
 
 marksCircus = {
@@ -304,7 +305,7 @@ sopranoCircus = \relative c'' { \autoBeamOff
   cisis [ bis ] aisis [ gis ] fisis [ ( gis ] fisis4^\mp ) |
   r2. r4. gis8^\p gis gis |
   dis' d cis c b ais a gis g fis f e |
-  eis8-.^\f eis8-. eis-. eis-. r4 r4. fisis ~ |
+  eis8-.^\f eis8-. eis-. eis-. r4 r4. fisis |
   fisis8-. fisis-. fisis-. fisis4-. gis8 ais4-. gis8 ais4-. gis8 |
   ais4-. gis8 fisis4-. eis8 fisis8-. fisis-. fisis-. fisis8.-. bis |
   ais gis fisis4. \glissando dis'8 r4 dis,4.^\> |
@@ -396,9 +397,9 @@ sopranoWordsCircus = \lyricmode {
   If ev -- er oh ev -- er a wiz there was
   Wi -- zard be -- cause of be -- cause of the
   won -- der -- ful things that he
-  cause of the won
-  Oz
-  of the Won -- der things he does we're off to see the
+  cause of the Wiz
+  Wiz
+  cause of the Wiz, the Won -- der -- ful we're off to see the
   cause of the won -- der -- ful the of Oz
   We're off to see the won -- der -- ful the wiz
   he's the wi -- zard Wiz of Oz
@@ -644,8 +645,7 @@ mezzoWordsCircus = \lyricmode {
   Wi -- zard the Won -- der -- ful Wi -- zard the
   Wi -- zard of Oz is one the Wi -- zard be --
   
-  cause of the Won -- der things he does we're
-  off to see the Wi -- zard
+  cause of the Wiz, the won -- der -- ful be -- cause he is the wi -- zard
   cause of the won -- der -- ful the won -- der Wiz of Oz
   see the won
   Oz won -- der -- ful won -- der -- ful won -- der -- ful won -- der -- ful
@@ -689,7 +689,7 @@ altoCircus = \relative c' { \autoBeamOff
   b ais a gis |
   \lod a4.-- \sh r8 r2 |
   R1 |
-  cis8^\mp^\< eis16 cisis bis8 e16 c b8-.^\mf bis-.^\< cis-. cisis-. |
+  cis8^\mp^\<^\straight eis16 cisis bis8 e16 c b8-.^\mf bis-.^\< cis-. cisis-. |
   dis2^\fp^\< ~ dis8-.^\mf ais-.^\p^\< aisis-. bis-. |
   cis4^\mf^\> bis b^\mp ais |
   b^\< c cis^\mf d |
@@ -865,7 +865,7 @@ altoWordsCircus = \lyricmode {
   cause of all the won -- der won -- der -- ful things that he does
   the Wiz of Oz the Wiz of Oz
   Off to see the Won -- der -- ful the Won -- der Wiz of Oz
-  you know we hear he is a Wiz -- ard of a Wiz be -- casue be -- cause
+  you know we hear he is a Wiz -- ard of a Wiz be -- cause be -- cause
   Off to see the Wiz you know we hear he is a Wi -- zard of a
   Wiz
   Wiz
@@ -918,7 +918,7 @@ altoWordsCircus = \lyricmode {
   Wiz
   ful we're off to see the won -- der -- ful
   he is the wiz
-  he is the wiz wiz wiz Wiz of Oz
+  wiz wiz wiz wiz wiz wiz Wiz of Oz
   know
   We're off to see
   the won -- der -- ful wiz of
@@ -928,7 +928,7 @@ altoWordsCircus = \lyricmode {
   he is the Wiz If ev
   Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard
   the Won -- der -- ful Wi -- zard the Won -- der -- ful Wi -- zard
-  be -- cause of the won, the won -- der -- ful be -- cause he is the wi -- zard
+  be -- cause of the Wiz, the won -- der -- ful be -- cause he is the wi -- zard
   cause of the wiz the won -- der -- ful the Wiz
   of Oz
   We're off
@@ -936,7 +936,7 @@ altoWordsCircus = \lyricmode {
   Won -- der -- ful the
   Wi Won -- der -- ful Won -- der -- ful the
   Won -- der -- ful the Wiz 
-  wiz wiz wiz wiz wiz wiz wiz wiz wiz wiz wiz the wiz
+  he is the wiz wiz wiz wiz wiz wiz wiz wiz the wiz
   Oz Oz
 }
 
@@ -973,7 +973,7 @@ tenorCircus = \relative c' { \autoBeamOff
   R1 |
   R1 |
   r4 cisis,,4-_^\pp r eis-_^\p |
-  r4 gisis4-_^\mp r e8^\mf fisis16 gisis |
+  r4 gisis4-_^\mp r e8^\mf^\straight fisis16 gisis |
   ais8 ais16 ais ais8-. cisis-. cis-. bis-. ais-. a^\f^\> |
   gis g fis^\!^\< f e4^\f-. r4 |
   r8 eis^\p r b r eis r b |
@@ -1437,7 +1437,7 @@ bassWordsCircus = \lyricmode {
   cause of all the Off to see the Wiz
   If ev
   the Won -- der -- ful the Won -- der Wiz
-  be -- cause of the won
+  be -- cause of the Wiz
   Wiz
   of Oz
   Off

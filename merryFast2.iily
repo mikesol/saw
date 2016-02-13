@@ -274,10 +274,10 @@ altoWordsFP = \lyricmode {
   He's tak -- ing off al -- though you want -- ed to wait
   it's too late
   Oh ne -- ver was a Wi -- zard e -- ver steal -- in the show
-  Al -- lu -- ring was the mis -- ty -- fy -- ing au -- ra he gave
+  Al -- lu -- ring was the mis -- ti -- fy -- ing au -- ra he gave
   Home of the brave
   Oh how I crave
-  The Wi -- zard's ac -- cu -- men to save
+  The Wi -- zard's a -- cu -- men to save
   A bu -- sy bea -- ver
   A de -- cei -- ver
   A be -- lie -- ver
@@ -286,11 +286,11 @@ altoWordsFP = \lyricmode {
   rhe -- to -- ric and pau -- ci -- ty of ve -- ri -- ty was he.
   Gen -- ui -- ine op -- ti -- mis -- tic verve
   Oh how sa -- vante
-  A di -- la -- tente
+  A di -- let -- tante
   He was in -- cre -- di -- ble while un -- der the gun
   He was gi -- vin me a hell of a run
   He would au -- thor -- ize a mil -- li -- on bucks
-   for un -- reason -- na -- able ex -- pen -- di -- tures
+   for un -- reas' -- na -- ble ex -- pen -- di -- tures
   Fly like an ul -- ti -- ma -- tum at the U N
    while say -- in
   Ha ha ha
@@ -418,11 +418,11 @@ compWordsFP = \lyricmode {
   Wi -- zard is my
   Own re -- birth, sing
   Ha ha ha
-  Ho dee ho dee and a
+  Ho ho ho dee and a
   cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry old land of Oz
   %{Ha%} ha ha
-  Ho dee ho and a
+  Ho ho ho and a
   cou -- ple of tra la las
   That's how we laugh the day a -- way in the mer -- ry old land of Oz
 }
@@ -588,7 +588,7 @@ marksMoLSecondPart = {
   s2. |
   \time 4/4
   s1*8 |
-  \mark "accel. poco a poco"
+  \mark \markup \italic "accel. poco a poco"
   \unfoldChange #112 #150 #64
   \unfoldChange #150 #160 #32
   \unfoldChange #160 #220 #32
@@ -1441,12 +1441,11 @@ bassWordsMoLSecondPart = \lyricmode {
   \repeat unfold 12 ○
   up go -- in' up and we're up
   go -- in' down and we're down
-  the Wi -- zard of Oz is one be -- caue be -- cause be
+  the Wi -- zard of Oz is one be -- cause be -- cause be
   Ha %{ha%} ha
   Ho ho
   cou -- ple
-  \repeat unfold 49 ○
-  Wiz
+  \repeat unfold 48 ○
   \repeat unfold 4 { Oz }
 }
 
