@@ -405,7 +405,7 @@ mezzoWizardThree = { \autoBeamOff \relative c'' {
   fis4 r r2 |
   \lodd r2.. \sh g,8 |
   c4 \lo d \sh d \lo ees \sh ees f4 |
-  \lodd r2.. \sh bes,8 |
+  ees4 r4 \lod r4. \sh bes8 |
   g4 \lo aes \sh aes \lo bes \sh bes c4 |
   d4 \lo ees8 \sh d \lo r8 d4 \sh ees |
   r4 d ~ d r |
@@ -521,7 +521,7 @@ mezzoWordsWizardThree = \lyricmode {
   He does, Wi -- zard, my
   Wi -- zard
   Be -- cause of the Won -- der -- ful things he does
-  Be -- cause of the Won -- der -- ful
+  Be -- cause of the Won -- der -- ful things
   Be -- cause of the Won -- der -- ful things he does
   What a Wiz
   Be -- cause of the Won -- der -- ful things he does

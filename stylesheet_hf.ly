@@ -40,3 +40,4 @@
         \null
   }}
 }
+%\layout{\context{\Voice\override NoteHead.before-line-breaking = #(lambda (x) (format #t "@!#\n")) }}
