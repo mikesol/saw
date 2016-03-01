@@ -821,7 +821,10 @@ tenorBis = \relative c' {
   R4.*6 |
   \cricket
   cis4 r8 |
-  R4.*3 |
+  \tNormal
+  r4 c8^\ff ~ |
+  c4. ~ |
+  c4^\fermata r8 |
 }
 
 tenorWordsBis = \lyricmode {
@@ -863,6 +866,7 @@ tenorWordsBis = \lyricmode {
   \repeat unfold 2 { ba ba da }
   ba
   \heg
+  nä
 }
 
 bassBis = \relative c {

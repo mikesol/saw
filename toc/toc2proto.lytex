@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\usepackage[a4paper, total={190mm, 270mm}]{geometry}
+\usepackage[a4paper, total={190mm, 264mm}, centering]{geometry}
 \usepackage{multicol}
 \pagenumbering{roman}
 \usepackage{fancyhdr}

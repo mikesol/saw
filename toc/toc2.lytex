@@ -1,5 +1,5 @@
 \documentclass[a4paper]{article}
-\usepackage[a4paper, total={190mm, 270mm}]{geometry}
+\usepackage[a4paper, total={190mm, 264mm}, centering]{geometry}
 \usepackage{multicol}
 \pagenumbering{roman}
 \usepackage{fancyhdr}
@@ -57,9 +57,9 @@
 \newcommand{\wizfivePage}{129}
 \newcommand{\optimisticPage}{158}
 \newcommand{\merryPage}{161}
-\newcommand{\kingPage}{179}
-\newcommand{\finalePage}{183}
-\newcommand{\encorePage}{192}
+\newcommand{\kingPage}{178}
+\newcommand{\finalePage}{182}
+\newcommand{\encorePage}{191}
 
 \setlength{\wizone}{5.3mm}
 \setlength{\rainbow}{3.8mm}
