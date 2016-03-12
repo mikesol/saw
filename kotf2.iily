@@ -304,7 +304,7 @@ altoKOTF = {
   bis dis'^\fermata^\mp r4 
   \key aes \major
   c'^\> |
-  des'2^\p^\< ges'^\mf^\> |
+  d'2^\p^\< ges'^\mf^\> |
   g'4^\p fis' a' cis' |
   f' e' aes' bes |
   c'4 ees'^\fermata r4 
