@@ -205,7 +205,7 @@ mezzoOptimistic = \relative c'' { \autoBeamOff
   R1 b,4^\p f'2. |
   R1 c4^\mf bes'2. |
   g4^\mp b2. | d4^\p ees2. |
-  R1 c4^\f ees2. |
+  R1 c4^\f f2. |
   \key e \major
   R1 cis4^\mp e2. |
   a,4^\f d2. |
