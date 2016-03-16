@@ -1,3 +1,4 @@
+\version "2.19.32"
 %%%%%%%%%%%%%%%%%%
 %% manual hacks %%
 %% stencil.scm :: make-connected-path-stencil-with-initial-offset
@@ -26,13 +27,13 @@
 #(define-markup-command (textFlat layout props) ()
   (interpret-markup layout props (markup #:raise 0.5 #:small #:flat)))
 
-noAcc = \once \override Accidental #'stencil = ##f
-wavygliss = \once \override Glissando #'style = #'zigzag
+noAcc = \once \override Accidental.stencil = ##f
+wavygliss = \once \override Glissando.style = #'zigzag
 
 gSkip = {
-  \once \override NoteColumn #'glissando-skip = ##t
-  \once \override NoteHead #'transparent = ##t
-  \once \override NoteHead #'no-ledgers = ##t
+  \once \override NoteColumn.glissando-skip = ##t
+  \once \override NoteHead.transparent = ##t
+  \once \override NoteHead.no-ledgers = ##t
 }
 
 parend =
@@ -46,9 +47,9 @@ parend =
     #}))
 
 
-hairtip = \once \override Hairpin #'circled-tip = ##t
+hairtip = \once \override Hairpin.circled-tip = ##t
 
-noStem = { \once \override Stem #'stencil = ##f \once \override Flag #'stencil = ##f }
+noStem = { \once \override Stem.stencil = ##f \once \override Flag.stencil = ##f }
 
 #(define (broken-tuplet-text grob l)
   (define (helper gl l)
@@ -57,26 +58,26 @@ noStem = { \once \override Stem #'stencil = ##f \once \override Flag #'stencil =
         (helper (cdr gl) (cdr l))))
   (helper (ly:spanner-broken-into (ly:grob-original grob)) l))
 
-Red = \override NoteHead #'color = #red
-Blue = \override NoteHead #'color = #blue
-Black = \revert NoteHead #'color
-rred = \once \override NoteHead #'color = #red
-bblue = \once \override NoteHead #'color = #blue
+Red = \override NoteHead.color = #red
+Blue = \override NoteHead.color = #blue
+Black = \revert NoteHead.color
+rred = \once \override NoteHead.color = #red
+bblue = \once \override NoteHead.color = #blue
 
-bendInto = \once \override BendAfter #'stencil = #bend-into::print 
-ziggliss = \once \override Glissando #'style = #'zigzag
+bendInto = \once \override BendAfter.stencil = #bend-into::print 
+ziggliss = \once \override Glissando.style = #'zigzag
 glisslen =
-#(define-music-function (parser location n) (number?)
+#(define-music-function (n) (number?)
 #{
-  \once \override Glissando #'minimum-length = #n
-  \once \override Glissando #'springs-and-rods = #ly:spanner::set-spacing-rods
+  \once \override Glissando.minimum-length = #n
+  \once \override Glissando.springs-and-rods = #ly:spanner::set-spacing-rods
 #})
 
 hairlen =
-#(define-music-function (parser location n) (number?)
+#(define-music-function (n) (number?)
 #{
-  \once \override Hairpin #'minimum-length = #n
-  \once \override Hairpin #'springs-and-rods = #ly:spanner::set-spacing-rods
+  \once \override Hairpin.minimum-length = #n
+  \once \override Hairpin.springs-and-rods = #ly:spanner::set-spacing-rods
 #})
 
 % already in 2.15, but copied here to work in 2.14
@@ -115,17 +116,17 @@ hairlen =
     (else (format-time-fraction time-sig))))
 
 
-question = \once \override Score . TimeSignature #'stencil =
+question = \once \override Score . TimeSignature.stencil =
 #(lambda (grob)
   (grob-interpret-markup grob (markup #:override '(baseline-skip . 0) (#:column (#:huge #:bold "?" #:number "4")))))
 
-air = { \once \override NoteHead #'stencil = %#(lambda (grob) (grob-interpret-markup grob (markup "○")))
+air = { \once \override NoteHead.stencil = %#(lambda (grob) (grob-interpret-markup grob (markup "○")))
 #(lambda (grob) (grob-interpret-markup grob (markup #:draw-circle 0.5 0.1 #f)))
-\once \override NoteHead #'style = #'mensural
+\once \override NoteHead.style = #'mensural
 }
 
 compoundMeter =
-#(define-music-function (parser location args) (pair?)
+#(define-music-function (args) (pair?)
   (_i "Create compound time signatures. The argument is a Scheme list of
 lists. Each list describes one fraction, with the last entry being the
 denominator, while the first entries describe the summands in the
@@ -141,7 +142,7 @@ as @code{\\compoundMeter #'((3 2 8))} or shorter
          (timesig (cons (ly:moment-main-numerator mlen)
                         (ly:moment-main-denominator mlen))))
   #{
-    \once \override Score.TimeSignature #'stencil = #(lambda (grob)
+    \once \override Score.TimeSignature.stencil = #(lambda (grob)
                 (grob-interpret-markup grob (format-compound-time args)))
     \set Timing.timeSignatureFraction = $timesig
     \set Timing.baseMoment = $beat
@@ -169,52 +170,52 @@ as @code{\\compoundMeter #'((3 2 8))} or shorter
 #(define (cloud grob)
   (make-connected-path-stencil (brown-me '((0.0 0.0 0.0 0.0 0.0 0.0)) 20) 0.05 0.5 1.0 #f #f))
 
-slash = \once \override NoteHead #'style = #'slash
-cross = \once \override NoteHead #'style = #'cross
-Cross = \override NoteHead #'style = #'cross
-nnnn = \revert NoteHead #'style
-tri = \once \override NoteHead #'style = #'triangle
-xCircle = \once \override NoteHead #'style = #'xcircle
-harm =  \once \override NoteHead #'style = #'harmonic-mixed
-lyrRot = \once \override LyricText #'stencil = #(lambda (grob) (ly:stencil-rotate (ly:text-interface::print grob) 180 0 0))
+slash = \once \override NoteHead.style = #'slash
+cross = \once \override NoteHead.style = #'cross
+Cross = \override NoteHead.style = #'cross
+nnnn = \revert NoteHead.style
+tri = \once \override NoteHead.style = #'triangle
+xCircle = \once \override NoteHead.style = #'xcircle
+harm =  \once \override NoteHead.style = #'harmonic-mixed
+lyrRot = \once \override LyricText.stencil = #(lambda (grob) (ly:stencil-rotate (ly:text-interface::print grob) 180 0 0))
 
-noTime = \once \override Score . TimeSignature #'stencil = ##f
-noHead = \once \override NoteHead #'transparent = ##t
+noTime = \once \override Score . TimeSignature.stencil = ##f
+noHead = \once \override NoteHead.transparent = ##t
 
-csmk = \once \override TextScript #'cross-staff = ##t
+csmk = \once \override TextScript.cross-staff = ##t
 
-brackVis = \once \override TupletBracket #'bracket-visibility = ##t
+brackVis = \once \override TupletBracket.bracket-visibility = ##t
 
 barStub = {
-  \override Staff . BarLine #'bar-extent = #'(-1 . 1)
-  \override Staff . BarLine #'Y-extent = #'(-1 . 1)
+  \override Staff . BarLine.bar-extent = #'(-1 . 1)
+  \override Staff . BarLine.Y-extent = #'(-1 . 1)
 }
 
 unBarStub = {
-  \revert Staff . BarLine #'bar-extent
-  \revert Staff . BarLine #'Y-extent
+  \revert Staff . BarLine.bar-extent
+  \revert Staff . BarLine.Y-extent
 }
 
-rTrans = \once \override Rest #'transparent = ##t
+rTrans = \once \override Rest.transparent = ##t
 
 lyricsUp =
-#(define-music-function (parser location n) (number?)
+#(define-music-function (n) (number?)
 #{
-  \override LyricText #'cross-staff = ##t
-  \override LyricText #'Y-offset = #n
-  \override LyricText #'whiteout = ##t
-  \override LyricHyphen #'cross-staff = ##t
-  \override LyricHyphen #'Y-offset = #n
-  \override LyricHyphen #'whiteout = ##t
+  \override LyricText.cross-staff = ##t
+  \override LyricText.Y-offset = #n
+  \override LyricText.whiteout = ##t
+  \override LyricHyphen.cross-staff = ##t
+  \override LyricHyphen.Y-offset = #n
+  \override LyricHyphen.whiteout = ##t
 #})
 
 lyricsNormal = {
-  \revert LyricText #'cross-staff
-  \revert LyricText #'Y-offset
-  \revert LyricText #'whiteout
-  \revert LyricHyphen #'cross-staff
-  \revert LyricHyphen #'Y-offset
-  \revert LyricHyphen #'whiteout
+  \revert LyricText.cross-staff
+  \revert LyricText.Y-offset
+  \revert LyricText.whiteout
+  \revert LyricHyphen.cross-staff
+  \revert LyricHyphen.Y-offset
+  \revert LyricHyphen.whiteout
 }
 
 longFermataMarkup =
@@ -229,37 +230,37 @@ longFermataMarkup =
                       (cons 'outside-staff-padding 0)))
 
 sustainG = {
-  \override Glissando #'thickness = #4
-  \override Glissando #'bound-details #'left #'padding = #0.5
-  \override Glissando #'bound-details #'right #'padding = #0
+  \override Glissando.thickness = #4
+  \override Glissando.bound-details.left.padding = #0.5
+  \override Glissando.bound-details.right.padding = #0
 }
 
 miniSustainG = {
-  \override Glissando #'thickness = #4
-  \override Glissando #'bound-details #'left #'padding = #0.5
-  \override Glissando #'bound-details #'right #'padding = #0.5
+  \override Glissando.thickness = #4
+  \override Glissando.bound-details.left.padding = #0.5
+  \override Glissando.bound-details.right.padding = #0.5
 }
 
 tightG = {
-  \override Glissando #'bound-details #'left #'padding = #0
-  \override Glissando #'bound-details #'right #'padding = #0
+  \override Glissando.bound-details.left.padding = #0
+  \override Glissando.bound-details.right.padding = #0
 }
 
 normalG = {
-  \revert Glissando #'thickness
-  \revert Glissando #'(bound-details left padding)
-  \revert Glissando #'(bound-details right padding)
+  \revert Glissando.thickness
+  \revert Glissando.bound-details.left.padding
+  \revert Glissando.bound-details.right.padding
 }
 
 speaking = {
   \stopStaff
-  \override Staff . StaffSymbol #'line-count = #1
-  \override Staff . BarLine #'bar-extent = #'(-1 . 1)
+  \override Staff . StaffSymbol.line-count = #1
+  \override Staff . BarLine.bar-extent = #'(-1 . 1)
   \startStaff
-  \override NoteHead #'style = #'mensural
-  \override Flag #'style = #'mensural
-  \override NoteHead #'no-ledgers = ##t
-  %\override Rest #'style = #'mensural
+  \override NoteHead.style = #'mensural
+  \override Flag.style = #'mensural
+  \override NoteHead.no-ledgers = ##t
+  %\override Rest.style = #'mensural
   \set melismaBusyProperties = #'(tieMelismaBusy beamMelismaBusy)
   \autoBeamOff
   %\stemUp
@@ -268,146 +269,146 @@ speaking = {
 
 monologue = {
   \stopStaff
-  \override Staff . StaffSymbol #'line-count = #1
-  \override DynamicText #'outside-staff-priority = ##f
-  \override Staff . BarLine #'bar-extent = #'(-1 . 1)
+  \override Staff . StaffSymbol.line-count = #1
+  \override DynamicText.outside-staff-priority = ##f
+  \override Staff . BarLine.bar-extent = #'(-1 . 1)
   \startStaff
   \autoBeamOff
   \hideNotes
-  \override Stem #'stencil = ##f
-  \override Flag #'stencil = ##f
+  \override Stem.stencil = ##f
+  \override Flag.stencil = ##f
   \stemUp
   \clef percussion
 }
 
 bedlem = {
   \stopStaff
-  \override Staff . StaffSymbol #'line-count = #1
-  \override Staff . BarLine #'bar-extent = #'(-1 . 1)
+  \override Staff . StaffSymbol.line-count = #1
+  \override Staff . BarLine.bar-extent = #'(-1 . 1)
   \startStaff
   \autoBeamOff
   \stemUp
-  \override NoteHead #'style = #'slash
-  \override NoteHead #'no-ledgers = ##t
+  \override NoteHead.style = #'slash
+  \override NoteHead.no-ledgers = ##t
   \clef percussion
 }
 
 tictoc = {
   \stopStaff
-  \override Staff . StaffSymbol #'line-positions = #'(-2 2)
-  \override Staff . BarLine #'bar-extent = #'(-1 . 1)
+  \override Staff . StaffSymbol.line-positions = #'(-2 2)
+  \override Staff . BarLine.bar-extent = #'(-1 . 1)
   \startStaff
   \unHideNotes
-  \revert Stem #'stencil
-  \revert Flag #'stencil
-  \override NoteHead #'style = #'cross
+  \revert Stem.stencil
+  \revert Flag.stencil
+  \override NoteHead.style = #'cross
   \set melismaBusyProperties = #'(tieMelismaBusy)
   \clef percussion
 }
 
 stemTrans = {
-  \override Stem #'stencil = ##f
-  \override Flag #'stencil = ##f
+  \override Stem.stencil = ##f
+  \override Flag.stencil = ##f
 }
 
 unStemTrans = {
-  \revert Stem #'stencil
-  \revert Flag #'stencil
+  \revert Stem.stencil
+  \revert Flag.stencil
 }
 
 noLed = {
-  \override NoteHead #'no-ledgers = ##t
+  \override NoteHead.no-ledgers = ##t
 }
 
-noTr = \once \override TrillSpanner #'bound-details #'left #'text = ##f
+noTr = \once \override TrillSpanner.bound-details.left.text = ##f
 swung = \markup \italic "swung"
 straight = \markup \italic "straight"
 
 cricket = {
-  \revert Stem #'stencil
-  \revert Flag #'stencil
-  \revert Accidental #'stencil
-  \override Accidental #'stencil = ##f
+  \revert Stem.stencil
+  \revert Flag.stencil
+  \revert Accidental.stencil
+  \override Accidental.stencil = ##f
   \stopStaff
-  \override Staff . StaffSymbol #'line-count = #1
-  \override Staff . BarLine #'bar-extent = #'(-1 . 1)
+  \override Staff . StaffSymbol.line-count = #1
+  \override Staff . BarLine.bar-extent = #'(-1 . 1)
   \startStaff
-  \override NoteHead #'style = #'harmonic-mixed
-  \override NoteHead #'no-ledgers = ##t
+  \override NoteHead.style = #'harmonic-mixed
+  \override NoteHead.no-ledgers = ##t
   \set melismaBusyProperties = #'(tieMelismaBusy beamMelismaBusy)
   \autoBeamOff
   \clef percussion
   \stemUp
-  \revert TupletNumber #'text
-  \revert TupletNumber #'Y-offset
+  \revert TupletNumber.text
+  \revert TupletNumber.Y-offset
 %  \set Staff.dynamicAbsoluteVolumeFunction  = #(lambda (dyn) 0.0)
 }
 
 nothing = {
   %\stopStaff
-  %\override Staff . StaffSymbol #'line-count = #0
-  %\override Staff . BarLine #'bar-extent = #'(-1 . 1)
+  %\override Staff . StaffSymbol.line-count = #0
+  %\override Staff . BarLine.bar-extent = #'(-1 . 1)
   %\startStaff
   %\set melismaBusyProperties = #'(tieMelismaBusy beamMelismaBusy slurMelismaBusy)
 }
 
 feelingLucky = {
   \stopStaff
-  \once \override Staff . StaffSymbol #'line-positions = #'(-4 4) 
+  \once \override Staff . StaffSymbol.line-positions = #'(-4 4) 
   \startStaff
-  \override Stem #'stencil = ##f
-  \override Flag #'stencil = ##f
-  \override NoteHead #'no-ledgers = ##t
+  \override Stem.stencil = ##f
+  \override Flag.stencil = ##f
+  \override NoteHead.no-ledgers = ##t
   \set tupletFullLength = ##t  
-  \override TupletNumber #'text = #(markup #:note "4" UP)
-  \override TupletNumber #'Y-offset = #(lambda (grob) (+ (ly:tuplet-number::calc-y-offset grob) 1))
-  \override TupletBracket #'bracket-visibility = ##t
-  \override TupletBracket #'direction = #UP
-  \override Accidental #'stencil = ##f
+  \override TupletNumber.text = #(markup #:note "4" UP)
+  \override TupletNumber.Y-offset = #(lambda (grob) (+ (ly:tuplet-number::calc-y-offset grob) 1))
+  \override TupletBracket.bracket-visibility = ##t
+  \override TupletBracket.direction = #UP
+  \override Accidental.stencil = ##f
 }
 
-stemInv = { \once \override Stem #'transparent = ##t \once \override Flag #'transparent = ##t }
+stemInv = { \once \override Stem.transparent = ##t \once \override Flag.transparent = ##t }
 
 goalposts = {
   \stopStaff
-  \once \override Staff . StaffSymbol #'line-positions = #'(-4 4) 
+  \once \override Staff . StaffSymbol.line-positions = #'(-4 4) 
   \startStaff
-  \override NoteHead #'no-ledgers = ##t
+  \override NoteHead.no-ledgers = ##t
 }
 
 berioGoalposts = {
   \stopStaff
-  \once \override Staff . StaffSymbol #'line-positions = #'(-4 0 4) 
+  \once \override Staff . StaffSymbol.line-positions = #'(-4 0 4) 
   \startStaff
-  \override NoteHead #'no-ledgers = ##t
+  \override NoteHead.no-ledgers = ##t
 }
 
 normal = {
   \stopStaff
-  \revert Accidental #'stencil
-  \revert DynamicText #'outside-staff-priority
-  \revert Staff . StaffSymbol #'line-count
-  \revert Staff . StaffSymbol #'line-positions
-  \revert Staff . BarLine #'bar-extent
+  \revert Accidental.stencil
+  \revert DynamicText.outside-staff-priority
+  \revert Staff . StaffSymbol.line-count
+  \revert Staff . StaffSymbol.line-positions
+  \revert Staff . BarLine.bar-extent
   \startStaff
-  \revert NoteHead #'style
-  \revert TupletNumber #'text
-  \revert TupletNumber #'Y-offset
-  \revert TupletBracket #'bracket-visibility
+  \revert NoteHead.style
+  \revert TupletNumber.text
+  \revert TupletNumber.Y-offset
+  \revert TupletBracket.bracket-visibility
   \unset tupletFullLength
-  \revert Flag #'style
-  \revert Stem #'stencil
-  \revert Flag #'stencil
-  \revert NoteHead #'no-ledgers
+  \revert Flag.style
+  \revert Stem.stencil
+  \revert Flag.stencil
+  \revert NoteHead.no-ledgers
   \unHideNotes
-  \revert Stem #'direction
+  \revert Stem.direction
   \stemNeutral
 %  \unset Staff.dynamicAbsoluteVolumeFunction
   \set melismaBusyProperties = #'(tieMelismaBusy beamMelismaBusy slurMelismaBusy)
 }
 
-tupFrac = \once \override TupletNumber #'text = #tuplet-number::calc-fraction-text
-TupFrac = \override TupletNumber #'text = #tuplet-number::calc-fraction-text
+tupFrac = \once \override TupletNumber.text = #tuplet-number::calc-fraction-text
+TupFrac = \override TupletNumber.text = #tuplet-number::calc-fraction-text
 
 saNormal = { \clef treble \normal }
 tNormal = { \clef "treble_8" \normal }
@@ -474,43 +475,43 @@ ffp = #(make-dynamic-script fppInternal)
 crpoco = #(make-music 'CrescendoEvent 'span-direction START 'span-type 'text 'span-text "cresc. poco a poco")
 
 fatText = {
-  \once \override TextScript #'extra-spacing-width = #'(0 . 0)
-  \once \override TextScript #'Y-offset = #0
-  \once \override TextScript #'outside-staff-priority = ##f
-  \once \override TextScript #'self-alignment-X = #LEFT
-  \once \override TextScript #'font-size = #1
+  \once \override TextScript.extra-spacing-width = #'(0 . 0)
+  \once \override TextScript.Y-offset = #0
+  \once \override TextScript.outside-staff-priority = ##f
+  \once \override TextScript.self-alignment-X = #LEFT
+  \once \override TextScript.font-size = #1
 }
 
 monoShift = {
-  \once \override TextScript #'Y-offset = #-0.5 % #(lambda (grob) (- (* 0.5 (interval-length (ly:grob::stencil-height grob)))))
+  \once \override TextScript.Y-offset = #-0.5 % #(lambda (grob) (- (* 0.5 (interval-length (ly:grob::stencil-height grob)))))
 }
 
 FatTextManual =
-#(define-music-function (parser location p) (pair?)
+#(define-music-function (p) (pair?)
 #{
-  \override TextScript #'extra-spacing-width = #p
-  \override TextScript #'Y-offset = #0
-  \override TextScript #'outside-staff-priority = ##f
-  \override TextScript #'self-alignment-X = #LEFT
-  \override TextScript #'font-size = #1
+  \override TextScript.extra-spacing-width = #p
+  \override TextScript.Y-offset = #0
+  \override TextScript.outside-staff-priority = ##f
+  \override TextScript.self-alignment-X = #LEFT
+  \override TextScript.font-size = #1
 #})
 
 FatText = { \FatTextManual #'(0 . 0) }
 
 MonoShift = {
-  \override TextScript #'Y-offset = #-0.5 % #(lambda (grob) (- (* 0.5 (interval-length (ly:grob::stencil-height grob)))))
+  \override TextScript.Y-offset = #-0.5 % #(lambda (grob) (- (* 0.5 (interval-length (ly:grob::stencil-height grob)))))
 }
 
 unFatText = {
-  \revert TextScript #'extra-spacing-width
-  \revert TextScript #'Y-offset
-  \revert TextScript #'outside-staff-priority
-  \revert TextScript #'self-alignment-X
-  \revert TextScript #'font-size
+  \revert TextScript.extra-spacing-width
+  \revert TextScript.Y-offset
+  \revert TextScript.outside-staff-priority
+  \revert TextScript.self-alignment-X
+  \revert TextScript.font-size
 }
 
 unMonoShift = {
-  \revert TextScript #'Y-offset
+  \revert TextScript.Y-offset
 }
 
 #(define (define-grob-property symbol type? description)
@@ -538,7 +539,7 @@ unMonoShift = {
 
 tptext =
 #(define-music-function
-     (parser location nr mk)
+     (nr mk)
      (number? markup?)
 #{
   \once \override TupletBracket.direction = #UP
@@ -553,7 +554,7 @@ tptext =
 
 tptextSm =
 #(define-music-function
-     (parser location nr mk)
+     (nr mk)
      (number? markup?)
 #{
   \once \override TupletBracket.direction = #UP
