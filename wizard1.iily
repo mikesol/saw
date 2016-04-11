@@ -222,8 +222,8 @@ mezzoWizardOne = \relative c' { \autoBeamOff
   ees4. ~ |
   ees8 r8 \MyBlack ges |
   aes g g |
-  a aes b |
-  b4 ges8 |
+  a aes ces |
+  ces4 ges8 |
   ees4 ges8 |
   f8 e ges |
   des4 ees8 |
