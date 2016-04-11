@@ -1037,8 +1037,8 @@ tenorCircus = \relative c' { \autoBeamOff
   ais2^\> |
   b4.^\< bis8 |
   cis4^\mp cisis |
-  eis^\p^\< dis8 cis |
-  r b^\pp b b |
+  eis^\p^\< dis8 cis^\! |
+  r b^\subPPd b b |
   r4 gis4-_^\mf |
   cis2^\subPd^\< |
   b2^\mp^\> |
