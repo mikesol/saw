@@ -523,7 +523,7 @@ altoNerve = \relative c'' {
   \times 2/3 { b bes-. bes-. } \times 2/3 { bes-. r4 } \times 2/3 { ces8-. ces-. r } \times 2/3 { r8 aes-. a-. } |
   \times 2/3 { a-. r b-. } \times 2/3 { r8 a-. aes-. } \times 2/3 { r g-. r } \times 2/3 { b-. r e,-. } |
   \lo f-- \( \sh fis-. \) \lo r \sh fis [ \( \lo f \) ] \sh r \lo f-- \( \sh e-. \) |
-  \lo r \sh b' [ \( \lo b \) ] \sh c, \( \lo f [ \sh aes \) ] \lo g \sh ees |
+  \lo r \sh b' [ \( \lo b \) ] \sh c, \( \lo f [ \sh aes \) ] \lo a \sh ees |
   \lo e \sh d \lo a' \sh g ~ \lo g \sh ees \lo f \sh g ~ |
   \lo g8 \sh c,8 ~ c4 des4 aes' |
   \lo g8 \sh g \times 2/3 { bes c bes } \lo des \sh c^\turn bes16 g bes g |
