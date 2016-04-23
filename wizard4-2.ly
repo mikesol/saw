@@ -448,7 +448,7 @@ bassWords = \lyricmode {
 
 \score {
   \new ChoirStaff <<
-    \new Staff \with { instrumentName = #"Glockenspiel" %shortInstrumentName = #"M."
+    %{\new Staff \with { instrumentName = #"Glockenspiel" %shortInstrumentName = #"M."
 } <<
       \new Voice = "glock" { << { \numericTimeSignature
         \glock
@@ -457,7 +457,7 @@ bassWords = \lyricmode {
       } {
         \nothing
       }>> }
-    >>
+    >>%}
     \new Staff \with { instrumentName = \bitchName %shortInstrumentName = #"M."
 } <<
       \new Voice = "soprano" { << { \numericTimeSignature
