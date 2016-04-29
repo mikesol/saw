@@ -268,7 +268,7 @@ altoXMas = \relative c' { \autoBeamOff
   \clef "treble_8"
   a4\p\< |
   cis4 b cis b |
-  d fis e d |
+  d^\mf fis e d |
   d2 b |
   a4\> g fis e4 |
   fis2\mp cis'4 a |
