@@ -1036,7 +1036,7 @@ tenorWizardThree = { \relative c {
   \lo c \sh c d4 \lo ees8 d4 \sh c8 |
   r4 \lo c8 \sh d \lo c \sh bes r4 |
   \lo bes8 \sh c \lo bes \sh aes \lo r \sh c, \times 2/3 { d dis e } |
-  \lo f \sh g \lo f \sh ees ~ \lo ees g4 \sh bes ~ |
+  \lo f \sh g \lo f \sh ees ~ \lo ees bes'4 \sh bes ~ |
   \times 2/3 { bes4 r d2 c } |
   \times 2/3 { bes bes aes }
   g2  aes2 ~ |
