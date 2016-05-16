@@ -664,7 +664,7 @@ altoWizardThree = { \relative c' { \autoBeamOff
   g g g' g |
   \lo fis8 \sh fis \lo fis \sh e ~ \sh e \lo e ~ e4 |
   \lo a8 \sh a \lo a \sh a ~ \lo a \sh fis ~ fis4 |
-  d2 r4 d |
+  d2 r4 bes |
   \times 2/3 { ees ees ees } \times 2/3 { fis fis fis } |
   g4 \lo g8 \sh bes ~ \lo bes \sh g ~ g4 |
   \lo aes8 \sh aes \lo aes \sh c ~ \lo c c4 \sh bes8 ~ |
@@ -1031,13 +1031,13 @@ tenorWizardThree = { \relative c {
   \lod r4. \sh f8 bes4 \lo c8 \sh c |
   \lo d \sh d ees4 \lo f8 ees4 \sh d8 ~ |
   \lo d \sh ees \lo d \sh c r4 \lo c8 \sh d |
-  c2 r |
-  \lod r4. \sh d,8 a'4 \lo bes8 \sh bes8 |
-  \lo c \sh c d4 \lo ees8 d4 \sh c8 |
-  r4 \lo c8 \sh d \lo c \sh bes r4 |
-  \lo bes8 \sh c \lo bes \sh aes \lo r \sh c, \times 2/3 { d dis e } |
-  \lo f \sh g \lo f \sh ees ~ \lo ees g4 \sh bes ~ |
-  \times 2/3 { bes4 r d2 c } |
+  c2 \lod r4. \sh d,8 |
+  a'4 \lo bes8 \sh bes8 \lo c \sh c d4 |
+  \lo ees8 d4 \sh c8 ~ \lo c8 \sh d \lo c \sh bes |
+  r4 \lo bes8 \sh c \lo bes \sh aes \lo r \sh r8 |
+  \lo r8 \sh c, \times 2/3 { d dis e } \lo f \sh g \lo f \sh ees8 ~ |
+  \lo ees8 g4 \sh bes8 ~ bes2 |
+  \times 2/3 { r2 d2 c } |
   \times 2/3 { bes bes aes }
   g2  aes2 ~ |
   aes4 fis \lo g8 \sh g r4 |
@@ -1164,7 +1164,7 @@ tenorWordsWizardThree = \lyricmode {
   Won -- der -- ful things Won -- der -- ful things cause of the things he does, Won -- der things
   Be -- cause of the Won -- der -- ful things he
   Won -- der -- ful things Won -- der -- ful
-  Be -- cause of the Won -- der -- ful things he does
+  Be -- cause of the Won -- der -- ful things he
   Won -- der -- ful things
   Won -- der -- ful things
   Be -- cause of the Won -- der -- ful things he does
