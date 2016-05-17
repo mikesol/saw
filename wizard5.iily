@@ -450,7 +450,7 @@ mezzoCircus = \relative c' { \autoBeamOff
   r4 d16-.^\p^\< d-. d-. d-. d4^\> r\parend^\p |
   r4 r16 d^\mp^\< e eis fis-.^\mf fis-. fis-. fis-. fis4 ~ |
   fis8 f^\mp d16 d d d d8 cis c16 d cis8 |
-  bis16-.^\> bis-. bis-. bis-. bis4^\p r4 b'16-.^\mf b-. b-. b-. |
+  bis16-.^\> bis-. bis-. bis-. bis4^\p %{bis'8^\pp^\espressivo ~ bis8%} r4 b'16-.^\mf b-. b-. b-. |
   b4. ais8^\< a16^\> b ais8 a-.^\mf gis16 ais |
   a8 gis g16 a gis8 g^\> fis eis8 fis |
   g4^\p r8 d ~ d8 cis bis d |
