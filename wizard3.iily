@@ -472,7 +472,7 @@ mezzoWizardThree = { \autoBeamOff \relative c'' {
     r2 \lo r8 \sh f \lo r8 \sh fis |
     d4^\mf \lo e8 \sh e \lo fis \sh fis g4 |
     \lo a8 g4 \sh fis8 \lo r8 \sh fis-> \lo r8 \sh f^\p^\< ~ |
-    f2. des4^\< |
+    f2. des4^\> |
     \lo ees8-.^\mp \sh ees-. r4 \lo r8 \sh d-.-> \lo r8 \sh ees^\mf ~ |
     ees4 \lo f \sh f \lo g \sh g aes |
     \lo bes8 aes4 \sh g r4 \lo g8 \sh aes |
