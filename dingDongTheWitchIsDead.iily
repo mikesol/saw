@@ -31,7 +31,7 @@ ddw = \lyricmode {
   Ding Dong the mer -- ry -- o
   Sing it high
   Sing it low
-  Let them know the Wic -- ked Witch is dead.
+  Let them know the Wic -- ked Witch is dead. dead.
 }
 
 continueToRiff = \markup \justify { girls continue to riff, boys enter on the head much faster than the girls (who keep their previous tempo) }
@@ -49,9 +49,9 @@ firstriff = \relative c' {
   \bar "!"
   <dis fis>^\> [ <d eis> <cis e> <c eeh> ]
   \bar "!"
-  <b dis>^\p   \tempo "Ridiculously fast"
+  <b dis>^\p   
   \cadenzaOn
-  \repeat volta 2 { \footnote \markup \null #'(0 . 0) \continueToRiff NoteHead fis'32^"*" \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
+  \repeat volta 2 { \footnote \markup \null #'(0 . 0) \continueToRiff NoteHead fis'32^"*" \z fis \tempo "Ridiculously fast" \noBreak\z dis \noBreak\z \noBreak e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
  \z fis' \z fis \z dis \z e \z fis \z a \z gis \z fis
  \z fis32 \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z cis \z dis \z cis \z b
  \z fis' \z fis \z dis \z e \z fis \z cis' \z b \z a
@@ -60,7 +60,7 @@ firstriff = \relative c' {
  \z cis \z dis \z cis \z b \z ais \z gis
  \z fis \z gis \z fis \z e \z dis \z cis
  \z fis \z fis \z dis \z e \z fis \z dis \z dis \z cis \z b \z dis \z cis \z b
- \z dis \z fis \z b \z cis \z dis \z cis \z b \z cis \z } \alternative {  { b \bar "||" \break
+ \z dis \z fis \z b \z cis \z dis \z cis \z b \z cis \z } \alternative {  { r32 b \bar "||" \break
  \once \override Score.KeySignature.stencil = ##f
  \once \override TextScript.extra-offset = #'(0 . 2)
  \fatText \stopStaff   s1-\markup \fontsize #-1 \column {
