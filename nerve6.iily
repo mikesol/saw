@@ -5,7 +5,7 @@ nerveSixDedication = "for Satchmo"
 %sh = { }
 %lod = { }
 %ssh = { }
-ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
+ntrill = \override TrillSpanner #'bound-details.left.text = #'()
 %scared
 %  then I'd rrwuff
 %gen -- tle

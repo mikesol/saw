@@ -1,7 +1,7 @@
 \version "2.17.0"
 lollipopGuildTitle = \markup "The Lollipop Guild" %(1)"
 lollipopGuildDedication = \markup { for Mark Applebaum }
-ntrill = \override TrillSpanner #'bound-details #'left  #'text = #'()
+ntrill = \override TrillSpanner #'bound-details.left.text = #'()
 
 %{
 

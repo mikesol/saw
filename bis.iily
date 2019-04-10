@@ -48,14 +48,14 @@ midiPrefatoryMatterBis = {
 }
 
 marksBis = {
-  \tempo \wswing 4=176
-  \repeat unfold 144 { \unfoldSwing #176 }
+  \tempo \wswing 4=156
+  \repeat unfold 144 { \unfoldSwing #156 }
   \time 6/4
-  \repeat unfold 6 { \unfoldSwing #176 }
+  \repeat unfold 6 { \unfoldSwing #156 }
   \time 4/4
-  \repeat unfold 284 { \unfoldSwing #176 }
+  \repeat unfold 284 { \unfoldSwing #156 }
   \tempo "(rit.)"
-  \unfoldChange #176 #50 #6
+  \unfoldChange #156 #50 #6
   \unfoldChange #50 #50 #2
   \time 3/8
   \tempo "Andante con moto" 4.=84
